@@ -2,3 +2,29 @@
 /* If you are using the default media queries provided by Omega, these styles will also
  *  apply to the normal and widescreen layouts. You may override these styles in the normal
  *  and widescreen CSS files as appropriate. */
+ input#edit-islandora-simple-search-query.form-text{
+   -webkit-appearance: none;
+ -moz-border-radius: 0;
+ -webkit-border-radius: 0;
+ border-radius: 0;
+ -webkit-box-sizing: border-box;
+ -moz-box-sizing: border-box;
+ box-sizing: border-box;
+ -moz-background-clip: padding;
+ -webkit-background-clip: padding;
+ background-clip: padding-box;
+ background-color: #1a1a1a;
+ border-right: 1px solid #808080;
+ color: #adadad;
+ outline: 0;
+ padding: 2px 3px;
+ font-size: 20px;
+ font-family: Roboto, Arial, sans-serif;
+ font-weight: 300;
+ height: 40px;
+ width: 50px;
+ border-top-width: 0px;
+ border-bottom-width: 0px;
+ border-right-width: 1px;
+ border-left-width: 0px;
+ }
