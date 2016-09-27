@@ -187,6 +187,20 @@ padding-left: 0px;
     word-break: break-all;
 }
 
+.object-title{
+  margin-top:20px;
+  margin-bottom:0px;
+      line-height: 18px;
+}
+
+.object-author{
+  margin: 0px;
+  padding: 0px;
+  font-size: 16px;
+  color: #6b6b6b;
+  font-weight: 400;
+}
+
 #block-block-1{
   display:none;
 }
@@ -241,15 +255,16 @@ display: none;
 
 .page-islandora-object #page-title-header{
   position: absolute;
-      z-index: 2;
-      width: 160px;
-      margin-left: 85px;
-      margin-bottom: 0px;
-      text-align: left;
-      line-height: 15px;
-      color: #f0f0f0;
-      font-weight: 300;
-      font-size: 15px;
+  z-index: 2;
+  width: 160px;
+  margin-left: 92px;
+  margin-bottom: 0px;
+  text-align: left;
+  line-height: 11px;
+  color: #f0f0f0;
+  font-weight: 300;
+  font-size: 12px;
+
 }
 
 #block-block-2, #block-block-1{
@@ -353,7 +368,7 @@ display:flex;
 
 #breadcrumb{
   position:absolute;
-  margin-left: 20%;
+  margin-left: 21%;
   z-index: 5;
 }
 
@@ -501,6 +516,12 @@ h2.site-name {
 h2.block-title {
   font-size: 115%;
   margin: 0;
+
+}
+
+#block-system-navigation h2.block-title{
+  border-top: 1px solid #cacaca;
+padding-top: 22px;
 }
 
 h2.node-title {
@@ -532,16 +553,14 @@ list-style-image{
 }
 
 #block-system-navigation{
-  padding-left: 12px;
-  border-top: 1px solid #cacaca;
-      padding-top: 32px;
-          padding-bottom: 20px;
+    padding: 0px 12px 12px 12px;
 }
 
 div.tabs.clearfix{
   max-width: 1200px;
 margin-left: auto;
 margin-right: auto;
+    margin-top: 53px;
 }
 
 .count{
@@ -751,9 +770,7 @@ text-decoration:none;
 
 
 #page-title{
-  position: inherit;
-  color: #000;
-  display: none;
+  display:none;
 }
 
 @media screen and (max-width: 740px) {

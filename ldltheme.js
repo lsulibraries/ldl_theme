@@ -7,6 +7,8 @@
 /*End ScrollReveal*/
 
 
+
+
       $(document).ready(function() {
           $('#loadingWrap').fadeOut(1200, function(){ $(this).remove();});
           $("#page").fadeIn(1500);
@@ -20,13 +22,14 @@
       sr.reveal('.section-footer', { duration: 1000, delay: 0, distance: 1000, scale: 1.0, rotate: { x: 500, y: 0, z: 0 },});
       sr.reveal('.islandora-basic-collection-grid dl', { duration: 500, delay: 200,  easing: 'ease-in', }, 150);
 
+
       $(".islandora-pdf-metadata").clone().prop({ id: "sideMods", class: "newClass" }).prependTo("#region-sidebar-first");
       $(".islandora-large-image-metadata").clone().prop({ id: "sideMods", class: "newClass" }).prependTo("#region-sidebar-first");
       $("#page-title").clone().prop({ id: "page-title-header"}).prependTo(".region-header-second-inner");
-
-
-      $("#sideMods div:nth-child(1)")
-      .appendTo("#sideMods");
+      $("#page-title").clone().prop({ id: "object-title-pdf", class: "object-title"}).appendTo("#block-system-main");
+      $("#sideMods tr:nth-child(0n+3) td:nth-child(0n+2)").clone().prop({ id: "pdf-object-author", class: "object-author"}).appendTo("#block-system-main");
+      $("a.islandora-pdf-link").appendTo("#block-system-main");
+      $("#sideMods div:nth-child(1)").appendTo("#sideMods");
 
 
 
