@@ -295,6 +295,7 @@ padding-right: 20px;
 .region-header-second-inner{
 display: flex;
 align-items: center;
+height: 100%;
 }
 
 #region-header-first{
@@ -835,8 +836,14 @@ text-decoration:none;
 }
 
 @media screen and (max-width: 1740px) {
-  #block-islandora-solr-simple, #region-sidebar-first, #block-block-4{
+#region-sidebar-first, #block-block-4, #page-title-header{
     display:none;
+  }
+
+  #block-islandora-solr-simple {
+      margin-left: 10%;
+      border: 1px solid #808080;
+      width: 80%;
   }
 
   .islandora-pdf-metadata{
