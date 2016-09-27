@@ -6,8 +6,10 @@
 
 /* global styles */
 
-html {
+html, body {
   height: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 input:focus,
@@ -201,6 +203,8 @@ padding-left: 0px;
 	background: #438fca;
 float: left;
 color:  #438fca;
+
+margin-left: 40px;
 }
 
 #block-system-navigation .menu{
@@ -229,10 +233,12 @@ padding-right: 20px;
 }
 
 #zone-header{
-background-color: #1a1a1a;
+  background-color: #1a1a1a;
   width: 100%;
-display: flex;
-height: 80px;
+  display: flex;
+  flex-direction: row;
+  margin: 0px;
+  height: 80px;
 }
 
 #region-content{
@@ -241,18 +247,18 @@ height: 80px;
 }
 
 #region-header-first{
-  width: 100%;
+  width: 25%;
   padding: 0px;
   margin: 0px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 80px;
+justify-content: center;
+align-items: center;
 }
 
 div.region-inner.region-header-first-inner{
       display: flex;
           align-items: center;
+              height: 100%;
 
 }
 
@@ -299,17 +305,16 @@ div.region-inner.region-header-first-inner{
 
 #region-header-second{
   text-align: right;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  display:absolute;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
 }
 
 #region-sidebar-first{
 left: 0px;
 margin: 0px;
 background-color: white;
-width: 20%;
+width: 25%;
 }
 
 #block-islandora-solr-simple{
@@ -322,7 +327,7 @@ background-color:#f0f0f0;
 margin: 0px;
 width: 100%;
 display:flex;
-    min-height: 100vh;
+    flex-direction: row;
 }
 
 
@@ -720,7 +725,7 @@ text-decoration:none;
   z-index: 1;
 }
 
-.islandora-pdf-metadata{
+.islandora-pdf-metadata, .islandora-large-image-metadata{
   display: none;
 }
 
