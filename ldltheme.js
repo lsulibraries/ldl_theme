@@ -22,6 +22,7 @@
 
       $(".islandora-pdf-metadata").clone().prop({ id: "sideMods", class: "newClass" }).prependTo("#region-sidebar-first");
       $(".islandora-large-image-metadata").clone().prop({ id: "sideMods", class: "newClass" }).prependTo("#region-sidebar-first");
+      $("#page-title").clone().prop({ id: "page-title-header"}).prependTo(".region-header-second-inner");
 
 
       $("#sideMods div:nth-child(1)")

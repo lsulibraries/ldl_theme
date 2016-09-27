@@ -225,6 +225,33 @@ display: none;
   padding-right: 7px;
 }
 
+.page-islandora-search #page-title-header{
+      position: absolute;
+      z-index: 2;
+      width: 160px;
+      margin-left: 85px;
+      margin-bottom: 0px;
+      text-align: center;
+      line-height: 15px;
+      color: #f0f0f0;
+      font-weight: 300;
+      text-transform: uppercase;
+      font-size: 17px;
+}
+
+.page-islandora-object #page-title-header{
+  position: absolute;
+      z-index: 2;
+      width: 160px;
+      margin-left: 85px;
+      margin-bottom: 0px;
+      text-align: left;
+      line-height: 15px;
+      color: #f0f0f0;
+      font-weight: 300;
+      font-size: 15px;
+}
+
 #block-block-2, #block-block-1{
   float:left;
 height: 18px;
@@ -244,6 +271,11 @@ padding-right: 20px;
 #region-content{
   width: 100%;
   margin: 0px;
+}
+
+.region-header-second-inner{
+display: flex;
+align-items: center;
 }
 
 #region-header-first{
@@ -281,18 +313,6 @@ div.region-inner.region-header-first-inner{
   margin: 0px
 }
 
-#page-title{
-  position: relative;
-  top: -62px;
-  left: 47px;
-  color: white;
-  font-family: Roboto;
-  font-weight: 300;
-  width: 225px;
-  text-align: center;
-  line-height: 15px;
-  font-size: 14px;
-}
 
 .soft-limit{
   margin-left: 13px;
@@ -730,7 +750,11 @@ text-decoration:none;
 }
 
 
-
+#page-title{
+  position: inherit;
+  color: #000;
+  display: none;
+}
 
 @media screen and (max-width: 740px) {
   #block-islandora-solr-simple, #region-sidebar-first, #block-block-4{
@@ -744,6 +768,7 @@ text-decoration:none;
   #page-title{
     position: inherit;
     color: #000;
+    display: none;
   }
 
   #zone-content-wrapper {
