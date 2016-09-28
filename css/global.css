@@ -306,7 +306,11 @@ a.islandora-pdf-link{
 #zone-header {
   background-color: #1a1a1a;
   width: 100%;
-  display: flex;
+  display: -webkit-box;
+display: -moz-box;
+display: -ms-flexbox;
+display: flex;
+
   flex-direction: row;
   margin: 0px;
   height: 80px;
@@ -318,7 +322,11 @@ a.islandora-pdf-link{
 }
 
 .region-header-second-inner {
-  display: flex;
+  display: -webkit-box;
+display: -moz-box;
+display: -ms-flexbox;
+display: flex;
+
   align-items: center;
   height: 100%;
 }
@@ -327,13 +335,21 @@ a.islandora-pdf-link{
   width: 25%;
   padding: 0px;
   margin: 0px;
-  display: flex;
+  display: -webkit-box;
+display: -moz-box;
+display: -ms-flexbox;
+display: flex;
+
   justify-content: center;
   align-items: center;
 }
 
 div.region-inner.region-header-first-inner {
-  display: flex;
+  display: -webkit-box;
+display: -moz-box;
+display: -ms-flexbox;
+display: flex;
+
   align-items: center;
   height: 100%;
 }
@@ -389,7 +405,11 @@ div.region-inner.region-header-first-inner {
   background-color: #f0f0f0;
   margin: 0px;
   width: 100%;
-  display: flex;
+  display: -webkit-box;
+display: -moz-box;
+display: -ms-flexbox;
+display: flex;
+
   flex-direction: row;
 }
 
@@ -436,22 +456,38 @@ color: #ff7777;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  height: 100%;
-      width: 100%;
+  width: 100%
+  height: calc(100% - 323px)
+  /*min-height: calc(100% - 323px);*/
+  min-height: initial;
+}
+
+dd {
+  font-style: normal;
+  font-size: 14px;
 }
 
 #region-content .region-content-inner {
-  display: flex;
+  display: -webkit-box;
+display: -moz-box;
+display: -ms-flexbox;
+display: flex;
+
   flex-direction: column;
   height: 100%;
 }
 
 #block-block-9 {
   background-color: #1a1a1a;
+  vertical-align: bottom;
 }
 
 .footerContainer {
-  display: flex;
+  display: -webkit-box;
+display: -moz-box;
+display: -ms-flexbox;
+display: flex;
+
 }
 
 .footerImg {
@@ -469,7 +505,11 @@ color: #ff7777;
 #block-delta-blocks-site-name {
   height: 68px;
   width: 123px;
-  display: flex;
+  display: -webkit-box;
+display: -moz-box;
+display: -ms-flexbox;
+display: flex;
+
   flex-direction: column;
   justify-content: center;
   float: left;
@@ -978,7 +1018,11 @@ padding-right: 0px;
       background-color: #f0f0f0;
       margin: 0px;
       width: 100%;
-      display: flex;
+      display: -webkit-box;
+display: -moz-box;
+display: -ms-flexbox;
+display: flex;
+
       flex-direction: column;
     }
 
