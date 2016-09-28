@@ -5,8 +5,7 @@
 
 
 /* web fonts */
-
-<link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto:100,300,400,700,900" rel="stylesheet">
+@import 'https://fonts.googleapis.com/css?family=Open+Sans|Roboto:100,300,400,700,900';
 /* global styles */
 
 html,
