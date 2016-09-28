@@ -238,6 +238,9 @@ a.islandora-pdf-link{
   float: left;
   color: #438fca;
   margin-left: 40px;
+  position:absolute;
+  top: 0px;
+left: 0px;
 }
 
 #block-system-navigation .menu {
@@ -268,7 +271,6 @@ a.islandora-pdf-link{
 }
 
 .page-islandora-search #page-title-header {
-  position: absolute;
   z-index: 2;
   width: 160px;
   margin-left: 85px;
@@ -283,7 +285,6 @@ a.islandora-pdf-link{
 }
 
 .page-islandora-object #page-title-header {
-  position: absolute;
   z-index: 2;
   width: 160px;
   margin-left: 92px;
@@ -293,6 +294,7 @@ a.islandora-pdf-link{
   color: #f0f0f0;
   font-weight: 300;
   font-size: 12px;
+      margin-right: 38px;
 }
 
 #block-block-2,
@@ -387,6 +389,7 @@ display: flex;
   width: 100%;
   margin: 0px;
   padding: 0px;
+  height: 80px;
 }
 
 #region-sidebar-first {
@@ -456,9 +459,6 @@ color: #ff7777;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  width: 100%
-  height: calc(100% - 323px)
-  /*min-height: calc(100% - 323px);*/
   min-height: initial;
 }
 
@@ -480,6 +480,7 @@ display: flex;
 #block-block-9 {
   background-color: #1a1a1a;
   vertical-align: bottom;
+      margin-top: calc(100% - 859px);
 }
 
 .footerContainer {
@@ -981,6 +982,10 @@ div.item-list:nth-child(2){
 
 div.islandora-solr-content{
   padding-bottom: 50px;
+}
+
+.page-islandora-object-islandoraroot #block-block-4{
+  position: relative;
 }
 
 .page-islandora-search h1#object-title-pdf.object-title,
