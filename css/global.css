@@ -154,6 +154,8 @@ input#edit-submit--2.form-submit {
   background-color: none;
 }
 
+
+
 #sideMods tr:hover {
   background-color: transparent;
 }
@@ -189,9 +191,10 @@ input#edit-submit--2.form-submit {
   padding-left: 0px;
 }
 
-#sideMods td:nth-last-of-type(0) {
+#sideMods tr:last-child, #sideMods tr:nth-last-child(8),  #sideMods tr:nth-last-child(9){
   word-break: break-all;
 }
+
 
 .object-title {
   margin-top: 20px;
@@ -212,13 +215,15 @@ a.islandora-pdf-link{
   background-color: white;
     text-transform: uppercase;
     border: 1px solid #acacac;
-    padding: 4px;
+    padding: 10px;
     margin: 0px;
 }
 
 #block-block-1 {
   display: none;
 }
+
+
 
 
 /*parallelogram*/
@@ -270,7 +275,7 @@ a.islandora-pdf-link{
   margin-left: 85px;
   margin-bottom: 0px;
   text-align: center;
-  line-height: 15px;
+  line-height: 0px;
   color: #f0f0f0;
   font-weight: 300;
   text-transform: uppercase;
@@ -374,6 +379,7 @@ div.region-inner.region-header-first-inner {
   margin: 0px;
   background-color: white;
   width: 25%;
+      box-shadow: 3px 0px 5px #d3d3d3;
 }
 
 #block-islandora-solr-simple {
@@ -406,6 +412,10 @@ padding: 18px;
 #breadcrumb a:nth-last-of-type(1){
   font-weight: 600;
       color: #438fca;
+}
+
+#breadcrumb .islandora-solr-breadcrumb-super a{
+color: #ff7777;
 }
 
 .Dark > body {
@@ -935,14 +945,16 @@ div.islandora-solr-content{
 }
 
 .page-islandora-search h1#object-title-pdf.object-title,
-.page-islandora-object-islandoraroot h1#object-title-pdf.object-title{
+.page-islandora-object-islandoraroot h1#object-title-pdf.object-title,
+.page-islandora-object-islandoraroot #page-title-header,
+.page-user  #page-title-header{
   display: none;
 }
 
 @media screen and (max-width: 740px) {
 
   .islandora-pdf-metadata td:nth-child(2) {
-    word-break: break-all;
+    word-break: break-word;
   }
   #page-title {
     position: inherit;
@@ -950,7 +962,7 @@ div.islandora-solr-content{
     display: none;
   }
   #zone-content-wrapper {
-    width: 100vw;
+    width: 100%;
     margin-left: 0px;
   }
 
@@ -959,8 +971,8 @@ div.islandora-solr-content{
 @media screen and (max-width: 1740px) {
 
   #block-system-main{
-padding-left: 20px;
-padding-right: 20px;
+padding-left: 0px;
+padding-right: 0px;
   }
 
 .page-islandora-search  #zone-content {
