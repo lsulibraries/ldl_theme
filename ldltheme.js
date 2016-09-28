@@ -30,6 +30,8 @@
       $("#sideMods tr:nth-child(0n+3) td:nth-child(0n+2)").clone().prop({ id: "pdf-object-author", class: "object-author"}).appendTo("#block-system-main");
       $("a.islandora-pdf-link").appendTo("#block-system-main");
       $("#sideMods div:nth-child(1)").appendTo("#sideMods");
+      $(".islandora-pdf-metadata").appendTo("#block-system-main");
+      $("#islandora-solr-result-count").prop({ id: "header-result-count"}).prependTo(".region-header-second-inner");
 
 
 

@@ -1,12 +1,16 @@
 /* This file will hold styles for the mobile version of your website (mobile first). */
+
+
 /* This also can include ANY global CSS that applies site-wide. Unless overwritten by a more specific style rule, CSS declarations in global.css will apply site-wide. */
 
-/* web fonts */
-<link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto:100,300,400,700,900" rel="stylesheet">
 
+/* web fonts */
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto:100,300,400,700,900" rel="stylesheet">
 /* global styles */
 
-html, body {
+html,
+body {
   height: 100%;
   padding: 0;
   margin: 0;
@@ -16,15 +20,14 @@ input:focus,
 select:focus,
 textarea:focus,
 button:focus {
-    outline: none;
+  outline: none;
 }
 
-a {
+a {}
 
-}
-
-a:link, a:visited {
-    color: #808080;
+a:link,
+a:visited {
+  color: #808080;
   text-decoration: none;
 }
 
@@ -36,62 +39,63 @@ a:hover {
 a:active {
   color: #808080;
   text-decoration: none;
-
 }
 
 body {
-background-color: #f0f0f0;
-font-family: "Roboto";
+  background-color: #f0f0f0;
+  font-family: "Roboto";
 }
 
-strong{
+strong {
   font-style: normal;
 }
 
-li a.active{
+li a.active {
   text-decoration: none;
   cursor: default;
+  font-weight: 700;
 }
 
-#region-sidebar-second{
-  display:none;
+#region-sidebar-second {
+  display: none;
 }
 
-span.bold{
+span.bold {
   font-weight: 700;
 }
 
 
 /*Top Search Bar*/
-input#edit-islandora-simple-search-query.form-text{
+
+input#edit-islandora-simple-search-query.form-text {
   -webkit-appearance: none;
--moz-border-radius: 0;
--webkit-border-radius: 0;
-border-radius: 0;
--webkit-box-sizing: border-box;
--moz-box-sizing: border-box;
-box-sizing: border-box;
--moz-background-clip: padding;
--webkit-background-clip: padding;
-background-clip: padding-box;
-background-color: #1a1a1a;
-border-right: 1px solid #808080;
-color: #adadad;
-outline: 0;
-padding: 2px 3px;
-font-size: 20px;
-font-family: Roboto, Arial, sans-serif;
-font-weight: 300;
-height: 40px;
-    width: calc(100% - 104px);
-border-top-width: 0px;
-border-bottom-width: 0px;
-border-right-width: 1px;
-border-left-width: 0px;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding;
+  background-clip: padding-box;
+  background-color: #1a1a1a;
+  border-right: 1px solid #808080;
+  color: #adadad;
+  outline: 0;
+  padding: 2px 3px;
+  font-size: 20px;
+  font-family: Roboto, Arial, sans-serif;
+  font-weight: 300;
+  height: 40px;
+  width: calc(100% - 104px);
+  border-top-width: 0px;
+  border-bottom-width: 0px;
+  border-right-width: 1px;
+  border-left-width: 0px;
 }
 
-input#edit-submit.form-submit, input#edit-submit--2.form-submit{
-
+input#edit-submit.form-submit,
+input#edit-submit--2.form-submit {
   -webkit-appearance: none;
   -moz-border-radius: 11px;
   -webkit-border-radius: 11px;
@@ -109,57 +113,56 @@ input#edit-submit.form-submit, input#edit-submit--2.form-submit{
   padding: 3px 10px 4px;
   text-shadow: none;
   width: 100px;
-  *padding-top: 2px; /* IE7 */
-  *padding-bottom: 0px; /* IE7 */
+  *padding-top: 2px;
+  /* IE7 */
+  *padding-bottom: 0px;
+  /* IE7 */
   height: 40px;
 }
 
-#sideMods{
+#sideMods {
   color: #757575;
   padding: 12px;
-
 }
 
-#sideMods a{
+#sideMods a {
   color: #438fca;
 }
 
-#sideMods h2{
-margin-bottom: 0px;
+#sideMods h2 {
+  margin-bottom: 0px;
 }
 
-
-
-#sideMods table{
+#sideMods table {
   border: none;
-    background-color: none;
-    margin-bottom: 0px;
+  background-color: none;
+  margin-bottom: 0px;
 }
 
-#sideMods th{
+#sideMods th {
   background: none;
   color: yellow;
   border: none;
   padding: 0px;
 }
 
-#sideMods tr{
+#sideMods tr {
   border: none;
 }
 
-#sideMods > islandora-obj-details-metadata-title{
+#sideMods > islandora-obj-details-metadata-title {
   background-color: none;
 }
 
-#sideMods tr:hover{
-background-color:transparent;
+#sideMods tr:hover {
+  background-color: transparent;
 }
 
-#sideMods div:nth-last-of-type(1){
-padding-left: 0px;
+#sideMods div:nth-last-of-type(1) {
+  padding-left: 0px;
 }
 
-#sideMods h3{
+#sideMods h3 {
   border-bottom: 1px solid #cecece;
   padding-bottom: 17px;
   text-align: center;
@@ -169,7 +172,7 @@ padding-left: 0px;
   letter-spacing: 1px;
 }
 
-#sideMods td:nth-child(1){
+#sideMods td:nth-child(1) {
   float: left;
   width: 100%;
   font-weight: 700;
@@ -178,7 +181,7 @@ padding-left: 0px;
   padding-left: 0px;
 }
 
-#sideMods td:nth-child(2){
+#sideMods td:nth-child(2) {
   float: left;
   padding-top: 0px;
   padding-bottom: 20px;
@@ -186,78 +189,91 @@ padding-left: 0px;
   padding-left: 0px;
 }
 
-#sideMods td:nth-last-of-type(0){
-
-    word-break: break-all;
+#sideMods td:nth-last-of-type(0) {
+  word-break: break-all;
 }
 
-.object-title{
-  margin-top:20px;
-  margin-bottom:0px;
-      line-height: 18px;
+.object-title {
+  margin-top: 20px;
+  margin-bottom: 0px;
+  line-height: 18px;
 }
 
-.object-author{
+.object-author {
   margin: 0px;
   padding: 0px;
   font-size: 16px;
   color: #6b6b6b;
   font-weight: 400;
+  padding-bottom: 20px;
 }
 
-#block-block-1{
-  display:none;
+a.islandora-pdf-link{
+  background-color: white;
+    text-transform: uppercase;
+    border: 1px solid #acacac;
+    padding: 4px;
+    margin: 0px;
 }
 
-/*parallelogram*/
-#block-block-4{
-
-	width: 250px;
-	height: 80px;
-  -ms-transform: skewX(-47deg);
-	-webkit-transform: skew(-47deg);
-	   -moz-transform: skew(-47deg);
-	     -o-transform: skew(-47deg);
-	background: #438fca;
-float: left;
-color:  #438fca;
-
-margin-left: 40px;
-}
-
-#block-system-navigation .menu{
-  padding-left: 0px;
-}
-.form-item .form-type-textfield .form-item-islandora-simple-search-query label{
+#block-block-1 {
   display: none;
 }
+
+
+/*parallelogram*/
+
+#block-block-4 {
+  width: 250px;
+  height: 80px;
+  -ms-transform: skewX(-47deg);
+  -webkit-transform: skew(-47deg);
+  -moz-transform: skew(-47deg);
+  -o-transform: skew(-47deg);
+  background: #438fca;
+  float: left;
+  color: #438fca;
+  margin-left: 40px;
+}
+
+#block-system-navigation .menu {
+  padding-left: 0px;
+}
+
+.form-item .form-type-textfield .form-item-islandora-simple-search-query label {
+  display: none;
+}
+
+
 /* hidden */
 
-#islandora-solr-simple-search-form label{
-display: none;
+#islandora-solr-simple-search-form label {
+  display: none;
 }
+
+
 /* header styles */
 
-#block-delta-blocks-logo{
-  float:left;
+#block-delta-blocks-logo {
+  float: left;
   padding-right: 7px;
 }
 
-.page-islandora-search #page-title-header{
-      position: absolute;
-      z-index: 2;
-      width: 160px;
-      margin-left: 85px;
-      margin-bottom: 0px;
-      text-align: center;
-      line-height: 15px;
-      color: #f0f0f0;
-      font-weight: 300;
-      text-transform: uppercase;
-      font-size: 17px;
+.page-islandora-search #page-title-header {
+  position: absolute;
+  z-index: 2;
+  width: 160px;
+  margin-left: 85px;
+  margin-bottom: 0px;
+  text-align: center;
+  line-height: 15px;
+  color: #f0f0f0;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 17px;
 }
 
-.page-islandora-object #page-title-header{
+.page-islandora-object #page-title-header {
   position: absolute;
   z-index: 2;
   width: 160px;
@@ -268,17 +284,17 @@ display: none;
   color: #f0f0f0;
   font-weight: 300;
   font-size: 12px;
-
 }
 
-#block-block-2, #block-block-1{
-  float:left;
-height: 18px;
-padding-left: 20px;
-padding-right: 20px;
+#block-block-2,
+#block-block-1 {
+  float: left;
+  height: 18px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
-#zone-header{
+#zone-header {
   background-color: #1a1a1a;
   width: 100%;
   display: flex;
@@ -287,54 +303,52 @@ padding-right: 20px;
   height: 80px;
 }
 
-#region-content{
+#region-content {
   width: 100%;
   margin: 0px;
 }
 
-.region-header-second-inner{
-display: flex;
-align-items: center;
-height: 100%;
+.region-header-second-inner {
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 
-#region-header-first{
+#region-header-first {
   width: 25%;
   padding: 0px;
   margin: 0px;
   display: flex;
-justify-content: center;
-align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
-div.region-inner.region-header-first-inner{
-      display: flex;
-          align-items: center;
-              height: 100%;
-
+div.region-inner.region-header-first-inner {
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 
-#block-islandora-solr-basic-facets{
+#block-islandora-solr-basic-facets {
   padding-bottom: 32px;
 }
 
-#block-user-login{
+#block-user-login {
   padding-left: 12px;
   padding-top: 20px;
   padding-bottom: 20px;
   border-top: 1px solid #cacaca;
 }
 
-.islandora-solr-facet{
-      margin-bottom: 0px;
+.islandora-solr-facet {
+  margin-bottom: 0px;
 }
 
 .item-list ul li {
   margin: 0px
 }
 
-
-.soft-limit{
+.soft-limit {
   margin-left: 13px;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -343,114 +357,110 @@ div.region-inner.region-header-first-inner{
   text-decoration: underline;
 }
 
-#region-header-second{
+#region-header-second {
   text-align: right;
   width: 100%;
   margin: 0px;
   padding: 0px;
 }
 
-#region-sidebar-first{
-left: 0px;
-margin: 0px;
-background-color: white;
-width: 25%;
+#region-sidebar-first {
+  left: 0px;
+  margin: 0px;
+  background-color: white;
+  width: 25%;
 }
 
-#block-islandora-solr-simple{
-  float:left;
+#block-islandora-solr-simple {
+  float: left;
 }
 
-
- #zone-content {
-background-color:#f0f0f0;
-margin: 0px;
-width: 100%;
-display:flex;
-    flex-direction: row;
+#zone-content {
+  background-color: #f0f0f0;
+  margin: 0px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
 }
 
-
-#breadcrumb{
-  position:absolute;
+#breadcrumb {
+  position: absolute;
   margin-left: 21%;
   z-index: 5;
 }
 
-.Dark > body{
+.Dark > body {
   background-color: #545454;
   color: white;
 }
 
-.footerText{
+.footerText {
   width: 100%;
-color: #6b6b6b;
-font-size: 10px;
-padding-left: 32px;
-text-transform: uppercase;
-line-height: 13px;
-    align-self: center;
+  color: #6b6b6b;
+  font-size: 10px;
+  padding-left: 32px;
+  text-transform: uppercase;
+  line-height: 13px;
+  align-self: center;
 }
 
-#block-system-main{
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    height: 100%;
+#block-system-main {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
 }
 
-#region-content .region-content-inner{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+#region-content .region-content-inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
-#block-block-9{
-background-color: #1a1a1a;
+#block-block-9 {
+  background-color: #1a1a1a;
 }
 
-.footerContainer{
+.footerContainer {
   display: flex;
 }
 
-.footerImg{
+.footerImg {
   padding: 60px;
 }
 
-.footerTitle{
+.footerTitle {
   color: #6b6b6b;
-text-transform: uppercase;
-font-size: 9px;
-text-align: center;
-padding-top: 12px;
+  text-transform: uppercase;
+  font-size: 9px;
+  text-align: center;
+  padding-top: 12px;
 }
 
-#block-delta-blocks-site-name{
+#block-delta-blocks-site-name {
   height: 68px;
   width: 123px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   float: left;
-padding-right: calc(20% - 260px);
-
+  padding-right: calc(20% - 260px);
 }
 
-#zone-branding {
+#zone-branding {}
 
-}
-
-.zone-user li, .zone-menu li {
-display:inline;
+.zone-user li,
+.zone-menu li {
+  display: inline;
 }
 
 .zone-branding {
-background-color: white;
+  background-color: white;
 }
 
 .zone-menu {
-background-color: #F2F1F6;
-padding:.75em 0;
+  background-color: #F2F1F6;
+  padding: .75em 0;
 }
 
 .zone-menu-wrapper {
@@ -458,79 +468,87 @@ padding:.75em 0;
 }
 
 .site-name {
-font-family: "Roboto", sans-serif;
-letter-spacing: 0px;
-text-transform:uppercase;
-margin: 0px;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+  margin: 0px;
 }
 
-.site-name a{
+.site-name a {
   color: #8b8b8b;
- font-weight: 300;
- font-size:15px;
-
+  font-weight: 300;
+  font-size: 15px;
 }
 
-.boldSpan{
+.boldSpan {
   font-weight: 700;
 }
 
 .logo-img {
-float: left;
-margin-right: 0px;
-padding: 0px;
-opacity: 0.8;
+  float: left;
+  margin-right: 0px;
+  padding: 0px;
+  opacity: 0.8;
 }
 
 .logo-img: hover {
-opacity: 1.0;
+  opacity: 1.0;
 }
 
-.breadcrumb{
+.breadcrumb {
   color: black;
 }
 
+
 /* footer */
-#zone-footer, #region-footer-first, #block-block-3{
+
+#zone-footer,
+#region-footer-first,
+#block-block-3 {
   width: 100%;
   margin: 0px;
 }
 
-#block-block-3{
-  height:128px;
+#block-block-3 {
+  height: 128px;
   background-color: black;
 }
 
+
 /* Simple Search */
 
-#block-islandora-solr-simple{
-    margin-left: 85px;
-    border: 1px solid #808080;
-    width: 40%
-  }
+#block-islandora-solr-simple {
+  margin-left: 85px;
+  border: 1px solid #808080;
+  width: 40%
+}
 
-#block-islandora-solr-simple div, #islandora-solr-simple-search-form,
+#block-islandora-solr-simple div,
+#islandora-solr-simple-search-form,
 .block-islandora-solr-simple h2.block-title {
-display:inline;
+  display: inline;
 }
 
 .block-islandora-solr-simple h2.block-title {
-font-size:100%;
+  font-size: 100%;
 }
+
 
 /* Advanced Search link*/
+
 .block-block-3 p {
-margin:1.2em 0 0 0;
+  margin: 1.2em 0 0 0;
 }
+
+
 /* Omega text */
 
-
-
-#section-content {
-  min-height: calc(100vh - 68px);
-}
-
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   letter-spacing: 0px;
   font-family: Roboto;
   font-weight: 700;
@@ -546,23 +564,26 @@ h2 {
   font-size: 100%;
 }
 
+
 /* Make site titles the same size if it's an H1 (home) or H2 (internal) */
+
 h1.site-name,
 h2.site-name {
   font-size: 150%;
   line-height: 13px;
 }
 
+
 /* Make it a bit smaller for block headers */
+
 h2.block-title {
   font-size: 115%;
   margin: 0;
-
 }
 
-#block-system-navigation h2.block-title{
+#block-system-navigation h2.block-title {
   border-top: 1px solid #cacaca;
-padding-top: 22px;
+  padding-top: 22px;
 }
 
 h2.node-title {
@@ -573,7 +594,8 @@ h3 {
   font-size: 125%;
 }
 
-h4, dt {
+h4,
+dt {
   font-size: 110%;
 }
 
@@ -586,39 +608,39 @@ h6 {
 }
 
 
-
 /* sidebar */
 
-list-style-image{
+list-style-image {
   display: none;
 }
 
-#block-system-navigation{
-    padding: 0px 12px 12px 12px;
+#block-system-navigation {
+  padding: 0px 12px 12px 12px;
 }
 
-div.tabs.clearfix{
+div.tabs.clearfix {
   max-width: 1200px;
-margin-left: auto;
-margin-right: auto;
-    margin-top: 53px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 53px;
 }
 
-.count{
+.count {
   color: #bebebe;
   font-size: 10px;
-padding-left: 10px;
+  padding-left: 10px;
 }
 
-#block-islandora-solr-sort{
-  max-width: 1200px;
+#block-islandora-solr-sort {
+  width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.form-item, .form-actions {
-    margin-top: 10px;
-    margin-bottom: 0px;
+.form-item,
+.form-actions {
+  margin-top: 10px;
+  margin-bottom: 0px;
 }
 
 .region-sidebar-first-inner .block-inner {
@@ -627,7 +649,7 @@ padding-left: 10px;
   box-sizing: border-box;
 }
 
-.islandora-solr-facet-wrapper h3{
+.islandora-solr-facet-wrapper h3 {
   margin-bottom: 0px;
   font-size: 115%;
   color: #6f6f6f;
@@ -635,17 +657,17 @@ padding-left: 10px;
   margin-top: 20px;
 }
 
-a.plus{
-height: 10px;
-padding-left: 5px;
-padding-right: 5px;
-border-radius: 2px;
-opacity: 0.5;
-margin-left: 10px;
-    text-align: center;
+a.plus {
+  height: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 2px;
+  opacity: 0.5;
+  margin-left: 10px;
+  text-align: center;
 }
 
-a.plus:hover{
+a.plus:hover {
   background-color: #438fca;
   height: 10px;
   padding-left: 5px;
@@ -656,16 +678,16 @@ a.plus:hover{
   opacity: 1.0;
 }
 
-a.minus{
+a.minus {
   height: 10px;
-    padding-left: 7px;
-    padding-right: 7px;
-    border-radius: 2px;
-    margin-left: 0px;
-    text-align: center;
+  padding-left: 7px;
+  padding-right: 7px;
+  border-radius: 2px;
+  margin-left: 0px;
+  text-align: center;
 }
 
-a.minus:hover{
+a.minus:hover {
   background-color: #ff7777;
   height: 10px;
   padding-left: 7px;
@@ -675,127 +697,147 @@ a.minus:hover{
   margin-left: 0px;
 }
 
-
-
-.islandora-solr-facet li, .islandora-solr-facet-pages-results li{
+.islandora-solr-facet li,
+.islandora-solr-facet-pages-results li {
   list-style: none;
   margin-bottom: 1px;
   padding: 0px;
   -webkit-transition: .25s ease-in-out;
-    -moz-transition: .25s ease-in-out;
-    -o-transition: .25s ease-in-out;
-    transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
 }
 
-
-.islandora-solr-facet li:hover, .islandora-solr-facet-pages-results li:hover{
-color: blue;
+.islandora-solr-facet li:hover,
+.islandora-solr-facet-pages-results li:hover {
+  color: blue;
   -webkit-transition: .25s ease-in-out;
-    -moz-transition: .25s ease-in-out;
-    -o-transition: .25s ease-in-out;
-    transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
 }
 
-
-.islandora-solr-facet li a, .islandora-solr-facet-pages-results li a{
-text-decoration:none;
+.islandora-solr-facet li a,
+.islandora-solr-facet-pages-results li a {
+  text-decoration: none;
 }
 
 #block-islandora-solr-search-navigation div {
-margin:.5em 0;
+  margin: .5em 0;
 }
+
 
 /* content area */
 
 .islandora-solr-sort li {
-display:inline;
+  display: inline;
 }
 
 .islandora-solr-sort li:first-of-type {
-margin:0 .25em 0 0;
+  margin: 0 20px 0 0;
 }
+
+ul.islandora-solr-sort li{
+  margin: 0 20px 0 0;
+}
+
 
 /*.object-metadata-wrapper {
 border:1px #fc6 solid;
 }
 */
+
 .islandora-basic-image-content,
 .islandora-large-image-content,
 .islandora-video-content {
-background-color: #fff;
-border:none;
-padding: 0;
-margin:0 0 2em 0;
+  background-color: #fff;
+  border: none;
+  padding: 0;
+  margin: 0 0 2em 0;
 }
 
-.islandora-pdf-metadata > table th{
-background-color: #D6D6D6;
+.islandora-pdf-metadata > table th {
+  background-color: #D6D6D6;
 }
 
- .islandora-pdf-metadata >table td{
-background-color: #efefef;
-border-bottom:1px #c7c7c7 solid;
+.islandora-pdf-metadata >table td {
+  background-color: #efefef;
+  border-bottom: 1px #c7c7c7 solid;
 }
 
-.parent-collections{
-background-color: #efefef;
-border:1px #c7c7c7 solid;
-margin:2em 0;
-padding:.5em
+.parent-collections {
+  background-color: #efefef;
+  border: 1px #c7c7c7 solid;
+  margin: 2em 0;
+  padding: .5em
 }
 
 fieldset.islandora-metadata.collapsible {
-background-color: #efefef;
-border:1px #c7c7c7 solid;
-margin:2em 0;
-padding:.5em
+  background-color: #efefef;
+  border: 1px #c7c7c7 solid;
+  margin: 2em 0;
+  padding: .5em
 }
+
 
 /* Sor results */
 
-dl.solr-fields  {
-border-top:none;
+dl.solr-fields {
+  border-top: none;
 }
 
 .islandora-solr-search-result {
-margin: 1em 0 0 0;
+  margin: 1em 0 0 0;
 }
 
 .islandora-solr-search-result {
-border-bottom:1px #c7c7c7 solid;
-padding: 0 0 1em 0;
+  border-bottom: 1px #c7c7c7 solid;
+  padding: 0 0 1em 0;
+  color: #6b6b6b
+
 }
 
-.islandora-solr-search-result-inner .solr-fields dt, .solr-fields dd  {
-border-top:none;
+.islandora-solr-search-result a {
+  color: #438fca;
 }
 
-.islandora-inline-metadata dt:first-of-type, .islandora-inline-metadata dd:first-of-type {
-padding-top:0;
-padding-bottom:0;
-margin-top:-.3em;
+.islandora-solr-search-result-inner .solr-fields dt,
+.solr-fields dd {
+  border-top: none;
 }
+
+.islandora-inline-metadata dt:first-of-type,
+.islandora-inline-metadata dd:first-of-type {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: -.3em;
+}
+
 
 /* Landing page view */
 
 .view-islandora-collection-landing-pages td {
-border-bottom:#ccc 1px solid;
-vertical-align:top;
+  border-bottom: #ccc 1px solid;
+  vertical-align: top;
 }
 
-.view-islandora-collection-landing-pages td a{
-text-decoration:none;
+.view-islandora-collection-landing-pages td a {
+  text-decoration: none;
 }
+
 
 /* Omega Visuals */
 
-.pager li.pager-first a, .pager li.pager-previous a, .pager li.pager-next a, .pager li.pager-last a {
-    width: 60px;
-    text-align: center;
-    padding: 4px 0px;
+.pager li.pager-first a,
+.pager li.pager-previous a,
+.pager li.pager-next a,
+.pager li.pager-last a {
+  width: 60px;
+  text-align: center;
+  padding: 4px 0px;
 }
 
-#block-block-5{
+#block-block-5 {
   position: absolute;
   width: 250px;
   background-color: #438fca;
@@ -805,49 +847,124 @@ text-decoration:none;
   z-index: 1;
 }
 
-.islandora-pdf-metadata, .islandora-large-image-metadata{
+.islandora-pdf-metadata,
+.islandora-large-image-metadata {
   display: none;
 }
 
+#page-title {
+  display: none;
+}
 
-#page-title{
+#block-islandora-solr-sort  h2.block-title{
+  display: none;
+}
+
+ul.islandora-solr-sort{
+  border-bottom: 1px solid #b7b7b7;
+margin-top: 50px;
+margin-bottom: 5px;
+}
+
+div.item-list:nth-child(2){
   display:none;
 }
 
+#islandora-solr-result-count{
+  color:#6b6b6b;
+}
+
+
+#header-result-count{
+  display:none;
+}
+
+.page-islandora-search #header-result-count{
+  display:block;
+  position: absolute;
+    color: white;
+    z-index: 2;
+    bottom: 13px;
+    margin-left: 95px;
+    letter-spacing: 2px;
+    font-weight: 400;
+    font-size: 10px;
+}
+
+#islandora-solr-top {
+  display: none;
+}
+
+div.islandora-solr-content{
+  padding-bottom: 50px;
+}
+
+.page-islandora-search h1#object-title-pdf.object-title,
+.page-islandora-object-islandoraroot h1#object-title-pdf.object-title{
+  display: none;
+}
+
 @media screen and (max-width: 740px) {
-  #block-islandora-solr-simple, #region-sidebar-first, #block-block-4{
-    display:none;
-  }
 
-  .islandora-pdf-metadata td:nth-child(2){
-  word-break: break-all;
+  .islandora-pdf-metadata td:nth-child(2) {
+    word-break: break-all;
   }
-
-  #page-title{
+  #page-title {
     position: inherit;
     color: #000;
     display: none;
   }
-
   #zone-content-wrapper {
     width: 100vw;
     margin-left: 0px;
-}
+  }
+
 }
 
 @media screen and (max-width: 1740px) {
-#region-sidebar-first, #block-block-4, #page-title-header{
-    display:none;
+
+  #block-system-main{
+padding-left: 20px;
+padding-right: 20px;
   }
 
+.page-islandora-search  #zone-content {
+      background-color: #f0f0f0;
+      margin: 0px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+.page-islandora-search #region-sidebar-first {
+    left: 0px;
+    margin: 0px;
+    background-color: white;
+    width: 100%;
+}
+
+.page-islandora-object #region-sidebar-first{
+  display:none;
+}
+
+.page-islandora-search .region-sidebar-first-inner{
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+  #block-block-4, #block-system-navigation, #page-title-header{
+    display: none;
+  }
   #block-islandora-solr-simple {
-      margin-left: 10%;
-      border: 1px solid #808080;
-      width: 80%;
+    margin-left: 10%;
+    border: 1px solid #808080;
+    width: 80%;
   }
-
-  .islandora-pdf-metadata{
-    display:block;
+  .islandora-pdf-metadata {
+    display: block;
   }
 }
 
