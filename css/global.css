@@ -312,7 +312,6 @@ left: 0px;
 display: -moz-box;
 display: -ms-flexbox;
 display: flex;
-
   flex-direction: row;
   margin: 0px;
   height: 80px;
@@ -331,6 +330,24 @@ display: flex;
 
   align-items: center;
   height: 100%;
+}
+
+.sidebarLabel{
+  display: none;
+}
+
+.page-islandora-search .sidebarLabel{
+  display: block;
+  border-bottom: 1px solid #cecece;
+  padding-bottom: 17px;
+  text-align: center;
+  padding-top: 5px;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #6b6b6b;
+  margin: 12px;
+  letter-spacing: 1px;
 }
 
 #region-header-first {

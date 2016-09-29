@@ -34,10 +34,10 @@
       $(".islandora-large-image-metadata").appendTo("#block-system-main");
       $("#breadcrumb").prependTo(".region-content-inner");
       $("#islandora-solr-result-count").prop({ id: "header-result-count"}).appendTo("#breadcrumb");
-$("#region-content div.tabs.clearfix").prependTo("#block-system-main");
+      $("#region-content div.tabs.clearfix").prependTo("#block-system-main");
 
-var newHeight = $( document ).height();
-$(".region-content-inner").height(newHeight);
+      var newHeight = $( document ).height();
+      $(".region-content-inner").height(newHeight).not(".page-islandora-object-islandoraroot");
 
       $( " » " ).replaceWith( " / " );
 
