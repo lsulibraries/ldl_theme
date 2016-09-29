@@ -31,10 +31,15 @@
       $("a.islandora-pdf-link").appendTo("#block-system-main");
       $("#sideMods div:nth-child(1)").appendTo("#sideMods");
       $(".islandora-pdf-metadata").appendTo("#block-system-main");
+      $(".islandora-large-image-metadata").appendTo("#block-system-main");
       $("#breadcrumb").prependTo(".region-content-inner");
       $("#islandora-solr-result-count").prop({ id: "header-result-count"}).appendTo("#breadcrumb");
+$("#region-content div.tabs.clearfix").prependTo("#block-system-main");
 
+var newHeight = $( document ).height();
+$(".region-content-inner").height(newHeight);
 
+      $( " » " ).replaceWith( " / " );
 
     }
   };

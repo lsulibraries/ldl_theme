@@ -460,6 +460,7 @@ color: #ff7777;
   margin-left: auto;
   margin-right: auto;
   min-height: initial;
+  margin-bottom: 50px;
 }
 
 dd {
@@ -469,18 +470,18 @@ dd {
 
 #region-content .region-content-inner {
   display: -webkit-box;
-display: -moz-box;
-display: -ms-flexbox;
-display: flex;
-
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
   flex-direction: column;
   height: 100%;
+  justify-content: space-between;
+  webkit-justify-content: space-between;
 }
 
 #block-block-9 {
   background-color: #1a1a1a;
   vertical-align: bottom;
-      margin-top: calc(100% - 859px);
 }
 
 .footerContainer {
@@ -686,7 +687,7 @@ list-style-image {
   padding: 0px 12px 12px 12px;
 }
 
-div.tabs.clearfix {
+#region-content div.tabs.clearfix {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
@@ -714,6 +715,10 @@ font-size: 12px;
 .form-actions {
   margin-top: 10px;
   margin-bottom: 0px;
+}
+
+#main-content{
+  display:none;
 }
 
 .region-sidebar-first-inner .block-inner {
@@ -997,7 +1002,7 @@ div.islandora-solr-content{
 
 @media screen and (max-width: 740px) {
 
-  .islandora-pdf-metadata td:nth-child(2) {
+  .islandora-pdf-metadata td:nth-child(2), {
     word-break: break-word;
   }
   #page-title {
@@ -1058,7 +1063,7 @@ display: flex;
     border: 1px solid #808080;
     width: 80%;
   }
-  .islandora-pdf-metadata {
+  .islandora-pdf-metadata, .islandora-large-image-metadata {
     display: block;
   }
 }
