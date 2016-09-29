@@ -35,9 +35,13 @@
       $("#breadcrumb").prependTo(".region-content-inner");
       $("#islandora-solr-result-count").prop({ id: "header-result-count"}).appendTo("#breadcrumb");
       $("#region-content div.tabs.clearfix").prependTo("#block-system-main");
-
+      $(".bookmark").prependTo("#breadcrumb");
+      $("#block-islandora-solr-simple").clone().prop({ id: "largeSearch", value:"Search LDL.."}).prependTo(".landingContainer");
       var newHeight = $( document ).height();
       $(".region-content-inner").height(newHeight).not(".page-islandora-object-islandoraroot");
+
+$('input[name="islandora_simple_search_query"]').val("Search LDL...");
+
 
       $( " » " ).replaceWith( " / " );
 
