@@ -1007,7 +1007,8 @@ div.islandora-solr-content{
   padding-bottom: 50px;
 }
 
-.page-islandora-object-islandoraroot #block-block-4{
+.page-islandora-object-islandoraroot #block-block-4,
+.page-user #block-block-4{
   position: relative;
 }
 
