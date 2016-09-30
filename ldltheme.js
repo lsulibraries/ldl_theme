@@ -40,14 +40,30 @@
       $("#block-block-1").clone().prop({ id: "landingAdvanced"}).appendTo("#largeSearch");
 
 
+
       var newHeight = $( document ).height();
       $(".region-content-inner").not(".page-islandora-object-islandoraroot .region-content-inner, .page-islandora-search .region-content-inner").height(newHeight);
 
-$('input[name="islandora_simple_search_query"]').val("Search LDL...");
-$('input[name="op"]').val("");
-$('#block-user-login input[name="op"]').val("Login");
+      $('input[type=text]').each(function() {
+
+    $(this).attr('placeholder', 'Search LDL...' );
+});
+      $('input[name="op"]').val("");
+      $('#block-user-login input[name="op"]').val("Login");
 
       $( " » " ).replaceWith( " / " );
+
+      $("#edit-islandora-simple-search-query")
+        .focus(function() {
+              if (this.value === this.defaultValue) {
+                  this.value = '';
+              }
+        })
+        .blur(function() {
+              if (this.value === '') {
+                  this.value = this.defaultValue;
+              }
+      });
 
     }
   };

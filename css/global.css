@@ -506,6 +506,10 @@ color: #ff7777;
   width: 100%;
 }
 
+[placeholder]:focus::-webkit-input-placeholder {
+  transition: opacity 0.5s 0.5s ease;
+  opacity: 0;
+}
 
 
 dd {
