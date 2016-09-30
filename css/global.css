@@ -314,7 +314,7 @@ left: 0px;
 }
 
 #block-block-1{
-  position: absolute;
+
 right: 0px;
 }
 
@@ -497,6 +497,7 @@ color: #ff7777;
   margin-bottom: 50px;
   padding-left: 20px;
   padding-right: 20px;
+  flex-grow: 2;
 }
 
 
@@ -1032,14 +1033,16 @@ div.islandora-solr-content{
 }
 
 .page-islandora-object-islandoraroot #block-block-4,
-.page-user #block-block-4{
+.page-user #block-block-4,
+.page-advanced-search #block-block-4{
   position: relative;
 }
 
 .page-islandora-search h1#object-title-pdf.object-title,
 .page-islandora-object-islandoraroot h1#object-title-pdf.object-title,
 .page-islandora-object-islandoraroot #page-title-header,
-.page-user  #page-title-header{
+.page-user  #page-title-header,
+.page-advanced-search  #page-title-header{
   display: none;
 }
 
