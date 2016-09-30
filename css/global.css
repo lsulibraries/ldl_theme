@@ -392,9 +392,14 @@ display: flex;
 
 #block-user-login {
   padding-left: 12px;
-  padding-top: 20px;
   padding-bottom: 20px;
-  border-top: 1px solid #cacaca;
+      color: #6b6b6b;
+}
+
+#block-user-login label{
+  text-transform: uppercase;
+font-size: 10px;
+letter-spacing: 1px;
 }
 
 .islandora-solr-facet {
@@ -1108,21 +1113,47 @@ height: 0px;
   border-left-width: 0px;
 }
 
-#largeSearch input#edit-submit.form-submit{
+#largeSearch input#edit-submit.form-submit,
+#largeSearch input#edit-submit--2.form-submit{
   background-image: url(http://i.imgur.com/zBCP7zk.png);
-background-repeat: no-repeat;
-background-position: center;
-    background-size: 40px 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 40px 40px;
+}
+
+#block-user-login input#edit-submit.form-submit{
+  background-image: none;
+  color: #438fca;
+  border: 1px solid #438fca;
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+
+#block-user-login input#edit-submit.form-submit:hover{
+  background-image: none;
+  background-color: #438fca;
+color: white;
+
 }
 
 #landingAdvanced{
   display:none;
 }
 
+#block-user-login .block-inner {
+  border-top: 1px solid #cacaca;
+margin-right: 12px;
+padding-top: 20px;
+}
+
 .page-islandora-object-islandoraroot #landingAdvanced{
   display: flex;
   justify-content: flex-end;
   height: 34px;
+      float: right;
+
 }
 
 .page-islandora-object-islandoraroot #landingAdvanced .block-inner{

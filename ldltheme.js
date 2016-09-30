@@ -45,7 +45,7 @@
 
 $('input[name="islandora_simple_search_query"]').val("Search LDL...");
 $('input[name="op"]').val("");
-
+$('#block-user-login input[name="op"]').val("Login");
 
       $( " » " ).replaceWith( " / " );
 
