@@ -41,7 +41,7 @@
 
 
       var newHeight = $( document ).height();
-      $(".region-content-inner").height(newHeight).not(".page-islandora-object-islandoraroot .region-content-inner");
+      $(".region-content-inner").not(".page-islandora-object-islandoraroot .region-content-inner").height(newHeight);
 
 $('input[name="islandora_simple_search_query"]').val("Search LDL...");
 $('input[name="op"]').val("");
