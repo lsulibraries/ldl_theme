@@ -44,7 +44,7 @@
       var newHeight = $( document ).height();
       $(".region-content-inner").not(".page-islandora-object-islandoraroot .region-content-inner, .page-islandora-search .region-content-inner").height(newHeight);
 
-      $('input[type=text]').each(function() {
+      $('#edit-simple input[type=text]').each(function() {
 
     $(this).attr('placeholder', 'Search LDL...' );
 });
