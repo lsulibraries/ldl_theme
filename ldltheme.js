@@ -39,7 +39,7 @@
       $("#block-islandora-solr-simple").clone().prop({ id: "largeSearch", value:"Search LDL.."}).prependTo(".landingContainer");
       $("#block-block-1").clone().prop({ id: "landingAdvanced"}).appendTo("#largeSearch");
 
-
+  
 
       var newHeight = $( document ).height();
       $(".region-content-inner").not(".page-islandora-object-islandoraroot .region-content-inner, .page-islandora-search .region-content-inner").height(newHeight);

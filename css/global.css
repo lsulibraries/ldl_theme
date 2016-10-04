@@ -1243,7 +1243,7 @@ display: block;
 
 
 
-@media screen and (max-width: 1336px) {
+@media screen and (max-width: 1260px) {
 
   #region-content .region-content-inner,.user-page .region-content-inner, .page-islandora-object-islandoraroot .region-content-inner {
     display: -webkit-box;
