@@ -19,8 +19,13 @@
       });
 
       window.sr = ScrollReveal();
+      sr.reveal('.region-sidebar-first-inner', { duration: 500, delay: 100,  easing: 'linear', scale: 1, viewFactor: 0.01, }, 50);
       sr.reveal('.section-footer', { duration: 1000, delay: 0, distance: 1000, scale: 1.0, rotate: { x: 500, y: 0, z: 0 },});
+      sr.reveal('.islandora-solr-search-result', { duration: 500, delay: 400,  easing: 'linear', scale: 1, }, 50);
+      sr.reveal('.solr-thumb img, .solr-fields', { duration: 500, delay: 400,  easing: 'linear', scale: 1, }, 50);
       sr.reveal('.islandora-basic-collection-grid dl', { duration: 500, delay: 200,  easing: 'ease-in', }, 150);
+      sr.reveal('.bookmarkWelcome', { duration: 1200, delay: 100,  easing: 'linear', scale: 1, viewFactor: 0.01, }, 50);
+
 
 
       $(".islandora-pdf-metadata").clone().prop({ id: "sideMods", class: "newClass" }).prependTo("#region-sidebar-first");
@@ -39,7 +44,7 @@
       $("#block-islandora-solr-simple").clone().prop({ id: "largeSearch", value:"Search LDL.."}).prependTo(".landingContainer");
       $("#block-block-1").clone().prop({ id: "landingAdvanced"}).appendTo("#largeSearch");
 
-  
+
 
       var newHeight = $( document ).height();
       $(".region-content-inner").not(".page-islandora-object-islandoraroot .region-content-inner, .page-islandora-search .region-content-inner").height(newHeight);

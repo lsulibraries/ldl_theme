@@ -649,7 +649,7 @@ display: flex;
 }
 
 .page-islandora-search #block-islandora-solr-simple, .page-islandora-object #block-islandora-solr-simple{
-  margin-left: 120px;
+  margin-left: 85px;
 }
 
 #block-islandora-solr-simple div,
@@ -960,9 +960,9 @@ dl.solr-fields {
 
 .islandora-inline-metadata dt:first-of-type,
 .islandora-inline-metadata dd:first-of-type {
-  padding-top: 0;
-  padding-bottom: 0;
   margin-top: -.3em;
+    padding-bottom: 0px;
+    padding-top: 20px;
 }
 
 
@@ -1245,21 +1245,16 @@ background-position: 216px 25%;
 display: block;
 }
 
-
-
-@media screen and (max-width: 1260px) {
-
-#block-islandora-solr-basic-facets {
-   border-bottom: 1px solid #b7b7b7;
+.islandora-inline-metadata dt{
+    display: none;
 }
 
 ul.islandora-solr-sort {
-    border-bottom: 1px solid #b7b7b7;
-    margin-top: 0px;
-    margin-bottom: 5px;
-    padding: 0px;
-    text-align: center;
-    letter-spacing: 2px;
+  border-bottom: 1px solid #b7b7b7;
+  margin-bottom: 5px;
+  padding: 0px;
+  text-align: center;
+  letter-spacing: 2px;
 }
 
 #block-islandora-solr-sort{
@@ -1271,22 +1266,23 @@ padding-right: 20px;
 }
 
 .islandora-solr-search-result-inner{
-    flex-direction: row;
-    justify-content: center;
-    display: flex;
+  flex-direction: row;
+  justify-content: center;
+  display: flex;
 }
 
 dl.solr-fields {
-    width: 100%;
+  width: 100%;
+    padding: 20px;
 }
 
 dl.solr-thumb{
-    width: 20%;
-    text-align: center;
-    display: flex;
-    border-right: 1px solid #bdbdbd;
-    justify-content: center;
-    padding: 20px;
+  width: 20%;
+  text-align: center;
+  display: flex;
+  border-right: 1px solid #bdbdbd;
+  justify-content: center;
+  padding: 20px;
 }
 
 .solr-thumb dt{
@@ -1294,45 +1290,74 @@ align-self: center;
 width: 100%;
 }
 
-  .islandora-solr-search-result{
-    background-color: white;
-    border-radius: 10px;
-    border: 1px solid #cccccc;
-    padding: 30px;
-    margin-top: 10px;
-    margin-left: 2px;
-    margin-right: 2px;
+.islandora-solr-search-result{
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid #cccccc;
+  padding: 0px;
+  margin-top: 10px;
+  margin-left: 2px;
+  margin-right: 2px;
 }
 
 .islandora-inline-metadata dt {
-    margin-right: -1px;
-    width: 8%;
-    font-weight: 400;
-    padding-right: 0;
-    word-wrap: normal;
-    text-transform: uppercase;
-    color: #adadad;
-    letter-spacing: 2px;
-    font-size: 9px;
-    text-align: right;
-    padding-top:10px;
+  margin-right: -1px;
+  width: 8%;
+  font-weight: 400;
+  padding-right: 0;
+  word-wrap: normal;
+  text-transform: uppercase;
+  color: #adadad;
+  letter-spacing: 2px;
+  font-size: 9px;
+  text-align: right;
+  padding-top:10px;
 }
 
 .islandora-inline-metadata dd {
-    display: inline-block;
-    zoom: 1;
-    letter-spacing: normal;
-    word-spacing: normal;
-    vertical-align: top;
-    margin: 0;
-    padding-left: 18px;
+  display: inline-block;
+  zoom: 1;
+  letter-spacing: normal;
+  word-spacing: normal;
+  vertical-align: top;
+  margin: 0;
+  padding-left: 18px;
 width:92%;
 }
 
 .dc-title{
-    font-size:20px;
-    line-height: 20px;
+  font-size:25px;
+  line-height: 25px;
+
 }
+
+
+@media screen and (max-width: 1260px) {
+
+.islandora-solr-search-result {
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid #cccccc;
+    padding: 0px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: auto;
+}
+
+ul.islandora-solr-sort {
+  border-bottom: 1px solid #b7b7b7;
+  margin-top: 0px;
+  margin-bottom: 5px;
+  padding: 0px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+#block-islandora-solr-basic-facets {
+   border-bottom: 1px solid #b7b7b7;
+}
+
 
   #region-content .region-content-inner,.user-page .region-content-inner, .page-islandora-object-islandoraroot .region-content-inner {
     display: -webkit-box;
@@ -1393,9 +1418,7 @@ display: flex;
   .islandora-pdf-metadata, .islandora-large-image-metadata {
     display: block;
   }
-  .islandora-inline-metadata dt{
-      display: none;
-  }
+
 }
 
 @media screen and (max-width: 900px) {
