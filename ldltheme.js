@@ -24,7 +24,7 @@
       sr.reveal('.islandora-solr-search-result', { duration: 500, delay: 400,  easing: 'linear', scale: 1, }, 50);
       sr.reveal('.solr-thumb img, .solr-fields', { duration: 500, delay: 400,  easing: 'linear', scale: 1, }, 50);
       sr.reveal('.islandora-basic-collection-grid dl', { duration: 500, delay: 200,  easing: 'ease-in', }, 150);
-      sr.reveal('.bookmarkWelcome', { duration: 1200, delay: 100,  easing: 'linear', scale: 1, viewFactor: 0.01, }, 50);
+      sr.reveal('.bookmarkWelcome', { duration: 800, delay: 100,  easing: 'linear', scale: 1, viewFactor: 0.01, }, 50);
 
 
 

@@ -1277,7 +1277,7 @@ dl.solr-fields {
 }
 
 dl.solr-thumb{
-  width: 20%;
+  width: 25%;
   text-align: center;
   display: flex;
   border-right: 1px solid #bdbdbd;
@@ -1447,7 +1447,30 @@ display: flex;
 
 @media screen and (max-width: 740px) {
 
+input#edit-submit.form-submit, input#edit-submit--2.form-submit {
+width: 50px;
+}
 
+.page-islandora-search #block-islandora-solr-simple, .page-islandora-object #block-islandora-solr-simple {
+    margin-left: 20px;
+}
+
+#zone-header {
+    background-color: #1a1a1a;
+    width: 100%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px;
+    height: auto;
+}
+
+ul.islandora-solr-sort{
+font-size: 8px;
+}
 
   .islandora-pdf-metadata td:nth-child(2), {
     word-break: break-word;
