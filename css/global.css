@@ -59,6 +59,12 @@ li a.active {
   display: none;
 }
 
+#messages{
+    position: absolute;
+    z-index: 3;
+    right: 0px;
+}
+
 span.bold {
   font-weight: 700;
 }
@@ -1245,6 +1251,73 @@ display: block;
 
 @media screen and (max-width: 1260px) {
 
+.solr-fields{
+padding-right: 20px;
+}
+
+.islandora-solr-search-result-inner{
+    flex-direction: row-reverse;
+    justify-content: center;
+    display: flex;
+}
+
+dl.solr-fields {
+    width: 100%;
+}
+
+dl.solr-thumb{
+    width: 20%;
+    text-align: center;
+    display: flex;
+    border-left: 1px solid #bdbdbd;
+    justify-content: center;
+    padding: 20px;
+}
+
+.solr-thumb dt{
+align-self: center;
+}
+
+  .islandora-solr-search-result{
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid #cccccc;
+    padding: 30px;
+    margin-top: 10px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.islandora-inline-metadata dt {
+    margin-right: -1px;
+    width: 8%;
+    font-weight: 400;
+    padding-right: 0;
+    word-wrap: normal;
+    text-transform: uppercase;
+    color: #adadad;
+    letter-spacing: 2px;
+    font-size: 9px;
+    text-align: right;
+    padding-top:10px;
+}
+
+.islandora-inline-metadata dd {
+    display: inline-block;
+    zoom: 1;
+    letter-spacing: normal;
+    word-spacing: normal;
+    vertical-align: top;
+    margin: 0;
+    padding-left: 18px;
+width:92%;
+}
+
+.dc-title{
+    font-size:20px;
+    line-height: 20px;
+}
+
   #region-content .region-content-inner,.user-page .region-content-inner, .page-islandora-object-islandoraroot .region-content-inner {
     display: -webkit-box;
     display: -moz-box;
@@ -1306,7 +1379,35 @@ display: flex;
   }
 }
 
+@media screen and (max-width: 900px) {
+
+  .islandora-solr-search-result-inner {
+      flex-direction: column;
+      justify-content: center;
+      display: flex;
+  }
+
+  dl.solr-thumb {
+      width: 100%;
+      text-align: center;
+      display: flex;
+      border-bottom: 1px solid #bdbdbd;
+      border-left: none;
+      justify-content: center;
+      padding: 20px;
+      margin-bottom: 25px;
+  }
+
+  .islandora-inline-metadata dt{
+      display: none;
+  }
+
+
+}
+
 @media screen and (max-width: 740px) {
+
+
 
   .islandora-pdf-metadata td:nth-child(2), {
     word-break: break-word;
