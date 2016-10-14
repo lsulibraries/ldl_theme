@@ -1256,7 +1256,7 @@ display: block;
 
 ul.islandora-solr-sort {
     border: 1px solid #ccc;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
     padding: 20px;
     text-align: center;
     letter-spacing: 2px;
@@ -1570,6 +1570,10 @@ display: flex;
 }
 
 @media screen and (max-width: 740px) {
+
+input#edit-islandora-simple-search-query.form-text {
+    width: calc(100% - 54px);
+}
 
 input#edit-submit.form-submit, input#edit-submit--2.form-submit {
 width: 50px;

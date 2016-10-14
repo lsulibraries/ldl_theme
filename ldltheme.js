@@ -19,10 +19,12 @@
       });
 
       window.sr = ScrollReveal();
-      sr.reveal('.region-sidebar-first-inner', { duration: 200, delay: 100,  easing: 'linear', scale: 1, viewFactor: 0.01, }, 50);
-      sr.reveal('.section-footer', { duration: 1000, delay: 0, distance: 1000, scale: 1.0, rotate: { x: 500, y: 0, z: 0 },});
+      sr.reveal('.page-islandora-search .region-sidebar-first-inner', { duration: 200, delay: 100, opacity: 1, easing: 'linear', scale: 1, viewFactor: 0.01, }, 50);
+      sr.reveal('#block-block-9',  { duration: 500, distance: '30px', opacity: 1, delay: 100,  easing: 'linear', scale: 1, viewFactor: 0.2, }, 50);
       sr.reveal('.islandora-solr-search-result', { duration: 200, delay: 100,  easing: 'linear', scale: 1, viewFactor: 0.01,}, 20);
-      sr.reveal('.solr-thumb img, .solr-fields', { duration: 200, delay: 550,  easing: 'linear', scale: 1, viewFactor: 0.01, }, 20);
+      sr.reveal('.islandora-solr-sort', { duration: 200, delay: 0,  easing: 'linear', scale: 1, viewFactor: 0.01,}, 20);
+      sr.reveal('.solr-fields, .islandora-solr-sort li', { duration: 200, delay: 350,  easing: 'linear', scale: 1, viewFactor: 0.01, }, 20);
+      sr.reveal('.solr-thumb img', { duration: 200, delay: 850,  easing: 'linear', scale: 1, viewFactor: 0.01, }, 20);
       sr.reveal('.islandora-basic-collection-grid dl', { duration: 500, delay: 200,  easing: 'ease-in', }, 150);
       sr.reveal('.bookmarkWelcome', { duration: 800, delay: 100,  easing: 'linear', scale: 1, viewFactor: 0.01, }, 50);
 
