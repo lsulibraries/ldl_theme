@@ -1305,8 +1305,8 @@ width: 100%;
   margin-top: 10px;
   margin-left: 10px;
   margin-right: 10px;
-width: auto;
-max-width: 1180px;
+    width: 100%;
+    max-width: 1180px;
 }
 
 
