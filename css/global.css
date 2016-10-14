@@ -1397,6 +1397,10 @@ z-index: -1;
   user-select: none;
 }
 
+dd.solr-value.mods-subject-topic-ms{
+color:white;
+}
+
 @media screen and (max-width: 1260px) {
 
 .sidebarLabel::after{
@@ -1475,6 +1479,8 @@ ul.islandora-solr-sort {
     margin-left: 0px;
     margin-right: 0px;
 }
+
+
 
 #block-islandora-solr-basic-facets {
    border-bottom: 1px solid #b7b7b7;
