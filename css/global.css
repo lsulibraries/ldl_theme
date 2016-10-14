@@ -1569,6 +1569,62 @@ display: flex;
 
 @media screen and (max-width: 740px) {
 
+.page-islandora-object-islandoraroot .bookmarkWelcome {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    background-image: url(http://i.imgur.com/spWRfgt.png);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    justify-content: center;
+    background-color: none;
+
+}
+
+
+.bookmarkWelcome h2 {
+    font-size: 22px;
+    margin: 24px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0px;
+    line-height: 23px;
+    width: 216px;
+}
+.page-islandora-object-islandoraroot #breadcrumb {
+    height: 500px;
+background-color: rgba(0, 0, 0, 0.75);
+}
+
+.page-islandora-object-islandoraroot .bookmark {
+    background-color: none;
+    color: white;
+    height: 100%;
+    position: inherit;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.bookmarkEnd, .page-islandora-object-islandoraroot .landingHero, .page-islandora-object-islandoraroot .breadcrumb {
+display: none;
+}
+
+.page-islandora-object-islandoraroot .landingContainer {
+    width: calc(100% - 60px);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    color: #6b6b6b;
+    display: block;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
 .breadcrumb {
     text-transform: uppercase;
     letter-spacing: 1px;
