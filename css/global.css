@@ -1362,7 +1362,7 @@ dd.solr-value.mods-origininfo-dateissued-ms a{
 
 #page{overflow: hidden;}
 
-.grid-6::before{
+.grid-6::before, .grid-9::before{
     -webkit-animation: snow 15s linear infinite;
     -moz-animation: snow 15s linear infinite;
     -ms-animation: snow 15s linear infinite;
@@ -1406,16 +1406,25 @@ max-width: none;
 }
 
 .view-islandora-collection-landing-pages tr{
-
-
-    margin-top: 0px;
-    margin-bottom: 10px;
     color: #6b6b6b;
     display: block;
     background-color: white;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 10px;
+    flex-grow: 1;
+    width: 20%;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.view-islandora-collection-landing-pages tbody{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 div.view-islandora-collection-landing-pages
@@ -1425,11 +1434,13 @@ div.view-islandora-collection-landing-pages
     margin-right: auto;
 }
 
-.view-islandora-collection-landing-pages tr:hover{
+#block-system-main .view-islandora-collection-landing-pages div.view-content table.views-table tbody tr:hover{
 background-color: white;}
 
-.view-islandora-collection-landing-pages td:hover{
+.view-islandora-collection-landing-pages td:hover, .view-islandora-collection-landing-pages tr.even td, .view-islandora-collection-landing-pages tr.odd td {
 background-color: white;}
+
+/*know that even and odd td is how yellow hover procs*/
 
 .view-islandora-collection-landing-pages table{
 border:none;}
@@ -1438,27 +1449,88 @@ border:none;}
     color: #438fca;
 font-size: 25px;
 font-weight: normal;
+    line-height: 25px;
 }
 
-.view-islandora-collection-landing-pages h2, .view-islandora-collection-landing-pages p{
-margin-bottom: 0px;
+.view-islandora-collection-landing-pages p{
+  margin-bottom: 0px;
+}
+
+.view-islandora-collection-landing-pages h2{
+  margin-bottom: 10px;
 }
 
 .view-islandora-collection-landing-pages p.about_collection{
-margin-top: 30px;
-    width: auto;
-margin-bottom: 10px;
+  margin-top: 30px;
+  width: auto;
+  margin-bottom: 10px;
 }
 
 .view-islandora-collection-landing-pages p.about_collection a{
-    padding: 20px;
-    background-color: #438fca;
+  padding: 10px;
+  background-color: #438fca;
   color: white;
+  width: auto;
+  border-radius: 5px;
+}
+
+
+.view-islandora-collection-landing-pages tr:nth-child(4n-7){
+margin-left:0px;
+}
+
+.view-islandora-collection-landing-pages tr:nth-child(4n){
+margin-right:0px;
+}
+
+
+@media screen and (max-width: 1765px) {
+
+
+.view-islandora-collection-landing-pages tr{
+    color: #6b6b6b;
+    display: block;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    flex-grow: 1;
     width: auto;
-border-radius: 5px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.view-islandora-collection-landing-pages tbody{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
 }
 
 @media screen and (max-width: 1260px) {
+
+.view-islandora-collection-landing-pages tr{
+    color: #6b6b6b;
+    display: block;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    flex-grow: 1;
+    width: 100%;
+    margin: 10px;
+}
+
+.view-islandora-collection-landing-pages tbody{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
 
 .sidebarLabel::after{
     content: 'open';
@@ -1579,7 +1651,7 @@ display: flex;
     width: 100%;
 }
 
-.page-islandora-object #region-sidebar-first{
+.page-islandora-object #region-sidebar-first, .page-browse-collections #region-sidebar-first{
   display:none;
 }
 

@@ -56,8 +56,8 @@ $(".sidebarLabel").click(function(){
       $($div).prependTo("#grid-9");
 
 
-      var newHeight = $( document ).height();
-      $(".region-content-inner").not(".page-islandora-object-islandoraroot .page-browse-collections .region-content-inner, .page-islandora-search .region-content-inner").height(newHeight);
+     // var newHeight = $( document ).height();
+     // $(".region-content-inner").not(".page-islandora-object-islandoraroot .page-browse-collections .region-content-inner, .page-islandora-search .region-content-inner").height(newHeight);
 
       $('#edit-simple input[type=text]').each(function() {
 
