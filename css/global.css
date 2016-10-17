@@ -1263,6 +1263,7 @@ ul.islandora-solr-sort {
     margin-left: 10px;
     border-radius: 10px;
     margin-right: 10px;
+    margin-top: 10px;	
 }
 
 
@@ -1379,16 +1380,16 @@ z-index: -1;
 
 	@keyframes snow
 	{	0% {transform:  translate(0px, 0px);}
-		100% {transform: translate(300px, 346px);}	}
+		100% {transform: translate(300px, -346px);}	}
 	@-moz-keyframes snow
 	{	0% {transform:  translate(0px, 0px);}
-		100% {transform: translate(300px, 346px);}	}
+		100% {transform: translate(300px, -346px);}	}
 	@-webkit-keyframes snow
 	{	0% {transform:  translate(0px, 0px);}
-		100% {transform: translate(300px, 346px);}	}
+		100% {transform: translate(300px, -346px);}	}
 	@-ms-keyframes snow
 	{	0% {transform:  translate(0px, 0px);}
-		100% {transform: translate(300px, 346px);}	}
+		100% {transform: translate(300px, -346px);}	}
 
 .sidebarLabel{
   -webkit-user-select: none;  /* Chrome all / Safari all */
@@ -1467,7 +1468,7 @@ padding: 0px;
     margin-top: 10px;
     margin-left: 10px;
     margin-right: 10px;
-
+width: calc(100% - 20px);
 }
 
 ul.islandora-solr-sort {
