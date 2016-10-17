@@ -1362,12 +1362,13 @@ dd.solr-value.mods-origininfo-dateissued-ms a{
 
 #page{overflow: hidden;}
 
-.grid-6::before, .grid-9::before{
+#region-content::before{
     -webkit-animation: snow 15s linear infinite;
     -moz-animation: snow 15s linear infinite;
     -ms-animation: snow 15s linear infinite;
     animation: snow 15s linear infinite;
 background:url(http://i.imgur.com/wZMyixH.png) repeat;
+content:"";
 position: absolute;
 top: -100%;
 left: -100%;
@@ -1499,7 +1500,6 @@ height: 100%;
 
 .views-table td{
     width: calc(100% - 100px);
-    border-right: 1px solid #ccc;
     padding: 20px;
 }
 
@@ -1521,8 +1521,8 @@ height: 24px;
 width: 24px;
 padding: 0px;
 background: url("http://i.imgur.com/jDEiAY1.png") no-repeat;
-    margin-bottom: 5px;
-    margin-top: 10px;
+    margin-bottom: 2px;
+    margin-top: 0px;
 }
 
 p.about_collection::before{
@@ -1531,8 +1531,8 @@ height: 24px;
 width: 24px;
 padding: 0px;
 background: url("http://i.imgur.com/Od6ahq5.png") no-repeat;
-    margin-bottom: 5px;
-    margin-top: 10px;
+    margin-bottom: 2px;
+    margin-top: 0px;
 }
 
 
@@ -1726,6 +1726,9 @@ display: flex;
 
 }
 
+div.view-islandora-collection-landing-pages {
+    width: calc(100% - 20px);
+}
 
 .bookmarkWelcome h2 {
     font-size: 22px;
