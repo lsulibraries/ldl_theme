@@ -1368,7 +1368,6 @@ dd.solr-value.mods-origininfo-dateissued-ms a{
     -ms-animation: snow 15s linear infinite;
     animation: snow 15s linear infinite;
 background:url(http://i.imgur.com/wZMyixH.png) repeat;
-content: "- test";
 position: absolute;
 top: -100%;
 left: -100%;
@@ -1415,6 +1414,8 @@ max-width: none;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding: 0px;
+    overflow: hidden;
 }
 
 .view-islandora-collection-landing-pages tbody{
@@ -1457,33 +1458,81 @@ font-weight: normal;
   margin-bottom: 10px;
 }
 
-.view-islandora-collection-landing-pages p.about_collection{
+.view-islandora-collection-landing-pages p.about_collection, .view-islandora-collection-landing-pages p.items_collection{
     width: auto;
-    margin-bottom: 10px;
+    flex-grow: 1;
+    background-color: #438fca;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 80px;
+    height: 100%;
 }
 
-.view-islandora-collection-landing-pages p.about_collection a{
-  padding: 10px;
-  background-color: #438fca;
+.view-islandora-collection-landing-pages a p.about_collection{
+  padding: 0px;
+margin: 0px;
   color: white;
   width: auto;
-  border-radius: 5px;
+text-align: center;
+height: 100%;
 }
 
+
+.view-islandora-collection-landing-pages a p.items_collection{
+    padding: 0px 0px 0px 0px;
+    color: white;
+    width: auto;
+    border-radius: 0px;
+}
+
+
+.view-islandora-collection-landing-pages a {
+height: 100%;
+}
+.collectionLinks a {
+border-bottom: 1px solid #ccc;
+height: 100%;
+}
+
+
 .views-table td{
-    width: calc(100% - 200px);
+    width: calc(100% - 100px);
     border-right: 1px solid #ccc;
     padding: 20px;
 }
 
 .views-table td.collectionLinks{
-    width: 200px;
+    width: 87px;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    text-align: right;
-    border:none;
+    border: none;
     padding: 0px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 8px;
+}
+
+p.items_collection::before{
+content: "";
+height: 24px;
+width: 24px;
+padding: 0px;
+background: url("http://i.imgur.com/jDEiAY1.png") no-repeat;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+p.about_collection::before{
+content: "";
+height: 24px;
+width: 24px;
+padding: 0px;
+background: url("http://i.imgur.com/Od6ahq5.png") no-repeat;
+    margin-bottom: 5px;
+    margin-top: 10px;
 }
 
 
@@ -1668,7 +1717,7 @@ display: flex;
     display: flex;
     align-items: center;
     height: 100%;
-    background-image: url(http://i.imgur.com/spWRfgt.png);
+    background-image: url(http://i.imgur.com/spWRfgt.png) no-repeat;
     width: 100%;
     background-repeat: no-repeat;
     background-position: center;
