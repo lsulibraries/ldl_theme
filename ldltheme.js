@@ -45,6 +45,7 @@
       $(".bookmark").prependTo("#breadcrumb");
       $("#block-islandora-solr-simple").clone().prop({ id: "largeSearch", value:"Search LDL.."}).prependTo(".landingContainer");
       $("#block-block-1").clone().prop({ id: "landingAdvanced"}).appendTo("#largeSearch");
+      $(".underHero").appendTo("#landingHero");
 
 
 $(".sidebarLabel").click(function(){
