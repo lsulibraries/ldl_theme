@@ -1407,22 +1407,19 @@ max-width: none;
 
 .view-islandora-collection-landing-pages tr{
     color: #6b6b6b;
-    display: block;
     background-color: white;
-    padding: 20px;
     border: 1px solid #ccc;
     border-radius: 10px;
     flex-grow: 1;
-    width: 20%;
-    margin: 10px;
+    margin: 0px 0px 10px 0px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
 }
 
 .view-islandora-collection-landing-pages tbody{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-around;
 }
@@ -1461,9 +1458,8 @@ font-weight: normal;
 }
 
 .view-islandora-collection-landing-pages p.about_collection{
-  margin-top: 30px;
-  width: auto;
-  margin-bottom: 10px;
+    width: auto;
+    margin-bottom: 10px;
 }
 
 .view-islandora-collection-landing-pages p.about_collection a{
@@ -1474,63 +1470,27 @@ font-weight: normal;
   border-radius: 5px;
 }
 
-
-.view-islandora-collection-landing-pages tr:nth-child(4n-7){
-margin-left:0px;
-}
-
-.view-islandora-collection-landing-pages tr:nth-child(4n){
-margin-right:0px;
-}
-
-
-@media screen and (max-width: 1765px) {
-
-
-.view-islandora-collection-landing-pages tr{
-    color: #6b6b6b;
-    display: block;
-    background-color: white;
+.views-table td{
+    width: calc(100% - 200px);
+    border-right: 1px solid #ccc;
     padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    flex-grow: 1;
-    width: auto;
-    margin: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
-.view-islandora-collection-landing-pages tbody{
+.views-table td.collectionLinks{
+    width: 200px;
     display: flex;
+    justify-content: center;
     flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    text-align: right;
+    border:none;
+    padding: 0px;
 }
 
-}
+
+
 
 @media screen and (max-width: 1260px) {
 
-.view-islandora-collection-landing-pages tr{
-    color: #6b6b6b;
-    display: block;
-    background-color: white;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    flex-grow: 1;
-    width: 100%;
-    margin: 10px;
-}
-
-.view-islandora-collection-landing-pages tbody{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
 
 .sidebarLabel::after{
     content: 'open';
