@@ -1049,21 +1049,21 @@ div.islandora-solr-content{
   padding-bottom: 50px;
 }
 
-.page-islandora-object-islandoraroot #block-block-4,
+.page-browse-collections #block-block-4,
 .page-user #block-block-4,
 .page-advanced-search #block-block-4{
   position: relative;
 }
 
 .page-islandora-search h1#object-title-pdf.object-title,
-.page-islandora-object-islandoraroot h1#object-title-pdf.object-title,
-.page-islandora-object-islandoraroot #page-title-header,
+.page-browse-collections h1#object-title-pdf.object-title,
+.page-browse-collections #page-title-header,
 .page-user  #page-title-header,
 .page-advanced-search  #page-title-header{
   display: none;
 }
 
- .user-page #region-content .region-content-inner, .page-islandora-object-islandoraroot #region-content .region-content-inner {
+ .user-page #region-content .region-content-inner, .page-browse-collections #region-content .region-content-inner {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -1079,11 +1079,11 @@ div.islandora-solr-content{
 }
 
 
-.page-islandora-object-islandoraroot #breadcrumb{
+.page-browse-collections #breadcrumb{
 height: 0px;
 }
 
-.page-islandora-object-islandoraroot .bookmark{
+.page-browse-collections .bookmark{
   background-color: #438fca;
   color: white;
   position: absolute;
@@ -1160,7 +1160,7 @@ margin-right: 12px;
 padding-top: 20px;
 }
 
-.page-islandora-object-islandoraroot #landingAdvanced{
+.page-browse-collections #landingAdvanced{
   display: flex;
   justify-content: flex-end;
   height: 34px;
@@ -1168,7 +1168,7 @@ padding-top: 20px;
 
 }
 
-.page-islandora-object-islandoraroot #landingAdvanced .block-inner{
+.page-browse-collections #landingAdvanced .block-inner{
   width: 128px;
   text-align: center;
   background-color: #438fca;
@@ -1176,7 +1176,7 @@ padding-top: 20px;
   height: auto;
 }
 
-.page-islandora-object-islandoraroot #landingAdvanced .block-inner a{
+.page-browse-collections #landingAdvanced .block-inner a{
   color: white;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -1214,7 +1214,7 @@ padding-top: 20px;
   top: 455px;
 }
 
-.page-islandora-object-islandoraroot .landingContainer{
+.page-browse-collections .landingContainer{
     width: calc(100% - 200px);
     margin-left: auto;
     margin-right: auto;
@@ -1228,7 +1228,7 @@ padding-top: 20px;
     border-radius: 10px;
 }
 
-.page-islandora-object-islandoraroot .landingHeader{
+.page-browse-collections .landingHeader{
   font-size: 20pt;
 font-weight: 300;
 margin-top: 10px;
@@ -1240,7 +1240,7 @@ display: block;
   font-size: 16px;
 }
 
-.page-islandora-object-islandoraroot .landingHero{
+.page-browse-collections .landingHero{
   height: 620px;
 background-repeat: no-repeat;
 background-image: url(http://i.imgur.com/KKIfFbM.jpg);
@@ -1263,7 +1263,7 @@ ul.islandora-solr-sort {
     margin-left: 10px;
     border-radius: 10px;
     margin-right: 10px;
-    margin-top: 10px;	
+    margin-top: 10px;
 }
 
 
@@ -1306,7 +1306,7 @@ width: 100%;
   margin-top: 10px;
   margin-left: 10px;
   margin-right: 10px;
-    width: 100%;
+    width: calc(100% - 20px);
     max-width: 1180px;
 }
 
@@ -1363,7 +1363,7 @@ dd.solr-value.mods-origininfo-dateissued-ms a{
 
 #page{overflow: hidden;}
 
-.grid-9::before{
+.grid-6::before{
     -webkit-animation: snow 15s linear infinite;
     -moz-animation: snow 15s linear infinite;
     -ms-animation: snow 15s linear infinite;
@@ -1488,7 +1488,7 @@ ul.islandora-solr-sort {
 }
 
 
-  #region-content .region-content-inner,.user-page .region-content-inner, .page-islandora-object-islandoraroot .region-content-inner {
+  #region-content .region-content-inner,.user-page .region-content-inner, .page-browse-collections .region-content-inner {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -1576,7 +1576,7 @@ display: flex;
 
 @media screen and (max-width: 740px) {
 
-.page-islandora-object-islandoraroot .bookmarkWelcome {
+.page-browse-collections .bookmarkWelcome {
     display: flex;
     align-items: center;
     height: 100%;
@@ -1599,12 +1599,12 @@ display: flex;
     line-height: 23px;
     width: 216px;
 }
-.page-islandora-object-islandoraroot #breadcrumb {
+.page-browse-collections #breadcrumb {
     height: 500px;
 background-color: rgba(0, 0, 0, 0.75);
 }
 
-.page-islandora-object-islandoraroot .bookmark {
+.page-browse-collections .bookmark {
     background-color: none;
     color: white;
     height: 100%;
@@ -1614,11 +1614,11 @@ background-color: rgba(0, 0, 0, 0.75);
     flex-direction: row;
 }
 
-.bookmarkEnd, .page-islandora-object-islandoraroot .landingHero, .page-islandora-object-islandoraroot .breadcrumb {
+.bookmarkEnd, .page-browse-collections .landingHero, .page-browse-collections .breadcrumb {
 display: none;
 }
 
-.page-islandora-object-islandoraroot .landingContainer {
+.page-browse-collections .landingContainer {
     width: calc(100% - 60px);
     margin-left: auto;
     margin-right: auto;

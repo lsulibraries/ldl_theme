@@ -57,7 +57,7 @@ $(".sidebarLabel").click(function(){
 
 
       var newHeight = $( document ).height();
-      $(".region-content-inner").not(".page-islandora-object-islandoraroot .region-content-inner, .page-islandora-search .region-content-inner").height(newHeight);
+      $(".region-content-inner").not(".page-islandora-object-islandoraroot .page-browse-collections .region-content-inner, .page-islandora-search .region-content-inner").height(newHeight);
 
       $('#edit-simple input[type=text]').each(function() {
 
