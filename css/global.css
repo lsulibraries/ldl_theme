@@ -1494,14 +1494,10 @@ width: 100%;
 }
 
 
-.view-islandora-collection-landing-pages a {
-height: 100%;
-}
-.collectionLinks a {
-border-bottom: 1px solid #ccc;
-height: 100%;
-}
 
+.collectionLinks a:nth-child(1) {
+border-bottom: 1px solid #ccc;
+}
 
 .views-table tbody tr td{
     width: 100%;
@@ -1513,7 +1509,7 @@ display:block;
 width: inherit;
 }
 
-.views-table td.collectionLinks{
+.view-islandora-collection-landing-pages .views-table td.collectionLinks{
     width: 87px;
     display: flex;
     justify-content: center;
@@ -1523,6 +1519,7 @@ width: inherit;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: 8px;
+      background-color: #438fca;
 }
 
 p.items_collection::before{
