@@ -1463,6 +1463,7 @@ width: inherit;
 
 .view-islandora-collection-landing-pages h2{
   margin-bottom: 10px;
+width: 100%;
 }
 
 .view-islandora-collection-landing-pages p.about_collection, .view-islandora-collection-landing-pages p.items_collection{
@@ -1503,8 +1504,9 @@ height: 100%;
 
 
 .views-table tbody tr td{
-    width: calc(100% - 100px);
+    width: 100%;
     padding: 20px;
+display:block;
 }
 
 .views-table table{
@@ -1559,6 +1561,30 @@ background: url("http://i.imgur.com/Od6ahq5.png") no-repeat;
     border: 1px solid #ccc;
     border-radius: 10px;
     padding: 20px;
+}
+
+@media screen and (max-width: 900px) {
+
+  .islandora-solr-search-result-inner {
+      flex-direction: column;
+      justify-content: center;
+      display: flex;
+  }
+
+  dl.solr-thumb {
+      width: 100%;
+      text-align: center;
+      display: flex;
+      border-bottom: 1px solid #bdbdbd;
+      border-right: none;
+      justify-content: center;
+      padding: 20px;
+      margin-bottom: 25px;
+  }
+
+
+
+
 }
 
 
@@ -1711,29 +1737,7 @@ display: flex;
 
 
 
-@media screen and (max-width: 900px) {
 
-  .islandora-solr-search-result-inner {
-      flex-direction: column;
-      justify-content: center;
-      display: flex;
-  }
-
-  dl.solr-thumb {
-      width: 100%;
-      text-align: center;
-      display: flex;
-      border-bottom: 1px solid #bdbdbd;
-      border-right: none;
-      justify-content: center;
-      padding: 20px;
-      margin-bottom: 25px;
-  }
-
-
-
-
-}
 
 @media screen and (max-width: 740px) {
 
