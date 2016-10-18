@@ -43,7 +43,7 @@
       $("#islandora-solr-result-count").prop({ id: "header-result-count"}).appendTo("#breadcrumb");
       $("#region-content div.tabs.clearfix").prependTo("#block-system-main");
       $(".bookmark").prependTo("#breadcrumb");
-      $("#block-islandora-solr-simple").clone().prop({ id: "largeSearch", value:"Search LDL.."}).prependTo(".landingContainer");
+      $("#block-islandora-solr-simple").clone().prop({ id: "largeSearch", value:"Search LDL.."}).appendTo(".landingContainer");
       $("#block-block-1").clone().prop({ id: "landingAdvanced"}).appendTo("#largeSearch");
       $(".underHero").appendTo("#landingHero");
 

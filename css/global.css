@@ -1229,18 +1229,29 @@ padding-top: 20px;
     border: 1px solid #ccc;
     border-radius: 10px;
     max-width: 1160px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .page-browse-collections .landingHeader{
-  font-size: 20pt;
-font-weight: 300;
-margin-top: 10px;
-margin-bottom: 10px;
-display: block;
+    font-size: 40px;
+    font-weight: 300;
+    padding-top: 10px;
+    margin-bottom: 20px;
+    display: block;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 80px;
+    color: #6b6b6b;
 }
 
 .landingText{
-  font-size: 16px;
+font-size: 13px;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #6b6b6b;
+    margin-bottom: 100px;
+
 }
 
 .page-browse-collections .landingHero{
@@ -1562,6 +1573,22 @@ background: url("http://i.imgur.com/Od6ahq5.png") no-repeat;
     border: 1px solid #ccc;
     border-radius: 10px;
     padding: 20px;
+}
+
+.landingMessage{
+    background: white;
+    max-width: 1080px;
+    margin: 0 10px;
+    margin-top: 10px;
+    padding: 60px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.messageContainer{
+    display: flex;
+    justify-content: center;
 }
 
 @media screen and (max-width: 900px) {
