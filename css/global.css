@@ -498,7 +498,7 @@ div.region-inner.region-header-first-inner {
 }
 
 #block-system-main {
-  max-width: 1220px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   min-height: initial;
@@ -506,6 +506,10 @@ div.region-inner.region-header-first-inner {
   flex-grow: 2;
   margin: 0 auto;
   width: 100%;
+}
+
+.page-browse-collections #block-system-main {
+  max-width: 1220px;
 }
 
 [placeholder]:focus::-webkit-input-placeholder {

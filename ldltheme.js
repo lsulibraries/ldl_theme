@@ -57,8 +57,8 @@
       $($div).prependTo("#grid-9");
 
 
-     var newHeight = $( document ).height();
-     $(".region-content-inner").height(newHeight).on(".page-islandora-object");
+       var newHeight = $( document ).height();
+       $(".page-islandora-object .region-content-inner").height(newHeight);
 
       $('#edit-simple input[type=text]').each(function() {
 
