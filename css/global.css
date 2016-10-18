@@ -974,6 +974,9 @@ dl.solr-fields {
 
 .view-islandora-collection-landing-pages td a {
   text-decoration: none;
+flex-grow: 1;
+    display: flex;
+    align-items: center;
 }
 
 
@@ -1476,6 +1479,7 @@ width: 100%;
     justify-content: center;
     min-height: 80px;
     height: 100%;
+    align-self: center;
 }
 
 .view-islandora-collection-landing-pages a p.about_collection{
