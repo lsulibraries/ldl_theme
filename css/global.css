@@ -510,7 +510,8 @@ color: #ff7777;
   min-height: initial;
   margin-bottom: 50px;
   flex-grow: 2;
-  width: 100%;
+  margin: 0 auto;
+width: 100%;
 }
 
 [placeholder]:focus::-webkit-input-placeholder {
@@ -1417,9 +1418,6 @@ dd.solr-value.mods-subject-topic-ms{
 color:white;
 }
 
-.page-browse-collections #block-system-main {
-max-width: none;
-}
 
 .view-islandora-collection-landing-pages tr{
     color: #6b6b6b;
@@ -1445,9 +1443,9 @@ min-height: 162px;
 
 div.view-islandora-collection-landing-pages
 {
-
     margin: 0 10px;
     max-width: 1200px;
+min-width: none;
 }
 
 #block-system-main .view-islandora-collection-landing-pages div.view-content table.views-table tbody tr:hover{
@@ -1593,10 +1591,6 @@ background: url("http://i.imgur.com/Od6ahq5.png") no-repeat;
     justify-content: center;
 }
 
-.page-browse-collections #block-system-main{
-display: flex;
-justify-content: center;
-}
 
 @media screen and (max-width: 900px) {
 

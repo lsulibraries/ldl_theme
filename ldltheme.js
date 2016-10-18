@@ -48,10 +48,10 @@
       $(".underHero").appendTo("#landingHero");
 
 
-$(".sidebarLabel").click(function(){
-    $("#block-islandora-solr-basic-facets").toggle();
-    $(".sidebarLabel").toggleClass("close");
-});
+      $(".sidebarLabel").click(function(){
+          $("#block-islandora-solr-basic-facets").toggle();
+          $(".sidebarLabel").toggleClass("close");
+      });
 
       var $div = $("<div>", {id: "movingBg", "class": "a"});
       $($div).prependTo("#grid-9");
@@ -62,8 +62,8 @@ $(".sidebarLabel").click(function(){
 
       $('#edit-simple input[type=text]').each(function() {
 
-    $(this).attr('placeholder', 'Search LDL...' );
-});
+      $(this).attr('placeholder', 'Search LDL...' );
+      });
       $('input[name="op"]').val("");
       $('#block-user-login input[name="op"]').val("Login");
 
