@@ -1423,8 +1423,7 @@ max-width: none;
 .view-islandora-collection-landing-pages tbody{
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    width: inherit;
 }
 
 div.view-islandora-collection-landing-pages
@@ -1444,7 +1443,11 @@ background-color: white;}
 /*know that even and odd td is how yellow hover procs*/
 
 .view-islandora-collection-landing-pages table{
-border:none;}
+border:none;
+width: 100%;
+max-width: 1200px;
+display: flex;
+}
 
 .view-islandora-collection-landing-pages h2 a:link{
     color: #438fca;
@@ -1455,6 +1458,7 @@ font-weight: normal;
 
 .view-islandora-collection-landing-pages p{
   margin-bottom: 0px;
+width: inherit;
 }
 
 .view-islandora-collection-landing-pages h2{
@@ -1474,12 +1478,10 @@ font-weight: normal;
 }
 
 .view-islandora-collection-landing-pages a p.about_collection{
-  padding: 0px;
-margin: 0px;
-  color: white;
-  width: auto;
-text-align: center;
-height: 100%;
+    padding: 0px 0px 0px 0px;
+    color: white;
+    width: auto;
+    border-radius: 0px;
 }
 
 
@@ -1500,9 +1502,13 @@ height: 100%;
 }
 
 
-.views-table td{
+.views-table tbody tr td{
     width: calc(100% - 100px);
     padding: 20px;
+}
+
+.views-table table{
+width: inherit;
 }
 
 .views-table td.collectionLinks{
