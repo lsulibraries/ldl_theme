@@ -1443,6 +1443,10 @@ height: auto;
     margin-right: 10px;
 }
 
+.view-islandora-collection-landing-pages tr:nth-child(4n) {
+margin-right: 0px;
+
+}
 .view-islandora-collection-landing-pages tbody {
     display: flex;
     flex-direction: row;
@@ -1635,6 +1639,14 @@ display: none;
 @media screen and (max-width: 1770px) {
 .view-islandora-collection-landing-pages tr {
 width: 30%;
+}
+
+.view-islandora-collection-landing-pages tr:nth-child(4n) {
+margin-right: 10px;
+}
+
+.view-islandora-collection-landing-pages tr:nth-child(3n) {
+margin-right: 0px;
 }
 
 }
