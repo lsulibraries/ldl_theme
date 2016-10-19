@@ -1512,8 +1512,9 @@ div.view-islandora-collection-landing-pages {
   justify-content: center;
   min-height: 80px;
   height: 100%;
+  color: white;
   align-self: center;
-}
+}f
 
 .view-islandora-collection-landing-pages a p.about_collection {
   padding: 0px 0px 0px 0px;
@@ -1557,6 +1558,7 @@ div.view-islandora-collection-landing-pages {
     background-color: #438fca;
     border: 5px solid white;
     border-radius: 0px 10px 10px 0px;
+
 }
 
 p.items_collection::before {
@@ -1651,7 +1653,7 @@ margin-right: 0px;
 
 }
 
-@media screen and (max-width: 1346px) {
+@media screen and (max-width: 1446px) {
 
 .view-islandora-collection-landing-pages h2 a:link {
   color: #438fca;

@@ -23,7 +23,7 @@
       sr.reveal('#block-block-9',  { duration: 500, distance: '30px', opacity: 1, delay: 100,  easing: 'linear', scale: 1, viewFactor: 0.2, }, 50);
       sr.reveal('.islandora-solr-search-result, .landingMessage', { duration: 200, delay: 100,  easing: 'linear', scale: 1, viewFactor: 0.01,}, 20);
       sr.reveal('.islandora-solr-sort, .landingHero', { duration: 200, delay: 0,  easing: 'linear', scale: 1, viewFactor: 0.01,}, 20);
-      sr.reveal('.solr-fields, .islandora-solr-sort li, tr', { duration: 200, delay: 350,  easing: 'linear', scale: 1, viewFactor: 0.01, }, 20);
+      sr.reveal('.solr-fields, .islandora-solr-sort li, .page-browse-collections tr', { duration: 200, delay: 350,  easing: 'linear', scale: 1, viewFactor: 0.01, }, 20);
       sr.reveal('.solr-thumb img', { duration: 200, delay: 850,  easing: 'linear', scale: 1, viewFactor: 0.01, }, 20);
       sr.reveal('.islandora-basic-collection-grid dl', { duration: 500, delay: 200,  easing: 'ease-in', }, 150);
       sr.reveal('.bookmarkWelcome', { duration: 800, delay: 100,  easing: 'linear', scale: 1, viewFactor: 0.01, }, 50);
@@ -48,7 +48,7 @@
       $(".underHero").appendTo("#landingHero");
 
     //begin show more script
-    var showChar = 400;  // How many characters are shown by default
+    var showChar = 300;  // How many characters are shown by default
     var ellipsestext = "...";
     var moretext = "Show more";
     var lesstext = "Show less";
