@@ -1510,7 +1510,6 @@ div.view-islandora-collection-landing-pages {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 80px;
   height: 100%;
   color: white;
   align-self: center;
