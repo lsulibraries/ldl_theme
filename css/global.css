@@ -91,11 +91,11 @@ input#edit-islandora-simple-search-query.form-text {
   color: #adadad;
   outline: 0;
   padding: 2px 3px;
-  font-size: 20px;
+  font-size: 15px;
   font-family: Roboto, Arial, sans-serif;
   font-weight: 300;
-  height: 40px;
-  width: calc(100% - 104px);
+  height: 30px;
+  width: calc(100% - 64px);
   border-top-width: 0px;
   border-bottom-width: 0px;
   border-right-width: 1px;
@@ -120,8 +120,8 @@ input#edit-submit--2.form-submit {
   overflow: visible;
   padding: 3px 10px 4px;
   text-shadow: none;
-  width: 100px;
-  height: 40px;
+  width: 60px;
+  height: 30px;
   background-image: url(http://i.imgur.com/zBCP7zk.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -234,15 +234,15 @@ a.islandora-pdf-link {
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #adadad;
-  font-size: 12px;
+  font-size: 10px;
 }
 
 
 /*parallelogram*/
 
 #block-block-4 {
-  width: 250px;
-  height: 80px;
+  width: 202px;
+  height: 59px;
   -ms-transform: skewX(-47deg);
   -webkit-transform: skew(-47deg);
   -moz-transform: skew(-47deg);
@@ -250,7 +250,7 @@ a.islandora-pdf-link {
   background: #438fca;
   float: left;
   color: #438fca;
-  margin-left: 40px;
+  margin-left: 30px;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -286,7 +286,7 @@ a.islandora-pdf-link {
 .page-islandora-search #page-title-header {
   z-index: 2;
   width: 160px;
-  margin-left: 85px;
+  margin-left: 50px;
   margin-bottom: 0px;
   text-align: center;
   line-height: 0px;
@@ -332,7 +332,7 @@ a.islandora-pdf-link {
   display: flex;
   flex-direction: row;
   margin: 0px;
-  height: 80px;
+  height: 59px;
 }
 
 #region-content {
@@ -376,7 +376,7 @@ a.islandora-pdf-link {
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -387,6 +387,7 @@ div.region-inner.region-header-first-inner {
   display: flex;
   align-items: center;
   height: 100%;
+  padding-left: 20px;
 }
 
 #block-islandora-solr-basic-facets {
@@ -428,7 +429,7 @@ div.region-inner.region-header-first-inner {
   width: 100%;
   margin: 0px;
   padding: 0px;
-  height: 80px;
+  height: 59px;
 }
 
 #region-sidebar-first {
@@ -1080,9 +1081,9 @@ div.islandora-solr-content {
   background-color: #438fca;
   color: white;
   position: absolute;
-  height: 600px;
+  height: 470px;
   z-index: 2;
-  width: 248px;
+  width: 200px;
   display: flex;
   flex-direction: column;
 }
@@ -1181,6 +1182,7 @@ div.islandora-solr-content {
   background-image: url("http://i.imgur.com/spWRfgt.png");
   background-repeat: no-repeat;
   background-position: center;
+  background-size: 80%;
 }
 
 .bookmarkWelcome h2 {
@@ -1199,10 +1201,10 @@ div.islandora-solr-content {
   -o-transform: rotate(58deg);
   width: 200px;
   position: absolute;
-  height: 260px;
-  left: -15px;
+  height: 215px;
+  left: -45px;
   background-color: #438fca;
-  top: 455px;
+  top: 335px;
 }
 
 .page-browse-collections .landingContainer {
@@ -1244,11 +1246,11 @@ div.islandora-solr-content {
 }
 
 .page-browse-collections .landingHero {
-  height: 620px;
+  height: 480px;
   background-repeat: no-repeat;
   background-image: url(http://i.imgur.com/KKIfFbM.jpg);
   background-size: cover;
-  background-position: 216px 25%;
+  background-position: 184px 25%;
   display: block;
 }
 
@@ -1450,7 +1452,7 @@ dd.solr-value.mods-subject-topic-ms {
 
 div.view-islandora-collection-landing-pages {
   margin: 0 10px;
-  max-width: 1200px;
+  max-width: 100%;
   min-width: none;
 }
 
@@ -1586,7 +1588,7 @@ p.about_collection::before {
 
 .landingMessage {
   background: white;
-  max-width: 1080px;
+width: 100%;
   margin: 0 10px;
   margin-top: 10px;
   padding: 60px;
@@ -1598,6 +1600,10 @@ p.about_collection::before {
 .messageContainer {
   display: flex;
   justify-content: center;
+}
+
+.page-browse-collections  div.landingContainer, #views-exposed-form-islandora-collection-landing-pages-page .views-exposed-widgets {
+display: none;
 }
 
 @media screen and (max-width: 900px) {
