@@ -1476,6 +1476,7 @@ div.view-islandora-collection-landing-pages {
   border: none;
   width: 100%;
   display: flex;
+margin-bottom: 0px;
 }
 
 .view-islandora-collection-landing-pages h2 a:link {
@@ -1494,6 +1495,7 @@ div.view-islandora-collection-landing-pages {
   width: inherit;
     margin: 10px;
     width: auto;
+line-height: normal;
 }
 
 .view-islandora-collection-landing-pages h2 {
@@ -1578,6 +1580,7 @@ p.about_collection::before {
   background: url("http://i.imgur.com/Od6ahq5.png") no-repeat;
   margin-bottom: 2px;
   margin-top: 0px;
+  display: none;
 }
 
 #views-exposed-form-islandora-collection-landing-pages-page .views-exposed-widgets {
@@ -1637,6 +1640,174 @@ display: none;
     display: block;
 }
 
+.page-browse-collections .pager li.pager-current{
+background: #438fca;
+}
+
+.page-browse-collections .item-list .pager {
+    margin-bottom: 10px;
+background: white;
+border-color: #ccc;
+}
+
+.page-browse-collections .item-list .pager li, .item-list .pager ul li{
+    padding: 10px;
+    border-right: 1px solid;
+    border-color: #ccc;
+    color: #6b6b6b;
+    font: bold 12px/1.2 Arial, sans-serif;
+    outline: 0;
+  background: white;
+}
+
+.page-browse-collections .item-list .pager li a{
+background: white;
+    color: #6b6b6b;
+}
+
+.page-browse-collections .item-list .pager li.pager-current {
+    background: #438fca;
+    color: white;
+    padding: 14px;
+    padding-left: 18px;
+    padding-right: 18px;
+}
+
+
+.view-display-id-minigrid, .view-display-id-minigrid .short_desc{
+display:none;
+}
+
+.view-display-id-minigrid .collectionLinks a:nth-child(1){
+    border-right: 1px solid #ccc;
+    border-bottom: 0px;
+}
+
+.view-display-id-minigrid tr {
+    flex-direction: column;
+}
+
+.view-display-id-minigrid h2 a:link {
+    color: #438fca;
+    font-size: 13px;
+    letter-spacing: 0px;
+    font-weight: normal;
+    font-weight: 500;
+    line-height: 15px;
+    padding: 0px 10px 0px 10px;
+    border-bottom: 0px;
+    min-height: 60px;
+    margin-left: 0px;
+}
+
+.view-display-id-minigrid tr {
+    color: #6b6b6b;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    flex-grow: 1;
+    margin: 0px 0px 10px 0px;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    overflow: hidden;
+    max-width: calc(12.5% - 11px);
+    margin-right: 10px;
+    height: inherit;
+}
+
+.view-display-id-minigrid tr td{
+
+  -webkit-transition: 1s;
+  -moz-transition: 1s ;
+  -o-transition: 1s ;
+  transition: 1s ;
+}
+
+
+.view-display-id-minigrid tr:hover td, .view-display-id-minigrid tr:hover td a{
+background: #438fca;
+color: white;
+
+}
+
+.view-display-id-minigrid h2 {
+    margin-bottom: 0px;
+}
+
+.view-display-id-minigrid td{
+    border-bottom: 1px dotted #ccc;
+}
+.view-display-id-minigrid p.about_collection::before{
+
+}
+
+.view-display-id-minigrid p.about_collection::before, .view-display-id-minigrid p.items_collection::before {
+display: none;
+}
+
+.view-display-id-minigrid .views-table td.collectionLinks {
+flex-direction: row;
+height: auto;
+width: auto;
+border-radius: 0px 0px 10px 10px;
+background-color: white;
+color: #6b6b6b;
+}
+
+.view-display-id-minigrid a p.about_collection, .view-display-id-minigrid a p.items_collection {
+    flex-direction: row;
+    margin: 0px;
+    background-color: white;
+    color: #6b6b6b;
+}
+
+
+
+/*BEGIN test area*/
+@media screen and (min-width: 2000px) {
+
+
+#block-system-main{
+display: none;
+}
+
+.view-display-id-minigrid{
+display:block;
+}
+
+
+
+.view-display-id-minigrid tr:nth-child(3n) {
+margin-right:10px;
+}
+
+.view-display-id-minigrid tr:nth-child(4n) {
+margin-right: 10px;
+
+}
+
+.view-display-id-minigrid tr:nth-child(8n) {
+margin-right: 0px;
+}
+
+.view-display-id-minigrid tr:nth-child(8) {
+border-radius: 0px 10px 0px 0px;
+
+}
+
+.view-display-id-minigrid tr:nth-child(1) {
+border-radius: 10px 0px 0px 0px;
+
+}
+
+.view-display-id-minigrid tr:nth-child(89) {
+border-radius: 0px 0px 0px 10px;
+
+}
+
+}
+/*END test area*/
 @media screen and (max-width: 1770px) {
 .view-islandora-collection-landing-pages tr {
 width: 30%;
