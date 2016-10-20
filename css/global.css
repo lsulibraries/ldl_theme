@@ -1580,7 +1580,6 @@ p.about_collection::before {
   background: url("http://i.imgur.com/Od6ahq5.png") no-repeat;
   margin-bottom: 2px;
   margin-top: 0px;
-  display: none;
 }
 
 #views-exposed-form-islandora-collection-landing-pages-page .views-exposed-widgets {
@@ -1738,9 +1737,7 @@ color: white;
 .view-display-id-minigrid td{
     border-bottom: 1px dotted #ccc;
 }
-.view-display-id-minigrid p.about_collection::before{
 
-}
 
 .view-display-id-minigrid p.about_collection::before, .view-display-id-minigrid p.items_collection::before {
 display: none;
