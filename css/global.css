@@ -1765,7 +1765,7 @@ color: #6b6b6b;
 @media screen and (min-width: 2000px) {
 
 
-#block-system-main{
+.page-browse-collections #block-system-main{
 display: none;
 }
 
