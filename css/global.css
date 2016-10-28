@@ -306,6 +306,21 @@ a.islandora-pdf-link {
   margin-right: 38px;
 }
 
+.page-islandora-object #page-title-header::after{
+  z-index: 2;
+  width: 160px;
+  margin-left: 92px;
+  margin-bottom: 0px;
+  text-align: left;
+  line-height: 11px;
+  color: #f0f0f0;
+  font-weight: 300;
+  font-size: 12px;
+  margin-right: 38px;
+  display: block;
+content: 'Item Level';
+}
+
 #block-block-2,
 #block-block-1 {
   float: left;
@@ -1509,6 +1524,9 @@ div.view-islandora-collection-landing-pages {
   background-color: white;
 }
 
+tr:hover td, tr.even:hover td.active, tr.odd:hover td.active {
+    background: inherit;
+}
 
 /*know that even and odd td is how yellow hover procs*/
 
@@ -1801,7 +1819,7 @@ color: #6b6b6b;
     color: #6b6b6b;
 }
 
-.landingMessageMobile{
+.landingMessageMobile, #logoMobile{
 display:none;
 }
 
@@ -2091,6 +2109,30 @@ display: none;
 
   @media screen and (max-width: 740px) {
 
+.view-islandora-collection-landing-pages tbody {
+    padding-top: 10px;
+}
+
+#landingMobile .landingText{
+margin-bottom: 40px;
+}
+
+#logoMobile{
+    padding: 0px;
+    margin-bottom: 0px;
+    padding-top: 0px;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    align-self: center;
+    display: flex;
+}
+
+div.region-inner.region-header-first-inner{
+display: none;
+}
+
 .landingMessageMobile {
     background: none;
     width: 100%;
@@ -2132,15 +2174,15 @@ justify-content: center;
 }
 
 .page-browse-collections .landingHeader{
-    font-size: 40px;
-    font-weight: 300;
+    font-size: 20px;
+    font-weight: 400;
     padding-top: 0px;
     display: block;
     max-width: 1200px;
     margin: 0 auto;
     margin-top: 80px;
     color: #6b6b6b;
-    line-height: 40px;
+    line-height: 20px;
     margin-bottom: 10px;
     padding: 0px 20px 0px 20px;
     margin-top: 0px;

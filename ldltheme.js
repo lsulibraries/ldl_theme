@@ -46,6 +46,8 @@
       $("#block-islandora-solr-simple").clone().prop({ id: "largeSearch", value:"Search LDL.."}).appendTo(".landingContainer");
       $("#block-block-1").clone().prop({ id: "landingAdvanced"}).appendTo("#largeSearch");
       $(".underHero").appendTo("#landingHero");
+      $(".footerImg").clone().prop({ id: "logoMobile"}).prependTo("#zone-header");
+
       $(".landingMessage").clone().prop({id: "landingMobile", class: "landingMessageMobile"}).appendTo("#zone-header");
 
     //begin show more script
