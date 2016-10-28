@@ -2114,6 +2114,23 @@ display: block;
     margin-bottom: 100px;
 }
 
+#region-header-first{
+justify-content: center;
+}
+
+#zone-header {
+    background-color: #1a1a1a;
+    width: 100%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px;
+    height: auto;
+}
+
 .page-browse-collections .landingHeader{
     font-size: 40px;
     font-weight: 300;
@@ -2133,7 +2150,7 @@ display: block;
 display:none;
 }
 
-#region-header-first{
+.page-browse-collections #region-header-first{
     justify-content: center;
 }
 
@@ -2197,7 +2214,7 @@ display: none;
     .page-islandora-object #block-islandora-solr-simple {
       margin-left: 20px;
     }
-    #zone-header {
+    .page-browse-collections #zone-header {
       background-color: #1a1a1a;
       width: 100%;
       display: -webkit-box;
