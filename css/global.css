@@ -1660,8 +1660,10 @@ border-color: #ccc;
 }
 
 .page-browse-collections .item-list .pager li a{
-background: white;
+    background: white;
     color: #6b6b6b;
+    font-family: roboto;
+    font-weight: 400;
 }
 
 .page-browse-collections .item-list .pager li.pager-current {
@@ -1763,6 +1765,12 @@ color: #6b6b6b;
 
 /*BEGIN test area*/
 @media screen and (min-width: 2000px) {
+
+.page-browse-collections tr {
+
+  width: calc(12.5% - 11px);
+
+}
 
 
 .page-browse-collections #block-system-main{
@@ -2040,6 +2048,11 @@ display: none;
 }
 
   @media screen and (max-width: 740px) {
+
+#region-header-first{
+    justify-content: center;
+}
+
     .page-browse-collections .bookmarkWelcome {
       display: flex;
       align-items: center;
