@@ -145,6 +145,7 @@ input#edit-submit--2.form-submit {
   border: none;
   background-color: none;
   margin-bottom: 0px;
+font-size: 12px;
 }
 
 #sideMods th {
@@ -217,12 +218,19 @@ input#edit-submit--2.form-submit {
 }
 
 a.islandora-pdf-link {
-  background-color: white;
-  text-transform: uppercase;
-  border: 1px solid #acacac;
-  padding: 10px;
-  margin: 0px;
+    background-color: white;
+    text-transform: uppercase;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 0px;
+    border-left: 0px;
+    font-size: 10px;
+    display: block;
+    width: 100px;
+    border-bottom: 0px;
 }
+
+
 
 #block-block-1 a {
   text-transform: uppercase;
@@ -1881,6 +1889,7 @@ border:none;
     margin-bottom: 0px;
 background: #fff;
     color: #676767;
+font-size: 12px;
 }
 
 .islandora-pdf-metadata table a:link, .islandora-pdf-metadata table a:visited{
@@ -1982,6 +1991,7 @@ margin-right: 0px;
 
 @media screen and (max-width: 1446px) {
 
+
 .view-islandora-collection-landing-pages h2 a:link {
   color: #438fca;
   font-size: 25px;
@@ -2019,6 +2029,18 @@ margin-right: 0px;
 }
 
 @media screen and (max-width: 1260px) {
+
+a.islandora-pdf-link {
+    background-color: white;
+    text-transform: uppercase;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 0px;
+    border-left: 0px;
+    font-size: 10px;
+    display: initial;
+}
+
   .sidebarLabel::after {
     content: 'open';
     background-color: #438fca;
