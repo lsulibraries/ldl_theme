@@ -32,12 +32,12 @@
 
       $(".islandora-pdf-metadata").clone().prop({ id: "sideMods", class: "newClass" }).prependTo("#region-sidebar-first");
       $(".islandora-large-image-metadata").clone().prop({ id: "sideMods", class: "newClass" }).prependTo("#region-sidebar-first");
-      $("#page-title").clone().prop({ id: "page-title-header"}).prependTo(".region-header-second-inner");
-      $("#page-title").clone().prop({ id: "object-title-pdf", class: "object-title"}).appendTo("#block-system-main");
-      $("#sideMods tr:nth-child(0n+3) td:nth-child(0n+2)").clone().prop({ id: "pdf-object-author", class: "object-author"}).appendTo("#block-system-main");
+      $(".page-islandora-search #page-title").clone().prop({ id: "page-title-header"}).prependTo(".region-header-second-inner");
+      $("#page-title").clone().prop({ id: "window-title", class: "object-title"}).prependTo("div.islandora-pdf-content");
+      $("#sideMods tr:nth-child(0n+3) td:nth-child(0n+2)").clone().prop({ id: "pdf-object-author", class: "object-author"}).appendTo("#window-title");
       $("a.islandora-pdf-link").appendTo("#block-system-main");
       $("#sideMods div:nth-child(1)").appendTo("#sideMods");
-      $(".islandora-pdf-metadata").appendTo("#block-system-main");
+      $(".islandora-pdf-metadata").appendTo(".islandora-pdf-content");
       $(".islandora-large-image-metadata").appendTo("#block-system-main");
       $("#breadcrumb").prependTo(".region-content-inner");
       $("#islandora-solr-result-count").prop({ id: "header-result-count"}).appendTo("#breadcrumb");
@@ -95,8 +95,8 @@
       $($div).prependTo("#grid-9");
 
 
-       var newHeight = $( document ).height();
-       $(".page-islandora-object .region-content-inner").height(newHeight);
+      // var newHeight = $( document ).height();
+      // $(".page-islandora-object .region-content-inner").height(newHeight);
 
       $('#edit-simple input[type=text]').each(function() {
 
