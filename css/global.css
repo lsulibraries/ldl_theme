@@ -923,10 +923,23 @@ border:1px #fc6 solid;
 }
 
 .parent-collections {
-  background-color: #efefef;
-  border: 1px #c7c7c7 solid;
-  margin: 2em 0;
-  padding: .5em
+    background-color: #fff;
+    border: 1px #ccc solid;
+    border-radius: 10px;
+    padding: 10px 20px 10px 20px;
+    margin-bottom: 10px;
+}
+
+.parent-collections h2 {
+margin: 0px;
+}
+
+.parent-collections a:link, .parent-collections a:visited, {
+color: #438fca;
+}
+
+.collection-title{
+margin: 0px;
 }
 
 fieldset.islandora-metadata.collapsible {
