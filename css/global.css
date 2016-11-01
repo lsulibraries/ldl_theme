@@ -358,6 +358,7 @@ a.islandora-pdf-link {
   width: 100%;
   margin: 0px;
   overflow: hidden;
+display: flex;
 }
 
 .region-header-second-inner {
@@ -549,7 +550,7 @@ dd {
   display: -ms-flexbox;
   display: flex;
   flex-direction: column;
-  height: 100%;
+width: 100%;
   justify-content: space-between;
   webkit-justify-content: space-between;
 }
@@ -1885,7 +1886,7 @@ margin-right: 10px;
 .page-islandora-object .region-header-second-inner::after{
     content: 'Item Level';
     position: absolute;
-    z-index: 2;
+    z-index: 3;
     width: 160px;
     margin-left: 50px;
     margin-bottom: 0px;
@@ -1896,6 +1897,7 @@ margin-right: 10px;
     text-transform: uppercase;
     font-size: 14px;
     letter-spacing: 1px;
+    left: 0px;
 }
 
 .islandora-pdf-metadata thead th, .islandora-pdf-metadata th, .islandora-large-image-metadata thead th, .islandora-large-image-metadata th {
@@ -1959,7 +1961,7 @@ padding-right: 20px;
 .islandora-openseadragon {
     display: block;
     width: 100%;
-    height: 1000px;
+    height: 800px;
 }
 
 /*BEGIN test area*/
