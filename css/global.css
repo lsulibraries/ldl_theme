@@ -1901,6 +1901,10 @@ margin-right: 10px;
 top:29px;
 }
 
+#clip{
+display: none;
+} /*scissors icon to crop image on openseadragon viewer*/
+
 .islandora-pdf-metadata thead th, .islandora-pdf-metadata th, .islandora-large-image-metadata thead th, .islandora-large-image-metadata th {
   background: #fff;
   border:none;
