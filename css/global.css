@@ -128,6 +128,22 @@ input#edit-submit--2.form-submit {
   background-size: 20px 20px;
 }
 
+.page-user input#edit-submit.form-submit:nth-child(1),
+.page-user input#edit-submit--2.form-submit:nth-child(1){
+    background-image: none;
+  background: #FFF;
+    color: #438fca;
+    border: 1px solid #438fca;
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+}
+
+.page-user #block-system-main{
+margin:10px;
+}
+
 #sideMods {
   color: #757575;
   padding: 12px;
@@ -213,6 +229,7 @@ font-size: 12px;
 .object-author {
     margin: 0px;
     padding: 0px;
+    margin-top: 5px;
     color: #6b6b6b;
     font-weight: 600;
 }
@@ -1664,41 +1681,43 @@ p.about_collection::before {
 }
 
 .page-browse-collections  div.landingContainer, #views-exposed-form-islandora-collection-landing-pages-page .views-exposed-widgets {
-display: none;
+  display: none;
 }
 
-.islandora-pdf-content {
-    background-color: #FFF;
-    background-image: url(http://i.imgur.com/BJtKhwV.png);
-    border: 1px solid #ccc;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 10px;
-    padding: 0px;
-    float: left;
-    width: 100%;
-    max-width: 100%;
-    position: relative;
-    overflow-x: hidden;
-margin-top:10px;
+.islandora-pdf-content, .islandora-large-image-content {
+  background-color: #FFF;
+  background-image: url(http://i.imgur.com/BJtKhwV.png);
+  border: 1px solid #ccc;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 10px;
+  padding: 0px;
+  float: left;
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+  overflow-x: hidden;
+  margin-top:10px;
+  margin-bottom:10px;
 }
-.islandora-pdf-content a:nth-child(2){
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.islandora-pdf-content a:nth-child(2), .islandora-large-image-content a:nth-child(2) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .islandora-pdf-content img{
-    margin: 15px;
-    border: 1px solid #ccc;
-    box-sizing: content-box;
+  margin: 15px;
+  border: 1px solid #ccc;
+  box-sizing: content-box;
+  width: 60%;
 }
 
 .morecontent span {
-    display: none;
+  display: none;
 }
 .morelink {
-    display: block;
+  display: block;
 }
 
 .page-browse-collections .pager li.pager-current{
@@ -1852,12 +1871,13 @@ display:none;
     font-weight: 500;
     letter-spacing: 1px;
     min-height: 20px;
+    line-height: 13px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 
-div.islandora-pdf-object{
+div.islandora-pdf-object, div.islandora-large-image-object{
 margin-left: 10px;
 margin-right: 10px;
 }
@@ -1878,25 +1898,25 @@ margin-right: 10px;
     letter-spacing: 1px;
 }
 
-.islandora-pdf-metadata thead th, .islandora-pdf-metadata  th {
-    background: #fff;
-border:none;
-    color: #333;
+.islandora-pdf-metadata thead th, .islandora-pdf-metadata th, .islandora-large-image-metadata thead th, .islandora-large-image-metadata th {
+  background: #fff;
+  border:none;
+  color: #333;
 }
 
-.islandora-pdf-metadata table{
-    border: none;
-    margin-bottom: 0px;
-background: #fff;
-    color: #676767;
-font-size: 12px;
+.islandora-pdf-metadata table, .islandora-large-image-metadata table{
+  border: none;
+  margin-bottom: 0px;
+  background: #fff;
+  color: #676767;
+  font-size: 12px;
 }
 
-.islandora-pdf-metadata table a:link, .islandora-pdf-metadata table a:visited{
+.islandora-pdf-metadata table a:link, .islandora-pdf-metadata table a:visited, .islandora-large-image-metadata table a:link, .islandora-large-image-metadata table a:visited,{
 color:#438fca;
 
 }
-.islandora-pdf-metadata td:nth-child(1) {
+.islandora-pdf-metadata td:nth-child(1), .islandora-large-image-metadata td:nth-child(1){
     float: left;
     width: 100%;
     font-weight: 700;
@@ -1905,7 +1925,7 @@ color:#438fca;
     padding-left: 20px;
 }
 
-.islandora-pdf-metadata td:nth-child(2) {
+.islandora-pdf-metadata td:nth-child(2), .islandora-large-image-metadata td:nth-child(2) {
     float: left;
     padding-top: 0px;
     padding-bottom: 10px;
@@ -1913,15 +1933,33 @@ color:#438fca;
     padding-left: 20px;
 }
 
-.islandora-pdf-metadata > table th {
+.islandora-pdf-metadata > table th, .islandora-large-image-metadata > table th {
 display:none;
 }
 
-.islandora-pdf-metadata >table td {
+.islandora-pdf-metadata >table td, islandora-large-image-metadata >table td {
   background-color: #fff;
   border: none;
 padding-left:20px;
 padding-right: 20px;
+}
+
+#abstract-temporary{
+    background: white;
+    padding: 20px;
+    margin-top: 100px;
+    border: 0px;
+    border-top: 1px solid #ccc;
+    color: grey;
+    box-sizing: content-box;
+    margin-top: 0px;
+    display: block;
+}
+
+.islandora-openseadragon {
+    display: block;
+    width: 100%;
+    height: 1000px;
 }
 
 /*BEGIN test area*/
@@ -1992,6 +2030,7 @@ margin-right: 0px;
 @media screen and (max-width: 1446px) {
 
 
+
 .view-islandora-collection-landing-pages h2 a:link {
   color: #438fca;
   font-size: 25px;
@@ -2029,6 +2068,18 @@ margin-right: 0px;
 }
 
 @media screen and (max-width: 1260px) {
+
+.islandora-pdf-content img{
+    margin: 15px;
+    border: 1px solid #ccc;
+    box-sizing: content-box;
+    width: auto;
+}
+
+#abstract-temporary{
+display:none;
+}
+
 
 a.islandora-pdf-link {
     background-color: white;
@@ -2185,7 +2236,7 @@ display: none;
     width: 100%;
   }
   .page-islandora-object #region-sidebar-first,
-  .page-browse-collections #region-sidebar-first {
+  .page-browse-collections #region-sidebar-first, .page-user #region-sidebar-first {
     display: none;
   }
   .page-islandora-search .region-sidebar-first-inner {
