@@ -566,6 +566,7 @@ dd {
 width: 100%;
   justify-content: space-between;
   webkit-justify-content: space-between;
+min-height: calc(100vh - 59px);
 }
 
 #block-block-9 {
@@ -671,6 +672,9 @@ width: 100%;
   background-color: black;
 }
 
+.browse_collection{
+margin: 0px;
+}
 
 /* Simple Search */
 
@@ -1089,7 +1093,7 @@ div.islandora-solr-content {
   padding-bottom: 50px;
 }
 
-.page-browse-collections #block-block-4,
+.page-browse-collections #block-block-4, .context-collections #block-block-4,
 .page-user #block-block-4,
 .page-advanced-search #block-block-4 {
   position: relative;
@@ -1104,7 +1108,8 @@ div.islandora-solr-content {
 }
 
 .user-page #region-content .region-content-inner,
-.page-browse-collections #region-content .region-content-inner {
+.page-browse-collections #region-content .region-content-inner,
+.context-collections #region-content .region-content-inner, {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -1686,10 +1691,11 @@ p.about_collection::before {
 }
 
 .node-type-landing-page #block-system-main .field {
-  background: white;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  padding: 20px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px 10px 0px 10px;
 }
 
 .landingMessage {
@@ -1928,6 +1934,42 @@ margin-right: 10px;
 top:29px;
 }
 
+html .page-islandora-object-lsu-p15140coll12collection .region-header-second-inner::after{
+    content: 'Andrew D. Lytle Baton Rouge Photograph Collection';
+    position: absolute;
+    z-index: 3;
+    width: 160px;
+    margin-left: 50px;
+    margin-bottom: 0px;
+    text-align: left;
+    line-height: 10px;
+    color: #f0f0f0;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 1px;
+    left: 18px;
+    top: 15px;
+}
+
+.context-collections .region-header-second-inner::after{
+    content: 'Collection About';
+    position: absolute;
+    z-index: 3;
+    width: 160px;
+    margin-left: 50px;
+    margin-bottom: 0px;
+    text-align: center;
+    line-height: 0px;
+    color: #f0f0f0;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+    left: 0px;
+top:29px;
+}
+
 #clip{
 display: none;
 } /*scissors icon to crop image on openseadragon viewer*/
@@ -2000,6 +2042,12 @@ padding-right: 20px;
 background-image: url(http://i.imgur.com/BJtKhwV.png) !important;
 background-color: #FFFFFF !important;
 
+}
+
+.context-collections div.content{
+    display: flex;
+    margin-bottom: 10px;
+    flex-direction: column;
 }
 
 /*BEGIN test area*/
@@ -2217,7 +2265,7 @@ a.islandora-pdf-link {
 }
 
 
-.page-browse-collections .bookmark, .page-islandora-object .region-header-second-inner::after{
+.page-browse-collections .bookmark, .page-islandora-object .region-header-second-inner::after, .context-collections .region-header-second-inner::after{
 display: none;
 }
 
@@ -2276,9 +2324,11 @@ display: none;
     width: 100%;
   }
   .page-islandora-object #region-sidebar-first,
-  .page-browse-collections #region-sidebar-first, .page-user #region-sidebar-first {
+  .page-browse-collections #region-sidebar-first, .page-user #region-sidebar-first, .context-collections #region-sidebar-first{
     display: none;
   }
+
+
   .page-islandora-search .region-sidebar-first-inner {
     margin-left: auto;
     margin-right: auto;
@@ -2536,4 +2586,11 @@ justify-content: center;
       margin: 20px;
     }
   }
+}
+
+  @media screen and (max-width: 450px) {
+
+.footerContainer {
+flex-direction: column-reverse;
+}
 }
