@@ -102,6 +102,10 @@ input#edit-islandora-simple-search-query.form-text {
   border-left-width: 0px;
 }
 
+.solr-thumb img {
+width: 100%;
+}
+
 input#edit-submit.form-submit,
 input#edit-submit--2.form-submit {
   -webkit-appearance: none;
