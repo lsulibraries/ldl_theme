@@ -1463,10 +1463,12 @@ dd.solr-value.mods-subject-topic-ms {
   height: inherit;
 }
 
-.view-islandora-collection-landing-pages tr:nth-child(4n) {
+.view-islandora-collection-landing-pages tr:nth-child(4n), .item-list li.last {
 margin-right: 0px;
 
 }
+
+
 .view-islandora-collection-landing-pages tbody {
     display: flex;
     flex-direction: row;
