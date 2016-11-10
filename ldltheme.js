@@ -50,6 +50,7 @@
       $(".landingMessage").clone().prop({id: "landingMobile", class: "landingMessageMobile"}).appendTo("#zone-header");
       $("#sideMods tr:nth-child(0n+12) td:nth-child(0n+2)").clone().prop({ id: "abstract-temporary", class: "temp"}).appendTo(".islandora-pdf-content, .islandora-large-image-content");
       $(".parent-collections").appendTo(".islandora-large-image-content, .islandora-pdf-content");
+      $("#block-block-11").prependTo("#section-header");
 
 
     //begin show more script
