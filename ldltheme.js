@@ -10,6 +10,24 @@
 
 
       $(document).ready(function() {
+    var scroll = $(window).scrollTop();
+    // Do something
+
+
+
+
+		var $scrollingDiv = $("#block-block-12");
+		$(window).scroll(function(){
+    var scrollCalculated = ($(window).scrollTop() - $(window).height() + 0);
+      if (scrollCalculated < 0){
+      scrollCalculated = 0;}
+			$scrollingDiv
+				.stop()
+				.animate({"marginTop": scrollCalculated + "px"}, "slow" );
+		});
+
+
+
           $('#loadingWrap').fadeOut(1200, function(){ $(this).remove();});
           $("#page").fadeIn(1500);
       });
@@ -22,8 +40,11 @@
       sr.reveal('.page-islandora-search .region-sidebar-first-inner', { duration: 200, delay: 100, opacity: 1, easing: 'linear', scale: 1, viewFactor: 0.01, }, 50);
       sr.reveal('#block-block-9',  { duration: 500, distance: '30px', opacity: 1, delay: 100,  easing: 'linear', scale: 1, viewFactor: 0.2, }, 50);
       sr.reveal('.islandora-solr-search-result, .landingMobile', { duration: 200, delay: 100,  easing: 'linear', scale: 1, viewFactor: 0.01,}, 20); //landingMessage normally here; conflicts with mobile landingMessage
-      sr.reveal('.islandora-solr-sort, .landingHero', { duration: 200, delay: 0,  easing: 'linear', scale: 1, viewFactor: 0.01,}, 20);
-      sr.reveal('.solr-fields, .islandora-solr-sort li, .page-browse-collections tr, .islandora-pdf-content', { duration: 200, delay: 350,  easing: 'linear', scale: 1, viewFactor: 0.01, }, 20);
+      sr.reveal('.islandora-solr-sort', { duration: 200, delay: 0,  easing: 'linear', scale: 1, viewFactor: 0.01,}, 20);
+      sr.reveal('.solr-fields, .islandora-solr-sort li, .islandora-pdf-content', { duration: 200, delay: 350,  easing: 'linear', scale: 1, viewFactor: 0.01, }, 20);
+      sr.reveal('.siteTile', { duration: 100, delay: 250,  easing: 'linear', scale: 1, viewFactor: 1.5, }, 1);
+      sr.reveal('.messageContainer', { duration: 100, delay: 50,  easing: 'linear', scale: 1, viewFactor: 0.8, }, 1);
+      sr.reveal('.page-browse-collections tr', { duration: 100, delay:0,  easing: 'linear', scale: .6, viewFactor: 0.7, });
       sr.reveal('.solr-thumb img', { duration: 200, delay: 850,  easing: 'linear', scale: 1, viewFactor: 0.01, }, 20);
       sr.reveal('.islandora-basic-collection-grid dl', { duration: 500, delay: 200,  easing: 'ease-in', }, 150);
       sr.reveal('.bookmarkWelcome', { duration: 800, delay: 100,  easing: 'linear', scale: 1, viewFactor: 0.01, }, 50);
