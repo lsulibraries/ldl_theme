@@ -2073,10 +2073,16 @@ margin-right: 0px;
 
 
 div#block-block-12 {
-    min-height: 500px;
+    min-height: 670px;
     background-color: #1a1a1a;
     border-right: 1px solid #1a1a1a;
     border-top: 1px solid #434343;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: #acacac;
 }
 
 div#block-block-11 {
@@ -2094,13 +2100,15 @@ body.logged-in div#block-block-11 {
 .hoverTitle {
     color: #adadad;
     font-size: 30px;
-    margin: 20px;
     line-height: 30px;
 }
 
 .hoverInfo {
-    margin: 0px 20px 20px 20px;
     color: #a2a2a2;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 10px;
+    margin-left: 2px;
 }
 
 .hoverItem .hoverInfo::before {
@@ -2127,11 +2135,96 @@ body.logged-in div#block-block-11 {
     border-bottom: 1px solid #9d9d9d;
 }
 
+#block-system-navigation ul.menu li {
+    background-color: #438fca;
+    color: white;
+    width: 15.9999%;
+    padding: 30px;
+    flex-grow: 1;
+    margin: 0.5px;
+    line-height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-browse-collections #block-system-navigation ul.menu li {
+    width: 16.9999%;
+}
+
+#block-system-navigation .menu {
+    padding-left: 0px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#region-sidebar-first #block-system-navigation  a:link, #region-sidebar-first #block-system-navigation a:visited {
+color: white;
+}
+
+.page-browse-collections #block-system-navigation h2.block-title {
+display: none;
+}
+
+.page-browse-collections #block-system-navigation {
+padding: 0;
+}
+
+#block-block-12 h2 a:link{
+    color: #adadad;
+    font-size: 26px;
+    line-height: 26px;
+font-weight: normal;
+margin-bottom: 0px;
+}
+
+#block-block-12 h2{
+margin-bottom: 0px;
+}
+
+#block-block-12 .short_desc{
+margin: 0px;
+}
+
 /*END test area*/
 @media screen and (max-width: 1770px) {
-.view-islandora-collection-landing-pages tr {
-width: 30%;
+
+
+
+
+.hoverTitle {
+    color: #adadad;
+    font-size: 25px;
+    line-height: 25px;
 }
+
+.hoverInfo {
+    letter-spacing: 2px;
+}
+
+.view-islandora-collection-landing-pages .view-display-id-minigrid tr {
+    max-width: calc(16.6% - 0px);
+}
+
+.page-browse-collections tr {
+    width: calc(16.6% - 12px);
+    max-width: none;
+
+}
+
+.view-islandora-collection-landing-pages tr:nth-child(6n) {
+margin-right: 0px;
+}
+
+.view-display-id-minigrid tr:nth-child(8n) {
+    margin-right: 3px;
+}
+
+}
+
+@media screen and (max-width: 1446px) {
+
+
 
 .view-islandora-collection-landing-pages tr:nth-child(4n) {
 margin-right: 10px;
@@ -2140,12 +2233,6 @@ margin-right: 10px;
 .view-islandora-collection-landing-pages tr:nth-child(3n) {
 margin-right: 0px;
 }
-
-}
-
-@media screen and (max-width: 1446px) {
-
-
 
 .view-islandora-collection-landing-pages h2 a:link {
   color: #438fca;
@@ -2186,6 +2273,10 @@ margin-right: 0px;
 
 div#multiGrid{
 margin-left: 0px;
+}
+
+#miniGrid{
+display:none;
 }
 
 .islandora-pdf-content img{

@@ -23,9 +23,25 @@
       scrollCalculated = 0;}
 			$scrollingDiv
 				.stop()
-				.animate({"marginTop": scrollCalculated + "px"}, "slow" );
+				.animate({"paddingTop": scrollCalculated + "px"}, "slow" );
 		});
 
+$( ".minigrid tr" ).hover(
+
+function() {
+  var hoveredItem = this;
+  $( ".hoverTitle" ).after($(hoveredItem).find("h2").clone());
+  $( ".hoverInfo" ).after($(hoveredItem).find(".short_desc").clone()).fadeIn();
+  $( ".hoverTitle, .hoverInfo" ).hide();
+},
+
+
+function() {
+  $( "#block-block-12" ).find( ".short_desc:last" ).remove();
+  $( "#block-block-12" ).find( "h2:last" ).remove();
+  $( ".hoverTitle, .hoverInfo" ).show();
+
+});
 
 
           $('#loadingWrap').fadeOut(1200, function(){ $(this).remove();});
@@ -49,7 +65,7 @@
       sr.reveal('.islandora-basic-collection-grid dl', { duration: 500, delay: 200,  easing: 'ease-in', }, 150);
       sr.reveal('.bookmarkWelcome', { duration: 800, delay: 100,  easing: 'linear', scale: 1, viewFactor: 0.01, }, 50);
 
-
+//possible jiggle of items when hover over hover-prompt?
 
       $(".islandora-pdf-metadata").clone().prop({ id: "sideMods", class: "newClass" }).prependTo("#region-sidebar-first");
       $(".islandora-large-image-metadata").clone().prop({ id: "sideMods", class: "newClass" }).prependTo("#region-sidebar-first");
@@ -74,6 +90,9 @@
       $("#block-block-11").prependTo("#section-header");
 
 
+
+
+
     //begin show more script
     var showChar = 300;  // How many characters are shown by default
     var ellipsestext = "...";
@@ -81,7 +100,7 @@
     var lesstext = "Show less";
 
 
-    $('.short_desc p, .mods-abstract-mt').each(function() {
+    $('test.short_desc p, .mods-abstract-mt').each(function() {
         var content = $(this).html();
 
         if(content.length > showChar) {
