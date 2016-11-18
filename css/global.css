@@ -1819,6 +1819,42 @@ background-size: cover;
 background-size: cover;
 }
 
+.view-display-id-minigrid tr:nth-child(0n + 4){
+    background-image: url(http://i.imgur.com/5qON0vl.png);
+background-size: cover;
+}
+
+
+.siteTile:nth-child(1){
+    background-image: url(http://i.imgur.com/GRq2gTW.png), url(http://i.imgur.com/gEwy9RE.png);
+    background-size: 150px, 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.siteTile:nth-child(0n + 2){
+    background-image: url(http://i.imgur.com/iDomtA1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.siteTile:nth-child(0n + 2) > .siteName{
+margin-top: 0px;
+margin-bottom: 80px;
+}
+
+div.siteTile:nth-child(1) > div.siteName::before{
+    background-image: url(http://i.imgur.com/5qON0vl.png);
+margin: 0px;
+padding: 0px;
+position: absolute;
+}
+
+div.siteTile::hover{
+background-size:150px;
+}
+
 
 .view-display-id-minigrid tr td, .view-display-id-minigrid tr td a{
 background: transparent;
@@ -2090,6 +2126,7 @@ div#multiGrid {
 .page-browse-collections #block-system-main{
 display: none;
 }
+/*paginated grid items*/
 
 .view-display-id-minigrid{
 display:block;
