@@ -23,10 +23,10 @@
       scrollCalculated = 0;}
 			$scrollingDiv
 				.stop()
-				.animate({"paddingTop": scrollCalculated + "px"}, "slow" );
+				.animate({"paddingTop": scrollCalculated + "px"}, "fast" );
 		});
 
-$( ".minigrid tr" ).hover(
+$( ".view-id-islandora_collection_landing_pages tr" ).hover(
 
 function() {
   var hoveredItem = this;
@@ -145,7 +145,7 @@ function() {
 
       $(this).attr('placeholder', 'Search LDL...' );
       });
-      $('input[name="op"]').val("");
+      $('#region-header-second input[name="op"]').val("");
       $('#block-user-login input[name="op"]').val("Login");
       $('.page-user input[name="op"]:nth-child(1)').val("Login");
 
