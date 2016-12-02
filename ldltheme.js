@@ -19,37 +19,94 @@
       });
 
       window.sr = ScrollReveal();
-      sr.reveal('.section-footer', { duration: 1000, delay: 0, distance: 1000, scale: 1.0, rotate: { x: 500, y: 0, z: 0 },});
+      sr.reveal('.page-islandora-search .region-sidebar-first-inner', { duration: 200, delay: 100, opacity: 1, easing: 'linear', scale: 1, viewFactor: 0.01, }, 50);
+      sr.reveal('#block-block-9',  { duration: 500, distance: '30px', opacity: 1, delay: 100,  easing: 'linear', scale: 1, viewFactor: 0.2, }, 50);
+      sr.reveal('.islandora-solr-search-result, .landingMobile', { duration: 200, delay: 100,  easing: 'linear', scale: 1, viewFactor: 0.01,}, 20); //landingMessage normally here; conflicts with mobile landingMessage
+      sr.reveal('.islandora-solr-sort, .landingHero', { duration: 200, delay: 0,  easing: 'linear', scale: 1, viewFactor: 0.01,}, 20);
+      sr.reveal('.solr-fields, .islandora-solr-sort li, .page-browse-collections tr, .islandora-pdf-content', { duration: 200, delay: 350,  easing: 'linear', scale: 1, viewFactor: 0.01, }, 20);
+      sr.reveal('.solr-thumb img', { duration: 200, delay: 850,  easing: 'linear', scale: 1, viewFactor: 0.01, }, 20);
       sr.reveal('.islandora-basic-collection-grid dl', { duration: 500, delay: 200,  easing: 'ease-in', }, 150);
+      sr.reveal('.bookmarkWelcome', { duration: 800, delay: 100,  easing: 'linear', scale: 1, viewFactor: 0.01, }, 50);
+
 
 
       $(".islandora-pdf-metadata").clone().prop({ id: "sideMods", class: "newClass" }).prependTo("#region-sidebar-first");
       $(".islandora-large-image-metadata").clone().prop({ id: "sideMods", class: "newClass" }).prependTo("#region-sidebar-first");
-      $("#page-title").clone().prop({ id: "page-title-header"}).prependTo(".region-header-second-inner");
-      $("#page-title").clone().prop({ id: "object-title-pdf", class: "object-title"}).appendTo("#block-system-main");
-      $("#sideMods tr:nth-child(0n+3) td:nth-child(0n+2)").clone().prop({ id: "pdf-object-author", class: "object-author"}).appendTo("#block-system-main");
-      $("a.islandora-pdf-link").appendTo("#block-system-main");
+      $(".page-islandora-search #page-title").clone().prop({ id: "page-title-header"}).prependTo(".region-header-second-inner");
+      $("#page-title").clone().prop({ id: "window-title", class: "object-title"}).prependTo("div.islandora-pdf-content, div.islandora-large-image-content");
+      $("#sideMods tr:nth-child(0n+3) td:nth-child(0n+2)").clone().prop({ id: "pdf-object-author", class: "object-author"}).appendTo("#window-title");
+      $("a.islandora-pdf-link").appendTo(".islandora-pdf-content");
       $("#sideMods div:nth-child(1)").appendTo("#sideMods");
-      $(".islandora-pdf-metadata").appendTo("#block-system-main");
-      $(".islandora-large-image-metadata").appendTo("#block-system-main");
+      $(".islandora-pdf-metadata").appendTo(".islandora-pdf-content");
+      $(".islandora-large-image-metadata").appendTo(".islandora-large-image-content");
       $("#breadcrumb").prependTo(".region-content-inner");
       $("#islandora-solr-result-count").prop({ id: "header-result-count"}).appendTo("#breadcrumb");
       $("#region-content div.tabs.clearfix").prependTo("#block-system-main");
       $(".bookmark").prependTo("#breadcrumb");
-      $("#block-islandora-solr-simple").clone().prop({ id: "largeSearch", value:"Search LDL.."}).prependTo(".landingContainer");
+      $("#block-islandora-solr-simple").clone().prop({ id: "largeSearch", value:"Search LDL.."}).appendTo(".landingContainer");
       $("#block-block-1").clone().prop({ id: "landingAdvanced"}).appendTo("#largeSearch");
+      $(".underHero").appendTo("#landingHero");
+      $(".footerImg").clone().prop({ id: "logoMobile"}).prependTo("#zone-header");
+      $(".landingMessage").clone().prop({id: "landingMobile", class: "landingMessageMobile"}).appendTo("#zone-header");
+      $("#sideMods tr:nth-child(0n+12) td:nth-child(0n+2)").clone().prop({ id: "abstract-temporary", class: "temp"}).appendTo(".islandora-pdf-content, .islandora-large-image-content");
+      $(".parent-collections").appendTo(".islandora-large-image-content, .islandora-pdf-content");
 
-  
 
-      var newHeight = $( document ).height();
-      $(".region-content-inner").not(".page-islandora-object-islandoraroot .region-content-inner, .page-islandora-search .region-content-inner").height(newHeight);
+    //begin show more script
+    var showChar = 300;  // How many characters are shown by default
+    var ellipsestext = "...";
+    var moretext = "Show more";
+    var lesstext = "Show less";
+
+
+    $('.short_desc p, .mods-abstract-mt').each(function() {
+        var content = $(this).html();
+
+        if(content.length > showChar) {
+
+            var c = content.substr(0, showChar);
+            var h = content.substr(showChar, content.length - showChar);
+
+            var html = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
+
+            $(this).html(html);
+        }
+
+    });
+
+    $(".morelink").click(function(){
+        if($(this).hasClass("less")) {
+            $(this).removeClass("less");
+            $(this).html(moretext);
+        } else {
+            $(this).addClass("less");
+            $(this).html(lesstext);
+        }
+        $(this).parent().prev().toggle();
+        $(this).prev().toggle();
+        return false;
+    });
+  // end show more script
+
+      $(".sidebarLabel").click(function(){
+          $("#block-islandora-solr-basic-facets").toggle();
+          $(".sidebarLabel").toggleClass("close");
+      });
+
+      var $div = $("<div>", {id: "movingBg", "class": "a"});
+      $($div).prependTo("#grid-9");
+
+
+//var newHeight = $( document ).height();
+//$(".page-islandora-object .region-content-inner").height(newHeight);
 
       $('#edit-simple input[type=text]').each(function() {
 
-    $(this).attr('placeholder', 'Search LDL...' );
-});
+      $(this).attr('placeholder', 'Search LDL...' );
+      });
       $('input[name="op"]').val("");
       $('#block-user-login input[name="op"]').val("Login");
+      $('.page-user input[name="op"]:nth-child(1)').val("Login");
 
       $( " » " ).replaceWith( " / " );
 
