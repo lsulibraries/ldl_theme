@@ -9,6 +9,8 @@
 ?>
 
 <div class="islandora-basic-collection-wrapper">
+<!--    <h1 class="lp-title"><?php //print $landing_page_title  ?></h1>-->
+    <h1 class="about-link"><?php print $about_link  ?></h1>
   <?php if (!$display_metadata && !empty($dc_array['dc:description']['value'])): ?>
     <p><?php print nl2br($dc_array['dc:description']['value']); ?></p>
     <hr />

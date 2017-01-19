@@ -17,4 +17,18 @@ function alpha_preprocess_islandora_basic_collection_wrapper(&$variables){
     $islandora_object = $variables['islandora_object'];
     list($total_count, $results) = islandora_basic_collection_get_member_objects($islandora_object, $page_number, $page_size);
     $variables['total_count'] = $total_count;
+
+    $pidParts = explode(':',$islandora_object->id);
+    $pid = $pidParts[0];
+
+    $result = db_query("select u.alias, n.title "
+        . "from field_revision_field_lp_pid f "
+        . "join node n on f.revision_id = n.vid "
+        . "join url_alias u "
+        . "where field_lp_pid_value = :pid "
+        . "and u.source = CONCAT('node/',n.nid)",
+        array(':pid' => $pid));
+    $record = $result->fetchAssoc();
+    $variables['about_link'] = l('about', $record['alias']);
+    $variables['landing_page_title'] = $record['title'];
 }
