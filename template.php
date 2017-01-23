@@ -29,6 +29,6 @@ function alpha_preprocess_islandora_basic_collection_wrapper(&$variables){
         . "and u.source = CONCAT('node/',n.nid)",
         array(':pid' => $pid));
     $record = $result->fetchAssoc();
-    $variables['about_link'] = l('about', $record['alias']);
+    $variables['about_link'] = l($record['title'], $record['alias']);
     $variables['landing_page_title'] = $record['title'];
 }
