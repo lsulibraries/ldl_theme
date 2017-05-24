@@ -16,8 +16,12 @@
 
       var url = window.location.pathname;
       if (url.indexOf('/uno-') !== -1) {
-        $("body").addClass('uno');
+        $("body").addClass('unoTheme institution');
       };
+
+      if (url.indexOf('/lsu-') !== -1) {
+        $("body").addClass('lsuTheme institution');
+      };      
 
       $('#switchTheme').click(function(){
           $("html").toggleClass('Dark');
