@@ -15,7 +15,8 @@
       });
 
       var url = window.location.pathname;
-      if (url.indexOf('/uno-') !== -1) {
+
+      if (/uno\b/.test(url)) {
         $("body").addClass('unoTheme institution');
       };
 
