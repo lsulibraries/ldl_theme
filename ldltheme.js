@@ -14,6 +14,11 @@
           $("#page").fadeIn(1500);
       });
 
+      var url = window.location.pathname;
+      if (url.indexOf('/uno') !== -1) {
+        $("body").addClass('uno');
+      };
+
       $('#switchTheme').click(function(){
           $("html").toggleClass('Dark');
       });
