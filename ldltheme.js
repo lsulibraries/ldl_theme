@@ -15,24 +15,15 @@
       });
 
       var url = window.location.pathname;
+      var namespaces = ['uno','loyno', 'mcneese', 'lsu'];
 
-      if (/uno\b/.test(url)) {
-        $("body").addClass('unoTheme institution');
-      };
-
-      if (url.indexOf('/lsu-') !== -1) {
-        $("body").addClass('lsuTheme institution');
-      };      
-
-      if (url.indexOf('/mcneese-') !== -1) {
-        $("body").addClass('mcneeseTheme institution');
-      };      
-
-      if (url.indexOf('/loyola-') !== -1) {
-        $("body").addClass('loyolaTheme institution');
-      };      
-
-
+      for(namespace in namespaces){
+	  ns = namespaces[namespace];
+	  re = new RegExp(ns +"\\b");
+	  if (re.test(url)) {
+              $("body").addClass(ns + "Theme institution");
+	  };
+      }
 
       $('#switchTheme').click(function(){
           $("html").toggleClass('Dark');
