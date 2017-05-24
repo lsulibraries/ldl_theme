@@ -15,7 +15,7 @@
       });
 
       var url = window.location.pathname;
-      if (url.indexOf('/uno') !== -1) {
+      if (url.indexOf('/uno-') !== -1) {
         $("body").addClass('uno');
       };
 
