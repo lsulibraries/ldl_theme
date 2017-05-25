@@ -1923,6 +1923,25 @@ margin-right: 10px;
     left: 0px;
 top:29px;
 }
+.unoTheme .page-islandora-object .region-header-second-inner::after{
+    content: 'Item Level';
+    position: absolute;
+    z-index: 3;
+    width: 160px;
+    margin-left: 50px;
+    margin-bottom: 0px;
+    text-align: center;
+    line-height: 0px;
+    color: black;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+    left: 0px;
+top:29px;
+}
+
+
 
 html .page-islandora-object-lsu-p15140coll12collection .region-header-second-inner::after{
     content: 'Andrew D. Lytle Baton Rouge Photograph Collection';
@@ -2066,6 +2085,10 @@ background-color: #FFFFFF !important;
   color:  #ccc;
 }
 
+.unoTheme .page-islandora-object div.region-header-second-inner::after{
+  color: #004C99;
+}
+
 .institution .site-name a, .institution #block-delta-blocks-site-name, .institution .logo-img {
 display: none;
 }
@@ -2122,16 +2145,35 @@ display: none;
     opacity: 1;
 }
 
-.loyolaTheme #zone-header{
+.loynoTheme #zone-header{
   background-color: #660000;
 }
 
-.loyolaTheme #block-block-4{
+.loynoTheme #block-block-4{
   background-color: #f4aa00;
   color:  #f4aa00;
 }
 
-.loyolaTheme .region-header-first-inner::after{
+.institution input#edit-islandora-simple-search-query.form-text{
+      border-right: 1px solid #ffffff;
+    color: #ffffff;
+}
+
+.institution #block-islandora-solr-simple {
+    margin-left: 85px;
+    border: 1px solid #ffffff;
+    width: calc(100% - 600px);
+}
+
+.institution #block-block-1 a {
+  color: #ffffff;
+}
+
+.institution div.region-inner.region-header-first-inner {
+padding-left: 10px;
+}
+
+.loynoTheme .region-header-first-inner::after{
     content: " ";
     color: white;
     background-image: url(http://i.imgur.com/5Jjv9BT.png);
@@ -2150,6 +2192,36 @@ display: none;
 
 .landingMessage{
       margin: 20px;
+}
+
+.latechTheme .region-header-first-inner::after{
+    content: " ";
+    color: white;
+    background-image: url(http://grfx.cstv.com/schoolslt/latc/graphics/logos/latc-state-t.gif);
+    background-size: contain;
+    width: 140px;
+    height: 30px;
+    background-repeat: no-repeat;
+    margin-left: 0px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 20px;
+    background-position-x: 0px;
+    opacity: 1;
+}
+
+.latechTheme #zone-header{
+  background-color: #000092;
+}
+
+.latechTheme #block-block-4{
+  background-color: #ed1e24;
+  color:  #ed1e24;
+}
+
+.latechTheme .page-islandora-object div.region-header-second-inner::after{
+  color: #000092;
 }
 
 /*BEGIN test area*/
