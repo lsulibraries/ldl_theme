@@ -2059,6 +2059,38 @@ background-color: #FFFFFF !important;
     flex-direction: column;
 }
 
+
+.hnocTheme .region-header-first-inner::after{
+    content: " ";
+    color: white;
+    background-image: url(http://i.imgur.com/lRaktDw.png);
+    background-size: contain;
+    width: 140px;
+    height: 46px;
+    background-repeat: no-repeat;
+    margin-left: 0px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 20px;
+    background-position-x: 0px;
+    opacity: 1;
+}
+
+.hnocTheme #zone-header{
+  background-color: #254550;
+}
+
+.hnocTheme #block-block-4{
+  background-color: #e5e5e7;
+  color:  #e5e5e7;
+}
+
+.hnocTheme .page-islandora-object div.region-header-second-inner::after{
+  color: #254550;
+}
+
+
 .unoTheme .region-header-first-inner::after{
     content: " ";
     color: white;
@@ -2092,6 +2124,8 @@ background-color: #FFFFFF !important;
 .institution .site-name a, .institution #block-delta-blocks-site-name, .institution .logo-img {
 display: none;
 }
+
+
 
 .lsuTheme #zone-header{
   background-color: #3C1053;

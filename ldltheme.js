@@ -15,7 +15,7 @@
       });
 
       var url = window.location.pathname;
-      var namespaces = ['uno','loyno', 'mcneese', 'lsu', 'latech'];
+      var namespaces = ['uno','loyno', 'mcneese', 'lsu', 'latech', 'hnoc'];
 
       for(namespace in namespaces){
 	  ns = namespaces[namespace];
