@@ -68,10 +68,9 @@ h1, h2, h3, h4, h5, h6 {
 .region-inner.region-content-inner {
   position: relative;
   opacity: 0;
-  margin: 10px;
+  margin: 40px;
   color: #ffffff;
   padding: 100px;
-  overflow: hidden;
   background: #3e4352;
   background-image: url(http://i.imgur.com/PuUOH7M.png);
   background-size: contain;
@@ -115,9 +114,10 @@ h1#page-title {
   border-bottom: 1px solid rgba(132, 132, 132, 0.21);
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.67);
   margin: 0px;
-  width: calc(100% + 7px);
+  width: 100%;
   position: absolute;
   top: 0px;
+  box-sizing: border-box;
   left: 0px;
   font-weight: 300;
 }
@@ -158,8 +158,45 @@ aside {
   left: 0px;
 }
 
+span.islandora-basic-collection-item-count {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 3px;
+  color: #b1b1b1;
+  min-width: 30px;
+  border: 1px solid #777777;
+  overflow: hidden;
+  margin: -10px 10px -10px -7px;
+}
+
+span.islandora-basic-collection-item-count::after {
+  content: 'items';
+  top: 20px;
+  font-size: 11px;
+  text-transform: uppercase;
+  left: 0px;
+  color: #3e4352;
+  width: 49px;
+  background: #b1b1b1;
+  letter-spacing: 0px;
+  font-weight: 900;
+  text-align: center;
+}
+
 /*global header styles */
-header {
+/*loading*/
+section#block-block-11 {
+  width: 100%;
+  height: 100vh;
+  background: #272b34;
+  position: absolute;
+  z-index: 2;
+  color: white;
+}
+
+#section-header {
   height: 30px;
   position: absolute;
   background: rgba(0, 0, 0, 0.8);
@@ -269,6 +306,16 @@ div#region-header-first {
   margin-top: 8px;
 }
 
+#block-system-navigation {
+  position: absolute;
+  left: -160px;
+  background: black;
+  z-index: 2;
+}
+#block-system-navigation h2 {
+  display: none;
+}
+
 /* Main forms */
 .form-item.form-type-textfield.form-item-solrLimit {
   position: relative;
@@ -285,13 +332,6 @@ dl.islandora-basic-collection-object {
   justify-content: center;
   align-items: center;
   margin: 12px;
-}
-
-#block-system-navigation {
-    position: absolute;
-    left: -160px;
-    background: black;
-    z-index: 2;
 }
 
 /* Repository styles */
@@ -312,6 +352,7 @@ dl.islandora-basic-collection-object {
 
 .islandora-basic-collection-grid.clearfix {
   display: flex;
+  flex-wrap: wrap;
 }
 
 #block-system-main span.islandora-basic-collection-display-switch {
@@ -324,9 +365,49 @@ dl.islandora-basic-collection-object {
   display: none;
 }
 
+/* Documentation styles */
+h2.node-title, h2.node-title a {
+  font-size: 15px;
+  margin: 10px 0px 0px 0px;
+  color: white;
+  letter-spacing: 1px;
+}
+
 /* logged-in styles */
-.logged-in header {
+.logged-in #section-header {
   top: 67px;
+}
+
+.tabs ul.tabs.primary.clearfix {
+  position: absolute;
+  top: -30px;
+  border: none;
+  right: -6px;
+  padding-left: 2px;
+  border-radius: 15px 0px 0px 0px;
+}
+.tabs ul.primary li.active a {
+  background-color: #313542;
+  color: white;
+  border: 0px;
+  border-bottom: 1px solid #333844;
+}
+.tabs ul.primary li a {
+  background-color: #3e4352;
+  border-color: #bbb;
+  border-style: solid solid none solid;
+  border-width: 1px;
+  height: auto;
+  color: #b1b1b1;
+  padding: 1px;
+  border: 0px;
+  border-bottom: 1px solid #333844;
+  margin-right: -6px;
+  padding: 0 1em;
+  padding: 8px 32px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 11px;
 }
 
 /* desktop-only styles */

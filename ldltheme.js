@@ -1,20 +1,32 @@
 
+
 (function ($) {
   Drupal.behaviors.ldltheme = {
     attach: function (context, settings) {
 
-
-
-$(".region-content-inner").delay(500).queue(function(next){
-    $(this).addClass('reveal');
-    next();
+//loading screen and onload animations
+$("#block-block-11").prependTo(".page"); 
+$(window).on("load", function() {
+    $('section#block-block-11').delay(000).fadeOut(500, function(){ $(this).remove();});
+    $(".region-content-inner").delay(500).queue(function(next){
+     $(this).addClass('reveal');
+      next();
 });
+});
+//end loading screen and onload animations
+
+$('span.islandora-basic-collection-item-count').each(function(i, el) {
+  if($(el).html() != "" ) {
+    $(el).html($(el).html().replace(/items/ig, ""));
+  }
+}); //hides 'items' string in number count, string is now in ::after so that it can be formatted
+
+$('span.islandora-basic-collection-item-count').prependTo("#page-title");
 
 $(".islandora-basic-collection-thumb > img").attr('src', 'http://i.imgur.com/0iQ0LCJ.png');
 
 $(".front #page-title").contents().replaceWith("Louisiana Digital Library");
 $("#region-footer-first").appendTo(".zone-content"); //becomes 2nd slide
-$("#block-system-navigation").appendTo(".region-content"); //stays in first slide
 
 $('#block-islandora-solr-simple').clone().appendTo(".largeLogo");
 $('.advSearch_link').clone().appendTo(".largeLogo");
