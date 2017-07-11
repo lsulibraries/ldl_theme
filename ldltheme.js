@@ -23,13 +23,12 @@ $('span.islandora-basic-collection-item-count').each(function(i, el) {
 
 $('span.islandora-basic-collection-item-count').prependTo("#page-title");
 
-$(".islandora-basic-collection-thumb > img").attr('src', 'http://i.imgur.com/0iQ0LCJ.png');
-
-$(".front #page-title").contents().replaceWith("Louisiana Digital Library");
+$(".islandora-basic-collection-thumb > a > img").attr('src', 'http://i.imgur.com/f9AMXi3.png');//changes folder icon
+$(".front #page-title").contents().replaceWith("Louisiana Digital Library");//changes homepage title
 $("#region-footer-first").appendTo(".zone-content"); //becomes 2nd slide
 
 $('#block-islandora-solr-simple').clone().appendTo(".largeLogo");
-$('.advSearch_link').clone().appendTo(".largeLogo");
+$('.advSearch_link').appendTo(".largeLogo");
 
 
      $('.zone-content').attr('id', 'fullpage');      

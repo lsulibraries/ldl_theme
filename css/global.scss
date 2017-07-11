@@ -5,6 +5,30 @@
 $mainText: #ffffff;
 $mainLink: #59a3d9;
 $inputText: #b1b1b1;
+$searchBlue: #216599;
+
+/*materialTheme*/
+$Red: #FF5370;
+$Pink: #f07178;
+$Orange: #F78C6C;
+$Yellow: #FFCB6B;
+$Green: #C3E88D;
+$PaleBlue: #B2CCD6;
+$Cyan: #89DDFF;
+$Blue: #82AAFF;
+$Purple: #C792EA;
+$Violet: #bb80b3;
+$Brown: #ab7967;
+$Red2: #E53935;
+$Pink2: #FF5370;
+$Orange2: #F76D47;
+$Yellow2: #FFB62C;
+$Green2: #91B859;
+$PaleBlue2: #8796B0;
+$Cyan2: #39ADB5;
+$Blue2: #6182B8;
+$Purple2: #7C4DFF;
+$Violet2: #945EB8;
 
 /* background colors */
 $darkInput: #20232c;
@@ -62,7 +86,30 @@ a:link, a:visited {
 }
 #region-content {
   background: black!important;
-}
+  }
+
+  .not-front .region-content-inner{
+    button, input[type="reset"], input[type="submit"], input[type="button"] {
+    -webkit-appearance: none;
+    -moz-border-radius: 11px;
+    -webkit-border-radius: 11px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding;
+    background-clip: padding-box;
+    border-radius: 3px;
+    background: #FF5370;
+    border: 1px solid;
+    cursor: pointer;
+    color: #333;
+    font: bold 12px/12px Roboto, sans-serif;
+    outline: 0px;
+    overflow: visible;
+    padding: 5px 20px 6px;
+    text-shadow: none;
+    width: auto;
+    height: 35px;
+    }
+  }
 #region-content .fp-bg {
   background-image: url('https://images.unsplash.com/45/tkLOe7nnQ7mnMsiuijBy_hm.jpg');
   background-size: cover;
@@ -183,29 +230,19 @@ aside {
 span.islandora-basic-collection-item-count {
     display: flex;
     justify-content: center;
-    flex-direction: column;
     align-items: center;
     border-radius: 3px;
     color: #b1b1b1;
     min-width: 30px;
     border: 1px solid #777777;
     overflow: hidden;
+    padding-left: 4px;
     margin: -10px 10px -10px -7px;
 }
 
-span.islandora-basic-collection-item-count::after {
-    content: 'items';
-    top: 20px;
-    font-size: 11px;
-    text-transform: uppercase;
-    left: 0px;
-    color: #3e4352;
-    width: 49px;
-    background: #b1b1b1;
-    letter-spacing: 0px;
-    font-weight: 900;
-    text-align: center;
-}
+.islandora-solr-breadcrumb-super {
+    display: none;
+}/*removes (x) in breadcrumb */
 
 /*global header styles */
 
@@ -260,7 +297,7 @@ div#region-header-first {
 #block-islandora-solr-simple label:first-child {
   display: none;
 }
-.largeLogo {
+#region-content .largeLogo {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -279,25 +316,25 @@ div#region-header-first {
     filter: grayscale(1);
   }
   button, input[type="reset"], input[type="submit"], input[type="button"] {
-    -webkit-appearance: none;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-background-clip: padding;
-    -webkit-background-clip: padding;
-    background-clip: padding-box;
-    border-radius: 5px;
-    background: #216599;
-    border: 0px;
-    cursor: pointer;
-    color: #fff;
-    font: bold 12px Roboto, sans-serif;
-    letter-spacing: 2px;
-    outline: 0;
-    overflow: visible;
-    padding: 12px 10px 14px;
-    text-shadow: none;
-    width: auto;
-    text-transform: uppercase;
+      -webkit-appearance: none;
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -moz-background-clip: padding;
+      -webkit-background-clip: padding;
+      background-clip: padding-box;
+      border-radius: 5px;
+      background: $searchBlue;
+      border: 0px;
+      cursor: pointer;
+      color: #fff;
+      font: bold 12px Roboto, sans-serif;
+      letter-spacing: 2px;
+      outline: 0;
+      overflow: visible;
+      padding: 12px 10px 14px;
+      text-shadow: none;
+      width: auto;
+      text-transform: uppercase;
   }
   input#edit-islandora-simple-search-query {
     background: #20232c;

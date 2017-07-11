@@ -1,6 +1,7 @@
 /* This file will hold styles for the mobile version of your website (mobile first). */
 /* This also can include ANY global CSS that applies site-wide. Unless overwritten by a more specific style rule, CSS declarations in global.css will apply site-wide. */
 /* text colors */
+/*materialTheme*/
 /* background colors */
 /* mixins */
 /* web fonts */
@@ -23,6 +24,27 @@ a:link, a:visited {
 
 #region-content {
   background: black !important;
+}
+
+.not-front .region-content-inner button, .not-front .region-content-inner input[type="reset"], .not-front .region-content-inner input[type="submit"], .not-front .region-content-inner input[type="button"] {
+  -webkit-appearance: none;
+  -moz-border-radius: 11px;
+  -webkit-border-radius: 11px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding;
+  background-clip: padding-box;
+  border-radius: 3px;
+  background: #FF5370;
+  border: 1px solid;
+  cursor: pointer;
+  color: #333;
+  font: bold 12px/12px Roboto, sans-serif;
+  outline: 0px;
+  overflow: visible;
+  padding: 5px 20px 6px;
+  text-shadow: none;
+  width: auto;
+  height: 35px;
 }
 
 #region-content .fp-bg {
@@ -161,30 +183,21 @@ aside {
 span.islandora-basic-collection-item-count {
   display: flex;
   justify-content: center;
-  flex-direction: column;
   align-items: center;
   border-radius: 3px;
   color: #b1b1b1;
   min-width: 30px;
   border: 1px solid #777777;
   overflow: hidden;
+  padding-left: 4px;
   margin: -10px 10px -10px -7px;
 }
 
-span.islandora-basic-collection-item-count::after {
-  content: 'items';
-  top: 20px;
-  font-size: 11px;
-  text-transform: uppercase;
-  left: 0px;
-  color: #3e4352;
-  width: 49px;
-  background: #b1b1b1;
-  letter-spacing: 0px;
-  font-weight: 900;
-  text-align: center;
+.islandora-solr-breadcrumb-super {
+  display: none;
 }
 
+/*removes (x) in breadcrumb */
 /*global header styles */
 /*loading*/
 section#block-block-11 {
@@ -244,7 +257,7 @@ div#region-header-first {
   display: none;
 }
 
-.largeLogo {
+#region-content .largeLogo {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -253,17 +266,17 @@ div#region-header-first {
   padding: 20px;
   box-sizing: border-box;
 }
-.largeLogo div#edit-simple {
+#region-content .largeLogo div#edit-simple {
   display: flex;
   flex-direction: column;
 }
-.largeLogo img {
+#region-content .largeLogo img {
   width: 80px;
   height: auto;
   padding: 40px;
   filter: grayscale(1);
 }
-.largeLogo button, .largeLogo input[type="reset"], .largeLogo input[type="submit"], .largeLogo input[type="button"] {
+#region-content .largeLogo button, #region-content .largeLogo input[type="reset"], #region-content .largeLogo input[type="submit"], #region-content .largeLogo input[type="button"] {
   -webkit-appearance: none;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -284,7 +297,7 @@ div#region-header-first {
   width: auto;
   text-transform: uppercase;
 }
-.largeLogo input#edit-islandora-simple-search-query {
+#region-content .largeLogo input#edit-islandora-simple-search-query {
   background: #20232c;
   border: none;
   height: 40px;
@@ -293,14 +306,14 @@ div#region-header-first {
   padding: 10px;
   width: 300px;
 }
-.largeLogo input#edit-islandora-simple-search-query:focus {
+#region-content .largeLogo input#edit-islandora-simple-search-query:focus {
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
   box-shadow: none;
   z-index: 1;
   background: #191c26;
 }
-.largeLogo .advSearch_link {
+#region-content .largeLogo .advSearch_link {
   align-self: flex-start;
   margin-left: 15px;
   margin-top: 8px;
