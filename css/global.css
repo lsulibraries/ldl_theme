@@ -79,6 +79,26 @@ h1, h2, h3, h4, h5, h6 {
   -moz-box-shadow: 16px 16px 16px rgba(0, 0, 0, 0.7);
   box-shadow: 16px 16px 16px rgba(0, 0, 0, 0.7);
 }
+.region-inner.region-content-inner textarea, .region-inner.region-content-inner select, .region-inner.region-content-inner input[type="date"], .region-inner.region-content-inner input[type="datetime"], .region-inner.region-content-inner input[type="datetime-local"], .region-inner.region-content-inner input[type="email"], .region-inner.region-content-inner input[type="month"], .region-inner.region-content-inner input[type="number"], .region-inner.region-content-inner input[type="password"], .region-inner.region-content-inner input[type="search"], .region-inner.region-content-inner input[type="tel"], .region-inner.region-content-inner input[type="text"], .region-inner.region-content-inner input[type="time"], .region-inner.region-content-inner input[type="url"], .region-inner.region-content-inner input[type="week"] {
+  -webkit-appearance: none;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding;
+  background-clip: padding-box;
+  background-color: #20232c;
+  border: 0px;
+  color: #b1b1b1;
+  outline: 0;
+  padding: 0px 12px 0px 12px;
+  font-size: 13px;
+  font-family: Arial, sans-serif;
+  height: 35px;
+}
 
 .front .region-inner.region-content-inner {
   width: 370px;
@@ -247,6 +267,61 @@ div#region-header-first {
   align-self: flex-start;
   margin-left: 15px;
   margin-top: 8px;
+}
+
+/* Main forms */
+.form-item.form-type-textfield.form-item-solrLimit {
+  position: relative;
+}
+.form-item.form-type-textfield.form-item-solrLimit label {
+  position: absolute;
+  width: 130px;
+  top: -18px;
+}
+
+dl.islandora-basic-collection-object {
+  display: flex;
+  width: 220px;
+  justify-content: center;
+  align-items: center;
+  margin: 12px;
+}
+
+#block-system-navigation {
+    position: absolute;
+    left: -160px;
+    background: black;
+    z-index: 2;
+}
+
+/* Repository styles */
+dd.islandora-basic-collection-caption a {
+  color: white;
+  font-style: normal;
+  letter-spacing: 1px;
+  font-size: 14px;
+}
+
+dl.islandora-basic-collection-object {
+  display: flex;
+  width: 260px;
+  justify-content: center;
+  align-items: center;
+  margin: 12px;
+}
+
+.islandora-basic-collection-grid.clearfix {
+  display: flex;
+}
+
+#block-system-main span.islandora-basic-collection-display-switch {
+  position: absolute;
+  top: 60px;
+  right: 0px;
+}
+
+.islandora-basic-collection-list-item img {
+  display: none;
 }
 
 /* logged-in styles */

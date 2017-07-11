@@ -106,26 +106,48 @@ h1, h2, h3, h4, h5, h6 {
   background: #3e4352;
   @include gradientImage();
   @include box-shadow(16px, 16px, 16px, rgba(0, 0, 0, 0.7));
+
+  textarea, select, input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"] {
+      -webkit-appearance: none;
+      -moz-border-radius: 0;
+      -webkit-border-radius: 0;
+      border-radius: 0;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      -moz-background-clip: padding;
+      -webkit-background-clip: padding;
+      background-clip: padding-box;
+      background-color: #20232c;
+      border: 0px;
+      color: #b1b1b1;
+      outline: 0;
+      padding: 0px 12px 0px 12px;
+      font-size: 13px;
+      font-family: Arial, sans-serif;
+      height: 35px;
+  }  
 }
 .front .region-inner.region-content-inner {
   width: 370px;
   padding: 50px 20px 20px 20px;
 }
 h1#page-title {
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  display: flex;
-  align-items: center;
-  padding: 16px;
-  border-bottom: 1px solid rgba(132, 132, 132, 0.21);
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.67);
-  margin: 0px;
-  width: calc(100% + 7px);
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  font-weight: 300;  
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    border-bottom: 1px solid rgba(132, 132, 132, 0.21);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.67);
+    margin: 0px;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    box-sizing: border-box;
+    left: 0px;
+    font-weight: 300;
 }
 aside {
   display: none;
@@ -261,6 +283,58 @@ div#region-header-first {
     margin-top: 8px;
   }
 }
+
+/* Main forms */
+.form-item.form-type-textfield.form-item-solrLimit {
+    position: relative;
+    label {
+      position: absolute;
+      width: 130px;
+      top: -18px;
+}
+}
+
+dl.islandora-basic-collection-object{
+    display: flex;
+    width: 220px;
+    justify-content: center;
+    align-items: center;
+    margin: 12px;
+}
+
+/* Repository styles */
+
+dd.islandora-basic-collection-caption a {
+    color: white;
+    font-style: normal;
+    letter-spacing: 1px;
+    font-size: 14px;
+}
+
+dl.islandora-basic-collection-object {
+  display: flex;
+  width: 260px;
+  justify-content: center;
+  align-items: center;
+  margin: 12px;
+}
+
+.islandora-basic-collection-grid.clearfix {
+    display: flex;
+}
+
+#block-system-main span.islandora-basic-collection-display-switch {
+    position: absolute;
+    top: 60px;
+    right: 0px;
+}
+
+.islandora-basic-collection-list-item{
+  img{
+    display: none;
+  }
+}
+
 
 /* logged-in styles */
 

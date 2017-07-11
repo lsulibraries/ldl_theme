@@ -10,9 +10,12 @@ $(".region-content-inner").delay(500).queue(function(next){
     next();
 });
 
+$(".islandora-basic-collection-thumb > img").attr('src', 'http://i.imgur.com/0iQ0LCJ.png');
 
 $(".front #page-title").contents().replaceWith("Louisiana Digital Library");
-$("#region-footer-first").appendTo(".zone-content");
+$("#region-footer-first").appendTo(".zone-content"); //becomes 2nd slide
+$("#block-system-navigation").appendTo(".region-content"); //stays in first slide
+
 $('#block-islandora-solr-simple').clone().appendTo(".largeLogo");
 $('.advSearch_link').clone().appendTo(".largeLogo");
 
