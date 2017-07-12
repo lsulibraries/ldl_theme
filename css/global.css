@@ -156,6 +156,10 @@ input#edit-submit--2.form-submit, input#edit-submit--3.form-submit  {
 margin:10px;
 }
 
+.ctools-dropbutton {
+    position: relative;
+}
+
 #sideMods {
   color: #757575;
   padding: 12px;
