@@ -1,5 +1,3 @@
-
-
 (function ($) {
   Drupal.behaviors.ldltheme = {
     attach: function (context, settings) { //sets up jquery
@@ -33,7 +31,7 @@ $('span.islandora-basic-collection-item-count').each(function(i, el) {
 $('#block-delta-blocks-site-name').appendTo('.block-delta-blocks-logo .content');
 $('span.islandora-basic-collection-item-count').prependTo("#page-title"); //moves item count to page title
 //$("#logo > img").attr('src', 'http://i.imgur.com/24vAVba.png');//changes logo
-$(".islandora-basic-collection-thumb > a > img").attr('src', 'http://i.imgur.com/f9AMXi3.png');//changes folder icon
+//$(".islandora-basic-collection-thumb > a > img").attr('src', 'http://i.imgur.com/f9AMXi3.png');//changes folder icon
 $(".front #page-title").contents().replaceWith("Louisiana Digital Library");//changes homepage title
 $("#region-footer-first").appendTo(".zone-content"); //becomes 2nd slide
 $('#block-islandora-solr-simple').clone().appendTo(".largeLogo"); //creates main search window

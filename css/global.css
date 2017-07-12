@@ -140,7 +140,7 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 0;
   margin: 40px;
   color: #ffffff;
-  padding: 100px;
+  padding: 40px 20px 20px 20px;
   background: #3e4352;
   background-image: url(http://i.imgur.com/PuUOH7M.png);
   background-size: contain;
@@ -444,14 +444,6 @@ div#region-header-first {
   top: -18px;
 }
 
-dl.islandora-basic-collection-object {
-  display: flex;
-  width: 220px;
-  justify-content: center;
-  align-items: center;
-  margin: 12px;
-}
-
 /* Repository styles */
 .islandora-basic-collection-thumb {
   width: 90px;
@@ -466,23 +458,47 @@ dl.islandora-basic-collection-object {
   opacity: 1;
 }
 
-dd.islandora-basic-collection-caption a {
-  color: white;
-  font-style: normal;
-  letter-spacing: 1px;
-  font-size: 14px;
-}
-
-dl.islandora-basic-collection-object {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 12px;
-}
-
 .islandora-basic-collection-grid.clearfix {
   display: flex;
   flex-wrap: wrap;
+}
+.islandora-basic-collection-grid.clearfix dl.islandora-basic-collection-object {
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  align-items: center;
+  margin: 10px;
+  min-height: 0px;
+  height: auto;
+}
+.islandora-basic-collection-grid.clearfix dd.islandora-basic-collection-caption a {
+  color: #ffffff;
+  font-style: normal;
+  letter-spacing: 0px;
+  font-size: 15px;
+  background: black;
+  padding: 1px 3px;
+  line-height: 18px;
+}
+.islandora-basic-collection-grid.clearfix dt.islandora-basic-collection-thumb {
+  height: 150px;
+  overflow: hidden;
+  width: 150px;
+}
+.islandora-basic-collection-grid.clearfix .islandora-basic-collection-object dt img {
+  border-radius: 0px;
+  min-height: 150px;
+  min-width: 150px;
+  position: relative;
+}
+.islandora-basic-collection-grid.clearfix .islandora-basic-collection-object dd {
+  padding-top: 2px;
+  padding-bottom: 2px;
+  width: 150px;
+  line-height: 15px;
+  padding: 10px;
+  position: relative;
+  background: black;
 }
 
 #block-system-main span.islandora-basic-collection-display-switch {
