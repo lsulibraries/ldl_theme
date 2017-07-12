@@ -114,23 +114,23 @@
 
       $(this).attr('placeholder', 'Search LDL...' );
       });
-      $('input[name="op"]').val("");
+      //$('input[name="op"]').val("");
       $('#block-user-login input[name="op"]').val("Login");
-      $('.page-user input[name="op"]:nth-child(1)').val("Login");
+      //$('.page-user input[name="op"]:nth-child(1)').val("Login");
 
       $( " » " ).replaceWith( " / " );
 
-      $("#edit-islandora-simple-search-query")
-        .focus(function() {
-              if (this.value === this.defaultValue) {
-                  this.value = '';
-              }
-        })
-        .blur(function() {
-              if (this.value === '') {
-                  this.value = this.defaultValue;
-              }
-      });
+     // $("#edit-islandora-simple-search-query")
+     //   .focus(function() {
+     //         if (this.value === this.defaultValue) {
+     //             this.value = '';
+      //        }
+      //  })
+      //  .blur(function() {
+      //        if (this.value === '') {
+      //            this.value = this.defaultValue;
+       //       }
+     // });
 
     }
   };

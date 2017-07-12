@@ -122,11 +122,12 @@ input#edit-submit--2.form-submit, input#edit-submit--3.form-submit  {
   text-shadow: none;
   width: 60px;
   height: 30px;
-  background-image: url(http://i.imgur.com/zBCP7zk.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 20px 20px;
 }
+
+
 
 .page-user input#edit-submit.form-submit:nth-child(1),
 .page-user input#edit-submit--2.form-submit:nth-child(1), .page-user input#edit-submit--3.form-submit:nth-child(1){
