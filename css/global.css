@@ -1599,11 +1599,14 @@ line-height: normal;
   border-bottom: 1px solid #ccc;
 }
 
-.views-table tbody tr td {
+/*.views-table tbody tr td {
   width: 100%;
   padding: 0px;
   display: block;
 }
+
+killing this allows batch ingest queue check to display properly
+*/
 
 .views-table table {
   width: inherit;
