@@ -122,11 +122,12 @@ input#edit-submit--2.form-submit, input#edit-submit--3.form-submit  {
   text-shadow: none;
   width: 60px;
   height: 30px;
-  background-image: url(http://i.imgur.com/zBCP7zk.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 20px 20px;
 }
+
+
 
 .page-user input#edit-submit.form-submit:nth-child(1),
 .page-user input#edit-submit--2.form-submit:nth-child(1), .page-user input#edit-submit--3.form-submit:nth-child(1){
@@ -2108,19 +2109,19 @@ background-color: #FFFFFF !important;
 }
 
 .stateTheme	 #zone-header{
-  background-color: #edba51;
+  background-color: #7d160f;
 }
 
 .stateTheme	 #block-block-4{
-  background-color: #e5e5e7;
-  color:  #e5e5e7;
+  background-color: #edba51;
+  color:  #edba51;
 }
 
 .stateTheme	 .page-islandora-object div.region-header-second-inner::after{
-  color: #edba51;
+  color: #7d160f;
 }
 
-.tulTheme .region-header-first-inner::after{
+.tulaneTheme .region-header-first-inner::after{
     content: " ";
     color: white;
     background-image: url(https://digitallibrary.tulane.edu/sites/all/themes/tul_theme/logo.png);
@@ -2137,16 +2138,16 @@ background-color: #FFFFFF !important;
     opacity: 1;
 }
 
-.tulTheme #zone-header{
+.tulaneTheme #zone-header{
   background-color: #032a17;
 }
 
-.tulTheme #block-block-4{
+.tulaneTheme #block-block-4{
   background-color: #e5e5e7;
   color:  #e5e5e7;
 }
 
-.tulTheme .page-islandora-object div.region-header-second-inner::after{
+.tulaneTheme .page-islandora-object div.region-header-second-inner::after{
   color: #032a17;
 }
 
@@ -2263,20 +2264,6 @@ display: none;
   color: #ffffff;
 }
 
-.stateTheme	 input#edit-islandora-simple-search-query.form-text{
-      border-right: 1px solid #474747;
-    color: #474747;
-}
-
-.stateTheme	 #block-islandora-solr-simple {
-    margin-left: 85px;
-    border: 1px solid #474747;
-    width: calc(100% - 600px);
-}
-
-.stateTheme	 #block-block-1 a {
-  color: #474747;
-}
 
 .institution div.region-inner.region-header-first-inner {
 padding-left: 10px;
