@@ -7,6 +7,10 @@
 /*End ScrollReveal*/
 
 
+$("#region-header-first").on('click', function(){
+     window.location = "../";    
+});
+
 
 
       $(document).ready(function() {

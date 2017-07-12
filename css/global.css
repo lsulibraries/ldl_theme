@@ -2335,6 +2335,10 @@ padding-left: 10px;
   color: #000092;
 }
 
+#region-header-first{
+  cursor: pointer;
+}
+
 /*BEGIN test area*/
 @media screen and (min-width: 2000px) {
 
