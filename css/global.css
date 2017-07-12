@@ -60,10 +60,57 @@ a:link, a:visited {
   background-position: center 80%;
 }
 
-#messages .fp-tableCell {
-  background-image: url("http://i.imgur.com/aimlCzK.jpg");
-  background-size: cover;
-  background-position: center 80%;
+.blurred {
+  filter: brightness(0.6) blur(2px);
+}
+
+div#messages {
+  z-index: 3;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  top: 17%;
+  position: absolute;
+}
+
+div.error, table tr.error {
+  background-image: none;
+  background-color: rgba(41, 36, 36, 0.85);
+  margin-left: 0px;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  color: #cec7c7;
+  border-color: #E53935;
+}
+
+div.messages ul {
+  margin: 0px;
+  padding: 20px;
+}
+
+div.messages ul li {
+  list-style-type: none;
+}
+
+.messages {
+  position: relative;
+}
+
+.messages::after {
+  content: 'CLOSE';
+  bottom: 0px;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 59px;
+  font-size: 15px;
+  color: white;
+  background: #E53935;
+  letter-spacing: 1px;
+  cursor: pointer;
 }
 
 .fp-tableCell {
@@ -198,6 +245,12 @@ span.islandora-basic-collection-item-count {
 }
 
 /*removes (x) in breadcrumb */
+.inline li, .tabs li, .breadcrumb li {
+  list-style: none;
+  display: inline;
+  margin-right: 0px;
+}
+
 /*global header styles */
 /*loading*/
 section#block-block-11 {
@@ -348,6 +401,19 @@ dl.islandora-basic-collection-object {
 }
 
 /* Repository styles */
+.islandora-basic-collection-thumb {
+  width: 90px;
+  height: auto;
+}
+
+.islandora-basic-collection-thumb, .islandora-basic-collection-caption {
+  opacity: 0.7;
+}
+
+.islandora-basic-collection-thumb:hover, .islandora-basic-collection-caption:hover {
+  opacity: 1;
+}
+
 dd.islandora-basic-collection-caption a {
   color: white;
   font-style: normal;
@@ -357,7 +423,7 @@ dd.islandora-basic-collection-caption a {
 
 dl.islandora-basic-collection-object {
   display: flex;
-  width: 260px;
+  width: 23%;
   justify-content: center;
   align-items: center;
   margin: 12px;
@@ -415,12 +481,15 @@ h2.node-title, h2.node-title a {
   padding: 1px;
   border: 0px;
   border-bottom: 1px solid #333844;
-  margin-right: -6px;
+  margin-right: 0px;
   padding: 0 1em;
   padding: 8px 32px;
   text-transform: uppercase;
   text-decoration: none;
   font-size: 11px;
+}
+.tabs ul.primary li a:hover {
+  color: white;
 }
 
 /* desktop-only styles */
