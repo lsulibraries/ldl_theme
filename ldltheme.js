@@ -4,7 +4,7 @@
 //begin loading screen and onload animations
 $("#block-block-11, #messages").prependTo(".page"); //moves loading block
 $(window).on("load", function() {
-    $('section#block-block-11').delay(000).fadeOut(500, function(){ $(this).remove();});
+    $('section#block-block-11').delay(000).fadeOut(200, function(){ $(this).remove();});
     $(".region-content-inner").delay(800).queue(function(next){
      $(this).addClass('reveal');
       next();
@@ -24,9 +24,9 @@ $(".page").children().not('#messages').click(function() {
 //allows errors to be closed
 
 
-$('.islandora-basic-collection-object').each(function() {
-  $(this).find("img").clone().attr('class', 'blurredBG').prependTo(this);
-});
+//$('.islandora-basic-collection-object').each(function() {
+  //$(this).find("img").clone().attr('class', 'blurredBG').prependTo(this);
+//});
 //$('.islandora-basic-collection-object').each(function() {
   //var src = $(this).find("img").attr("src");
   //$(this).css("backgroundImage","url("+src+")");
@@ -43,7 +43,7 @@ $('span.islandora-basic-collection-item-count').prependTo("#page-title"); //move
 //$(".islandora-basic-collection-thumb > a > img").attr('src', 'http://i.imgur.com/f9AMXi3.png');//changes folder icon
 $(".front #page-title").contents().replaceWith("Louisiana Digital Library");//changes homepage title
 $("#region-footer-first").appendTo(".zone-content"); //becomes 2nd slide
-$('#block-islandora-solr-simple').clone().appendTo(".largeLogo"); //creates main search window
+$('#block-islandora-solr-simple').clone().prop('id','block-islandora-solr-simple2').appendTo(".largeLogo"); //creates main search window
 $('.zone-content').attr('id', 'fullpage');//prepares content region for fullpage instance
 $('.zone-content > div').not('#messages').addClass('section');//prepares content region for fullpage slide
 $('.zone-content > footer').addClass('section');//prepares content region for fullpage slide

@@ -17,10 +17,21 @@ a:link, a:visited {
   text-decoration: none;
 }
 
+button:focus, button:active, input:focus, input:active, select:focus, select:active, textarea:focus, textarea:active {
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  z-index: 1;
+}
+
 .fp-bg {
   filter: blur(0px);
   transition: filter 2s linear;
   transition-property: filter;
+}
+
+.about-link {
+  display: none;
 }
 
 #region-content {
@@ -173,9 +184,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1#page-title {
-  font-size: 11px;
+  font-size: 12px;
   text-transform: uppercase;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   display: flex;
   align-items: center;
   padding: 17px 16px 16px 16px;
@@ -252,7 +263,7 @@ span.islandora-basic-collection-item-count {
 section#block-block-11 {
   width: 100%;
   height: 100vh;
-  background: #272b34;
+  background: #2c303a;
   position: absolute;
   z-index: 2;
   color: white;
@@ -289,7 +300,6 @@ h2.site-name a {
 }
 
 #section-header {
-  height: 60px;
   position: absolute;
   background: #272b34;
   z-index: 2;
@@ -331,7 +341,7 @@ div#region-header-second {
   width: 100%;
   margin: 0px;
   display: flex;
-  background: #23262f;
+  background: #2c303a;
   height: 30px;
   align-items: center;
 }
@@ -354,12 +364,62 @@ div#region-header-second #breadcrumb .last a {
 }
 
 /* front page styles */
+.front .advSearch_link {
+  position: relative;
+  top: -10px;
+  left: 35px;
+}
 .front #block-system-main {
   display: none;
 }
 
-#block-islandora-solr-simple label:first-child {
+#block-islandora-solr-simple label:first-child, #block-islandora-solr-simple2 label:first-child {
   display: none;
+}
+
+#block-islandora-solr-simple textarea, #block-islandora-solr-simple select, #block-islandora-solr-simple input[type="date"], #block-islandora-solr-simple input[type="datetime"], #block-islandora-solr-simple input[type="datetime-local"], #block-islandora-solr-simple input[type="email"], #block-islandora-solr-simple input[type="month"], #block-islandora-solr-simple input[type="number"], #block-islandora-solr-simple input[type="password"], #block-islandora-solr-simple input[type="search"], #block-islandora-solr-simple input[type="tel"], #block-islandora-solr-simple input[type="text"], #block-islandora-solr-simple input[type="time"], #block-islandora-solr-simple input[type="url"], #block-islandora-solr-simple input[type="week"] {
+  -webkit-appearance: none;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding;
+  background-clip: padding-box;
+  background-color: #191c26;
+  border: 0px;
+  color: #000;
+  outline: 0;
+  font-size: 13px;
+  font-family: Arial, sans-serif;
+  height: 45px;
+  width: 20vw;
+  color: #b1b1b1;
+  padding-left: 10px;
+}
+#block-islandora-solr-simple button, #block-islandora-solr-simple input[type="reset"], #block-islandora-solr-simple input[type="submit"], #block-islandora-solr-simple input[type="button"] {
+  -webkit-appearance: none;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  background-clip: padding-box;
+  border-radius: 0px;
+  border: 0px;
+  /* border-color: #ddd #bbb #999; */
+  cursor: pointer;
+  color: #b1b1b1;
+  font: inherit;
+  background: #191c26;
+  outline: 0;
+  overflow: visible;
+  padding: 3px 10px 4px;
+  height: 45px;
+  text-shadow: none;
+  width: auto;
+  position: relative;
+  right: 5px;
+  top: 0px;
 }
 
 #region-content .largeLogo {
@@ -464,15 +524,19 @@ div#region-header-second #breadcrumb .last a {
   padding: 0;
   font-size: 10px;
   text-align: left;
-  bottom: 0px;
+  bottom: -30px;
   width: calc(100% - 2px);
   left: 0px;
+}
+
+.pager li.pager-first a, .pager li.pager-previous a, .pager li.pager-next a, .pager li.pager-last a {
+  width: 80px;
 }
 
 img.blurredBG {
   min-width: 100%;
   position: absolute;
-  filter: blur(7px) brightness(0.3);
+  filter: blur(7px) brightness(0.35);
   min-height: 100%;
   top: 0px;
 }
@@ -493,16 +557,22 @@ img.blurredBG {
   margin: 1px;
   min-height: 0px;
   height: auto;
-  background: #060606;
   position: relative;
   overflow: hidden;
   flex-direction: column;
 }
+.islandora-basic-collection-grid.clearfix dl.islandora-basic-collection-object:hover dt.islandora-basic-collection-thumb {
+  filter: brightness(1);
+  transition-duration: 0s;
+}
+.islandora-basic-collection-grid.clearfix dl.islandora-basic-collection-object:hover dd.islandora-basic-collection-caption a {
+  background: rgba(0, 0, 0, 0.65);
+}
 .islandora-basic-collection-grid.clearfix dd.islandora-basic-collection-caption a {
   color: #ffffff;
   font-style: normal;
-  letter-spacing: 0px;
-  font-size: 13px;
+  letter-spacing: 2px;
+  font-size: 12px;
   line-height: 13px;
 }
 .islandora-basic-collection-grid.clearfix dt.islandora-basic-collection-thumb {
@@ -511,6 +581,8 @@ img.blurredBG {
   width: 200px;
   height: 110px;
   overflow: hidden;
+  filter: brightness(0.35);
+  transition-duration: .5s;
 }
 .islandora-basic-collection-grid.clearfix .islandora-basic-collection-object dt img {
   border-radius: 0px;
@@ -519,9 +591,10 @@ img.blurredBG {
 }
 .islandora-basic-collection-grid.clearfix .islandora-basic-collection-object dd {
   padding: 10px;
-  line-height: 15px;
-  position: relative;
+  position: absolute;
   max-width: 200px;
+  z-index: 2;
+  top: 0px;
 }
 
 #block-system-main span.islandora-basic-collection-display-switch {
@@ -551,7 +624,7 @@ h2.node-title, h2.node-title a {
   position: absolute;
   top: -30px;
   border: none;
-  right: -6px;
+  right: -5px;
   padding-left: 2px;
   border-radius: 15px 0px 0px 0px;
 }
