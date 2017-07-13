@@ -5,7 +5,7 @@
 $("#block-block-11, #messages").prependTo(".page"); //moves loading block
 $(window).on("load", function() {
     $('section#block-block-11').delay(000).fadeOut(500, function(){ $(this).remove();});
-    $(".region-content-inner").delay(500).queue(function(next){
+    $(".region-content-inner").delay(800).queue(function(next){
      $(this).addClass('reveal');
       next();
 });
