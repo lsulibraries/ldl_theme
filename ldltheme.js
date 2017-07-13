@@ -23,6 +23,15 @@ $(".page").children().not('#messages').click(function() {
 
 //allows errors to be closed
 
+
+$('.islandora-basic-collection-object').each(function() {
+  $(this).find("img").clone().attr('class', 'blurredBG').prependTo(this);
+});
+//$('.islandora-basic-collection-object').each(function() {
+  //var src = $(this).find("img").attr("src");
+  //$(this).css("backgroundImage","url("+src+")");
+//});
+
 $('span.islandora-basic-collection-item-count').each(function(i, el) {
   if($(el).html() != "" ) {
     $(el).html($(el).html().replace(/items/ig, ""));
