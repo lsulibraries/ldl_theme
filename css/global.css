@@ -62,7 +62,7 @@ a:link, a:visited {
 }
 
 .blurred {
-  filter: brightness(0.6) blur(2px);
+  filter: brightness(0.35) blur(2px);
 }
 
 div#messages {
@@ -139,7 +139,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   margin: 40px;
   color: #ffffff;
-  padding: 40px 20px 20px 20px;
+  padding: 1px 1px 1px 1px;
   background: #3e4352;
   background-image: url(http://i.imgur.com/PuUOH7M.png);
   background-size: contain;
@@ -170,7 +170,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .front .region-inner.region-content-inner {
   width: 370px;
-  padding: 50px 20px 20px 20px;
 }
 
 h1#page-title {
@@ -179,13 +178,11 @@ h1#page-title {
   letter-spacing: 3px;
   display: flex;
   align-items: center;
-  padding: 16px;
+  padding: 17px 16px 16px 16px;
   border-bottom: 1px solid rgba(132, 132, 132, 0.21);
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.67);
   margin: 0px;
   width: 100%;
-  position: absolute;
-  top: 0px;
   box-sizing: border-box;
   left: 0px;
   font-weight: 300;
@@ -213,7 +210,7 @@ aside {
 }
 
 .blur {
-  filter: blur(5px);
+  filter: blur(5px) brightness(0.6);
   transition: filter 2s linear;
   transition-property: filter;
 }
@@ -415,11 +412,24 @@ div#region-header-first {
   margin-top: 8px;
 }
 
+/*navigation*/
 #block-system-navigation {
   position: absolute;
-  left: -160px;
-  background: black;
+  right: -183px;
   z-index: 2;
+  top: 0px;
+}
+#block-system-navigation li {
+  background: transparent;
+  margin: 1px;
+  padding: 9px;
+  border-left: 10px solid rgba(255, 255, 255, 0.33);
+}
+#block-system-navigation li a {
+  color: white;
+}
+#block-system-navigation li.active-trail {
+  border-left: 10px solid #FFCB6B;
 }
 #block-system-navigation h2 {
   display: none;
@@ -463,45 +473,43 @@ img.blurredBG {
 .islandora-basic-collection-grid.clearfix {
   display: flex;
   flex-wrap: wrap;
-  max-width: 1640px;
+  max-width: 805px;
 }
 .islandora-basic-collection-grid.clearfix dl.islandora-basic-collection-object {
   display: flex;
   width: calc(25% - 2px);
-  align-items: center;
   margin: 1px;
   min-height: 0px;
   height: auto;
   background: #060606;
   position: relative;
-  justify-content: flex-start;
   overflow: hidden;
-  min-width: 360px;
+  flex-direction: column;
 }
 .islandora-basic-collection-grid.clearfix dd.islandora-basic-collection-caption a {
   color: #ffffff;
   font-style: normal;
-  letter-spacing: 1px;
-  font-size: 14px;
-  line-height: 18px;
+  letter-spacing: 0px;
+  font-size: 13px;
+  line-height: 13px;
 }
 .islandora-basic-collection-grid.clearfix dt.islandora-basic-collection-thumb {
   margin: 0px;
   z-index: 1;
+  width: 200px;
+  height: 110px;
+  overflow: hidden;
 }
 .islandora-basic-collection-grid.clearfix .islandora-basic-collection-object dt img {
   border-radius: 0px;
-  border: 5px solid rgba(0, 0, 0, 0.39);
-  box-sizing: content-box;
-  max-width: none;
-  margin: 10px;
+  height: auto;
+  width: 200px;
 }
 .islandora-basic-collection-grid.clearfix .islandora-basic-collection-object dd {
-  padding-top: 2px;
-  padding-bottom: 2px;
+  padding: 10px;
   line-height: 15px;
   position: relative;
-  margin-right: 18px;
+  max-width: 200px;
 }
 
 #block-system-main span.islandora-basic-collection-display-switch {
