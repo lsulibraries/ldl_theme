@@ -38,6 +38,9 @@ $header: #272b34;
 $header2: #2c303a;
 
 
+/*Institutional Colors*/
+$UnoColor: #003056;
+
 /* variables */
 $headerHeight: 60px;
 
@@ -102,6 +105,7 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   display:none;
 }
 
+
 #region-content {
   background: black!important;
   }
@@ -115,7 +119,7 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
     -webkit-background-clip: padding;
     background-clip: padding-box;
     border-radius: 3px;
-    background: #FF5370;
+    background: #c7c7c7;
     border: 1px solid;
     cursor: pointer;
     color: #333;
@@ -127,6 +131,8 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
     width: auto;
     height: 35px;
     }
+
+
   }
 #region-content .fp-bg {
   background-image: url('https://images.unsplash.com/45/tkLOe7nnQ7mnMsiuijBy_hm.jpg');
@@ -260,6 +266,8 @@ h1#page-title {
     box-sizing: border-box;
     left: 0px;
     font-weight: 300;
+    background: #3e4352;
+
 }
 aside {
   display: none;
@@ -279,7 +287,7 @@ aside {
   opacity: 1;
 }
 .blur {
-  filter: blur(5px) brightness(0.6);
+  filter: blur(5px) brightness(0.35);
   transition: filter 2s linear;
   transition-property: filter;
 }
@@ -404,10 +412,13 @@ div#region-header-second {
     height: 40px;
     align-items: center;
     #breadcrumb {
-        margin-left: 10px;
         .breadcrumb {
             padding-bottom: 0px;
             margin-bottom: 0px;
+
+        li.first a {
+            padding-left: 20px;
+        }            
         }    
         a {
             padding: 12px;
@@ -445,6 +456,9 @@ div#region-header-second {
 }
 
 #block-islandora-solr-simple{
+    border-radius: 5px;
+    overflow: hidden;
+
 textarea, select, input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"] {
     -webkit-appearance: none;
     -moz-border-radius: 0;
@@ -493,6 +507,7 @@ textarea, select, input[type="date"], input[type="datetime"], input[type="dateti
     background-position: center;
     background-size: 20px 20px;
     width: 50px;        
+    border-radius: 0px 5px 5px 0px;    
 color: transparent;    
     }
 
@@ -598,12 +613,68 @@ color: transparent;
 
 /* Advanced Search Styles */
 
-.block-advanced .block-inner.clearfix {
-    padding: 10px 10px 10px 10px;
+.block-advanced{
+  h2.block-title{
+    display:none;
+  }
+  .block-inner.clearfix {
+      padding: 10px 10px 10px 10px;
+  }
 }
 
 
+
+/*Institutional Branding*/
+ .reveal section#block-block-14 {
+    position: absolute;
+    height: 100%;
+    transform: translateX(-126px);
+  -webkit-transition-duration: .3s; /* Safari */
+    transition-duration: .3s;
+ }
+
+section#block-block-14 {
+  display: none;
+    position: absolute;
+    height: 100%;
+    left: 0px;
+    background: black;
+    top: 0px;
+    z-index: -1;
+    h2.block-title{
+      display:none;
+    }    
+}
+
+
+.unoTheme{
+
+.islandora-basic-collection-grid.clearfix {
+      background: #272b34;
+}
+
+  section#block-block-14 {
+  display: block;
+  position: absolute;
+  height: 100%;
+  left: 0px;
+  background: #003056;
+  top: 0px;
+  width: 126px;
+  border-radius: 10px 0px 0px 10px;
+  @include box-shadow(-10px, 0px, 60px, rgba(0, 0, 0, 0.49), true);
+  background-image: url('http://i.imgur.com/RWmzrPG.png');
+    background-repeat: no-repeat;  
+    background-position: center;   
+  }
+
+}
+
+/*End Institutional Branding*/
+
 /* Repository styles */
+
+
 
 .item-list .pager {
     position: absolute;
@@ -630,14 +701,14 @@ img.blurredBG {
 
 .page-islandora-object .region-inner.region-content-inner.reveal {
     min-width: 490px;
-    min-height: 290px;
 }
+
+
 
 .islandora-basic-collection-grid.clearfix {
     display: flex;
     flex-wrap: wrap;
     max-width: 805px;
-
     dl.islandora-basic-collection-object {
     display: flex;
     width: calc(25% - 2px);
@@ -700,6 +771,7 @@ img.blurredBG {
     position: absolute;
     top: 60px;
     right: 0px;
+    display: none;
 }
 
 .islandora-basic-collection-list-item{

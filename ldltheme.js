@@ -139,8 +139,8 @@ $('body').addClass(ns + 'Theme institution');
   var url = window.location.pathname;
   var namespaces = ['uno','loyno', 'mcneese', 'lsu', 'latech', 'hnoc', 'tulane', 'state'];
   for(namespace in namespaces){
-    ns = namespaces[namespace];
-    re = new RegExp(ns +"\\b");
+    var ns = namespaces[namespace];
+    var re = new RegExp(ns +"\\b");
     if (re.test(url)) {
       $("body").addClass(ns + "Theme institution");
   };

@@ -3,6 +3,7 @@
 /* text colors */
 /*materialTheme*/
 /* background colors */
+/*Institutional Colors*/
 /* variables */
 /* mixins */
 /* web fonts */
@@ -46,7 +47,7 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   -webkit-background-clip: padding;
   background-clip: padding-box;
   border-radius: 3px;
-  background: #FF5370;
+  background: #c7c7c7;
   border: 1px solid;
   cursor: pointer;
   color: #333;
@@ -197,6 +198,7 @@ h1#page-title {
   box-sizing: border-box;
   left: 0px;
   font-weight: 300;
+  background: #3e4352;
 }
 
 aside {
@@ -221,7 +223,7 @@ aside {
 }
 
 .blur {
-  filter: blur(5px) brightness(0.6);
+  filter: blur(5px) brightness(0.35);
   transition: filter 2s linear;
   transition-property: filter;
 }
@@ -345,12 +347,12 @@ div#region-header-second {
   height: 40px;
   align-items: center;
 }
-div#region-header-second #breadcrumb {
-  margin-left: 10px;
-}
 div#region-header-second #breadcrumb .breadcrumb {
   padding-bottom: 0px;
   margin-bottom: 0px;
+}
+div#region-header-second #breadcrumb .breadcrumb li.first a {
+  padding-left: 20px;
 }
 div#region-header-second #breadcrumb a {
   padding: 12px;
@@ -380,6 +382,10 @@ div#region-header-second #breadcrumb .last a {
   display: none;
 }
 
+#block-islandora-solr-simple {
+  border-radius: 5px;
+  overflow: hidden;
+}
 #block-islandora-solr-simple textarea, #block-islandora-solr-simple select, #block-islandora-solr-simple input[type="date"], #block-islandora-solr-simple input[type="datetime"], #block-islandora-solr-simple input[type="datetime-local"], #block-islandora-solr-simple input[type="email"], #block-islandora-solr-simple input[type="month"], #block-islandora-solr-simple input[type="number"], #block-islandora-solr-simple input[type="password"], #block-islandora-solr-simple input[type="search"], #block-islandora-solr-simple input[type="tel"], #block-islandora-solr-simple input[type="text"], #block-islandora-solr-simple input[type="time"], #block-islandora-solr-simple input[type="url"], #block-islandora-solr-simple input[type="week"] {
   -webkit-appearance: none;
   -moz-border-radius: 0;
@@ -428,6 +434,7 @@ div#region-header-second #breadcrumb .last a {
   background-position: center;
   background-size: 20px 20px;
   width: 50px;
+  border-radius: 0px 5px 5px 0px;
   color: transparent;
 }
 
@@ -527,10 +534,57 @@ div#region-header-second #breadcrumb .last a {
 }
 
 /* Advanced Search Styles */
+.block-advanced h2.block-title {
+  display: none;
+}
 .block-advanced .block-inner.clearfix {
   padding: 10px 10px 10px 10px;
 }
 
+/*Institutional Branding*/
+.reveal section#block-block-14 {
+  position: absolute;
+  height: 100%;
+  transform: translateX(-126px);
+  -webkit-transition-duration: .3s;
+  /* Safari */
+  transition-duration: .3s;
+}
+
+section#block-block-14 {
+  display: none;
+  position: absolute;
+  height: 100%;
+  left: 0px;
+  background: black;
+  top: 0px;
+  z-index: -1;
+}
+section#block-block-14 h2.block-title {
+  display: none;
+}
+
+.unoTheme .islandora-basic-collection-grid.clearfix {
+  background: #272b34;
+}
+.unoTheme section#block-block-14 {
+  display: block;
+  position: absolute;
+  height: 100%;
+  left: 0px;
+  background: #003056;
+  top: 0px;
+  width: 126px;
+  border-radius: 10px 0px 0px 10px;
+  -webkit-box-shadow: inset -10px 0px 60px rgba(0, 0, 0, 0.49);
+  -moz-box-shadow: inset -10px 0px 60px rgba(0, 0, 0, 0.49);
+  box-shadow: inset -10px 0px 60px rgba(0, 0, 0, 0.49);
+  background-image: url("http://i.imgur.com/RWmzrPG.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/*End Institutional Branding*/
 /* Repository styles */
 .item-list .pager {
   position: absolute;
@@ -557,7 +611,6 @@ img.blurredBG {
 
 .page-islandora-object .region-inner.region-content-inner.reveal {
   min-width: 490px;
-  min-height: 290px;
 }
 
 .islandora-basic-collection-grid.clearfix {
@@ -615,6 +668,7 @@ img.blurredBG {
   position: absolute;
   top: 60px;
   right: 0px;
+  display: none;
 }
 
 .islandora-basic-collection-list-item img {
