@@ -229,10 +229,10 @@ aside {
 #fp-nav {
   position: absolute;
   z-index: 40;
-  top: 150px;
+  top: 240px;
   cursor: pointer;
   display: flex;
-  left: 0px;
+  left: 50px;
 }
 
 span.islandora-basic-collection-item-count {
@@ -342,7 +342,7 @@ div#region-header-second {
   margin: 0px;
   display: flex;
   background: #2c303a;
-  height: 30px;
+  height: 40px;
   align-items: center;
 }
 div#region-header-second #breadcrumb {
@@ -353,11 +353,14 @@ div#region-header-second #breadcrumb .breadcrumb {
   margin-bottom: 0px;
 }
 div#region-header-second #breadcrumb a {
-  padding: 10px;
+  padding: 12px;
   text-transform: uppercase;
   font-size: 12px;
   letter-spacing: 2px;
   color: #b1b1b1;
+}
+div#region-header-second #breadcrumb a:hover {
+  background: #3e4352;
 }
 div#region-header-second #breadcrumb .last a {
   color: #f07178;
@@ -506,7 +509,7 @@ div#region-header-second #breadcrumb .last a {
 #block-system-navigation li a {
   color: white;
 }
-#block-system-navigation li.active-trail {
+#block-system-navigation li.active-trail, #block-system-navigation li.active {
   border-left: 10px solid #FFCB6B;
 }
 #block-system-navigation h2 {
@@ -521,6 +524,11 @@ div#region-header-second #breadcrumb .last a {
   position: absolute;
   width: 130px;
   top: -18px;
+}
+
+/* Advanced Search Styles */
+.block-advanced .block-inner.clearfix {
+  padding: 10px 10px 10px 10px;
 }
 
 /* Repository styles */
@@ -572,7 +580,7 @@ img.blurredBG {
   transition-duration: 0s;
 }
 .islandora-basic-collection-grid.clearfix dl.islandora-basic-collection-object:hover dd.islandora-basic-collection-caption a {
-  background: rgba(0, 0, 0, 0.65);
+  opacity: 0;
 }
 .islandora-basic-collection-grid.clearfix dd.islandora-basic-collection-caption a {
   color: #ffffff;

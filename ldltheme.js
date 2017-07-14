@@ -16,6 +16,10 @@ if ( $( "#messages" ).length ) { //allows errors to have blurred background
      $( "#section-content" ).addClass('blurred');
  }
 
+if ( $( ".front" ).length ) { //allows home menu navigation to lightup
+     $('.menu').find('.active').parent().addClass('active-trail');
+ } 
+
 $(".page").children().not('#messages').click(function() {
      $("#section-content").removeClass("blurred");
      $("#messages").css( "display", "none" );
