@@ -553,21 +553,16 @@ div#region-header-second #breadcrumb .last a {
 
 section#block-block-14 {
   display: none;
-  position: absolute;
-  height: 100%;
-  left: 0px;
-  background: black;
-  top: 0px;
   z-index: -1;
 }
 section#block-block-14 h2.block-title {
   display: none;
 }
 
-.unoTheme .islandora-basic-collection-grid.clearfix {
+.unoTheme .islandora-basic-collection-grid.clearfix, .latechTheme .islandora-basic-collection-grid.clearfix {
   background: #272b34;
 }
-.unoTheme section#block-block-14 {
+.unoTheme section#block-block-14, .latechTheme section#block-block-14 {
   display: block;
   position: absolute;
   height: 100%;
@@ -580,6 +575,14 @@ section#block-block-14 h2.block-title {
   -moz-box-shadow: inset -10px 0px 60px rgba(0, 0, 0, 0.49);
   box-shadow: inset -10px 0px 60px rgba(0, 0, 0, 0.49);
   background-image: url("http://i.imgur.com/RWmzrPG.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.latechTheme section#block-block-14 {
+  background: #003087;
+  background-size: 50px auto;
+  background-image: url("http://grfx.cstv.com/schoolslt/latc/graphics/logos/latc-state-t.gif");
   background-repeat: no-repeat;
   background-position: center;
 }

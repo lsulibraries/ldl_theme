@@ -39,7 +39,8 @@ $header2: #2c303a;
 
 
 /*Institutional Colors*/
-$UnoColor: #003056;
+$unoColor: #003056;
+$latechColor: #003087;
 
 /* variables */
 $headerHeight: 60px;
@@ -635,38 +636,42 @@ color: transparent;
 
 section#block-block-14 {
   display: none;
-    position: absolute;
-    height: 100%;
-    left: 0px;
-    background: black;
-    top: 0px;
-    z-index: -1;
-    h2.block-title{
-      display:none;
-    }    
+  z-index: -1;
+  h2.block-title{
+     display:none;
+  }    
 }
 
 
 .unoTheme{
-
-.islandora-basic-collection-grid.clearfix {
-      background: #272b34;
-}
-
+  .islandora-basic-collection-grid.clearfix {
+  background: #272b34;
+  }
   section#block-block-14 {
   display: block;
   position: absolute;
   height: 100%;
   left: 0px;
-  background: #003056;
+  background: $unoColor;
   top: 0px;
   width: 126px;
   border-radius: 10px 0px 0px 10px;
   @include box-shadow(-10px, 0px, 60px, rgba(0, 0, 0, 0.49), true);
   background-image: url('http://i.imgur.com/RWmzrPG.png');
-    background-repeat: no-repeat;  
-    background-position: center;   
+  background-repeat: no-repeat;  
+  background-position: center;   
   }
+}
+
+.latechTheme{
+  @extend .unoTheme;
+  section#block-block-14 {
+  background: $latechColor;  
+  background-size: 50px auto;
+  background-image: url('http://grfx.cstv.com/schoolslt/latc/graphics/logos/latc-state-t.gif');
+  background-repeat: no-repeat;  
+  background-position: center;     
+  }  
 
 }
 
