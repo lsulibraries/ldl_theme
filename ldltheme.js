@@ -12,11 +12,15 @@ $(window).on("load", function() {
 });
 //end loading screen and onload animations
 
-
+$('.islandora-large-image-content-wrapper > #clip').contents().replaceWith("Download");
 
 if ( $( "#messages" ).length ) { //allows errors to have blurred background
      $( "#section-content" ).addClass('blurred');
  }
+
+ if ( $( ".islandora-large-image-object" ).length ) {
+     $( "#page" ).addClass('largeImage');
+ }//detects and assigns large image viewer class
 
 if ( $( ".front" ).length ) { //allows home menu navigation to lightup
      $('.menu').find('.active').parent().addClass('active-trail');

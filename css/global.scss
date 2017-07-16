@@ -213,6 +213,10 @@ h1, h2, h3, h4, h5, h6 {
 #fullpage, #fullpage > div {
   width: 100%;
 }
+
+#fullpage > div.section {
+  padding-top: 100px;
+}
 #region-content, #region-footer-first, #messages {
   margin: 0px;
   display: flex;
@@ -325,7 +329,21 @@ span.islandora-basic-collection-item-count {
     margin-right: 0px;
 }
 
-
+/*parent metadata currently hidden because it is subject to change*/
+.parent-collections {
+    position: absolute;
+    top: calc(100% + 1px);
+    padding: 10px 10px 10px 20px;
+    left: 0px;
+    background: #282b34;
+    width: 100%;
+    height: 50px;
+    display: none;
+h2 {
+    font-size: 12px;
+    margin: 0px;
+}    
+}
 
 /*loading*/
 section#block-block-11 {
@@ -337,7 +355,10 @@ section#block-block-11 {
     color: white;
 } 
 
-
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    5% { transform: rotate(360deg); }
+}
 
 /*global header styles */
 
@@ -705,12 +726,6 @@ img.blurredBG {
     top: 0px;
 }
 
-.page-islandora-object .region-inner.region-content-inner.reveal {
-    min-width: 490px;
-}
-
-
-
 .islandora-basic-collection-grid.clearfix {
     display: flex;
     flex-wrap: wrap;
@@ -843,4 +858,37 @@ h2.node-title, h2.node-title a {
 /* desktop-only styles */
 #block-block-10 {
   display: none;
+}
+
+
+/*Large Image View Styles*/
+body.no-sidebars .islandora-large-image-content {
+    width: 100%;
+}
+
+.islandora-large-image-content {
+    background-color: none;
+    border: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    padding: 0px;
+}
+
+.largeImage .region-inner.region-content-inner{
+      width: 100%;
+    margin: 0px 260px 0px 260px;
+}
+
+a#clip {
+    margin-left: 5px;
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    background: #f07178;
+    color: #191c26;
+    padding: 1px 5px 1px 5px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 11px;
 }
