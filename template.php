@@ -11,6 +11,7 @@
  * for more information on this topic.
  */
 
+
 function alpha_preprocess_islandora_basic_collection_wrapper(&$variables){
     $page_number = (empty($_GET['page'])) ? 0 : $_GET['page'];
     $page_size = (empty($_GET['pagesize'])) ? variable_get('islandora_basic_collection_page_size', '12') : $_GET['pagesize'];
@@ -31,4 +32,8 @@ function alpha_preprocess_islandora_basic_collection_wrapper(&$variables){
     $record = $result->fetchAssoc();
     $variables['about_link'] = l($record['title'], $record['alias']);
     $variables['landing_page_title'] = $record['title'];
+    function hook_preprocess_page(&$vars) {
+        drupal_add_js('https://cdn.rawgit.com/alvarotrigo/fullPage.js/7e0e44ea/vendors/scrolloverflow.js', 'external');
+    }   
+
 }

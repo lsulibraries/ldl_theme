@@ -74,7 +74,7 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
 }
 
 .blurred {
-  filter: brightness(0.35) blur(2px);
+  filter: brightness(0.46) blur(2px);
 }
 
 div#messages {
@@ -223,7 +223,7 @@ aside {
 }
 
 .blur {
-  filter: blur(5px) brightness(0.35);
+  filter: blur(5px) brightness(0.46);
   transition: filter 2s linear;
   transition-property: filter;
 }
@@ -502,10 +502,11 @@ div#region-header-second #breadcrumb .last a {
 
 /*navigation*/
 #block-system-navigation {
-  position: absolute;
-  right: -183px;
-  z-index: 2;
-  top: 0px;
+    position: absolute;
+    right: -207px;
+    z-index: 2;
+    width: 200px;
+    top: 0px;
 }
 #block-system-navigation li {
   background: transparent;
