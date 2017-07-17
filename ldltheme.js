@@ -12,19 +12,18 @@ $(window).on("load", function() {
 });
 //end loading screen and onload animations
 
-$('.islandora-large-image-content-wrapper > #clip').contents().replaceWith("Download");
-
-if ( $( "#messages" ).length ) { //allows errors to have blurred background
+$('.islandora-large-image-content-wrapper > #clip').contents().replaceWith("Download"); //Modifies download link contents from weird scissor icon
+if ( $( "#messages" ).length ) { 
      $( "#section-content" ).addClass('blurred');
- }
+ }//allows errors to have blurred background
 
  if ( $( ".islandora-large-image-object" ).length ) {
      $( "#page" ).addClass('largeImage');
  }//detects and assigns large image viewer class
 
-if ( $( ".front" ).length ) { //allows home menu navigation to lightup
+if ( $( ".front" ).length ) { 
      $('.menu').find('.active').parent().addClass('active-trail');
- } 
+ }//allows home menu navigation to lightup
 
 $(".page").children().not('#messages').click(function() {
      $("#section-content").removeClass("blurred");
@@ -47,7 +46,7 @@ $('span.islandora-basic-collection-item-count').each(function(i, el) {
 }); //hides 'items' string in number count, string is now in ::after so that it can be formatted
 
 
-//$('.region-content-inner').addClass('fp-auto-height');
+//$('#region-footer-first').addClass('fp-auto-height');
 $('#block-delta-blocks-site-name').appendTo('.block-delta-blocks-logo .content');
 $('span.islandora-basic-collection-item-count').prependTo("#page-title"); //moves item count to page title
 //$("#logo > img").attr('src', 'http://i.imgur.com/24vAVba.png');//changes logo
@@ -60,7 +59,7 @@ $('.zone-content > div').not('#messages').addClass('section');//prepares content
 $('.zone-content > footer').addClass('section');//prepares content region for fullpage slide
 $('#fullpage aside').remove();//removes asides that interfere with navigation when logged in
 $('#region-content').prepend('<div class="fp-bg"></div>');//prepares slide for parallax bg
-$('#region-footer-first').prepend('<div class="fp-bg"></div>');//prepares slide for parallax bg
+//$('#region-footer-first').prepend('<div class="fp-bg"></div>');//prepares slide for parallax bg
 $('.islandora-large-image-metadata').prependTo('.region-footer-first-inner');//prepares slide for parallax bg
 
 
