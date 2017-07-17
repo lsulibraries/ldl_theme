@@ -61,8 +61,6 @@ $('#fullpage aside').remove();//removes asides that interfere with navigation wh
 $('#region-content').prepend('<div class="fp-bg"></div>');//prepares slide for parallax bg
 //$('#region-footer-first').prepend('<div class="fp-bg"></div>');//prepares slide for parallax bg
 $('.islandora-large-image-metadata').prependTo('.region-footer-first-inner');//prepares slide for parallax bg
-
-
 $("#region-content .fp-bg").delay(0).queue(function(next){
  $(this).addClass('blur');   
     next();
@@ -71,8 +69,18 @@ $('.form-item-islandora-simple-search-query > input').each(function() {
   $(this).attr('placeholder', 'Search the LDL' );
 });//Adds Search text
 
-//note to kyle july 16: reserve parallax for itempages only.
 
+$('dl.islandora-basic-collection-object').each(function() {
+  var ln = $(this).find("a").attr("href");
+  var ti = $(this).find("a").attr("title");  
+  $(this).wrap( "<a href="+ln+" title="+ti+"></a>");
+});//Wraps items to improve clickability
+
+$('.menu li').each(function() {
+  var ln = $(this).find("a").attr("href");
+  var ti = $(this).find("a").text();  
+  $(this).wrap( "<a href="+ln+" title="+ti+"></a>");
+});//Wraps navigation items to improve clickability
 
 var mainHeight = $('#block-system-main').height();
 

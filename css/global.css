@@ -608,6 +608,17 @@ div#region-header-second #breadcrumb .last a {
 }
 
 /*navigation*/
+#block-system-navigation ul.menu > a:hover a {
+  font-weight: 700;
+}
+#block-system-navigation ul.menu > a:hover ::after {
+  transform: translateX(0%);
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+
 #block-system-navigation {
   position: absolute;
   right: -207px;
@@ -615,11 +626,31 @@ div#region-header-second #breadcrumb .last a {
   width: 200px;
   top: 0px;
 }
+#block-system-navigation ul.menu > a {
+  position: relative;
+}
+#block-system-navigation ul.menu > a ::after {
+  background: rgba(255, 255, 255, 0.2);
+  content: '';
+  width: 100%;
+  position: absolute;
+  left: 0px;
+  height: 100%;
+  top: 0px;
+  transform: translateX(-100%);
+  z-index: -1;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+}
 #block-system-navigation li {
   background: transparent;
   margin: 1px;
   padding: 9px;
   border-left: 10px solid rgba(255, 255, 255, 0.33);
+  position: relative;
+  overflow: hidden;
 }
 #block-system-navigation li a {
   color: white;
@@ -742,9 +773,12 @@ img.blurredBG {
   flex-wrap: wrap;
   max-width: 805px;
 }
+.islandora-basic-collection-grid.clearfix a {
+  width: 25%;
+}
 .islandora-basic-collection-grid.clearfix dl.islandora-basic-collection-object {
   display: flex;
-  width: calc(25% - 2px);
+  width: 100%;
   margin: 1px;
   min-height: 0px;
   height: auto;

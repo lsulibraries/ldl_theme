@@ -78,6 +78,13 @@ $headerHeight: 60px;
     box-shadow: $top $left $blur $color;
   }
 }
+
+@mixin transition-duration($duration) {
+    -moz-transition-duration:    $duration;
+    -o-transition-duration:      $duration;
+    -webkit-transition-duration: $duration;
+    transition-duration:         $duration;
+}
 /* web fonts */
 @import 'https://fonts.googleapis.com/css?family=Open+Sans|Roboto:100,300,400,600,700';
 
@@ -682,6 +689,19 @@ color: transparent;
 
 /*navigation*/
 
+#block-system-navigation ul.menu > a:hover {
+
+a{
+font-weight: 700;
+}
+
+::after{
+    transform: translateX(0%);
+    @include transition-duration(.5s);
+}
+}
+
+
 #block-system-navigation {
     position: absolute;
     right: -207px;
@@ -689,11 +709,31 @@ color: transparent;
     width: 200px;
     top: 0px;
 
+    ul.menu > a {
+    position: relative;
+      ::after{
+    background: rgba(255, 255, 255, 0.2);
+    content: '';
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    height: 100%;
+    top: 0px;
+    transform: translateX(-100%);
+    z-index: -1;    
+    @include transition-duration(.2s);    
+
+      }      
+    }
+
+
     li {
         background: rgba(0, 0, 0, 0);
         margin: 1px;
         padding: 9px;
         border-left: 10px solid rgba(255, 255, 255, 0.33);
+    position: relative;        
+    overflow: hidden;
         a {
                 color: white;
         }           
@@ -836,9 +876,12 @@ img.blurredBG {
     display: flex;
     flex-wrap: wrap;
     max-width: 805px;
+    a {
+    width: 25%;
+    }        
     dl.islandora-basic-collection-object {
     display: flex;
-    width: calc(25% - 2px);
+    width: 100%;
     margin: 1px;
     min-height: 0px;
     height: auto;
