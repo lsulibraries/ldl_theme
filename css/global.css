@@ -629,14 +629,15 @@ div#region-header-second #breadcrumb .last a {
 #block-system-navigation ul.menu > a {
   position: relative;
 }
-#block-system-navigation ul.menu > a ::after {
+#block-system-navigation ul.menu a li a::after {
   background: rgba(255, 255, 255, 0.2);
   content: '';
   width: 100%;
   position: absolute;
-  left: 0px;
+  left: -10px;
   height: 100%;
-  top: 0px;
+  padding: 30px 20px 30px 0px;
+  top: -12px;
   transform: translateX(-100%);
   z-index: -1;
   -moz-transition-duration: 0.2s;
@@ -654,6 +655,7 @@ div#region-header-second #breadcrumb .last a {
 }
 #block-system-navigation li a {
   color: white;
+  position: relative;
 }
 #block-system-navigation li.active-trail, #block-system-navigation li.active {
   border-left: 10px solid #FFCB6B;

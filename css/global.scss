@@ -711,22 +711,22 @@ font-weight: 700;
 
     ul.menu > a {
     position: relative;
-      ::after{
+    }
+
+      ul.menu a li a::after{
     background: rgba(255, 255, 255, 0.2);
     content: '';
     width: 100%;
     position: absolute;
-    left: 0px;
+    left: -10px;
     height: 100%;
-    top: 0px;
+    padding: 30px 20px 30px 0px;
+    top: -12px;
     transform: translateX(-100%);
-    z-index: -1;    
+    z-index: -1;
     @include transition-duration(.2s);    
 
-      }      
-    }
-
-
+      }    
     li {
         background: rgba(0, 0, 0, 0);
         margin: 1px;
@@ -736,6 +736,7 @@ font-weight: 700;
     overflow: hidden;
         a {
                 color: white;
+                position: relative;
         }           
     }
 
