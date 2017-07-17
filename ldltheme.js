@@ -12,7 +12,7 @@ $(window).on("load", function() {
 });
 //end loading screen and onload animations
 
-$('.islandora-large-image-content-wrapper > #clip').contents().replaceWith("Download"); //Modifies download link contents from weird scissor icon
+$('.islandora-large-image-content-wrapper > #clip').contents().replaceWith("Clip & Download"); //Modifies download link contents from weird scissor icon
 if ( $( "#messages" ).length ) { 
      $( "#section-content" ).addClass('blurred');
  }//allows errors to have blurred background
@@ -82,10 +82,10 @@ $('#fullpage').fullpage({//initiates fullpage
   menu: '#menu',
   lockAnchors: false,
   anchors:['Home', 'About'],
-  navigation: true,
+  navigation: false,
   navigationPosition: 'right',
   navigationTooltips: ['Home', 'About'],
-  showActiveTooltip: false,
+  showActiveTooltip: true,
   slidesNavigation: false,
   slidesNavPosition: 'bottom',
 
@@ -110,7 +110,7 @@ $('#fullpage').fullpage({//initiates fullpage
   resetSliders: false,
   fadingEffect: false,
   normalScrollElements: 'header, .element2, .openseadragon-canvas',
-  scrollOverflow: true,
+  scrollOverflow: false,
   scrollOverflowReset: false,
   scrollOverflowOptions: {
           click: true

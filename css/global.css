@@ -795,6 +795,15 @@ a#clip {
   font-size: 11px;
 }
 
+#clip img {
+  height: 350px;
+  width: auto;
+}
+
+.content > a{
+  word-break: break-all;
+}
+
 /*!
  * fullPage 2.9.4
  * https://github.com/alvarotrigo/fullPage.js
