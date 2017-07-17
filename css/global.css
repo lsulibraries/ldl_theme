@@ -35,6 +35,9 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   display: none;
 }
 
+#region-content {
+  background: black !important;
+}
 
 .not-front .region-content-inner button, .not-front .region-content-inner input[type="reset"], .not-front .region-content-inner input[type="submit"], .not-front .region-content-inner input[type="button"] {
   -webkit-appearance: none;
@@ -57,11 +60,11 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   height: 35px;
 }
 
-/*#region-content {
+#region-content {
   background-image: url("http://i.imgur.com/3Ct4x3E.jpg");
   background-size: cover;
   background-position: center 80%;
-}for non parallax*/
+}
 
 #region-content .fp-bg {
   background-image: url("https://images.unsplash.com/45/tkLOe7nnQ7mnMsiuijBy_hm.jpg");
@@ -220,8 +223,8 @@ aside {
 }
 
 #fullpage .reveal {
-  transform: translateY(-200px);
-  opacity: 0;
+  transform: translateY(0px);
+  opacity: 1;
   transition: opacity 1s, transform 1s;
 }
 

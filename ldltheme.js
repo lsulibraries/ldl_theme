@@ -46,7 +46,7 @@ $('span.islandora-basic-collection-item-count').each(function(i, el) {
 }); //hides 'items' string in number count, string is now in ::after so that it can be formatted
 
 
-//$('#region-footer-first').addClass('fp-auto-height');
+$('#region-footer-first').addClass('fp-auto-height');
 $('#block-delta-blocks-site-name').appendTo('.block-delta-blocks-logo .content');
 $('span.islandora-basic-collection-item-count').prependTo("#page-title"); //moves item count to page title
 //$("#logo > img").attr('src', 'http://i.imgur.com/24vAVba.png');//changes logo
@@ -71,7 +71,7 @@ $('.form-item-islandora-simple-search-query > input').each(function() {
   $(this).attr('placeholder', 'Search the LDL' );
 });//Adds Search text
 
-
+//note to kyle july 16: reserve parallax for itempages only.
 
 
 var mainHeight = $('#block-system-main').height();
@@ -135,7 +135,7 @@ $('#fullpage').fullpage({//initiates fullpage
   responsiveHeight: 500,
   responsiveSlides: false,
   parallax: true,
-  parallaxOptions: {type: 'cover', percentage: 62, property: 'translate'},
+  parallaxOptions: {type: 'cover', percentage: 30, property: 'translate'},
   parallaxKey: 'bGRsLmxpYi5sc3UuZWR1XzlsNWNHRnlZV3hzWVhnPTdJSQ==',
 
   //Custom selectors
