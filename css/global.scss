@@ -41,7 +41,8 @@ $header2: #2c303a;
 /*Institutional Colors*/
 $unoColor: #003056;
 $latechColor: #003087;
-
+$lsuColor: #461D7C;
+$loynoColor: #660000;
 /* variables */
 $headerHeight: 60px;
 
@@ -734,9 +735,10 @@ color: transparent;
  .reveal section#block-block-14 {
     position: absolute;
     height: 100%;
-    transform: translateX(-126px);
+    transform: translateX(-106px);
   -webkit-transition-duration: .3s; /* Safari */
     transition-duration: .3s;
+    transition-delay: .5s;
  }
 
 section#block-block-14 {
@@ -759,7 +761,7 @@ section#block-block-14 {
   left: 0px;
   background: $unoColor;
   top: 0px;
-  width: 126px;
+  width: 106px;
   border-radius: 10px 0px 0px 10px;
   @include box-shadow(-10px, 0px, 60px, rgba(0, 0, 0, 0.49), true);
   background-image: url('http://i.imgur.com/RWmzrPG.png');
@@ -777,7 +779,28 @@ section#block-block-14 {
   background-repeat: no-repeat;  
   background-position: center;     
   }  
+}
 
+.lsuTheme{
+  @extend .unoTheme;
+  section#block-block-14 {
+  background: $lsuColor;  
+  background-size: 50px auto;
+  background-image: url('http://reu.cct.lsu.edu/documents/logos/LSU_Gold_CMYK.png');
+  background-repeat: no-repeat;  
+  background-position: center;     
+  }    
+}
+
+.loynoTheme{
+  @extend .unoTheme;
+  section#block-block-14 {
+  background: $loynoColor;  
+  background-size: 50px auto;
+  background-image: url('http://i.imgur.com/wsbykd6.png');
+  background-repeat: no-repeat;  
+  background-position: center;     
+  }    
 }
 
 /*End Institutional Branding*/
@@ -945,6 +968,12 @@ h2.node-title, h2.node-title a {
 
 
 /*Large Image View Styles*/
+.islandora-openseadragon {
+    display: block;
+    width: 100%;
+    height: calc(60vh - 50px);
+}
+
 body.no-sidebars .islandora-large-image-content {
     width: 100%;
 }
