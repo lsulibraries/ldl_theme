@@ -226,11 +226,13 @@ aside {
   transform: translateY(0px);
   opacity: 1;
   transition: opacity 1s, transform 1s;
+  filter: blur(2px);
 }
 
 #fullpage .active .reveal {
   transform: translateY(0px);
   opacity: 1;
+  filter: blur(0px);
 }
 
 .blur {
@@ -800,8 +802,13 @@ a#clip {
   width: auto;
 }
 
-.content > a{
-  word-break: break-all;
+/*Islandora Batch Sets*/
+.ctools-dropbutton-processed {
+  position: relative;
+}
+
+.view.view-islandora-batch-sets {
+  color: #3e4352;
 }
 
 /*!

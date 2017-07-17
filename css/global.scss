@@ -293,10 +293,12 @@ aside {
   transform: translateY(0px);
   opacity: 1;
   transition: opacity 1s, transform 1s;
+  filter: blur(2px) brightness(0.8);
 }
 #fullpage .active .reveal {
   transform: translateY(0px);
   opacity: 1;
+  filter: blur(0px);  
 }
 .blur {
   filter: blur(5px) brightness(0.46);
@@ -907,7 +909,14 @@ a#clip {
     width: auto;
 }
 
+/*Islandora Batch Sets*/
+.ctools-dropbutton-processed {
+    position: relative;
+}
 
+.view.view-islandora-batch-sets {
+    color: #3e4352;
+}
 
 /*!
  * fullPage 2.9.4
