@@ -4,8 +4,8 @@
 //begin loading screen and onload animations
 $("#block-block-11, #messages").prependTo(".page"); //moves loading block
 $(window).on("load", function() {
-    $('section#block-block-11').delay(000).fadeOut(200, function(){ $(this).remove();});
-    $(".region-content-inner").delay(800).queue(function(next){
+    $('section#block-block-11').delay(000).fadeOut(800, function(){ $(this).remove();});
+    $(".region-content-inner").delay(500).queue(function(next){
      $(this).addClass('reveal');
       next();
 });
@@ -199,17 +199,7 @@ $(".sidebarLabel").click(function(){
 });//logic for toggling the facets on mobile
 $('#block-user-login input[name="op"]').val("Login"); //Login placeholder text
 $('.page-user input[name="op"]:nth-child(1)').val("Login"); //Login placeholder text
-$("#edit-islandora-simple-search-query")//Supposed to clear the placeholder values? Not working atm
-  .focus(function() {
-        if (this.value === this.defaultValue) {
-            this.value = '';
-        }
-  })
-  .blur(function() {
-        if (this.value === '') {
-            this.value = 'this.defaultValue';
-        }
-});
+
 }
 };
 }(jQuery));
