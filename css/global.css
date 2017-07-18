@@ -79,6 +79,11 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   background-position: center 80%;
 }
 
+/*.metadata .fp-bg{
+  background-image: url('https://auditor-lopd.com/wp-content/uploads/2014/04/janko-ferlic-174927.jpg');
+  background-size: cover;
+  background-position: center 80%;  
+}*/
 .blurred {
   filter: brightness(0.35) blur(2px);
 }
@@ -146,10 +151,6 @@ h1, h2, h3, h4, h5, h6 {
 
 #fullpage, #fullpage > div {
   width: 100%;
-}
-
-.region-inner.region-content-inner {
-  margin-top: 100px;
 }
 
 #region-content, #region-footer-first, #messages {
@@ -986,6 +987,60 @@ a#clip {
 }
 #block-user-login h2 {
   display: none;
+}
+
+/*large image metadata*/
+.islandora-large-image-metadata table {
+  border: none;
+}
+.islandora-large-image-metadata table tbody {
+  display: flex;
+  flex-direction: column;
+  height: 60vh;
+  flex-wrap: wrap;
+  width: 70vw;
+  margin: 0px auto;
+  color: #4c4c4c;
+  font-size: 15px;
+  padding-top: 100px;
+  justify-content: flex-start;
+  align-items: baseline;
+  position: relative;
+}
+.islandora-large-image-metadata table tr {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 20px 14px 1px;
+  flex-wrap: wrap;
+  position: relative;
+}
+.islandora-large-image-metadata table tr td:nth-child(1) {
+  font-weight: 900;
+}
+.islandora-large-image-metadata table td {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 20vw;
+  word-break: break-word;
+  align-items: baseline;
+  align-self: baseline;
+}
+.islandora-large-image-metadata table td, .islandora-large-image-metadata table th {
+  vertical-align: middle;
+  padding: 0px;
+}
+.islandora-large-image-metadata table tr:nth-child(1) {
+  display: none;
+}
+.islandora-large-image-metadata table td.tableTitle {
+  position: absolute;
+  top: 0px;
+  font-size: 25px;
+  width: 100% !important;
+  font-weight: 700;
+  height: 100px;
+  justify-content: center;
 }
 
 /*!

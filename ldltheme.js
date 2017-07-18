@@ -58,12 +58,14 @@ $(".front #page-title").contents().replaceWith("Louisiana Digital Library");//ch
 $("#region-footer-first").appendTo(".zone-content"); //becomes 2nd slide
 $('#block-islandora-solr-simple').clone().prop('id','block-islandora-solr-simple2').appendTo(".largeLogo"); //creates main search window
 $('.zone-content').attr('id', 'fullpage');//prepares content region for fullpage instance
+$('.islandora-large-image-metadata').addClass('section metadata').insertBefore('#region-footer-first');//prepares slide for parallax bg
+
+
 $('.zone-content > div').not('#messages').addClass('section');//prepares content region for fullpage slide
 $('.zone-content > footer').addClass('section');//prepares content region for fullpage slide
 $('#fullpage aside').remove();//removes asides that interfere with navigation when logged in
-$('#region-content').prepend('<div class="fp-bg"></div>');//prepares slide for parallax bg
+$('#region-content, .metadata').prepend('<div class="fp-bg"></div>');//prepares slide for parallax bg
 //$('#region-footer-first').prepend('<div class="fp-bg"></div>');//prepares slide for parallax bg
-$('.islandora-large-image-metadata').prependTo('.region-footer-first-inner');//prepares slide for parallax bg
 $("#region-content .fp-bg").delay(0).queue(function(next){
  $(this).addClass('blur');   
     next();
@@ -71,6 +73,9 @@ $("#region-content .fp-bg").delay(0).queue(function(next){
 $('.form-item-islandora-simple-search-query > input').each(function() {
   $(this).attr('placeholder', 'Search the LDL' );
 });//Adds Search text
+
+$('.metadata table tr td br').remove();
+$('.metadata td.modsTitle').clone().attr('class', 'tableTitle').appendTo('.metadata tbody');
 
 
 $('dl.islandora-basic-collection-object').each(function() {
