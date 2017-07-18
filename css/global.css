@@ -148,8 +148,8 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
 }
 
-#fullpage > div.section {
-  padding-top: 100px;
+.region-inner.region-content-inner {
+  margin-top: 100px;
 }
 
 #region-content, #region-footer-first, #messages {
@@ -159,7 +159,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .region-inner.region-content-inner {
   position: relative;
-  margin: 40px;
+  margin: 100px 40px 40px 40px;
   color: #ffffff;
   padding: 1px 1px 1px 1px;
   background: #3e4352;
@@ -613,10 +613,10 @@ div#region-header-second #breadcrumb .last a {
 }
 #block-system-navigation ul.menu > a:hover ::after {
   transform: translateX(0%);
-  -moz-transition-duration: 0.5s;
-  -o-transition-duration: 0.5s;
-  -webkit-transition-duration: 0.5s;
-  transition-duration: 0.5s;
+  -moz-transition-duration: 300;
+  -o-transition-duration: 300;
+  -webkit-transition-duration: 300;
+  transition-duration: 300;
 }
 
 #block-system-navigation {
@@ -630,11 +630,11 @@ div#region-header-second #breadcrumb .last a {
   position: relative;
 }
 #block-system-navigation ul.menu a li a::after {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.33);
   content: '';
   width: 100%;
   position: absolute;
-  left: -10px;
+  left: -9px;
   height: 100%;
   padding: 30px 20px 30px 0px;
   top: -12px;
@@ -701,10 +701,10 @@ section#block-block-14 h2.block-title {
   display: none;
 }
 
-.unoTheme .islandora-basic-collection-grid.clearfix, .latechTheme .islandora-basic-collection-grid.clearfix, .lsuTheme .islandora-basic-collection-grid.clearfix, .loynoTheme .islandora-basic-collection-grid.clearfix {
+.unoTheme .islandora-basic-collection-grid.clearfix, .latechTheme .islandora-basic-collection-grid.clearfix, .lsuTheme .islandora-basic-collection-grid.clearfix, .loynoTheme .islandora-basic-collection-grid.clearfix, .mcneeseTheme .islandora-basic-collection-grid.clearfix {
   background: #272b34;
 }
-.unoTheme section#block-block-14, .latechTheme section#block-block-14, .lsuTheme section#block-block-14, .loynoTheme section#block-block-14 {
+.unoTheme section#block-block-14, .latechTheme section#block-block-14, .lsuTheme section#block-block-14, .loynoTheme section#block-block-14, .mcneeseTheme section#block-block-14 {
   display: block;
   position: absolute;
   height: 100%;
@@ -741,6 +741,14 @@ section#block-block-14 h2.block-title {
   background: #660000;
   background-size: 50px auto;
   background-image: url("http://i.imgur.com/wsbykd6.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.mcneeseTheme section#block-block-14 {
+  background: #00529b;
+  background-size: 50px auto;
+  background-image: url("http://mcneesesports.com/images/header_logo.png");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -793,7 +801,7 @@ img.blurredBG {
   transition-duration: 0s;
 }
 .islandora-basic-collection-grid.clearfix dl.islandora-basic-collection-object:hover dd.islandora-basic-collection-caption a {
-  opacity: 0;
+  opacity: 1;
 }
 .islandora-basic-collection-grid.clearfix dd.islandora-basic-collection-caption a {
   color: #ffffff;
@@ -822,6 +830,7 @@ img.blurredBG {
   max-width: 200px;
   z-index: 2;
   top: 0px;
+  text-shadow: 2px 2px 4px black;
 }
 
 #block-system-main span.islandora-basic-collection-display-switch {
@@ -835,6 +844,18 @@ img.blurredBG {
   display: none;
 }
 
+/*repository collection specific styles*/
+.collectionLevel dt.islandora-basic-collection-thumb {
+  background: rgba(0, 0, 0, 0.25);
+}
+.collectionLevel img {
+  display: none;
+}
+
+a.collectionLevel:hover dt.islandora-basic-collection-thumb {
+  background: rgba(0, 0, 0, 0.15);
+}
+
 /* Documentation styles */
 h2.node-title, h2.node-title a {
   font-size: 15px;
@@ -846,6 +867,16 @@ h2.node-title, h2.node-title a {
 /* logged-in styles */
 .logged-in #section-header {
   top: 67px;
+}
+.logged-in .largeImage .region-inner.region-content-inner {
+  width: 50%;
+  margin: 100px 260px 0px 260px;
+  height: calc(70vh - 100px);
+}
+.logged-in .islandora-openseadragon {
+  display: block;
+  width: 100%;
+  height: calc(70vh - 150px);
 }
 
 .tabs ul.tabs.primary.clearfix {
@@ -892,7 +923,14 @@ h2.node-title, h2.node-title a {
 .islandora-openseadragon {
   display: block;
   width: 100%;
-  height: calc(60vh - 50px);
+  height: calc(70vh - 51px);
+  background: black;
+}
+
+.islandora-openseadragon canvas {
+  background-color: #3e4352 !important;
+  background-image: url(http://i.imgur.com/PuUOH7M.png) !important;
+  background-size: contain !important;
 }
 
 body.no-sidebars .islandora-large-image-content {
@@ -909,8 +947,9 @@ body.no-sidebars .islandora-large-image-content {
 }
 
 .largeImage .region-inner.region-content-inner {
-  width: 100%;
-  margin: 0px 260px 0px 260px;
+  width: 50%;
+  margin: 100px 260px 0px 260px;
+  height: 70vh;
 }
 
 a#clip {
@@ -938,6 +977,15 @@ a#clip {
 
 .view.view-islandora-batch-sets {
   color: #3e4352;
+}
+
+/*footer*/
+/*user login*/
+#block-user-login .form-item {
+  margin: none;
+}
+#block-user-login h2 {
+  display: none;
 }
 
 /*!

@@ -43,6 +43,8 @@ $unoColor: #003056;
 $latechColor: #003087;
 $lsuColor: #461D7C;
 $loynoColor: #660000;
+$mcneeseColor: #00529b;
+
 /* variables */
 $headerHeight: 60px;
 
@@ -228,16 +230,17 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
 }
 
-#fullpage > div.section {
-  padding-top: 100px;
+.region-inner.region-content-inner {
+    margin-top: 100px;
 }
+
 #region-content, #region-footer-first, #messages {
   margin: 0px;
   display: flex;
 }
 .region-inner.region-content-inner {
   position: relative;
-  margin: 40px;
+  margin: 100px 40px 40px 40px;
   color: $mainText;
     padding: 1px 1px 1px 1px;
     background: #3e4352;
@@ -697,7 +700,7 @@ font-weight: 700;
 
 ::after{
     transform: translateX(0%);
-    @include transition-duration(.5s);
+    @include transition-duration(300);
 }
 }
 
@@ -714,11 +717,11 @@ font-weight: 700;
     }
 
       ul.menu a li a::after{
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.33);
     content: '';
     width: 100%;
     position: absolute;
-    left: -10px;
+    left: -9px;
     height: 100%;
     padding: 30px 20px 30px 0px;
     top: -12px;
@@ -844,6 +847,17 @@ section#block-block-14 {
   }    
 }
 
+.mcneeseTheme{
+  @extend .unoTheme;
+  section#block-block-14 {
+  background: $mcneeseColor;  
+  background-size: 50px auto;
+  background-image: url('http://mcneesesports.com/images/header_logo.png');
+  background-repeat: no-repeat;  
+  background-position: center;     
+  }    
+}
+
 /*End Institutional Branding*/
 
 /* Repository styles */
@@ -897,7 +911,7 @@ img.blurredBG {
       transition-duration: 0s;     
       }    
       dd.islandora-basic-collection-caption a {    
-      opacity: 0;
+      opacity: 1;
     }
 }
 
@@ -933,6 +947,7 @@ img.blurredBG {
     max-width: 200px;
     z-index: 2;
     top: 0px;
+    text-shadow: 2px 2px 4px black;    
     }    
 }
 
@@ -952,6 +967,24 @@ img.blurredBG {
 }
 
 
+/*repository collection specific styles*/
+
+.collectionLevel{
+
+  dt.islandora-basic-collection-thumb {
+      background: rgba(0, 0, 0, 0.25);
+  }  
+
+  img{
+    display: none;
+  }
+}
+
+
+  a.collectionLevel:hover dt.islandora-basic-collection-thumb{
+      background: rgba(0, 0, 0, 0.15);
+  }    
+
 /* Documentation styles */
 h2.node-title, h2.node-title a {
     font-size: 15px;
@@ -966,6 +999,18 @@ h2.node-title, h2.node-title a {
   #section-header {
     top: 67px;
   }
+
+ .largeImage .region-inner.region-content-inner{
+  width: 50%;
+  margin: 100px 260px 0px 260px;
+    height: calc(70vh - 100px);
+}  
+
+.islandora-openseadragon {
+    display: block;
+    width: 100%;
+    height: calc(70vh - 150px);
+}
 }
 
 
@@ -1013,9 +1058,17 @@ h2.node-title, h2.node-title a {
 
 /*Large Image View Styles*/
 .islandora-openseadragon {
-    display: block;
-    width: 100%;
-    height: calc(60vh - 50px);
+  display: block;
+  width: 100%;
+    height: calc(70vh - 51px);  
+
+    background: black;    
+}
+
+.islandora-openseadragon canvas {
+    background-color: #3e4352 !important;
+    background-image: url(http://i.imgur.com/PuUOH7M.png) !important;
+    background-size: contain !important;
 }
 
 body.no-sidebars .islandora-large-image-content {
@@ -1032,9 +1085,11 @@ body.no-sidebars .islandora-large-image-content {
 }
 
 .largeImage .region-inner.region-content-inner{
-      width: 100%;
-    margin: 0px 260px 0px 260px;
+  width: 50%;
+  margin: 100px 260px 0px 260px;
+    height: 70vh;  
 }
+
 
 a#clip {
     margin-left: 5px;
@@ -1064,6 +1119,19 @@ a#clip {
 .view.view-islandora-batch-sets {
     color: #3e4352;
 }
+
+/*footer*/
+
+/*user login*/
+#block-user-login{
+  .form-item{
+    margin: none;
+  }
+  h2{
+    display: none;
+  }
+}
+
 
 /*!
  * fullPage 2.9.4

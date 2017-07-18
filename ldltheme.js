@@ -39,6 +39,9 @@ $(".page").children().not('#messages').click(function() {
   //$(this).css("backgroundImage","url("+src+")");
 //});
 
+
+
+
 $('span.islandora-basic-collection-item-count').each(function(i, el) {
   if($(el).html() != "" ) {
     $(el).html($(el).html().replace(/items/ig, ""));
@@ -75,6 +78,10 @@ $('dl.islandora-basic-collection-object').each(function() {
   var ti = $(this).find("a").attr("title");  
   $(this).wrap( "<a href="+ln+" title="+ti+"></a>");
 });//Wraps items to improve clickability
+
+
+$( "dt.islandora-basic-collection-thumb a[href$='%3Acollection']" ).parent().parent().parent().addClass('collectionLevel');
+
 
 $('.menu li').each(function() {
   var ln = $(this).find("a").attr("href");
