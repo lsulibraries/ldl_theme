@@ -675,6 +675,14 @@ div#region-header-second #breadcrumb .last a {
   top: -18px;
 }
 
+.page-islandora-object .block-inner.clearfix, .front .block-inner.clearfix {
+  padding: 0px;
+}
+
+.block-inner.clearfix {
+  padding: 20px;
+}
+
 /* Advanced Search Styles */
 .block-advanced h2.block-title {
   display: none;
@@ -849,8 +857,21 @@ img.blurredBG {
 .collectionLevel dt.islandora-basic-collection-thumb {
   background: rgba(0, 0, 0, 0.25);
 }
+.collectionLevel dd.islandora-basic-collection-caption::before {
+  content: '';
+  width: 24px;
+  height: 24px;
+  background-image: url(../../../modules/islandora/images/folder.png);
+  background-size: 24px auto;
+  position: inherit;
+  top: 5px;
+  left: 6px;
+}
 .collectionLevel img {
   display: none;
+}
+.collectionLevel dd.islandora-basic-collection-caption a {
+  margin-left: 24px;
 }
 
 a.collectionLevel:hover dt.islandora-basic-collection-thumb {
@@ -981,12 +1002,137 @@ a#clip {
 }
 
 /*footer*/
+.region-inner.region-footer-first-inner {
+  display: flex;
+  background: #191c26;
+}
+
+/*institution list*/
+#block-block-16 {
+  display: flex;
+  align-items: center;
+}
+#block-block-16 .content p {
+  width: 1000px;
+  height: 120px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px;
+}
+#block-block-16 a.institutionLink:hover {
+  opacity: 1;
+  -moz-transition-duration: 0s;
+  -o-transition-duration: 0s;
+  -webkit-transition-duration: 0s;
+  transition-duration: 0s;
+}
+#block-block-16 a.institutionLink {
+  width: 100px;
+  height: 60px;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0px 1px 1px 0px;
+  background-size: 70px auto;
+  opacity: 0.7;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+#block-block-16 a.institutionLink.lsmLink {
+  background-color: #5d0e8b;
+  background-image: url("http://i.imgur.com/Sz5sguM.png");
+  background-size: 40px auto;
+}
+#block-block-16 a.institutionLink.lsuLink {
+  background-color: #461D7C;
+  background-image: url("http://reu.cct.lsu.edu/documents/logos/LSU_Gold_CMYK.png");
+  background-size: 50px auto;
+}
+#block-block-16 a.institutionLink.lsusLink {
+  background-color: #ffffff;
+  background-image: url("http://www.lsus.edu/Images/Offices%20and%20Services/HR/LSUS%20Logo%2011102015.png");
+}
+#block-block-16 a.institutionLink.lsuhscLink {
+  background-color: #ffffff;
+  background-image: url("http://i.imgur.com/FQdHpzz.png");
+}
+#block-block-16 a.institutionLink.lsuhscsLink {
+  background-color: #ffffff;
+  background-image: url("http://i.imgur.com/1lqbxiy.png");
+}
+#block-block-16 a.institutionLink.latechLink {
+  background-color: #003087;
+  background-image: url("http://grfx.cstv.com/schoolslt/latc/graphics/logos/latc-state-t.gif");
+  background-size: 40px auto;
+}
+#block-block-16 a.institutionLink.loynoLink {
+  background-color: #660000;
+  background-image: url("http://i.imgur.com/wsbykd6.png");
+  background-size: 40px auto;
+}
+#block-block-16 a.institutionLink.mcneeseLink {
+  background-color: #00529b;
+  background-image: url("http://mcneesesports.com/images/header_logo.png");
+}
+#block-block-16 a.institutionLink.nichollsLink {
+  background-color: #ae132a;
+  background-image: url("http://i.imgur.com/rGvlEDN.png");
+}
+#block-block-16 a.institutionLink.nsuLink {
+  background-color: #663399;
+  background-image: url("https://www.nsula.edu/wp-content/uploads/Seal.png");
+  background-size: 40px auto;
+}
+#block-block-16 a.institutionLink.subrLink {
+  background-color: #75B2DD;
+  background-image: url("http://i.imgur.com/pNgJAG2.png");
+}
+#block-block-16 a.institutionLink.stateLink {
+  background-color: #edba51;
+  background-image: url("http://i.imgur.com/y1H8EGr.png");
+  background-size: 40px auto;
+}
+#block-block-16 a.institutionLink.hnocLink {
+  background-color: #254550;
+  background-image: url("http://i.imgur.com/lRaktDw.png");
+}
+#block-block-16 a.institutionLink.tulaneLink {
+  background-color: #032a17;
+  background-image: url("http://i.imgur.com/geTKaHp.png");
+}
+#block-block-16 a.institutionLink.ullLink {
+  background-color: #a00b0b;
+  background-image: url("http://i.imgur.com/aqD5A3q.png");
+}
+#block-block-16 a.institutionLink.ulmLink {
+  background-color: #800029;
+  background-image: url("http://www.ulm.edu/opi/logos/academics/ulm_lettermark_fullname/png/ulm_lettermark_fullname-white.png");
+}
+#block-block-16 a.institutionLink.unoLink {
+  background-color: #003056;
+  background-image: url("http://i.imgur.com/RWmzrPG.png");
+}
+
 /*user login*/
 #block-user-login .form-item {
   margin: none;
 }
 #block-user-login h2 {
   display: none;
+}
+
+section#block-user-login {
+  position: absolute;
+  right: 0px;
+  color: white;
+  width: 160px;
+}
+
+/*general metadata*/
+tr:hover td, tr.even:hover td.active, tr.odd:hover td.active {
+  background: inherit;
 }
 
 /*large image metadata*/

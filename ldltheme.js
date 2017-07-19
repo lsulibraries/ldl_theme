@@ -76,6 +76,7 @@ $('.form-item-islandora-simple-search-query > input').each(function() {
 
 $('.metadata table tr td br').remove();
 $('.metadata td.modsTitle').clone().attr('class', 'tableTitle').appendTo('.metadata tbody');
+$('div.prevnext').appendTo('#block-user-login');
 
 
 $('dl.islandora-basic-collection-object').each(function() {
@@ -155,7 +156,7 @@ $('#fullpage').fullpage({//initiates fullpage
   responsiveHeight: 500,
   responsiveSlides: false,
   parallax: true,
-  parallaxOptions: {type: 'cover', percentage: 30, property: 'translate'},
+  parallaxOptions: {type: 'cover', percentage: 20, property: 'translate'},
   parallaxKey: 'bGRsLmxpYi5sc3UuZWR1XzlsNWNHRnlZV3hzWVhnPTdJSQ==',
 
   //Custom selectors
