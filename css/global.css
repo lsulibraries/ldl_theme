@@ -679,15 +679,15 @@ div#region-header-second #breadcrumb .last a {
   padding: 0px;
 }
 
-.block-inner.clearfix {
-  padding: 20px;
+#islandora-solr-advanced-search-form > div {
+  padding: 10px;
 }
 
 /* Advanced Search Styles */
 .block-advanced h2.block-title {
   display: none;
 }
-.block-advanced .block-inner.clearfix {
+.block-advanced #block-islandora-solr-advanced.block-inner.clearfix {
   padding: 10px 10px 10px 10px;
 }
 
@@ -1005,6 +1005,7 @@ a#clip {
 .region-inner.region-footer-first-inner {
   display: flex;
   background: #191c26;
+  padding: 10px;
 }
 
 /*institution list*/
@@ -1142,23 +1143,21 @@ tr:hover td, tr.even:hover td.active, tr.odd:hover td.active {
 .islandora-large-image-metadata table tbody {
   display: flex;
   flex-direction: column;
-  height: 60vh;
+  height: calc(100vh - 260px);
   flex-wrap: wrap;
-  width: 70vw;
   margin: 0px auto;
   color: #4c4c4c;
   font-size: 15px;
+  max-width: 1100px;
   padding-top: 100px;
-  justify-content: flex-start;
-  align-items: baseline;
+  align-items: flex-start;
   position: relative;
+  justify-content: flex-start;
+  top: 60px;
+  left: 0px;
 }
 .islandora-large-image-metadata table tr {
-  display: flex;
-  flex-direction: column;
   margin: 0px 20px 14px 1px;
-  flex-wrap: wrap;
-  position: relative;
 }
 .islandora-large-image-metadata table tr td:nth-child(1) {
   font-weight: 900;
@@ -1166,11 +1165,9 @@ tr:hover td, tr.even:hover td.active, tr.odd:hover td.active {
 .islandora-large-image-metadata table td {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
   width: 20vw;
   word-break: break-word;
-  align-items: baseline;
-  align-self: baseline;
+  max-width: 220px;
 }
 .islandora-large-image-metadata table td, .islandora-large-image-metadata table th {
   vertical-align: middle;
@@ -1186,7 +1183,9 @@ tr:hover td, tr.even:hover td.active, tr.odd:hover td.active {
   width: 100% !important;
   font-weight: 700;
   height: 100px;
-  justify-content: center;
+  max-width: none;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 /*!

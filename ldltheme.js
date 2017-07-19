@@ -156,7 +156,7 @@ $('#fullpage').fullpage({//initiates fullpage
   responsiveHeight: 500,
   responsiveSlides: false,
   parallax: true,
-  parallaxOptions: {type: 'cover', percentage: 20, property: 'translate'},
+  parallaxOptions: {type: 'cover', percentage: 18, property: 'translate'},
   parallaxKey: 'bGRsLmxpYi5sc3UuZWR1XzlsNWNHRnlZV3hzWVhnPTdJSQ==',
 
   //Custom selectors
