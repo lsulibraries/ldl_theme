@@ -1181,12 +1181,82 @@ a#clip {
     color: #3e4352;
 }
 
+
+/*compound object styles*/
+#block-islandora-compound-object-compound-navigation{
+
+  .content.clearfix {
+  position: relative;
+  }
+
+  .islandora-compound-prev-next {
+  margin-bottom: 0px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background: #191c26;
+  color: white;
+  
+
+  .islandora-compound-title {
+  font-weight: normal;
+  display: inline-block;
+  line-height: 1.5em;
+  margin: 20px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  }  
+  > a {
+  background: #59a3d9;
+  color: white;
+  padding: 10px;
+  border-radius: 4px;
+  }
+  .islandora-compound-thumbs {
+    overflow: auto;
+    border-top: 1px dotted #ccc;
+    margin-top: 0.25em;
+    display: flex;
+    border: 0px;
+    justify-content: center;
+    align-items: center;
+    padding-left: 50px;
+    border-left: 1px solid rgba(255, 255, 255, 0.17);
+    margin-left: 50px;
+  }  
+  .islandora-compound-thumb{
+  padding-bottom: 0px;
+  border: 0px;
+  }  
+
+  }
+
+
+}
+
+
+
 /*footer*/
 
 .region-inner.region-footer-first-inner {
     display: flex;
     background: #191c26;
     padding: 10px;
+}
+
+
+/*prevnext*/
+.prevnext {
+    padding: 50px 30px;
+    background: #dedede;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.prevnextContainer .fp-tableCell {
+    display: flex;
+    width: 100vw;
+    background: #e8e8e8;
 }
 
 
@@ -1372,6 +1442,7 @@ tr:hover td, tr.even:hover td.active, tr.odd:hover td.active {
     justify-content: flex-start;
     top: 60px;
     left: 0px;
+    max-height: 610px;
   }
 
   tr {

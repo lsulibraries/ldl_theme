@@ -60,6 +60,11 @@ $('#block-islandora-solr-simple').clone().prop('id','block-islandora-solr-simple
 $('.zone-content').attr('id', 'fullpage');//prepares content region for fullpage instance
 $('.islandora-large-image-metadata').addClass('section metadata').insertBefore('#region-footer-first');//prepares slide for parallax bg
 
+$('.prevnext').wrapAll('<div class="prevnextContainer"/>');
+
+$('.prevnextContainer').addClass('section fp-auto-height').insertBefore('#region-footer-first');
+$('.block-islandora-compound-object-compound-navigation').addClass('section fp-auto-height').insertBefore('.metadata');
+
 
 $('.zone-content > div').not('#messages').addClass('section');//prepares content region for fullpage slide
 $('.zone-content > footer').addClass('section');//prepares content region for fullpage slide
@@ -76,7 +81,6 @@ $('.form-item-islandora-simple-search-query > input').each(function() {
 
 $('.metadata table tr td br').remove();
 $('.metadata td.modsTitle').clone().attr('class', 'tableTitle').appendTo('.metadata tbody');
-$('div.prevnext').appendTo('#block-user-login');
 
 
 $('dl.islandora-basic-collection-object').each(function() {
