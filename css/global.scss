@@ -1686,11 +1686,9 @@ html.fp-enabled,
 #fp-nav ul li,
 .fp-slidesNav ul li {
     display: block;
-    width: 14px;
+    width: auto;
     height: 13px;
-    margin: 7px;
-    position:relative;
-    margin-top: 40px;    
+    position: relative;
 }
 .fp-slidesNav ul li {
     display: inline-block;
@@ -1763,14 +1761,36 @@ html.fp-enabled,
 }
 
 
+#breadcrumb li.last {
+    display: inline-block;
+    position: relative;
+}
+
+#fp-nav{
+position: absolute;
+    z-index: 40;
+    cursor: pointer;
+    display: flex;
+    left: 0px;
+    top: -20px;
+}
 
 
+#fp-nav ul{
+      display: flex;
+}
+
+div#region-header-second #breadcrumb #fp-nav ul a {
+    padding: 0px;
+}   
+
+#fp-nav ul li{
+  height: auto;
+}
 
 #fp-nav ul li .fp-tooltip {
-    position: absolute;
-    top: -2px;
-    font-size: 24px;
-    font-family: arial, helvetica, sans-serif;
+    font-size: 11px;
+    font-family: Roboto;
     white-space: nowrap;
     max-width: 220px;
     overflow: hidden;
@@ -1778,21 +1798,16 @@ html.fp-enabled,
     opacity: 1;
     width: auto;
     cursor: pointer;
+    background: #2c303a;
     left: 37px;
-    color: #ccc;    
+    padding: 5px 12px 0px 12px;
+    color: #b1b1b1;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
-
-.fp-viewing-metadata #fp-nav ul li .fp-tooltip, .fp-viewing-related #fp-nav ul li .fp-tooltip, .fp-viewing-footer #fp-nav ul li .fp-tooltip  {
-   color: #343434;
-}
-
-#fp-nav ul li .fp-tooltip a.active div{
-  color: #59a3d9 !important;
-}
-
 
 .active .fp-tooltip.top {
-  color: #59a3d9 !important;
+color: $Yellow !important;
 }
 
 

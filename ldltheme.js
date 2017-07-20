@@ -214,6 +214,8 @@ $('div.fp-tooltip.top').each(function() {
 //$('#fp-nav li:nth-child(1) a:nth-child(1)').append('<i class="fa fa-cube" aria-hidden="true"></i>');
 //adds icons
 
+$('#fp-nav').appendTo('ul.breadcrumb li.last');
+
 $('body').addClass(ns + 'Theme institution');
   var url = window.location.pathname;
   var namespaces = ['uno','loyno', 'mcneese', 'lsu', 'latech', 'hnoc', 'tulane', 'state'];
