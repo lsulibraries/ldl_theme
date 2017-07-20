@@ -62,7 +62,9 @@ $('span.islandora-basic-collection-item-count').prependTo("#page-title"); //move
 $(".front #page-title").contents().replaceWith("Louisiana Digital Library");//changes homepage title
 $("#region-footer-first").appendTo(".zone-content"); //becomes 2nd slide
 $('#block-islandora-solr-simple').clone().prop('id','block-islandora-solr-simple2').appendTo(".largeLogo"); //creates main search window
-$('.zone-content').attr('id', 'fullpage');//prepares content region for fullpage instance
+$('.zone-content').not('.largeImage .zone-content').attr('id', 'fullpage');//prepares content region for fullpage instance
+$('.largeImage .zone-content').attr('id', 'basicitem');//prepares content region for fullpage instance
+
 $('.islandora-large-image-metadata').addClass('section metadata').insertBefore('#region-footer-first');//prepares slide for parallax bg
 
 $('.prevnext').wrapAll('<div class="prevnextContainer"/>');
@@ -107,12 +109,32 @@ $('.menu li').each(function() {
 var mainHeight = $('#block-system-main').height();
 
 
+$('#basicitem').fullpage({
+  menu: '#menu',
+  lockAnchors: false,
+  anchors:['item', 'metadata','related','footer'],
+  navigation: true,
+  navigationPosition: 'top',
+  navigationTooltips: ['item', 'metadata','related','footer'],
+  normalScrollElements: 'header, .element2, .openseadragon-canvas',
+  recordHistory: false,
+
+  showActiveTooltip: true,  
+  paddingTop: '0px',
+  paddingBottom: '0px',
+  fixedElements: '#section-header, .footer',  
+  parallax: true,
+  parallaxOptions: {type: 'cover', percentage: 20, property: 'translate'},
+  parallaxKey: 'bGRsLmxpYi5sc3UuZWR1XzlsNWNHRnlZV3hzWVhnPTdJSQ==',
+
+});
+
 $('#fullpage').fullpage({//initiates fullpage
   //Navigation
   menu: '#menu',
   lockAnchors: false,
   anchors:['Home', 'About'],
-  navigation: true,
+  navigation: false,
   navigationPosition: 'top',
   navigationTooltips: ['Home', 'About'],
   showActiveTooltip: true,
@@ -122,7 +144,7 @@ $('#fullpage').fullpage({//initiates fullpage
   //Scrolling
   css3: true,
   scrollingSpeed: 700,
-  autoScrolling: true,
+  autoScrolling: false,
   fitToSection: true,
   fitToSectionDelay: 1000,
   scrollBar: false,
@@ -165,7 +187,7 @@ $('#fullpage').fullpage({//initiates fullpage
   responsiveHeight: 500,
   responsiveSlides: false,
   parallax: true,
-  parallaxOptions: {type: 'cover', percentage: 18, property: 'translate'},
+  parallaxOptions: {type: 'cover', percentage: 20, property: 'translate'},
   parallaxKey: 'bGRsLmxpYi5sc3UuZWR1XzlsNWNHRnlZV3hzWVhnPTdJSQ==',
 
   //Custom selectors
@@ -189,8 +211,8 @@ $('div.fp-tooltip.top').each(function() {
   $(this).next().remove();
 });//fp nav changes
 
-
-$('#logo').css('display, none');
+//$('#fp-nav li:nth-child(1) a:nth-child(1)').append('<i class="fa fa-cube" aria-hidden="true"></i>');
+//adds icons
 
 $('body').addClass(ns + 'Theme institution');
   var url = window.location.pathname;
