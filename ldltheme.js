@@ -112,8 +112,8 @@ $('#fullpage').fullpage({//initiates fullpage
   menu: '#menu',
   lockAnchors: false,
   anchors:['Home', 'About'],
-  navigation: false,
-  navigationPosition: 'right',
+  navigation: true,
+  navigationPosition: 'top',
   navigationTooltips: ['Home', 'About'],
   showActiveTooltip: true,
   slidesNavigation: false,
@@ -182,6 +182,15 @@ $('#fullpage').fullpage({//initiates fullpage
   afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
   onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
 });
+
+$('div.fp-tooltip.top').each(function() {
+  var ps = $(this).prev();
+  $(this).prependTo(ps);
+  $(this).next().remove();
+});//fp nav changes
+
+
+$('#logo').css('display, none');
 
 $('body').addClass(ns + 'Theme institution');
   var url = window.location.pathname;
