@@ -21,6 +21,11 @@ if ( $( "#messages" ).length ) {
      $( "#page" ).addClass('largeImage');
  }//detects and assigns large image viewer class
 
+ if ( $( "#block-islandora-compound-object-compound-navigation" ).length ) {
+     $( "#page" ).addClass('compoundObject');
+ }//detects and assigns large image viewer class
+
+
 if ( $( ".front" ).length ) { 
      $('.menu').find('.active').parent().addClass('active-trail');
  }//allows home menu navigation to lightup
@@ -63,7 +68,7 @@ $('.islandora-large-image-metadata').addClass('section metadata').insertBefore('
 $('.prevnext').wrapAll('<div class="prevnextContainer"/>');
 
 $('.prevnextContainer').addClass('section fp-auto-height').insertBefore('#region-footer-first');
-$('.block-islandora-compound-object-compound-navigation').addClass('section fp-auto-height').insertBefore('.metadata');
+$('.block-islandora-compound-object-compound-navigation').appendTo('.region-content');
 
 
 $('.zone-content > div').not('#messages').addClass('section');//prepares content region for fullpage slide

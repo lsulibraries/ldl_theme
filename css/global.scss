@@ -275,7 +275,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .region-inner.region-content-inner {
   position: relative;
-  margin: 100px 40px 40px 40px;
+  margin: 0px 40px 40px 40px;
   color: $mainText;
     padding: 1px 1px 1px 1px;
     background: #3e4352;
@@ -522,7 +522,7 @@ h2.site-name a {
 }
 
 #section-header {
-  position: absolute;
+  position: fixed;
   background: $header;
   z-index: 2;
   width: 100%;
@@ -1063,7 +1063,7 @@ h2.node-title, h2.node-title a {
 
  .largeImage .region-inner.region-content-inner{
   width: 50%;
-  margin: 100px 260px 0px 260px;
+  margin: 0px 260px 0px 260px;
     height: calc(70vh - 100px);
 }  
 
@@ -1147,7 +1147,7 @@ body.no-sidebars .islandora-large-image-content {
 
 .largeImage .region-inner.region-content-inner{
   width: 50%;
-  margin: 100px 260px 0px 260px;
+  margin: 0px 260px 0px 260px;
     height: 70vh;  
 }
 
@@ -1183,6 +1183,33 @@ a#clip {
 
 
 /*compound object styles*/
+
+.compoundObject{
+  .islandora-openseadragon {
+  display: block;
+  width: 100%;
+    height: calc(50vh - 51px);
+  background: black;    
+  }
+
+.region-inner.region-content-inner.reveal {
+    margin-bottom: 119px;
+}
+
+  div#block-islandora-compound-object-compound-navigation {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  }
+
+  .region-inner.region-content-inner {
+  width: 50%;
+  margin: 0px 260px 0px 260px;
+  height: 50vh;
+  }
+}
+
+
 #block-islandora-compound-object-compound-navigation{
 
   .content.clearfix {
