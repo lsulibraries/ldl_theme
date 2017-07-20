@@ -138,6 +138,10 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
     z-index: 1;
 }
 
+.description {
+color: white;
+}
+
 .fp-bg {
   filter: blur(0px);
   transition: filter 2s linear;
@@ -1065,13 +1069,13 @@ h2.node-title, h2.node-title a {
  .largeImage .region-inner.region-content-inner{
   width: 50%;
   margin: 0px 260px 0px 260px;
-    height: calc(70vh - 100px);
+    height: calc(50vh - 100px);
 }  
 
 .islandora-openseadragon {
     display: block;
     width: 100%;
-    height: calc(70vh - 150px);
+    height: calc(50vh - 100px);
 }
 }
 
@@ -1122,8 +1126,7 @@ h2.node-title, h2.node-title a {
 .islandora-openseadragon {
   display: block;
   width: 100%;
-    height: calc(70vh - 51px);  
-
+    height: calc(50vh);  
     background: black;    
 }
 
@@ -1146,12 +1149,33 @@ body.no-sidebars .islandora-large-image-content {
     padding: 0px;
 }
 
-.largeImage .region-inner.region-content-inner{
+.largeImage{ 
+
+h1#page-title {
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    padding: 17px 16px 16px 16px;
+    margin: 0px;
+    width: 100%;
+    box-sizing: border-box;
+    left: -120px;
+    font-weight: 300;
+    position: absolute;
+    top: -81px;
+    z-index: 2;
+    border: 0px;
+    box-shadow: none;
+    background: transparent;
+}
+.region-inner.region-content-inner{
   width: 50%;
   margin: 0px 260px 0px 260px;
-    height: 70vh;  
+    height: 50vh;  
 }
-
+}
 
 a#clip {
     margin-left: 5px;
@@ -1189,7 +1213,7 @@ a#clip {
   .islandora-openseadragon {
   display: block;
   width: 100%;
-    height: calc(50vh - 51px);
+    height: 50vh;
   background: black;    
   }
 
@@ -1817,6 +1841,13 @@ color: $Yellow !important;
     position: absolute;
     top: 0px;
 }
+}
+
+td.glanceAbstract {
+    font-size: 16px;
+    position: absolute;
+    top: -30px;
+    left: -110px;
 }
 
 /*!

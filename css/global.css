@@ -25,6 +25,10 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   z-index: 1;
 }
 
+.description {
+  color: white;
+}
+
 .fp-bg {
   filter: blur(0px);
   transition: filter 2s linear;
@@ -890,12 +894,12 @@ h2.node-title, h2.node-title a {
 .logged-in .largeImage .region-inner.region-content-inner {
   width: 50%;
   margin: 0px 260px 0px 260px;
-  height: calc(70vh - 100px);
+  height: calc(50vh - 100px);
 }
 .logged-in .islandora-openseadragon {
   display: block;
   width: 100%;
-  height: calc(70vh - 150px);
+  height: calc(50vh - 100px);
 }
 
 .tabs ul.tabs.primary.clearfix {
@@ -942,7 +946,7 @@ h2.node-title, h2.node-title a {
 .islandora-openseadragon {
   display: block;
   width: 100%;
-  height: calc(70vh - 51px);
+  height: calc(50vh);
   background: black;
 }
 
@@ -965,10 +969,29 @@ body.no-sidebars .islandora-large-image-content {
   padding: 0px;
 }
 
+.largeImage h1#page-title {
+  font-size: 32px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+  padding: 17px 16px 16px 16px;
+  margin: 0px;
+  width: 100%;
+  box-sizing: border-box;
+  left: -120px;
+  font-weight: 300;
+  position: absolute;
+  top: -81px;
+  z-index: 2;
+  border: 0px;
+  box-shadow: none;
+  background: transparent;
+}
 .largeImage .region-inner.region-content-inner {
   width: 50%;
   margin: 0px 260px 0px 260px;
-  height: 70vh;
+  height: 50vh;
 }
 
 a#clip {
@@ -1002,7 +1025,7 @@ a#clip {
 .compoundObject .islandora-openseadragon {
   display: block;
   width: 100%;
-  height: calc(50vh - 51px);
+  height: 50vh;
   background: black;
 }
 .compoundObject #fullpage .reveal, .compoundObject #basicitem .reveal {
@@ -1600,6 +1623,13 @@ div#region-header-second #breadcrumb #fp-nav ul a {
   font-size: 30px;
   position: absolute;
   top: 0px;
+}
+
+td.glanceAbstract {
+  font-size: 16px;
+  position: absolute;
+  top: -30px;
+  left: -110px;
 }
 
 /*!

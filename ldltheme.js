@@ -88,6 +88,7 @@ $('.form-item-islandora-simple-search-query > input').each(function() {
 
 $('.metadata table tr td br').remove();
 $('.metadata td.modsTitle').clone().attr('class', 'tableTitle').appendTo('.metadata tbody');
+$('.metadata .abstract').clone().attr('class', 'glanceAbstract').appendTo('.region-content-inner');
 
 
 $('dl.islandora-basic-collection-object').each(function() {
