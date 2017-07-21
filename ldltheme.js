@@ -64,20 +64,14 @@ $("#region-footer-first").appendTo(".zone-content"); //becomes 2nd slide
 $('#block-islandora-solr-simple').clone().prop('id','block-islandora-solr-simple2').appendTo(".largeLogo"); //creates main search window
 $('.zone-content').not('.largeImage .zone-content').attr('id', 'fullpage');//prepares content region for fullpage instance
 $('.largeImage .zone-content').attr('id', 'basicitem');//prepares content region for fullpage instance
-
 $('.islandora-large-image-metadata').addClass('section metadata').insertBefore('#region-footer-first');//prepares slide for parallax bg
-
-$('.prevnext').wrapAll('<div class="prevnextContainer"/>');
-
-$('.prevnextContainer').addClass('section fp-auto-height').insertBefore('#region-footer-first');
-$('.block-islandora-compound-object-compound-navigation').appendTo('.region-content');
-
-
+$('.prevnext').wrapAll('<div class="prevnextContainer"/>'); //wraps prevnext
+$('.prevnextContainer').addClass('section fp-auto-height').insertBefore('#region-footer-first');//moves prevnext
+$('.block-islandora-compound-object-compound-navigation').appendTo('.region-content');//moves compoundobject navigation
 $('.zone-content > div').not('#messages').addClass('section');//prepares content region for fullpage slide
 $('.zone-content > footer').addClass('section');//prepares content region for fullpage slide
 $('#fullpage aside').remove();//removes asides that interfere with navigation when logged in
 $('#region-content, .metadata').prepend('<div class="fp-bg"></div>');//prepares slide for parallax bg
-//$('#region-footer-first').prepend('<div class="fp-bg"></div>');//prepares slide for parallax bg
 $("#region-content .fp-bg").delay(0).queue(function(next){
  $(this).addClass('blur');   
     next();
@@ -85,12 +79,12 @@ $("#region-content .fp-bg").delay(0).queue(function(next){
 $('.form-item-islandora-simple-search-query > input').each(function() {
   $(this).attr('placeholder', 'Search the LDL' );
 });//Adds Search text
+$('.metadata table tr td br').remove(); //removes br's from metadata table
+$('.metadata td.modsTitle').clone().attr('class', 'tableTitle').appendTo('.metadata tbody'); //at-a-glance title
 
-$('.metadata table tr td br').remove();
-$('.metadata td.modsTitle').clone().attr('class', 'tableTitle').appendTo('.metadata tbody');
-$('.metadata .abstract').clone().attr('class', 'glanceAbstract').appendTo('.region-content-inner');
-
-
+$('.largeImage .region-inner #page-title').wrap('<div class="glanceMeta"></div>');
+$('.metadata .dateCreated').clone().attr('class', 'glanceDate').appendTo('.glanceMeta');//at-a-glance date, needs to be truncated
+$('.metadata .abstract').clone().attr('class', 'glanceAbstract').appendTo('.glanceMeta');//at-a-glance description, needs to be truncated
 $('dl.islandora-basic-collection-object').each(function() {
   var ln = $(this).find("a").attr("href");
   var ti = $(this).find("a").attr("title");  
