@@ -55,7 +55,7 @@ $('span.islandora-basic-collection-item-count').each(function(i, el) {
 
 
 $('#region-footer-first').addClass('fp-auto-height');
-$('#block-delta-blocks-site-name').appendTo('.block-delta-blocks-logo .content');
+$('.region-inner > #block-delta-blocks-site-name').appendTo('.block-delta-blocks-logo .content');
 $('span.islandora-basic-collection-item-count').prependTo("#page-title"); //moves item count to page title
 //$("#logo > img").attr('src', 'http://i.imgur.com/24vAVba.png');//changes logo
 //$(".islandora-basic-collection-thumb > a > img").attr('src', 'http://i.imgur.com/f9AMXi3.png');//changes folder icon
@@ -83,6 +83,9 @@ $('.metadata table tr td br').remove(); //removes br's from metadata table
 $('.metadata td.modsTitle').clone().attr('class', 'tableTitle').appendTo('.metadata tbody'); //at-a-glance title
 
 $('.largeImage .region-inner #page-title').wrap('<div class="glanceMeta"></div>');
+$('.prevnextContainer').clone().attr('class', 'glancePrevNext').appendTo('#region-content .region-inner');
+
+
 $('.metadata .dateCreated').clone().attr('class', 'glanceDate').appendTo('.glanceMeta');//at-a-glance date, needs to be truncated
 $('.metadata .abstract').clone().attr('class', 'glanceAbstract').appendTo('.glanceMeta');//at-a-glance description, needs to be truncated
 $('dl.islandora-basic-collection-object').each(function() {
@@ -113,7 +116,7 @@ $('#basicitem').fullpage({
   navigationTooltips: ['item', 'metadata','related','footer'],
   normalScrollElements: 'header, .element2, .openseadragon-canvas',
   recordHistory: false,
-
+  autoScrolling: false,
   showActiveTooltip: true,  
   paddingTop: '0px',
   paddingBottom: '0px',
@@ -121,6 +124,7 @@ $('#basicitem').fullpage({
   parallax: true,
   parallaxOptions: {type: 'cover', percentage: 20, property: 'translate'},
   parallaxKey: 'bGRsLmxpYi5sc3UuZWR1XzlsNWNHRnlZV3hzWVhnPTdJSQ==',
+  fitToSection: false,
 
 });
 
@@ -250,6 +254,21 @@ $(".morelink").click(function(){
   return false;
 });
 // end show more script
+
+//begin show more script for glance
+var glanceChar = 84;  // How many characters are shown by default
+var moretext = "more";
+var lesstext = "Show less";
+$('.glanceAbstract').each(function() {
+  var content = $(this).html();
+  if(content.length > glanceChar) {
+      var c = content.substr(0, glanceChar);
+      var h = content.substr(glanceChar, content.length - glanceChar);
+      var html = c + ellipsestext + '<a href="#metadata" class="moreMetadata">' + moretext + '</a></span>';
+      $(this).html(html);
+  }
+});
+
 
 $(".sidebarLabel").click(function(){
     $("#block-islandora-solr-basic-facets").toggle();

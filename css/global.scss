@@ -329,7 +329,7 @@ h1#page-title {
     left: 0px;
     font-weight: 300;
     background: #3e4352;
-
+    line-height: 32px;
 }
 aside {
   display: none;
@@ -1159,12 +1159,10 @@ h1#page-title {
     align-items: center;
     padding: 0px;
     margin: 0px;
-    width: 100%;
+    width: calc(100% + 110px);
     box-sizing: border-box;
-    left: -120px;
-    font-weight: 300;
-    top: -81px;
-    z-index: 2;
+    position: absolute;
+    bottom: 30px;
     border: 0px;
     box-shadow: none;
     background: transparent;
@@ -1842,7 +1840,7 @@ color: $Yellow !important;
 }
 }
 
-.reveal .glanceMeta{
+.reveal .glanceMeta, .reveal .glancePrevNext{
     transform: translateX(-106px);
   -webkit-transition-duration: .3s; /* Safari */
     transition-duration: .3s;
@@ -1851,8 +1849,8 @@ color: $Yellow !important;
 .glanceMeta{
     font-size: 16px;
     position: absolute;
-    top: -84px;
-    height: 74px;
+    top: -154px;
+    height: 144px;
     left: 0px;
     letter-spacing: 2px;
     width: 100%;
@@ -1862,9 +1860,15 @@ color: $Yellow !important;
     align-items: flex-end;
     justify-content: flex-start;
     td.glanceAbstract {
-    font-size: 16px;
+    font-size: 14px;
     padding: 0px;
-    }
+    width: calc(100% - 130px);
+    line-height: 14px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    display: inline;    
+}
     td.glanceDate{
     color: #ffffff;
     padding: 0px 7px 0px 7px;
@@ -1875,8 +1879,50 @@ color: $Yellow !important;
   }
 
 
+span.morecontent > span{
+    display: none;
+}
 
 
+a.moreMetadata {
+    background: white;
+    padding: 2px 5px 2px 5px;
+    border-radius: 2px;
+    letter-spacing: 0px;
+    color: #333844;
+    font-weight: 700;
+    font-size: 11px;
+}
+
+.glancePrevNext{
+    position: absolute;
+    left: 0px;
+    display: flex;
+
+.prevnext {
+    padding: 10px 10px 0px 0px;
+    background: none;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+  figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    overflow: hidden;
+}
+figcaption {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+div.prevnext img {
+    height: 50px;
+    width: auto;
+}
+}
 
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
