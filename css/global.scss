@@ -1897,7 +1897,7 @@ a.moreMetadata {
 .glancePrevNext{
     position: absolute;
     bottom: 0px;
-    width: 100vw;
+    width: calc(100vw + 2px);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -1906,7 +1906,7 @@ a.moreMetadata {
     top: -20%;
 
 .prevnext {
-    padding: 10px 10px 0px 0px;
+    padding:0px;
     background: none;
     text-transform: uppercase;
     font-weight: 700;
@@ -1924,10 +1924,15 @@ a.moreMetadata {
     padding: 0px 10px;
     align-items: center;
     display: flex;
+    opacity: 0.6;
+    background: rgba(0, 0, 0, 0.29);    
     }
     a:hover{
     background: rgba(0, 0, 0, 0.45);
-
+  opacity: 1;
+    }
+    figcaption{
+      display: none;
     }
 
 }

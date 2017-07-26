@@ -94,6 +94,8 @@ $('dl.islandora-basic-collection-object').each(function() {
   $(this).wrap( "<a href="+ln+" title="+ti+"></a>");
 });//Wraps items to improve clickability
 
+$('.compoundObject div.prevnext:nth-child(1)').remove();
+
 
 $( "dt.islandora-basic-collection-thumb a[href$='%3Acollection']" ).parent().parent().parent().addClass('collectionLevel');
 
