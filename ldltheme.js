@@ -83,7 +83,7 @@ $('.metadata table tr td br').remove(); //removes br's from metadata table
 $('.metadata td.modsTitle').clone().attr('class', 'tableTitle').appendTo('.metadata tbody'); //at-a-glance title
 
 $('.largeImage .region-inner #page-title').wrap('<div class="glanceMeta"></div>');
-$('.prevnextContainer').clone().attr('class', 'glancePrevNext').appendTo('#region-content .region-inner');
+$('.prevnextContainer').clone().attr('class', 'glancePrevNext').insertBefore('.glanceMeta');
 
 
 $('.metadata .dateCreated').clone().attr('class', 'glanceDate').appendTo('.glanceMeta');//at-a-glance date, needs to be truncated
@@ -116,11 +116,11 @@ $('#basicitem').fullpage({
   navigationTooltips: ['item', 'metadata','related','footer'],
   normalScrollElements: 'header, .element2, .openseadragon-canvas',
   recordHistory: false,
-  autoScrolling: false,
+  autoScrolling: true,
   showActiveTooltip: true,  
   paddingTop: '0px',
   paddingBottom: '0px',
-  fixedElements: '#section-header, .footer',  
+  fixedElements: '',  
   parallax: true,
   parallaxOptions: {type: 'cover', percentage: 20, property: 'translate'},
   parallaxKey: 'bGRsLmxpYi5sc3UuZWR1XzlsNWNHRnlZV3hzWVhnPTdJSQ==',
@@ -258,7 +258,6 @@ $(".morelink").click(function(){
 //begin show more script for glance
 var glanceChar = 84;  // How many characters are shown by default
 var moretext = "more";
-var lesstext = "Show less";
 $('.glanceAbstract').each(function() {
   var content = $(this).html();
   if(content.length > glanceChar) {
