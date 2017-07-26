@@ -98,7 +98,7 @@ $('.compoundObject div.prevnext:nth-child(1)').remove();
 
 
 $( "dt.islandora-basic-collection-thumb a[href$='%3Acollection']" ).parent().parent().parent().addClass('collectionLevel');
-
+$('dd.solr-value.mods-subject-topic-ms').insertAfter(' > .mods-abstract-mt');
 
 $('.menu li').each(function() {
   var ln = $(this).find("a").attr("href");
@@ -108,6 +108,18 @@ $('.menu li').each(function() {
 
 var mainHeight = $('#block-system-main').height();
 
+
+var $grid = $('.islandora-solr-search-results').masonry({
+  // options...
+  itemSelector: '.islandora-solr-search-result',
+  columnWidth: 200
+});
+
+
+// layout Masonry after each image loads
+$grid.imagesLoaded().progress( function() {
+  $grid.masonry('layout');
+});
 
 $('#basicitem').fullpage({
   menu: '#menu',
@@ -130,7 +142,7 @@ $('#basicitem').fullpage({
 
 });
 
-$('#fullpage').fullpage({//initiates fullpage
+$('#fullpage').not('.page-islandora-search #fullpage').fullpage({//initiates fullpage
   //Navigation
   menu: '#menu',
   lockAnchors: false,
@@ -229,7 +241,7 @@ $('body').addClass(ns + 'Theme institution');
 }//logic for branded items and collection pages
 
 //begin show more script
-var showChar = 300;  // How many characters are shown by default
+var showChar = 100;  // How many characters are shown by default
 var ellipsestext = "...";
 var moretext = "Show more";
 var lesstext = "Show less";
@@ -253,20 +265,22 @@ $(".morelink").click(function(){
   }
   $(this).parent().prev().toggle();
   $(this).prev().toggle();
+  $grid.masonry('layout');
+
   return false;
 });
 // end show more script
 
 //begin show more script for glance
 var glanceChar = 84;  // How many characters are shown by default
-var moretext = "more";
+var glanceMore = "more";
 $('.glanceAbstract').each(function() {
-  var content = $(this).html();
-  if(content.length > glanceChar) {
-      var c = content.substr(0, glanceChar);
-      var h = content.substr(glanceChar, content.length - glanceChar);
-      var html = c + ellipsestext + '<a href="#metadata" class="moreMetadata">' + moretext + '</a></span>';
-      $(this).html(html);
+  var glanceContent = $(this).html();
+  if(glanceContent.length > glanceChar) {
+      var d = glanceContent.substr(0, glanceChar);
+      var i = glanceContent.substr(glanceChar, glanceContent.length - glanceChar);
+      var html2 = d + ellipsestext + '<a href="#metadata" class="moreMetadata">' + glanceMore + '</a></span>';
+      $(this).html(html2);
   }
 });
 
