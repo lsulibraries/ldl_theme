@@ -44,7 +44,21 @@ $(".page").children().not('#messages').click(function() {
   //$(this).css("backgroundImage","url("+src+")");
 //});
 
+$('dl.solr-fields').each(function() {
 
+  var da = $(this).children('dd.mods-origininfo-dateissued-ms');
+  var ti = $(this).children('dd.dc-title');
+  var ab = $(this).children('dd.mods-abstract-mt');
+  $(ab).insertAfter($(ti));
+    $(da).insertBefore($(ti));
+
+});
+
+$('dd.mods-subject-topic-ms').each(function(i, em) {
+  if($(em).html() != "" ) {
+    $(em).html($(em).html().replace(/,/ig, ""));
+  }
+}); //hides 'commas
 
 
 $('span.islandora-basic-collection-item-count').each(function(i, el) {
@@ -98,7 +112,10 @@ $('.compoundObject div.prevnext:nth-child(1)').remove();
 
 
 $( "dt.islandora-basic-collection-thumb a[href$='%3Acollection']" ).parent().parent().parent().addClass('collectionLevel');
-$('dd.solr-value.mods-subject-topic-ms').insertAfter(' > .mods-abstract-mt');
+$('dd.solr-value mods-abstract-mt').each(function(){
+  $(this).insertAfter('dd.solr-value dc-title');
+});
+
 
 $('.menu li').each(function() {
   var ln = $(this).find("a").attr("href");
@@ -112,7 +129,7 @@ var mainHeight = $('#block-system-main').height();
 var $grid = $('.islandora-solr-search-results').masonry({
   // options...
   itemSelector: '.islandora-solr-search-result',
-  columnWidth: 200
+  columnWidth: 210
 });
 
 
