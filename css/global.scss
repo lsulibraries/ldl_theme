@@ -1554,6 +1554,10 @@ tr:hover td, tr.even:hover td.active, tr.odd:hover td.active {
 
 .page-islandora-search{
 
+dd {
+    font-style: normal;
+}
+
 dd.solr-value.mods-origininfo-dateissued-ms {
 background: #ececec;
     color: #636363;
