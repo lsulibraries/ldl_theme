@@ -70,8 +70,16 @@ $('span.islandora-basic-collection-item-count').each(function(i, el) {
 
 $('#block-islandora-solr-basic-facets').prependTo('#region-content');
 $('#block-islandora-solr-sort').prependTo('#block-islandora-solr-basic-facets');
-$('#islandora-solr-result-count').appendTo('.breadcrumb li.last a');
-$('.breadcrumb li.depth-2 a').prependTo('.breadcrumb li.last a');
+$('.page-islandora-search #islandora-solr-result-count').appendTo('.page-islandora-search .breadcrumb li.last a');
+$('.page-islandora-search .breadcrumb li.depth-2 a').prependTo('.page-islandora-search .breadcrumb li.last a');
+
+$('.page-islandora-search .breadcrumb li.last a').each(function() {
+   var $this = $(this);       
+   var _href = $this.attr("href"); 
+   $this.attr("href", _href + '?type=dismax');
+});
+
+$('.page-islandora-search .breadcrumb li.last a a:nth-child(2)').remove();
 
 $('#region-footer-first').addClass('fp-auto-height');
 $('.region-inner > #block-delta-blocks-site-name').appendTo('.block-delta-blocks-logo .content');
@@ -263,7 +271,7 @@ $('body').addClass(ns + 'Theme institution');
 }//logic for branded items and collection pages
 
 //begin show more script
-var showChar = 100;  // How many characters are shown by default
+var showChar = 200;  // How many characters are shown by default
 var ellipsestext = "...";
 var moretext = "Show more";
 var lesstext = "Show less";
