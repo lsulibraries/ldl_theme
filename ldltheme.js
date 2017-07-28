@@ -68,6 +68,11 @@ $('span.islandora-basic-collection-item-count').each(function(i, el) {
 }); //hides 'items' string in number count, string is now in ::after so that it can be formatted
 
 
+$('#block-islandora-solr-basic-facets').prependTo('#region-content');
+$('#block-islandora-solr-sort').prependTo('#block-islandora-solr-basic-facets');
+$('#islandora-solr-result-count').appendTo('.breadcrumb li.last a');
+$('.breadcrumb li.depth-2 a').prependTo('.breadcrumb li.last a');
+
 $('#region-footer-first').addClass('fp-auto-height');
 $('.region-inner > #block-delta-blocks-site-name').appendTo('.block-delta-blocks-logo .content');
 $('span.islandora-basic-collection-item-count').prependTo("#page-title"); //moves item count to page title
