@@ -1538,7 +1538,7 @@ tr:hover td, tr.even:hover td.active, tr.odd:hover td.active {
   clear: both;
 }
 .page-islandora-search .islandora-solr-search-result {
-  width: 240px;
+  width: 200px;
   float: left;
   background: #1f1f1f;
   border: none;
@@ -1597,7 +1597,6 @@ tr:hover td, tr.even:hover td.active, tr.odd:hover td.active {
   width: 200px;
   border: 20px solid black;
   border-bottom: 0px;
-  box-sizing: content-box;
 }
 
 /*basic item*/
