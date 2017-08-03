@@ -142,7 +142,7 @@ var mainHeight = $('#block-system-main').height();
 var $grid = $('.islandora-solr-search-results').masonry({
   // options...
   itemSelector: '.islandora-solr-search-result',
-  columnWidth: 210,
+  columnWidth: 250,
   horizontalOrder: false
 });
 
