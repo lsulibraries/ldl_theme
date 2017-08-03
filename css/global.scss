@@ -1552,7 +1552,14 @@ tr:hover td, tr.even:hover td.active, tr.odd:hover td.active {
 
 /*search results*/
 
+.listMode .page-islandora-search{
+  
+}
+
 .page-islandora-search{
+
+
+
 
 div#region-footer-first {
     overflow: hidden;
@@ -1701,6 +1708,7 @@ div#islandora-solr-result-count {
 
 #fullpage .reveal, #basicitem .reveal {
     margin-top: 0px;
+    margin-bottom:40px;
 }
 
 #page-title, #block-system-navigation {

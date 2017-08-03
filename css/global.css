@@ -61,13 +61,13 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
 }
 
 #region-content {
-  background-image: url("http://i.imgur.com/3Ct4x3E.jpg");
+  background-image: url("http://i.imgur.com/ivxjYi2.jpg");
   background-size: cover;
   background-position: center 80%;
 }
 
 #region-content .fp-bg {
-  background-image: url("https://images.unsplash.com/45/tkLOe7nnQ7mnMsiuijBy_hm.jpg");
+  background-image: url("http://i.imgur.com/ivxjYi2.jpg");
   background-size: cover;
   background-position: center 80%;
 }
@@ -1418,7 +1418,7 @@ tr:hover td, tr.even:hover td.active, tr.odd:hover td.active {
   margin-left: 0px;
 }
 .page-islandora-search #region-content {
-  background-image: url(http://i.imgur.com/3Ct4x3E.jpg);
+  background-image: url(http://i.imgur.com/gZ9LK1M.jpg);
   background-size: cover;
   background-position: center 80%;
   background-attachment: fixed;
@@ -1435,6 +1435,7 @@ tr:hover td, tr.even:hover td.active, tr.odd:hover td.active {
 }
 .page-islandora-search #fullpage .reveal, .page-islandora-search #basicitem .reveal {
   margin-top: 0px;
+  margin-bottom: 40px;
 }
 .page-islandora-search #page-title, .page-islandora-search #block-system-navigation {
   display: none;
