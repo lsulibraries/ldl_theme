@@ -6,6 +6,31 @@
 
 @import "https://fonts.googleapis.com/css?family=Open+Sans|Roboto:100,300,400,600,700";
 
+
+$topheader: #313133;
+$subheader: #363638;
+$gold: #fff3b2;
+
+/*Institutional Colors*/
+
+$lsmColor: #5d0e8b;
+$lsuColor: #461D7C;
+$lsusColor: #ffffff;
+$lsuhscColor: #ffffff;
+$lsuhscsColor: #ffffff;
+$latechColor: #003087;
+$loynoColor: #660000;
+$mcneeseColor: #00529b;
+$nichollsColor: #ae132a;
+$nsuColor: #663399;
+$subrColor: #75B2DD;
+$stateColor: #edba51;
+$hnocColor: #254550;
+$tulaneColor: #032a17;
+$ullColor: #a00b0b;
+$ulmColor: #800029;
+$unoColor: #003056;
+
 /* global styles */
 
 html, body {
@@ -45,6 +70,16 @@ li a.active {
   color: #676767;
 }
 
+
+div#breadcrumb {
+    display: flex;
+    align-items: center;
+
+    span.islandora-solr-breadcrumb-super {
+    display: none;
+}
+}
+
 #region-sidebar-second {
   display: none;
 }
@@ -59,12 +94,49 @@ span.bold {
   font-weight: 700;
 }
 
+.front{
+  .region-header-second-inner {
+    justify-content: flex-end !important;
+}
+}
+
+/*Institutional Page*/
+
+.institution-logo img {
+    max-width: 33vw !important;
+}
+
+ul.institution-collection-list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;    
+}
+
+.institution-collection-list-header {
+    position: absolute;
+}
+
+li.institution-collection-list-item a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+}
+
+li.institution-collection-list-item a::before {
+  content: "";
+  background-image: url('http://i.imgur.com/XOigH4V.png');
+  width: 128px;
+  height: 128px;
+  display: block;
+}
+
+
 /*Top Search Bar*/
-  #zone-header{
-input {
-
-
-  &#edit-islandora-simple-search-query.form-text, &#edit-islandora-simple-search-query--2 {
+  #zone-header, #region-header-first{
+    input {
+    &#edit-islandora-simple-search-query.form-text, &#edit-islandora-simple-search-query--2 {
     -webkit-appearance: none;
     -moz-border-radius: 0;
     -webkit-border-radius: 0;
@@ -75,7 +147,7 @@ input {
     -moz-background-clip: padding;
     -webkit-background-clip: padding;
     background-clip: padding-box;
-    background-color: rgba(0, 0, 0, 0);
+    background-color: transparent;
     border-right: 1px solid #808080;
     color: #adadad;
     outline: 0;
@@ -83,14 +155,13 @@ input {
     font-size: 15px;
     font-family: Roboto, Arial, sans-serif;
     font-weight: 300;
-    height: 30px;
+    height: 100%;
     width: calc(100% - 64px);
-    border-top-width: 0px;
     border-bottom-width: 0px;
-    border-right-width: 1px;
-    border-left-width: 0px;
-  }
-  &#edit-submit.form-submit, &#edit-submit--2.form-submit, &#edit-submit--3.form-submit {
+    border: 0px;
+    padding-left: 20px;
+    }
+    &#edit-submit.form-submit, &#edit-submit--2.form-submit, &#edit-submit--3.form-submit, &#edit-submit--4.form-submit {
     -webkit-appearance: none;
     -moz-border-radius: 11px;
     -webkit-border-radius: 11px;
@@ -112,7 +183,7 @@ input {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 20px 20px;
-  }
+    }
 }
 }
 
@@ -308,6 +379,7 @@ a.islandora-pdf-link {
   font-size: 14px;
   letter-spacing: 1px;
   position: absolute;
+  display: none;
 }
 
 .page-islandora-object #page-title-header, .page-node #page-title-header {
@@ -346,9 +418,8 @@ a.islandora-pdf-link {
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   margin: 0px;
-  height: 59px;
 }
 
 #region-content {
@@ -365,6 +436,8 @@ a.islandora-pdf-link {
   display: flex;
   align-items: center;
   height: 100%;
+    justify-content: space-between;  
+    min-height: 40px;    
 }
 
 .sidebarLabel {
@@ -386,7 +459,7 @@ a.islandora-pdf-link {
 }
 
 #region-header-first {
-  width: 25%;
+  width: 100%;
   padding: 0px;
   margin: 0px;
   display: -webkit-box;
@@ -395,6 +468,8 @@ a.islandora-pdf-link {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+      background-color: $topheader;
+
 }
 
 div.region-inner.region-header-first-inner {
@@ -403,8 +478,10 @@ div.region-inner.region-header-first-inner {
   display: -ms-flexbox;
   display: flex;
   align-items: center;
-  height: 100%;
+  width: 100%;
   padding-left: 20px;
+    height: 60px;  
+justify-content: space-between;    
 }
 
 #block-islandora-solr-basic-facets {
@@ -455,7 +532,7 @@ div.region-inner.region-header-first-inner {
   width: 100%;
   margin: 0px;
   padding: 0px;
-  height: 59px;
+background-color: $subheader;
 }
 
 #region-sidebar-first {
@@ -481,19 +558,14 @@ div.region-inner.region-header-first-inner {
   flex-direction: row;
 }
 
-#breadcrumb {
-  width: 100%;
-  margin: 0px;
-  background-color: rgba(255, 255, 255, 0.5);
-}
 
 .breadcrumb {
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 12px;
-  padding: 18px;
-  padding-left: 50px;
-  float: left;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 12px;
+    padding-left: 20px;
+    float: left;
+    margin: 0px;
 }
 
 .islandora-solr-sort a {
@@ -520,6 +592,27 @@ div.breadcrumb a {
 
 #breadcrumb .islandora-solr-breadcrumb-super a {
   color: #ff7777;
+}
+
+#breadcrumb{
+  li a.active {
+  color: $gold;
+    font-weight: 500;  
+  }    
+
+  a:link, a:visited {
+  color: white;
+  text-decoration: none;
+  }
+
+  .breadcrumb li {
+  margin-right: 1em;
+  }
+
+  .breadcrumb{
+    padding-bottom: 0px;
+  }
+
 }
 
 .Dark > body {
@@ -619,6 +712,9 @@ dd {
   justify-content: center;
   float: left;
   padding-right: calc(20% - 260px);
+    position: absolute;
+    left: 70px;
+
 }
 
 #zone-branding {}
@@ -687,9 +783,14 @@ dd {
 /* Simple Search */
 
 #block-islandora-solr-simple {
-  margin-left: 85px;
-  border: 1px solid #808080;
-  width: calc(100% - 600px);
+    margin-left: 85px;
+    border: 0px;
+    width: 300px;
+    background: #151515;
+    height: 40px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-right: 10px;    
 }
 
 .page-islandora-search #block-islandora-solr-simple {
@@ -1047,13 +1148,14 @@ div.item-list:nth-child(2) {
 }
 
 .page-islandora-search #header-result-count {
-  display: block;
-  color: #6b6b6b;
-  letter-spacing: 2px;
-  font-weight: 400;
-  padding: 20px;
-  font-size: 10px;
-  text-align: end;
+    display: block;
+    color: #ffffff;
+    letter-spacing: 1px;
+    font-size: 11px;
+    border-radius: 5px;
+    padding: 3px 8px;
+    border: 1px solid rgba(255, 255, 255, 0.27);
+    font-weight: 900;
 }
 
 #islandora-solr-top {
@@ -1392,11 +1494,6 @@ dd.solr-value {
 }
 
 #region-content::before {
-  -webkit-animation: snow 15s linear infinite;
-  -moz-animation: snow 15s linear infinite;
-  -ms-animation: snow 15s linear infinite;
-  animation: snow 15s linear infinite;
-  background: url(http://i.imgur.com/wZMyixH.png) repeat;
   content: "";
   position: fixed;
   top: -100%;
@@ -1891,78 +1988,6 @@ div {
   }
 }
 
-.page-islandora-object .region-header-second-inner::after {
-  content: 'Item Level';
-  position: absolute;
-  z-index: 3;
-  width: 160px;
-  margin-left: 50px;
-  margin-bottom: 0px;
-  text-align: center;
-  line-height: 0px;
-  color: #f0f0f0;
-  font-weight: 300;
-  text-transform: uppercase;
-  font-size: 14px;
-  letter-spacing: 1px;
-  left: 0px;
-  top: 29px;
-}
-
-.unoTheme .page-islandora-object .region-header-second-inner::after {
-  content: 'Item Level';
-  position: absolute;
-  z-index: 3;
-  width: 160px;
-  margin-left: 50px;
-  margin-bottom: 0px;
-  text-align: center;
-  line-height: 0px;
-  color: black;
-  font-weight: 300;
-  text-transform: uppercase;
-  font-size: 14px;
-  letter-spacing: 1px;
-  left: 0px;
-  top: 29px;
-}
-
-html .page-islandora-object-lsu-p15140coll12collection .region-header-second-inner::after {
-  content: 'Andrew D. Lytle Baton Rouge Photograph Collection';
-  position: absolute;
-  z-index: 3;
-  width: 160px;
-  margin-left: 50px;
-  margin-bottom: 0px;
-  text-align: left;
-  line-height: 10px;
-  color: #f0f0f0;
-  font-weight: 300;
-  text-transform: uppercase;
-  font-size: 10px;
-  letter-spacing: 1px;
-  left: 18px;
-  top: 15px;
-}
-
-.context-collections .region-header-second-inner::after {
-  content: 'Collection About';
-  position: absolute;
-  z-index: 3;
-  width: 160px;
-  margin-left: 50px;
-  margin-bottom: 0px;
-  text-align: center;
-  line-height: 0px;
-  color: #f0f0f0;
-  font-weight: 300;
-  text-transform: uppercase;
-  font-size: 14px;
-  letter-spacing: 1px;
-  left: 0px;
-  top: 29px;
-}
-
 #clip {
   display: none;
 }
@@ -2135,6 +2160,10 @@ html .page-islandora-object-lsu-p15140coll12collection .region-header-second-inn
     font-size: 20px;
     background-position-x: 0px;
     opacity: 1;
+
+position: absolute;
+    left: 60px;
+    top: 16px;        
   }
   #zone-header {
     background-color: #032a17;
@@ -2164,6 +2193,10 @@ html .page-islandora-object-lsu-p15140coll12collection .region-header-second-inn
     font-size: 20px;
     background-position-x: 0px;
     opacity: 1;
+
+position: absolute;
+    left: 60px;
+    top: 16px;        
   }
   #zone-header {
     background-color: #004C99;
@@ -2178,7 +2211,7 @@ html .page-islandora-object-lsu-p15140coll12collection .region-header-second-inn
 }
 
 .institution {
-  .site-name a, #block-delta-blocks-site-name, .logo-img {
+  #block-delta-blocks-site-name {
     display: none;
   }
 }
@@ -2206,6 +2239,10 @@ html .page-islandora-object-lsu-p15140coll12collection .region-header-second-inn
     font-size: 20px;
     background-position-x: 0px;
     opacity: 1;
+
+position: absolute;
+    left: 60px;
+    top: 16px;        
   }
 }
 
@@ -2232,6 +2269,10 @@ html .page-islandora-object-lsu-p15140coll12collection .region-header-second-inn
     font-size: 20px;
     background-position-x: 0px;
     opacity: 1;
+
+position: absolute;
+    left: 60px;
+    top: 16px;        
   }
 }
 
@@ -2279,6 +2320,10 @@ html .page-islandora-object-lsu-p15140coll12collection .region-header-second-inn
   font-size: 20px;
   background-position-x: 0px;
   opacity: 1;
+position: absolute;
+    left: 60px;
+    top: 16px;    
+
 }
 
 .landingMessage {
@@ -2289,7 +2334,7 @@ html .page-islandora-object-lsu-p15140coll12collection .region-header-second-inn
   .region-header-first-inner::after {
     content: " ";
     color: white;
-    background-image: url(http://grfx.cstv.com/schoolslt/latc/graphics/logos/latc-state-t.gif);
+    background-image: url(http://i.imgur.com/YoY9AOr.png);
     background-size: contain;
     width: 140px;
     height: 30px;
@@ -2301,13 +2346,9 @@ html .page-islandora-object-lsu-p15140coll12collection .region-header-second-inn
     font-size: 20px;
     background-position-x: 0px;
     opacity: 1;
-  }
-  #zone-header {
-    background-color: #000092;
-  }
-  #block-block-4 {
-    background-color: #ed1e24;
-    color: #ed1e24;
+position: absolute;
+    left: 60px;
+    top: 16px;    
   }
   .page-islandora-object div.region-header-second-inner::after {
     color: #000092;
@@ -2468,6 +2509,7 @@ html .page-islandora-object-lsu-p15140coll12collection .region-header-second-inn
     width: 100%;
     margin: 0px;
     height: 40px;
+
   }
   .page-browse-collections .landingHero {
     height: 480px;
@@ -2663,7 +2705,6 @@ html .page-islandora-object-lsu-p15140coll12collection .region-header-second-inn
       justify-content: center;
     }
     #zone-header {
-      background-color: #1a1a1a;
       width: 100%;
       display: -webkit-box;
       display: -moz-box;
@@ -2694,6 +2735,7 @@ html .page-islandora-object-lsu-p15140coll12collection .region-header-second-inn
     .page-browse-collections {
       #region-header-first {
         justify-content: center;
+
       }
       .bookmarkWelcome {
         display: flex;
@@ -2711,9 +2753,6 @@ html .page-islandora-object-lsu-p15140coll12collection .region-header-second-inn
       width: calc(100% - 20px);
     }
     .page-browse-collections {
-      #breadcrumb {
-        background-color: rgba(0, 0, 0, 0.75);
-      }
       .bookmark {
         display: none;
       }

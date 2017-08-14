@@ -7,9 +7,9 @@
 /*End ScrollReveal*/
 
 
-$("#region-header-first").on('click', function(){
-     window.location = "../";    
-});
+//$("#region-header-first").on('click', function(){
+  //   window.location = "../";    
+//});
 
 
 
@@ -53,7 +53,6 @@ $("#region-header-first").on('click', function(){
       $("#sideMods div:nth-child(1)").appendTo("#sideMods");
       $(".islandora-pdf-metadata").appendTo(".islandora-pdf-content");
       $(".islandora-large-image-metadata").appendTo(".islandora-large-image-content");
-      $("#breadcrumb").prependTo(".region-content-inner");
       $("#islandora-solr-result-count").prop({ id: "header-result-count"}).appendTo("#breadcrumb");
       $("#region-content div.tabs.clearfix").prependTo("#block-system-main");
       $(".bookmark").prependTo("#breadcrumb");
@@ -114,7 +113,7 @@ $("#region-header-first").on('click', function(){
 //var newHeight = $( document ).height();
 //$(".page-islandora-object .region-content-inner").height(newHeight);
 
-      $('#edit-simple input[type=text]').each(function() {
+      $('input#edit-islandora-simple-search-query').each(function() {
 
       $(this).attr('placeholder', 'Search LDL...' );
       });
