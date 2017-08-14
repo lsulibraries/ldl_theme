@@ -671,7 +671,7 @@ min-height: calc(100vh - 59px);
   opacity: 0.8;
 }
 
-.logo-img: hover {
+.logo-img hover {
   opacity: 1.0;
 }
 
