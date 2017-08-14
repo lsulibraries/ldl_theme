@@ -102,8 +102,30 @@ span.bold {
 
 /*Institutional Page*/
 
+.institution-title {
+    display: none;
+} //temporary
+
+.institution-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.institution-logo {
+    padding-right: 40px;
+}
+
+.latechTheme {
+  .institution-header {
+  background: $latechColor;
+    color: rgba(255, 255, 255, 0.74);
+  }
+}
+
 .institution-logo img {
-    max-width: 33vw !important;
+    max-width: 25vw !important;
 }
 
 ul.institution-collection-list {
@@ -121,18 +143,82 @@ li.institution-collection-list-item a {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 30px;
+    margin: 20px;
+    color: #474747;
+    width: 190px;
+    font-size: 14px;
+    line-height: 16px;    
 }
 
 li.institution-collection-list-item a::before {
-  content: "";
-  background-image: url('http://i.imgur.com/XOigH4V.png');
-  width: 128px;
-  height: 128px;
-  display: block;
+    content: "";
+    background-image: url(http://i.imgur.com/QwO6pT6.png);
+    width: 128px;
+    height: 128px;
+    display: block;
+    background-size: 90px auto;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
+.institution-about {
+    border-left: 1px solid rgba(255, 255, 255, 0.12);
+    padding-left: 20px;
+    font-size: 12px;
+    line-height: 15px;
+}
 
+.institution-search{
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -32px;
+
+    label{
+      display: none;
+    }
+
+    input[type="text"]{
+    -webkit-appearance: none;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding;
+    background-clip: padding-box;
+    background-color: #fff;
+    border: 2px solid #003087;
+    border-color: inherit;
+    color: #003087;
+    outline: 0;
+    padding: 2px 3px;
+    font-size: 23px;
+    font-family: Arial, sans-serif;
+    height: 40px;
+    border-radius: 4px;
+    }
+
+    input[type="submit"]{
+    position: relative;
+    left: -70px;
+    background: none;
+    border: none;
+    }
+
+    .form-item, .form-actions {
+    display: inline-block;
+    }
+
+    .institution-about {
+        border-left: 1px solid rgba(255, 255, 255, 0.27);
+        padding-left: 20px;
+    }
+}
 /*Top Search Bar*/
   #zone-header, #region-header-first{
     input {
@@ -324,7 +410,7 @@ a.islandora-pdf-link {
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #adadad;
-  font-size: 10px;
+  font-size: 11px;
 }
 
 /*parallelogram*/
@@ -562,7 +648,7 @@ background-color: $subheader;
 .breadcrumb {
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-size: 12px;
+    font-size: 11px;
     padding-left: 20px;
     float: left;
     margin: 0px;
