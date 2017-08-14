@@ -60,9 +60,11 @@ span.bold {
 }
 
 /*Top Search Bar*/
-
+  #zone-header{
 input {
-  &#edit-islandora-simple-search-query.form-text {
+
+
+  &#edit-islandora-simple-search-query.form-text, &#edit-islandora-simple-search-query--2 {
     -webkit-appearance: none;
     -moz-border-radius: 0;
     -webkit-border-radius: 0;
@@ -111,6 +113,7 @@ input {
     background-position: center;
     background-size: 20px 20px;
   }
+}
 }
 
 .islandora-compound-thumb {
