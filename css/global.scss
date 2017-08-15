@@ -31,6 +31,65 @@ $ullColor: #a00b0b;
 $ulmColor: #800029;
 $unoColor: #003056;
 
+$lsmLogo: 'http://i.imgur.com/Sz5sguM.png';
+$lsuLogo: 'http://reu.cct.lsu.edu/documents/logos/LSU_Gold_CMYK.png';
+$lsusLogo: 'http://www.lsus.edu/Images/Offices%20and%20Services/HR/LSUS%20Logo%2011102015.png';
+$lsuhscLogo: 'http://i.imgur.com/FQdHpzz.png';
+$lsuhscsLogo: 'http://i.imgur.com/1lqbxiy.png';
+$latechLogo: 'http://grfx.cstv.com/schoolslt/latc/graphics/logos/latc-state-t.gif';
+$loynoLogo: 'http://i.imgur.com/wsbykd6.png';
+$mcneeseLogo: 'http://mcneesesports.com/images/header_logo.png';
+$nichollsLogo: 'http://i.imgur.com/rGvlEDN.png';
+$nsuLogo: 'https://www.nsula.edu/wp-content/uploads/Seal.png';
+$subrLogo: 'http://i.imgur.com/pNgJAG2.png';
+$stateLogo: 'http://i.imgur.com/y1H8EGr.png';
+$hnocLogo: 'http://i.imgur.com/lRaktDw.png';
+$tulaneLogo: 'http://i.imgur.com/geTKaHp.png';
+$ullLogo: 'http://i.imgur.com/aqD5A3q.png';
+$ulmLogo: 'http://www.ulm.edu/opi/logos/academics/ulm_lettermark_fullname/png/ulm_lettermark_fullname-white.png';
+$unoLogo: 'http://i.imgur.com/RWmzrPG.png';
+
+
+/* mixins */
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+@mixin gradientFirst() {
+  background: -moz-linear-gradient(top, #3e4352 0%, #272b34 100%);
+  background: -webkit-linear-gradient(top, #3e4352 0%,#272b34 100%);
+  background: linear-gradient(to bottom, #3e4352 0%,#272b34 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3e4352', endColorstr='#272b34',GradientType=0 );
+}
+
+@mixin gradientImage(){
+    background-image: url(http://i.imgur.com/PuUOH7M.png);
+    background-size: contain;
+}
+
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $color;
+    -moz-box-shadow:inset $top $left $blur $color;
+    box-shadow:inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+  }
+}
+
+@mixin transition-duration($duration) {
+    -moz-transition-duration:    $duration;
+    -o-transition-duration:      $duration;
+    -webkit-transition-duration: $duration;
+    transition-duration:         $duration;
+}
+
 /* global styles */
 
 html, body {
@@ -120,7 +179,7 @@ span.bold {
 }
 
 .institution-logo {
-    padding-right: 40px;
+    padding-right: 20px;
 }
 
 .latechTheme {
@@ -139,7 +198,12 @@ span.bold {
     }
 
   form#islandora-collection-search-form {
-  border: 2px solid #003087;
+    border: 2px solid $latechColor;
+}
+
+.institution-search input[type="text"]{
+      border: 2px solid $latechColor;
+
 }
 
 }
@@ -195,6 +259,11 @@ li.institution-collection-list-item a::before {
     padding-left: 20px;
     font-size: 12px;
     line-height: 20px;
+
+
+         p{
+          max-width: 800px;
+        }    
 }
 
   ul.child-institution-collection-list {
@@ -301,9 +370,145 @@ li.institution-collection-list-item a::before {
         border-left: 1px solid rgba(255, 255, 255, 0.27);
         padding-left: 20px;
     }
+
 }
 
 
+//Institution List
+
+/*institution list*/
+
+#block-block-11{
+  display: flex;
+  align-items: center;
+
+  .content p {
+  width: 1000px;
+  height: 120px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px;
+  }
+
+  a.institutionLink:hover {
+    opacity: 1;
+    @include transition-duration(0s);        
+  }
+
+  a.institutionLink {
+  width: 100px;
+    height: 60px;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0px 1px 1px 0px;  
+  background-size: 70px auto;  
+  opacity: 0.7;
+    @include transition-duration(.5s);      
+  }  
+
+  a.institutionLink.lsmLink {
+    background-color: $lsmColor;
+    background-image: url($lsmLogo);
+    background-size: 40px auto;    
+
+  }  
+
+
+  a.institutionLink.lsuLink {
+    background-color: $lsuColor;
+    background-image: url($lsuLogo);
+    background-size: 50px auto;    
+  }  
+
+
+  a.institutionLink.lsusLink {
+    background-color: $lsusColor;
+    background-image: url($lsusLogo);
+  }  
+
+
+  a.institutionLink.lsuhscLink {
+    background-color: $lsuhscColor;
+    background-image: url($lsuhscLogo);
+  }  
+
+
+  a.institutionLink.lsuhscsLink {
+    background-color: $lsuhscsColor;
+    background-image: url($lsuhscsLogo);
+  }  
+
+  a.institutionLink.latechLink {
+    background-color: $latechColor;
+    background-image: url($latechLogo);
+    background-size: 40px auto;    
+  }  
+
+  a.institutionLink.loynoLink {
+    background-color: $loynoColor;
+    background-image: url($loynoLogo);
+    background-size: 40px auto;    
+  }  
+
+  a.institutionLink.mcneeseLink {
+    background-color: $mcneeseColor;
+    background-image: url($mcneeseLogo);
+  }  
+
+  a.institutionLink.nichollsLink {
+    background-color: $nichollsColor;
+    background-image: url($nichollsLogo);
+  }    
+
+  a.institutionLink.nsuLink {
+    background-color: $nsuColor;
+    background-image: url($nsuLogo);
+    background-size: 40px auto;    
+  }  
+
+  a.institutionLink.subrLink {
+    background-color: $subrColor;
+    background-image: url($subrLogo);
+  }  
+
+  a.institutionLink.stateLink {
+    background-color: $stateColor;
+    background-image: url($stateLogo);
+    background-size: 40px auto;    
+  }  
+
+  a.institutionLink.hnocLink {
+    background-color: $hnocColor;
+    background-image: url($hnocLogo);
+  }  
+
+  a.institutionLink.tulaneLink {
+    background-color: $tulaneColor;
+    background-image: url($tulaneLogo);
+  }  
+
+
+  a.institutionLink.ullLink {
+    background-color: $ullColor;
+    background-image: url($ullLogo);
+  }  
+
+  a.institutionLink.ulmLink {
+    background-color: $ulmColor;
+    background-image: url($ulmLogo);
+  }    
+
+  a.institutionLink.unoLink {
+    background-color: $unoColor;
+    background-image: url($unoLogo);
+  }  
+
+
+
+
+
+}
 
 
 
@@ -312,12 +517,13 @@ li.institution-collection-list-item a::before {
 .collectionPage{
 
     .collectionLogo {
-    width: 800px;
+    width: 200px;
     height: 200px;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
     margin: 20px;
+
     }
 
     #page-title{
@@ -349,12 +555,13 @@ li.institution-collection-list-item a::before {
     display: flex;
     align-items: center;
     padding: 20px;
-
+    justify-content: center;
     p{
       margin: 0px;
     border-left: 1px solid rgba(255, 255, 255, 0.21);
     padding-left: 20px;  
-    padding-bottom: 20px;    
+    padding-bottom: 20px;
+    max-width: 800px;    
     }
   }
 
@@ -416,6 +623,11 @@ li.institution-collection-list-item a::before {
 }
 
 //Begin repository styles
+
+
+.item-list {
+    margin: 10px;
+}
 
 #block-islandora-collection-search-islandora-collection-search{
   display: none;
@@ -1605,11 +1817,6 @@ div.islandora-solr-content {
   }
 }
 
-input#edit-submit--3.form-submit {
-  background-image: url(http://i.imgur.com/zBCP7zk.png);
-  background-repeat: no-repeat;
-  background-position: center;
-}
 
 #block-user-login input#edit-submit.form-submit {
   background-image: none;
@@ -2702,10 +2909,6 @@ position: absolute;
   }
 }
 
-#region-header-first {
-  cursor: pointer;
-}
-
 /*BEGIN test area*/
 @media screen and (min-width: 2000px) {
   .page-browse-collections {
@@ -2980,6 +3183,12 @@ position: absolute;
     }
   }
   @media screen and (max-width: 740px) {
+
+
+.islandora-basic-collection-grid dl {
+    width: calc(50% - 4px);
+  }
+
     .islandora-openseadragon {
       display: block;
       width: 100%;

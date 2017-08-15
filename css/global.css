@@ -3,6 +3,7 @@
 /* web fonts */
 @import "https://fonts.googleapis.com/css?family=Open+Sans|Roboto:100,300,400,500,600,700";
 /*Institutional Colors*/
+/* mixins */
 /* global styles */
 html, body {
   height: 100%;
@@ -85,7 +86,7 @@ span.bold {
 }
 
 .institution-logo {
-  padding-right: 40px;
+  padding-right: 20px;
 }
 
 .latechTheme .institution-header, .latechTheme .collectionHeader {
@@ -100,6 +101,9 @@ span.bold {
   cursor: pointer;
 }
 .latechTheme form#islandora-collection-search-form {
+  border: 2px solid #003087;
+}
+.latechTheme .institution-search input[type="text"] {
   border: 2px solid #003087;
 }
 
@@ -153,6 +157,9 @@ li.institution-collection-list-item a::before {
   padding-left: 20px;
   font-size: 12px;
   line-height: 20px;
+}
+.institution-about p {
+  max-width: 800px;
 }
 
 ul.child-institution-collection-list {
@@ -251,8 +258,116 @@ li.child-institution-collection-list-item {
   padding-left: 20px;
 }
 
+/*institution list*/
+#block-block-11 {
+  display: flex;
+  align-items: center;
+}
+#block-block-11 .content p {
+  width: 1000px;
+  height: 120px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px;
+}
+#block-block-11 a.institutionLink:hover {
+  opacity: 1;
+  -moz-transition-duration: 0s;
+  -o-transition-duration: 0s;
+  -webkit-transition-duration: 0s;
+  transition-duration: 0s;
+}
+#block-block-11 a.institutionLink {
+  width: 100px;
+  height: 60px;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0px 1px 1px 0px;
+  background-size: 70px auto;
+  opacity: 0.7;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+#block-block-11 a.institutionLink.lsmLink {
+  background-color: #5d0e8b;
+  background-image: url("http://i.imgur.com/Sz5sguM.png");
+  background-size: 40px auto;
+}
+#block-block-11 a.institutionLink.lsuLink {
+  background-color: #461D7C;
+  background-image: url("http://reu.cct.lsu.edu/documents/logos/LSU_Gold_CMYK.png");
+  background-size: 50px auto;
+}
+#block-block-11 a.institutionLink.lsusLink {
+  background-color: #ffffff;
+  background-image: url("http://www.lsus.edu/Images/Offices%20and%20Services/HR/LSUS%20Logo%2011102015.png");
+}
+#block-block-11 a.institutionLink.lsuhscLink {
+  background-color: #ffffff;
+  background-image: url("http://i.imgur.com/FQdHpzz.png");
+}
+#block-block-11 a.institutionLink.lsuhscsLink {
+  background-color: #ffffff;
+  background-image: url("http://i.imgur.com/1lqbxiy.png");
+}
+#block-block-11 a.institutionLink.latechLink {
+  background-color: #003087;
+  background-image: url("http://grfx.cstv.com/schoolslt/latc/graphics/logos/latc-state-t.gif");
+  background-size: 40px auto;
+}
+#block-block-11 a.institutionLink.loynoLink {
+  background-color: #660000;
+  background-image: url("http://i.imgur.com/wsbykd6.png");
+  background-size: 40px auto;
+}
+#block-block-11 a.institutionLink.mcneeseLink {
+  background-color: #00529b;
+  background-image: url("http://mcneesesports.com/images/header_logo.png");
+}
+#block-block-11 a.institutionLink.nichollsLink {
+  background-color: #ae132a;
+  background-image: url("http://i.imgur.com/rGvlEDN.png");
+}
+#block-block-11 a.institutionLink.nsuLink {
+  background-color: #663399;
+  background-image: url("https://www.nsula.edu/wp-content/uploads/Seal.png");
+  background-size: 40px auto;
+}
+#block-block-11 a.institutionLink.subrLink {
+  background-color: #75B2DD;
+  background-image: url("http://i.imgur.com/pNgJAG2.png");
+}
+#block-block-11 a.institutionLink.stateLink {
+  background-color: #edba51;
+  background-image: url("http://i.imgur.com/y1H8EGr.png");
+  background-size: 40px auto;
+}
+#block-block-11 a.institutionLink.hnocLink {
+  background-color: #254550;
+  background-image: url("http://i.imgur.com/lRaktDw.png");
+}
+#block-block-11 a.institutionLink.tulaneLink {
+  background-color: #032a17;
+  background-image: url("http://i.imgur.com/geTKaHp.png");
+}
+#block-block-11 a.institutionLink.ullLink {
+  background-color: #a00b0b;
+  background-image: url("http://i.imgur.com/aqD5A3q.png");
+}
+#block-block-11 a.institutionLink.ulmLink {
+  background-color: #800029;
+  background-image: url("http://www.ulm.edu/opi/logos/academics/ulm_lettermark_fullname/png/ulm_lettermark_fullname-white.png");
+}
+#block-block-11 a.institutionLink.unoLink {
+  background-color: #003056;
+  background-image: url("http://i.imgur.com/RWmzrPG.png");
+}
+
 .collectionPage .collectionLogo {
-  width: 800px;
+  width: 200px;
   height: 200px;
   background-repeat: no-repeat;
   background-size: contain;
@@ -285,12 +400,14 @@ li.child-institution-collection-list-item {
   display: flex;
   align-items: center;
   padding: 20px;
+  justify-content: center;
 }
 .collectionPage .collectionHeader p {
   margin: 0px;
   border-left: 1px solid rgba(255, 255, 255, 0.21);
   padding-left: 20px;
   padding-bottom: 20px;
+  max-width: 800px;
 }
 .collectionPage #block-islandora-collection-search-islandora-collection-search {
   display: block;
@@ -332,6 +449,10 @@ li.child-institution-collection-list-item {
   background-position: center;
   background-size: 25px 25px;
   background-image: url(http://i.imgur.com/NpfYQT0.png);
+}
+
+.item-list {
+  margin: 10px;
 }
 
 #block-islandora-collection-search-islandora-collection-search {
@@ -1458,12 +1579,6 @@ div.islandora-solr-content {
   background-position: center;
 }
 
-input#edit-submit--3.form-submit {
-  background-image: url(http://i.imgur.com/zBCP7zk.png);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
 #block-user-login input#edit-submit.form-submit {
   background-image: none;
   color: #438fca;
@@ -2487,10 +2602,6 @@ div.islandora-pdf-object, div.islandora-large-image-object {
   color: #000092;
 }
 
-#region-header-first {
-  cursor: pointer;
-}
-
 /*BEGIN test area*/
 @media screen and (min-width: 2000px) {
   .page-browse-collections tr {
@@ -2779,6 +2890,10 @@ div.islandora-pdf-object, div.islandora-large-image-object {
   }
 }
 @media screen and (max-width: 1260px) and (max-width: 740px) {
+  .islandora-basic-collection-grid dl {
+    width: calc(50% - 4px);
+  }
+
   .islandora-openseadragon {
     display: block;
     width: 100%;
