@@ -66,7 +66,7 @@ span.bold {
 }
 
 /*Institutional Page*/
-.institution-title, .institution-collection-list-header {
+.institution-title, .institution-collection-list-header, .institution-collection-description {
   display: none;
 }
 
@@ -135,6 +135,37 @@ li.institution-collection-list-item a::before {
   padding-left: 20px;
   font-size: 12px;
   line-height: 20px;
+}
+
+ul.child-institution-collection-list {
+  list-style: none;
+}
+
+.child-institution-collections {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  border: 1px solid grey;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.child-institution-title {
+  padding: 5px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.32);
+  width: auto;
+  display: block;
+  background: rgba(0, 0, 0, 0.08);
+}
+
+ul.child-institution-collection-list {
+  list-style: none;
+  margin-bottom: 0px;
+}
+
+li.child-institution-collection-list-item {
+  padding: 10px;
 }
 
 .institution-search {
@@ -2229,8 +2260,8 @@ div.islandora-pdf-object, div.islandora-large-image-object {
   color: white;
   background-image: url(http://i.imgur.com/5Jjv9BT.png);
   background-size: contain;
-  width: 140px;
-  height: 50px;
+  width: 100%;
+  height: 33px;
   background-repeat: no-repeat;
   margin-left: 0px;
   display: flex;
@@ -2241,7 +2272,7 @@ div.islandora-pdf-object, div.islandora-large-image-object {
   opacity: 1;
   position: absolute;
   left: 60px;
-  top: 16px;
+  top: 7px;
 }
 
 .landingMessage {
