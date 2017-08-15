@@ -116,7 +116,7 @@ li.institution-collection-list-item a::before {
   content: "";
   background-image: url(http://i.imgur.com/QwO6pT6.png);
   width: 128px;
-  height: 128px;
+  height: 60px;
   display: block;
   background-size: 90px auto;
   background-repeat: no-repeat;
@@ -127,7 +127,7 @@ li.institution-collection-list-item a::before {
   border-left: 1px solid rgba(255, 255, 255, 0.12);
   padding-left: 20px;
   font-size: 12px;
-  line-height: 15px;
+  line-height: 20px;
 }
 
 .institution-search {
@@ -157,10 +157,12 @@ li.institution-collection-list-item a::before {
   color: #003087;
   outline: 0;
   padding: 2px 3px;
-  font-size: 23px;
+  font-size: 18px;
   font-family: Arial, sans-serif;
   height: 40px;
   border-radius: 4px;
+  width: 50vw;
+  padding-left: 10px;
 }
 .institution-search input[type="submit"] {
   position: relative;
@@ -200,7 +202,7 @@ li.institution-collection-list-item a::before {
   width: calc(100% - 64px);
   border-bottom-width: 0px;
   border: 0px;
-  padding-left: 20px;
+  padding-left: 10px;
 }
 #zone-header input#edit-submit.form-submit, #zone-header input#edit-submit--2.form-submit, #zone-header input#edit-submit--3.form-submit, #zone-header input#edit-submit--4.form-submit, #region-header-first input#edit-submit.form-submit, #region-header-first input#edit-submit--2.form-submit, #region-header-first input#edit-submit--3.form-submit, #region-header-first input#edit-submit--4.form-submit {
   -webkit-appearance: none;
@@ -1398,6 +1400,9 @@ dl.solr-thumb {
   align-items: center;
   overflow: hidden;
 }
+dl.solr-thumb img {
+  border: 0px;
+}
 
 .islandora-solr-search-result {
   background-color: white;
@@ -2554,9 +2559,6 @@ div.islandora-pdf-object, div.islandora-large-image-object {
     justify-content: center;
     padding: 10px;
     margin-bottom: 0px;
-  }
-  dl.solr-thumb img {
-    border: 0px;
   }
 }
 @media screen and (max-width: 1260px) and (max-width: 740px) {

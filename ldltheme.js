@@ -64,6 +64,16 @@
       $("#sideMods tr:nth-child(0n+12) td:nth-child(0n+2)").clone().prop({ id: "abstract-temporary", class: "temp"}).appendTo(".islandora-pdf-content, .islandora-large-image-content");
       $(".parent-collections").appendTo(".islandora-large-image-content, .islandora-pdf-content");
 
+$('#zone-header .form-item-islandora-simple-search-query > input').each(function() {
+  $(this).attr('placeholder', 'Search the LDL' );
+});//Adds Search text
+
+
+var currentInstitution =  $( "ul.breadcrumb a.active" ).text();
+$('.institution-search #myform input').each(function() {
+  $(this).attr('placeholder', 'Search only within ' + currentInstitution );
+});//Adds Search text
+
 
     //begin show more script
     var showChar = 300;  // How many characters are shown by default
