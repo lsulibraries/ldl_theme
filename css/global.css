@@ -97,19 +97,24 @@ ul.institution-collection-list {
   flex-wrap: wrap;
 }
 
+li.institution-collection-list-item {
+  width: 25%;
+}
+
 .institution-collection-list-header {
   position: absolute;
 }
 
 li.institution-collection-list-item a {
   display: flex;
-  justify-content: center;
   align-items: center;
   margin: 20px;
   color: #474747;
   width: 190px;
   font-size: 14px;
   line-height: 16px;
+  position: relative;
+  margin-left: 98px;
 }
 
 li.institution-collection-list-item a::before {
@@ -121,6 +126,8 @@ li.institution-collection-list-item a::before {
   background-size: 90px auto;
   background-repeat: no-repeat;
   background-position: center;
+  position: absolute;
+  left: -110px;
 }
 
 .institution-about {
