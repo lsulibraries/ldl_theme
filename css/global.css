@@ -505,7 +505,7 @@ div.region-inner.region-header-first-inner {
   align-items: center;
   width: 100%;
   padding-left: 20px;
-  height: 60px;
+  height: 50px;
   justify-content: space-between;
 }
 
@@ -647,9 +647,6 @@ div.breadcrumb a:nth-last-of-type(1) {
 }
 
 #block-system-main {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
   min-height: initial;
   margin-bottom: 50px;
   flex-grow: 2;
@@ -792,8 +789,8 @@ dd {
   margin-left: 85px;
   border: 0px;
   width: 300px;
-  background: #151515;
-  height: 40px;
+  background: #242021;
+  height: 33px;
   border-radius: 5px;
   overflow: hidden;
   margin-right: 10px;
@@ -1369,16 +1366,14 @@ input#edit-submit--3.form-submit {
 }
 
 ul.islandora-solr-sort {
-  border: 1px solid #ccc;
   margin-bottom: 0px;
   padding: 20px;
   text-align: center;
   letter-spacing: 2px;
   background-color: white;
-  margin-left: 10px;
-  border-radius: 10px;
-  margin-right: 10px;
-  margin-top: 10px;
+  margin-left: 1px;
+  margin-top: 0px;
+  border-bottom: 1px solid rgba(183, 183, 183, 0.5);
 }
 
 .solr-fields {
@@ -1396,25 +1391,21 @@ dl.solr-fields {
   padding: 20px;
 }
 dl.solr-thumb {
-  width: 25%;
   display: flex;
   border-right: 1px solid #bdbdbd;
   justify-content: center;
-  padding: 10px;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
 }
 
 .islandora-solr-search-result {
   background-color: white;
-  border-radius: 10px;
-  border: 1px solid #cccccc;
   padding: 0px;
-  margin-top: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
-  width: calc(100% - 20px);
-  max-width: 1180px;
+  margin-top: 0px;
+  margin-left: 1px;
+  margin-right: 0px;
+  border-bottom: 1px rgba(199, 199, 199, 0.52) solid;
 }
 
 .islandora-inline-metadata dt {
@@ -1442,8 +1433,8 @@ dl.solr-thumb {
 }
 
 .dc-title {
-  font-size: 25px;
-  line-height: 25px;
+  font-size: 20px;
+  line-height: 22px;
 }
 
 dd.solr-value.mods-subject-topic-ms a {
@@ -2262,7 +2253,7 @@ div.islandora-pdf-object, div.islandora-large-image-object {
   opacity: 1;
   position: absolute;
   left: 60px;
-  top: 16px;
+  top: 12px;
 }
 .latechTheme .page-islandora-object div.region-header-second-inner::after {
   color: #000092;
@@ -2546,7 +2537,9 @@ div.islandora-pdf-object, div.islandora-large-image-object {
 
   dl.solr-fields {
     width: 100%;
-    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .islandora-inline-metadata dd {
@@ -2561,6 +2554,9 @@ div.islandora-pdf-object, div.islandora-large-image-object {
     justify-content: center;
     padding: 10px;
     margin-bottom: 0px;
+  }
+  dl.solr-thumb img {
+    border: 0px;
   }
 }
 @media screen and (max-width: 1260px) and (max-width: 740px) {
