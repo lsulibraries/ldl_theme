@@ -149,6 +149,7 @@ ul.child-institution-collection-list {
   border: 1px solid grey;
   border-radius: 5px;
   overflow: hidden;
+  margin-top: 40px;
 }
 
 .child-institution-title {
@@ -202,11 +203,24 @@ li.child-institution-collection-list-item {
   width: 50vw;
   padding-left: 10px;
 }
+.institution-search .institution-search input[type="text"]::placeholder {
+  font-style: italic;
+  font-weight: 300;
+  font-family: Roboto;
+  color: #474747;
+}
 .institution-search input[type="submit"] {
   position: relative;
-  left: -70px;
+  left: -61px;
+  width: 55px;
+  height: 34px;
   background: none;
   border: none;
+  border-radius: 0px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 25px 25px;
+  background-image: url(http://i.imgur.com/zBCP7zk.png);
 }
 .institution-search .form-item, .institution-search .form-actions {
   display: inline-block;
@@ -214,6 +228,48 @@ li.child-institution-collection-list-item {
 .institution-search .institution-about {
   border-left: 1px solid rgba(255, 255, 255, 0.27);
   padding-left: 20px;
+}
+
+.islandora-basic-collection-grid.clearfix {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.islandora-basic-collection-grid dl {
+  width: calc(25% - 4px);
+  min-width: 100px;
+  min-height: 180px;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: top;
+  margin: 2px;
+  zoom: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
+  background: gainsboro;
+  border: 1px solid rgba(128, 128, 128, 0.39);
+}
+
+dt.islandora-basic-collection-thumb {
+  margin-top: 10px;
+}
+
+.islandora-basic-collection-object dd {
+  padding-top: 2px;
+  padding-bottom: 2px;
+  background: #474747;
+  width: 100%;
+  align-self: flex-end;
+  padding: 10px;
+  margin-top: 10px;
+  line-height: 18px;
+}
+
+dd.islandora-basic-collection-caption a {
+  color: white;
 }
 
 /*Top Search Bar*/
@@ -264,6 +320,7 @@ li.child-institution-collection-list-item {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 20px 20px;
+  background-image: url(http://i.imgur.com/zBCP7zk.png);
 }
 
 .islandora-compound-thumb {
@@ -2560,12 +2617,6 @@ div.islandora-pdf-object, div.islandora-large-image-object {
 
   #block-block-4, #block-system-navigation, #page-title-header, #block-user-login {
     display: none;
-  }
-
-  #block-islandora-solr-simple {
-    margin-left: 10%;
-    border: 1px solid #808080;
-    width: 80%;
   }
 
   .islandora-pdf-metadata, .islandora-large-image-metadata {
