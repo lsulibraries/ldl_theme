@@ -11,12 +11,19 @@
   //   window.location = "../";    
 //});
 
+      window.sr = ScrollReveal();
 
 
-      $(document).ready(function() {
-          $('#loadingWrap').fadeOut(1200, function(){ $(this).remove();});
-          $("#page").fadeIn(1500);
-      });
+
+$(window).on("load", function() {
+      sr.reveal('.page-islandora-search .region-sidebar-first-inner', { duration: 200, delay: 100, opacity: 1, easing: 'linear', scale: 1, viewFactor: 0.01, }, 50);
+      sr.reveal('.islandora-solr-search-result, .landingMobile', { duration: 200, delay: 100,  easing: 'linear', scale: 1, viewFactor: 0.01,}, 20); //landingMessage normally here; conflicts with mobile landingMessage
+      sr.reveal('.islandora-solr-sort, .landingHero', { duration: 200, delay: 0,  easing: 'linear', scale: 1, viewFactor: 0.01,}, 20);
+      sr.reveal('.solr-fields, .islandora-solr-sort li, .page-browse-collections tr, .islandora-pdf-content', { duration: 200, delay: 350,  easing: 'linear', scale: 1, viewFactor: 0.01, }, 20);
+      sr.reveal('.solr-thumb img', { duration: 200, delay: 850,  easing: 'linear', scale: 1, viewFactor: 0.01, }, 20);
+      sr.reveal('.islandora-basic-collection-grid dl', { duration: 100, delay: 200,  easing: 'ease-in', }, 20);
+      sr.reveal('.bookmarkWelcome', { duration: 800, delay: 100,  easing: 'linear', scale: 1, viewFactor: 0.01, }, 50);
+});
 
       var url = window.location.pathname;
       var namespaces = ['uno','loyno', 'mcneese', 'lsu', 'latech', 'hnoc', 'tulane', 'state'];
@@ -33,14 +40,12 @@
           $("html").toggleClass('Dark');
       });
 
-      window.sr = ScrollReveal();
-      sr.reveal('.page-islandora-search .region-sidebar-first-inner', { duration: 200, delay: 100, opacity: 1, easing: 'linear', scale: 1, viewFactor: 0.01, }, 50);
-      sr.reveal('.islandora-solr-search-result, .landingMobile', { duration: 200, delay: 100,  easing: 'linear', scale: 1, viewFactor: 0.01,}, 20); //landingMessage normally here; conflicts with mobile landingMessage
-      sr.reveal('.islandora-solr-sort, .landingHero', { duration: 200, delay: 0,  easing: 'linear', scale: 1, viewFactor: 0.01,}, 20);
-      sr.reveal('.solr-fields, .islandora-solr-sort li, .page-browse-collections tr, .islandora-pdf-content', { duration: 200, delay: 350,  easing: 'linear', scale: 1, viewFactor: 0.01, }, 20);
-      sr.reveal('.solr-thumb img', { duration: 200, delay: 850,  easing: 'linear', scale: 1, viewFactor: 0.01, }, 20);
-      sr.reveal('.islandora-basic-collection-grid dl', { duration: 500, delay: 200,  easing: 'ease-in', }, 150);
-      sr.reveal('.bookmarkWelcome', { duration: 800, delay: 100,  easing: 'linear', scale: 1, viewFactor: 0.01, }, 50);
+
+
+
+if ( $( ".islandora-basic-collection-wrapper > p" ).length ) { 
+     $("body").addClass('collectionPage');
+ }//allows collection Page styles
 
 
 
@@ -63,12 +68,26 @@
       $(".landingMessage").clone().prop({id: "landingMobile", class: "landingMessageMobile"}).appendTo("#zone-header");
       $("#sideMods tr:nth-child(0n+12) td:nth-child(0n+2)").clone().prop({ id: "abstract-temporary", class: "temp"}).appendTo(".islandora-pdf-content, .islandora-large-image-content");
       $(".parent-collections").appendTo(".islandora-large-image-content, .islandora-pdf-content");
+
+      $(".collectionPage span.islandora-basic-collection-item-count").appendTo("#page-title");
+      $('.collectionPage #page-title').wrapAll('<div class="collectionHeader"/>'); //wraps collectionPage title
+      $(".collectionPage .islandora-basic-collection-wrapper > p").appendTo(".collectionHeader");
+      $(".collectionPage <div class='collectionLogo'/>").prependTo(".collectionHeader");
+
+      $(".collectionPage <div class='collectionSearch'/>").insertAfter(".collectionHeader");
+            $(".collectionPage #page-title").prependTo(".collectionHeader p");
+$(".collectionPage #block-islandora-collection-search-islandora-collection-search").appendTo(".collectionSearch");
       $("#zone-header input.form-submit").val(' ');
-      $(".institution-search input.form-submit").val(' ');      
+      $(".institution-search input.form-submit").val(' ');    
+      $(".collectionSearch input.form-submit").val(' ');      
+
 $('#zone-header .form-item-islandora-simple-search-query > input').each(function() {
   $(this).attr('placeholder', 'Search the LDL' );
 });//Adds Search text
 
+$(".latechTheme .collectionLogo").on('click', function(){
+  window.location = "/latech";    
+});
 
 var currentInstitution =  $( "ul.breadcrumb a.active" ).text();
 $('.institution-search #myform input').each(function() {
@@ -124,9 +143,9 @@ $('.institution-search #myform input').each(function() {
 //var newHeight = $( document ).height();
 //$(".page-islandora-object .region-content-inner").height(newHeight);
 
-      $('input#edit-islandora-simple-search-query').each(function() {
+      $('.collectionSearch input#edit-islandora-simple-search-query').each(function() {
 
-      $(this).attr('placeholder', 'Search LDL...' );
+      $(this).attr('placeholder', 'Search this collection' );
       });
       //$('input[name="op"]').val("");
       $('#block-user-login input[name="op"]').val("Login");

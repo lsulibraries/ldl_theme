@@ -1,7 +1,7 @@
 /* This file will hold styles for the mobile version of your website (mobile first). */
 /* This also can include ANY global CSS that applies site-wide. Unless overwritten by a more specific style rule, CSS declarations in global.css will apply site-wide. */
 /* web fonts */
-@import "https://fonts.googleapis.com/css?family=Open+Sans|Roboto:100,300,400,600,700";
+@import "https://fonts.googleapis.com/css?family=Open+Sans|Roboto:100,300,400,500,600,700";
 /*Institutional Colors*/
 /* global styles */
 html, body {
@@ -10,8 +10,15 @@ html, body {
   margin: 0;
 }
 
-input:focus, select:focus, textarea:focus, button:focus {
-  outline: none;
+button:focus, button:active, input:focus, input:active, select:focus, select:active, textarea:focus, textarea:active {
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  z-index: 1;
+}
+
+.sr .fooReveal {
+  visibility: hidden;
 }
 
 a:link, a:visited {
@@ -81,13 +88,23 @@ span.bold {
   padding-right: 40px;
 }
 
-.latechTheme .institution-header {
+.latechTheme .institution-header, .latechTheme .collectionHeader {
   background: #003087;
   color: rgba(255, 255, 255, 0.74);
 }
+.latechTheme #page-title {
+  color: white;
+}
+.latechTheme .collectionLogo {
+  background-image: url(http://i.imgur.com/72REb5M.png);
+  cursor: pointer;
+}
+.latechTheme form#islandora-collection-search-form {
+  border: 2px solid #003087;
+}
 
 .institution-logo img {
-  max-width: 25vw !important;
+  max-width: 200px !important;
 }
 
 ul.institution-collection-list {
@@ -111,10 +128,11 @@ li.institution-collection-list-item a {
   margin: 20px;
   color: #474747;
   width: 190px;
-  font-size: 14px;
-  line-height: 16px;
+  font-size: 13px;
+  line-height: 15px;
   position: relative;
   margin-left: 98px;
+  font-weight: 500;
 }
 
 li.institution-collection-list-item a::before {
@@ -191,9 +209,7 @@ li.child-institution-collection-list-item {
   -webkit-background-clip: padding;
   background-clip: padding-box;
   background-color: #fff;
-  border: 2px solid #003087;
   border-color: inherit;
-  color: #003087;
   outline: 0;
   padding: 2px 3px;
   font-size: 18px;
@@ -202,6 +218,11 @@ li.child-institution-collection-list-item {
   border-radius: 4px;
   width: 50vw;
   padding-left: 10px;
+  margin-left: 10px;
+}
+.institution-search .latechTheme input[type="text"] {
+  border: 2px solid #003087;
+  color: #003087;
 }
 .institution-search .institution-search input[type="text"]::placeholder {
   font-style: italic;
@@ -220,7 +241,7 @@ li.child-institution-collection-list-item {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 25px 25px;
-  background-image: url(http://i.imgur.com/zBCP7zk.png);
+  background-image: url(http://i.imgur.com/NpfYQT0.png);
 }
 .institution-search .form-item, .institution-search .form-actions {
   display: inline-block;
@@ -230,10 +251,116 @@ li.child-institution-collection-list-item {
   padding-left: 20px;
 }
 
+.collectionPage .collectionLogo {
+  width: 800px;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  margin: 20px;
+}
+.collectionPage #page-title {
+  padding: 20px;
+  width: 45%;
+  display: flex;
+  align-items: center;
+  margin: 0px;
+  padding-left: 0px;
+  padding-bottom: 0px;
+}
+.collectionPage span.islandora-basic-collection-item-count {
+  font-size: 12px;
+  display: inline-flex;
+  padding: 1px 8px;
+  margin-left: 7px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  position: relative;
+  top: -2px;
+}
+.collectionPage .islandora-view-grid, .collectionPage .islandora-view-list {
+  display: none;
+}
+.collectionPage .collectionHeader {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+.collectionPage .collectionHeader p {
+  margin: 0px;
+  border-left: 1px solid rgba(255, 255, 255, 0.21);
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+.collectionPage #block-islandora-collection-search-islandora-collection-search {
+  display: block;
+  background: gainsboro;
+}
+
+.collectionSearch h2.block-title {
+  display: none;
+}
+.collectionSearch .content.clearfix {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.collectionSearch .form-item.form-type-select.form-item-collection-select {
+  display: none;
+}
+.collectionSearch form#islandora-collection-search-form {
+  position: relative;
+  top: -20px;
+  background: white;
+  border-radius: 5px;
+  overflow: hidden;
+  padding: 5px;
+}
+.collectionSearch input#edit-islandora-simple-search-query {
+  font-size: 18px;
+  border: 0px;
+  width: 50vw;
+}
+.collectionSearch input[type="submit"] {
+  position: relative;
+  width: 55px;
+  height: 34px;
+  background: none;
+  border: none;
+  border-radius: 0px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 25px 25px;
+  background-image: url(http://i.imgur.com/NpfYQT0.png);
+}
+
+#block-islandora-collection-search-islandora-collection-search {
+  display: none;
+}
+
+.islandora-basic-collection {
+  margin-top: 1px;
+}
+
+.islandora-basic-collection-wrapper hr {
+  display: none;
+}
+
+.islandora-basic-collection-display-switch {
+  display: none;
+}
+
+h1.about-link {
+  display: none;
+}
+
+div.item-list:nth-child(2n - 1) {
+  display: none;
+}
+
 .islandora-basic-collection-grid.clearfix {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
 }
 
 .islandora-basic-collection-grid dl {
@@ -250,7 +377,7 @@ li.child-institution-collection-list-item {
   justify-content: center;
   align-items: flex-end;
   background: gainsboro;
-  border: 1px solid rgba(128, 128, 128, 0.39);
+  visibility: hidden;
 }
 
 dt.islandora-basic-collection-thumb {
@@ -266,6 +393,7 @@ dt.islandora-basic-collection-thumb {
   padding: 10px;
   margin-top: 10px;
   line-height: 18px;
+  font-size: 13px;
 }
 
 dd.islandora-basic-collection-caption a {
@@ -318,8 +446,8 @@ dd.islandora-basic-collection-caption a {
   width: 60px;
   height: 30px;
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: 20px 20px;
+  background-position: 27px 3px;
+  background-size: 22px 22px;
   background-image: url(http://i.imgur.com/zBCP7zk.png);
 }
 
