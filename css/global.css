@@ -105,6 +105,20 @@ span.bold {
   color: white;
 }
 
+.dccTheme .institution-header, .dccTheme .collectionHeader {
+  background: #083a07;
+}
+.dccTheme .collectionLogo {
+  background-image: url("http://www.dcc.edu/_resources/images/delgado-logo-white.png");
+  cursor: pointer;
+}
+.dccTheme form#islandora-collection-search-form {
+  border: 2px solid #083a07;
+}
+.dccTheme .institution-search input[type="text"] {
+  border: 2px solid #083a07;
+}
+
 .lsmTheme .institution-header, .lsmTheme .collectionHeader {
   background: #5d0e8b;
 }
@@ -119,18 +133,47 @@ span.bold {
   border: 2px solid #5d0e8b;
 }
 
-.lsuTheme .institution-header, .lsuTheme .collectionHeader, .lsuhscTheme .institution-header, .lsuhscTheme .collectionHeader, .lsusTheme .institution-header, .lsusTheme .collectionHeader, .lsuhscsTheme .institution-header, .lsuhscsTheme .collectionHeader {
+.lsuTheme .institution-header, .lsuTheme .collectionHeader {
   background: #461D7C;
 }
-.lsuTheme .collectionLogo, .lsuhscTheme .collectionLogo, .lsusTheme .collectionLogo, .lsuhscsTheme .collectionLogo {
+.lsuTheme .collectionLogo {
   background-image: url("http://reu.cct.lsu.edu/documents/logos/LSU_Gold_CMYK.png");
   cursor: pointer;
 }
-.lsuTheme form#islandora-collection-search-form, .lsuhscTheme form#islandora-collection-search-form, .lsusTheme form#islandora-collection-search-form, .lsuhscsTheme form#islandora-collection-search-form {
+.lsuTheme form#islandora-collection-search-form {
   border: 2px solid #461D7C;
 }
-.lsuTheme .institution-search input[type="text"], .lsuhscTheme .institution-search input[type="text"], .lsusTheme .institution-search input[type="text"], .lsuhscsTheme .institution-search input[type="text"] {
+.lsuTheme .institution-search input[type="text"] {
   border: 2px solid #461D7C;
+}
+
+.lsuhscTheme .institution-header, .lsuhscTheme .collectionHeader, .lsusTheme .institution-header, .lsusTheme .collectionHeader, .lsuhscsTheme .institution-header, .lsuhscsTheme .collectionHeader {
+  background: #white;
+  color: #474747;
+}
+.lsuhscTheme #page-title, .lsusTheme #page-title, .lsuhscsTheme #page-title {
+  color: #474747;
+}
+.lsuhscTheme form#islandora-collection-search-form, .lsusTheme form#islandora-collection-search-form, .lsuhscsTheme form#islandora-collection-search-form {
+  border: 2px solid #white;
+}
+.lsuhscTheme .institution-search input[type="text"], .lsusTheme .institution-search input[type="text"], .lsuhscsTheme .institution-search input[type="text"] {
+  border: 2px solid #white;
+}
+
+.lsusTheme .collectionLogo {
+  background-image: url("http://www.lsus.edu/Images/Offices%20and%20Services/HR/LSUS%20Logo%2011102015.png");
+  cursor: pointer;
+}
+
+.lsuhscsTheme .collectionLogo {
+  background-image: url("http://i.imgur.com/1lqbxiy.png");
+  cursor: pointer;
+}
+
+.lsuhscTheme .collectionLogo {
+  background-image: url("http://i.imgur.com/FQdHpzz.png");
+  cursor: pointer;
 }
 
 .latechTheme .institution-header, .latechTheme .collectionHeader {
@@ -140,7 +183,7 @@ span.bold {
   color: white;
 }
 .latechTheme .collectionLogo {
-  background-image: url(http://i.imgur.com/72REb5M.png);
+  background-image: url("http://i.imgur.com/72REb5M.png");
   cursor: pointer;
 }
 .latechTheme form#islandora-collection-search-form {
@@ -157,7 +200,7 @@ span.bold {
   color: white;
 }
 .loynoTheme .collectionLogo {
-  background-image: url(http://i.imgur.com/23i7KxR.png);
+  background-image: url("http://i.imgur.com/23i7KxR.png");
   cursor: pointer;
 }
 .loynoTheme form#islandora-collection-search-form {
@@ -171,7 +214,7 @@ span.bold {
   background: #00529b;
 }
 .mcneeseTheme .collectionLogo {
-  background-image: url(http://i.imgur.com/23i7KxR.png);
+  background-image: url("https://www.mcneese.edu/sites/all/themes/mcneese/images/logo.png");
   cursor: pointer;
 }
 .mcneeseTheme form#islandora-collection-search-form {
@@ -179,6 +222,162 @@ span.bold {
 }
 .mcneeseTheme .institution-search input[type="text"] {
   border: 2px solid #00529b;
+}
+
+.nichollsTheme .institution-header, .nichollsTheme .collectionHeader {
+  background: #ae132a;
+}
+.nichollsTheme .collectionLogo {
+  background-image: url("https://www.nicholls.edu/wp-content/themes/nicholls-2015-core/nicholls/images/logo/Nicholls-N-Sword-w-text.png");
+  cursor: pointer;
+}
+.nichollsTheme form#islandora-collection-search-form {
+  border: 2px solid #ae132a;
+}
+.nichollsTheme .institution-search input[type="text"] {
+  border: 2px solid #ae132a;
+}
+
+.nsuTheme .institution-header, .nsuTheme .collectionHeader {
+  background: #663399;
+}
+.nsuTheme .collectionLogo {
+  background-image: url("https://www.nsula.edu/wp-content/uploads/wordmarksmall2.png");
+  cursor: pointer;
+}
+.nsuTheme form#islandora-collection-search-form {
+  border: 2px solid #663399;
+}
+.nsuTheme .institution-search input[type="text"] {
+  border: 2px solid #663399;
+}
+
+.subrTheme .institution-header, .subrTheme .collectionHeader {
+  background: #75B2DD;
+  color: #474747;
+}
+.subrTheme #page-title {
+  color: #474747;
+}
+.subrTheme .collectionLogo {
+  background-image: url("http://www.subr.edu/images/subr_logo.gif");
+  cursor: pointer;
+}
+.subrTheme form#islandora-collection-search-form {
+  border: 2px solid #75B2DD;
+}
+.subrTheme .institution-search input[type="text"] {
+  border: 2px solid #75B2DD;
+}
+
+.stateTheme .institution-header, .stateTheme .collectionHeader {
+  background: #edba51;
+  color: #474747;
+}
+.stateTheme #page-title {
+  color: #474747;
+}
+.stateTheme .collectionLogo {
+  background-image: url("http://i.imgur.com/y1H8EGr.png");
+  cursor: pointer;
+}
+.stateTheme form#islandora-collection-search-form {
+  border: 2px solid #edba51;
+}
+.stateTheme .institution-search input[type="text"] {
+  border: 2px solid #edba51;
+}
+
+.hnocTheme .institution-header, .hnocTheme .collectionHeader {
+  background: #254550;
+}
+.hnocTheme .collectionLogo {
+  background-image: url("http://i.imgur.com/lRaktDw.png");
+  cursor: pointer;
+}
+.hnocTheme form#islandora-collection-search-form {
+  border: 2px solid #254550;
+}
+.hnocTheme .institution-search input[type="text"] {
+  border: 2px solid #254550;
+}
+
+.tulaneTheme .institution-header, .tulaneTheme .collectionHeader {
+  background: #032a17;
+}
+.tulaneTheme .collectionLogo {
+  background-image: url("http://i.imgur.com/geTKaHp.png");
+  cursor: pointer;
+}
+.tulaneTheme form#islandora-collection-search-form {
+  border: 2px solid #032a17;
+}
+.tulaneTheme .institution-search input[type="text"] {
+  border: 2px solid #032a17;
+}
+
+.ullTheme .institution-header, .ullTheme .collectionHeader {
+  background: #a00b0b;
+  color: #474747;
+}
+.ullTheme #page-title {
+  color: #474747;
+}
+.ullTheme .collectionLogo {
+  background-image: url("http://i.imgur.com/aqD5A3q.png");
+  cursor: pointer;
+}
+.ullTheme form#islandora-collection-search-form {
+  border: 2px solid #a00b0b;
+}
+.ullTheme .institution-search input[type="text"] {
+  border: 2px solid #a00b0b;
+}
+
+.ulmTheme .institution-header, .ulmTheme .collectionHeader {
+  background: #800029;
+}
+.ulmTheme .collectionLogo {
+  background-image: url("http://www.ulm.edu/opi/logos/academics/ulm_lettermark_fullname/png/ulm_lettermark_fullname-white.png");
+  cursor: pointer;
+}
+.ulmTheme form#islandora-collection-search-form {
+  border: 2px solid #800029;
+}
+.ulmTheme .institution-search input[type="text"] {
+  border: 2px solid #800029;
+}
+
+.unoTheme .institution-header, .unoTheme .collectionHeader {
+  background: #003056;
+}
+.unoTheme .collectionLogo {
+  background-image: url("http://i.imgur.com/RWmzrPG.png");
+  cursor: pointer;
+}
+.unoTheme form#islandora-collection-search-form {
+  border: 2px solid #003056;
+}
+.unoTheme .institution-search input[type="text"] {
+  border: 2px solid #003056;
+}
+
+.vvilleTheme .institution-header, .vvilleTheme .collectionHeader {
+  background: #ede7c0;
+  color: #474747;
+}
+.vvilleTheme #page-title {
+  color: #474747;
+}
+.vvilleTheme .collectionLogo {
+  background-image: url("http://i.imgur.com/wqpOeRQ.png");
+  cursor: pointer;
+}
+.vvilleTheme form#islandora-collection-search-form {
+  border: 2px solid #ede7c0;
+}
+.vvilleTheme .institution-search input[type="text"] {
+  border: 2px solid #ede7c0;
 }
 
 .institution-logo img {
@@ -382,6 +581,11 @@ li.child-institution-collection-list-item {
   -webkit-transition-duration: 0.5s;
   transition-duration: 0.5s;
 }
+#block-block-11 a.institutionLink.dccLink {
+  background-color: #083a07;
+  background-image: url("http://www.dcc.edu/_resources/images/logo-white.png");
+  background-size: 70px auto;
+}
 #block-block-11 a.institutionLink.lsmLink {
   background-color: #5d0e8b;
   background-image: url("http://i.imgur.com/Sz5sguM.png");
@@ -455,6 +659,11 @@ li.child-institution-collection-list-item {
 #block-block-11 a.institutionLink.unoLink {
   background-color: #003056;
   background-image: url("http://i.imgur.com/RWmzrPG.png");
+}
+#block-block-11 a.institutionLink.vvilleLink {
+  background-color: #ede7c0;
+  background-image: url("http://i.imgur.com/wqpOeRQ.png");
+  background-size: 100px auto;
 }
 
 .collectionPage .collectionLogo {
@@ -1536,16 +1745,34 @@ fieldset.islandora-metadata.collapsible {
   padding: 0.5em;
 }
 
+a.viewallButton {
+  border: 1px solid;
+  border-radius: 10px;
+  padding: 0px 6px;
+  font-size: 11px;
+  letter-spacing: 1px;
+  margin-left: 10px;
+}
+
 /* Solr results */
 dl.solr-fields {
-  border-top: none;
+  width: 100%;
+  padding: 0px;
 }
 
 .islandora-solr-search-result {
-  margin: 1em 0 0 0;
-  border-bottom: 1px #c7c7c7 solid;
-  padding: 0 0 1em 0;
-  color: #6b6b6b;
+  background-color: white;
+  padding: 0px;
+  margin-top: 0px;
+  margin-left: 5px;
+  margin-right: 0px;
+  border-radius: 10px;
+  border: 1px solid #cccccc;
+  margin-bottom: 0px;
+  padding: 0px;
+  margin-top: 5px;
+  margin-right: 10px;
+  width: calc(100% - 20px);
 }
 .islandora-solr-search-result a {
   color: #438fca;
@@ -1789,6 +2016,10 @@ div.islandora-solr-content {
   margin-bottom: 10px;
 }
 
+#section-header.front.logged-in {
+  top: 64px;
+}
+
 .front #block-islandora-solr-simple {
   background: white;
 }
@@ -2009,7 +2240,8 @@ ul.islandora-solr-sort {
 
 dl.solr-fields {
   width: 100%;
-  padding: 20px;
+  padding: 0px;
+  border: 0px;
 }
 dl.solr-thumb {
   display: flex;
@@ -2021,15 +2253,6 @@ dl.solr-thumb {
 }
 dl.solr-thumb img {
   border: 0px;
-}
-
-.islandora-solr-search-result {
-  background-color: white;
-  padding: 0px;
-  margin-top: 0px;
-  margin-left: 1px;
-  margin-right: 0px;
-  border-bottom: 1px rgba(199, 199, 199, 0.52) solid;
 }
 
 .islandora-inline-metadata dt {
@@ -2830,12 +3053,13 @@ div.islandora-pdf-object, div.islandora-large-image-object {
 
   .islandora-solr-search-result {
     background-color: white;
-    border-radius: 10px;
-    border: 1px solid #cccccc;
     padding: 0px;
-    margin-top: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    border-radius: 5px;
+    margin-left: 5px;
+    margin-right: 0px;
+    overflow: hidden;
     width: calc(100% - 20px);
   }
 

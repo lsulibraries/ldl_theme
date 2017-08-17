@@ -13,6 +13,7 @@ $gold: #fff3b2;
 
 /*Institutional Colors*/
 
+$dccColor: #083a07;
 $lsmColor: #5d0e8b;
 $lsuColor: #461D7C;
 $lsusColor: #ffffff;
@@ -30,7 +31,9 @@ $tulaneColor: #032a17;
 $ullColor: #a00b0b;
 $ulmColor: #800029;
 $unoColor: #003056;
+$vvilleColor: #ede7c0;
 
+$dccLogo: 'http://www.dcc.edu/_resources/images/logo-white.png';
 $lsmLogo: 'http://i.imgur.com/Sz5sguM.png';
 $lsuLogo: 'http://reu.cct.lsu.edu/documents/logos/LSU_Gold_CMYK.png';
 $lsusLogo: 'http://www.lsus.edu/Images/Offices%20and%20Services/HR/LSUS%20Logo%2011102015.png';
@@ -48,7 +51,10 @@ $tulaneLogo: 'http://i.imgur.com/geTKaHp.png';
 $ullLogo: 'http://i.imgur.com/aqD5A3q.png';
 $ulmLogo: 'http://www.ulm.edu/opi/logos/academics/ulm_lettermark_fullname/png/ulm_lettermark_fullname-white.png';
 $unoLogo: 'http://i.imgur.com/RWmzrPG.png';
+$vvilleLogo: 'http://i.imgur.com/wqpOeRQ.png';
 
+
+$dccLogo_long: 'http://www.dcc.edu/_resources/images/delgado-logo-white.png';
 $latechLogo_long: 'http://i.imgur.com/72REb5M.png';
 $loynoLogo_long: 'http://i.imgur.com/23i7KxR.png';
 $mcneeseLogo_long: "https://www.mcneese.edu/sites/all/themes/mcneese/images/logo.png";
@@ -56,9 +62,12 @@ $nichollsLogo_long: "https://www.nicholls.edu/wp-content/themes/nicholls-2015-co
 $nsuLogo_long: "https://www.nsula.edu/wp-content/uploads/wordmarksmall2.png";
 $subrLogo_long: "http://www.subr.edu/images/subr_logo.gif";
 $loynoLogo_long: "http://i.imgur.com/23i7KxR.png";
-$tulaneLogo_long: "https://upload.wikimedia.org/wikipedia/en/thumb/7/7e/Tulane_logo.svg/1024px-Tulane_logo.svg.png"
+$tulaneLogo_long: "https://upload.wikimedia.org/wikipedia/en/thumb/7/7e/Tulane_logo.svg/1024px-Tulane_logo.svg.png";
+$vvilleLogo_long: '';
+
 
 /* mixins */
+
 @mixin flexbox() {
   display: -webkit-box;
   display: -moz-box;
@@ -213,6 +222,22 @@ color: rgba(255, 255, 255, 0.74);
   color: white;
 }
 
+.dccTheme {
+    .institution-header, .collectionHeader {
+    background: $dccColor;
+    }
+    .collectionLogo {
+    background-image: url($dccLogo_long);
+    cursor: pointer;
+    }
+    form#islandora-collection-search-form {
+    border: 2px solid $dccColor;
+    }
+    .institution-search input[type="text"]{
+    border: 2px solid $dccColor;
+    }
+}
+
 .lsmTheme {
     .institution-header, .collectionHeader {
     background: $lsmColor;
@@ -229,7 +254,7 @@ color: rgba(255, 255, 255, 0.74);
     }
 }
 
-.lsuTheme, .lsuhscTheme, .lsusTheme, .lsuhscsTheme {
+.lsuTheme{
     .institution-header, .collectionHeader {
     background: $lsuColor;
     }
@@ -245,6 +270,43 @@ color: rgba(255, 255, 255, 0.74);
     }
 }
 
+.lsuhscTheme, .lsusTheme, .lsuhscsTheme {
+    .institution-header, .collectionHeader {
+    background: #white;
+    color: #474747;
+    }
+    #page-title{
+      color: #474747;
+    }    
+    form#islandora-collection-search-form {
+    border: 2px solid #white;
+    }
+    .institution-search input[type="text"]{
+    border: 2px solid #white;
+    }
+}
+
+.lsusTheme{
+    .collectionLogo {
+    background-image: url($lsusLogo);
+    cursor: pointer;
+    }
+}
+
+
+.lsuhscsTheme{
+    .collectionLogo {
+    background-image: url($lsuhscsLogo);
+    cursor: pointer;
+    }
+}
+
+.lsuhscTheme{
+    .collectionLogo {
+    background-image: url($lsuhscLogo);
+    cursor: pointer;
+    }
+}
 .latechTheme {
     .institution-header, .collectionHeader {
     background: $latechColor;
@@ -452,6 +514,26 @@ color: rgba(255, 255, 255, 0.74);
     }
     .institution-search input[type="text"]{
     border: 2px solid $unoColor;      
+    }
+}
+
+.vvilleTheme {
+    .institution-header, .collectionHeader {
+    background: $vvilleColor;
+    color: #474747;
+    }
+    #page-title{
+      color: #474747;
+    }
+    .collectionLogo {
+    background-image: url($vvilleLogo);
+    cursor: pointer;
+    }
+    form#islandora-collection-search-form {
+    border: 2px solid $vvilleColor;
+    }
+    .institution-search input[type="text"]{
+    border: 2px solid $vvilleColor;      
     }
 }
 
@@ -674,11 +756,16 @@ li.institution-collection-list-item a::before {
     @include transition-duration(.5s);      
   }  
 
+  a.institutionLink.dccLink {
+    background-color: $dccColor;
+    background-image: url($dccLogo);
+    background-size: 70px auto;    
+  }  
+
   a.institutionLink.lsmLink {
     background-color: $lsmColor;
     background-image: url($lsmLogo);
     background-size: 40px auto;    
-
   }  
 
 
@@ -769,6 +856,13 @@ li.institution-collection-list-item a::before {
   a.institutionLink.unoLink {
     background-color: $unoColor;
     background-image: url($unoLogo);
+  }  
+
+  a.institutionLink.vvilleLink {
+    background-color: $vvilleColor;
+    background-image: url($vvilleLogo);
+    background-size: 100px auto;    
+
   }  
 
 
@@ -1939,17 +2033,35 @@ fieldset.islandora-metadata.collapsible {
   padding: 0.5em;
 }
 
+a.viewallButton {
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 0px 6px;
+    font-size: 11px;
+    letter-spacing: 1px;
+    margin-left: 10px;
+}
+
 /* Solr results */
 
 dl.solr-fields {
-  border-top: none;
+    width: 100%;
+    padding: 0px;
 }
 
 .islandora-solr-search-result {
-  margin: 1em 0 0 0;
-  border-bottom: 1px #c7c7c7 solid;
-  padding: 0 0 1em 0;
-  color: #6b6b6b;
+    background-color: white;
+    padding: 0px;
+    margin-top: 0px;
+    margin-left: 5px;
+    margin-right: 0px;
+    border-radius: 10px;
+    border: 1px solid #cccccc;
+    margin-bottom: 0px;
+    padding: 0px;
+    margin-top: 5px;
+    margin-right: 10px;
+    width: calc(100% - 20px);
   a {
     color: #438fca;
     position: relative;
@@ -2209,6 +2321,10 @@ div.islandora-solr-content {
 
 //front page
 
+#section-header.front.logged-in  {
+      top: 64px;
+}
+
 .front{
 
 #block-islandora-solr-simple{
@@ -2220,12 +2336,16 @@ div.islandora-solr-content {
     top: -10px;
 }
 
+
+
 #section-header {
     position: absolute;
     top: 0px;
     z-index: 2;
     width: 100%;
 }
+
+
 
 #region-header-second, #region-header-first, #zone-header{
   background-color: transparent;
@@ -2472,7 +2592,8 @@ ul.islandora-solr-sort {
 dl {
   &.solr-fields {
     width: 100%;
-    padding: 20px;
+    padding: 0px;
+    border: 0px;
   }
   &.solr-thumb {
     display: flex;
@@ -2487,14 +2608,6 @@ dl {
   }
 }
 
-.islandora-solr-search-result {
-    background-color: white;
-    padding: 0px;
-    margin-top: 0px;
-    margin-left: 1px;
-    margin-right: 0px;
-    border-bottom: 1px rgba(199, 199, 199, 0.52) solid;
-}
 
 .islandora-inline-metadata {
   dt {
@@ -3337,13 +3450,14 @@ div {
   }
   .islandora-solr-search-result {
     background-color: white;
-    border-radius: 10px;
-    border: 1px solid #cccccc;
     padding: 0px;
-    margin-top: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
-    width: calc(100% - 20px);
+    margin-bottom: 0px;
+    margin-top: 0px;
+    border-radius: 5px;
+    margin-left: 5px;
+    margin-right: 0px;
+    overflow: hidden;
+    width: calc(100% - 20px);    
   }
   ul.islandora-solr-sort {
     border-bottom: 1px solid #b7b7b7;
