@@ -36,6 +36,10 @@ body {
   font-family: "Roboto";
 }
 
+body.front {
+  background-color: #ffffff;
+}
+
 strong {
   font-style: normal;
 }
@@ -71,6 +75,10 @@ span.bold {
 
 .front .region-header-second-inner {
   justify-content: flex-end !important;
+}
+
+.logged-in .loginButton {
+  display: none;
 }
 
 /*Institutional Page*/
@@ -259,9 +267,26 @@ li.child-institution-collection-list-item {
 }
 
 /*institution list*/
+.institutionLabel {
+  padding: 0px 20px;
+  text-align: center;
+  line-height: 17px;
+}
+
 #block-block-11 {
   display: flex;
   align-items: center;
+  width: 70vw;
+  margin: 0 auto;
+  padding-top: 40px;
+  padding-left: 15px;
+  padding-bottom: 40px;
+}
+#block-block-11 .content.clearfix {
+  display: flex;
+}
+#block-block-11 .homepageInstitutions {
+  display: flex;
 }
 #block-block-11 .content p {
   width: 1000px;
@@ -1037,6 +1062,59 @@ dd {
   flex-direction: row;
   align-items: center;
 }
+.footerContainer .loginButton {
+  cursor: pointer;
+  padding: 5px;
+  border: 1px solid;
+  width: 70px;
+  border-radius: 5px;
+  text-align: center;
+}
+.footerContainer #block-user-login {
+  padding-left: 12px;
+  padding-bottom: 20px;
+  color: #6b6b6b;
+  transform: translate(410px, 130%);
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  position: absolute;
+  left: -140px;
+  bottom: 27px;
+}
+.footerContainer #block-user-login .block-inner {
+  border-top: 0px;
+  margin-right: 12px;
+  padding-top: 20px;
+}
+.footerContainer #block-user-login input.form-text {
+  background: #1a1a1a;
+  border: 1px solid grey;
+  color: grey;
+}
+.footerContainer #block-user-login input.form-submit {
+  border: 1px solid grey;
+  border-radius: 5px;
+  background: none;
+  color: grey;
+  text-transform: uppercase;
+  font-size: 10px;
+  padding: 6px 15px;
+  font-weight: 500;
+  font-family: Roboto;
+  text-shadow: none;
+}
+.footerContainer #block-user-login h2.block-title {
+  display: none;
+}
+.footerContainer #block-user-login.shown {
+  transform: translate(410px, 0%);
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
 
 /*center justify and align are for mobile android*/
 .footerImg {
@@ -1645,7 +1723,23 @@ div.islandora-solr-content {
   margin-bottom: 10px;
 }
 
+.front #block-islandora-solr-simple {
+  background: white;
+}
+.front #block-block-1 a {
+  position: relative;
+  top: -10px;
+}
 .front #section-header {
+  position: absolute;
+  top: 0px;
+  z-index: 2;
+  width: 100%;
+}
+.front #region-header-second, .front #region-header-first, .front #zone-header {
+  background-color: transparent;
+}
+.front #block-system-main {
   display: none;
 }
 .front .landingHeader {
@@ -1670,6 +1764,61 @@ div.islandora-solr-content {
   webkit-justify-content: space-between;
   min-height: calc(100vh - 59px);
 }
+.front .nameHover {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  line-height: 17px;
+}
+.front .homepageSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.front .homepageText {
+  margin-left: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  width: 150%;
+}
+.front .homepageText p, .front .homepageText h1 {
+  margin: 0px;
+}
+.front .homepageText h1 {
+  font-size: 15px;
+}
+.front .homepageLabel {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(128, 128, 128, 0.76);
+  height: 100%;
+  flex-shrink: 2;
+  font-size: 16px;
+  color: #5f5f5f;
+}
+.front div#block-block-13 {
+  display: flex;
+  align-items: center;
+  width: 70vw;
+  margin: 0 auto;
+  padding-top: 80px;
+  padding-left: 15px;
+}
+.front div#block-block-13 .welcomeLabel {
+  background-image: url(http://i.imgur.com/i41HVJl.png);
+  background-size: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.front div#block-block-13 .content.clearfix {
+  display: flex;
+}
 .front div#block-block-12 {
   background-image: url(http://i.imgur.com/23Z2B15.jpg);
   background-size: cover;
@@ -1688,7 +1837,7 @@ div.islandora-solr-content {
   font-weight: 900;
   text-transform: uppercase;
   width: 210px;
-  line-height: 69px;
+  line-height: 72px;
   color: white;
   position: absolute;
   bottom: 26px;
@@ -2138,7 +2287,7 @@ p.about_collection::before {
   border-radius: 10px;
   padding: 0px;
   float: left;
-  width: 100%;
+  width: 100% !important;
   max-width: 100%;
   position: relative;
   overflow-x: hidden;
@@ -2492,10 +2641,6 @@ div.islandora-pdf-object, div.islandora-large-image-object {
 }
 .mcneeseTheme #block-block-1 a {
   color: #ffffff;
-}
-
-.institution div.region-inner.region-header-first-inner {
-  padding-left: 10px;
 }
 
 .landingMessage {

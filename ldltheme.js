@@ -78,7 +78,102 @@ $(window).on("load", function() {
       $(".institution-search input.form-submit").val(' ');    
       $(".collectionSearch input.form-submit").val(' ');     
       $("#largeSearch input.form-submit").val(' ');  
+      $("#block-user-login").prependTo(".footerContainer");
 
+      $('.loginButton').click(function(){
+          $("#block-user-login").toggleClass('shown');
+      });
+
+
+$('.institutionLink').hover(function() {
+  $('div.institutionLabel').toggleClass('nameHover');
+});
+
+
+$('.lsmLink').hover(
+    function() {
+        var $this = $('div.institutionLabel'); // caching $(this)
+        $this.data('initialText', $this.text());
+        $this.text("Louisiana State Museum");
+    },
+    function() {
+        var $this = $('div.institutionLabel'); // caching $(this)
+        $this.text($this.data('initialText'));
+    }
+);
+
+$('.latechLink').hover(
+    function() {
+        var $this = $('div.institutionLabel'); // caching $(this)
+        $this.data('initialText', $this.text());
+        $this.text("Louisiana Tech University");
+    },
+    function() {
+        var $this = $('div.institutionLabel'); // caching $(this)
+        $this.text($this.data('initialText'));
+    }
+);
+
+$('.lsuLink').hover(
+    function() {
+        var $this = $('div.institutionLabel'); // caching $(this)
+        $this.data('initialText', $this.text());
+        $this.text("Louisiana State University");
+    },
+    function() {
+        var $this = $('div.institutionLabel'); // caching $(this)
+        $this.text($this.data('initialText'));
+    }
+);
+
+$('.lsusLink').hover(
+    function() {
+        var $this = $('div.institutionLabel'); // caching $(this)
+        $this.data('initialText', $this.text());
+        $this.text("Louisiana State University Shreveport");
+    },
+    function() {
+        var $this = $('div.institutionLabel'); // caching $(this)
+        $this.text($this.data('initialText'));
+    }
+);
+
+$('.lsuhscLink').hover(
+    function() {
+        var $this = $('div.institutionLabel'); // caching $(this)
+        $this.data('initialText', $this.text());
+        $this.text("Louisiana State University Health New Orleans");
+    },
+    function() {
+        var $this = $('div.institutionLabel'); // caching $(this)
+        $this.text($this.data('initialText'));
+    }
+);
+
+$('.lsuhscsLink').hover(
+    function() {
+        var $this = $('div.institutionLabel'); // caching $(this)
+        $this.data('initialText', $this.text());
+        $this.text("Louisiana State University Health Shreveport");
+    },
+    function() {
+        var $this = $('div.institutionLabel'); // caching $(this)
+        $this.text($this.data('initialText'));
+    }
+);
+
+
+$('.loynoLink').hover(
+    function() {
+        var $this = $('div.institutionLabel'); // caching $(this)
+        $this.data('initialText', $this.text());
+        $this.text("Loyola University New Orleans");
+    },
+    function() {
+        var $this = $('div.institutionLabel'); // caching $(this)
+        $this.text($this.data('initialText'));
+    }
+);
 
 $('#largeSearch .form-item-islandora-simple-search-query > input').each(function() {
   $(this).attr('placeholder', 'Search the Louisiana Digital Library' );
