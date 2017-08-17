@@ -97,9 +97,44 @@ span.bold {
   padding-right: 20px;
 }
 
+.institution-header, .collectionHeader {
+  color: rgba(255, 255, 255, 0.74);
+}
+
+#page-title {
+  color: white;
+}
+
+.lsmTheme .institution-header, .lsmTheme .collectionHeader {
+  background: #5d0e8b;
+}
+.lsmTheme .collectionLogo {
+  background-image: url("http://i.imgur.com/Sz5sguM.png");
+  cursor: pointer;
+}
+.lsmTheme form#islandora-collection-search-form {
+  border: 2px solid #5d0e8b;
+}
+.lsmTheme .institution-search input[type="text"] {
+  border: 2px solid #5d0e8b;
+}
+
+.lsuTheme .institution-header, .lsuTheme .collectionHeader, .lsuhscTheme .institution-header, .lsuhscTheme .collectionHeader, .lsusTheme .institution-header, .lsusTheme .collectionHeader, .lsuhscsTheme .institution-header, .lsuhscsTheme .collectionHeader {
+  background: #461D7C;
+}
+.lsuTheme .collectionLogo, .lsuhscTheme .collectionLogo, .lsusTheme .collectionLogo, .lsuhscsTheme .collectionLogo {
+  background-image: url("http://reu.cct.lsu.edu/documents/logos/LSU_Gold_CMYK.png");
+  cursor: pointer;
+}
+.lsuTheme form#islandora-collection-search-form, .lsuhscTheme form#islandora-collection-search-form, .lsusTheme form#islandora-collection-search-form, .lsuhscsTheme form#islandora-collection-search-form {
+  border: 2px solid #461D7C;
+}
+.lsuTheme .institution-search input[type="text"], .lsuhscTheme .institution-search input[type="text"], .lsusTheme .institution-search input[type="text"], .lsuhscsTheme .institution-search input[type="text"] {
+  border: 2px solid #461D7C;
+}
+
 .latechTheme .institution-header, .latechTheme .collectionHeader {
   background: #003087;
-  color: rgba(255, 255, 255, 0.74);
 }
 .latechTheme #page-title {
   color: white;
@@ -113,6 +148,37 @@ span.bold {
 }
 .latechTheme .institution-search input[type="text"] {
   border: 2px solid #003087;
+}
+
+.loynoTheme .institution-header, .loynoTheme .collectionHeader {
+  background: #660000;
+}
+.loynoTheme #page-title {
+  color: white;
+}
+.loynoTheme .collectionLogo {
+  background-image: url(http://i.imgur.com/23i7KxR.png);
+  cursor: pointer;
+}
+.loynoTheme form#islandora-collection-search-form {
+  border: 2px solid #660000;
+}
+.loynoTheme .institution-search input[type="text"] {
+  border: 2px solid #660000;
+}
+
+.mcneeseTheme .institution-header, .mcneeseTheme .collectionHeader {
+  background: #00529b;
+}
+.mcneeseTheme .collectionLogo {
+  background-image: url(http://i.imgur.com/23i7KxR.png);
+  cursor: pointer;
+}
+.mcneeseTheme form#islandora-collection-search-form {
+  border: 2px solid #00529b;
+}
+.mcneeseTheme .institution-search input[type="text"] {
+  border: 2px solid #00529b;
 }
 
 .institution-logo img {
@@ -401,12 +467,12 @@ li.child-institution-collection-list-item {
 }
 .collectionPage #page-title {
   padding: 20px;
-  width: 45%;
-  display: flex;
+  width: 100%;
   align-items: center;
   margin: 0px;
   padding-left: 0px;
   padding-bottom: 0px;
+  display: block;
 }
 .collectionPage span.islandora-basic-collection-item-count {
   font-size: 12px;
@@ -2565,90 +2631,8 @@ div.islandora-pdf-object, div.islandora-large-image-object {
   flex-direction: column;
 }
 
-.hnocTheme #zone-header {
-  background-color: #254550;
-}
-.hnocTheme #block-block-4 {
-  background-color: #e5e5e7;
-  color: #e5e5e7;
-}
-
-.stateTheme #zone-header {
-  background-color: #7d160f;
-}
-.stateTheme #block-block-4 {
-  background-color: #edba51;
-  color: #edba51;
-}
-.stateTheme .page-islandora-object div.region-header-second-inner::after {
-  color: #7d160f;
-}
-
-.tulaneTheme #zone-header {
-  background-color: #032a17;
-}
-.tulaneTheme #block-block-4 {
-  background-color: #e5e5e7;
-  color: #e5e5e7;
-}
-.tulaneTheme .page-islandora-object div.region-header-second-inner::after {
-  color: #032a17;
-}
-
-.unoTheme #zone-header {
-  background-color: #004C99;
-}
-.unoTheme #block-block-4 {
-  background-color: #ccc;
-  color: #ccc;
-}
-.unoTheme .page-islandora-object div.region-header-second-inner::after {
-  color: #004C99;
-}
-
-.lsuTheme #zone-header {
-  background-color: #3C1053;
-}
-.lsuTheme #block-block-4 {
-  background-color: #D29F13;
-  color: #D29F13;
-}
-
-.mcneeseTheme #zone-header {
-  background-color: #00477f;
-}
-.mcneeseTheme #block-block-4 {
-  background-color: #fad703;
-  color: #fad703;
-}
-
-.loynoTheme #zone-header {
-  background-color: #660000;
-}
-.loynoTheme #block-block-4 {
-  background-color: #f4aa00;
-  color: #f4aa00;
-}
-
-.mcneeseTheme input#edit-islandora-simple-search-query.form-text {
-  border-right: 1px solid #ffffff;
-  color: #ffffff;
-}
-.mcneeseTheme #block-islandora-solr-simple {
-  margin-left: 85px;
-  border: 1px solid #ffffff;
-  width: calc(100% - 600px);
-}
-.mcneeseTheme #block-block-1 a {
-  color: #ffffff;
-}
-
 .landingMessage {
   margin: 20px;
-}
-
-.latechTheme .page-islandora-object div.region-header-second-inner::after {
-  color: #000092;
 }
 
 .itemPage #region-sidebar-first, .page-islandora-search #region-sidebar-first {
@@ -2911,7 +2895,7 @@ div.islandora-pdf-object, div.islandora-large-image-object {
     margin-right: auto;
   }
 
-  #block-block-4, #block-system-navigation, #page-title-header, #block-user-login {
+  #block-block-4, #block-system-navigation, #page-title-header {
     display: none;
   }
 
