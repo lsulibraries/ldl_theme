@@ -34,7 +34,7 @@ $unoColor: #003056;
 $vvilleColor: #ede7c0;
 
 $dccLogo: 'http://www.dcc.edu/_resources/images/logo-white.png';
-$lsmLogo: 'http://i.imgur.com/Sz5sguM.png';
+$lsmLogo: 'http://i.imgur.com/uimSOt2.png';
 $lsuLogo: 'http://reu.cct.lsu.edu/documents/logos/LSU_Gold_CMYK.png';
 $lsusLogo: 'http://www.lsus.edu/Images/Offices%20and%20Services/HR/LSUS%20Logo%2011102015.png';
 $lsuhscLogo: 'http://i.imgur.com/FQdHpzz.png';
@@ -765,7 +765,7 @@ li.institution-collection-list-item a::before {
   a.institutionLink.lsmLink {
     background-color: $lsmColor;
     background-image: url($lsmLogo);
-    background-size: 40px auto;    
+    background-size: 90px auto;    
   }  
 
 
@@ -2437,6 +2437,7 @@ div.islandora-solr-content {
     flex-shrink: 2;
     font-size: 16px;
     color: #5f5f5f;
+    min-width: 200px;    
     }
     
 

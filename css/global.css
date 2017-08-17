@@ -123,7 +123,7 @@ span.bold {
   background: #5d0e8b;
 }
 .lsmTheme .collectionLogo {
-  background-image: url("http://i.imgur.com/Sz5sguM.png");
+  background-image: url("http://i.imgur.com/uimSOt2.png");
   cursor: pointer;
 }
 .lsmTheme form#islandora-collection-search-form {
@@ -588,8 +588,8 @@ li.child-institution-collection-list-item {
 }
 #block-block-11 a.institutionLink.lsmLink {
   background-color: #5d0e8b;
-  background-image: url("http://i.imgur.com/Sz5sguM.png");
-  background-size: 40px auto;
+  background-image: url("http://i.imgur.com/uimSOt2.png");
+  background-size: 90px auto;
 }
 #block-block-11 a.institutionLink.lsuLink {
   background-color: #461D7C;
@@ -2110,6 +2110,7 @@ div.islandora-solr-content {
   flex-shrink: 2;
   font-size: 16px;
   color: #5f5f5f;
+  min-width: 200px;
 }
 .front div#block-block-13 {
   display: flex;
