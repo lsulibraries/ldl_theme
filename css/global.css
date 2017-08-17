@@ -988,10 +988,6 @@ div.breadcrumb a:nth-last-of-type(1) {
   align-self: center;
 }
 
-#largeSearch #edit-submit {
-  height: 65px;
-}
-
 #block-system-main {
   min-height: initial;
   margin-bottom: 50px;
@@ -1544,41 +1540,6 @@ div.islandora-solr-content {
   flex-direction: column;
 }
 
-#largeSearch #edit-simple {
-  border-bottom: 1px solid #d0d0d0;
-}
-#largeSearch input#edit-islandora-simple-search-query.form-text {
-  -webkit-appearance: none;
-  -moz-border-radius: 0;
-  -webkit-border-radius: 0;
-  border-radius: 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding;
-  background-clip: padding-box;
-  background-color: transparent;
-  border-right: 1px solid #808080;
-  color: #6b6b6b;
-  outline: 0;
-  padding: 2px 3px;
-  font-size: 36px;
-  font-family: Roboto, Arial, sans-serif;
-  font-weight: 300;
-  height: 65px;
-  width: calc(99% - 104px);
-  border-top-width: 0px;
-  border-bottom-width: 0px;
-  border-right-width: 0px;
-  border-left-width: 0px;
-}
-#largeSearch input#edit-submit.form-submit, #largeSearch input#edit-submit--2.form-submit {
-  background-image: url(http://i.imgur.com/zBCP7zk.png);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
 #block-user-login input#edit-submit.form-submit {
   background-image: none;
   color: #438fca;
@@ -1710,13 +1671,14 @@ div.islandora-solr-content {
   min-height: calc(100vh - 59px);
 }
 .front div#block-block-12 {
-  background-image: url(http://i.imgur.com/KKIfFbM.jpg);
+  background-image: url(http://i.imgur.com/23Z2B15.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position-y: 30%;
-  height: 600px;
+  background-position-y: 80%;
+  height: 60vh;
+  position: relative;
 }
-.front div#block-block-12 .content.clearfix {
+.front div#block-block-12 > .block-inner > .content.clearfix {
   width: 70vw;
   margin: 0 auto;
 }
@@ -1729,23 +1691,49 @@ div.islandora-solr-content {
   line-height: 69px;
   color: white;
   position: absolute;
-  bottom: 0px;
+  bottom: 26px;
 }
 .front div#block-block-12 #largeSearch {
   position: absolute;
-  bottom: 0px;
+  bottom: -34px;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
+  margin-left: 5px;
+  z-index: 99;
 }
-.front div#block-block-12 #largeSearch input {
+.front div#block-block-12 #largeSearch div#edit-simple--2 {
   width: 70vw;
 }
-.front .region-content-inner .block-inner.clearfix {
+.front div#block-block-12 #largeSearch .form-wrapper {
+  width: 70vw;
+  position: relative;
   display: flex;
 }
-.front #region-content .content.clearfix {
+.front div#block-block-12 #largeSearch .form-item {
+  width: 100%;
+}
+.front div#block-block-12 #largeSearch input[type="text"] {
+  width: 100%;
+  font-size: 30px;
+  padding: 0px 30px;
+  height: 70px;
+}
+.front div#block-block-12 #largeSearch input[type="submit"] {
+  position: absolute;
+  right: 0px;
+  top: 10px;
+  width: 80px;
+  height: 70px;
+  background: none;
+  border: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 45px 45px;
+  background-image: url(http://i.imgur.com/NpfYQT0.png);
+}
+.front > #region-content .content.clearfix {
   display: flex;
   width: 100%;
 }

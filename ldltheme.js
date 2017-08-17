@@ -76,7 +76,14 @@ $(window).on("load", function() {
       $(".collectionPage #block-islandora-collection-search-islandora-collection-search").appendTo(".collectionSearch");
       $("#zone-header input.form-submit").val(' ');
       $(".institution-search input.form-submit").val(' ');    
-      $(".collectionSearch input.form-submit").val(' ');      
+      $(".collectionSearch input.form-submit").val(' ');     
+      $("#largeSearch input.form-submit").val(' ');  
+
+
+$('#largeSearch .form-item-islandora-simple-search-query > input').each(function() {
+  $(this).attr('placeholder', 'Search the Louisiana Digital Library' );
+});//Adds Search text
+
 
 $('#zone-header .form-item-islandora-simple-search-query > input').each(function() {
   $(this).attr('placeholder', 'Search the LDL' );
