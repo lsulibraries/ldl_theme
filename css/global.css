@@ -1684,12 +1684,61 @@ div.islandora-solr-content {
   margin-bottom: 10px;
 }
 
-.landingText {
-  font-size: 13px;
+.front .landingHeader {
+  font-size: 25px;
+  color: white;
+}
+.front .landingText {
+  font-size: 14px;
   max-width: 1200px;
   margin: 0 auto;
-  color: #6b6b6b;
+  color: #cccccc;
   margin-bottom: 100px;
+}
+.front #region-content .region-content-inner {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-between;
+  webkit-justify-content: space-between;
+  min-height: calc(100vh - 59px);
+}
+.front div#block-block-6 {
+  background-image: url(http://i.imgur.com/KKIfFbM.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: 30%;
+}
+.front .region-content-inner .block-inner.clearfix {
+  display: flex;
+  min-height: 600px;
+}
+.front #region-content .content.clearfix {
+  display: flex;
+  width: 100%;
+}
+.front .messageContainer {
+  display: flex;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.85);
+  width: 100%;
+  align-self: flex-end;
+  padding: 10px 20px;
+}
+.front .homepageLogo {
+  background-image: url(http://i.imgur.com/MuY1yyN.png);
+  width: 130px;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.front .landingMessage {
+  margin: 20px;
+  border-left: 1px solid rgba(255, 255, 255, 0.28);
+  padding-left: 20px;
 }
 
 .page-browse-collections .landingHero {
@@ -2059,14 +2108,6 @@ p.about_collection::before {
   border-radius: 10px;
   border: 1px solid #ccc;
 }*/
-.messageContainer {
-  display: flex;
-  justify-content: center;
-  background: white;
-  margin: 10px;
-  border: 1px solid #ccc;
-}
-
 .page-browse-collections div.landingContainer, #views-exposed-form-islandora-collection-landing-pages-page .views-exposed-widgets {
   display: none;
 }
@@ -2600,6 +2641,10 @@ div.islandora-pdf-object, div.islandora-large-image-object {
 }
 .latechTheme .page-islandora-object div.region-header-second-inner::after {
   color: #000092;
+}
+
+.front #region-sidebar-first, .collectionPage #region-sidebar-first, .pageLatech #region-sidebar-first {
+  display: none;
 }
 
 /*BEGIN test area*/

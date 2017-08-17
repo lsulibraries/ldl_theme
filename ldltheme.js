@@ -41,13 +41,9 @@ $(window).on("load", function() {
       });
 
 
-
-
-if ( $( ".islandora-basic-collection-wrapper > p" ).length ) { 
-     $("body").addClass('collectionPage');
- }//allows collection Page styles
-
-
+      if ( $( ".islandora-basic-collection-wrapper > p" ).length ) { 
+           $("body").addClass('collectionPage');
+       }//allows collection Page styles
 
       $(".islandora-pdf-metadata").clone().prop({ id: "sideMods", class: "newClass" }).prependTo("#region-sidebar-first");
       $(".islandora-large-image-metadata").clone().prop({ id: "sideMods", class: "newClass" }).prependTo("#region-sidebar-first");
@@ -73,10 +69,11 @@ if ( $( ".islandora-basic-collection-wrapper > p" ).length ) {
       $('.collectionPage #page-title').wrapAll('<div class="collectionHeader"/>'); //wraps collectionPage title
       $(".collectionPage .islandora-basic-collection-wrapper > p").appendTo(".collectionHeader");
       $(".collectionPage <div class='collectionLogo'/>").prependTo(".collectionHeader");
+      $("<div class='homepageLogo'/>").prependTo(".messageContainer");
 
       $(".collectionPage <div class='collectionSearch'/>").insertAfter(".collectionHeader");
-            $(".collectionPage #page-title").prependTo(".collectionHeader p");
-$(".collectionPage #block-islandora-collection-search-islandora-collection-search").appendTo(".collectionSearch");
+      $(".collectionPage #page-title").prependTo(".collectionHeader p");
+      $(".collectionPage #block-islandora-collection-search-islandora-collection-search").appendTo(".collectionSearch");
       $("#zone-header input.form-submit").val(' ');
       $(".institution-search input.form-submit").val(' ');    
       $(".collectionSearch input.form-submit").val(' ');      
@@ -88,6 +85,11 @@ $('#zone-header .form-item-islandora-simple-search-query > input').each(function
 $(".latechTheme .collectionLogo").on('click', function(){
   window.location = "/latech";    
 });
+
+if ( $( "#sideMods" ).length ) { 
+     $("body").addClass('itemPage');
+ }//allows collection Page styles
+
 
 var currentInstitution =  $( "ul.breadcrumb a.active" ).text();
 $('.institution-search #myform input').each(function() {

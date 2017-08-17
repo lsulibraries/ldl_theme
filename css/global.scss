@@ -1925,12 +1925,77 @@ div.islandora-solr-content {
   }
 }
 
+
+//front page
+
+.front{
+
+.landingHeader {
+    font-size: 25px;
+    color: white;
+}
+
 .landingText {
-  font-size: 13px;
-  max-width: 1200px;
-  margin: 0 auto;
-  color: #6b6b6b;
-  margin-bottom: 100px;
+    font-size: 14px;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #cccccc;
+    margin-bottom: 100px;
+}
+
+#region-content .region-content-inner {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+    webkit-justify-content: space-between;
+    min-height: calc(100vh - 59px);
+}
+
+
+div#block-block-6 {
+    background-image: url(http://i.imgur.com/KKIfFbM.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: 30%;
+}
+
+.region-content-inner .block-inner.clearfix {
+    display: flex;
+    min-height: 600px;
+}
+
+#region-content .content.clearfix {
+    display: flex;
+    width: 100%;
+}
+
+.messageContainer {
+    display: flex;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.85);
+    width: 100%;
+    align-self: flex-end;
+    padding: 10px 20px;
+}
+
+.homepageLogo {
+    background-image: url(http://i.imgur.com/MuY1yyN.png);
+    width: 130px;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.landingMessage {
+    margin: 20px;
+    border-left: 1px solid rgba(255, 255, 255, 0.28);
+    padding-left: 20px;
+}
+
+
 }
 
 .page-browse-collections .landingHero {
@@ -2322,14 +2387,6 @@ p {
   border-radius: 10px;
   border: 1px solid #ccc;
 }*/
-
-.messageContainer {
-  display: flex;
-  justify-content: center;
-  background: white;
-  margin: 10px;
-  border: 1px solid #ccc;
-}
 
 .page-browse-collections div.landingContainer, #views-exposed-form-islandora-collection-landing-pages-page .views-exposed-widgets {
   display: none;
@@ -2908,6 +2965,19 @@ position: absolute;
     color: #000092;
   }
 }
+
+.itemPage, .page-islandora-search{
+
+  #region-sidebar-first{
+  display: block;
+  }
+
+}
+
+
+  #region-sidebar-first{
+  display: none;
+  }
 
 /*BEGIN test area*/
 @media screen and (min-width: 2000px) {
