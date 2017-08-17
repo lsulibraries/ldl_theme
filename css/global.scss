@@ -1930,71 +1930,104 @@ div.islandora-solr-content {
 
 .front{
 
-.landingHeader {
-    font-size: 25px;
-    color: white;
-}
+  #section-header {
+    display: none;
+  }
 
-.landingText {
-    font-size: 14px;
-    max-width: 1200px;
-    margin: 0 auto;
-    color: #cccccc;
-    margin-bottom: 100px;
-}
+  .landingHeader {
+  font-size: 25px;
+  color: white;
+  }
 
-#region-content .region-content-inner {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    justify-content: space-between;
-    webkit-justify-content: space-between;
-    min-height: calc(100vh - 59px);
-}
+  .landingText {
+  font-size: 14px;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: #cccccc;
+  margin-bottom: 100px;
+  }
+
+  #region-content .region-content-inner {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-between;
+  webkit-justify-content: space-between;
+  min-height: calc(100vh - 59px);
+  }
 
 
-div#block-block-6 {
-    background-image: url(http://i.imgur.com/KKIfFbM.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position-y: 30%;
-}
+  div#block-block-12 {
+      background-image: url(http://i.imgur.com/KKIfFbM.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position-y: 30%;
+      height: 600px;
 
-.region-content-inner .block-inner.clearfix {
-    display: flex;
-    min-height: 600px;
-}
+      .content.clearfix {
+      width: 70vw;
+      margin: 0 auto;
+      }
 
-#region-content .content.clearfix {
-    display: flex;
-    width: 100%;
-}
+      p {
+      width: 70vw;
+      font-size: 86px;
+      font-weight: 900;
+      text-transform: uppercase;
+      width: 210px;
+      line-height: 69px;
+      color: white;
+      position: absolute;
+      bottom: 0px;
+      }
 
-.messageContainer {
-    display: flex;
-    justify-content: center;
-    background: rgba(0, 0, 0, 0.85);
-    width: 100%;
-    align-self: flex-end;
-    padding: 10px 20px;
-}
+    #largeSearch {
+      position: absolute;
+      bottom: 0px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
 
-.homepageLogo {
-    background-image: url(http://i.imgur.com/MuY1yyN.png);
-    width: 130px;
-    height: 200px;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-.landingMessage {
-    margin: 20px;
-    border-left: 1px solid rgba(255, 255, 255, 0.28);
-    padding-left: 20px;
-}
+      input {
+      width: 70vw;
+      }
+    }
+  }
 
+  .region-content-inner .block-inner.clearfix {
+  display: flex;
+  }
+
+  #region-content .content.clearfix {
+  display: flex;
+  width: 100%;
+  }
+
+  .messageContainer {
+  display: flex;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.85);
+  width: 100%;
+  align-self: flex-end;
+  padding: 10px 20px;
+  }
+
+  .homepageLogo {
+  background-image: url(http://i.imgur.com/MuY1yyN.png);
+  width: 130px;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-position: center;
+  }
+  .landingMessage {
+  margin: 20px;
+  border-left: 1px solid rgba(255, 255, 255, 0.28);
+  padding-left: 20px;
+  }
 
 }
 
@@ -2699,22 +2732,6 @@ div {
 }
 
 .hnocTheme {
-  .region-header-first-inner::after {
-    content: " ";
-    color: white;
-    background-image: url(http://i.imgur.com/lRaktDw.png);
-    background-size: contain;
-    width: 140px;
-    height: 46px;
-    background-repeat: no-repeat;
-    margin-left: 0px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    font-size: 20px;
-    background-position-x: 0px;
-    opacity: 1;
-  }
   #zone-header {
     background-color: #254550;
   }
@@ -2722,28 +2739,10 @@ div {
     background-color: #e5e5e7;
     color: #e5e5e7;
   }
-  .page-islandora-object div.region-header-second-inner::after {
-    color: #254550;
-  }
+
 }
 
 .stateTheme {
-  .region-header-first-inner::after {
-    content: " ";
-    color: white;
-    background-image: url(http://i.imgur.com/y1H8EGr.png);
-    background-size: contain;
-    width: 160px;
-    height: 40px;
-    background-repeat: no-repeat;
-    margin-left: 0px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    font-size: 20px;
-    background-position-x: 0px;
-    opacity: 1;
-  }
   #zone-header {
     background-color: #7d160f;
   }
@@ -2757,26 +2756,6 @@ div {
 }
 
 .tulaneTheme {
-  .region-header-first-inner::after {
-    content: " ";
-    color: white;
-    background-image: url(https://digitallibrary.tulane.edu/sites/all/themes/tul_theme/logo.png);
-    background-size: contain;
-    width: 160px;
-    height: 40px;
-    background-repeat: no-repeat;
-    margin-left: 0px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    font-size: 20px;
-    background-position-x: 0px;
-    opacity: 1;
-
-position: absolute;
-    left: 60px;
-    top: 16px;        
-  }
   #zone-header {
     background-color: #032a17;
   }
@@ -2790,26 +2769,6 @@ position: absolute;
 }
 
 .unoTheme {
-  .region-header-first-inner::after {
-    content: " ";
-    color: white;
-    background-image: url(http://www.uno.edu/_resources/images/unologo-lg.png);
-    background-size: contain;
-    width: 140px;
-    height: 30px;
-    background-repeat: no-repeat;
-    margin-left: 0px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    font-size: 20px;
-    background-position-x: 0px;
-    opacity: 1;
-
-position: absolute;
-    left: 60px;
-    top: 16px;        
-  }
   #zone-header {
     background-color: #004C99;
   }
@@ -2822,11 +2781,6 @@ position: absolute;
   }
 }
 
-.institution {
-  #block-delta-blocks-site-name {
-    display: none;
-  }
-}
 
 .lsuTheme {
   #zone-header {
@@ -2836,26 +2790,7 @@ position: absolute;
     background-color: #D29F13;
     color: #D29F13;
   }
-  .region-header-first-inner::after {
-    content: " ";
-    color: white;
-    background-image: url(http://i.imgur.com/pFZd2DD.png);
-    background-size: contain;
-    width: 140px;
-    height: 30px;
-    background-repeat: no-repeat;
-    margin-left: 0px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    font-size: 20px;
-    background-position-x: 0px;
-    opacity: 1;
 
-position: absolute;
-    left: 60px;
-    top: 16px;        
-  }
 }
 
 .mcneeseTheme {
@@ -2865,26 +2800,6 @@ position: absolute;
   #block-block-4 {
     background-color: #fad703;
     color: #fad703;
-  }
-  .region-header-first-inner::after {
-    content: " ";
-    color: white;
-    background-image: url(http://www.mcneese.edu/sites/all/themes/mcneese/images/logo.png);
-    background-size: contain;
-    width: 140px;
-    height: 30px;
-    background-repeat: no-repeat;
-    margin-left: 0px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    font-size: 20px;
-    background-position-x: 0px;
-    opacity: 1;
-
-position: absolute;
-    left: 60px;
-    top: 16px;        
   }
 }
 
@@ -2917,50 +2832,13 @@ position: absolute;
   padding-left: 10px;
 }
 
-.loynoTheme .region-header-first-inner::after {
-    content: " ";
-    color: white;
-    background-image: url(http://i.imgur.com/5Jjv9BT.png);
-    background-size: contain;
-    width: 100%;
-    height: 33px;
-    background-repeat: no-repeat;
-    margin-left: 0px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    font-size: 20px;
-    background-position-x: 0px;
-    opacity: 1;
-    position: absolute;
-    left: 60px;
-    top: 7px;
-}
 
 .landingMessage {
   margin: 20px;
 }
 
 .latechTheme {
-  .region-header-first-inner::after {
-    content: " ";
-    color: white;
-    background-image: url(http://i.imgur.com/YoY9AOr.png);
-    background-size: contain;
-    width: 140px;
-    height: 30px;
-    background-repeat: no-repeat;
-    margin-left: 0px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    font-size: 20px;
-    background-position-x: 0px;
-    opacity: 1;
-position: absolute;
-    left: 60px;
-    top: 12px; 
-  }
+
   .page-islandora-object div.region-header-second-inner::after {
     color: #000092;
   }
