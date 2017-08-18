@@ -81,8 +81,26 @@ span.bold {
   justify-content: flex-end !important;
 }
 
+#block-block-1 div.support-ticket-link {
+  display: none;
+}
+
 .logged-in .loginButton {
   display: none;
+}
+.logged-in #block-block-1 .content.clearfix {
+  display: flex;
+  flex-direction: row;
+}
+.logged-in #block-block-1 div.support-ticket-link {
+  display: block;
+}
+.logged-in #block-block-1 .support-ticket-link a {
+  color: #ff6a6a;
+  padding: 2px 8px;
+  border: 1px solid #ff6a6a;
+  border-radius: 10px;
+  margin-left: 20px;
 }
 
 /*Institutional Page*/
@@ -157,6 +175,9 @@ span.bold {
 }
 .lsuhscTheme #page-title, .lsusTheme #page-title, .lsuhscsTheme #page-title {
   color: #474747;
+}
+.lsuhscTheme .institution-about, .lsusTheme .institution-about, .lsuhscsTheme .institution-about {
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
 }
 .lsuhscTheme form#islandora-collection-search-form, .lsusTheme form#islandora-collection-search-form, .lsuhscsTheme form#islandora-collection-search-form {
   border: 2px solid #white;
@@ -263,6 +284,9 @@ span.bold {
 .subrTheme #page-title {
   color: #474747;
 }
+.subrTheme .institution-about {
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+}
 .subrTheme .collectionLogo {
   background-image: url("http://www.subr.edu/images/subr_logo.gif");
   cursor: pointer;
@@ -280,6 +304,9 @@ span.bold {
 }
 .stateTheme #page-title {
   color: #474747;
+}
+.stateTheme .institution-about {
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
 }
 .stateTheme .collectionLogo {
   background-image: url("http://i.imgur.com/y1H8EGr.png");
@@ -322,10 +349,9 @@ span.bold {
 
 .ullTheme .institution-header, .ullTheme .collectionHeader {
   background: #a00b0b;
-  color: #474747;
 }
-.ullTheme #page-title {
-  color: #474747;
+.ullTheme .institution-about {
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
 }
 .ullTheme .collectionLogo {
   background-image: url("http://i.imgur.com/aqD5A3q.png");
@@ -342,7 +368,7 @@ span.bold {
   background: #800029;
 }
 .ulmTheme .collectionLogo {
-  background-image: url("http://www.ulm.edu/opi/logos/academics/ulm_lettermark_fullname/png/ulm_lettermark_fullname-white.png");
+  background-image: url("http://www.ulm.edu/_resources/images/ulm-academic-loog-circle.png");
   cursor: pointer;
 }
 .ulmTheme form#islandora-collection-search-form {
@@ -356,7 +382,7 @@ span.bold {
   background: #003056;
 }
 .unoTheme .collectionLogo {
-  background-image: url("http://i.imgur.com/RWmzrPG.png");
+  background-image: url("http://i.imgur.com/RBtG5qz.png");
   cursor: pointer;
 }
 .unoTheme form#islandora-collection-search-form {
@@ -382,6 +408,16 @@ span.bold {
 }
 .vvilleTheme .institution-search input[type="text"] {
   border: 2px solid #ede7c0;
+}
+
+.tahillTheme .institution-header, .tahillTheme .collectionHeader {
+  background: #272727;
+}
+.tahillTheme form#islandora-collection-search-form {
+  border: 2px solid #272727;
+}
+.tahillTheme .institution-search input[type="text"] {
+  border: 2px solid #272727;
 }
 
 .institution-logo img {
@@ -658,7 +694,8 @@ li.child-institution-collection-list-item {
 }
 #block-block-11 a.institutionLink.ulmLink {
   background-color: #800029;
-  background-image: url("http://www.ulm.edu/opi/logos/academics/ulm_lettermark_fullname/png/ulm_lettermark_fullname-white.png");
+  background-image: url("http://www.ulm.edu/_resources/images/ulm-academic-loog-circle.png");
+  background-size: 45px auto;
 }
 #block-block-11 a.institutionLink.unoLink {
   background-color: #003056;

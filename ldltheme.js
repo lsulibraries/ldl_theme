@@ -26,7 +26,7 @@ $(window).on("load", function() {
 });
 
       var url = window.location.pathname;
-      var namespaces = ['uno','loyno', 'mcneese', 'lsu', 'latech', 'hnoc', 'tulane', 'state', 'nicholls', 'nsu', 'subr', 'ull', 'ulm', 'lsuhsc', 'lsuhscs', 'lsus', 'lsm', 'dcc', 'vville'];
+      var namespaces = ['uno','loyno', 'mcneese', 'lsu', 'latech', 'hnoc', 'tulane', 'state', 'nicholls', 'nsu', 'subr', 'ull', 'ulm', 'lsuhsc', 'lsuhscs', 'lsus', 'lsm', 'dcc', 'vville', 'tahil'];
 
       for(namespace in namespaces){
 	  ns = namespaces[namespace];
