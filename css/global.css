@@ -377,7 +377,7 @@ span.bold {
   background: #800029;
 }
 .ulmTheme .collectionLogo {
-  background-image: url("http://www.ulm.edu/_resources/images/ulm-academic-loog-circle.png");
+  background-image: url("http://www.ulm.edu/_resources/images/ulm-academic-logo-circle.png");
   cursor: pointer;
 }
 .ulmTheme form#islandora-collection-search-form {
@@ -703,7 +703,7 @@ li.child-institution-collection-list-item {
 }
 #block-block-11 a.institutionLink.ulmLink {
   background-color: #800029;
-  background-image: url("http://www.ulm.edu/_resources/images/ulm-academic-loog-circle.png");
+  background-image: url("http://www.ulm.edu/_resources/images/ulm-academic-logo-circle.png");
   background-size: 45px auto;
 }
 #block-block-11 a.institutionLink.unoLink {
