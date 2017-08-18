@@ -43,7 +43,6 @@ $(window).on("load", function() {
 
       if ( $( ".islandora-basic-collection-wrapper > p" ).length ) { 
            $("body").addClass('collectionPage');
-           return;
        }//allows collection Page styles
 
       $(".islandora-pdf-metadata").clone().prop({ id: "sideMods", class: "newClass" }).prependTo("#region-sidebar-first");

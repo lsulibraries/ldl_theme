@@ -1379,7 +1379,7 @@ dd {
   color: grey;
   text-transform: uppercase;
   font-size: 10px;
-  padding: 6px 15px;
+  padding: 6px 6px;
   font-weight: 500;
   font-family: Roboto;
   text-shadow: none;
@@ -2143,11 +2143,11 @@ div.islandora-solr-content {
 }
 .front div#block-block-12 p {
   width: 70vw;
-  font-size: 86px;
+  font-size: 5vw;
   font-weight: 900;
   text-transform: uppercase;
   width: 210px;
-  line-height: 72px;
+  line-height: 4.4vw;
   color: white;
   position: absolute;
   bottom: 26px;
@@ -3145,28 +3145,65 @@ section#block-islandora-solr-sort .item-list {
   }
 }
 @media screen and (max-width: 1260px) and (max-width: 900px) {
+  #block-user-login {
+    position: absolute !important;
+    left: -130% !important;
+    bottom: 27px !important;
+    padding-left: 22px !important;
+    background: #1a1a1a !important;
+    width: 100% !important;
+  }
+  #block-user-login input[type="submit"] {
+    padding: 4px 0px;
+  }
+
+  .front #block-islandora-solr-simple {
+    background: white;
+    color: #474747;
+    display: none;
+  }
   .front div#block-block-13 {
     display: flex;
     align-items: center;
     width: 70vw;
     margin: 0px 12px;
-    padding-top: 40px;
+    padding-top: 25px;
     width: auto;
-    padding-left: 0px;
+    padding-left: 3vw;
   }
-
   .front div#block-block-12 {
     height: 40vh;
   }
   .front div#block-block-12 p {
-    width: 70vw;
-    font-size: 10vw;
-    line-height: 9vw;
+    display: none;
+  }
+  .front div#block-block-12 #largeSearch {
+    bottom: -14px;
   }
   .front div#block-block-12 #largeSearch input[type="text"] {
-    font-size: 16px;
+    font-size: 14px;
+    width: 100%;
+    padding: 0px 30px;
+    height: 30px;
+    padding-left: 10px;
+    border-radius: 20px;
   }
-
+  .front div#block-block-12 #largeSearch div#edit-simple--2 {
+    width: 90vw;
+  }
+  .front div#block-block-12 #largeSearch input[type="submit"] {
+    position: absolute;
+    right: 0px;
+    top: 10px;
+    border: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25px 25px;
+    background-image: url(http://i.imgur.com/NpfYQT0.png);
+    padding-right: 0px;
+    height: 29px;
+    width: 50px;
+  }
   .front div#block-block-11 {
     width: 100%;
     padding-left: 5px;
