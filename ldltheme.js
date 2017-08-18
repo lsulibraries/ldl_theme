@@ -43,6 +43,7 @@ $(window).on("load", function() {
 
       if ( $( ".islandora-basic-collection-wrapper > p" ).length ) { 
            $("body").addClass('collectionPage');
+           return;
        }//allows collection Page styles
 
       $(".islandora-pdf-metadata").clone().prop({ id: "sideMods", class: "newClass" }).prependTo("#region-sidebar-first");
@@ -84,241 +85,240 @@ $(window).on("load", function() {
           $("#block-user-login").toggleClass('shown');
       });
 
-
 $('.institutionLink').hover(function() {
   $('div.institutionLabel').toggleClass('nameHover');
 });
-//
-//$('.dccLink').hover(
-    //function() {
-        //var $this = $('div.institutionLabel'); // caching $(this)
-        //$this.data('initialText', $this.text());
-        //$this.text("Delgado Community College");
-    //},
-    //function() {
-        //var $this = $('div.institutionLabel'); // caching $(this)
-        //$this.text($this.data('initialText'));
-    //}
-//);
-//
-//
-//$('.lsmLink').hover(
-    //function() {
-        //var $this = $('div.institutionLabel'); // caching $(this)
-        //$this.data('initialText', $this.text());
-        //$this.text("Louisiana State Museum");
-    //},
-    //function() {
-        //var $this = $('div.institutionLabel'); // caching $(this)
-        //$this.text($this.data('initialText'));
-    //}
-//);
-//
-//$('.latechLink').hover(
-    //function() {
-        //var $this = $('div.institutionLabel'); // caching $(this)
-        //$this.data('initialText', $this.text());
-        //$this.text("Louisiana Tech University");
-    //},
-    //function() {
-        //var $this = $('div.institutionLabel'); // caching $(this)
-        //$this.text($this.data('initialText'));
-    //}
-//);
-//
-//$('.lsuLink').hover(
-    //function() {
-        //var $this = $('div.institutionLabel'); // caching $(this)
-        //$this.data('initialText', $this.text());
-        //$this.text("Louisiana State University");
-    //},
-    //function() {
-        //var $this = $('div.institutionLabel'); // caching $(this)
-        //$this.text($this.data('initialText'));
-    //}
-//);
-//
-//$('.lsusLink').hover(
-    //function() {
-        //var $this = $('div.institutionLabel'); // caching $(this)
-        //$this.data('initialText', $this.text());
-        //$this.text("Louisiana State University Shreveport");
-    //},
-    //function() {
-        //var $this = $('div.institutionLabel'); // caching $(this)
-        //$this.text($this.data('initialText'));
-    //}
-//);
-//
-//$('.lsuhscLink').hover(
-    //function() {
-        //var $this = $('div.institutionLabel'); // caching $(this)
-        //$this.data('initialText', $this.text());
-        //$this.text("Louisiana State University Health New Orleans");
-    //},
-    //function() {
-        //var $this = $('div.institutionLabel'); // caching $(this)
-        //$this.text($this.data('initialText'));
-    //}
-//);
-//
-//$('.lsuhscsLink').hover(
-    //function() {
-        //var $this = $('div.institutionLabel'); // caching $(this)
-        //$this.data('initialText', $this.text());
-        //$this.text("Louisiana State University Health Shreveport");
-    //},
-    //function() {
-        //var $this = $('div.institutionLabel'); // caching $(this)
-        //$this.text($this.data('initialText'));
-    //}
-//);
-//
-//
-//$('.loynoLink').hover(
-    //function() {
-        //var $this = $('div.institutionLabel'); // caching $(this)
-        //$this.data('initialText', $this.text());
-        //$this.text("Loyola University New Orleans");
-    //},
-    //function() {
-        //var $this = $('div.institutionLabel'); // caching $(this)
-        //$this.text($this.data('initialText'));
-    //}
-//);
-//
-//$('.mcneeseLink').hover(
-    //function() {
-        //var $this = $('div.institutionLabel'); // caching $(this)
-        //$this.data('initialText', $this.text());
-        //$this.text("McNeese State University");
-    //},
-    //function() {
-        //var $this = $('div.institutionLabel'); // caching $(this)
-        //$this.text($this.data('initialText'));
-    //}
-//);
-//
-//
-//$('.nichollsLink').hover(
-    //function() {
-        //var $this = $('div.institutionLabel'); // caching $(this)
-        //$this.data('initialText', $this.text());
-        //$this.text("Nicholls State University");
-    //},
-    //function() {
-        //var $this = $('div.institutionLabel'); // caching $(this)
-        //$this.text($this.data('initialText'));
-    //}
-//);
-//
-//$('.nsuLink').hover(
-    //function() {
-        //var $this = $('div.institutionLabel'); // caching $(this)
-        //$this.data('initialText', $this.text());
-        //$this.text("Northwestern State University");
-    //},
-    //function() {
-        //var $this = $('div.institutionLabel'); // caching $(this)
-        //$this.text($this.data('initialText'));
-    //}
-//);
-//
-//$('.subrLink').hover(
-    //function() {
-        //var $this = $('div.institutionLabel'); // caching $(this)
-        //$this.data('initialText', $this.text());
-        //$this.text("Southern University and A&M College");
-    //},
-    //function() {
-        //var $this = $('div.institutionLabel'); // caching $(this)
-        //$this.text($this.data('initialText'));
-    //}
-//);
-//
-//$('.stateLink').hover(
-    //function() {
-        //var $this = $('div.institutionLabel'); // caching $(this)
-        //$this.data('initialText', $this.text());
-        //$this.text("Louisiana State Library");
-    //},
-    //function() {
-        //var $this = $('div.institutionLabel'); // caching $(this)
-        //$this.text($this.data('initialText'));
-    //}
-//);
-//
-//$('.hnocLink').hover(
-    //function() {
-        //var $this = $('div.institutionLabel'); // caching $(this)
-        //$this.data('initialText', $this.text());
-        //$this.text("The Historic New Orleans Collection");
-    //},
-    //function() {
-        //var $this = $('div.institutionLabel'); // caching $(this)
-        //$this.text($this.data('initialText'));
-    //}
-//);
-//
-//$('.tulaneLink').hover(
-    //function() {
-        //var $this = $('div.institutionLabel'); // caching $(this)
-        //$this.data('initialText', $this.text());
-        //$this.text("Tulane University");
-    //},
-    //function() {
-        //var $this = $('div.institutionLabel'); // caching $(this)
-        //$this.text($this.data('initialText'));
-    //}
-//);
-//
-//$('.ullLink').hover(
-    //function() {
-        //var $this = $('div.institutionLabel'); // caching $(this)
-        //$this.data('initialText', $this.text());
-        //$this.text("University of Louisiana at Lafayette");
-    //},
-    //function() {
-        //var $this = $('div.institutionLabel'); // caching $(this)
-        //$this.text($this.data('initialText'));
-    //}
-//);
-//
-//$('.ulmLink').hover(
-    //function() {
-        //var $this = $('div.institutionLabel'); // caching $(this)
-        //$this.data('initialText', $this.text());
-        //$this.text("University of Louisiana Monroe");
-    //},
-    //function() {
-        //var $this = $('div.institutionLabel'); // caching $(this)
-        //$this.text($this.data('initialText'));
-    //}
-//);
-//
-//$('.unoLink').hover(
-    //function() {
-        //var $this = $('div.institutionLabel'); // caching $(this)
-        //$this.data('initialText', $this.text());
-        //$this.text("University of New Orleans");
-    //},
-    //function() {
-        //var $this = $('div.institutionLabel'); // caching $(this)
-        //$this.text($this.data('initialText'));
-    //}
-//);
-//
-//$('.vvilleLink').hover(
-    //function() {
-        //var $this = $('div.institutionLabel'); // caching $(this)
-        //$this.data('initialText', $this.text());
-        //$this.text("Vermilionville Living History and Folk Life Park");
-    //},
-    //function() {
-        //var $this = $('div.institutionLabel'); // caching $(this)
-        //$this.text($this.data('initialText'));
-    //}
-//);
+
+$('.dccLink').hover(
+    function() {
+        var $this = $('div.institutionLabel'); // caching $(this)
+        $this.data('initialText', $this.text());
+        $this.text("Delgado Community College");
+    },
+    function() {
+        var $this = $('div.institutionLabel'); // caching $(this)
+        $this.text($this.data('initialText'));
+    }
+);
+
+
+$('.lsmLink').hover(
+    function() {
+        var $this = $('div.institutionLabel'); // caching $(this)
+        $this.data('initialText', $this.text());
+        $this.text("Louisiana State Museum");
+    },
+    function() {
+        var $this = $('div.institutionLabel'); // caching $(this)
+        $this.text($this.data('initialText'));
+    }
+);
+
+$('.latechLink').hover(
+    function() {
+        var $this = $('div.institutionLabel'); // caching $(this)
+        $this.data('initialText', $this.text());
+        $this.text("Louisiana Tech University");
+    },
+    function() {
+        var $this = $('div.institutionLabel'); // caching $(this)
+        $this.text($this.data('initialText'));
+    }
+);
+
+$('.lsuLink').hover(
+    function() {
+        var $this = $('div.institutionLabel'); // caching $(this)
+        $this.data('initialText', $this.text());
+        $this.text("Louisiana State University");
+    },
+    function() {
+        var $this = $('div.institutionLabel'); // caching $(this)
+        $this.text($this.data('initialText'));
+    }
+);
+
+$('.lsusLink').hover(
+    function() {
+        var $this = $('div.institutionLabel'); // caching $(this)
+        $this.data('initialText', $this.text());
+        $this.text("Louisiana State University Shreveport");
+    },
+    function() {
+        var $this = $('div.institutionLabel'); // caching $(this)
+        $this.text($this.data('initialText'));
+    }
+);
+
+$('.lsuhscLink').hover(
+    function() {
+        var $this = $('div.institutionLabel'); // caching $(this)
+        $this.data('initialText', $this.text());
+        $this.text("Louisiana State University Health New Orleans");
+    },
+    function() {
+        var $this = $('div.institutionLabel'); // caching $(this)
+        $this.text($this.data('initialText'));
+    }
+);
+
+$('.lsuhscsLink').hover(
+    function() {
+        var $this = $('div.institutionLabel'); // caching $(this)
+        $this.data('initialText', $this.text());
+        $this.text("Louisiana State University Health Shreveport");
+    },
+    function() {
+        var $this = $('div.institutionLabel'); // caching $(this)
+        $this.text($this.data('initialText'));
+    }
+);
+
+
+$('.loynoLink').hover(
+    function() {
+        var $this = $('div.institutionLabel'); // caching $(this)
+        $this.data('initialText', $this.text());
+        $this.text("Loyola University New Orleans");
+    },
+    function() {
+        var $this = $('div.institutionLabel'); // caching $(this)
+        $this.text($this.data('initialText'));
+    }
+);
+
+$('.mcneeseLink').hover(
+    function() {
+        var $this = $('div.institutionLabel'); // caching $(this)
+        $this.data('initialText', $this.text());
+        $this.text("McNeese State University");
+    },
+    function() {
+        var $this = $('div.institutionLabel'); // caching $(this)
+        $this.text($this.data('initialText'));
+    }
+);
+
+
+$('.nichollsLink').hover(
+    function() {
+        var $this = $('div.institutionLabel'); // caching $(this)
+        $this.data('initialText', $this.text());
+        $this.text("Nicholls State University");
+    },
+    function() {
+        var $this = $('div.institutionLabel'); // caching $(this)
+        $this.text($this.data('initialText'));
+    }
+);
+
+$('.nsuLink').hover(
+    function() {
+        var $this = $('div.institutionLabel'); // caching $(this)
+        $this.data('initialText', $this.text());
+        $this.text("Northwestern State University");
+    },
+    function() {
+        var $this = $('div.institutionLabel'); // caching $(this)
+        $this.text($this.data('initialText'));
+    }
+);
+
+$('.subrLink').hover(
+    function() {
+        var $this = $('div.institutionLabel'); // caching $(this)
+        $this.data('initialText', $this.text());
+        $this.text("Southern University and A&M College");
+    },
+    function() {
+        var $this = $('div.institutionLabel'); // caching $(this)
+        $this.text($this.data('initialText'));
+    }
+);
+
+$('.stateLink').hover(
+    function() {
+        var $this = $('div.institutionLabel'); // caching $(this)
+        $this.data('initialText', $this.text());
+        $this.text("Louisiana State Library");
+    },
+    function() {
+        var $this = $('div.institutionLabel'); // caching $(this)
+        $this.text($this.data('initialText'));
+    }
+);
+
+$('.hnocLink').hover(
+    function() {
+        var $this = $('div.institutionLabel'); // caching $(this)
+        $this.data('initialText', $this.text());
+        $this.text("The Historic New Orleans Collection");
+    },
+    function() {
+        var $this = $('div.institutionLabel'); // caching $(this)
+        $this.text($this.data('initialText'));
+    }
+);
+
+$('.tulaneLink').hover(
+    function() {
+        var $this = $('div.institutionLabel'); // caching $(this)
+        $this.data('initialText', $this.text());
+        $this.text("Tulane University");
+    },
+    function() {
+        var $this = $('div.institutionLabel'); // caching $(this)
+        $this.text($this.data('initialText'));
+    }
+);
+
+$('.ullLink').hover(
+    function() {
+        var $this = $('div.institutionLabel'); // caching $(this)
+        $this.data('initialText', $this.text());
+        $this.text("University of Louisiana at Lafayette");
+    },
+    function() {
+        var $this = $('div.institutionLabel'); // caching $(this)
+        $this.text($this.data('initialText'));
+    }
+);
+
+$('.ulmLink').hover(
+    function() {
+        var $this = $('div.institutionLabel'); // caching $(this)
+        $this.data('initialText', $this.text());
+        $this.text("University of Louisiana Monroe");
+    },
+    function() {
+        var $this = $('div.institutionLabel'); // caching $(this)
+        $this.text($this.data('initialText'));
+    }
+);
+
+$('.unoLink').hover(
+    function() {
+        var $this = $('div.institutionLabel'); // caching $(this)
+        $this.data('initialText', $this.text());
+        $this.text("University of New Orleans");
+    },
+    function() {
+        var $this = $('div.institutionLabel'); // caching $(this)
+        $this.text($this.data('initialText'));
+    }
+);
+
+$('.vvilleLink').hover(
+    function() {
+        var $this = $('div.institutionLabel'); // caching $(this)
+        $this.data('initialText', $this.text());
+        $this.text("Vermilionville Living History and Folk Life Park");
+    },
+    function() {
+        var $this = $('div.institutionLabel'); // caching $(this)
+        $this.text($this.data('initialText'));
+    }
+);
 
 $('#largeSearch .form-item-islandora-simple-search-query > input').each(function() {
   $(this).attr('placeholder', 'Search the Louisiana Digital Library' );

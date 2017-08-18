@@ -3145,18 +3145,44 @@ section#block-islandora-solr-sort .item-list {
   }
 }
 @media screen and (max-width: 1260px) and (max-width: 900px) {
+  .front div#block-block-13 {
+    display: flex;
+    align-items: center;
+    width: 70vw;
+    margin: 0px 12px;
+    padding-top: 40px;
+    width: auto;
+    padding-left: 0px;
+  }
+
+  .front div#block-block-12 {
+    height: 40vh;
+  }
   .front div#block-block-12 p {
     width: 70vw;
     font-size: 10vw;
     line-height: 9vw;
   }
-
   .front div#block-block-12 #largeSearch input[type="text"] {
     font-size: 16px;
   }
 
+  .front div#block-block-11 {
+    width: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 30px;
+  }
+  .front div#block-block-11 a.institutionLink {
+    width: calc(33vw - 3px);
+  }
+
   .homepageLabel {
     display: none !important;
+  }
+
+  .homepageText {
+    margin-left: 0px !important;
   }
 
   .collectionPage .collectionLogo {
