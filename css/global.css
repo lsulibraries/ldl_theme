@@ -152,7 +152,7 @@ span.bold {
 }
 
 .lsuhscTheme .institution-header, .lsuhscTheme .collectionHeader, .lsusTheme .institution-header, .lsusTheme .collectionHeader, .lsuhscsTheme .institution-header, .lsuhscsTheme .collectionHeader {
-  background: #white;
+  background: white;
   color: #474747;
 }
 .lsuhscTheme #page-title, .lsusTheme #page-title, .lsuhscsTheme #page-title {

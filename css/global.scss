@@ -275,11 +275,14 @@ color: rgba(255, 255, 255, 0.74);
 
 .lsuhscTheme, .lsusTheme, .lsuhscsTheme {
     .institution-header, .collectionHeader {
-    background: #white;
+    background: white;
     color: #474747;
     }
     #page-title{
       color: #474747;
+    }    
+    .institution-about {
+    border-left: 1px solid rgba(0, 0, 0, 0.20);
     }    
     form#islandora-collection-search-form {
     border: 2px solid #white;
@@ -404,6 +407,10 @@ color: rgba(255, 255, 255, 0.74);
     #page-title{
       color: #474747;
     }    
+
+    .institution-about {
+    border-left: 1px solid rgba(0, 0, 0, 0.20);
+    }        
     .collectionLogo {
     background-image: url($subrLogo_long);
     cursor: pointer;
@@ -424,6 +431,10 @@ color: rgba(255, 255, 255, 0.74);
     #page-title{
       color: #474747;
     }
+
+    .institution-about {
+    border-left: 1px solid rgba(0, 0, 0, 0.20);
+    }        
     .collectionLogo {
     background-image: url($stateLogo);
     cursor: pointer;
@@ -476,6 +487,10 @@ color: rgba(255, 255, 255, 0.74);
     #page-title{
       color: #474747;
     }
+
+    .institution-about {
+    border-left: 1px solid rgba(0, 0, 0, 0.20);
+    }        
     .collectionLogo {
     background-image: url($ullLogo);
     cursor: pointer;
