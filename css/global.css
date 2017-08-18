@@ -3145,6 +3145,20 @@ section#block-islandora-solr-sort .item-list {
   }
 }
 @media screen and (max-width: 1260px) and (max-width: 900px) {
+  .front div#block-block-12 p {
+    width: 70vw;
+    font-size: 10vw;
+    line-height: 9vw;
+  }
+
+  .front div#block-block-12 #largeSearch input[type="text"] {
+    font-size: 16px;
+  }
+
+  .homepageLabel {
+    display: none !important;
+  }
+
   .collectionPage .collectionLogo {
     margin: 0px;
   }
@@ -3161,6 +3175,7 @@ section#block-islandora-solr-sort .item-list {
     padding: 20px;
     padding-bottom: 30px;
     max-width: 800px;
+    padding-top: 0px;
   }
   .collectionPage .collectionSearch input#edit-islandora-simple-search-query {
     font-size: 18px;
