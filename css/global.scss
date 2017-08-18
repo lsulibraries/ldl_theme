@@ -2404,8 +2404,9 @@ div.islandora-solr-content {
 
 //front page
 
-#section-header.front.logged-in  {
-      top: 64px;
+body.logged-in.front div#zone-header {
+    top: 64px;
+    position: absolute;
 }
 
 .front{

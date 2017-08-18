@@ -2084,8 +2084,9 @@ div.islandora-solr-content {
   margin-bottom: 10px;
 }
 
-#section-header.front.logged-in {
+body.logged-in.front div#zone-header {
   top: 64px;
+  position: absolute;
 }
 
 .front #block-islandora-solr-simple {
