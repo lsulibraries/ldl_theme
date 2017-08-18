@@ -157,6 +157,9 @@ li a.active {
   color: #676767;
 }
 
+form#admin-form {
+    margin: 3vw;
+}
 
 div#breadcrumb {
     display: flex;
@@ -1894,6 +1897,7 @@ list-style-image {
     margin-top: 0px;
     border-bottom: 0px;
     margin: 4px 0px;  
+        display: none;//temp disabled
 }
 
 .form-item, .form-actions {
@@ -2060,6 +2064,10 @@ dl.solr-fields {
     padding: 0px;
 }
 
+.islandora-solr-search-results{
+  margin-top: 5px;
+}
+
 .islandora-solr-search-result {
     background-color: white;
     padding: 0px;
@@ -2070,9 +2078,12 @@ dl.solr-fields {
     border: 1px solid #cccccc;
     margin-bottom: 0px;
     padding: 0px;
-    margin-top: 5px;
+    margin-top: 0px;
     margin-right: 10px;
     width: calc(100% - 20px);
+        visibility: hidden;
+    overflow: hidden;        
+
   a {
     color: #438fca;
     position: relative;
