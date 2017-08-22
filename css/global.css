@@ -419,13 +419,13 @@ span.bold {
   border: 2px solid #ede7c0;
 }
 
-.tahillTheme .institution-header, .tahillTheme .collectionHeader {
+.tahillTheme .institution-header, .tahillTheme .collectionHeader, .fpocTheme .institution-header, .fpocTheme .collectionHeader {
   background: #272727;
 }
-.tahillTheme form#islandora-collection-search-form {
+.tahillTheme form#islandora-collection-search-form, .fpocTheme form#islandora-collection-search-form {
   border: 2px solid #272727;
 }
-.tahillTheme .institution-search input[type="text"] {
+.tahillTheme .institution-search input[type="text"], .fpocTheme .institution-search input[type="text"] {
   border: 2px solid #272727;
 }
 
