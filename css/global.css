@@ -3275,6 +3275,7 @@ section#block-islandora-solr-sort .item-list {
 
   .institution-search input[type="text"] {
     width: 75vw;
+    font-size: 12px;
   }
 
   .institution-logo {
