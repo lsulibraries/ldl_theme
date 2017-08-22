@@ -41,9 +41,9 @@ $(window).on("load", function() {
       });
 
 
-      if ( $( ".islandora-basic-collection-wrapper > p" ).length ) { 
-           $("body").addClass('collectionPage');
-       }//allows collection Page styles
+      //if ( $( ".islandora-basic-collection-wrapper > p" ).length ) { 
+           //$("body").addClass('collectionPage');
+       //}//allows collection Page styles
 
       $(".islandora-pdf-metadata").clone().prop({ id: "sideMods", class: "newClass" }).prependTo("#region-sidebar-first");
       $(".islandora-large-image-metadata").clone().prop({ id: "sideMods", class: "newClass" }).prependTo("#region-sidebar-first");
@@ -74,7 +74,7 @@ $(window).on("load", function() {
       $("<div class='homepageLogo'/>").prependTo(".messageContainer");
 
       $(".collectionPage <div class='collectionSearch'/>").insertAfter(".collectionHeader");
-      $(".collectionPage #page-title").prependTo(".collectionHeader p");
+      $(".collectionPage #page-title").prependTo(".collectionHeader .collection-description-text");
       $(".collectionPage #block-islandora-collection-search-islandora-collection-search").appendTo(".collectionSearch");
       $("#zone-header input.form-submit").val(' ');
       $(".institution-search input.form-submit").val(' ');    

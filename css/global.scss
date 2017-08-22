@@ -988,12 +988,13 @@ li.institution-collection-list-item a::before {
     align-items: center;
     padding: 20px;
     justify-content: center;
-    p{
+    .collection-description-text{
       margin: 0px;
     border-left: 1px solid rgba(255, 255, 255, 0.21);
     padding-left: 20px;  
     padding-bottom: 20px;
     max-width: 800px;    
+    padding-right: 20px;
     }
   }
 
@@ -3803,13 +3804,10 @@ p {
     flex-direction: column;
     justify-content: center;
 
-    p {
-    margin: 0px;
-    border-left: 0px;
-    padding: 20px;
+    .collection-description-text {
+
     padding-bottom: 30px;
-    max-width:  800px;
-    padding-top: 0px;  
+
     }       
 }
 
