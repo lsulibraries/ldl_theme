@@ -1447,7 +1447,7 @@ dd {
   display: none;
 }
 .footerContainer #block-user-login.shown {
-  transform: translate(410px, 0%);
+  transform: translate(121%, 0%);
   -moz-transition-duration: 0.5s;
   -o-transition-duration: 0.5s;
   -webkit-transition-duration: 0.5s;
