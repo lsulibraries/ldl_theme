@@ -630,6 +630,7 @@ li.institution-collection-list-item a {
     position: relative;
     margin-left: 98px;   
     font-weight: 500;     
+
 }
 
 li.institution-collection-list-item a::before {
@@ -3645,6 +3646,8 @@ ul.institution-collection-list {
     height: 100%;
     margin: 0px;
     width: auto;
+    flex-grow: 1;
+    height: auto;
     }
     a::before{
       display: none;

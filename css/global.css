@@ -3234,6 +3234,8 @@ section#block-islandora-solr-sort .item-list {
     height: 100%;
     margin: 0px;
     width: auto;
+    flex-grow: 1;
+    height: auto;
   }
   ul.institution-collection-list li.institution-collection-list-item a::before {
     display: none;
