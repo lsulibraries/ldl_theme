@@ -1480,6 +1480,7 @@ dd {
   padding-right: calc(20% - 260px);
   position: absolute;
   left: 70px;
+  top: -9px;
 }
 
 .zone-user li, .zone-menu li {
