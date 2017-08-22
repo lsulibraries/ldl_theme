@@ -1737,7 +1737,7 @@ display:none;
 
     }
     #block-user-login.shown {
-    transform: translate(121%, 0%);
+    transform: translate(410px, 0%);
     @include transition-duration(.5s);      
 
     }
@@ -3630,7 +3630,15 @@ section#block-islandora-solr-sort .item-list {
   }
   @media screen and (max-width: 900px) {
 
+
+    #block-user-login.shown {
+    transform: translate(121%, 0%) !important;
+    @include transition-duration(.5s);      
+
+    }
+
 .region-header-second-inner {
+
 
   min-height: 0px;
 }

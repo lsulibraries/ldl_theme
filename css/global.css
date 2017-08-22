@@ -1447,7 +1447,7 @@ dd {
   display: none;
 }
 .footerContainer #block-user-login.shown {
-  transform: translate(121%, 0%);
+  transform: translate(410px, 0%);
   -moz-transition-duration: 0.5s;
   -o-transition-duration: 0.5s;
   -webkit-transition-duration: 0.5s;
@@ -3216,6 +3216,14 @@ section#block-islandora-solr-sort .item-list {
   }
 }
 @media screen and (max-width: 1260px) and (max-width: 900px) {
+  #block-user-login.shown {
+    transform: translate(121%, 0%) !important;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+  }
+
   .region-header-second-inner {
     min-height: 0px;
   }
