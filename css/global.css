@@ -3223,7 +3223,7 @@ section#block-islandora-solr-sort .item-list {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin: 0px 10px;
+    margin: 0px 0px;
   }
   ul.institution-collection-list li.institution-collection-list-item {
     width: 25%;
@@ -3237,7 +3237,7 @@ section#block-islandora-solr-sort .item-list {
     display: flex;
     align-items: center;
     color: #ffffff;
-    font-size: 13px;
+    font-size: 11px;
     line-height: 15px;
     position: relative;
     background: #313133;
@@ -3261,6 +3261,9 @@ section#block-islandora-solr-sort .item-list {
     justify-content: center;
   }
 
+  .institution-about {
+    border-left: 0px;
+  }
   .institution-about p {
     margin-bottom: 40px;
   }
@@ -3606,12 +3609,6 @@ section#block-islandora-solr-sort .item-list {
 
   .islandora-pdf-metadata td:nth-child(2) {
     word-break: break-word;
-  }
-
-  #page-title {
-    position: inherit;
-    color: #000;
-    display: none;
   }
 
   #zone-content-wrapper {

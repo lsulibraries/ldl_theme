@@ -3640,7 +3640,7 @@ ul.institution-collection-list {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin: 0px 10px;
+    margin: 0px 0px;
 
     li.institution-collection-list-item {
     width: 25%;
@@ -3653,7 +3653,7 @@ ul.institution-collection-list {
     display: flex;
     align-items: center;
     color: #ffffff;
-    font-size: 13px;
+    font-size: 11px;
     line-height: 15px;
     position: relative;
     background: #313133;
@@ -3680,8 +3680,11 @@ ul.institution-collection-list {
     justify-content: center;
 }
 
-.institution-about p {
+.institution-about{ 
+border-left: 0px;
+p {
     margin-bottom: 40px;
+}
 }
 
 .institution-search input[type="text"]{
@@ -4038,11 +4041,6 @@ padding: 0px;
     }
     .islandora-pdf-metadata td:nth-child(2) {
       word-break: break-word;
-    }
-    #page-title {
-      position: inherit;
-      color: #000;
-      display: none;
     }
     #zone-content-wrapper {
       width: 100%;
