@@ -68,6 +68,8 @@ $(window).on("load", function() {
       $(".collectionPage span.islandora-basic-collection-item-count").appendTo("#page-title");
       $('.collectionPage #page-title').wrapAll('<div class="collectionHeader"/>'); //wraps collectionPage title
       $(".collectionPage .islandora-basic-collection-wrapper > p").appendTo(".collectionHeader");
+      $("div#collection-description-text").appendTo(".collectionHeader");
+
       $(".collectionPage <div class='collectionLogo'/>").prependTo(".collectionHeader");
       $("<div class='homepageLogo'/>").prependTo(".messageContainer");
 
