@@ -2089,6 +2089,9 @@ body.logged-in.front div#zone-header {
   position: absolute;
 }
 
+.front #zone-header input#edit-islandora-simple-search-query.form-text, .front #zone-header input#edit-islandora-simple-search-query--2, .front #region-header-first input#edit-islandora-simple-search-query.form-text, .front #region-header-first input#edit-islandora-simple-search-query--2 {
+  color: #474747;
+}
 .front #block-islandora-solr-simple {
   background: white;
   color: #474747;

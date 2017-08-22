@@ -2411,6 +2411,15 @@ body.logged-in.front div#zone-header {
 
 .front{
 
+  #zone-header, #region-header-first{
+    input {
+    &#edit-islandora-simple-search-query.form-text, &#edit-islandora-simple-search-query--2 {
+
+    color: #474747;
+    }
+  }
+}
+
 #block-islandora-solr-simple{
   background: white;
   color: #474747;
