@@ -32,3 +32,24 @@ function alpha_preprocess_islandora_basic_collection_wrapper(&$variables){
     $variables['about_link'] = l($record['title'], $record['alias']);
     $variables['landing_page_title'] = $record['title'];
 }
+
+
+function alpha_preprocess_html(&$vars) {
+  $path = drupal_get_path_alias();
+  $aliases = explode('/', $path);
+  foreach ($aliases as $segment) {
+    if (strpos($segment, '-') && strpos($segment, ':')) {
+      $pid_segments = explode(':', $segment);
+      $namespace = $pid_segments[0];
+      if($pid_segments[1] == 'collection') {
+        $vars['classes_array'][] = 'collectionPage';
+      }
+
+      $ns_segments = explode('-', $namespace);
+      array_pop($ns_segments);
+      $ns_prefix = implode('-', $ns_segments);
+      $vars['classes_array'][] = $ns_prefix . 'Theme';
+      break;
+    }
+  }
+}
