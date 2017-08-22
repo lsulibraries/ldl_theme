@@ -483,6 +483,7 @@ li.institution-collection-list-item a::before {
   padding-left: 20px;
   font-size: 12px;
   line-height: 20px;
+  padding-right: 20px;
 }
 .institution-about p {
   max-width: 800px;
@@ -582,6 +583,7 @@ li.child-institution-collection-list-item {
 .institution-search .institution-about {
   border-left: 1px solid rgba(255, 255, 255, 0.27);
   padding-left: 20px;
+  padding-right: 20px;
 }
 
 /*institution list*/
