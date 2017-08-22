@@ -1571,6 +1571,8 @@ background-color: $subheader;
     padding-left: 20px;
     float: left;
     margin: 0px;
+    display: flex;
+    flex-wrap: wrap;    
 }
 
 .islandora-solr-sort a {
