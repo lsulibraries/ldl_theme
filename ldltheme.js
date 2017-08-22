@@ -25,21 +25,29 @@ $(window).on("load", function() {
       sr.reveal('.bookmarkWelcome', { duration: 800, delay: 100,  easing: 'linear', scale: 1, viewFactor: 0.01, }, 50);
 });
 
-      //var url = window.location.pathname;
-      //var namespaces = ['uno','loyno', 'mcneese', 'lsu', 'latech', 'hnoc', 'tulane', 'state', 'nicholls', 'nsu', 'subr', 'ull', 'ulm', 'lsuhsc', 'lsuhscs', 'lsus', 'lsm', 'dcc', 'vville', 'tahil', 'fpoc'];
-//
-      //for(namespace in namespaces){
-	  //ns = namespaces[namespace];
-	  //re = new RegExp(ns +"\\b");
-	  //if (re.test(url)) {
-              //$("body").addClass(ns + "Theme institution");
-	  //};
-      //}
+      var url = window.location.pathname;
+      var namespaces = ['uno','loyno', 'mcneese', 'lsu', 'latech', 'hnoc', 'tulane', 'state', 'nicholls', 'nsu', 'subr', 'ull', 'ulm', 'lsuhsc', 'lsuhscs', 'lsus', 'lsm', 'dcc', 'vville', 'tahil', 'fpoc'];
+
+      for(namespace in namespaces){
+	  ns = namespaces[namespace];
+	  re = new RegExp(ns +"\\b");
+	  if (re.test(url)) {
+              $("body").addClass(ns + "Theme institution");
+	  };
+      }
 
       $('#switchTheme').click(function(){
           $("html").toggleClass('Dark');
       });
 
+
+
+
+
+      if ( $( ".islandora-basic-collection-item-count" ).length ) { 
+           $("body").addClass('collectionPageTest');
+           $("body").addClass('collectionPage');           
+       }//allows collection Page styles
 
       //if ( $( ".islandora-basic-collection-wrapper > p" ).length ) { 
            //$("body").addClass('collectionPage');
