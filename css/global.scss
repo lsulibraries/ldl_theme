@@ -52,6 +52,7 @@ $ullLogo: 'http://i.imgur.com/aqD5A3q.png';
 $ulmLogo: 'http://www.ulm.edu/_resources/images/ulm-academic-logo-circle.png';
 $unoLogo: 'http://i.imgur.com/RWmzrPG.png';
 $vvilleLogo: 'http://i.imgur.com/wqpOeRQ.png';
+$ldlLogo: 'http://i.imgur.com/MuY1yyN.png';
 
 
 $dccLogo_long: 'http://www.dcc.edu/_resources/images/delgado-logo-white.png';
@@ -597,6 +598,11 @@ color: rgba(255, 255, 255, 0.74);
     .institution-search input[type="text"]{
     border: 2px solid #272727;      
     }
+    .collectionLogo {
+    background-image: url($ldlLogo);
+    cursor: pointer;
+    }
+
 }
 
 .institution-logo img {
@@ -3619,6 +3625,16 @@ section#block-islandora-solr-sort .item-list {
   }
   @media screen and (max-width: 900px) {
 
+.region-header-second-inner {
+
+  min-height: 0px;
+}
+
+
+#block-delta-blocks-site-name{
+  display: none;
+}
+
 ul.institution-collection-list {
     list-style: none;
     display: flex;
@@ -3979,14 +3995,18 @@ ul.institution-collection-list {
         border-radius: 10px;
       }
     }
+
+#breadcrumb {
+  padding: 6px;
+    padding-left: 20px; 
+    height: auto;    
+  }
+
     .breadcrumb {
       text-transform: uppercase;
       letter-spacing: 1px;
       font-size: 8px;
-      padding-left: 12px;
-      padding-bottom: 0px;
-      float: left;
-      padding-top: 18px;
+padding: 0px;
     }
     input {
       &#edit-islandora-simple-search-query.form-text {
