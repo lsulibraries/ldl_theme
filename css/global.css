@@ -3068,6 +3068,13 @@ section#block-islandora-solr-sort .item-list {
   background-color: #242021;
 }
 
+section#block-islandora-solr-advanced {
+  margin: 40px;
+  background: #dadada;
+  padding: 20px;
+  border: 1px solid #cacaca;
+}
+
 @media screen and (min-width: 2000px) {
   .page-browse-collections tr {
     width: calc(12.5% - 11px);
