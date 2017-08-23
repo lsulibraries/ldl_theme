@@ -38,6 +38,10 @@ a:hover, a:active {
   text-decoration: none;
 }
 
+ul {
+  list-style: none;
+}
+
 body {
   background-color: #f0f0f0;
   font-family: "Roboto";
@@ -3517,6 +3521,7 @@ section#block-islandora-solr-sort .item-list {
   }
   .collectionPage .collectionHeader .collection-description-text {
     padding-bottom: 30px;
+    border: 0px;
   }
   .collectionPage .collectionSearch input#edit-islandora-simple-search-query {
     font-size: 18px;

@@ -149,6 +149,10 @@ a {
   }
 }
 
+ul {
+    list-style: none;
+}
+
 body {
   background-color: #f0f0f0;
   font-family: "Roboto";
@@ -3900,6 +3904,7 @@ color: #dedede;
 
         .collection-description-text {
           padding-bottom: 30px;
+          border: 0px;
         }
       }
 
