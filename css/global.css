@@ -2995,7 +2995,7 @@ section#block-islandora-solr-sort .item-list {
   padding-left: 20PX;
 }
 .audioPDF #region-sidebar-first #sideMods a {
-  color: #7b98af;
+  color: #96a0b0;
 }
 .audioPDF .islandora-audio-object .video-js {
   height: 120px;
@@ -3030,6 +3030,7 @@ section#block-islandora-solr-sort .item-list {
   padding-top: 90px;
   z-index: 99;
   color: #dedede;
+  font-size: 24px;
 }
 .audioPDF .creatorLinks {
   margin: 0px 150px;
@@ -3040,8 +3041,7 @@ section#block-islandora-solr-sort .item-list {
   display: inline-block;
   border: 1px solid rgba(255, 255, 255, 0.15);
   padding: 3px 10px;
-  border-radius: 3px;
-  font-size: 12px;
+  border-radius: 2px;
   color: #afafaf;
   -moz-transition-duration: 0.5s;
   -o-transition-duration: 0.5s;
@@ -3327,6 +3327,27 @@ section#block-islandora-solr-sort .item-list {
   }
 }
 @media screen and (max-width: 1260px) and (max-width: 900px) {
+  .audioPDF .islandora-audio-object .video-js {
+    height: 120px;
+    width: 100%;
+  }
+  .audioPDF .islandora-audio-object .video-js .vjs-control-bar {
+    padding: 0px 13px;
+  }
+  .audioPDF .islandora-audio-object div#islandora-pdfjs {
+    padding: 0px 15px 60px;
+  }
+  .audioPDF .islandora-audio-object h1#oh-title {
+    margin: 0px 15px;
+    padding-top: 30px;
+  }
+  .audioPDF .islandora-audio-object .creatorLinks {
+    margin: 0px 15px;
+  }
+  .audioPDF .islandora-audio-object a.ohcreator {
+    margin-top: 10px;
+  }
+
   #block-user-login.shown {
     transform: translate(121%, 0%) !important;
     -moz-transition-duration: 0.5s;
