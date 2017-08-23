@@ -3348,32 +3348,93 @@ section#block-islandora-solr-sort .item-list {
 }
 
 //Begin oral history styles
-.islandora-audio-object {
-  .video-js {
-    width: 100%;
-    background-color: #242021;
-    .vjs-control-bar {
-      display: flex;
-      background-color: transparent;
-      bottom: 40%;
-      padding: 0px 137px;
-    opacity: 1 !important;      
-    }
-    .vjs-big-play-button, #islandora_videojs_html5_api, .vjs-poster {
-      display: none;
-    }
+.audioPDF{
+  #block-system-main{
+  background: #242021;
   }
-  .islandora-audio-content {
-    max-width: none;
-    width: 100%;
-    padding: 0px;
-    border: 0px;
+  #region-sidebar-first {
+      width: 33%;
+      background-color: #242021;
+      border-right: 1px solid #333333;
+      #sideMods {
+      color: #bdbdbd;
+      padding-top: 40px;
+      padding-left: 20PX;
+      a {
+      color: #7b98af;
+      }  
+      }
+ 
   }
 
-  div#islandora-pdfjs {
-    padding: 0px 150px 60px;
-    background: #242021;
+  .islandora-audio-object {
+    .video-js {
+    height: 120px;
+
+      width: 100%;
+      background-color: #242021;
+      .vjs-control-bar {
+        display: flex;
+        background-color: transparent;
+        bottom: 40%;
+        padding: 0px 137px;
+      opacity: 1 !important;      
+      }
+      .vjs-big-play-button, #islandora_videojs_html5_api, .vjs-poster {
+        display: none;
+      }
+    }
+    .islandora-audio-content {
+      max-width: none;
+      width: 100%;
+      padding: 0px;
+      border: 0px;
+    background: #242021;      
+    }
+
+    div#islandora-pdfjs {
+      padding: 0px 150px 60px;
+      background: #242021;
+    }
   }
+
+  h1#oh-title {
+      margin: 0px 150px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      background: #242021;
+padding-top: 90px;
+      z-index: 99;
+color: #dedede;
+  }
+
+.creatorLinks {
+ 
+    margin: 0px 150px;
+        margin-top: 6px;
+}
+
+  a.ohcreator {
+    margin-right: 5px;
+    display: inline-block;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 3px 10px;
+    border-radius: 3px;
+    font-size: 12px;
+    color: #afafaf;
+          @include transition-duration(.5s);
+
+}
+
+  a.ohcreator:hover {
+    border: 1px solid rgba(255, 255, 255, 0.75);
+      @include transition-duration(0s);
+
+}
+
+#block-block-9 {
+    background-color: #242021;
+}
+
 }
 //End oral history styles
 

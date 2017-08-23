@@ -2981,29 +2981,82 @@ section#block-islandora-solr-sort .item-list {
   margin: 0px;
 }
 
-.islandora-audio-object .video-js {
+.audioPDF #block-system-main {
+  background: #242021;
+}
+.audioPDF #region-sidebar-first {
+  width: 33%;
+  background-color: #242021;
+  border-right: 1px solid #333333;
+}
+.audioPDF #region-sidebar-first #sideMods {
+  color: #bdbdbd;
+  padding-top: 40px;
+  padding-left: 20PX;
+}
+.audioPDF #region-sidebar-first #sideMods a {
+  color: #7b98af;
+}
+.audioPDF .islandora-audio-object .video-js {
+  height: 120px;
   width: 100%;
   background-color: #242021;
 }
-.islandora-audio-object .video-js .vjs-control-bar {
+.audioPDF .islandora-audio-object .video-js .vjs-control-bar {
   display: flex;
   background-color: transparent;
   bottom: 40%;
   padding: 0px 137px;
   opacity: 1 !important;
 }
-.islandora-audio-object .video-js .vjs-big-play-button, .islandora-audio-object .video-js #islandora_videojs_html5_api, .islandora-audio-object .video-js .vjs-poster {
+.audioPDF .islandora-audio-object .video-js .vjs-big-play-button, .audioPDF .islandora-audio-object .video-js #islandora_videojs_html5_api, .audioPDF .islandora-audio-object .video-js .vjs-poster {
   display: none;
 }
-.islandora-audio-object .islandora-audio-content {
+.audioPDF .islandora-audio-object .islandora-audio-content {
   max-width: none;
   width: 100%;
   padding: 0px;
   border: 0px;
+  background: #242021;
 }
-.islandora-audio-object div#islandora-pdfjs {
+.audioPDF .islandora-audio-object div#islandora-pdfjs {
   padding: 0px 150px 60px;
   background: #242021;
+}
+.audioPDF h1#oh-title {
+  margin: 0px 150px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  background: #242021;
+  padding-top: 90px;
+  z-index: 99;
+  color: #dedede;
+}
+.audioPDF .creatorLinks {
+  margin: 0px 150px;
+  margin-top: 6px;
+}
+.audioPDF a.ohcreator {
+  margin-right: 5px;
+  display: inline-block;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 3px 10px;
+  border-radius: 3px;
+  font-size: 12px;
+  color: #afafaf;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+.audioPDF a.ohcreator:hover {
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  -moz-transition-duration: 0s;
+  -o-transition-duration: 0s;
+  -webkit-transition-duration: 0s;
+  transition-duration: 0s;
+}
+.audioPDF #block-block-9 {
+  background-color: #242021;
 }
 
 @media screen and (min-width: 2000px) {

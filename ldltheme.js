@@ -41,7 +41,9 @@ $(window).on("load", function() {
       });
 
 
-
+      if ( ($( ".video-js" ).length ) && ( $( "#islandora-pdfjs" ).length )) { 
+           $("body").addClass('audioPDF');
+       }//allows collection Page styles
 
 
       if ( $( ".islandora-basic-collection-item-count" ).length ) { 
@@ -52,6 +54,11 @@ $(window).on("load", function() {
       //if ( $( ".islandora-basic-collection-wrapper > p" ).length ) { 
            //$("body").addClass('collectionPage');
        //}//allows collection Page styles
+      $("h1#page-title").clone().prop({ id: "oh-title", class: "ohtitle"}).prependTo(".islandora-audio-content");
+      $(".modsContributor a").clone().prop({ class: "ohcreator"}).insertAfter(".ohtitle");
+      $('a.ohcreator').wrapAll('<div class="creatorLinks"/>'); //wraps collectionPage title
+
+
 
       $(".islandora-pdf-metadata").clone().prop({ id: "sideMods", class: "newClass" }).prependTo("#region-sidebar-first");
       $(".islandora-large-image-metadata").clone().prop({ id: "sideMods", class: "newClass" }).prependTo("#region-sidebar-first");
@@ -90,6 +97,10 @@ $(window).on("load", function() {
       $("#largeSearch input.form-submit").val(' ');  
       $("#block-user-login").prependTo(".footerContainer");
 
+$("#sideMods").contents().filter(function(){
+    return (this.nodeType == 3);
+}).remove();
+//$("#sideMods").text().remove();
       $('.loginButton').click(function(){
           $("#block-user-login").toggleClass('shown');
       });
