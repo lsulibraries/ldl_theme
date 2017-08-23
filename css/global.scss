@@ -153,6 +153,10 @@ ul {
     list-style: none;
 }
 
+iframe.pdf {
+    width: 100%;
+}
+
 body {
   background-color: #f0f0f0;
   font-family: "Roboto";
@@ -1314,6 +1318,7 @@ a.islandora-pdf-link {
   letter-spacing: 1px;
   color: #adadad;
   font-size: 11px;
+      margin-left: 10px;
 }
 
 /*parallelogram*/
@@ -2524,7 +2529,7 @@ body.logged-in.front div#zone-header {
 
     .welcomeLabel {
       background-image: url(http://i.imgur.com/i41HVJl.png);
-      background-size: 50%;
+      background-size: 40%;
       background-position: center;
       background-repeat: no-repeat;
     }
@@ -3699,6 +3704,39 @@ color: #dedede;
   }
   @media screen and (max-width: 900px) {
 
+//.front{
+  //.region-header-second-inner {
+    //flex-direction: column;
+    //align-items: flex-end;
+    //position: relative;
+    //top: -25px;
+//}
+//
+//.region-header-first-inner {
+    //background: rgba(0, 0, 0, 0.59);
+//}
+//}
+//
+//
+//.region-header-second-inner{
+  //flex-direction: column;
+//align-items: flex-start;  
+//}
+
+#block-block-1 {
+//float: left;
+    //height: 28px;
+    //padding-left: 10px;
+    //padding-right: 10px;
+    //min-width: 180px;
+    //right: 0px;
+    //position: absolute;
+    //bottom: -30px;
+    //z-index: 99;
+
+    display: none;
+  }
+
 
 .audioPDF{
   .islandora-audio-object {
@@ -4137,8 +4175,8 @@ color: #dedede;
       width: 100%;
       margin-left: 0px;
     }
-    #block-block-1 {
-      display: none;
+    #block-block-1 a {
+      font-size: 8px;
     }
     #block-islandora-solr-simple {
       width: 100%;

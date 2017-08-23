@@ -42,6 +42,10 @@ ul {
   list-style: none;
 }
 
+iframe.pdf {
+  width: 100%;
+}
+
 body {
   background-color: #f0f0f0;
   font-family: "Roboto";
@@ -1074,6 +1078,7 @@ a.islandora-pdf-link {
   letter-spacing: 1px;
   color: #adadad;
   font-size: 11px;
+  margin-left: 10px;
 }
 
 /*parallelogram*/
@@ -2217,7 +2222,7 @@ body.logged-in.front div#zone-header {
 }
 .front div#block-block-13 .welcomeLabel {
   background-image: url(http://i.imgur.com/i41HVJl.png);
-  background-size: 50%;
+  background-size: 40%;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -3331,6 +3336,10 @@ section#block-islandora-solr-sort .item-list {
   }
 }
 @media screen and (max-width: 1260px) and (max-width: 900px) {
+  #block-block-1 {
+    display: none;
+  }
+
   .audioPDF .islandora-audio-object .video-js {
     height: 120px;
     width: 100%;
@@ -3764,8 +3773,8 @@ section#block-islandora-solr-sort .item-list {
     margin-left: 0px;
   }
 
-  #block-block-1 {
-    display: none;
+  #block-block-1 a {
+    font-size: 8px;
   }
 
   #block-islandora-solr-simple {
