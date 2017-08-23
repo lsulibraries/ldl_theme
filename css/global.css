@@ -247,6 +247,10 @@ span.bold {
 .loynoTheme .institution-header, .loynoTheme .collectionHeader {
   background: #660000;
 }
+.loynoTheme .institution-header a:link, .loynoTheme .institution-header a:visited, .loynoTheme .collectionHeader a:link, .loynoTheme .collectionHeader a:visited {
+  color: white;
+  text-decoration: underline;
+}
 .loynoTheme #page-title {
   color: white;
 }

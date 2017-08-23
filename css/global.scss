@@ -383,8 +383,14 @@ span.bold {
 }
 
 .loynoTheme {
+
   .institution-header, .collectionHeader {
     background: $loynoColor;
+    a:link, a:visited {
+        color: white;
+        text-decoration: underline;
+    }
+
   }
   #page-title {
     color: white;
@@ -3832,6 +3838,8 @@ section#block-islandora-solr-advanced {
     }
 
     .institution-about {
+
+
       border-left: 0px;
       p {
         margin-bottom: 40px;
