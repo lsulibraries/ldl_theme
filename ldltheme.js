@@ -97,6 +97,25 @@ $(window).on("load", function() {
       $("#largeSearch input.form-submit").val(' ');  
       $("#block-user-login").prependTo(".footerContainer");
 
+      $("<div class='mobileMenu'/>").insertBefore("div#page");
+      $("<div class='mobileMenuIcon'/>").insertBefore(".logo-img");
+
+      $('.mobileMenuIcon, .menuOn').click(function(){
+          $("#page").toggleClass('menuOn');
+          $("html").toggleClass('mobileMenuActive');
+      });
+
+      $('#section-content').click(function(){
+          $('#page').removeClass('menuOn');
+          $("html").removeClass('mobileMenuActive');          
+      });
+
+
+$('#block-block-1').find('a').each(function() {
+    $(this).clone().appendTo(".mobileMenu");
+});
+
+
 $("#sideMods").contents().filter(function(){
     return (this.nodeType == 3);
 }).remove();
