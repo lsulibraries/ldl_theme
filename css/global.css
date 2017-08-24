@@ -3357,6 +3357,7 @@ section#block-islandora-solr-advanced {
   }
   .audioPDF .islandora-audio-object .video-js .vjs-control-bar {
     padding: 0px 13px;
+    display: flex !important;
   }
   .audioPDF .islandora-audio-object div#islandora-pdfjs {
     padding: 0px 15px 60px;
