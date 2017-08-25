@@ -2407,7 +2407,7 @@ div.islandora-solr-content {
 //front page
 
 body.logged-in.front div#zone-header {
-  top: 64px;
+  top: 0px;
   position: absolute;
 }
 
@@ -3460,7 +3460,9 @@ section#block-islandora-solr-advanced {
 
 //mobile menu
 
-
+a.alpha-grid-toggle, a.alpha-block-toggle{
+  display: none;
+}
 body{
   overflow-x: hidden;
 }
