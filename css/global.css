@@ -3092,6 +3092,10 @@ body {
   color: #c7c7c7;
 }
 
+.front .region-content-inner {
+  background: #f0f0f0;
+}
+
 #page.menuOn {
   transform: translate(80vw, 0px);
   -moz-transition-duration: 0.5s;
@@ -3114,11 +3118,13 @@ body {
 #page {
   position: relative;
   left: 0px;
-  background: #f0f0f0;
   -moz-transition-duration: 0.5s;
   -o-transition-duration: 0.5s;
   -webkit-transition-duration: 0.5s;
   transition-duration: 0.5s;
+}
+#page #block-system-main {
+  background: #f0f0f0;
 }
 
 .mobileMenuIcon {

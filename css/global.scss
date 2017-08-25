@@ -3483,7 +3483,11 @@ body{
 
 }
 
-
+.front {
+    .region-content-inner{
+    background: #f0f0f0;
+  }
+}
 
 
   #page.menuOn{
@@ -3510,7 +3514,9 @@ transform: translate(80vw, 0px);
   #page{
   position: relative;
   left: 0px;
-      background: #f0f0f0;
+  #block-system-main{
+    background: #f0f0f0;
+  }
   @include transition-duration(0.5s);
   }
 
