@@ -3096,6 +3096,10 @@ body {
   background: #f0f0f0;
 }
 
+.page-node .region-content-inner {
+  background: #f0f0f0;
+}
+
 #page.menuOn {
   transform: translate(80vw, 0px);
   -moz-transition-duration: 0.5s;
