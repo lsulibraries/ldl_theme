@@ -329,11 +329,7 @@ span.bold {
 }
 
 .stateTheme .institution-header, .stateTheme .collectionHeader {
-  background: #edba51;
-  color: #474747;
-}
-.stateTheme #page-title {
-  color: #474747;
+  background: #304da0;
 }
 .stateTheme .institution-about {
   border-left: 1px solid rgba(0, 0, 0, 0.2);
@@ -343,10 +339,10 @@ span.bold {
   cursor: pointer;
 }
 .stateTheme form#islandora-collection-search-form {
-  border: 2px solid #edba51;
+  border: 2px solid #304da0;
 }
 .stateTheme .institution-search input[type="text"] {
-  border: 2px solid #edba51;
+  border: 2px solid #304da0;
 }
 
 .hnocTheme .institution-header, .hnocTheme .collectionHeader {
@@ -712,7 +708,7 @@ li.child-institution-collection-list-item {
   background-image: url("http://i.imgur.com/pNgJAG2.png");
 }
 #block-block-11 a.institutionLink.stateLink {
-  background-color: #edba51;
+  background-color: #304da0;
   background-image: url("http://i.imgur.com/y1H8EGr.png");
   background-size: 40px auto;
 }
@@ -3105,13 +3101,13 @@ body {
   -o-transition-duration: 0.5s;
   -webkit-transition-duration: 0.5s;
   transition-duration: 0.5s;
-  filter: brightness(0.2);
 }
 #page.menuOn #region-header-first {
   filter: brightness(1 !important);
 }
-#page.menuOn #zone-content-wrapper {
+#page.menuOn #zone-content-wrapper, #page.menuOn #region-header-second {
   pointer-events: none;
+  filter: brightness(0.2);
 }
 
 #page {
@@ -3409,11 +3405,10 @@ body {
 
   .mobileMenuIcon {
     display: block;
-    width: 32px;
-    height: 31px;
-    background-image: url("http://i.imgur.com/l7rd4V3.png");
-    background-position: center;
-    background-repeat: no-repeat;
+    background: none;
+    border: 0px;
+    position: relative;
+    top: 1px;
   }
 
   html.mobileMenuActive, body.mobileMenuActive {
@@ -3878,4 +3873,101 @@ body {
   .footerContainer {
     flex-direction: column-reverse;
   }
+}
+/*!
+ * Hamburgers
+ * @description Tasty CSS-animated hamburgers
+ * @author Jonathan Suh @jonsuh
+ * @site https://jonsuh.com/hamburgers
+ * @link https://github.com/jonsuh/hamburgers
+ */
+.hamburger {
+  padding: 15px 15px;
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+}
+
+.hamburger:hover {
+  opacity: 0.7;
+}
+
+.hamburger-box {
+  width: 40px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
+}
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px;
+}
+
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+  width: 40px;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 2px;
+  position: absolute;
+  transition-property: transform;
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+}
+
+.hamburger-inner::before, .hamburger-inner::after {
+  content: "";
+  display: block;
+}
+
+.hamburger-inner::before {
+  top: -10px;
+}
+
+.hamburger-inner::after {
+  bottom: -10px;
+}
+
+/*
+   * Elastic
+   */
+.hamburger--elastic .hamburger-inner {
+  top: 2px;
+  transition-duration: 0.275s;
+  transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.hamburger--elastic .hamburger-inner::before {
+  top: 10px;
+  transition: opacity 0.125s 0.275s ease;
+}
+
+.hamburger--elastic .hamburger-inner::after {
+  top: 20px;
+  transition: transform 0.275s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.hamburger--elastic.is-active .hamburger-inner {
+  transform: translate3d(0, 10px, 0) rotate(135deg);
+  transition-delay: 0.075s;
+}
+
+.hamburger--elastic.is-active .hamburger-inner::before {
+  transition-delay: 0s;
+  opacity: 0;
+}
+
+.hamburger--elastic.is-active .hamburger-inner::after {
+  transform: translate3d(0, -20px, 0) rotate(-270deg);
+  transition-delay: 0.075s;
 }

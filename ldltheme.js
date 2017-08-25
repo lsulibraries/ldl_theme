@@ -98,18 +98,25 @@ $(window).on("load", function() {
       $("#block-user-login").prependTo(".footerContainer");
 
       $("<div class='mobileMenu'/>").insertBefore("div#page");
-      $("<div class='mobileMenuIcon'/>").insertBefore(".logo-img");
+      $("<button class='hamburger--elastic hamburger--collapse mobileMenuIcon' type='button'><span class='hamburger-box'><span class='hamburger-inner'></span></span></button>").insertBefore(".logo-img");
 
       $('.mobileMenuIcon, .menuOn').click(function(){
           $("#page").toggleClass('menuOn');
           $("html").toggleClass('mobileMenuActive');
+          $(this).toggleClass('is-active');
       });
 
       $('#section-content').click(function(){
           $('#page').removeClass('menuOn');
-          $("html").removeClass('mobileMenuActive');          
+          $("html").removeClass('mobileMenuActive');        
+                    $('.mobileMenuIcon').removeClass('is-active');
+  
       });
 
+
+if ( $( "#sideMods" ).length ) { 
+     $("body").addClass('itemPage');
+ }//allows collection Page styles
 
 $('#block-block-1').find('a').each(function() {
     $(this).clone().appendTo(".mobileMenu");
