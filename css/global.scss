@@ -3477,7 +3477,7 @@ body{
     display: flex;
     flex-direction: column;
     padding: 20px;
-    font-size: 20px;
+    font-size: 15px;
     a {
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     padding: 10px;
@@ -3485,6 +3485,8 @@ body{
     }
 
 }
+
+
 
 
   #page.menuOn{
@@ -3501,7 +3503,12 @@ transform: translate(80vw, 0px);
     }
   }
 
+  .front #page.menuOn{
 
+
+      filter: brightness(0.2);           
+
+  }
 
   #page{
   position: relative;

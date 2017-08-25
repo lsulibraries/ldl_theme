@@ -118,9 +118,17 @@ if ( $( "#sideMods" ).length ) {
      $("body").addClass('itemPage');
  }//allows collection Page styles
 
+
+      $("<a href='/'>Home</a>").appendTo(".mobileMenu");  
+
+
+
 $('#block-block-1').find('a').each(function() {
     $(this).clone().appendTo(".mobileMenu");
+
 });
+
+$('.not-logged-in .mobileMenu a[href$="/issues"]').remove();
 
 
 $("#sideMods").contents().filter(function(){

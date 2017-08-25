@@ -3087,7 +3087,7 @@ body {
   display: flex;
   flex-direction: column;
   padding: 20px;
-  font-size: 20px;
+  font-size: 15px;
 }
 .mobileMenu a {
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -3107,6 +3107,10 @@ body {
 }
 #page.menuOn #zone-content-wrapper, #page.menuOn #region-header-second {
   pointer-events: none;
+  filter: brightness(0.2);
+}
+
+.front #page.menuOn {
   filter: brightness(0.2);
 }
 
