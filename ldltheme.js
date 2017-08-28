@@ -87,6 +87,7 @@ $(window).on("load", function() {
 
       $(".collectionPage <div class='collectionLogo'/>").prependTo(".collectionHeader");
       $("<div class='homepageLogo'/>").prependTo(".messageContainer");
+$( ".site-name a span" ).replaceWith( "<span><span class='boldSpan'>Louisiana</span> Digital Library</span>" );
 
       $(".collectionPage <div class='collectionSearch'/>").insertAfter(".collectionHeader");
       $(".collectionPage #page-title").prependTo(".collectionHeader .collection-description-text");
