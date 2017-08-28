@@ -3663,6 +3663,7 @@ body {
   .islandora-inline-metadata dd {
     padding-bottom: 10px;
     width: 95%;
+    word-break: break-word;
   }
 
   dl.solr-thumb {
