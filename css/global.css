@@ -479,7 +479,7 @@ li.institution-collection-list-item a {
   font-weight: 500;
 }
 
-li.institution-collection-list-item a::before {
+li.institution-collection-list-item > a::before {
   content: "";
   background-image: url(http://i.imgur.com/QwO6pT6.png);
   width: 128px;
