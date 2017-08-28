@@ -1751,9 +1751,9 @@ dd {
   top: -9px;
 }
 
-#zone-branding {
+div#zone-branding-wrapper {
+    display: none;
 }
-
 .zone-user li, .zone-menu li {
   display: inline;
 }
