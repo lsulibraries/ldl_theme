@@ -574,7 +574,6 @@ li.child-institution-collection-list-item {
 }
 .institution-search .institution-search input[type="text"]::placeholder {
   font-style: italic;
-  font-weight: 300;
   font-family: Roboto;
   color: #474747;
 }
@@ -915,7 +914,6 @@ dd.islandora-basic-collection-caption a {
   padding: 2px 3px;
   font-size: 15px;
   font-family: Roboto, Arial, sans-serif;
-  font-weight: 300;
   height: 100%;
   width: calc(100% - 64px);
   border-bottom-width: 0px;
@@ -1123,7 +1121,6 @@ a.islandora-pdf-link {
   text-align: center;
   line-height: 0px;
   color: #f0f0f0;
-  font-weight: 300;
   text-transform: uppercase;
   font-size: 14px;
   letter-spacing: 1px;
@@ -1139,7 +1136,6 @@ a.islandora-pdf-link {
   text-align: left;
   line-height: 11px;
   color: #f0f0f0;
-  font-weight: 300;
   font-size: 12px;
   margin-right: 38px;
 }
@@ -2850,7 +2846,6 @@ p.about_collection::before {
   text-align: left;
   line-height: 11px;
   color: #f0f0f0;
-  font-weight: 300;
   font-size: 12px;
   margin-right: 38px;
   display: none;
