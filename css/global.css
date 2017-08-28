@@ -1499,6 +1499,10 @@ div#zone-branding-wrapper {
   display: none;
 }
 
+div#zone-user-wrapper {
+  display: none;
+}
+
 .zone-user li, .zone-menu li {
   display: inline;
 }
