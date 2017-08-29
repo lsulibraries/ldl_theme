@@ -476,6 +476,14 @@ ul.institution-collection-list {
 
 li.institution-collection-list-item {
   width: 25%;
+  background: #c3c3c3;
+  border-right: 1px solid white;
+  box-sizing: border-box;
+  border-bottom: 1px solid white;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .institution-collection-list-header {
@@ -483,33 +491,15 @@ li.institution-collection-list-item {
 }
 
 li.institution-collection-list-item a {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
   display: flex;
   align-items: center;
-  margin: 20px;
-  color: #474747;
-  width: 190px;
-  font-size: 13px;
+  padding: 40px;
+  color: #696969;
+  max-width: 190px;
+  font-size: 14px;
   line-height: 15px;
   position: relative;
-  margin-left: 98px;
-  font-weight: 500;
-}
-
-li.institution-collection-list-item > a::before {
-  content: "";
-  background-image: url(http://i.imgur.com/QwO6pT6.png);
-  width: 128px;
-  height: 60px;
-  display: block;
-  background-size: 90px auto;
-  background-repeat: no-repeat;
-  background-position: center;
-  position: absolute;
-  left: -110px;
+  font-weight: 700;
 }
 
 .institution-about {
@@ -559,6 +549,13 @@ li.child-institution-collection-list-item {
   padding: 10px;
 }
 
+.institution-collections {
+  border-top: 48px solid #c3c3c3;
+  padding-top: 1px;
+  position: relative;
+  top: -50px;
+}
+
 .institution-search {
   display: -webkit-box;
   display: -moz-box;
@@ -569,6 +566,7 @@ li.child-institution-collection-list-item {
   align-items: center;
   position: relative;
   top: -32px;
+  z-index: 99;
 }
 .institution-search label {
   display: none;
@@ -3721,11 +3719,9 @@ body {
     display: -webkit-flex;
     display: flex;
     align-items: center;
-    color: #ffffff;
     font-size: 11px;
     line-height: 15px;
     position: relative;
-    background: #313133;
     font-weight: 500;
     padding: 10px;
     height: 100%;
