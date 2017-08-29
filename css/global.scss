@@ -645,7 +645,17 @@ li.institution-collection-list-item {
     width: calc(100% - 10px);
     text-align: center;
     padding: 5px;
-    background: hsla(0, 0%, 71%, 1);
+}
+
+li.institution-collection-list-item a.institution-collection-list-item-manage-proxy-link {
+    padding: 0px;
+    font-size: 10px !important;
+    border: 1px solid rgba(128, 128, 128, 0.49);
+    border-radius: 20px;
+    text-align: center;
+    width: 80px;
+    justify-content: center;
+    align-items: center;
 }
 
 .institution-collection-list-header {
@@ -3355,6 +3365,22 @@ section#block-islandora-solr-sort .item-list {
 
 //Begin oral history styles
 .audioPDF{
+
+.islandora-compound-thumbs {
+      border-top: 1px solid rgba(204, 204, 204, 0.09);
+}
+
+.islandora-compound-thumb{
+      border-bottom: 1px solid rgba(204, 204, 204, 0.09);
+}
+
+.region-sidebar-first-inner .block-inner {
+    background-color: #242021;
+    padding: 0px;
+    box-sizing: border-box;
+    color: #bdbdbd;
+}
+
   #block-system-main{
   background: #242021;
   }
@@ -3396,7 +3422,8 @@ section#block-islandora-solr-sort .item-list {
       width: 100%;
       padding: 0px;
       border: 0px;
-    background: #242021;      
+    background: #242021;  
+            border-radius: 0px;
     }
 
     div#islandora-pdfjs {
