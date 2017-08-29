@@ -482,8 +482,17 @@ li.institution-collection-list-item {
   border-bottom: 1px solid white;
   color: white;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.institution-collection-list-item-manage-proxy {
+  width: calc(100% - 10px);
+  text-align: center;
+  padding: 5px;
+  background: #b5b5b5;
 }
 
 .institution-collection-list-header {

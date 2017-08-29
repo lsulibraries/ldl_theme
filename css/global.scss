@@ -628,15 +628,24 @@ ul.institution-collection-list {
 }
 
 li.institution-collection-list-item {
-width: 25%;
+    width: 25%;
     background: #c3c3c3;
-    border-right: 1px solid rgb(255, 255, 255);
+    border-right: 1px solid white;
     box-sizing: border-box;
-    border-bottom: 1px solid rgb(255, 255, 255);
+    border-bottom: 1px solid white;
     color: white;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.institution-collection-list-item-manage-proxy {
+    width: calc(100% - 10px);
+    text-align: center;
+    padding: 5px;
+    background: hsla(0, 0%, 71%, 1);
 }
 
 .institution-collection-list-header {
