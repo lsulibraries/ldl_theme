@@ -2325,6 +2325,7 @@ body.logged-in.front div#zone-header {
   font-size: 16px;
   color: #5f5f5f;
   min-width: 200px;
+  min-height: 100px;
 }
 .front div#block-block-13 {
   display: block;
