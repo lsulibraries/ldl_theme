@@ -482,7 +482,7 @@ li.institution-collection-list-item {
   border-bottom: 1px solid white;
   color: white;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
   position: relative;
@@ -503,6 +503,8 @@ li.institution-collection-list-item a.institution-collection-list-item-manage-pr
   width: 80px;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  bottom: 5px;
 }
 
 .institution-collection-list-header {
@@ -519,6 +521,7 @@ li.institution-collection-list-item a {
   line-height: 15px;
   position: relative;
   font-weight: 700;
+  word-break: break-word;
 }
 
 .institution-about {
