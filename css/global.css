@@ -516,7 +516,7 @@ li.institution-collection-list-item a {
   align-items: center;
   padding: 40px;
   color: #696969;
-  max-width: 190px;
+  width: 190px;
   font-size: 14px;
   line-height: 15px;
   position: relative;
