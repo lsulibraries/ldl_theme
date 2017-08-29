@@ -3239,6 +3239,7 @@ section#block-islandora-solr-sort .item-list {
   border: 1px solid rgba(255, 255, 255, 0.15);
   padding: 3px 10px;
   border-radius: 2px;
+  margin-bottom: 5px;
   color: #afafaf;
   -moz-transition-duration: 0.5s;
   -o-transition-duration: 0.5s;
