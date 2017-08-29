@@ -1162,6 +1162,7 @@ a.islandora-pdf-link {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-direction: column;
   margin: 0px;
@@ -1178,6 +1179,7 @@ a.islandora-pdf-link {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   align-items: center;
   height: 100%;
@@ -1210,6 +1212,7 @@ a.islandora-pdf-link {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -1220,6 +1223,7 @@ div.region-inner.region-header-first-inner {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   align-items: center;
   width: 100%;
@@ -1298,6 +1302,7 @@ div.region-inner.region-header-first-inner {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-direction: row;
 }
@@ -1309,6 +1314,10 @@ div.region-inner.region-header-first-inner {
   padding-left: 20px;
   float: left;
   margin: 0px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-wrap: wrap;
 }
@@ -1390,6 +1399,7 @@ dd {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -1485,6 +1495,7 @@ dd {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1994,6 +2005,7 @@ div.islandora-solr-content {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -2167,6 +2179,7 @@ body.logged-in.front div#zone-header {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -3360,6 +3373,7 @@ body {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -3379,6 +3393,7 @@ body {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     flex-direction: column;
   }
@@ -3761,6 +3776,7 @@ body {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -3862,6 +3878,7 @@ body {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     flex-direction: column;
     justify-content: center;

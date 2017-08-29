@@ -1404,10 +1404,7 @@ a.islandora-pdf-link {
 #zone-header {
   background-color: #1a1a1a;
   width: 100%;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
+  @include flexbox;
   flex-direction: column;
   margin: 0px;
 }
@@ -1420,10 +1417,7 @@ a.islandora-pdf-link {
 }
 
 .region-header-second-inner {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
+  @include flexbox;
   align-items: center;
   height: 100%;
   justify-content: space-between;
@@ -1452,20 +1446,14 @@ a.islandora-pdf-link {
   width: 100%;
   padding: 0px;
   margin: 0px;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
+  @include flexbox;
   justify-content: flex-start;
   align-items: center;
   background-color: $topheader;
 }
 
 div.region-inner.region-header-first-inner {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
+  @include flexbox;
   align-items: center;
   width: 100%;
   padding-left: 20px;
@@ -1540,10 +1528,7 @@ div.region-inner.region-header-first-inner {
   background: none;
   margin: 0px;
   width: 100%;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
+@include flexbox;
   flex-direction: row;
 }
 
@@ -1554,7 +1539,7 @@ div.region-inner.region-header-first-inner {
   padding-left: 20px;
   float: left;
   margin: 0px;
-  display: flex;
+@include flexbox;
   flex-wrap: wrap;
 }
 
@@ -1643,10 +1628,7 @@ dd {
 }
 
 #region-content .region-content-inner {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
+@include flexbox;
   flex-direction: column;
   width: 100%;
   justify-content: space-between;
@@ -1738,10 +1720,7 @@ dd {
 #block-delta-blocks-site-name {
   height: 68px;
   width: 123px;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
+@include flexbox;
   flex-direction: column;
   justify-content: center;
   float: left;
@@ -2268,10 +2247,7 @@ div.islandora-solr-content {
 .user-page #region-content .region-content-inner,
 .page-browse-collections #region-content .region-content-inner,
 .context-collections #region-content .region-content-inner {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
+@include flexbox;
   flex-direction: column;
   height: 100%;
   justify-content: flex-start;
@@ -2461,10 +2437,7 @@ body.logged-in.front div#zone-header {
   }
 
   #region-content .region-content-inner {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
+@include flexbox;
     flex-direction: column;
     width: 100%;
     justify-content: space-between;
@@ -3739,10 +3712,7 @@ transform: translate(80vw, 0px);
   #region-content .region-content-inner,
   .user-page .region-content-inner,
   .page-browse-collections .region-content-inner {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
+@include flexbox;
     flex-direction: column;
     height: 100%;
     justify-content: flex-start;
@@ -3757,10 +3727,7 @@ transform: translate(80vw, 0px);
       background: none;
       margin: 0px;
       width: 100%;
-      display: -webkit-box;
-      display: -moz-box;
-      display: -ms-flexbox;
-      display: flex;
+@include flexbox;
       flex-direction: column;
     }
     #region-sidebar-first {
@@ -4175,10 +4142,7 @@ html.mobileMenuActive, body.mobileMenuActive{
     }
     #zone-header {
       width: 100%;
-      display: -webkit-box;
-      display: -moz-box;
-      display: -ms-flexbox;
-      display: flex;
+@include flexbox;
       flex-direction: column;
       align-items: center;
       margin: 0px;
@@ -4276,10 +4240,8 @@ html.mobileMenuActive, body.mobileMenuActive{
     .page-browse-collections #zone-header {
       background-color: #1a1a1a;
       width: 100%;
-      display: -webkit-box;
-      display: -moz-box;
-      display: -ms-flexbox;
-      display: flex;
+@include flexbox;
+
       flex-direction: column;
       justify-content: center;
       align-items: center;
