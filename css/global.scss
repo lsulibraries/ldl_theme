@@ -182,7 +182,7 @@ form#admin-form {
 }
 
 div#breadcrumb {
-  display: flex;
+  @include flexbox;
   align-items: center;
 
   span.islandora-solr-breadcrumb-super {
@@ -233,7 +233,7 @@ span.bold {
   }
 
   #block-block-1 .content.clearfix {
-    display: flex;
+    @include flexbox;
     flex-direction: row;
   } //makes room for submit ticket link
 
@@ -258,7 +258,7 @@ span.bold {
 } //temporary
 
 .institution-header {
-  display: flex;
+  @include flexbox;
   justify-content: center;
   align-items: center;
   padding: 40px;
@@ -622,7 +622,7 @@ span.bold {
 
 ul.institution-collection-list {
   list-style: none;
-  display: flex;
+  @include flexbox;
   flex-direction: row;
   flex-wrap: wrap;
 }
@@ -636,7 +636,7 @@ li.institution-collection-list-item {
 }
 
 li.institution-collection-list-item a {
-  display: flex;
+  @include flexbox;
   align-items: center;
   margin: 20px;
   color: #474747;
@@ -679,7 +679,7 @@ ul.child-institution-collection-list {
 
 .child-institution-collections {
   margin: 20px;
-  display: flex;
+  @include flexbox;
   flex-direction: column;
   width: auto;
   border: 1px solid grey;
@@ -706,7 +706,7 @@ li.child-institution-collection-list-item {
 }
 
 .institution-search {
-  display: flex;
+  @include flexbox;
   justify-content: center;
   align-items: center;
   position: relative;
@@ -789,7 +789,7 @@ li.child-institution-collection-list-item {
 }
 
 #block-block-11 {
-  display: flex;
+display:block;
   align-items: center;
   width: 70vw;
   margin: 0 auto;
@@ -798,17 +798,17 @@ li.child-institution-collection-list-item {
   padding-bottom: 40px;
 
   .content.clearfix {
-    display: flex;
+    @include flexbox;
   }
 
   .homepageInstitutions {
-    display: flex;
+    @include flexbox;
   }
 
   .content p {
     width: 1000px;
     height: 120px;
-    display: flex;
+    @include flexbox;
     flex-wrap: wrap;
     margin: 0px;
   }
@@ -973,7 +973,7 @@ li.child-institution-collection-list-item {
   }
 
   .collectionHeader {
-    display: flex;
+    @include flexbox;
     align-items: center;
     padding: 20px;
     justify-content: center;
@@ -1001,7 +1001,7 @@ li.child-institution-collection-list-item {
   }
 
   .content.clearfix {
-    display: flex;
+    @include flexbox;
     justify-content: center;
     align-items: center;
   }
@@ -1076,7 +1076,7 @@ div.item-list:nth-child(2n - 1) {
 } //kills repeated pagination, first instance -- not sure why first-child does not work here
 
 .islandora-basic-collection-grid.clearfix {
-  display: flex;
+  @include flexbox;
   flex-wrap: wrap;
 }
 
@@ -1089,7 +1089,7 @@ div.item-list:nth-child(2n - 1) {
   vertical-align: top;
   margin: 2px;
   zoom: 1;
-  display: flex;
+  @include flexbox;
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-end;
@@ -1182,7 +1182,7 @@ dd.islandora-basic-collection-caption a {
   overflow: hidden;
   border-bottom: 1px dotted #ccc;
   padding-bottom: 1em;
-  display: flex;
+  @include flexbox;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -1413,7 +1413,7 @@ a.islandora-pdf-link {
   width: 100%;
   margin: 0px;
   overflow: hidden;
-  display: flex;
+  @include flexbox;
 }
 
 .region-header-second-inner {
@@ -1645,7 +1645,7 @@ dd {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
-  display: flex;
+  @include flexbox;
   justify-content: center;
   flex-direction: row;
   align-items: center;
@@ -2148,7 +2148,7 @@ dl.solr-fields {
   a {
     text-decoration: none;
     flex-grow: 1;
-    display: flex;
+    @include flexbox;
     align-items: center;
   }
 }
@@ -2269,7 +2269,7 @@ div.islandora-solr-content {
     height: 470px;
     z-index: 2;
     width: 200px;
-    display: flex;
+    @include flexbox;
     flex-direction: column;
   }
 }
@@ -2300,7 +2300,7 @@ div.islandora-solr-content {
 }
 
 .page-browse-collections #landingAdvanced {
-  display: flex;
+  @include flexbox;
   justify-content: flex-end;
   height: 34px;
   float: right;
@@ -2320,7 +2320,7 @@ div.islandora-solr-content {
 }
 
 .bookmarkWelcome {
-  display: flex;
+  @include flexbox;
   align-items: center;
   height: 100%;
   background-image: url("http://i.imgur.com/spWRfgt.png");
@@ -2450,7 +2450,7 @@ body.logged-in.front div#zone-header {
   .nameHover {
     height: 100%;
     width: 100%;
-    display: flex;
+    @include flexbox;
     justify-content: center;
     align-items: center;
     margin: 10px;
@@ -2458,14 +2458,14 @@ body.logged-in.front div#zone-header {
   }
 
   .homepageSection {
-    display: flex;
+    @include flexbox;
     justify-content: center;
     align-items: center;
   }
 
   .homepageText {
     margin-left: 20px;
-    display: flex;
+    @include flexbox;
     flex-wrap: wrap;
     flex-grow: 1;
     width: 150%;
@@ -2480,7 +2480,7 @@ body.logged-in.front div#zone-header {
 
   .homepageLabel {
     width: 100%;
-    display: flex;
+    @include flexbox;
     justify-content: center;
     align-items: center;
     border: 1px solid rgba(128, 128, 128, 0.76);
@@ -2493,7 +2493,7 @@ body.logged-in.front div#zone-header {
 
   div#block-block-13 {
     //welcome text
-    display: flex;
+display: block;
     align-items: center;
     width: 70vw;
     margin: 0 auto;
@@ -2508,7 +2508,7 @@ body.logged-in.front div#zone-header {
     }
 
     .content.clearfix {
-      display: flex;
+      @include flexbox;
     }
   }
 
@@ -2539,7 +2539,7 @@ body.logged-in.front div#zone-header {
     #largeSearch {
       position: absolute;
       bottom: -34px;
-      display: flex;
+      @include flexbox;
       justify-content: center;
       align-items: center;
       width: 100%;
@@ -2553,7 +2553,7 @@ body.logged-in.front div#zone-header {
       .form-wrapper {
         width: 70vw;
         position: relative;
-        display: flex;
+        @include flexbox;
       }
 
       .form-item {
@@ -2584,12 +2584,12 @@ body.logged-in.front div#zone-header {
   }
 
   > #region-content .content.clearfix {
-    display: flex;
+    @include flexbox;
     width: 100%;
   }
 
   .messageContainer {
-    display: flex;
+    @include flexbox;
     justify-content: center;
     background: rgba(0, 0, 0, 0.85);
     width: 100%;
@@ -2641,7 +2641,7 @@ ul.islandora-solr-sort {
 .islandora-solr-search-result-inner {
   flex-direction: row;
   justify-content: center;
-  display: flex;
+  @include flexbox;
 }
 
 dl {
@@ -2651,7 +2651,7 @@ dl {
     border: 0px;
   }
   &.solr-thumb {
-    display: flex;
+    @include flexbox;
     border-right: 1px solid #bdbdbd;
     justify-content: center;
     flex-direction: column;
@@ -2749,7 +2749,7 @@ dd.solr-value.mods-subject-topic-ms {
     /*    border-radius: 10px;*/
     flex-grow: 1;
     margin: 0px 0px 10px 0px;
-    display: flex;
+    @include flexbox;
     flex-direction: row;
     padding: 0px;
     overflow: hidden;
@@ -2764,7 +2764,7 @@ dd.solr-value.mods-subject-topic-ms {
     /*    border-radius: 10px;*/
     flex-grow: 1;
     margin: 0px 0px 10px 0px;
-    display: flex;
+    @include flexbox;
     flex-direction: row;
     padding: 0px;
     overflow: hidden;
@@ -2794,7 +2794,7 @@ dd.solr-value.mods-subject-topic-ms {
 }
 
 .view-islandora-collection-landing-pages tbody {
-  display: flex;
+  @include flexbox;
   flex-direction: row;
   width: inherit;
   flex-wrap: wrap;
@@ -2833,7 +2833,7 @@ tr {
   table {
     border: none;
     width: 100%;
-    display: flex;
+    @include flexbox;
     margin-bottom: 0px;
   }
   h2 a:link {
@@ -2863,7 +2863,7 @@ tr {
       flex-grow: 1;
       background-color: #438fca;
       align-items: center;
-      display: flex;
+      @include flexbox;
       flex-direction: column;
       justify-content: center;
       height: 100%;
@@ -2897,7 +2897,7 @@ f .view-islandora-collection-landing-pages a p.about_collection,
 
 .view-islandora-collection-landing-pages .views-table td.collectionLinks {
   width: 50px;
-  display: flex;
+  @include flexbox;
   align-items: center;
   flex-direction: column;
   height: auto;
@@ -2935,7 +2935,7 @@ p {
 #views-exposed-form-islandora-collection-landing-pages-page .views-exposed-widgets {
   background: white;
   padding: 20px;
-  display: flex;
+  @include flexbox;
   border-radius: 10px;
   justify-content: space-around;
   align-items: center;
@@ -3017,7 +3017,7 @@ p {
 
 .islandora-pdf-content a:nth-child(2),
 .islandora-large-image-content a:nth-child(2) {
-  display: flex;
+  @include flexbox;
   align-items: center;
   justify-content: center;
 }
@@ -3114,7 +3114,7 @@ p {
     border-radius: 0px;
     flex-grow: 1;
     margin: 0px 0px 10px 0px;
-    display: flex;
+    @include flexbox;
     flex-direction: column;
     padding: 0px;
     overflow: hidden;
@@ -3195,7 +3195,7 @@ p {
   letter-spacing: 1px;
   min-height: 20px;
   line-height: 13px;
-  display: flex;
+  @include flexbox;
   flex-direction: column;
   align-items: flex-start;
 }
@@ -3302,7 +3302,7 @@ div {
 }
 
 .context-collections div.content {
-  display: flex;
+  @include flexbox;
   margin-bottom: 10px;
   flex-direction: column;
 }
@@ -3356,7 +3356,7 @@ section#block-islandora-solr-sort .item-list {
       width: 100%;
       background-color: #242021;
       .vjs-control-bar {
-        display: flex;
+        @include flexbox;
         background-color: transparent;
         bottom: 40%;
         padding: 0px 137px;
@@ -3446,7 +3446,7 @@ body{
     width: calc(80vw + 1px);
 
     height: calc(100vh - 20px);
-    display: flex;
+    @include flexbox;
     flex-direction: column;
     padding: 20px;
     font-size: 15px;
@@ -3558,7 +3558,7 @@ transform: translate(80vw, 0px);
       line-height: 25px;
     }
     tbody {
-      display: flex;
+      @include flexbox;
       flex-direction: column;
       width: inherit;
     }
@@ -3569,7 +3569,7 @@ transform: translate(80vw, 0px);
       /*    border-radius: 10px;*/
       flex-grow: 1;
       margin: 0px 0px 10px 0px;
-      display: flex;
+      @include flexbox;
       flex-direction: row;
       justify-content: space-between;
       padding: 0px;
@@ -3865,7 +3865,7 @@ html.mobileMenuActive, body.mobileMenuActive{
 
     ul.institution-collection-list {
       list-style: none;
-      display: flex;
+      @include flexbox;
       flex-direction: row;
       flex-wrap: wrap;
       margin: 0px 0px;
@@ -3875,10 +3875,10 @@ html.mobileMenuActive, body.mobileMenuActive{
         border-right: 1px solid #f0f0f0;
         box-sizing: border-box;
         margin-top: 1px;
-        display: flex;
+        @include flexbox;
         flex-direction: column;
         a {
-          display: flex;
+          @include flexbox;
           align-items: center;
           color: #ffffff;
           font-size: 11px;
@@ -3900,7 +3900,7 @@ html.mobileMenuActive, body.mobileMenuActive{
     }
 
     .institution-header {
-      display: flex;
+      @include flexbox;
       align-items: center;
       padding: 0px;
       flex-direction: column;
@@ -3923,7 +3923,7 @@ html.mobileMenuActive, body.mobileMenuActive{
 
     .institution-logo {
       height: 200px;
-      display: flex;
+      @include flexbox;
       flex-direction: column;
       justify-content: center;
       align-items: center;
@@ -3950,7 +3950,7 @@ html.mobileMenuActive, body.mobileMenuActive{
       }
 
       div#block-block-13 {
-        display: flex;
+        @include flexbox;
         align-items: center;
         width: 70vw;
         margin: 0px 12px;
@@ -4022,7 +4022,7 @@ html.mobileMenuActive, body.mobileMenuActive{
       }
 
       .collectionHeader {
-        display: flex;
+        @include flexbox;
         align-items: center;
         padding: 0px;
         flex-direction: column;
@@ -4043,11 +4043,11 @@ html.mobileMenuActive, body.mobileMenuActive{
 
     .islandora-solr-search-result-inner {
       justify-content: center;
-      display: flex;
+      @include flexbox;
     }
     dl.solr-fields {
       width: 100%;
-      display: flex;
+      @include flexbox;
       flex-direction: column;
       justify-content: center;
     }
@@ -4059,7 +4059,7 @@ html.mobileMenuActive, body.mobileMenuActive{
     dl.solr-thumb {
       width: 25%;
       text-align: center;
-      display: flex;
+      @include flexbox;
       justify-content: center;
       padding: 10px;
       margin-bottom: 0px;
@@ -4110,7 +4110,7 @@ html.mobileMenuActive, body.mobileMenuActive{
         align-items: center;
         flex-direction: column;
         align-self: center;
-        display: flex;
+        @include flexbox;
       }
       div.region-inner.region-header-first-inner {
         display: none;
@@ -4170,7 +4170,7 @@ html.mobileMenuActive, body.mobileMenuActive{
         justify-content: center;
       }
       .bookmarkWelcome {
-        display: flex;
+        @include flexbox;
         align-items: center;
         height: 100%;
         background-image: url(http://i.imgur.com/spWRfgt.png) no-repeat;
