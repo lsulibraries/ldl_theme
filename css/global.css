@@ -3729,6 +3729,7 @@ body {
     width: auto;
     flex-grow: 1;
     height: auto;
+    word-break: break-word;
   }
   ul.institution-collection-list li.institution-collection-list-item a::before {
     display: none;

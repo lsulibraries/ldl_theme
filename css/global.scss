@@ -3906,6 +3906,7 @@ html.mobileMenuActive, body.mobileMenuActive{
           width: auto;
           flex-grow: 1;
           height: auto;
+    word-break: break-word;          
         }
         a::before {
           display: none;
