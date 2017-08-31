@@ -394,9 +394,9 @@ if ( $( "#sideMods" ).length ) {
 
 
 var currentInstitution =  $( "ul.breadcrumb a.active" ).text();
-$('.institution-search #myform input').each(function() {
-  $(this).attr('placeholder', 'Search only within ' + currentInstitution );
-});//Adds Search text
+//$('.institution-search #myform input').each(function() {
+  //$(this).attr('placeholder', 'Search only within ' + currentInstitution );
+//});//Adds Search text
 
 
     //begin show more script
