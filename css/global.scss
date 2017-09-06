@@ -261,6 +261,9 @@ span.bold {
     align-self: baseline;
     font-size: 14px;
     @include transition-duration(1s);
+          transition-delay: 1s;
+              width: 100%;
+
 }
 
 
@@ -685,14 +688,14 @@ a{
 
 
 .institution-collection-list-item-label{
-    @include transition-duration(1s);
+    @include transition-duration(1.5s);
     transform: translateY(-100%);
-  transition-delay: 0.5s;
+  transition-delay: 1s;
 }
   .institution-collection-description{
-    @include transition-duration(1s);
+    @include transition-duration(1.5s);
     transform: translateY(-100%);
-      transition-delay: 0.5s;
+      transition-delay: 1s;
 
   }
 
@@ -731,8 +734,9 @@ li.institution-collection-list-item a.institution-collection-list-item-manage-pr
     line-height: 1;
     position: relative;
     font-weight: 900;
-    @include transition-duration(1s);
+    @include transition-duration(1.5s);
 
+      transition-delay: 1s;
 }
 
 //li.institution-collection-list-item > a::before {

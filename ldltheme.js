@@ -65,7 +65,9 @@ $(window).on("load", function() {
 //
 //});
 
-
+if($('.institution-collection-list-a').length < 4){
+   $('.institution-collection-list-a').css("flex-grow","1");
+}
 
 
       $(".islandora-pdf-metadata").clone().prop({ id: "sideMods", class: "newClass" }).prependTo("#region-sidebar-first");
