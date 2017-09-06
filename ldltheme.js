@@ -58,6 +58,14 @@ $(window).on("load", function() {
       $(".modsContributor a").clone().prop({ class: "ohcreator"}).insertAfter(".ohtitle");
       $('a.ohcreator').wrapAll('<div class="creatorLinks"/>'); //wraps collectionPage title
 
+    $('<span> items</span>').appendTo('.institution-collection-list-item-count');
+
+//$('.institution-collection-list-li').each(function() {
+    //$(this).children('.institution-collection-list-item-label').clone().prop({class: "title-description"}).prependTo( $('.institution-collection-description'));
+//
+//});
+
+
 
 
       $(".islandora-pdf-metadata").clone().prop({ id: "sideMods", class: "newClass" }).prependTo("#region-sidebar-first");
