@@ -65,6 +65,12 @@ $(window).on("load", function() {
 //
 //});
 
+$('.institution-collection-list-li').each(function() {
+    $(this).children('.institution-collection-list-item-label').clone().prop({class: "title-description"}).prependTo($(this).children('.institution-collection-description'));
+});
+
+
+
 if($('.institution-collection-list-a').length < 4){
    $('.institution-collection-list-a').css("flex-grow","1");
 }

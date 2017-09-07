@@ -142,15 +142,38 @@ span.bold {
   padding-left: 50px;
   padding-right: 50px;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
   align-self: baseline;
   font-size: 14px;
+  overflow: hidden;
+  flex-direction: column;
   -moz-transition-duration: 1s;
   -o-transition-duration: 1s;
   -webkit-transition-duration: 1s;
   transition-duration: 1s;
   transition-delay: 1s;
   width: 100%;
+  color: rgba(255, 255, 255, 0.66);
+  margin-top: 60px;
+  position: relative;
+}
+
+.institution-collection-description::after {
+  display: block;
+  position: absolute;
+  background-image: linear-gradient(to bottom, transparent 0%, #1a1a1a 90%);
+  height: 110px;
+  width: 100%;
+  content: '';
+  bottom: 60px;
+}
+
+.title-description {
+  font-weight: 900;
+  width: 100%;
+  margin-bottom: 11px;
+  font-size: 17px;
+  color: white;
 }
 
 .institution-title,
