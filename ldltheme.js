@@ -70,6 +70,10 @@ $('.institution-collection-list-li').each(function() {
 });
 
 
+      $("div.institution-title").prependTo(".institution-about > p:first-child");
+      $(".child-institution-collections").insertAfter(".institution-search");
+
+
 
 if($('.institution-collection-list-a').length < 4){
    $('.institution-collection-list-a').css("flex-grow","1");
