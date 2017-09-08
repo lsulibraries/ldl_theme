@@ -919,6 +919,16 @@ form#myform {
 }
 
 
+.institution {
+
+  .region-header-second{
+    background: transparent !important;
+        position: absolute !important;
+    top: 50px !important;
+    z-index: 99 !important;
+  }
+}
+
 //Sub institution styles
 
 .child-institution-collections::before {

@@ -745,6 +745,13 @@ li.institution-collection-list-item a.institution-collection-list-item-manage-pr
   border-top: 1px solid rgba(255, 255, 255, 0.21);
 }
 
+.institution .region-header-second {
+  background: transparent !important;
+  position: absolute !important;
+  top: 50px !important;
+  z-index: 99 !important;
+}
+
 .child-institution-collections::before {
   width: 25%;
   color: white;
