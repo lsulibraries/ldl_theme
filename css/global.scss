@@ -320,6 +320,8 @@ a.institution-about-edit {
     justify-content: center;
     align-items: center;
     width: 25%;
+    padding: 0px 80px;
+    box-sizing: border-box;    
 }
 
 .institution-header, .collectionHeader {
@@ -672,6 +674,9 @@ a.institution-about-edit {
 
 .institution-logo img {
   max-width: 200px !important;
+    box-sizing: border-box; 
+    height: auto;
+    width: 100%;  
 }
 
 
@@ -803,7 +808,7 @@ li.institution-collection-list-item a.institution-collection-list-item-manage-pr
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 170px 0px;
+    padding: 170px 100px;
     line-height: 30px;
   h2{
     font-size:18px;
