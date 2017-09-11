@@ -227,7 +227,7 @@ a.institution-about-edit {
   background: #083a07;
 }
 .dccTheme .collectionLogo {
-  background-image: url("http://www.dcc.edu/_resources/images/delgado-logo-white.png");
+  background-image: url(http://www.dcc.edu/_resources/images/delgado-logo-white.png?1505143362);
   cursor: pointer;
 }
 .dccTheme form#islandora-collection-search-form {
@@ -241,7 +241,7 @@ a.institution-about-edit {
   background: #5d0e8b;
 }
 .lsmTheme .collectionLogo {
-  background-image: url("http://i.imgur.com/uimSOt2.png");
+  background-image: url(http://i.imgur.com/uimSOt2.png?1505143362);
   cursor: pointer;
 }
 .lsmTheme form#islandora-collection-search-form {
@@ -255,7 +255,7 @@ a.institution-about-edit {
   background: #461D7C;
 }
 .lsuTheme .collectionLogo {
-  background-image: url("http://reu.cct.lsu.edu/documents/logos/LSU_Gold_CMYK.png");
+  background-image: url(http://reu.cct.lsu.edu/documents/logos/LSU_Gold_CMYK.png?1505143362);
   cursor: pointer;
 }
 .lsuTheme form#islandora-collection-search-form {
@@ -283,17 +283,17 @@ a.institution-about-edit {
 }
 
 .lsusTheme .collectionLogo {
-  background-image: url("http://www.lsus.edu/Images/Offices%20and%20Services/HR/LSUS%20Logo%2011102015.png");
+  background-image: url(http://www.lsus.edu/Images/Offices%20and%20Services/HR/LSUS%20Logo%2011102015.png?1505143362);
   cursor: pointer;
 }
 
 .lsuhscsTheme .collectionLogo {
-  background-image: url("http://i.imgur.com/1lqbxiy.png");
+  background-image: url(http://i.imgur.com/1lqbxiy.png?1505143362);
   cursor: pointer;
 }
 
 .lsuhscTheme .collectionLogo {
-  background-image: url("http://i.imgur.com/FQdHpzz.png");
+  background-image: url(http://i.imgur.com/FQdHpzz.png?1505143362);
   cursor: pointer;
 }
 
@@ -304,7 +304,7 @@ a.institution-about-edit {
   color: white;
 }
 .latechTheme .collectionLogo {
-  background-image: url("http://i.imgur.com/72REb5M.png");
+  background-image: url(http://i.imgur.com/72REb5M.png?1505143362);
   cursor: pointer;
 }
 .latechTheme form#islandora-collection-search-form {
@@ -325,7 +325,7 @@ a.institution-about-edit {
   color: white;
 }
 .loynoTheme .collectionLogo {
-  background-image: url("http://i.imgur.com/23i7KxR.png");
+  background-image: url(http://i.imgur.com/23i7KxR.png?1505143362);
   cursor: pointer;
 }
 .loynoTheme form#islandora-collection-search-form {
@@ -339,7 +339,7 @@ a.institution-about-edit {
   background: #00529b;
 }
 .mcneeseTheme .collectionLogo {
-  background-image: url("https://www.mcneese.edu/sites/all/themes/mcneese/images/logo.png");
+  background-image: url(https://www.mcneese.edu/sites/all/themes/mcneese/images/logo.png?1505143362);
   cursor: pointer;
 }
 .mcneeseTheme form#islandora-collection-search-form {
@@ -353,7 +353,7 @@ a.institution-about-edit {
   background: #ae132a;
 }
 .nichollsTheme .collectionLogo {
-  background-image: url("https://www.nicholls.edu/wp-content/themes/nicholls-2015-core/nicholls/images/logo/Nicholls-N-Sword-w-text.png");
+  background-image: url(https://www.nicholls.edu/wp-content/themes/nicholls-2015-core/nicholls/images/logo/Nicholls-N-Sword-w-text.png?1505143362);
   cursor: pointer;
 }
 .nichollsTheme form#islandora-collection-search-form {
@@ -367,7 +367,7 @@ a.institution-about-edit {
   background: #663399;
 }
 .nsuTheme .collectionLogo {
-  background-image: url("https://www.nsula.edu/wp-content/uploads/wordmarksmall2.png");
+  background-image: url(https://www.nsula.edu/wp-content/uploads/wordmarksmall2.png?1505143362);
   cursor: pointer;
 }
 .nsuTheme form#islandora-collection-search-form {
@@ -388,7 +388,7 @@ a.institution-about-edit {
   border-left: 1px solid rgba(0, 0, 0, 0.2);
 }
 .subrTheme .collectionLogo {
-  background-image: url("http://www.subr.edu/images/subr_logo.gif");
+  background-image: url(http://www.subr.edu/images/subr_logo.gif?1505143362);
   cursor: pointer;
 }
 .subrTheme form#islandora-collection-search-form {
@@ -402,7 +402,7 @@ a.institution-about-edit {
   background: #304da0;
 }
 .stateTheme .collectionLogo {
-  background-image: url("http://i.imgur.com/y1H8EGr.png");
+  background-image: url(http://i.imgur.com/y1H8EGr.png?1505143362);
   cursor: pointer;
 }
 .stateTheme form#islandora-collection-search-form {
@@ -416,7 +416,7 @@ a.institution-about-edit {
   background: #254550;
 }
 .hnocTheme .collectionLogo {
-  background-image: url("http://i.imgur.com/lRaktDw.png");
+  background-image: url(http://i.imgur.com/lRaktDw.png?1505143362);
   cursor: pointer;
 }
 .hnocTheme form#islandora-collection-search-form {
@@ -430,7 +430,7 @@ a.institution-about-edit {
   background: #032a17;
 }
 .tulaneTheme .collectionLogo {
-  background-image: url("http://i.imgur.com/geTKaHp.png");
+  background-image: url(http://i.imgur.com/geTKaHp.png?1505143362);
   cursor: pointer;
 }
 .tulaneTheme form#islandora-collection-search-form {
@@ -447,7 +447,7 @@ a.institution-about-edit {
   border-left: 1px solid rgba(0, 0, 0, 0.2);
 }
 .ullTheme .collectionLogo {
-  background-image: url("http://i.imgur.com/aqD5A3q.png");
+  background-image: url(http://i.imgur.com/aqD5A3q.png?1505143362);
   cursor: pointer;
 }
 .ullTheme form#islandora-collection-search-form {
@@ -461,7 +461,7 @@ a.institution-about-edit {
   background: #800029;
 }
 .ulmTheme .collectionLogo {
-  background-image: url("http://www.ulm.edu/_resources/images/ulm-academic-logo-circle.png");
+  background-image: url(http://www.ulm.edu/_resources/images/ulm-academic-logo-circle.png?1505143362);
   cursor: pointer;
 }
 .ulmTheme form#islandora-collection-search-form {
@@ -475,7 +475,7 @@ a.institution-about-edit {
   background: #003056;
 }
 .unoTheme .collectionLogo {
-  background-image: url("http://i.imgur.com/RBtG5qz.png");
+  background-image: url(http://i.imgur.com/RBtG5qz.png?1505143362);
   cursor: pointer;
 }
 .unoTheme form#islandora-collection-search-form {
@@ -493,7 +493,7 @@ a.institution-about-edit {
   color: #474747;
 }
 .vvilleTheme .collectionLogo {
-  background-image: url("http://i.imgur.com/wqpOeRQ.png");
+  background-image: url(http://i.imgur.com/wqpOeRQ.png?1505143362);
   cursor: pointer;
 }
 .vvilleTheme form#islandora-collection-search-form {
@@ -513,7 +513,7 @@ a.institution-about-edit {
   border: 2px solid #272727;
 }
 .tahillTheme .collectionLogo, .fpocTheme .collectionLogo, .page-islandora-object-islandoraroot .collectionLogo {
-  background-image: url("http://i.imgur.com/MuY1yyN.png");
+  background-image: url(http://i.imgur.com/MuY1yyN.png?1505143362);
   cursor: pointer;
 }
 
@@ -768,7 +768,7 @@ li.institution-collection-list-item a.institution-collection-list-item-manage-pr
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 6px;
-  content: 'Child Institutions';
+  content: 'Affiliated with';
 }
 
 .child-institution-collections {
@@ -876,87 +876,87 @@ li.child-institution-collection-list-item {
 }
 #block-block-11 a.institutionLink.dccLink {
   background-color: #083a07;
-  background-image: url("http://www.dcc.edu/_resources/images/logo-white.png");
+  background-image: url(http://www.dcc.edu/_resources/images/logo-white.png?1505143362);
   background-size: 70px auto;
 }
 #block-block-11 a.institutionLink.lsmLink {
   background-color: #5d0e8b;
-  background-image: url("http://i.imgur.com/uimSOt2.png");
+  background-image: url(http://i.imgur.com/uimSOt2.png?1505143362);
   background-size: 90px auto;
 }
 #block-block-11 a.institutionLink.lsuLink {
   background-color: #461D7C;
-  background-image: url("http://reu.cct.lsu.edu/documents/logos/LSU_Gold_CMYK.png");
+  background-image: url(http://reu.cct.lsu.edu/documents/logos/LSU_Gold_CMYK.png?1505143362);
   background-size: 50px auto;
 }
 #block-block-11 a.institutionLink.lsusLink {
   background-color: #ffffff;
-  background-image: url("http://www.lsus.edu/Images/Offices%20and%20Services/HR/LSUS%20Logo%2011102015.png");
+  background-image: url(http://www.lsus.edu/Images/Offices%20and%20Services/HR/LSUS%20Logo%2011102015.png?1505143362);
 }
 #block-block-11 a.institutionLink.lsuhscLink {
   background-color: #ffffff;
-  background-image: url("http://i.imgur.com/FQdHpzz.png");
+  background-image: url(http://i.imgur.com/FQdHpzz.png?1505143362);
 }
 #block-block-11 a.institutionLink.lsuhscsLink {
   background-color: #ffffff;
-  background-image: url("http://i.imgur.com/1lqbxiy.png");
+  background-image: url(http://i.imgur.com/1lqbxiy.png?1505143362);
 }
 #block-block-11 a.institutionLink.latechLink {
   background-color: #003087;
-  background-image: url("http://grfx.cstv.com/schoolslt/latc/graphics/logos/latc-state-t.gif");
+  background-image: url(http://grfx.cstv.com/schoolslt/latc/graphics/logos/latc-state-t.gif?1505143362);
   background-size: 40px auto;
 }
 #block-block-11 a.institutionLink.loynoLink {
   background-color: #660000;
-  background-image: url("http://i.imgur.com/wsbykd6.png");
+  background-image: url(http://i.imgur.com/wsbykd6.png?1505143362);
   background-size: 40px auto;
 }
 #block-block-11 a.institutionLink.mcneeseLink {
   background-color: #00529b;
-  background-image: url("http://mcneesesports.com/images/header_logo.png");
+  background-image: url(http://mcneesesports.com/images/header_logo.png?1505143362);
 }
 #block-block-11 a.institutionLink.nichollsLink {
   background-color: #ae132a;
-  background-image: url("http://i.imgur.com/rGvlEDN.png");
+  background-image: url(http://i.imgur.com/rGvlEDN.png?1505143362);
 }
 #block-block-11 a.institutionLink.nsuLink {
   background-color: #663399;
-  background-image: url("https://www.nsula.edu/wp-content/uploads/Seal.png");
+  background-image: url(https://www.nsula.edu/wp-content/uploads/Seal.png?1505143362);
   background-size: 40px auto;
 }
 #block-block-11 a.institutionLink.subrLink {
   background-color: #75B2DD;
-  background-image: url("http://i.imgur.com/pNgJAG2.png");
+  background-image: url(http://i.imgur.com/pNgJAG2.png?1505143362);
 }
 #block-block-11 a.institutionLink.stateLink {
   background-color: #304da0;
-  background-image: url("http://i.imgur.com/y1H8EGr.png");
+  background-image: url(http://i.imgur.com/y1H8EGr.png?1505143362);
   background-size: 40px auto;
 }
 #block-block-11 a.institutionLink.hnocLink {
   background-color: #254550;
-  background-image: url("http://i.imgur.com/lRaktDw.png");
+  background-image: url(http://i.imgur.com/lRaktDw.png?1505143362);
 }
 #block-block-11 a.institutionLink.tulaneLink {
   background-color: #032a17;
-  background-image: url("http://i.imgur.com/geTKaHp.png");
+  background-image: url(http://i.imgur.com/geTKaHp.png?1505143362);
 }
 #block-block-11 a.institutionLink.ullLink {
   background-color: #a00b0b;
-  background-image: url("http://i.imgur.com/aqD5A3q.png");
+  background-image: url(http://i.imgur.com/aqD5A3q.png?1505143362);
 }
 #block-block-11 a.institutionLink.ulmLink {
   background-color: #800029;
-  background-image: url("http://www.ulm.edu/_resources/images/ulm-academic-logo-circle.png");
+  background-image: url(http://www.ulm.edu/_resources/images/ulm-academic-logo-circle.png?1505143362);
   background-size: 45px auto;
 }
 #block-block-11 a.institutionLink.unoLink {
   background-color: #003056;
-  background-image: url("http://i.imgur.com/RWmzrPG.png");
+  background-image: url(http://i.imgur.com/RWmzrPG.png?1505143362);
 }
 #block-block-11 a.institutionLink.vvilleLink {
   background-color: #ede7c0;
-  background-image: url("http://i.imgur.com/wqpOeRQ.png");
+  background-image: url(http://i.imgur.com/wqpOeRQ.png?1505143362);
   background-size: 100px auto;
 }
 
@@ -2349,7 +2349,7 @@ div.islandora-solr-content {
   display: flex;
   align-items: center;
   height: 100%;
-  background-image: url("http://i.imgur.com/spWRfgt.png");
+  background-image: url(http://i.imgur.com/spWRfgt.png?1505143362);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 80%;
@@ -2955,7 +2955,7 @@ p.items_collection::before {
   height: 24px;
   width: 24px;
   padding: 0px;
-  background: url("http://i.imgur.com/jDEiAY1.png") no-repeat;
+  background: url(http://i.imgur.com/jDEiAY1.png?1505143362) no-repeat;
   margin-bottom: 2px;
   margin-top: 0px;
 }
@@ -2964,7 +2964,7 @@ p.about_collection::before {
   height: 24px;
   width: 24px;
   padding: 0px;
-  background: url("http://i.imgur.com/Od6ahq5.png") no-repeat;
+  background: url(http://i.imgur.com/Od6ahq5.png?1505143362) no-repeat;
   margin-bottom: 2px;
   margin-top: 0px;
 }
@@ -3617,7 +3617,11 @@ body {
   }
 }
 @media screen and (max-width: 1260px) {
-  .institution-collection-list-a {
+  .institution-about, .institution-search form#myform {
+    width: 66.67%;
+  }
+
+  .institution-collection-list-a, .institution-logo, .institution-search::before, .child-institution-collections::before {
     width: 33.3%;
   }
 

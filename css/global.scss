@@ -947,7 +947,7 @@ form#myform {
     font-size: 11px;
     text-transform: uppercase;
     letter-spacing: 6px;
-content: 'Child Institutions';
+content: 'Affiliated with';
 
 
 }
@@ -3823,7 +3823,12 @@ transform: translate(80vw, 0px);
 
 @media screen and (max-width: 1260px) {
 
-.institution-collection-list-a {
+  .institution-about, .institution-search form#myform{
+            width: 66.67%;
+
+  }
+
+.institution-collection-list-a, .institution-logo, .institution-search::before, .child-institution-collections::before {
         width: 33.3%;
       }
 
