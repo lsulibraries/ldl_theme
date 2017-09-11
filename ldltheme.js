@@ -58,7 +58,8 @@ $(window).on("load", function() {
       $(".modsContributor a").clone().prop({ class: "ohcreator"}).insertAfter(".ohtitle");
       $('a.ohcreator').wrapAll('<div class="creatorLinks"/>'); //wraps collectionPage title
 
-    $('<span> items</span>').appendTo('.institution-collection-list-item-count');
+    $('<span> items</span>').appendTo('.institution-collection-list-item-count, .child-institution-count-items');
+    $('<span> collections</span>').appendTo('.child-institution-count-collections');
 
 //$('.institution-collection-list-li').each(function() {
     //$(this).children('.institution-collection-list-item-label').clone().prop({class: "title-description"}).prependTo( $('.institution-collection-description'));
@@ -78,6 +79,10 @@ $('.institution-collection-list-li').each(function() {
 if($('.institution-collection-list-a').length < 4){
    $('.institution-collection-list-a').css("flex-grow","1");
 }
+
+//if($('.child-institution-collections a').length < 4){
+   //$('.child-institution-collections a').css("flex-grow","1");
+//}
 
 
       $(".islandora-pdf-metadata").clone().prop({ id: "sideMods", class: "newClass" }).prependTo("#region-sidebar-first");
