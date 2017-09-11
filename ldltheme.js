@@ -85,6 +85,8 @@ if($('.institution-collection-list-a').length < 4){
 //}
 
 
+
+
       $(".islandora-pdf-metadata").clone().prop({ id: "sideMods", class: "newClass" }).prependTo("#region-sidebar-first");
       $(".islandora-large-image-metadata").clone().prop({ id: "sideMods", class: "newClass" }).prependTo("#region-sidebar-first");
       $(".page-islandora-search #page-title").clone().prop({ id: "page-title-header"}).prependTo(".region-header-second-inner");
@@ -125,6 +127,9 @@ $( ".site-name a span" ).replaceWith( "<span><span class='boldSpan'>Louisiana</s
 
       $("<div class='mobileMenu'/>").insertBefore("div#page");
       $("<button class='hamburger--elastic hamburger--collapse mobileMenuIcon' type='button'><span class='hamburger-box'><span class='hamburger-inner'></span></span></button>").insertBefore(".logo-img");
+
+
+
 
       $('.mobileMenuIcon, .menuOn').click(function(){
           $("#page").toggleClass('menuOn');
@@ -417,6 +422,15 @@ if ( $( "#sideMods" ).length ) {
      $("body").addClass('itemPage');
  }//allows collection Page styles
 
+
+      $("<div class='childCounts'/>").appendTo(".child-institution-title");
+
+      $(".child-institution-count-collections, .child-institution-count-items").appendTo(".childCounts");
+
+
+if($('.child-institution-collections a').length < 1){
+   $('.child-institution-collections').remove();
+}
 
 var currentInstitution =  $( "ul.breadcrumb a.active" ).text();
 //$('.institution-search #myform input').each(function() {
