@@ -250,7 +250,11 @@ span.bold {
 }
 
 /*Institutional Page*/
-
+.institution{
+  #block-block-1 a{
+    color:#474747;
+  }
+}
 
 
 .institution-collection-description {
@@ -3829,7 +3833,7 @@ transform: translate(80vw, 0px);
   }
 
 .institution-collection-list-a, .institution-logo, .institution-search::before, .child-institution-collections::before {
-        width: 33.3%;
+        width: 33.33%;
       }
 
   .islandora-pdf-content img {
