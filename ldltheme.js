@@ -78,6 +78,7 @@ $('.institution-collection-list-li').each(function() {
 
 if($('.institution-collection-list-a').length < 4){
    $('.institution-collection-list-a').css("flex-grow","1");
+   $('.institution-collection-list-item-label').css("width", "auto");
 }
 
 //if($('.child-institution-collections a').length < 4){
