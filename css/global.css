@@ -570,6 +570,7 @@ ul.institution-collection-list {
   position: relative;
   overflow: hidden;
   height: 420px;
+  cursor: pointer;
   -moz-transition-duration: 0.2s;
   -o-transition-duration: 0.2s;
   -webkit-transition-duration: 0.2s;

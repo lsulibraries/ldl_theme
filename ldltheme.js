@@ -419,6 +419,9 @@ $(".latechTheme .collectionLogo").on('click', function(){
   window.location = "/latech";    
 });
 
+
+
+
 if ( $( "#sideMods" ).length ) { 
      $("body").addClass('itemPage');
  }//allows collection Page styles
@@ -435,6 +438,11 @@ $('.child-institution-container').each(function() {
 if($('.child-institution-collections a').length < 1){
    $('.child-institution-collections').remove();
 }
+
+$(".institution-collection-list-a").on('click', function(){
+  window.location = $(this).data("target");    
+});
+
 
 var currentInstitution =  $( "ul.breadcrumb a.active" ).text();
 //$('.institution-search #myform input').each(function() {

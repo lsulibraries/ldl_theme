@@ -262,15 +262,17 @@ span.bold {
     align-self: baseline;
     font-size: 14px;
     overflow: hidden;    
-flex-direction: column;    
+    flex-direction: column;    
     @include transition-duration(1s);
-          transition-delay: 1s;
-              width: 100%;
+    transition-delay: 1s;
+    width: 100%;
     color: rgba(255, 255, 255, 0.66);            
-margin-top: 60px;
+    margin-top: 60px;
     position: relative;
-word-break: break-word;    
+    word-break: break-word;    
 }
+
+
 
 
 .institution-collection-description::after {
@@ -739,6 +741,7 @@ ul.institution-collection-list {
     position: relative;
     overflow: hidden;
     height: 420px;    
+    cursor: pointer;
     @include transition-duration(.2s);
 a{
       @include transition-duration(.2s);
