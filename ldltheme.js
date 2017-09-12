@@ -425,9 +425,12 @@ if ( $( "#sideMods" ).length ) {
 
 
       $("<div class='childCounts'/>").appendTo(".child-institution-title");
+///$(".child-institution-count-collections, .child-institution-count-items").appendTo(".childCounts");
 
-      $(".child-institution-count-collections, .child-institution-count-items").appendTo(".childCounts");
 
+$('.child-institution-container').each(function() {
+    $(this).children(".child-institution-count-collections, .child-institution-count-items").appendTo($(this).find('.childCounts'));
+});
 
 if($('.child-institution-collections a').length < 1){
    $('.child-institution-collections').remove();

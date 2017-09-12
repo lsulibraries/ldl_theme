@@ -648,7 +648,7 @@ li.institution-collection-list-item a.institution-collection-list-item-manage-pr
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 5vh 100px;
+  padding: 150px 100px;
   line-height: 30px;
 }
 .institution-about h2 {
@@ -4171,6 +4171,23 @@ body {
   }
 }
 @media screen and (max-width: 1260px) and (max-width: 740px) {
+  .institution-collection-list-a:hover .institution-collection-list-item-label {
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    transform: translateY(-100%);
+    transition-delay: 0s;
+  }
+  .institution-collection-list-a:hover .institution-collection-description {
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    transform: translateY(-100%);
+    transition-delay: 0s;
+  }
+
   .child-institution-collections a {
     width: 100%;
   }

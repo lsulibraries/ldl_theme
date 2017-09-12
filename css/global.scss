@@ -825,7 +825,7 @@ li.institution-collection-list-item a.institution-collection-list-item-manage-pr
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 5vh 100px;
+    padding: 150px 100px;
     line-height: 30px;
   h2{
     font-size:18px;
@@ -4390,6 +4390,23 @@ html.mobileMenuActive, body.mobileMenuActive{
 
   @media screen and (max-width: 740px) {
 
+
+.institution-collection-list-a:hover{
+
+
+.institution-collection-list-item-label{
+    @include transition-duration(.5s);
+    transform: translateY(-100%);
+  transition-delay: 0s;
+}
+  .institution-collection-description{
+    @include transition-duration(.5s);
+    transform: translateY(-100%);
+      transition-delay: 0s;
+
+  }
+
+}
 
 .child-institution-collections a {
     width: 100%;
