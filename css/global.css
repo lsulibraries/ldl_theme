@@ -156,6 +156,7 @@ span.bold {
   color: rgba(255, 255, 255, 0.66);
   margin-top: 60px;
   position: relative;
+  word-break: break-word;
 }
 
 .institution-collection-description::after {
