@@ -136,10 +136,6 @@ span.bold {
 }
 
 /*Institutional Page*/
-.institution #block-block-1 a {
-  color: #474747;
-}
-
 .institution-collection-description {
   height: 420px;
   display: flex;
@@ -186,7 +182,7 @@ span.bold {
 
 a.institution-about-edit {
   position: absolute;
-  top: 40px;
+  top: 20px;
   left: 20px;
   background: #ff6a6a;
   color: #1a1a1a;
@@ -652,7 +648,7 @@ li.institution-collection-list-item a.institution-collection-list-item-manage-pr
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 170px 100px;
+  padding: 5vh 100px;
   line-height: 30px;
 }
 .institution-about h2 {
@@ -755,11 +751,8 @@ li.institution-collection-list-item a.institution-collection-list-item-manage-pr
   border-top: 1px solid rgba(255, 255, 255, 0.21);
 }
 
-.institution .region-header-second {
-  background: transparent !important;
-  position: absolute !important;
-  top: 50px !important;
-  z-index: 99 !important;
+.child-institution-description {
+  display: none;
 }
 
 .child-institution-collections a {
@@ -794,10 +787,13 @@ li.institution-collection-list-item a.institution-collection-list-item-manage-pr
   padding: 2px 10px;
   display: inline-block;
   font-size: 12px;
+  margin-right: 5px;
+  margin-bottom: 5px;
 }
 
 .child-institution-count-items {
-  margin-left: 5px;
+  margin-right: 0px;
+  margin-bottom: 0px;
 }
 
 .child-institution-collections {
@@ -822,7 +818,7 @@ li.institution-collection-list-item a.institution-collection-list-item-manage-pr
 }
 
 .child-institution-title {
-  margin: 50px 50px;
+  margin: 30px 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -4193,6 +4189,7 @@ body {
     font-size: 10px;
     height: 210px;
     padding: 10px 10px;
+    transition-delay: 0s;
   }
 
   .title-description {

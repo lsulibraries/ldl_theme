@@ -250,11 +250,6 @@ span.bold {
 }
 
 /*Institutional Page*/
-.institution{
-  #block-block-1 a{
-    color:#474747;
-  }
-}
 
 
 .institution-collection-description {
@@ -303,7 +298,7 @@ margin-top: 60px;
 
 a.institution-about-edit {
     position: absolute;
-    top: 40px;
+    top: 20px;
     left: 20px;
     background: #ff6a6a;
     color: #1a1a1a;
@@ -830,7 +825,7 @@ li.institution-collection-list-item a.institution-collection-list-item-manage-pr
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 170px 100px;
+    padding: 5vh 100px;
     line-height: 30px;
   h2{
     font-size:18px;
@@ -948,19 +943,23 @@ form#myform {
 
 
 
-.institution {
-
-  .region-header-second{
-    background: transparent !important;
-        position: absolute !important;
-    top: 50px !important;
-    z-index: 99 !important;
-  }
-}
+///.institution {
+///
+  ///.region-header-second{
+    ///background: transparent !important;
+        ///position: absolute !important;
+    ///top: 50px !important;
+    ///z-index: 99 !important;
+  ///}
+///}
 
 
 //Sub institution styles
 
+
+.child-institution-description{
+  display: none;
+}
 
 .child-institution-collections a {
     width: 25%;
@@ -996,11 +995,15 @@ content: 'Affiliated with';
     padding: 2px 10px;
     display: inline-block;
     font-size: 12px;
+margin-right: 5px;
+margin-bottom: 5px;
+
   }
 
 .child-institution-count-items {
 @extend .child-institution-count-collections;
-margin-left: 5px;
+margin-right: 0px;
+margin-bottom: 0px;
 }
 
 .child-institution-collections {
@@ -1022,7 +1025,7 @@ ul.child-institution-collection-list {
 }
 
 .child-institution-title {
-    margin: 50px 50px;
+    margin: 30px 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -4406,6 +4409,7 @@ font-size: 12px;
       font-size: 10px;
     height: 210px;
         padding: 10px 10px;
+        transition-delay: 0s;
 }
 
 .title-description{
