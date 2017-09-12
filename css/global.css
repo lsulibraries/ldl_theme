@@ -151,7 +151,7 @@ span.bold {
   -o-transition-duration: 1s;
   -webkit-transition-duration: 1s;
   transition-duration: 1s;
-  transition-delay: 1s;
+  transition-delay: 0s;
   width: 100%;
   color: rgba(255, 255, 255, 0.66);
   margin-top: 60px;
@@ -589,7 +589,7 @@ ul.institution-collection-list {
   -webkit-transition-duration: 1.5s;
   transition-duration: 1.5s;
   transform: translateY(-100%);
-  transition-delay: 1s;
+  transition-delay: 0s;
 }
 .institution-collection-list-a:hover .institution-collection-description {
   -moz-transition-duration: 1.5s;
@@ -597,13 +597,18 @@ ul.institution-collection-list {
   -webkit-transition-duration: 1.5s;
   transition-duration: 1.5s;
   transform: translateY(-100%);
-  transition-delay: 1s;
+  transition-delay: 0s;
 }
 
 .institution-collection-list-item-manage-proxy {
-  width: calc(100% - 10px);
   text-align: center;
   padding: 5px;
+  position: absolute;
+  top: 29px;
+  background: #1a1a1a;
+  width: 100px;
+  border: 1px solid #2f2f2f;
+  left: 0px;
 }
 
 li.institution-collection-list-item a.institution-collection-list-item-manage-proxy-link {
@@ -637,7 +642,7 @@ li.institution-collection-list-item a.institution-collection-list-item-manage-pr
   -o-transition-duration: 1.5s;
   -webkit-transition-duration: 1.5s;
   transition-duration: 1.5s;
-  transition-delay: 1s;
+  transition-delay: 0s;
 }
 
 .institution-about {

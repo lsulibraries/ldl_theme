@@ -264,7 +264,7 @@ span.bold {
     overflow: hidden;    
     flex-direction: column;    
     @include transition-duration(1s);
-    transition-delay: 1s;
+    transition-delay: 0s;
     width: 100%;
     color: rgba(255, 255, 255, 0.66);            
     margin-top: 60px;
@@ -757,21 +757,27 @@ a{
 .institution-collection-list-item-label{
     @include transition-duration(1.5s);
     transform: translateY(-100%);
-  transition-delay: 1s;
+  transition-delay: 0s;
 }
   .institution-collection-description{
     @include transition-duration(1.5s);
     transform: translateY(-100%);
-      transition-delay: 1s;
+      transition-delay: 0s;
 
   }
 
 }
 
 .institution-collection-list-item-manage-proxy {
-    width: calc(100% - 10px);
     text-align: center;
     padding: 5px;
+    position: absolute;
+    top: 29px;
+    background: #1a1a1a;
+    width: 100px;
+    border: 1px solid #2f2f2f;
+    left: 0px;
+
 }
 
 li.institution-collection-list-item a.institution-collection-list-item-manage-proxy-link {
@@ -803,7 +809,7 @@ li.institution-collection-list-item a.institution-collection-list-item-manage-pr
     font-weight: 900;
     @include transition-duration(1.5s);
 
-      transition-delay: 1s;
+      transition-delay: 0s;
 }
 
 //li.institution-collection-list-item > a::before {
