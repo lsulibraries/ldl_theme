@@ -800,7 +800,7 @@ li.institution-collection-list-item a.institution-collection-list-item-manage-pr
 .institution-collection-list-item-label {
     height: 420px;
     justify-content: center;
-    width: 130px;
+    width: 200px;
     display: flex;
     align-items: center;
     font-size: 28px;
@@ -834,8 +834,8 @@ li.institution-collection-list-item a.institution-collection-list-item-manage-pr
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    padding: 150px 100px;
+    align-items: flex-start;
+    padding: 8vw 100px;
     line-height: 30px;
   h2{
     font-size:18px;
@@ -3856,6 +3856,11 @@ transform: translate(80vw, 0px);
 }
 
 @media screen and (max-width: 1446px) {
+
+ .institution-about{
+  line-height: 20px;
+ }
+
   .view-islandora-collection-landing-pages {
     h2 a:link {
       color: #438fca;
@@ -4072,6 +4077,10 @@ transform: translate(80vw, 0px);
     display: block;
   }
   @media screen and (max-width: 900px) {
+
+.institution-collection-list-item-count{
+  font-size: 10px;
+}
 
 .institution-search form#myform {
     width: 100%;
