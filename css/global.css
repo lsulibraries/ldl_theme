@@ -973,6 +973,7 @@ li.child-institution-collection-list-item {
 #block-block-11 a.institutionLink.hnocLink {
   background-color: #254550;
   background-image: url("http://i.imgur.com/lRaktDw.png");
+  background-size: 100px auto;
 }
 #block-block-11 a.institutionLink.tulaneLink {
   background-color: #032a17;
@@ -4183,6 +4184,11 @@ body {
     justify-content: center;
     padding: 10px;
     margin-bottom: 0px;
+  }
+}
+@media screen and (max-width: 1260px) {
+  .institution-collection-list-item-label {
+    padding: 0px 30px;
   }
 }
 @media screen and (max-width: 1260px) and (max-width: 740px) {
