@@ -597,6 +597,9 @@ a.institution-about-edit {
   .institution-search input[type="text"] {
     border: 2px solid $tulaneColor;
   }
+  .institution-collection-list-item-count {
+   display: none;
+  }
 }
 
 .ullTheme {
