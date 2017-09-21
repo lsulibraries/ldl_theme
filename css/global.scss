@@ -1195,6 +1195,7 @@ display:block;
   a.institutionLink.hnocLink {
     background-color: $hnocColor;
     background-image: url($hnocLogo);
+    background-size: 100px auto;    
   }
 
   a.institutionLink.tulaneLink {
@@ -4410,7 +4411,13 @@ html.mobileMenuActive, body.mobileMenuActive{
     }
   }
 
+.institution-collection-list-item-label{
+  padding: 0px 30px;
+}
+
+
   @media screen and (max-width: 740px) {
+
 
 
 .institution-collection-list-a:hover{
