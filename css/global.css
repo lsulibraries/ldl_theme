@@ -440,6 +440,9 @@ a.institution-about-edit {
 .tulaneTheme .institution-search input[type="text"] {
   border: 2px solid #032a17;
 }
+.tulaneTheme .institution-collection-list-item-count {
+  display: none;
+}
 
 .ullTheme .institution-header, .ullTheme .collectionHeader, .ullTheme .institution-search::before, .ullTheme .child-institution-collections::before {
   background: #a00b0b;
@@ -657,6 +660,11 @@ li.institution-collection-list-item a.institution-collection-list-item-manage-pr
   align-items: flex-start;
   padding: 8vw 100px;
   line-height: 30px;
+  position: absolute;
+  top: 20px;
+  z-index: 99;
+  top: 20px;
+  opacity: 0.1;
 }
 .institution-about h2 {
   font-size: 18px;
