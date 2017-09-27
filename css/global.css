@@ -2580,11 +2580,7 @@ body.logged-in.front div#zone-header {
   display: flex;
 }
 .front div#block-block-12 {
-  background-image: url(http://i.imgur.com/23Z2B15.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position-y: 80%;
-  height: 60vh;
+  height: 100vh;
   position: relative;
 }
 .front div#block-block-12 > .block-inner > .content.clearfix {
@@ -3531,19 +3527,12 @@ body {
   flex-direction: column;
   padding: 20px;
   font-size: 15px;
+  left: -100%;
 }
 .mobileMenu a {
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   padding: 10px;
   color: #c7c7c7;
-}
-
-.front .region-content-inner {
-  background: #f0f0f0;
-}
-
-.page-node .region-content-inner {
-  background: #f0f0f0;
 }
 
 #page.menuOn {
@@ -3912,6 +3901,7 @@ body {
     height: 100%;
     overflow: hidden;
     width: 100%;
+    left: 0%;
   }
 
   .logo-img {

@@ -597,7 +597,7 @@ a.institution-about-edit {
   .institution-search input[type="text"] {
     border: 2px solid $tulaneColor;
   }
-  
+
 .institution-collection-list-item-count {
   display: none;
 }
@@ -2815,11 +2815,7 @@ display: block;
   }
 
   div#block-block-12 {
-    background-image: url(http://i.imgur.com/23Z2B15.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position-y: 80%;
-    height: 60vh;
+    height: 100vh;
     position: relative;
     > .block-inner > .content.clearfix {
       width: 70vw;
@@ -3770,24 +3766,13 @@ body{
     flex-direction: column;
     padding: 20px;
     font-size: 15px;
+    left: -100%;
     a {
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     padding: 10px;
     color: #c7c7c7;
     }
 
-}
-
-.front {
-    .region-content-inner{
-    background: #f0f0f0;
-  }
-}
-
-.page-node {
-    .region-content-inner{
-    background: #f0f0f0;
-  }
 }
 
 
@@ -4132,6 +4117,7 @@ html.mobileMenuActive, body.mobileMenuActive{
     height: 100%;
     overflow: hidden;
     width: 100%;
+    left: 0%;
 }
 
 
