@@ -113,7 +113,8 @@ if($('.institution-collection-list-a').length < 4){
       $("#region-content div.tabs.clearfix").prependTo("#block-system-main");
       $(".bookmark").prependTo("#breadcrumb");
       $("#block-islandora-solr-simple").clone().prop({ id: "largeSearch", value:"Search LDL.."}).appendTo("#block-block-12 div.content");
-      $("#block-block-1").clone().prop({ id: "landingAdvanced"}).appendTo("#largeSearch");
+      //$("#block-block-1").clone().prop({ id: "landingAdvanced"}).appendTo("#largeSearch");
+      $("#largeSearch #edit-simple--2").prop({ id: "largeSearch_form"});
       $(".underHero").appendTo("#landingHero");
       $(".footerImg").clone().prop({ id: "logoMobile"}).prependTo("#zone-header");
       $(".landingMessage").clone().prop({id: "landingMobile", class: "landingMessageMobile"}).appendTo("#zone-header");
@@ -127,7 +128,7 @@ if($('.institution-collection-list-a').length < 4){
 
       $(".collectionPage <div class='collectionLogo'/>").prependTo(".collectionHeader");
       $("<div class='homepageLogo'/>").prependTo(".messageContainer");
-$( ".site-name a span" ).replaceWith( "<span><span class='boldSpan'>Louisiana</span> Digital Library</span>" );
+      $( ".site-name a span" ).replaceWith( "<span><span class='boldSpan'>Louisiana</span> Digital Library</span>" );
 
       $(".collectionPage <div class='collectionSearch'/>").insertAfter(".collectionHeader");
       $(".collectionPage #page-title").prependTo(".collectionHeader .collection-description-text");
@@ -141,6 +142,10 @@ $( ".site-name a span" ).replaceWith( "<span><span class='boldSpan'>Louisiana</s
       $("<div class='mobileMenu'/>").insertBefore("div#page");
       $("<button class='hamburger--elastic hamburger--collapse mobileMenuIcon' type='button'><span class='hamburger-box'><span class='hamburger-inner'></span></span></button>").insertBefore(".logo-img");
 
+
+      $(".homepageText p").prop({class: "homepageText"}).appendTo("#block-block-12 #largeSearch .content");
+      $("#block-block-13").remove();
+      $(".viewallButton").appendTo("#largeSearch_form");
 
 
 
@@ -419,7 +424,7 @@ $('.vvilleLink').hover(
 );
 
 $('#largeSearch .form-item-islandora-simple-search-query > input').each(function() {
-  $(this).attr("placeholder", "Let's Discover Louisiana Together" );
+  $(this).attr("placeholder", "Let's Discover Louisiana Together." );
 });//Adds Search text
 
 

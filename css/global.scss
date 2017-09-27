@@ -1091,12 +1091,8 @@ li.child-institution-collection-list-item {
 #block-block-11 {
 display:block;
   align-items: center;
-  width: 70vw;
   margin: 0 auto;
-  padding-top: 40px;
-  padding-left: 15px;
-  padding-bottom: 40px;
-
+background: none;
   .content.clearfix {
     @include flexbox;
   }
@@ -1119,14 +1115,12 @@ display:block;
   }
 
   a.institutionLink {
-    width: 100px;
-    height: 60px;
+    width: calc(20vw - 3.4px);
+    height: 242px;
     position: relative;
     background-position: center;
     background-repeat: no-repeat;
-    margin: 0px 1px 1px 0px;
     background-size: 70px auto;
-    opacity: 0.7;
     @include transition-duration(.5s);
   }
 
@@ -2389,12 +2383,15 @@ fieldset.islandora-metadata.collapsible {
 }
 
 a.viewallButton {
-  border: 1px solid;
-  border-radius: 10px;
-  padding: 0px 6px;
-  font-size: 11px;
-  letter-spacing: 1px;
-  margin-left: 10px;
+    padding: 2px 6px;
+    font-size: 11px;
+    letter-spacing: 1px;
+    margin-left: 10px;
+    position: absolute;
+    bottom: 100px;
+    background: white;
+    right: 0px;
+    color: black;
 }
 
 /* Solr results */
@@ -2697,6 +2694,20 @@ body.logged-in.front div#zone-header {
 
 .front {
 
+div#zone-header-wrapper {
+    margin: 20px;
+}
+
+#block-block-12 #largeSearch .homepageText {
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: none;
+    width: 77%;
+    display: flex;
+    margin-left: 16vw;
+    font-weight: normal;
+  }
+
 .site-name a {
     color: #ffffff;
   }
@@ -2718,6 +2729,7 @@ body.logged-in.front div#zone-header {
   #block-block-1 a {
     position: relative;
     top: -10px;
+    color: white;
   }
 
   #section-header {
@@ -2773,10 +2785,10 @@ body.logged-in.front div#zone-header {
     @include flexbox;
     justify-content: center;
     align-items: center;
+    background: #1a1a1a;
   }
 
   .homepageText {
-    margin-left: 20px;
     @include flexbox;
     flex-wrap: wrap;
     flex-grow: 1;
@@ -2834,15 +2846,17 @@ display: block;
     > .block-inner > .content.clearfix {
       width: 70vw;
       margin: 0 auto;
+          position: relative;
+    bottom: 50px;
     }
 
     p {
       width: 70vw;
-      font-size: 5vw;
+      font-size: 4vw;
       font-weight: 900;
       text-transform: uppercase;
       width: 210px;
-      line-height: 4.4vw;
+      line-height: 3.4vw;
       color: white;
     }
 
@@ -2854,7 +2868,7 @@ display: block;
       margin-left: 5px;
       z-index: 99;
 
-      div#edit-simple--2 {
+      div#largeSearch_form {
         width: 70vw;
             justify-content: flex-end;
       }
@@ -2882,7 +2896,11 @@ content: '';
 }
 input[type="text"]::placeholder {
     color: white;
+    opacity: 1 !important;
   }
+
+
+
 
       input[type="text"] {
     width: 100%;
@@ -2897,6 +2915,14 @@ input[type="text"]::placeholder {
     position: relative;
     bottom: 20px;
 
+      }
+
+      input[type="text"]::after {
+content:'';
+width:5px;
+height:1px;
+position: relative;
+left:10px;
       }
 
       input[type="submit"] {
@@ -4377,9 +4403,6 @@ html.mobileMenuActive, body.mobileMenuActive{
 
       div#block-block-11 {
         width: 100%;
-        padding-left: 5px;
-        padding-right: 5px;
-        padding-top: 30px;
         a.institutionLink {
           width: calc(33vw - 3px);
         }
