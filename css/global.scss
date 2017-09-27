@@ -2684,12 +2684,23 @@ div.islandora-solr-content {
 
 //front page
 
+
+
+span.digitallibraryText {
+    font-weight: 300;
+}
+
 body.logged-in.front div#zone-header {
   top: 0px;
   position: absolute;
 }
 
 .front {
+
+.site-name a {
+    color: #ffffff;
+  }
+
   #zone-header, #region-header-first {
     input {
       &#edit-islandora-simple-search-query.form-text,
@@ -2845,6 +2856,7 @@ display: block;
 
       div#edit-simple--2 {
         width: 70vw;
+            justify-content: flex-end;
       }
 
       .form-wrapper {
@@ -2854,20 +2866,43 @@ display: block;
       }
 
       .form-item {
-        width: 100%;
+    width: 60vw;
       }
 
+.form-item-islandora-simple-search-query::after{
+content: '';
+    background-image: url(https://i.imgur.com/9ytB8Dg.png);
+    position: absolute;
+    left: 1px;
+    top: -13px;
+    width: 15vw;
+    height: 500px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+input[type="text"]::placeholder {
+    color: white;
+  }
+
       input[type="text"] {
-        width: 100%;
-        font-size: 30px;
-        padding: 0px 30px;
-        height: 70px;
+    width: 100%;
+    font-size: 30px;
+    padding: 0px 30px;
+    height: 70px;
+    background: none;
+    color: white;
+    border-width: 1px;
+    border-left: 0px;
+    border-color: rgba(255, 255, 255, 0.33);
+    position: relative;
+    bottom: 20px;
+
       }
 
       input[type="submit"] {
         position: absolute;
         right: 0px;
-        top: 10px;
+        top: -10px;
         width: 80px;
         height: 70px;
         background: none;
@@ -2875,7 +2910,7 @@ display: block;
         background-repeat: no-repeat;
         background-position: center;
         background-size: 45px 45px;
-        background-image: url(http://i.imgur.com/NpfYQT0.png);
+        background-image: url(https://i.imgur.com/SH5syLP.png);
       }
     }
   }

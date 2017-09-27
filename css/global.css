@@ -2451,11 +2451,18 @@ div.islandora-solr-content {
   margin-bottom: 10px;
 }
 
+span.digitallibraryText {
+  font-weight: 300;
+}
+
 body.logged-in.front div#zone-header {
   top: 0px;
   position: absolute;
 }
 
+.front .site-name a {
+  color: #ffffff;
+}
 .front #zone-header input#edit-islandora-simple-search-query.form-text, .front #zone-header input#edit-islandora-simple-search-query--2, .front #region-header-first input#edit-islandora-simple-search-query.form-text, .front #region-header-first input#edit-islandora-simple-search-query--2 {
   color: #474747;
 }
@@ -2617,6 +2624,7 @@ body.logged-in.front div#zone-header {
 }
 .front div#block-block-12 #largeSearch div#edit-simple--2 {
   width: 70vw;
+  justify-content: flex-end;
 }
 .front div#block-block-12 #largeSearch .form-wrapper {
   width: 70vw;
@@ -2628,18 +2636,39 @@ body.logged-in.front div#zone-header {
   display: flex;
 }
 .front div#block-block-12 #largeSearch .form-item {
-  width: 100%;
+  width: 60vw;
+}
+.front div#block-block-12 #largeSearch .form-item-islandora-simple-search-query::after {
+  content: '';
+  background-image: url(https://i.imgur.com/9ytB8Dg.png);
+  position: absolute;
+  left: 1px;
+  top: -13px;
+  width: 15vw;
+  height: 500px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.front div#block-block-12 #largeSearch input[type="text"]::placeholder {
+  color: white;
 }
 .front div#block-block-12 #largeSearch input[type="text"] {
   width: 100%;
   font-size: 30px;
   padding: 0px 30px;
   height: 70px;
+  background: none;
+  color: white;
+  border-width: 1px;
+  border-left: 0px;
+  border-color: rgba(255, 255, 255, 0.33);
+  position: relative;
+  bottom: 20px;
 }
 .front div#block-block-12 #largeSearch input[type="submit"] {
   position: absolute;
   right: 0px;
-  top: 10px;
+  top: -10px;
   width: 80px;
   height: 70px;
   background: none;
@@ -2647,7 +2676,7 @@ body.logged-in.front div#zone-header {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 45px 45px;
-  background-image: url(http://i.imgur.com/NpfYQT0.png);
+  background-image: url(https://i.imgur.com/SH5syLP.png);
 }
 .front > #region-content .content.clearfix {
   display: -webkit-box;

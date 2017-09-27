@@ -17,7 +17,7 @@
   //   window.location = "../";    
 //});
 
-$('.front #block-block-12').parallax({imageSrc: 'http://i.imgur.com/23Z2B15.jpg'});
+$('.front #block-block-12').parallax({imageSrc: 'https://i.imgur.com/VIXDwyu.jpg'});
 
 
 
@@ -419,7 +419,7 @@ $('.vvilleLink').hover(
 );
 
 $('#largeSearch .form-item-islandora-simple-search-query > input').each(function() {
-  $(this).attr('placeholder', 'Search the Louisiana Digital Library' );
+  $(this).attr("placeholder", "Let's Discover Louisiana Together" );
 });//Adds Search text
 
 
