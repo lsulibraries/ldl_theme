@@ -112,7 +112,7 @@ if($('.institution-collection-list-a').length < 4){
       $("#islandora-solr-result-count").prop({ id: "header-result-count"}).appendTo("#breadcrumb");
       $("#region-content div.tabs.clearfix").prependTo("#block-system-main");
       $(".bookmark").prependTo("#breadcrumb");
-      $("#block-islandora-solr-simple").clone().prop({ id: "largeSearch", value:"Search LDL.."}).appendTo("#block-block-12");
+      $("#block-islandora-solr-simple").clone().prop({ id: "largeSearch", value:"Search LDL.."}).appendTo("#block-block-12 div.content");
       $("#block-block-1").clone().prop({ id: "landingAdvanced"}).appendTo("#largeSearch");
       $(".underHero").appendTo("#landingHero");
       $(".footerImg").clone().prop({ id: "logoMobile"}).prependTo("#zone-header");

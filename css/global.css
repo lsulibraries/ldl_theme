@@ -2580,6 +2580,13 @@ body.logged-in.front div#zone-header {
   display: flex;
 }
 .front div#block-block-12 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
   position: relative;
 }
@@ -2595,12 +2602,8 @@ body.logged-in.front div#zone-header {
   width: 210px;
   line-height: 4.4vw;
   color: white;
-  position: absolute;
-  bottom: 26px;
 }
 .front div#block-block-12 #largeSearch {
-  position: absolute;
-  bottom: -34px;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -3518,6 +3521,7 @@ body {
   position: absolute;
   background: #313133;
   width: calc(80vw + 1px);
+  opacity: 0;
   height: calc(100vh - 20px);
   display: -webkit-box;
   display: -moz-box;
@@ -3527,7 +3531,6 @@ body {
   flex-direction: column;
   padding: 20px;
   font-size: 15px;
-  left: -100%;
 }
 .mobileMenu a {
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -3901,7 +3904,10 @@ body {
     height: 100%;
     overflow: hidden;
     width: 100%;
-    left: 0%;
+  }
+
+  .mobileMenu {
+    opacity: 100%;
   }
 
   .logo-img {

@@ -2815,6 +2815,9 @@ display: block;
   }
 
   div#block-block-12 {
+    @include flexbox;
+    justify-content: center;
+    align-items:center;
     height: 100vh;
     position: relative;
     > .block-inner > .content.clearfix {
@@ -2830,13 +2833,9 @@ display: block;
       width: 210px;
       line-height: 4.4vw;
       color: white;
-      position: absolute;
-      bottom: 26px;
     }
 
     #largeSearch {
-      position: absolute;
-      bottom: -34px;
       @include flexbox;
       justify-content: center;
       align-items: center;
@@ -3760,13 +3759,12 @@ body{
     position: absolute;
     background: #313133;
     width: calc(80vw + 1px);
-
+    opacity: 0;
     height: calc(100vh - 20px);
     @include flexbox;
     flex-direction: column;
     padding: 20px;
     font-size: 15px;
-    left: -100%;
     a {
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     padding: 10px;
@@ -4117,9 +4115,13 @@ html.mobileMenuActive, body.mobileMenuActive{
     height: 100%;
     overflow: hidden;
     width: 100%;
-    left: 0%;
+
 }
 
+
+.mobileMenu{
+      opacity: 100%;
+}
 
     .logo-img{
       display: none;
