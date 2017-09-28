@@ -161,7 +161,10 @@ if($('.institution-collection-list-a').length < 4){
       $(".homepageText > p").prop({class:"homepageText"}).appendTo("#block-block-12 #largeSearch .content");
       $(".block-11 .homepageText p, .block-11 .homepageText br").remove();
       $("<span class='modalExit'/>").insertBefore("#block-islandora-solr-advanced .block-title");
-      $("#block-islandora-solr-advanced").insertBefore(".mobileMenu");
+      $("<span class='modalExit2'/>").insertBefore("#block-block-14 h2");
+
+      $("#block-islandora-solr-advanced, #block-block-14").insertBefore(".mobileMenu");
+
 
 
 //modal advsearch
@@ -196,15 +199,67 @@ window.onclick = function(event) {
         $(".page").removeClass('blurFilter');
         $(".parallax-slider").removeClass('darkFilter');        
     }
+    if (event.target == modal2) {
+        modal2.style.display = "none";
+        $(".page").removeClass('blurFilter');
+        $(".parallax-slider").removeClass('darkFilter');        
+    }    
 }
 
+      $('div.form-type-checkbox input').click(function(){
+          $(this).toggleClass('selectedCheck');
+      });
+      $('#block-islandora-solr-advanced .block-title').html('Advanced Search');
+
+//end modal adv search
+
+
+//modal contactus
+
+// Get the modal
+var modal2 = document.getElementById('block-block-14');
+
+// Get the button that opens the modal
+var btn2 = document.getElementsByClassName("contactLink")[0];
+
+// Get the <span> element that closes the modal
+var span2 = document.getElementsByClassName("modalExit2")[0];
+
+// When the user clicks on the button, open the modal 
+btn2.onclick = function() {
+    modal2.style.display = "flex";
+    $(".page").addClass('blurFilter');
+    $(".parallax-slider").addClass('darkFilter');
+}
+
+// When the user clicks on <span> (x), close the modal
+span2.onclick = function() {
+    modal2.style.display = "none";
+    $(".page").removeClass('blurFilter');
+    $(".parallax-slider").removeClass('darkFilter');
+}
 
       $('div.form-type-checkbox').click(function(){
           $(this).toggleClass('selectedCheck');
       });
-
       $('#block-islandora-solr-advanced .block-title').html('Advanced Search');
 
+//end modal adv search
+
+
+
+//modal anchor setup
+ var hash = window.location.hash;
+            if (hash == "#advanced") {
+              modal.style.display = "flex";
+              $(".page").addClass('blurFilter');
+              $(".parallax-slider").addClass('darkFilter');
+            }
+            if (hash == "#contact") {
+              modal2.style.display = "flex";
+              $(".page").addClass('blurFilter');
+              $(".parallax-slider").addClass('darkFilter');
+            }
 
 //rotator
 

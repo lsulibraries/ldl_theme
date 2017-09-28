@@ -3654,7 +3654,7 @@ section#block-islandora-solr-sort .item-list {
   color: white !important;
 }
 
-span.modalExit {
+span.modalExit, span.modalExit2 {
   position: absolute;
   top: 0px;
   right: 0px;
@@ -3668,7 +3668,7 @@ span.modalExit {
   cursor: pointer;
 }
 
-section#block-islandora-solr-advanced {
+section#block-islandora-solr-advanced, #block-block-14 {
   position: absolute;
   box-sizing: content-box;
   display: flex;
@@ -3759,7 +3759,6 @@ section#block-islandora-solr-advanced {
 .block-advanced label.option {
   text-transform: uppercase;
   font-size: 12px;
-  font-weight: 700;
   letter-spacing: 1px;
   color: #4e4e4e;
 }
@@ -3786,6 +3785,27 @@ section#block-islandora-solr-advanced {
   height: 100%;
   position: absolute;
   cursor: pointer;
+}
+
+#block-block-14 .block-inner.clearfix {
+  background: white;
+  padding: 50px;
+  position: relative;
+  width: 50vw;
+}
+#block-block-14 h3 {
+  font-size: 125%;
+  font-weight: 500;
+  margin-bottom: 0px;
+  color: #3c3c3c;
+}
+#block-block-14 ul {
+  margin-left: 30px;
+}
+#block-block-14 h2 {
+  font-size: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+  font-weight: 500;
 }
 
 a.alpha-grid-toggle, a.alpha-block-toggle {

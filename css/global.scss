@@ -3911,7 +3911,7 @@ label.option {
 
 //adv search
 
-span.modalExit {
+span.modalExit, span.modalExit2 {
     position: absolute;
     top: 0px;
     right: 0px;
@@ -3926,6 +3926,8 @@ span.modalExit {
 }
 
 
+
+
 section#block-islandora-solr-advanced {
     position: absolute;
     box-sizing: content-box;
@@ -3937,6 +3939,8 @@ section#block-islandora-solr-advanced {
     align-items: center;
     display: none;
 }
+
+
 
 $color_1: #4e4e4e;
 $color_2: white;
@@ -4028,7 +4032,6 @@ $color_2: white;
   label.option {
     text-transform: uppercase;
     font-size: 12px;
-    font-weight: 700;
     letter-spacing: 1px;
     color: $color_1;
   }
@@ -4063,6 +4066,37 @@ $color_2: white;
 
 //end adv search
 
+
+//contact us
+
+#block-block-14{
+  @extend section#block-islandora-solr-advanced; 
+
+  .block-inner.clearfix {
+    background: white;
+    padding: 50px;
+    position: relative;
+    width: 50vw;    
+  }
+
+    h3 {
+        font-size: 125%;
+        font-weight: 500;
+        margin-bottom: 0px;
+        color: #3c3c3c;
+    }
+
+  ul {
+      margin-left: 30px;
+  }
+
+  h2{
+    font-size: 20px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+      font-weight: 500;
+  }
+
+}
 
 //mobile menu
 
