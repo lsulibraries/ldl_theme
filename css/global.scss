@@ -1163,8 +1163,8 @@ opacity: 1;
   }
 
   a.institutionLink {
-    width: calc(20vw - 3.4px);
-    height: 242px;
+    width: calc(16.666vw - 3px);
+    height: 180px;
     position: relative;
     background-position: center;
     background-repeat: no-repeat;
@@ -2433,7 +2433,7 @@ fieldset.islandora-metadata.collapsible {
 }
 
 a.viewallButton {
-    padding: 2px 6px;
+    padding: 2px 16px;
     font-size: 11px;
     letter-spacing: 1px;
     margin-left: 10px;
@@ -2755,7 +2755,7 @@ body.logged-in.front div#zone-header {
     position: absolute;
     bottom: 50px;
     color: white;
-    font-size: 14px;
+    font-size: 12px;
     border: 1px solid rgba(255, 255, 255, 0.33);
     padding: 10px 30px;
     border-radius: 30px;
@@ -2872,20 +2872,29 @@ div#zone-header-wrapper {
 .featuredLink {
     margin-left: 16vw;
     color: white;
+    @include flexbox;
+}
+
+.featuredText {
+    @include flexbox;
+    flex-direction: column;
+    line-height: 15px;    
 }
 
 span.featuredName {
     font-style: italic;
-    color: $Blue;
+    color: $Cyan;
 }
 
 span.featuredLabel {
     color: black;
     background: white;
     margin-right: 10px;
-    padding: 2px 6px;
+    padding: 2px 16px;
     font-size: 11px;
     letter-spacing: 1px;
+    @include flexbox;
+    align-items: center;
 }
 
   .homepageLabel {

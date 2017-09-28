@@ -167,29 +167,35 @@ if($('.institution-collection-list-a').length < 4){
 //rotator
 
 
-var rotations = [ "rotate1", "rotate2", "rotate3", "rotate4", "rotate5" ];
+var rotations = [ "rotate1", "rotate2", "rotate3", "rotate4", "rotate5", "rotate6" ];
 var rotation = rotations[Math.floor(Math.random()*rotations.length)];
 $("body").addClass(rotation);
 
 //rotate 1
-$("<a href='http://louisianadigitallibrary.org/islandora/object/lsu-clt%3A10'><div class='featuredLink'><span class='featuredLabel'>Featured</span><span class='featuredName'>Cargo ship at dock., from Charles L. Thompson Photographs</span></div></a>").insertAfter(".rotate1 #block-block-12 .homepageText");
-$('body.rotate1.front #block-block-12').parallax({imageSrc: 'https://i.imgur.com/VIXDwyu.jpg'});
+$("<a href='http://louisianadigitallibrary.org/islandora/object/lsu-clt%3A10'><div class='featuredLink'><span class='featuredLabel'>Featured</span><div class='featuredText'><span class='featuredName'>Cargo ship at dock., from Charles L. Thompson Photographs</span><span class='featuredDescription'>Manuscript note on verso: Giant steamships and busy workmen at the wharves.</span></div></div></a>").insertAfter(".rotate1 #block-block-12 .homepageText");
+$('body.rotate1.front #block-block-12').parallax({imageSrc: 'https://i.imgur.com/5SxHTs3.jpg'});
 
 //rotate 2
-$("<a href='http://louisianadigitallibrary.org/islandora/object/lsu-p16313coll56:196'><div class='featuredLink'><span class='featuredLabel'>Featured</span><span class='featuredName'>Alligator juvenile, Col. Joseph S. Tate Photograph Album</span></div></a>").insertAfter(".rotate2 #block-block-12 .homepageText");
-$('body.rotate2.front #block-block-12').parallax({imageSrc: 'https://i.imgur.com/QO1GsTH.jpg'});
+$("<a href='http://louisianadigitallibrary.org/islandora/object/lsu-p16313coll56:196'><div class='featuredLink'><span class='featuredLabel'>Featured</span><div class='featuredText'><span class='featuredName'>Alligator juvenile, Col. Joseph S. Tate Photograph Album</span><span class='featuredDescription'>The photograph album (unbound) contains 103 black and white prints mounted on paper. The images show scenes from several locations in Louisiana during the 1920s. Photographer unknown.</span></div></div></a>").insertAfter(".rotate2 #block-block-12 .homepageText");
+$('body.rotate2.front #block-block-12').parallax({imageSrc: 'https://i.imgur.com/3VuY8Fc.jpg'});
 
 //rotate 3
-$("<a href='http://louisianadigitallibrary.org/islandora/object/hnoc-clf:10656'><div class='featuredLink'><span class='featuredLabel'>Featured</span><span class='featuredName'>Mardi Gras truck float, Charles L. Franck and Franck-Bertacci</span></div></a>").insertAfter(".rotate3 #block-block-12 .homepageText");
-$('body.rotate3.front #block-block-12').parallax({imageSrc: 'https://i.imgur.com/7OQHWhz.jpg'});
+$("<a href='http://louisianadigitallibrary.org/islandora/object/hnoc-clf:10656'><div class='featuredLink'><span class='featuredLabel'>Featured</span><div class='featuredText'><span class='featuredName'>Mardi Gras truck float, Charles L. Franck and Franck-Bertacci</span><span class='featuredDescription'>View of a truck float sponsored by Hayes Dairy Products. The riders are costumed in dairy costumes.</span></div></div></a>").insertAfter(".rotate3 #block-block-12 .homepageText");
+$('body.rotate3.front #block-block-12').parallax({imageSrc: 'https://i.imgur.com/JyLgmsS.jpg'});
 
 //rotate 4
-$("<a href='http://louisianadigitallibrary.org/islandora/object/lsu-p16313coll56:169'><div class='featuredLink'><span class='featuredLabel'>Featured</span><span class='featuredName'>Boiling schrimp [sic], Col. Joseph S. Tate Photograph Album</span></div></a>").insertAfter(".rotate4 #block-block-12 .homepageText");
-$('body.rotate4.front #block-block-12').parallax({imageSrc: 'https://i.imgur.com/sGedwFO.jpg'});
+$("<a href='http://louisianadigitallibrary.org/islandora/object/lsu-p16313coll56:169'><div class='featuredLink'><span class='featuredLabel'>Featured</span><div class='featuredText'><span class='featuredName'>Boiling schrimp [sic], Col. Joseph S. Tate Photograph Album</span><span class='featuredDescription'>The photograph album (unbound) contains 103 black and white prints mounted on paper. The images show scenes from several locations in Louisiana during the 1920s. Photographer unknown.</span></div></div></a>").insertAfter(".rotate4 #block-block-12 .homepageText");
+$('body.rotate4.front #block-block-12').parallax({imageSrc: 'https://i.imgur.com/erf0QHD.jpg'});
 
 //rotate 5
-$("<a href='http://louisianadigitallibrary.org/islandora/object/uno-omsa:143'><div class='featuredLink'><span class='featuredLabel'>Featured</span><span class='featuredName'>Mardi Gras 1925, Ogden Museum of Southern Art</span></div></a>").insertAfter(".rotate5 #block-block-12 .homepageText");
-$('body.rotate5.front #block-block-12').parallax({imageSrc: 'https://i.imgur.com/woBZuCV.jpg'});
+$("<a href='http://louisianadigitallibrary.org/islandora/object/uno-omsa:143'><div class='featuredLink'><span class='featuredLabel'>Featured</span><div class='featuredText'><span class='featuredName'>Mardi Gras 1925, Ogden Museum of Southern Art</span><span class='featuredDescription'>Crowds of carnival goers watching parade floats move down Canal Street, New Orleans, Louisiana for pre-Lenten festivities. Black and white photograph.</span></div></div></a>").insertAfter(".rotate5 #block-block-12 .homepageText");
+$('body.rotate5.front #block-block-12').parallax({imageSrc: 'https://i.imgur.com/Ec25IWx.jpg'});
+
+
+//rotate 6
+$("<a href='http://louisianadigitallibrary.org/islandora/object/uno-omsa:283'><div class='featuredLink'><span class='featuredLabel'>Featured</span><div class='featuredText'><span class='featuredName'>Mamou Mardi Gras, Ogden Museum of Southern Art</span><span class='featuredDescription'>Under dark clouds, a horseman wearing a cape makes his Mardi Gras ride along side a field. B/W photograph.</span></div></div></a>").insertAfter(".rotate6 #block-block-12 .homepageText");
+$('body.rotate6.front #block-block-12').parallax({imageSrc: 'https://i.imgur.com/mGNQ2Ia.jpg'});
+
 
 //end rotator
 
