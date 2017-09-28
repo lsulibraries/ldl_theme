@@ -128,7 +128,7 @@ if($('.institution-collection-list-a').length < 4){
       $("#islandora-solr-result-count").prop({ id: "header-result-count"}).appendTo("#breadcrumb");
       $("#region-content div.tabs.clearfix").prependTo("#block-system-main");
       $(".bookmark").prependTo("#breadcrumb");
-      $("#block-islandora-solr-simple").clone().prop({ id: "largeSearch", value:"Search LDL.."}).appendTo("#block-block-12 div.content");
+      $("#region-header-first #block-islandora-solr-simple").clone().prop({ id: "largeSearch", value:"Search LDL.."}).appendTo( $("#block-block-12 > .block-inner > div.content")).on;
       //$("#block-block-1").clone().prop({ id: "landingAdvanced"}).appendTo("#largeSearch");
       $("#largeSearch #edit-simple--2").prop({ id: "largeSearch_form"});
       $(".underHero").appendTo("#landingHero");
@@ -158,11 +158,50 @@ if($('.institution-collection-list-a').length < 4){
       $("<div class='mobileMenu'/>").insertBefore("div#page");
       $("<button class='hamburger--elastic hamburger--collapse mobileMenuIcon' type='button'><span class='hamburger-box'><span class='hamburger-inner'></span></span></button>").insertBefore(".logo-img");
       $("<div class='scrollPrompt'> view institutions </div>").appendTo(".front #block-block-12");
-
-
       $(".homepageText > p").prop({class:"homepageText"}).appendTo("#block-block-12 #largeSearch .content");
       $(".block-11 .homepageText p, .block-11 .homepageText br").remove();
+      $("<span class='modalExit'/>").insertBefore("#block-islandora-solr-advanced .block-title");
+      $("#block-islandora-solr-advanced").insertBefore(".mobileMenu");
 
+
+//modal advsearch
+
+// Get the modal
+var modal = document.getElementById('block-islandora-solr-advanced');
+
+// Get the button that opens the modal
+var btn = document.getElementsByClassName("advLink")[0];
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("modalExit")[0];
+
+// When the user clicks on the button, open the modal 
+btn.onclick = function() {
+    modal.style.display = "flex";
+    $(".page").addClass('blurFilter');
+    $(".parallax-slider").addClass('darkFilter');
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+    $(".page").removeClass('blurFilter');
+    $(".parallax-slider").removeClass('darkFilter');
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+        $(".page").removeClass('blurFilter');
+        $(".parallax-slider").removeClass('darkFilter');        
+    }
+}
+
+
+      $('div.form-type-checkbox').click(function(){
+          $(this).toggleClass('selectedCheck');
+      });
 
 //rotator
 

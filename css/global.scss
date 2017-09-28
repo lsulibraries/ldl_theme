@@ -3891,14 +3891,165 @@ color: #dedede;
 }
 //End oral history styles
 
+.darkFilter{
+    filter: blur(5px) brightness(0.8);
+}
+
+.blurFilter{
+    filter: blur(5px) brightness(0.8);
+}
+
+.selectedCheck{
+
+    background: #39adb5 !important;
+    color: white !important;
+
+label.option {
+    color: white !important;
+}
+}
 
 //adv search
-section#block-islandora-solr-advanced {
-    margin: 40px;
-    background: #dadada;
-    padding: 20px;
-    border: 1px solid #cacaca;
+
+span.modalExit {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 40px;
+    width: 40px;
+    background-color: #FF5370;
+    background-image: url(https://i.imgur.com/7w1xBZb.png);
+    background-repeat: no-repeat;
+    background-size: 20px auto;
+    background-position: center;
+    cursor: pointer;
 }
+
+
+section#block-islandora-solr-advanced {
+    position: absolute;
+    box-sizing: content-box;
+    display: flex;
+    justify-content: center;
+    z-index: 99;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    display: none;
+}
+
+$color_1: #4e4e4e;
+$color_2: white;
+
+#islandora-solr-advanced-search-form div.form-item {
+    display: inline-block;
+    margin-right: 1px;
+    margin-top: 0px;
+    display: flex;
+    background: rgba(255, 255, 255, 0.66);
+    margin-bottom: 1px;
+    flex-grow: 1;
+    padding: 0px;
+    border: 1px solid #ebebeb;
+    position: relative;
+}
+
+.block-advanced {
+
+
+
+  .block-inner.clearfix {
+    background: white;
+    padding: 50px;
+    position: relative;
+  }
+  .content.clearfix {
+    padding-top: 20px;
+  }
+  input {
+    border: 0px;
+    background: rgba(0, 0, 0, 0.08);
+    height: 40px;
+    padding: 0px 10px;
+    flex-grow: 2;
+  }
+  select {
+    border: 0px;
+    background: rgba(0, 0, 0, 0.08);
+    height: 40px;
+    padding: 0px 10px;
+    flex-grow: 2;
+  }
+  label {
+    color: $color_1;
+    font-weight: 500;
+    font-size: 13px;
+    padding: 10px;
+  }
+  input#edit-submit {
+    background: #39ADB5;
+    color: $color_2;
+    outline: none;
+    text-shadow: none;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  h2.block-title {
+    font-size: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+    font-weight: 500;
+  }
+  div#edit-namespaces {
+    background: #ebebeb;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 330px;
+  }
+  #edit-namespaces {
+    select {
+      flex-grow: 0;
+    }
+    input {
+      flex-grow: 0;
+    }
+  }
+  label.option {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: $color_1;
+  }
+  input#edit-namespaces-islandoraoh-collection {
+    margin: 0px;
+  }
+  .form-type-checkbox {
+    padding: 11px;
+  }
+  .form-item.form-type-checkboxes.form-item-namespaces {
+    display: flex;
+    flex-direction: column;
+  }
+  .form-checkbox {
+    background: none;
+    border: 0px;
+  }
+  input#edit-namespaces-uno {
+    background: none;
+  }
+  .form-checkboxes {
+    input {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    }
+  }
+}
+
+
 //end adv search
 
 

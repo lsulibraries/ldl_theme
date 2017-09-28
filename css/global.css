@@ -3638,11 +3638,144 @@ section#block-islandora-solr-sort .item-list {
   background-color: #242021;
 }
 
+.darkFilter {
+  filter: blur(5px) brightness(0.8);
+}
+
+.blurFilter {
+  filter: blur(5px) brightness(0.8);
+}
+
+.selectedCheck {
+  background: #39adb5 !important;
+  color: white !important;
+}
+.selectedCheck label.option {
+  color: white !important;
+}
+
+span.modalExit {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 40px;
+  width: 40px;
+  background-color: #FF5370;
+  background-image: url(https://i.imgur.com/7w1xBZb.png);
+  background-repeat: no-repeat;
+  background-size: 20px auto;
+  background-position: center;
+  cursor: pointer;
+}
+
 section#block-islandora-solr-advanced {
-  margin: 40px;
-  background: #dadada;
-  padding: 20px;
-  border: 1px solid #cacaca;
+  position: absolute;
+  box-sizing: content-box;
+  display: flex;
+  justify-content: center;
+  z-index: 99;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  display: none;
+}
+
+#islandora-solr-advanced-search-form div.form-item {
+  display: inline-block;
+  margin-right: 1px;
+  margin-top: 0px;
+  display: flex;
+  background: rgba(255, 255, 255, 0.66);
+  margin-bottom: 1px;
+  flex-grow: 1;
+  padding: 0px;
+  border: 1px solid #ebebeb;
+  position: relative;
+}
+
+.block-advanced .block-inner.clearfix {
+  background: white;
+  padding: 50px;
+  position: relative;
+}
+.block-advanced .content.clearfix {
+  padding-top: 20px;
+}
+.block-advanced input {
+  border: 0px;
+  background: rgba(0, 0, 0, 0.08);
+  height: 40px;
+  padding: 0px 10px;
+  flex-grow: 2;
+}
+.block-advanced select {
+  border: 0px;
+  background: rgba(0, 0, 0, 0.08);
+  height: 40px;
+  padding: 0px 10px;
+  flex-grow: 2;
+}
+.block-advanced label {
+  color: #4e4e4e;
+  font-weight: 500;
+  font-size: 13px;
+  padding: 10px;
+}
+.block-advanced input#edit-submit {
+  background: #39ADB5;
+  color: white;
+  outline: none;
+  text-shadow: none;
+  margin-top: 10px;
+  width: 100%;
+}
+.block-advanced h2.block-title {
+  font-size: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+  font-weight: 500;
+}
+.block-advanced div#edit-namespaces {
+  background: #ebebeb;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 330px;
+}
+.block-advanced #edit-namespaces select {
+  flex-grow: 0;
+}
+.block-advanced #edit-namespaces input {
+  flex-grow: 0;
+}
+.block-advanced label.option {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #4e4e4e;
+}
+.block-advanced input#edit-namespaces-islandoraoh-collection {
+  margin: 0px;
+}
+.block-advanced .form-type-checkbox {
+  padding: 11px;
+}
+.block-advanced .form-item.form-type-checkboxes.form-item-namespaces {
+  display: flex;
+  flex-direction: column;
+}
+.block-advanced .form-checkbox {
+  background: none;
+  border: 0px;
+}
+.block-advanced input#edit-namespaces-uno {
+  background: none;
+}
+.block-advanced .form-checkboxes input {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
 }
 
 a.alpha-grid-toggle, a.alpha-block-toggle {
