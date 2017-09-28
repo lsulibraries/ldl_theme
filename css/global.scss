@@ -11,6 +11,29 @@ $topheader: #313133;
 $subheader: #363638;
 $gold: #fff3b2;
 
+/*materialTheme*/
+$Red: #FF5370;
+$Pink: #f07178;
+$Orange: #F78C6C;
+$Yellow: #FFCB6B;
+$Green: #C3E88D;
+$PaleBlue: #B2CCD6;
+$Cyan: #89DDFF;
+$Blue: #82AAFF;
+$Purple: #C792EA;
+$Violet: #bb80b3;
+$Brown: #ab7967;
+$Red2: #E53935;
+$Pink2: #FF5370;
+$Orange2: #F76D47;
+$Yellow2: #FFB62C;
+$Green2: #91B859;
+$PaleBlue2: #8796B0;
+$Cyan2: #39ADB5;
+$Blue2: #6182B8;
+$Purple2: #7C4DFF;
+$Violet2: #945EB8;
+
 // Dark text
 .light {
   color: #000 !important;
@@ -2714,6 +2737,7 @@ div.islandora-solr-content {
 
 .parallax-slider{
   filter: blur(5px);
+    transition: filter 1s;
 }
 
 span.digitallibraryText {
@@ -2844,6 +2868,25 @@ div#zone-header-wrapper {
       font-size: 15px;
     }
   }
+
+.featuredLink {
+    margin-left: 16vw;
+    color: white;
+}
+
+span.featuredName {
+    font-style: italic;
+    color: $Blue;
+}
+
+span.featuredLabel {
+    color: black;
+    background: white;
+    margin-right: 10px;
+    padding: 2px 6px;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
 
   .homepageLabel {
     width: 100%;

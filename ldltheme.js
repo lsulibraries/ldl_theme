@@ -30,7 +30,6 @@
   //   window.location = "../";    
 //});
 
-$('.front #block-block-12').parallax({imageSrc: 'https://i.imgur.com/VIXDwyu.jpg'});
 
 
 
@@ -164,9 +163,45 @@ if($('.institution-collection-list-a').length < 4){
       $(".homepageText > p").prop({class:"homepageText"}).appendTo("#block-block-12 #largeSearch .content");
       $(".block-11 .homepageText p, .block-11 .homepageText br").remove();
 
+
+//rotator
+
+
+var rotations = [ "rotate1", "rotate2", "rotate3", "rotate4", "rotate5" ];
+var rotation = rotations[Math.floor(Math.random()*rotations.length)];
+$("body").addClass(rotation);
+
+//rotate 1
+$("<a href='http://louisianadigitallibrary.org/islandora/object/lsu-clt%3A10'><div class='featuredLink'><span class='featuredLabel'>Featured</span><span class='featuredName'>Cargo ship at dock., from Charles L. Thompson Photographs</span></div></a>").insertAfter(".rotate1 #block-block-12 .homepageText");
+$('body.rotate1.front #block-block-12').parallax({imageSrc: 'https://i.imgur.com/VIXDwyu.jpg'});
+
+//rotate 2
+$("<a href='http://louisianadigitallibrary.org/islandora/object/lsu-p16313coll56:196'><div class='featuredLink'><span class='featuredLabel'>Featured</span><span class='featuredName'>Alligator juvenile, Col. Joseph S. Tate Photograph Album</span></div></a>").insertAfter(".rotate2 #block-block-12 .homepageText");
+$('body.rotate2.front #block-block-12').parallax({imageSrc: 'https://i.imgur.com/QO1GsTH.jpg'});
+
+//rotate 3
+$("<a href='http://louisianadigitallibrary.org/islandora/object/hnoc-clf:10656'><div class='featuredLink'><span class='featuredLabel'>Featured</span><span class='featuredName'>Mardi Gras truck float, Charles L. Franck and Franck-Bertacci</span></div></a>").insertAfter(".rotate3 #block-block-12 .homepageText");
+$('body.rotate3.front #block-block-12').parallax({imageSrc: 'https://i.imgur.com/7OQHWhz.jpg'});
+
+//rotate 4
+$("<a href='http://louisianadigitallibrary.org/islandora/object/lsu-p16313coll56:169'><div class='featuredLink'><span class='featuredLabel'>Featured</span><span class='featuredName'>Boiling schrimp [sic], Col. Joseph S. Tate Photograph Album</span></div></a>").insertAfter(".rotate4 #block-block-12 .homepageText");
+$('body.rotate4.front #block-block-12').parallax({imageSrc: 'https://i.imgur.com/sGedwFO.jpg'});
+
+//rotate 5
+$("<a href='http://louisianadigitallibrary.org/islandora/object/uno-omsa:143'><div class='featuredLink'><span class='featuredLabel'>Featured</span><span class='featuredName'>Mardi Gras 1925, Ogden Museum of Southern Art</span></div></a>").insertAfter(".rotate5 #block-block-12 .homepageText");
+$('body.rotate5.front #block-block-12').parallax({imageSrc: 'https://i.imgur.com/woBZuCV.jpg'});
+
+//end rotator
+
       $("#block-block-13").remove();
       $(".viewallButton").appendTo("#largeSearch_form");
 
+
+$(".featuredLink").hover(function(){
+    $(".parallax-slider").css("filter", "blur(0px)");
+    }, function(){
+    $(".parallax-slider").css("filter", "blur(5px)");
+});
 
 
       $('.mobileMenuIcon, .menuOn').click(function(){
