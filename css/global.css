@@ -3683,7 +3683,7 @@ section#block-islandora-solr-advanced {
 #islandora-solr-advanced-search-form div.form-item {
   display: inline-block;
   margin-right: 1px;
-  margin-top: 0px;
+  margin-top: 5px;
   display: flex;
   background: rgba(255, 255, 255, 0.66);
   margin-bottom: 1px;
@@ -3693,6 +3693,15 @@ section#block-islandora-solr-advanced {
   position: relative;
 }
 
+.block-advanced .form-item.form-type-checkbox {
+  margin-top: 0px !important;
+}
+.block-advanced .form-item.form-type-checkboxes.form-item-namespaces {
+  margin-top: 20px !important;
+}
+.block-advanced .ajax-processed, .block-advanced .form-item-collections {
+  display: none !important;
+}
 .block-advanced .block-inner.clearfix {
   background: white;
   padding: 50px;
@@ -3776,6 +3785,7 @@ section#block-islandora-solr-advanced {
   width: 100%;
   height: 100%;
   position: absolute;
+  cursor: pointer;
 }
 
 a.alpha-grid-toggle, a.alpha-block-toggle {

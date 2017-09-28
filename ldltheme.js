@@ -203,6 +203,9 @@ window.onclick = function(event) {
           $(this).toggleClass('selectedCheck');
       });
 
+      $('#block-islandora-solr-advanced .block-title').html('Advanced Search');
+
+
 //rotator
 
 

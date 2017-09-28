@@ -3944,7 +3944,7 @@ $color_2: white;
 #islandora-solr-advanced-search-form div.form-item {
     display: inline-block;
     margin-right: 1px;
-    margin-top: 0px;
+    margin-top: 5px;
     display: flex;
     background: rgba(255, 255, 255, 0.66);
     margin-bottom: 1px;
@@ -3956,7 +3956,17 @@ $color_2: white;
 
 .block-advanced {
 
+.form-item.form-type-checkbox {
+    margin-top: 0px !important;
+}
 
+.form-item.form-type-checkboxes.form-item-namespaces {
+    margin-top: 20px !important;
+}
+
+.ajax-processed, .form-item-collections{
+  display: none !important;
+}
 
   .block-inner.clearfix {
     background: white;
@@ -4045,6 +4055,7 @@ $color_2: white;
     width: 100%;
     height: 100%;
     position: absolute;
+    cursor: pointer;
     }
   }
 }
