@@ -1493,7 +1493,8 @@ dd.islandora-basic-collection-caption a {
     &#edit-submit.form-submit,
     &#edit-submit--2.form-submit,
     &#edit-submit--3.form-submit,
-    &#edit-submit--4.form-submit {
+    &#edit-submit--4.form-submit,
+    &#edit-submit--5.form-submit  {
       -webkit-appearance: none;
       -moz-border-radius: 11px;
       -webkit-border-radius: 11px;
@@ -4071,6 +4072,9 @@ $color_2: white;
 
 #block-block-14{
   @extend section#block-islandora-solr-advanced; 
+align-items: flex-start;
+    margin-top: 40px;
+
 
   .block-inner.clearfix {
     background: white;

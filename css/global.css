@@ -1230,7 +1230,7 @@ dd.islandora-basic-collection-caption a {
   border: 0px;
   padding-left: 10px;
 }
-#zone-header input#edit-submit.form-submit, #zone-header input#edit-submit--2.form-submit, #zone-header input#edit-submit--3.form-submit, #zone-header input#edit-submit--4.form-submit, #region-header-first input#edit-submit.form-submit, #region-header-first input#edit-submit--2.form-submit, #region-header-first input#edit-submit--3.form-submit, #region-header-first input#edit-submit--4.form-submit {
+#zone-header input#edit-submit.form-submit, #zone-header input#edit-submit--2.form-submit, #zone-header input#edit-submit--3.form-submit, #zone-header input#edit-submit--4.form-submit, #zone-header input#edit-submit--5.form-submit, #region-header-first input#edit-submit.form-submit, #region-header-first input#edit-submit--2.form-submit, #region-header-first input#edit-submit--3.form-submit, #region-header-first input#edit-submit--4.form-submit, #region-header-first input#edit-submit--5.form-submit {
   -webkit-appearance: none;
   -moz-border-radius: 11px;
   -webkit-border-radius: 11px;
@@ -3782,6 +3782,10 @@ section#block-islandora-solr-advanced, #block-block-14 {
   cursor: pointer;
 }
 
+#block-block-14 {
+  align-items: flex-start;
+  margin-top: 40px;
+}
 #block-block-14 .block-inner.clearfix {
   background: white;
   padding: 50px;
