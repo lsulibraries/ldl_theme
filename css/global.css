@@ -669,11 +669,6 @@ li.institution-collection-list-item a.institution-collection-list-item-manage-pr
   align-items: flex-start;
   padding: 8vw 100px;
   line-height: 30px;
-  position: absolute;
-  top: 20px;
-  z-index: 99;
-  top: 20px;
-  opacity: 0.1;
 }
 .institution-about h2 {
   font-size: 18px;
@@ -2749,7 +2744,7 @@ body.logged-in.front div#zone-header {
   background-repeat: no-repeat;
 }
 .front div#block-block-12 #largeSearch input[type="text"]::placeholder {
-  color: white;
+  color: white !important;
   opacity: 1 !important;
 }
 .front div#block-block-12 #largeSearch input[type="text"] {

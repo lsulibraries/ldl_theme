@@ -876,11 +876,11 @@ li.institution-collection-list-item a.institution-collection-list-item-manage-pr
     align-items: flex-start;
     padding: 8vw 100px;
     line-height: 30px;
-    position: absolute;
-    top: 20px;
-    z-index: 99;
-    top: 20px;
-    opacity: 0.1;
+    //position: absolute;
+    //top: 20px;
+    //z-index: 99;
+    //top: 20px;
+    //opacity: 0.1;
 
 
   h2{
@@ -2990,7 +2990,7 @@ content: '';
     background-repeat: no-repeat;
 }
 input[type="text"]::placeholder {
-    color: white;
+    color: white !important;
     opacity: 1 !important;
   }
 
