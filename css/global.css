@@ -2,6 +2,14 @@
 /* This also can include ANY global CSS that applies site-wide. Unless overwritten by a more specific style rule, CSS declarations in global.css will apply site-wide. */
 /* web fonts */
 @import "https://fonts.googleapis.com/css?family=Open+Sans|Roboto:100, 300, 400, 500, 600, 700";
+.light {
+  color: #000 !important;
+}
+
+.dark {
+  color: #fff !important;
+}
+
 /*Institutional Colors*/
 /* mixins */
 /* global styles */
@@ -253,17 +261,17 @@ a.institution-about-edit {
 }
 
 .lsuTheme .institution-header, .lsuTheme .collectionHeader, .lsuTheme .institution-search::before, .lsuTheme .child-institution-collections::before {
-  background: #461D7C;
+  background: #3C1053;
 }
 .lsuTheme .collectionLogo {
   background-image: url("http://reu.cct.lsu.edu/documents/logos/LSU_Gold_CMYK.png");
   cursor: pointer;
 }
 .lsuTheme form#islandora-collection-search-form {
-  border: 2px solid #461D7C;
+  border: 2px solid #3C1053;
 }
 .lsuTheme .institution-search input[type="text"] {
-  border: 2px solid #461D7C;
+  border: 2px solid #3C1053;
 }
 
 .lsuhscTheme .institution-header, .lsuhscTheme .collectionHeader, .lsuhscTheme .institution-search::before, .lsuhscTheme .child-institution-collections::before, .lsusTheme .institution-header, .lsusTheme .collectionHeader, .lsusTheme .institution-search::before, .lsusTheme .child-institution-collections::before, .lsuhscsTheme .institution-header, .lsuhscsTheme .collectionHeader, .lsuhscsTheme .institution-search::before, .lsuhscsTheme .child-institution-collections::before {
@@ -895,12 +903,30 @@ li.child-institution-collection-list-item {
   flex-wrap: wrap;
   margin: 0px;
 }
+#block-block-11 .institutionLink_meta {
+  padding: 10px;
+  opacity: 0;
+  letter-spacing: 1px;
+  width: 100%;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  line-height: 15px;
+}
 #block-block-11 a.institutionLink:hover {
   opacity: 1;
   -moz-transition-duration: 0s;
   -o-transition-duration: 0s;
   -webkit-transition-duration: 0s;
   transition-duration: 0s;
+}
+#block-block-11 a.institutionLink:hover .institutionLink_meta {
+  opacity: 1;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
 }
 #block-block-11 a.institutionLink {
   width: calc(20vw - 3.4px);
@@ -913,6 +939,12 @@ li.child-institution-collection-list-item {
   -o-transition-duration: 0.5s;
   -webkit-transition-duration: 0.5s;
   transition-duration: 0.5s;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: flex-end;
 }
 #block-block-11 a.institutionLink.dccLink {
   background-color: #083a07;
@@ -925,7 +957,7 @@ li.child-institution-collection-list-item {
   background-size: 90px auto;
 }
 #block-block-11 a.institutionLink.lsuLink {
-  background-color: #461D7C;
+  background-color: #3C1053;
   background-image: url("http://reu.cct.lsu.edu/documents/logos/LSU_Gold_CMYK.png");
   background-size: 50px auto;
 }
@@ -934,11 +966,11 @@ li.child-institution-collection-list-item {
   background-image: url("http://www.lsus.edu/Images/Offices%20and%20Services/HR/LSUS%20Logo%2011102015.png");
 }
 #block-block-11 a.institutionLink.lsuhscLink {
-  background-color: #ffffff;
+  background-color: #e7e7e7;
   background-image: url("http://i.imgur.com/FQdHpzz.png");
 }
 #block-block-11 a.institutionLink.lsuhscsLink {
-  background-color: #ffffff;
+  background-color: #d9d9d9;
   background-image: url("http://i.imgur.com/1lqbxiy.png");
 }
 #block-block-11 a.institutionLink.latechLink {
@@ -2449,6 +2481,14 @@ div.islandora-solr-content {
   margin-bottom: 10px;
 }
 
+.parallax-mirror {
+  background: #242424;
+}
+
+.parallax-slider {
+  filter: blur(5px);
+}
+
 span.digitallibraryText {
   font-weight: 300;
 }
@@ -2458,6 +2498,15 @@ body.logged-in.front div#zone-header {
   position: absolute;
 }
 
+.front .scrollPrompt {
+  position: absolute;
+  bottom: 50px;
+  color: white;
+  font-size: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.33);
+  padding: 10px 30px;
+  border-radius: 30px;
+}
 .front div#zone-header-wrapper {
   margin: 20px;
 }
@@ -2612,7 +2661,6 @@ body.logged-in.front div#zone-header {
   width: 70vw;
   margin: 0 auto;
   position: relative;
-  bottom: 50px;
 }
 .front div#block-block-12 p {
   width: 70vw;
@@ -2658,7 +2706,7 @@ body.logged-in.front div#zone-header {
   left: 1px;
   top: -13px;
   width: 15vw;
-  height: 500px;
+  height: 220px;
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -2696,7 +2744,7 @@ body.logged-in.front div#zone-header {
   border: none;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 45px 45px;
+  background-size: 30px 30px;
   background-image: url(https://i.imgur.com/SH5syLP.png);
 }
 .front > #region-content .content.clearfix {
@@ -3663,6 +3711,10 @@ body {
   }
 }
 @media screen and (max-width: 1446px) {
+  #block-block-11 a.institutionLink {
+    width: calc(25vw - 4.4px);
+  }
+
   .institution-about {
     line-height: 20px;
   }
