@@ -2501,8 +2501,28 @@ body.logged-in.front div#zone-header {
   color: white;
   font-size: 12px;
   border: 1px solid rgba(255, 255, 255, 0.33);
-  padding: 10px 30px;
+  padding: 10px 0px;
   border-radius: 30px;
+}
+.front .scrollPrompt a {
+  padding: 30px 30px;
+  color: white;
+}
+.front div.scrollPrompt::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background-image: url(https://i.imgur.com/0kRges9.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: block;
+  position: absolute;
+  top: 50px;
+  left: 62px;
+  -webkit-animation: bounceArrow 3s infinite;
+  /* Safari 4.0 - 8.0 */
+  animation: bounceArrow 3s infinite;
 }
 .front div#zone-header-wrapper {
   margin: 20px;
@@ -4865,4 +4885,13 @@ body {
 .hamburger--elastic.is-active .hamburger-inner::after {
   transform: translate3d(0, -20px, 0) rotate(-270deg);
   transition-delay: 0.075s;
+}
+
+@keyframes bounceArrow {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
 }

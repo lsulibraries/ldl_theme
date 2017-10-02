@@ -157,7 +157,7 @@ if($('.institution-collection-list-a').length < 4){
 
       $("<div class='mobileMenu'/>").insertBefore("div#page");
       $("<button class='hamburger--elastic hamburger--collapse mobileMenuIcon' type='button'><span class='hamburger-box'><span class='hamburger-inner'></span></span></button>").insertBefore(".logo-img");
-      $("<div class='scrollPrompt'> view institutions </div>").appendTo(".front #block-block-12");
+      $("<div class='scrollPrompt'> <a href='#block-block-11'>view institutions</a> </div>").appendTo(".front #block-block-12");
       $(".homepageText > p").prop({class:"homepageText"}).appendTo("#block-block-12 #largeSearch .content");
       $(".block-11 .homepageText p, .block-11 .homepageText br").remove();
       $("<span class='modalExit'/>").insertBefore("#block-islandora-solr-advanced .block-title");
@@ -190,6 +190,11 @@ span.onclick = function() {
     modal.style.display = "none";
     $(".page").removeClass('blurFilter');
     $(".parallax-slider").removeClass('darkFilter');
+      var uri = window.location.toString();
+  if (uri.indexOf("#") > 0) {
+      var clean_uri = uri.substring(0, uri.indexOf("#"));
+      window.history.replaceState({}, document.title, clean_uri);
+  }  
 }
 
 // When the user clicks anywhere outside of the modal, close it
@@ -197,12 +202,22 @@ window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
         $(".page").removeClass('blurFilter');
-        $(".parallax-slider").removeClass('darkFilter');        
+        $(".parallax-slider").removeClass('darkFilter');  
+  var uri = window.location.toString();
+  if (uri.indexOf("#") > 0) {
+      var clean_uri = uri.substring(0, uri.indexOf("#"));
+      window.history.replaceState({}, document.title, clean_uri);
+  }                
     }
     if (event.target == modal2) {
         modal2.style.display = "none";
         $(".page").removeClass('blurFilter');
         $(".parallax-slider").removeClass('darkFilter');        
+  var uri = window.location.toString();
+  if (uri.indexOf("#") > 0) {
+      var clean_uri = uri.substring(0, uri.indexOf("#"));
+      window.history.replaceState({}, document.title, clean_uri);
+  }          
     }    
 }
 
@@ -237,6 +252,11 @@ span2.onclick = function() {
     modal2.style.display = "none";
     $(".page").removeClass('blurFilter');
     $(".parallax-slider").removeClass('darkFilter');
+  var uri = window.location.toString();
+  if (uri.indexOf("#") > 0) {
+      var clean_uri = uri.substring(0, uri.indexOf("#"));
+      window.history.replaceState({}, document.title, clean_uri);
+  }    
 }
 
       $('div.form-type-checkbox').click(function(){
@@ -262,6 +282,8 @@ span2.onclick = function() {
             }
 
 //rotator
+
+
 
 
 var rotations = [ "rotate1", "rotate2", "rotate3", "rotate4", "rotate5", "rotate6" ];
