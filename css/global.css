@@ -3837,8 +3837,6 @@ body {
 
 .mobileMenu {
   position: absolute;
-  background: #313133;
-  width: calc(80vw + 1px);
   opacity: 0;
   height: calc(100vh - 20px);
   display: -webkit-box;
@@ -3847,44 +3845,32 @@ body {
   display: -webkit-flex;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   padding: 20px;
   font-size: 15px;
+  height: auto;
 }
+
 .mobileMenu a {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 10px;
-  color: #c7c7c7;
+  background: white;
+  padding: 20px;
+  margin-bottom: 1px;
+  color: #474747;
 }
 
-#page.menuOn {
-  transform: translate(80vw, 0px);
-  -moz-transition-duration: 0.5s;
-  -o-transition-duration: 0.5s;
-  -webkit-transition-duration: 0.5s;
-  transition-duration: 0.5s;
+.mobileMenuActive .page {
+  background: black;
 }
-#page.menuOn #region-header-first {
-  filter: brightness(1 !important);
+.mobileMenuActive .mobileMenu {
+  z-index: 99;
+  opacity: 1;
+  margin-top: 60px;
 }
-#page.menuOn #zone-content-wrapper, #page.menuOn #region-header-second {
+.mobileMenuActive section#section-content {
+  filter: blur(2px) brightness(0.8);
+}
+.mobileMenuActive section#section-content #zone-content-wrapper {
   pointer-events: none;
-  filter: brightness(0.2);
-}
-
-.front #page.menuOn {
-  filter: brightness(0.2);
-}
-
-#page {
-  position: relative;
-  left: 0px;
-  -moz-transition-duration: 0.5s;
-  -o-transition-duration: 0.5s;
-  -webkit-transition-duration: 0.5s;
-  transition-duration: 0.5s;
-}
-#page #block-system-main {
-  background: #f0f0f0;
 }
 
 .mobileMenuIcon {
@@ -4418,6 +4404,9 @@ body {
     padding: 4px 0px;
   }
 
+  .front div#zone-header-wrapper {
+    margin-left: 5px;
+  }
   .front #block-islandora-solr-simple {
     background: white;
     color: #474747;
@@ -4448,7 +4437,6 @@ body {
   .front div#block-block-12 {
     min-height: 100vh;
     align-items: flex-start;
-    padding-bottom: 100px;
   }
   .front div#block-block-12 > .block-inner > .content.clearfix {
     width: 90vw;

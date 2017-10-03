@@ -4137,52 +4137,74 @@ body{
 
 .mobileMenu{
     position: absolute;
-    background: #313133;
-    width: calc(80vw + 1px);
     opacity: 0;
     height: calc(100vh - 20px);
-    @include flexbox;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
     flex-direction: column;
+    justify-content: flex-start;    
     padding: 20px;
     font-size: 15px;
-    a {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    padding: 10px;
-    color: #c7c7c7;
-    }
-
+    height: auto;    
 }
 
+.mobileMenu a {
+    background: white;
+    padding: 20px;
+    margin-bottom: 1px;
+    color: #474747;
+}
 
-  #page.menuOn{
+.mobileMenuActive{
 
-transform: translate(80vw, 0px);
-  @include transition-duration(0.5s);
-
-   #region-header-first{
-      filter: brightness(1 !important);
+.page{
+  background: black;
+}  
+  .mobileMenu{
+    z-index: 99;
+    opacity:  1;
+    margin-top: 60px;    
+  }
+section#section-content {
+    filter: blur(2px) brightness(0.8);
+    #zone-content-wrapper{
+ pointer-events: none;
+}    
     }
-    #zone-content-wrapper, #region-header-second{
-           pointer-events: none;
-      filter: brightness(0.2);           
-    }
-  }
-
-  .front #page.menuOn{
-
-
-      filter: brightness(0.2);           
-
-  }
-
-  #page{
-  position: relative;
-  left: 0px;
-  #block-system-main{
-    background: #f0f0f0;
-  }
-  @include transition-duration(0.5s);
-  }
+}
+//
+  //#page.menuOn{
+//
+//transform: translate(80vw, 0px);
+  //@include transition-duration(0.5s);
+//
+   //#region-header-first{
+      //filter: brightness(1 !important);
+    //}
+    //#zone-content-wrapper, #region-header-second{
+           //pointer-events: none;
+      //filter: brightness(0.2);           
+    //}
+  //}
+//
+  //.front #page.menuOn{
+//
+//
+      //filter: brightness(0.2);           
+//
+  //}
+//
+  //#page{
+  //position: relative;
+  //left: 0px;
+  //#block-system-main{
+    //background: #f0f0f0;
+  //}
+  //@include transition-duration(0.5s);
+  //}
 
 .mobileMenuIcon{
   display: none;
@@ -4702,6 +4724,10 @@ html.mobileMenuActive, body.mobileMenuActive{
       }
     }
     .front {
+
+div#zone-header-wrapper {
+    margin-left: 5px;
+}      
       #block-islandora-solr-simple {
         background: white;
         color: #474747;
@@ -4734,7 +4760,6 @@ html.mobileMenuActive, body.mobileMenuActive{
     div#block-block-12 {
     min-height: 100vh;    
     align-items: flex-start;
-            padding-bottom: 100px;
     }       
 
     div#block-block-12 > .block-inner > .content.clearfix {    

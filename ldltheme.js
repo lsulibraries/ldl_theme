@@ -167,6 +167,15 @@ if($('.institution-collection-list-a').length < 4){
 
 
 
+      $("<a href='/'>Home</a>").appendTo(".mobileMenu");  
+
+
+if ($(window).width() < 1260) {
+$('#block-block-1').find('a').each(function() {
+      $(this).appendTo(".mobileMenu");
+
+  });
+}
 //modal advsearch
 
 // Get the modal
@@ -183,6 +192,7 @@ btn.onclick = function() {
     modal.style.display = "flex";
     $(".page").addClass('blurFilter');
     $(".parallax-slider").addClass('darkFilter');
+    $("html").removeClass('mobileMenuActive');
 }
 
 // When the user clicks on <span> (x), close the modal
@@ -190,11 +200,13 @@ span.onclick = function() {
     modal.style.display = "none";
     $(".page").removeClass('blurFilter');
     $(".parallax-slider").removeClass('darkFilter');
+    $("button").removeClass('is-active');    
+
       var uri = window.location.toString();
-  if (uri.indexOf("#") > 0) {
-      var clean_uri = uri.substring(0, uri.indexOf("#"));
-      window.history.replaceState({}, document.title, clean_uri);
-  }  
+        if (uri.indexOf("#") > 0) {
+            var clean_uri = uri.substring(0, uri.indexOf("#"));
+            window.history.replaceState({}, document.title, clean_uri);
+        }  
 }
 
 // When the user clicks anywhere outside of the modal, close it
@@ -203,6 +215,8 @@ window.onclick = function(event) {
         modal.style.display = "none";
         $(".page").removeClass('blurFilter');
         $(".parallax-slider").removeClass('darkFilter');  
+        $("button").removeClass('is-active');    
+
   var uri = window.location.toString();
   if (uri.indexOf("#") > 0) {
       var clean_uri = uri.substring(0, uri.indexOf("#"));
@@ -245,6 +259,9 @@ btn2.onclick = function() {
     modal2.style.display = "flex";
     $(".page").addClass('blurFilter');
     $(".parallax-slider").addClass('darkFilter');
+        $("html").removeClass('mobileMenuActive');
+
+
 }
 
 // When the user clicks on <span> (x), close the modal
@@ -252,6 +269,7 @@ span2.onclick = function() {
     modal2.style.display = "none";
     $(".page").removeClass('blurFilter');
     $(".parallax-slider").removeClass('darkFilter');
+$("button").removeClass('is-active');    
   var uri = window.location.toString();
   if (uri.indexOf("#") > 0) {
       var clean_uri = uri.substring(0, uri.indexOf("#"));
@@ -347,15 +365,6 @@ if ( $( "#sideMods" ).length ) {
      $("body").addClass('itemPage');
  }//allows collection Page styles
 
-
-      $("<a href='/'>Home</a>").appendTo(".mobileMenu");  
-
-
-
-$('#block-block-1').find('a').each(function() {
-    $(this).clone().appendTo(".mobileMenu");
-
-});
 
 $('.not-logged-in .mobileMenu a[href$="/issues"]').remove();
 
