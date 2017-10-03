@@ -2794,10 +2794,11 @@ div#zone-header-wrapper {
     font-size: 14px;
     line-height: 17px;
     text-transform: none;
-    width: 77%;
+    width: auto;
     display: flex;
     margin-left: 16vw;
     font-weight: normal;
+    display: block;
   }
 
 .site-name a {

@@ -2531,10 +2531,11 @@ body.logged-in.front div#zone-header {
   font-size: 14px;
   line-height: 17px;
   text-transform: none;
-  width: 77%;
+  width: auto;
   display: flex;
   margin-left: 16vw;
   font-weight: normal;
+  display: block;
 }
 .front .site-name a {
   color: #ffffff;
