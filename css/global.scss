@@ -4025,7 +4025,7 @@ $color_2: white;
     font-size: 13px;
     padding: 10px;
   }
-  input#edit-submit {
+  input#edit-submit,   input#edit-submit--2 {
     background: #39ADB5;
     color: $color_2;
     outline: none;
@@ -4279,7 +4279,39 @@ transform: translate(80vw, 0px);
 
 @media screen and (max-width: 1260px) {
 
+  .block-advanced label {
+    font-size: 11px;
+@include flexbox;
+    justify-content: center;
+    align-items: center;
+}
 
+section#block-islandora-solr-advanced{
+  width: auto;
+  height: auto;
+}
+
+.block-advanced div#edit-namespaces {
+    width: auto;
+}
+
+.block-advanced .block-inner.clearfix {
+    padding: 50px 20px;
+}
+
+#block-block-14 {
+    align-items: flex-start;
+    margin-top: 0px;
+}
+
+#block-block-14 .block-inner.clearfix {
+    background: white;
+    padding: 20px;
+    position: relative;
+    width: 100vw;
+    box-sizing: border-box;
+    padding-top: 50px;
+}
 
   .institution-about, .institution-search form#myform{
             width: 66.67%;
@@ -4686,51 +4718,78 @@ html.mobileMenuActive, body.mobileMenuActive{
         padding-left: 3vw;
       }
 
-      div#block-block-12 {
-        height: 40vh;
-
-        p {
-          display: none;
-        }
-
-        #largeSearch {
-          bottom: -14px;
-          input[type="text"] {
-            font-size: 14px;
-            width: 100%;
-            padding: 0px 30px;
-            height: 30px;
-            padding-left: 10px;
-            border-radius: 20px;
-          }
-
-          div#edit-simple--2 {
-            width: 90vw;
-          }
-
-          input[type="submit"] {
-            position: absolute;
-            right: 0px;
-            top: 10px;
-            border: none;
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: 25px 25px;
-            background-image: url(http://i.imgur.com/NpfYQT0.png);
-            padding-right: 0px;
-            height: 29px;
-            width: 50px;
-          }
-        }
-      }
+      
 
       div#block-block-11 {
         width: 100%;
         a.institutionLink {
-          width: calc(33vw - 3px);
+          width: 33.33vw;
         }
       }
+
+.scrollPrompt{
+  display: none;
+}
+
+    div#block-block-12 {
+    min-height: 100vh;    
+    align-items: flex-start;
+            padding-bottom: 100px;
+    }       
+
+    div#block-block-12 > .block-inner > .content.clearfix {    
+    width: 90vw;
     }
+
+    div#block-block-12 p {
+    line-height: 4.4vw;       
+    margin: 0px;      
+    color: white;      
+    margin-bottom: 17px;      
+    }
+
+    div#block-block-12 #largeSearch {    
+    margin-left: 0px;
+    }
+
+    div#block-block-12 #largeSearch div#largeSearch_form {
+    width: 90vw;
+    }
+
+    div#block-block-12 #largeSearch .form-item {
+    width: 100%;
+    }
+
+div#block-block-12 #largeSearch .form-item-islandora-simple-search-query::after{
+  display:  none;
+}
+
+
+    div#block-block-12 #largeSearch input[type="text"] {   
+    width: 90vw;       
+    font-size: 3vw;        
+    padding: 0px 10px;
+border: 1px solid rgba(255, 255, 255, 0.33);
+    }
+
+    #block-block-12 .block-inner.clearfix {
+        /* padding-top: 80px; */
+    }
+
+    #block-block-12 > .block-inner.clearfix {
+        padding-top: 90px;
+        padding-bottom: 90px;
+    }    
+
+    #block-block-12 #largeSearch .homepageText {
+      width: auto;
+}
+.featuredLink {
+    margin-left: 0px;
+  }
+    }
+
+    //end front
 
     .homepageLabel {
       display: none !important;

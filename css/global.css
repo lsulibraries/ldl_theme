@@ -3745,7 +3745,7 @@ section#block-islandora-solr-advanced, #block-block-14 {
   font-size: 13px;
   padding: 10px;
 }
-.block-advanced input#edit-submit {
+.block-advanced input#edit-submit, .block-advanced input#edit-submit--2 {
   background: #39ADB5;
   color: white;
   outline: none;
@@ -3981,6 +3981,44 @@ body {
   }
 }
 @media screen and (max-width: 1260px) {
+  .block-advanced label {
+    font-size: 11px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  section#block-islandora-solr-advanced, #block-block-14 {
+    width: auto;
+    height: auto;
+  }
+
+  .block-advanced div#edit-namespaces {
+    width: auto;
+  }
+
+  .block-advanced .block-inner.clearfix {
+    padding: 50px 20px;
+  }
+
+  #block-block-14 {
+    align-items: flex-start;
+    margin-top: 0px;
+  }
+
+  #block-block-14 .block-inner.clearfix {
+    background: white;
+    padding: 20px;
+    position: relative;
+    width: 100vw;
+    box-sizing: border-box;
+    padding-top: 50px;
+  }
+
   .institution-about, .institution-search form#myform {
     width: 66.67%;
   }
@@ -4398,44 +4436,59 @@ body {
     width: auto;
     padding-left: 3vw;
   }
-  .front div#block-block-12 {
-    height: 40vh;
-  }
-  .front div#block-block-12 p {
-    display: none;
-  }
-  .front div#block-block-12 #largeSearch {
-    bottom: -14px;
-  }
-  .front div#block-block-12 #largeSearch input[type="text"] {
-    font-size: 14px;
-    width: 100%;
-    padding: 0px 30px;
-    height: 30px;
-    padding-left: 10px;
-    border-radius: 20px;
-  }
-  .front div#block-block-12 #largeSearch div#edit-simple--2 {
-    width: 90vw;
-  }
-  .front div#block-block-12 #largeSearch input[type="submit"] {
-    position: absolute;
-    right: 0px;
-    top: 10px;
-    border: none;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 25px 25px;
-    background-image: url(http://i.imgur.com/NpfYQT0.png);
-    padding-right: 0px;
-    height: 29px;
-    width: 50px;
-  }
   .front div#block-block-11 {
     width: 100%;
   }
   .front div#block-block-11 a.institutionLink {
-    width: calc(33vw - 3px);
+    width: 33.33vw;
+  }
+  .front .scrollPrompt {
+    display: none;
+  }
+  .front div#block-block-12 {
+    min-height: 100vh;
+    align-items: flex-start;
+    padding-bottom: 100px;
+  }
+  .front div#block-block-12 > .block-inner > .content.clearfix {
+    width: 90vw;
+  }
+  .front div#block-block-12 p {
+    line-height: 4.4vw;
+    margin: 0px;
+    color: white;
+    margin-bottom: 17px;
+  }
+  .front div#block-block-12 #largeSearch {
+    margin-left: 0px;
+  }
+  .front div#block-block-12 #largeSearch div#largeSearch_form {
+    width: 90vw;
+  }
+  .front div#block-block-12 #largeSearch .form-item {
+    width: 100%;
+  }
+  .front div#block-block-12 #largeSearch .form-item-islandora-simple-search-query::after {
+    display: none;
+  }
+  .front div#block-block-12 #largeSearch input[type="text"] {
+    width: 90vw;
+    font-size: 3vw;
+    padding: 0px 10px;
+    border: 1px solid rgba(255, 255, 255, 0.33);
+  }
+  .front #block-block-12 .block-inner.clearfix {
+    /* padding-top: 80px; */
+  }
+  .front #block-block-12 > .block-inner.clearfix {
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+  .front #block-block-12 #largeSearch .homepageText {
+    width: auto;
+  }
+  .front .featuredLink {
+    margin-left: 0px;
   }
 
   .homepageLabel {
