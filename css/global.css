@@ -3,6 +3,10 @@
 /* web fonts */
 @import "https://fonts.googleapis.com/css?family=Open+Sans|Roboto:100, 300, 400, 500, 600, 700";
 /*materialTheme*/
+.noClick {
+  pointer-events: none;
+}
+
 .light {
   color: #000 !important;
 }
@@ -56,12 +60,12 @@ iframe.pdf {
 }
 
 body {
-  background-color: #f0f0f0;
+  background-color: #000000;
   font-family: "Roboto";
 }
 
 body.front {
-  background-color: #ffffff;
+  background-color: #000000;
 }
 
 strong {
@@ -2502,7 +2506,6 @@ body.logged-in.front div#zone-header {
   bottom: 50px;
   color: white;
   font-size: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.33);
   padding: 10px 0px;
   border-radius: 30px;
 }

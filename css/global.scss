@@ -34,6 +34,11 @@ $Blue2: #6182B8;
 $Purple2: #7C4DFF;
 $Violet2: #945EB8;
 
+
+.noClick{
+   pointer-events: none;
+}
+
 // Dark text
 .light {
   color: #000 !important;
@@ -109,6 +114,15 @@ $vvilleLogo_long: '';
   display: -webkit-flex;
   display: flex;
 }
+
+@mixin filter($filter-type,$filter-amount) { 
+  -webkit-filter: $filter-type+unquote('(#{$filter-amount})');
+  -moz-filter: $filter-type+unquote('(#{$filter-amount})');
+  -ms-filter: $filter-type+unquote('(#{$filter-amount})');
+  -o-filter: $filter-type+unquote('(#{$filter-amount})');
+  filter: $filter-type+unquote('(#{$filter-amount})');
+}
+
 @mixin gradientFirst() {
   background: -moz-linear-gradient(top, #3e4352 0%, #272b34 100%);
   background: -webkit-linear-gradient(top, #3e4352 0%, #272b34 100%);
@@ -191,12 +205,12 @@ iframe.pdf {
 }
 
 body {
-  background-color: #f0f0f0;
+  background-color: #000000;
   font-family: "Roboto";
 }
 
 body.front {
-  background-color: #ffffff;
+  background-color: #000000;
 }
 
 strong {
@@ -2758,7 +2772,7 @@ body.logged-in.front div#zone-header {
     bottom: 50px;
     color: white;
     font-size: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.33);
+    //border: 1px solid rgba(255, 255, 255, 0.33);
     padding: 10px 0px;
     border-radius: 30px;
 
@@ -4099,7 +4113,7 @@ $color_2: white;
 #block-block-14{
   @extend section#block-islandora-solr-advanced; 
 align-items: flex-start;
-    margin-top: 40px;
+    padding-top: 40px;
 
 
   .block-inner.clearfix {

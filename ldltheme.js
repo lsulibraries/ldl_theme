@@ -157,7 +157,7 @@ if($('.institution-collection-list-a').length < 4){
 
       $("<div class='mobileMenu'/>").insertBefore("div#page");
       $("<button class='hamburger--elastic hamburger--collapse mobileMenuIcon' type='button'><span class='hamburger-box'><span class='hamburger-inner'></span></span></button>").insertBefore(".logo-img");
-      $("<div class='scrollPrompt'> <a href='#block-block-11'>view institutions</a> </div>").appendTo(".front #block-block-12");
+      $("<div class='scrollPrompt'> <a href='#block-block-11'></a> </div>").appendTo(".front #block-block-12");
       $(".homepageText > p").prop({class:"homepageText"}).appendTo("#block-block-12 #largeSearch .content");
       $(".block-11 .homepageText p, .block-11 .homepageText br").remove();
       $("<span class='modalExit'/>").insertBefore("#block-islandora-solr-advanced .block-title");
@@ -180,6 +180,7 @@ $('#block-block-1').find('a').each(function() {
 
 // Get the modal
 var modal = document.getElementById('block-islandora-solr-advanced');
+var page = document.getElementById('page');
 
 // Get the button that opens the modal
 var btn = document.getElementsByClassName("advLink")[0];
@@ -187,16 +188,29 @@ var btn = document.getElementsByClassName("advLink")[0];
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("modalExit")[0];
 
+//get remaining padding height
+var paddingHeight = ($( document ).height() - $('#block-islandora-solr-advanced').height()) + 'px';
+var paddingHeight2 = ($( document ).height() - $('#block-block-14').height()) + 'px';
+
+
+
     $.fn.menuisActive = function(){ 
     modal.style.display = "flex";
     $(".page").addClass('blurFilter');
     $(".parallax-slider").addClass('darkFilter');
     $("html").removeClass('mobileMenuActive');
+    $("#zone-content-wrapper").addClass('noClick');
+    //$('section#block-islandora-solr-advanced').css('padding-bottom',  paddingHeight);
     }
+
+    $('section#block-islandora-solr-advanced').css('padding-bottom',  paddingHeight);
+    $('#block-block-14').css('padding-bottom',  paddingHeight2);
+
 
 // When the user clicks on the button, open the modal 
 btn.onclick = function() {
         $.fn.menuisActive();
+
 }
 
 // When the user clicks on <span> (x), close the modal
@@ -205,6 +219,7 @@ span.onclick = function() {
     $(".page").removeClass('blurFilter');
     $(".parallax-slider").removeClass('darkFilter');
     $("button").removeClass('is-active');    
+    $("#zone-content-wrapper").removeClass('noClick');
 
       var uri = window.location.toString();
         if (uri.indexOf("#") > 0) {
@@ -215,11 +230,12 @@ span.onclick = function() {
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
-    if (event.target == modal) {
+    if (event.target == modal){
         modal.style.display = "none";
         $(".page").removeClass('blurFilter');
         $(".parallax-slider").removeClass('darkFilter');  
         $("button").removeClass('is-active');    
+        $("#zone-content-wrapper").removeClass('noClick');
 
   var uri = window.location.toString();
   if (uri.indexOf("#") > 0) {
@@ -227,10 +243,12 @@ window.onclick = function(event) {
       window.history.replaceState({}, document.title, clean_uri);
   }                
     }
-    if (event.target == modal2) {
+    if (event.target == modal2 || event.target == page) {
         modal2.style.display = "none";
         $(".page").removeClass('blurFilter');
         $(".parallax-slider").removeClass('darkFilter');        
+        $("#zone-content-wrapper").removeClass('noClick');
+
   var uri = window.location.toString();
   if (uri.indexOf("#") > 0) {
       var clean_uri = uri.substring(0, uri.indexOf("#"));
@@ -257,13 +275,16 @@ var btn2 = document.getElementsByClassName("contactLink")[0];
 
 // Get the <span> element that closes the modal
 var span2 = document.getElementsByClassName("modalExit2")[0];
-
+var page = document.getElementById('page');
 // When the user clicks on the button, open the modal 
+
+
 btn2.onclick = function() {
     modal2.style.display = "flex";
     $(".page").addClass('blurFilter');
     $(".parallax-slider").addClass('darkFilter');
-        $("html").removeClass('mobileMenuActive');
+    $("html").removeClass('mobileMenuActive');
+    $("#zone-content-wrapper").addClass('noClick');
 
 
 }
@@ -274,6 +295,8 @@ span2.onclick = function() {
     $(".page").removeClass('blurFilter');
     $(".parallax-slider").removeClass('darkFilter');
 $("button").removeClass('is-active');    
+    $("#zone-content-wrapper").removeClass('noClick');
+
   var uri = window.location.toString();
   if (uri.indexOf("#") > 0) {
       var clean_uri = uri.substring(0, uri.indexOf("#"));
@@ -296,12 +319,17 @@ $("button").removeClass('is-active');
               modal.style.display = "flex";
               $(".page").addClass('blurFilter');
               $(".parallax-slider").addClass('darkFilter');
+              $("#zone-content-wrapper").addClass('noClick');
+
             }
             if (hash == "#contact") {
               modal2.style.display = "flex";
               $(".page").addClass('blurFilter');
               $(".parallax-slider").addClass('darkFilter');
+              $("#zone-content-wrapper").addClass('noClick');
+
             }
+
 
 //rotator
 
@@ -355,12 +383,15 @@ $(".featuredLink").hover(function(){
           $("#page").toggleClass('menuOn');
           $("html").toggleClass('mobileMenuActive');
           $(this).toggleClass('is-active');
+              $("#zone-content-wrapper").addClass('noClick');
       });
 
       $('#section-content').click(function(){
           $('#page').removeClass('menuOn');
           $("html").removeClass('mobileMenuActive');        
                     $('.mobileMenuIcon').removeClass('is-active');
+                        $("#zone-content-wrapper").addClass('noClick');
+
   
       });
 
@@ -501,64 +532,64 @@ var currentInstitution =  $( "ul.breadcrumb a.active" ).text();
   };
 
 
-//begin smooth scroll anchor
-
-// Scroll to specific values
-// scrollTo is the same
-window.scroll({
-  top: 2500, 
-  left: 0, 
-  behavior: 'smooth' 
-});
-
-// Scroll certain amounts from current position 
-window.scrollBy({ 
-  top: 100, // could be negative value
-  left: 0, 
-  behavior: 'smooth' 
-});
-
-// Scroll to a certain element
-document.querySelector('.hello').scrollIntoView({ 
-  behavior: 'smooth' 
-});
-
-// Select all links with hashes
-$('a[href*="#"]')
-  // Remove links that don't actually link to anything
-  .not('[href="#"]')
-  .not('[href="#0"]')
-  .click(function(event) {
-    // On-page links
-    if (
-      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-      && 
-      location.hostname == this.hostname
-    ) {
-      // Figure out element to scroll to
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-      // Does a scroll target exist?
-      if (target.length) {
-        // Only prevent default if animation is actually gonna happen
-        event.preventDefault();
-        $('html, body').animate({
-          scrollTop: target.offset().top
-        }, 1000, function() {
-          // Callback after animation
-          // Must change focus!
-          var $target = $(target);
-          $target.focus();
-          if ($target.is(":focus")) { // Checking if the target was focused
-            return false;
-          } else {
-            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-            $target.focus(); // Set focus again
-          };
-        });
-      }
-    }
-  });
+////begin smooth scroll anchor
+//
+//// Scroll to specific values
+//// scrollTo is the same
+//window.scroll({
+  //top: 2500, 
+  //left: 0, 
+  //behavior: 'smooth' 
+//});
+//
+//// Scroll certain amounts from current position 
+//window.scrollBy({ 
+  //top: 100, // could be negative value
+  //left: 0, 
+  //behavior: 'smooth' 
+//});
+//
+//// Scroll to a certain element
+//document.querySelector('.hello').scrollIntoView({ 
+  //behavior: 'smooth' 
+//});
+//
+//// Select all links with hashes
+//$('a[href*="#"]')
+  //// Remove links that don't actually link to anything
+  //.not('[href="#"]')
+  //.not('[href="#0"]')
+  //.click(function(event) {
+    //// On-page links
+    //if (
+      //location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+      //&& 
+      //location.hostname == this.hostname
+    //) {
+      //// Figure out element to scroll to
+      //var target = $(this.hash);
+      //target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      //// Does a scroll target exist?
+      //if (target.length) {
+        //// Only prevent default if animation is actually gonna happen
+        //event.preventDefault();
+        //$('html, body').animate({
+          //scrollTop: target.offset().top
+        //}, 1000, function() {
+          //// Callback after animation
+          //// Must change focus!
+          //var $target = $(target);
+          //$target.focus();
+          //if ($target.is(":focus")) { // Checking if the target was focused
+            //return false;
+          //} else {
+            //$target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+            //$target.focus(); // Set focus again
+          //};
+        //});
+      //}
+    //}
+  //});
 
 //end scroll
 
