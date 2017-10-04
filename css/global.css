@@ -60,7 +60,7 @@ iframe.pdf {
 }
 
 body {
-  background-color: #000000;
+  background-color: #f0f0f0;
   font-family: "Roboto";
 }
 
@@ -3757,7 +3757,7 @@ section#block-islandora-solr-advanced, #block-block-14 {
   outline: none;
   text-shadow: none;
   margin-top: 10px;
-  width: 100%;
+  width: 100% !important;
 }
 .block-advanced h2.block-title {
   font-size: 20px;
@@ -3810,7 +3810,7 @@ section#block-islandora-solr-advanced, #block-block-14 {
 
 #block-block-14 {
   align-items: flex-start;
-  margin-top: 40px;
+  padding-top: 40px;
 }
 #block-block-14 .block-inner.clearfix {
   background: white;
@@ -3984,11 +3984,6 @@ body {
     align-items: center;
   }
 
-  section#block-islandora-solr-advanced, #block-block-14 {
-    width: auto;
-    height: auto;
-  }
-
   .block-advanced div#edit-namespaces {
     width: auto;
   }
@@ -4010,6 +4005,7 @@ body {
     width: 100vw;
     box-sizing: border-box;
     padding-top: 50px;
+    margin: 20px;
   }
 
   .institution-about, .institution-search form#myform {

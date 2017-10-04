@@ -205,7 +205,7 @@ iframe.pdf {
 }
 
 body {
-  background-color: #000000;
+  background-color: #f0f0f0;
   font-family: "Roboto";
 }
 
@@ -4047,7 +4047,7 @@ $color_2: white;
     outline: none;
     text-shadow: none;
     margin-top: 10px;
-    width: 100%;
+    width: 100% !important;
   }
 
   h2.block-title {
@@ -4324,11 +4324,6 @@ section#section-content {
     align-items: center;
 }
 
-section#block-islandora-solr-advanced{
-  width: auto;
-  height: auto;
-}
-
 .block-advanced div#edit-namespaces {
     width: auto;
 }
@@ -4350,6 +4345,8 @@ section#block-islandora-solr-advanced{
     width: 100vw;
     box-sizing: border-box;
     padding-top: 50px;
+    margin: 20px;    
+
 }
 
   .institution-about, .institution-search form#myform{

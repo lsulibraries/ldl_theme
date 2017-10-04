@@ -170,7 +170,7 @@ if($('.institution-collection-list-a').length < 4){
       $("<a href='/'>Home</a>").appendTo(".mobileMenu");  
 
 
-if ($(window).width() < 1260) {
+if ($(window).width() < 900) {
 $('#block-block-1').find('a').each(function() {
       $(this).appendTo(".mobileMenu");
 
@@ -286,7 +286,6 @@ btn2.onclick = function() {
     $("html").removeClass('mobileMenuActive');
     $("#zone-content-wrapper").addClass('noClick');
 
-
 }
 
 // When the user clicks on <span> (x), close the modal
@@ -294,7 +293,7 @@ span2.onclick = function() {
     modal2.style.display = "none";
     $(".page").removeClass('blurFilter');
     $(".parallax-slider").removeClass('darkFilter');
-$("button").removeClass('is-active');    
+    $("button").removeClass('is-active');    
     $("#zone-content-wrapper").removeClass('noClick');
 
   var uri = window.location.toString();
