@@ -1995,7 +1995,7 @@ dd {
   justify-content: center;
   flex-direction: row;
   align-items: center;
-
+  overflow: hidden;
   .loginButton {
     cursor: pointer;
     padding: 5px;
@@ -2014,6 +2014,7 @@ dd {
     position: absolute;
     left: -140px;
     bottom: 27px;
+    display: block;
     .block-inner {
       border-top: 0px;
       margin-right: 12px;
@@ -4320,6 +4321,7 @@ section#block-islandora-solr-advanced{
 
 .block-advanced .block-inner.clearfix {
     padding: 50px 20px;
+    margin: 20px;    
 }
 
 #block-block-14 {
