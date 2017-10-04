@@ -2761,8 +2761,9 @@ span.digitallibraryText {
 }
 
 body.logged-in.front div#zone-header {
-  top: 0px;
-  position: absolute;
+      top: 80px;
+    position: absolute;
+    width: calc(100% - 40px);
 }
 
 .front {
