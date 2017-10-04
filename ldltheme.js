@@ -335,7 +335,7 @@ span2.onclick = function() {
 
 
 
-var rotations = [ "rotate1", "rotate2", "rotate3", "rotate4", "rotate5", "rotate6" ];
+var rotations = [ "rotate1", "rotate2", "rotate3", "rotate4", "rotate6" ];
 var rotation = rotations[Math.floor(Math.random()*rotations.length)];
 $("body").addClass(rotation);
 
@@ -356,8 +356,8 @@ $("<a href='http://louisianadigitallibrary.org/islandora/object/lsu-p16313coll56
 $('body.rotate4.front #block-block-12').parallax({imageSrc: 'https://i.imgur.com/erf0QHD.jpg'});
 
 //rotate 5
-$("<a href='http://louisianadigitallibrary.org/islandora/object/uno-omsa:143'><div class='featuredLink'><span class='featuredLabel'>Featured</span><div class='featuredText'><span class='featuredName'>Mardi Gras 1925, Ogden Museum of Southern Art</span><span class='featuredDescription'>Crowds of carnival goers watching parade floats move down Canal Street, New Orleans, Louisiana for pre-Lenten festivities. Black and white photograph.</span></div></div></a>").insertAfter(".rotate5 #block-block-12 .homepageText");
-$('body.rotate5.front #block-block-12').parallax({imageSrc: 'https://i.imgur.com/Ec25IWx.jpg'});
+//$("<a href='http://louisianadigitallibrary.org/islandora/object/uno-omsa:143'><div class='featuredLink'><span class='featuredLabel'>Featured</span><div class='featuredText'><span class='featuredName'>Mardi Gras 1925, Ogden Museum of Southern Art</span><span class='featuredDescription'>Crowds of carnival goers watching parade floats move down Canal Street, New Orleans, Louisiana for pre-Lenten festivities. Black and white photograph.</span></div></div></a>").insertAfter(".rotate5 #block-block-12 .homepageText");
+//$('body.rotate5.front #block-block-12').parallax({imageSrc: 'https://i.imgur.com/Ec25IWx.jpg'});
 
 
 //rotate 6
