@@ -382,14 +382,14 @@ $(".featuredLink").hover(function(){
           $("#page").toggleClass('menuOn');
           $("html").toggleClass('mobileMenuActive');
           $(this).toggleClass('is-active');
-              $("#zone-content-wrapper").addClass('noClick');
+              $("#zone-content-wrapper").toggleClass('noClick');
       });
 
       $('#section-content').click(function(){
           $('#page').removeClass('menuOn');
           $("html").removeClass('mobileMenuActive');        
                     $('.mobileMenuIcon').removeClass('is-active');
-                        $("#zone-content-wrapper").addClass('noClick');
+                        $("#zone-content-wrapper").removeClass('noClick');
 
   
       });
