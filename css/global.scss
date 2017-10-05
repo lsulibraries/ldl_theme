@@ -3978,7 +3978,7 @@ section#block-islandora-solr-advanced {
     z-index: 99;
     width: 100%;
     height: 100vh;
-    align-items: center;
+    align-items: flex-start;
     display: none;
 }
 
@@ -4014,10 +4014,20 @@ $color_2: white;
   //display: none !important;
 //}
 
+input.ajax-processed {
+    background: #39adb5;
+    color: white;
+    width: 50px;
+    margin-top: 5px;
+    margin-right: 5px;
+    border-radius: 0px;
+}
+
   .block-inner.clearfix {
     background: white;
     padding: 50px;
     position: relative;
+    top: 50px;
   }
   .content.clearfix {
     padding-top: 20px;
@@ -4114,7 +4124,7 @@ $color_2: white;
 #block-block-14{
   @extend section#block-islandora-solr-advanced; 
 align-items: flex-start;
-    padding-top: 40px;
+    padding-top: 50px;
 
 
   .block-inner.clearfix {
