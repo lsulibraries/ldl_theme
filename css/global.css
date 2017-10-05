@@ -2525,7 +2525,7 @@ body.logged-in.front div#zone-header {
   display: block;
   position: absolute;
   top: 50px;
-  left: 62px;
+  left: -10px;
   -webkit-animation: bounceArrow 3s infinite;
   /* Safari 4.0 - 8.0 */
   animation: bounceArrow 3s infinite;
@@ -3720,9 +3720,6 @@ section#block-islandora-solr-advanced, #block-block-14 {
 }
 .block-advanced .form-item.form-type-checkboxes.form-item-namespaces {
   margin-top: 20px !important;
-}
-.block-advanced .ajax-processed, .block-advanced .form-item-collections {
-  display: none !important;
 }
 .block-advanced .block-inner.clearfix {
   background: white;

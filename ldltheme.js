@@ -128,7 +128,10 @@ if($('.institution-collection-list-a').length < 4){
       $("#islandora-solr-result-count").prop({ id: "header-result-count"}).appendTo("#breadcrumb");
       $("#region-content div.tabs.clearfix").prependTo("#block-system-main");
       $(".bookmark").prependTo("#breadcrumb");
+      if ($('#largeSearch').length){
+      } else{      
       $("#region-header-first #block-islandora-solr-simple").clone().prop({ id: "largeSearch", value:"Search LDL.."}).appendTo( $("#block-block-12 > .block-inner > div.content")).on;
+      }//this length check avoids this from firing multiple times from using the + button on the advanced search
       //$("#block-block-1").clone().prop({ id: "landingAdvanced"}).appendTo("#largeSearch");
       $("#largeSearch #edit-simple--2").prop({ id: "largeSearch_form"});
       $(".underHero").appendTo("#landingHero");
@@ -154,17 +157,20 @@ if($('.institution-collection-list-a').length < 4){
       $(".collectionSearch input.form-submit").val(' ');     
       $("#largeSearch input.form-submit").val(' ');  
       $("#block-user-login").prependTo(".footerContainer");
-
-      $("<div class='mobileMenu'/>").insertBefore("div#page");
+      if ($('.mobileMenu').length){
+      } else{
+              $("<div class='mobileMenu'/>").insertBefore("div#page");
+      } //this length check avoids this from firing multiple times from using the + button on the advanced search
       $("<button class='hamburger--elastic hamburger--collapse mobileMenuIcon' type='button'><span class='hamburger-box'><span class='hamburger-inner'></span></span></button>").insertBefore(".logo-img");
       $("<div class='scrollPrompt'> <a href='#''></a> </div>").appendTo(".front #block-block-12");
       $(".homepageText > p").prop({class:"homepageText"}).appendTo("#block-block-12 #largeSearch .content");
       $(".block-11 .homepageText p, .block-11 .homepageText br").remove();
       $("<span class='modalExit'/>").insertBefore("#block-islandora-solr-advanced .block-title");
       $("<span class='modalExit2'/>").insertBefore("#block-block-14 h2");
-
-      $("#block-islandora-solr-advanced, #block-block-14").insertBefore(".mobileMenu");
-
+      if ($('body > #block-islandora-solr-advanced, body > #block-block-14').length){
+      } else {
+          $("#block-islandora-solr-advanced, #block-block-14").insertBefore(".mobileMenu");
+      }//this length check avoids this from firing multiple times from using the + button on the advanced search
 
 
       $("<a href='/'>Home</a>").appendTo(".mobileMenu");  
@@ -339,6 +345,9 @@ var rotations = [ "rotate1", "rotate2", "rotate3", "rotate4", "rotate6" ];
 var rotation = rotations[Math.floor(Math.random()*rotations.length)];
 $("body").addClass(rotation);
 
+if ($('.featuredLink').length){
+}else{
+
 //rotate 1
 $("<a href='http://louisianadigitallibrary.org/islandora/object/lsu-clt%3A10'><div class='featuredLink'><span class='featuredLabel'>Featured</span><div class='featuredText'><span class='featuredName'>Cargo ship at dock., from Charles L. Thompson Photographs</span><span class='featuredDescription'>Manuscript note on verso: Giant steamships and busy workmen at the wharves.</span></div></div></a>").insertAfter(".rotate1 #block-block-12 .homepageText");
 $('body.rotate1.front #block-block-12').parallax({imageSrc: 'https://i.imgur.com/5SxHTs3.jpg'});
@@ -364,7 +373,7 @@ $('body.rotate4.front #block-block-12').parallax({imageSrc: 'https://i.imgur.com
 $("<a href='http://louisianadigitallibrary.org/islandora/object/uno-omsa:283'><div class='featuredLink'><span class='featuredLabel'>Featured</span><div class='featuredText'><span class='featuredName'>Mamou Mardi Gras, Ogden Museum of Southern Art</span><span class='featuredDescription'>Under dark clouds, a horseman wearing a cape makes his Mardi Gras ride along side a field. B/W photograph.</span></div></div></a>").insertAfter(".rotate6 #block-block-12 .homepageText");
 $('body.rotate6.front #block-block-12').parallax({imageSrc: 'https://i.imgur.com/mGNQ2Ia.jpg'});
 
-
+}
 //end rotator
 
       $("#block-block-13").remove();

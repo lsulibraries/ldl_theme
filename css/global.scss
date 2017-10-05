@@ -2796,7 +2796,7 @@ div.scrollPrompt::before{
     display: block;
     position: absolute;
     top: 50px;
-    left: 62px;
+    left: -10px;
     -webkit-animation: bounceArrow 3s infinite; /* Safari 4.0 - 8.0 */
     animation: bounceArrow 3s infinite;
 
@@ -4010,9 +4010,9 @@ $color_2: white;
     margin-top: 20px !important;
 }
 
-.ajax-processed, .form-item-collections{
-  display: none !important;
-}
+//.ajax-processed, .form-item-collections{
+  //display: none !important;
+//}
 
   .block-inner.clearfix {
     background: white;
