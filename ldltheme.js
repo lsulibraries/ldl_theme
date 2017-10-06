@@ -166,7 +166,7 @@ if($('.institution-collection-list-a').length < 4){
               $("<div class='mobileMenu'/>").insertBefore("div#page");
       } //this length check avoids this from firing multiple times from using the + button on the advanced search
       $("<button class='hamburger--elastic hamburger--collapse mobileMenuIcon' type='button'><span class='hamburger-box'><span class='hamburger-inner'></span></span></button>").insertBefore(".logo-img");
-      $("<div class='scrollPrompt'> <a href='#''></a> </div>").appendTo(".front #block-block-12");
+      $("<div class='scrollPrompt'></div>").appendTo(".front #block-block-12");
       $(".homepageText > p").prop({class:"homepageText"}).appendTo("#block-block-12 #largeSearch .content");
       $(".block-11 .homepageText p, .block-11 .homepageText br").remove();
       $("<span class='modalExit'/>").insertBefore("#block-islandora-solr-advanced .block-title");

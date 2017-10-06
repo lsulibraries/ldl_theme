@@ -1182,7 +1182,7 @@ opacity: 1;
     position: relative;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 70px auto;
+    background-size: 80px auto;
     @include transition-duration(.5s);
     @include flexbox;
     align-items: flex-end;
@@ -1191,19 +1191,19 @@ opacity: 1;
   a.institutionLink.dccLink {
     background-color: $dccColor;
     background-image: url($dccLogo);
-    background-size: 70px auto;
+    background-size: 90px auto;
   }
 
   a.institutionLink.lsmLink {
     background-color: $lsmColor;
     background-image: url($lsmLogo);
-    background-size: 90px auto;
+    background-size: 110px auto;
   }
 
   a.institutionLink.lsuLink {
     background-color: $lsuColor;
     background-image: url($lsuLogo);
-    background-size: 50px auto;
+    background-size: 70px auto;
   }
 
   a.institutionLink.lsusLink {
@@ -1224,13 +1224,13 @@ opacity: 1;
   a.institutionLink.latechLink {
     background-color: $latechColor;
     background-image: url($latechLogo);
-    background-size: 40px auto;
+    background-size: 60px auto;
   }
 
   a.institutionLink.loynoLink {
     background-color: $loynoColor;
     background-image: url($loynoLogo);
-    background-size: 40px auto;
+    background-size: 60px auto;
   }
 
   a.institutionLink.mcneeseLink {
@@ -1246,7 +1246,7 @@ opacity: 1;
   a.institutionLink.nsuLink {
     background-color: $nsuColor;
     background-image: url($nsuLogo);
-    background-size: 40px auto;
+    background-size: 60px auto;
   }
 
   a.institutionLink.subrLink {
@@ -1257,13 +1257,13 @@ opacity: 1;
   a.institutionLink.stateLink {
     background-color: $stateColor;
     background-image: url($stateLogo);
-    background-size: 40px auto;
+    background-size: 60px auto;
   }
 
   a.institutionLink.hnocLink {
     background-color: $hnocColor;
     background-image: url($hnocLogo);
-    background-size: 100px auto;    
+    background-size: 140px auto;    
   }
 
   a.institutionLink.tulaneLink {
@@ -1279,7 +1279,7 @@ opacity: 1;
   a.institutionLink.ulmLink {
     background-color: $ulmColor;
     background-image: url($ulmLogo);
-    background-size: 45px auto;
+    background-size: 65px auto;
   }
 
   a.institutionLink.unoLink {
@@ -1290,7 +1290,7 @@ opacity: 1;
   a.institutionLink.vvilleLink {
     background-color: $vvilleColor;
     background-image: url($vvilleLogo);
-    background-size: 100px auto;
+    background-size: 120px auto;
   }
 }
 
@@ -2774,7 +2774,7 @@ body.logged-in.front div#zone-header {
     color: white;
     font-size: 12px;
     //border: 1px solid rgba(255, 255, 255, 0.33);
-    padding: 10px 0px;
+    padding: 20px 0px;
     border-radius: 30px;
 
     a {
