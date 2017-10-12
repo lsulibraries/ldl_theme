@@ -3579,6 +3579,9 @@ section#block-islandora-solr-sort .item-list {
 .audioPDF #block-system-main {
   background: #242021;
 }
+.audioPDF #block-system-main table {
+  color: white;
+}
 .audioPDF #region-sidebar-first {
   width: 33%;
   background-color: #242021;
