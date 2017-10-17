@@ -3579,12 +3579,14 @@ section#block-islandora-solr-sort .item-list {
 .audioPDF #block-system-main {
   background: #242021;
   color: white;
-  border: 0px;
-  margin: 150px;
-  margin-top: 0px;
 }
 .audioPDF #block-system-main table {
+  background: #242021;
   color: white;
+  border: 0px;
+  border-left: 300px solid #242021;
+  border-right: 300px solid #242021;
+  margin-top: 0px;
 }
 .audioPDF #block-system-main table th {
   display: none;
@@ -3990,6 +3992,16 @@ body {
   }
 }
 @media screen and (max-width: 1260px) {
+  .audioPDF #block-system-main table {
+    border: 0px;
+    margin-top: 0px;
+    background: white;
+    color: #474747;
+    border-color: white;
+    border-left: 200px solid white;
+    border-right: 200px solid white;
+  }
+
   .block-advanced label {
     font-size: 11px;
     display: -webkit-box;
@@ -4285,7 +4297,11 @@ body {
   }
 
   .audioPDF #block-system-main table {
+    border-color: white;
+    background: white;
     color: #474747;
+    border-left: 10px;
+    border-right: 10px;
   }
   .audioPDF .islandora-audio-object .video-js {
     height: 120px;
