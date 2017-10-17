@@ -23,7 +23,7 @@
 ?>
 <div class="islandora-large-image-object islandora" vocab="http://schema.org/" prefix="dcterms: http://purl.org/dc/terms/" typeof="ImageObject">
   <div class="islandora-large-image-content-wrapper clearfix">
-  
+       <?php print l('Download Image', "islandora/object/{$islandora_object}/datastream/JPG/download"); ?>
        <?php if ($parent_collections): ?>
       <div class="parent-collections">
         <h2><?php print t('Found in collection(s):'); ?></h2>
