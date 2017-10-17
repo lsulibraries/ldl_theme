@@ -3845,9 +3845,16 @@ section#block-islandora-solr-sort .item-list {
 
   #block-system-main{
   background: #242021;
-
+    color: white;
+    border: 0px;
+    margin: 150px;
+    margin-top: 0px;
 table {
     color: white;
+
+    th{
+      display: none;
+    }
 }
 
   }
@@ -4632,6 +4639,11 @@ html.mobileMenuActive, body.mobileMenuActive{
 
 
 .audioPDF{
+#block-system-main{
+  table{
+    color: #474747;
+  }
+}
   .islandora-audio-object {
       .video-js {
       height: 120px;

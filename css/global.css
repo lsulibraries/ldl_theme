@@ -3578,9 +3578,16 @@ section#block-islandora-solr-sort .item-list {
 }
 .audioPDF #block-system-main {
   background: #242021;
+  color: white;
+  border: 0px;
+  margin: 150px;
+  margin-top: 0px;
 }
 .audioPDF #block-system-main table {
   color: white;
+}
+.audioPDF #block-system-main table th {
+  display: none;
 }
 .audioPDF #region-sidebar-first {
   width: 33%;
@@ -4277,6 +4284,9 @@ body {
     display: none;
   }
 
+  .audioPDF #block-system-main table {
+    color: #474747;
+  }
   .audioPDF .islandora-audio-object .video-js {
     height: 120px;
     width: 100%;
