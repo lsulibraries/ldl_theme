@@ -171,10 +171,15 @@ if($('.institution-collection-list-a').length < 4){
       $(".block-11 .homepageText p, .block-11 .homepageText br").remove();
       $("<span class='modalExit'/>").insertBefore("#block-islandora-solr-advanced .block-title");
       $("<span class='modalExit2'/>").insertBefore("#block-block-14 h2");
-      if ($('body > #block-islandora-solr-advanced, body > #block-block-14').length){
+      $("<span class='modalExit3'/>").insertBefore(".about-ldc .view-header");
+
+
+      if ($('body > #block-islandora-solr-advanced, body > #block-block-14, body > #block-views-meeting-minutes-block-1').length){
       } else {
-          $("#block-islandora-solr-advanced, #block-block-14").insertBefore(".mobileMenu");
+          $("#block-islandora-solr-advanced, #block-block-14, #block-views-meeting-minutes-block-1").insertBefore(".mobileMenu");
       }//this length check avoids this from firing multiple times from using the + button on the advanced search
+
+
 
 
       $("<a href='/'>Home</a>").appendTo(".mobileMenu");  
@@ -265,6 +270,19 @@ window.onclick = function(event) {
                 window.history.replaceState({}, document.title, clean_uri);
             }          
     }    
+    if (event.target == modal3 || event.target == page) {
+        modal3.style.display = "none";
+        $(".page").removeClass('blurFilter');
+        $(".parallax-slider").removeClass('darkFilter');        
+        $("#zone-content-wrapper").removeClass('noClick');
+
+            var uri = window.location.toString();
+            if (uri.indexOf("#") > 0) {
+                var clean_uri = uri.substring(0, uri.indexOf("#"));
+                window.history.replaceState({}, document.title, clean_uri);
+            }          
+    }    
+
 }
 
       $('div.form-type-checkbox input').click(function(){
@@ -321,6 +339,62 @@ span2.onclick = function() {
 //end modal adv search
 
 
+//modal aboutldc
+
+// Get the modal
+var modal3 = document.getElementById('block-views-meeting-minutes-block-1');
+
+// Get the button that opens the modal
+var btn3 = document.getElementsByClassName("ldcLink")[0];
+$('.about-ldc a');
+
+// Get the <span> element that closes the modal
+var span3 = document.getElementsByClassName("modalExit3")[0];
+var page = document.getElementById('page');
+// When the user clicks on the button, open the modal 
+
+
+btn3.onclick = function() {
+    modal3.style.display = "flex";
+    $(".page").addClass('blurFilter');
+    $(".parallax-slider").addClass('darkFilter');
+    $("html").removeClass('mobileMenuActive');
+    $("#zone-content-wrapper").addClass('noClick');
+
+}
+
+// When the user clicks on <span> (x), close the modal
+span3.onclick = function() {
+    modal3.style.display = "none";
+    $(".page").removeClass('blurFilter');
+    $(".parallax-slider").removeClass('darkFilter');
+    $("button").removeClass('is-active');    
+    $("#zone-content-wrapper").removeClass('noClick');
+
+  var uri = window.location.toString();
+  if (uri.indexOf("#") > 0) {
+      var clean_uri = uri.substring(0, uri.indexOf("#"));
+      window.history.replaceState({}, document.title, clean_uri);
+  }    
+}
+
+$('.about-ldc a').onclick = function() {
+    modal3.style.display = "none";
+    $(".page").removeClass('blurFilter');
+    $(".parallax-slider").removeClass('darkFilter');
+    $("button").removeClass('is-active');    
+    $("#zone-content-wrapper").removeClass('noClick');
+
+  var uri = window.location.toString();
+  if (uri.indexOf("#") > 0) {
+      var clean_uri = uri.substring(0, uri.indexOf("#"));
+      window.history.replaceState({}, document.title, clean_uri);
+  }    
+}
+
+//end modal aboutldc
+
+
 
 //modal anchor setup
  var hash = window.location.hash;
@@ -333,6 +407,14 @@ span2.onclick = function() {
             }
             if (hash == "#contact") {
               modal2.style.display = "flex";
+              $(".page").addClass('blurFilter');
+              $(".parallax-slider").addClass('darkFilter');
+              $("#zone-content-wrapper").addClass('noClick');
+
+            }
+
+            if (hash == "#about-ldc") {
+              modal3.style.display = "flex";
               $(".page").addClass('blurFilter');
               $(".parallax-slider").addClass('darkFilter');
               $("#zone-content-wrapper").addClass('noClick');

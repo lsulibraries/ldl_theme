@@ -1426,6 +1426,8 @@ h1.about-link {
   display: none;
 } //not sure what this is used for
 
+.islandora-basic-collection{
+
 div.item-list:nth-child(2n - 1) {
   display: none;
 } //kills repeated pagination, first instance -- not sure why first-child does not work here
@@ -1433,7 +1435,7 @@ div.item-list:nth-child(2n - 1) {
 .page-islandora-search  div.item-list:nth-child(2n - 1) {
   display: block;
 } //kills repeated pagination, first instance -- not sure why first-child does not work here
-
+}
 .islandora-basic-collection-grid.clearfix {
   @include flexbox;
   flex-wrap: wrap;
@@ -3969,7 +3971,7 @@ label.option {
 
 //adv search
 
-span.modalExit, span.modalExit2 {
+span.modalExit, span.modalExit2, span.modalExit3 {
     position: absolute;
     top: 0px;
     right: 0px;
@@ -4167,6 +4169,12 @@ align-items: flex-start;
       font-weight: 500;
   }
 
+}
+
+//about ldc
+
+#block-views-meeting-minutes-block-1{
+ @extend #block-block-14; 
 }
 
 //mobile menu

@@ -1151,11 +1151,10 @@ h1.about-link {
   display: none;
 }
 
-div.item-list:nth-child(2n - 1) {
+.islandora-basic-collection div.item-list:nth-child(2n - 1) {
   display: none;
 }
-
-.page-islandora-search div.item-list:nth-child(2n - 1) {
+.islandora-basic-collection .page-islandora-search div.item-list:nth-child(2n - 1) {
   display: block;
 }
 
@@ -3688,7 +3687,7 @@ section#block-islandora-solr-sort .item-list {
   color: white !important;
 }
 
-span.modalExit, span.modalExit2 {
+span.modalExit, span.modalExit2, span.modalExit3 {
   position: absolute;
   top: 0px;
   right: 0px;
@@ -3702,7 +3701,7 @@ span.modalExit, span.modalExit2 {
   cursor: pointer;
 }
 
-section#block-islandora-solr-advanced, #block-block-14 {
+section#block-islandora-solr-advanced, #block-block-14, #block-views-meeting-minutes-block-1 {
   position: absolute;
   box-sizing: content-box;
   display: flex;
@@ -3827,26 +3826,26 @@ section#block-islandora-solr-advanced, #block-block-14 {
   cursor: pointer;
 }
 
-#block-block-14 {
+#block-block-14, #block-views-meeting-minutes-block-1 {
   align-items: flex-start;
   padding-top: 50px;
 }
-#block-block-14 .block-inner.clearfix {
+#block-block-14 .block-inner.clearfix, #block-views-meeting-minutes-block-1 .block-inner.clearfix {
   background: white;
   padding: 50px;
   position: relative;
   width: 50vw;
 }
-#block-block-14 h3 {
+#block-block-14 h3, #block-views-meeting-minutes-block-1 h3 {
   font-size: 125%;
   font-weight: 500;
   margin-bottom: 0px;
   color: #3c3c3c;
 }
-#block-block-14 ul {
+#block-block-14 ul, #block-views-meeting-minutes-block-1 ul {
   margin-left: 30px;
 }
-#block-block-14 h2 {
+#block-block-14 h2, #block-views-meeting-minutes-block-1 h2 {
   font-size: 20px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.16);
   font-weight: 500;
@@ -4022,12 +4021,12 @@ body {
     margin: 20px;
   }
 
-  #block-block-14 {
+  #block-block-14, #block-views-meeting-minutes-block-1 {
     align-items: flex-start;
     margin-top: 0px;
   }
 
-  #block-block-14 .block-inner.clearfix {
+  #block-block-14 .block-inner.clearfix, #block-views-meeting-minutes-block-1 .block-inner.clearfix {
     background: white;
     padding: 20px;
     position: relative;
