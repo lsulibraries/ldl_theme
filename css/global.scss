@@ -296,6 +296,12 @@ span.bold {
   }
 }
 
+/* Date range slider*/
+
+.islandora-solr-range-slider {
+  padding: 12px;
+}
+
 /*Institutional Page*/
 
 
@@ -1912,6 +1918,7 @@ div.region-inner.region-header-first-inner {
 .islandora-solr-sort a {
   &:link, &:visited {
     color: #808080;
+        cursor: pointer;
   }
 }
 
@@ -2299,7 +2306,12 @@ list-style-image {
   margin-top: 0px;
   border-bottom: 0px;
   margin: 4px 0px;
-  display: none; //temp disabled
+  //display: none; //temp disabled
+
+li .last{
+  pointer: cursor;
+}
+
 }
 
 .form-item, .form-actions {
@@ -4523,8 +4535,8 @@ section#section-content {
     width: calc(100% - 20px);
   }
   ul.islandora-solr-sort {
-    border-bottom: 1px solid #b7b7b7;
-    margin-top: 0px;
+//    border-bottom: 1px solid #b7b7b7;
+    margin-top: -5px;
     padding: 20px;
     text-align: center;
     letter-spacing: 2px;
