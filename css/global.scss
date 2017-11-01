@@ -816,12 +816,12 @@ a{
 .institution-collection-list-item-label{
     @include transition-duration(1.5s);
     transform: translateY(-100%);
-  transition-delay: 0s;
+  transition-delay: 1s;
 }
   .institution-collection-description{
     @include transition-duration(1.5s);
     transform: translateY(-100%);
-      transition-delay: 0s;
+      transition-delay: 1s;
 
   }
 

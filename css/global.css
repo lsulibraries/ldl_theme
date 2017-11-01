@@ -610,7 +610,7 @@ ul.institution-collection-list {
   -webkit-transition-duration: 1.5s;
   transition-duration: 1.5s;
   transform: translateY(-100%);
-  transition-delay: 0s;
+  transition-delay: 1s;
 }
 .institution-collection-list-a:hover .institution-collection-description {
   -moz-transition-duration: 1.5s;
@@ -618,7 +618,7 @@ ul.institution-collection-list {
   -webkit-transition-duration: 1.5s;
   transition-duration: 1.5s;
   transform: translateY(-100%);
-  transition-delay: 0s;
+  transition-delay: 1s;
 }
 
 .institution-collection-list-item-manage-proxy {
