@@ -179,7 +179,13 @@ if($('.institution-collection-list-a').length < 4){
           $("#block-islandora-solr-advanced, #block-block-14, #block-views-meeting-minutes-block-1").insertBefore(".mobileMenu");
       }//this length check avoids this from firing multiple times from using the + button on the advanced search
 
+//begin compoundObject 
 
+      if ($('.block-islandora-compound-object').length){
+        $("body").addClass('compoundObject');
+      } //adds body class if block is present
+
+//end compoundObject
 
 
       $("<a href='/'>Home</a>").appendTo(".mobileMenu");  
