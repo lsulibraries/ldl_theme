@@ -180,12 +180,46 @@ if($('.institution-collection-list-a').length < 4){
       }//this length check avoids this from firing multiple times from using the + button on the advanced search
 
 //begin compoundObject 
+    if ($('.block-islandora-compound-object').length){
+    $("body").addClass('compoundObject');
 
-      if ($('.block-islandora-compound-object').length){
-        $("body").addClass('compoundObject');
-      } //adds body class if block is present
+    //find widest image
+        var widest = null;
+        // remember the width of the "widest" element - probably faster than calling .width() - currently disabled - move addclasswidest to second if to 
+        var widestWidth = 0;
+        $(".compoundSelect").each(function() {
+          if (widest == null)
+          {
+            widest = $(this).addClass('widest');;
+            widestWidth = $(this).width();
+          }
+          else
+          if ($(this).width() > widestWidth) {
+            widest = $(this)
+            widestWidth = $(this).width();
+          }
+        });
+
+
+    //done finding widest image
+    $("<div class='backgroundDiv'/>").insertBefore(".compoundObject #region-content .region-content-inner"); // adds div for item background
+
+           var commentedURL = $('div.widest').find('noscript').addClass('widestIMG').html(); 
+            var commentedelement = $('.widestIMG').text().split(" ");
+            var srcdirty = commentedelement[2];
+            var srcclean = srcdirty.match(/"(.*?)"/);
+            //alert(srcclean[1]);
+            //assign background image   
+            $('.backgroundDiv').css('background-image', 'url(' + srcclean[1] + ')');   
+
+    } //adds body class if block is present
+    $(".compoundObject #block-system-main table").prop({class:"modsTable"}).appendTo(".region-sidebar-first-inner");
+    $('.compoundSelect').wrapAll('<div class="compoundGallery"/>'); //wraps collectionPage title
+
+           
 
 //end compoundObject
+
 
 
       $("<a href='/'>Home</a>").appendTo(".mobileMenu");  
