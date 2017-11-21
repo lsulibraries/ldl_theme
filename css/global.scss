@@ -3834,6 +3834,76 @@ div {
   display: none;
 }
 
+//begin compoundObject ('!important's override islandora_compound_object.jail_block.css)
+
+.backgroundDiv {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    filter: blur(20px) brightness(0.5);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+  .compoundObject {
+
+  #region-content{
+    background: black;
+  }    
+  #region-sidebar-first {
+    display: block;
+  }
+
+  #block-islandora-compound-object-compound-jail-display {
+  height: auto;
+  }
+
+  .compoundGallery {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 10%;    
+  }
+
+#block-islandora-compound-object-compound-jail-display > div {
+    border-bottom: none!important;
+    padding-bottom: 1em;
+    padding-right: 10px;
+}
+
+  .compoundSelect {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    .compoundSelect-thumbnail{
+    max-width: none!important;
+    line-height: auto!important;
+      img {
+        max-width: none !important;
+        height: 100%;    
+        margin: 0px!important;    
+        padding: 0px!important;
+        border: 0px!important;
+      }
+      .islandora-compound-object-jail-active {
+          border: 0px;
+      } //active select     
+    }
+    a.compoundSelect-title {
+        display: flex!important;
+        justify-content: center;
+        align-items: center;
+        padding: 40px;
+        background: #00000026;
+        max-width: none!important;
+        font-size: 20px;
+        color: white;
+    }
+  }
+
+}
+//end compoundObject
+
 /*BEGIN test area*/
 
 section#block-islandora-solr-sort .item-list {
