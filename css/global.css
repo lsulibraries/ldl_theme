@@ -3033,16 +3033,66 @@ div.islandora-pdf-object, div.islandora-large-image-object {
   position: absolute;
   width: 100%;
   height: 100%;
-  filter: blur(20px) brightness(0.5);
+  filter: blur(20px) brightness(0.46);
   background-repeat: no-repeat;
   background-size: cover; }
 
+.compoundObject #region-sidebar-first {
+  transform: scale(0, 1);
+  /* Equal to scaleX(0.7) scaleY(0.7) */
+  -webkit-transition-property: width;
+  /* Safari */
+  transition-property: width;
+  width: 0px;
+  transition-duration: 1s; }
+  .compoundObject #region-sidebar-first .region-sidebar-first-inner {
+    transform: translate(0vh, 100vh);
+    transition-duration: 1s;
+    transition-delay: 0.5s;
+    opacity: 0; }
+.compoundObject #region-sidebar-first.infoOpened {
+  transform: scale(1, 1);
+  /* Equal to scaleX(0.7) scaleY(0.7) */
+  width: 25%;
+  transition-duration: 1s; }
+  .compoundObject #region-sidebar-first.infoOpened .region-sidebar-first-inner {
+    transform: translate(0vh, 0vh);
+    transition-duration: 1s;
+    transition-delay: 0.5s;
+    opacity: 1; }
+.compoundObject .compoundMenu {
+  margin: 0 10%;
+  padding-top: 50px;
+  border-bottom: 1px solid #ffffff33; }
+  .compoundObject .compoundMenu ul.tabs {
+    border: 0px; }
 .compoundObject #region-content {
   background: black; }
+.compoundObject .region-content-inner {
+  z-index: 1; }
 .compoundObject #region-sidebar-first {
   display: block; }
 .compoundObject #block-islandora-compound-object-compound-jail-display {
-  height: auto; }
+  height: auto;
+  font-size: inherit !important;
+  overflow-y: inherit !important; }
+.compoundObject .compoundGallery_header {
+  margin: 0 10%; }
+  .compoundObject .compoundGallery_header a {
+    max-width: none !important;
+    line-height: inherit !important; }
+  .compoundObject .compoundGallery_header .form-item {
+    display: flex;
+    align-items: flex-end; }
+  .compoundObject .compoundGallery_header .compoundParent {
+    font-size: 30px;
+    color: white; }
+  .compoundObject .compoundGallery_header .compoundCount {
+    margin-left: 10px;
+    margin-bottom: 9px;
+    padding: 2px 5px;
+    background: white;
+    text-transform: uppercase; }
 .compoundObject .compoundGallery {
   display: flex;
   flex-wrap: wrap;

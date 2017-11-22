@@ -203,20 +203,24 @@ if($('.institution-collection-list-a').length < 4){
 
     //done finding widest image
     $("<div class='backgroundDiv'/>").insertBefore(".compoundObject #region-content .region-content-inner"); // adds div for item background
-
-           var commentedURL = $('div.widest').find('noscript').addClass('widestIMG').html(); 
-            var commentedelement = $('.widestIMG').text().split(" ");
-            var srcdirty = commentedelement[2];
-            var srcclean = srcdirty.match(/"(.*?)"/);
-            //alert(srcclean[1]);
-            //assign background image   
-            $('.backgroundDiv').css('background-image', 'url(' + srcclean[1] + ')');   
-
+        var commentedURL = $('div.widest').find('noscript').addClass('widestIMG').text().split(" "); 
+        var srcclean = commentedURL[2].match(/"(.*?)"/);
+        //alert(srcclean[1]);
+        //assign background image   
+        $('.backgroundDiv').css('background-image', 'url(' + srcclean[1] + ')');   
     } //adds body class if block is present
     $(".compoundObject #block-system-main table").prop({class:"modsTable"}).appendTo(".region-sidebar-first-inner");
     $('.compoundSelect').wrapAll('<div class="compoundGallery"/>'); //wraps collectionPage title
-
-           
+    $("<div class='compoundMenu'/>").insertBefore(".compoundGallery_header"); 
+    $(".manageParent, ul.tabs").appendTo(".compoundMenu"); 
+    $("<div class='compoundGlance'/>").insertAfter(".compoundGallery"); 
+    $("<div class='infoToggle'>Info</div>").appendTo(".compoundMenu"); 
+    $('.infoToggle').click(function(){
+          $(this).toggleClass('menuActive');
+          $('#region-sidebar-first').toggleClass('infoOpened');
+      });           
+      sr.reveal('.modsTable', { duration: 200, delay: 850,  easing: 'linear', scale: 1, }, 20);
+    
 
 //end compoundObject
 
