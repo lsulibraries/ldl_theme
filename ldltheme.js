@@ -122,7 +122,6 @@ if($('.institution-collection-list-a').length < 4){
 
       $(".islandora-pdf-metadata").clone().prop({ id: "sideMods", class: "newClass" }).prependTo("#region-sidebar-first");
       $(".islandora-large-image-metadata").clone().prop({ id: "sideMods", class: "newClass" }).prependTo("#region-sidebar-first");
-      $(".islandora-audio-metadata").clone().prop({ id: "sideMods", class: "newClass" }).prependTo("#region-sidebar-first");     
       $(".page-islandora-search #page-title").clone().prop({ id: "page-title-header"}).prependTo(".region-header-second-inner");
       $("#page-title").clone().prop({ id: "window-title", class: "object-title"}).prependTo("div.islandora-pdf-content, div.islandora-large-image-content");
       $("#sideMods tr:nth-child(0n+3) td:nth-child(0n+2)").clone().prop({ id: "pdf-object-author", class: "object-author"}).appendTo("#window-title");
@@ -209,7 +208,7 @@ if($('.institution-collection-list-a').length < 4){
         //alert(srcclean[1]);
         //assign background image   
         $('.backgroundDiv').css('background-image', 'url(' + srcclean[1] + ')');   
-    } //adds body class if block is present
+     //adds body class if block is present
     $(".compoundObject #block-system-main table").prop({class:"modsTable"}).appendTo(".region-sidebar-first-inner");
     $('.compoundSelect').wrapAll('<div class="compoundGallery"/>'); //wraps collectionPage title
     $("<div class='compoundMenu'/>").insertBefore(".compoundGallery_header"); 
@@ -232,10 +231,10 @@ if($('.institution-collection-list-a').length < 4){
         if ($('.compoundObject #block-system-main .block-inner .content > div').length){
             $("body").addClass('compoundChild');
         }
-            else {
-            $("body").addClass('compoundParent');
-    }
-
+        else {
+        $("body").addClass('compoundParent');
+        }
+}
 
 //end compoundObject
 
