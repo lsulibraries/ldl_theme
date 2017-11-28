@@ -234,6 +234,10 @@ a.institution-about-edit {
   border: 2px solid #3C1053; }
 .lsuTheme .institution-search input[type="text"] {
   border: 2px solid #3C1053; }
+.lsuTheme .institutionLabel::before, .lsuTheme .compoundObject .compoundLabel::before, .compoundObject .lsuTheme .compoundLabel::before {
+  background: #3C1053; }
+.lsuTheme .institutionLabel {
+  background-image: url("http://reu.cct.lsu.edu/documents/logos/LSU_Gold_CMYK.png"); }
 
 .lsuhscTheme .institution-header, .lsuhscTheme .collectionHeader, .lsuhscTheme .institution-search::before, .lsuhscTheme .child-institution-collections::before, .lsusTheme .institution-header, .lsusTheme .collectionHeader, .lsusTheme .institution-search::before, .lsusTheme .child-institution-collections::before, .lsuhscsTheme .institution-header, .lsuhscsTheme .collectionHeader, .lsuhscsTheme .institution-search::before, .lsuhscsTheme .child-institution-collections::before {
   background: white;
@@ -712,11 +716,6 @@ li.child-institution-collection-list-item {
   padding: 10px; }
 
 /*institution list*/
-.institutionLabel {
-  padding: 0px 20px;
-  text-align: center;
-  line-height: 17px; }
-
 #block-block-11 {
   display: block;
   align-items: center;
@@ -3031,12 +3030,46 @@ div.islandora-pdf-object, div.islandora-large-image-object {
 
 .backgroundDiv {
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: calc(100% + 40px);
+  height: calc(100% + 40px);
   filter: blur(20px) brightness(0.46);
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  left: -20px;
+  top: -20px; }
 
+.contentLabel {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  text-transform: uppercase;
+  line-height: 14px;
+  padding: 10px;
+  position: relative;
+  padding-left: 45px;
+  background-position: 9px 10px;
+  background-size: 28px;
+  background-repeat: no-repeat; }
+
+.institutionLabel {
+  height: 50px;
+  width: 100px;
+  background: rgba(255, 255, 255, 0.2);
+  position: relative;
+  margin-left: 22px;
+  background-size: 48px;
+  background-repeat: no-repeat;
+  background-position: center center; }
+
+.institutionLabel::before, .compoundObject .compoundLabel::before {
+  width: 10px;
+  height: 100%;
+  content: " ";
+  position: absolute;
+  top: 0px;
+  left: -11px; }
+
+.compoundObject .contentLabel {
+  background-image: url("https://i.imgur.com/azpOWoN.png"); }
 .compoundObject #region-sidebar-first {
   transform: scale(0, 1);
   /* Equal to scaleX(0.7) scaleY(0.7) */
@@ -3050,6 +3083,20 @@ div.islandora-pdf-object, div.islandora-large-image-object {
     transition-duration: 1s;
     transition-delay: 0.5s;
     opacity: 0; }
+.compoundObject .block-compound-jail-display .block-inner > .content {
+  margin: 0 10%; }
+.compoundObject .compoundLabels {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 20px;
+  padding-right: 20px; }
+.compoundObject .compoundLabel::before {
+  background: #FF5370;
+  margin: 0px; }
 .compoundObject #region-sidebar-first.infoOpened {
   transform: scale(1, 1);
   /* Equal to scaleX(0.7) scaleY(0.7) */
@@ -3061,7 +3108,6 @@ div.islandora-pdf-object, div.islandora-large-image-object {
     transition-delay: 0.5s;
     opacity: 1; }
 .compoundObject .compoundMenu {
-  margin: 0 10%;
   padding-top: 50px;
   border-bottom: 1px solid #ffffff33; }
   .compoundObject .compoundMenu ul.tabs {
@@ -3076,27 +3122,24 @@ div.islandora-pdf-object, div.islandora-large-image-object {
   height: auto;
   font-size: inherit !important;
   overflow-y: inherit !important; }
-.compoundObject .compoundGallery_header {
-  margin: 0 10%; }
-  .compoundObject .compoundGallery_header a {
-    max-width: none !important;
-    line-height: inherit !important; }
-  .compoundObject .compoundGallery_header .form-item {
-    display: flex;
-    align-items: flex-end; }
-  .compoundObject .compoundGallery_header .compoundParent {
-    font-size: 30px;
-    color: white; }
-  .compoundObject .compoundGallery_header .compoundCount {
-    margin-left: 10px;
-    margin-bottom: 9px;
-    padding: 2px 5px;
-    background: white;
-    text-transform: uppercase; }
+.compoundObject .compoundGallery_header a {
+  max-width: none !important;
+  line-height: inherit !important; }
+.compoundObject .compoundGallery_header .form-item {
+  display: flex;
+  align-items: center; }
+.compoundObject .compoundGallery_header .compoundParent {
+  font-size: 30px;
+  color: white;
+  padding: 10px 0px; }
+.compoundObject .compoundGallery_header .compoundCount {
+  margin-left: 10px;
+  padding: 2px 5px;
+  background: white;
+  text-transform: uppercase; }
 .compoundObject .compoundGallery {
   display: flex;
-  flex-wrap: wrap;
-  margin: 0 10%; }
+  flex-wrap: wrap; }
 .compoundObject #block-islandora-compound-object-compound-jail-display > div {
   border-bottom: none !important;
   padding-bottom: 1em;
@@ -3121,8 +3164,8 @@ div.islandora-pdf-object, div.islandora-large-image-object {
     display: flex !important;
     justify-content: center;
     align-items: center;
-    padding: 40px;
-    background: #00000026;
+    padding: 40px 80px;
+    background: rgba(0, 0, 0, 0.15);
     max-width: none !important;
     font-size: 20px;
     color: white; }

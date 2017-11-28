@@ -213,15 +213,29 @@ if($('.institution-collection-list-a').length < 4){
     $(".compoundObject #block-system-main table").prop({class:"modsTable"}).appendTo(".region-sidebar-first-inner");
     $('.compoundSelect').wrapAll('<div class="compoundGallery"/>'); //wraps collectionPage title
     $("<div class='compoundMenu'/>").insertBefore(".compoundGallery_header"); 
-    $(".manageParent, ul.tabs").appendTo(".compoundMenu"); 
-    $("<div class='compoundGlance'/>").insertAfter(".compoundGallery"); 
-    $("<div class='infoToggle'>Info</div>").appendTo(".compoundMenu"); 
+    $("<div class='compoundLabels'/>").insertBefore(".compoundMenu"); //adds region for contentLabel and institutionLabel
+    $("<div class='contentLabel'/>").appendTo(".compoundLabels"); //adds contentLabel div to show content type
+    var institutionHome = $(".depth-2 > a").attr('href'); //creates href path from breadcrumb depth-2
+    $("<a href=" + institutionHome + "><div class='institutionLabel'/></a>").appendTo(".compoundLabels"); //adds institutionLabel div to show content type      
+        $(".compoundObject .contentLabel").addClass("compoundLabel"); //detects contentType and assign new class to contentLabel
+        $(".compoundLabel").html("Compound <br> Object"); //text within compoundLabel      
+        $(".manageParent, ul.tabs").appendTo(".compoundMenu"); //moves the view/ip embargo/manage menu
+        $("<div class='compoundGlance'/>").insertAfter(".compoundGallery");  //inserts compoundGlance
+        $("<div class='infoToggle'>Info</div>").appendTo(".compoundMenu"); //adds toggle for parent metadata
+        $(".compoundLabels").insertBefore("#block-islandora-compound-object-compound-jail-display");
     $('.infoToggle').click(function(){
           $(this).toggleClass('menuActive');
           $('#region-sidebar-first').toggleClass('infoOpened');
       });           
       sr.reveal('.modsTable', { duration: 200, delay: 850,  easing: 'linear', scale: 1, }, 20);
     
+        if ($('.compoundObject #block-system-main .block-inner .content > div').length){
+            $("body").addClass('compoundChild');
+        }
+            else {
+            $("body").addClass('compoundParent');
+    }
+
 
 //end compoundObject
 
