@@ -3889,7 +3889,27 @@ div {
   left: -11px;
 }
 
+.manageMenu {
 
+    .tabs {
+    margin: 0px;
+    padding: 0px;
+    }  
+
+    li a {
+    max-width: none !important;
+    padding: 2px 20px!important;
+    text-transform: uppercase;
+    color: white;
+    background: none !important;
+    border: 1px solid rgba(255, 255, 255, 0.20) !important;
+    }
+
+    li a.active {
+    font-weight: normal !important;
+    background: rgba(255, 255, 255, 0.20) !important;
+    }    
+}
 
   .compoundObject {
 
@@ -3913,6 +3933,7 @@ div {
 
       .block-compound-jail-display .block-inner > .content{
         margin: 0 10%;
+    max-width: 1000px;        
       }
 
       .compoundLabels {
@@ -3942,11 +3963,12 @@ div {
 
       }
 
-      .compoundMenu {
+      .itemMenu {
           padding-top: 50px;
-          border-bottom: 1px solid #ffffff33;      
+          border-bottom: 1px solid rgba(255, 255, 255, .2);      
           ul.tabs{
             border: 0px;
+            height: 22px;            
           }
       }
 
@@ -3992,12 +4014,16 @@ div {
       .compoundGallery {
         display: flex;
         flex-wrap: wrap;
+    border-bottom: 1px solid rgba(255, 255, 255, .2);
+    padding-bottom: 10px;        
       }
 
     #block-islandora-compound-object-compound-jail-display > div {
         border-bottom: none!important;
         padding-bottom: 1em;
         padding-right: 10px;
+        @include flexbox;
+        justify-content: center;        
     }
 
       .compoundSelect {
@@ -4005,6 +4031,9 @@ div {
         flex-direction: row-reverse;
         margin-right: 10px;
         margin-bottom: 10px;
+        a{
+        line-height: auto!important;
+        }        
         .compoundSelect-thumbnail{
         max-width: none!important;
         line-height: auto!important;
@@ -4024,13 +4053,41 @@ div {
             justify-content: center;
             align-items: center;
             padding: 40px 80px;
-            background: rgba(0, 0, 0, 0.15);
+            background: rgba(0, 0, 0, 0.07);
             max-width: none!important;
             font-size: 20px;
             color: white;
         }
       }
 
+      .compoundSelect:hover{
+        a.compoundSelect-title {
+            background: rgba(255, 255, 255, 0.07);
+        }    
+      }         
+.compoundGlance{
+    padding-top: 20px;
+    td.modsDesc {
+      color: white;
+      padding: 0px;
+  }
+  .tagsGlance{
+padding-top:5px;
+      .modsSubject {
+    padding: 2px 8px;
+    background: white;
+    margin-right: 4px !important;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: normal;
+      a{
+        color: #4d4d4d;
+      }
+    }
+  }
+}
 }
 //end compoundObject
 
