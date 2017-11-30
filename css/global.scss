@@ -3972,6 +3972,59 @@ div {
 
   .compoundObject {
 
+form#islandora-ip-embargo-object-embargo-form {
+    background: #efefef;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #d0d0d0;
+    div#edit-public-datastreams > div {
+    margin-right: 20px;
+    }    
+    div#edit-public-datastreams {
+    display: flex;
+    }    
+    .embargoTitle {
+        margin-left: 30px;
+        font-size: 20px;
+        padding-top: 20px;
+    }    
+    span#islandora-ip-embargo-policy-source {
+        margin-left: 30px;
+        margin-bottom: 15px;
+    }    
+    .form-type-radio .description, .form-type-checkbox .description {
+    margin-left: 0px;
+    }    
+      input#edit-submit {
+      width: 140px;
+      align-self: center;
+      margin: 20px;
+      border-radius: 5px;
+    background: #FF5370;
+    text-transform: uppercase;
+    text-shadow: none;
+    color: white;
+    font-size: 12px;
+    padding: 16px;      
+      }    
+}
+
+#islandora-ip-embargo-object-embargo-form > div {
+    display: flex;
+    flex-direction: column;
+}
+
+#islandora-ip-embargo-object-embargo-form > div > .form-item {
+    padding: 30px;
+    border-top: 1px solid rgba(0,0,0,.08);
+    margin: 0px;
+    background: white;
+}
+
+.form-item.form-type-checkboxes.form-item-public-datastreams {
+    border-bottom: 1px solid rgba(0,0,0,.08);
+}
+
       .contentLabel{
       background-image: url($compoundLegend);
       }
@@ -4116,6 +4169,10 @@ div {
             max-width: none!important;
             font-size: 20px;
             color: white;
+        }
+        a.compoundSelect-title.active{
+            background: rgba(255, 255, 255, .07)!important;
+            
         }
       }
 
@@ -4291,6 +4348,10 @@ color: #dedede;
     filter: blur(5px) brightness(0.8);
 }
 
+//adv search
+
+#islandora-solr-advanced-search-form{
+
 .selectedCheck{
 
     background: #39adb5 !important;
@@ -4301,8 +4362,7 @@ label.option {
 }
 }
 
-//adv search
-
+}
 span.modalExit, span.modalExit2, span.modalExit3 {
     position: absolute;
     top: 0px;
@@ -4463,9 +4523,9 @@ input.ajax-processed {
     cursor: pointer;
     }
   }
+
+
 }
-
-
 //end adv search
 
 
