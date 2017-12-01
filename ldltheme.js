@@ -245,10 +245,13 @@ if($('.institution-collection-list-a').length < 4){
     $("<div class='itemMenu'/>").insertBefore(".compoundGallery_header"); 
     $("<div class='compoundLabels'/>").insertBefore(".itemMenu"); //adds region for contentLabel and institutionLabel
     $("<div class='contentLabel'/>").appendTo(".compoundLabels"); //adds contentLabel div to show content type
+    $("<div class='contentIcon'/>").insertBefore(".compoundGallery_header > .form-item > a:first-child"); //adds contentLabel div to show content type
+
     var institutionHome = $(".depth-2 > a").attr('href'); //creates href path from breadcrumb depth-2
     $("<a href=" + institutionHome + "><div class='institutionLabel'/></a>").appendTo(".compoundLabels"); //adds institutionLabel div to show content type      
         $(".compoundObject .contentLabel").addClass("compoundLabel"); //detects contentType and assign new class to contentLabel
         $(".compoundLabel").html("Compound <br> Object"); //text within compoundLabel      
+
         $(".manageParent, ul.tabs").appendTo(".itemMenu").wrapAll('<div class="manageMenu"/>'); //moves the view/ip embargo/manage menu
         $("<div class='userMenu'/>").insertAfter(".manageMenu");  //inserts compoundGlance
         $("<div class='compoundGlance'/>").insertAfter(".compoundGallery");  //inserts compoundGlance
@@ -272,6 +275,8 @@ if($('.institution-collection-list-a').length < 4){
         else {
         $("body").addClass('compoundParent');
         }
+        $("<div class='compoundArrows userSelect'/>").appendTo(".userMenu");        
+        $('#islandora-compound-sequence-position, #islandora-compound-previous-link, #islandora-compound-next-link').appendTo('.compoundArrows');
 }
 
 $("#share").jsSocials({
