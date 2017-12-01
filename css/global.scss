@@ -2798,6 +2798,12 @@ body.logged-in.front div#zone-header {
     width: calc(100% - 40px);
 }
 
+.not-logged-in{
+  .manageMenu ul{
+    display: none;
+  }
+}
+
 .front {
 
 .scrollPrompt {
@@ -4013,6 +4019,7 @@ div.islandora-pdf-object, div.islandora-large-image-object {
 
   .compoundObject {
 
+
 #islandora-openseadragon{
     height: 300px;
 }
@@ -4340,8 +4347,10 @@ padding-top:5px;
     .compoundGallery {
     display: flex;
     flex-wrap: wrap;
-    padding: 10px;
+    padding: 20px;
     background: #1a1a1a;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    padding-bottom: 10px;  
     }
 
 .compoundGlance {
