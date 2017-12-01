@@ -111,7 +111,7 @@ $loynoLogo_long: "http://i.imgur.com/23i7KxR.png";
 $tulaneLogo_long: "https://upload.wikimedia.org/wikipedia/en/thumb/7/7e/Tulane_logo.svg/1024px-Tulane_logo.svg.png";
 $ullLogo_long: "https://www.louisiana.edu/sites/louisiana/files/ull-logo_0.png";
 $unoLogo_long: "http://i.imgur.com/RBtG5qz.png";
-$vvilleLogo_long: '';
+$vvilleLogo_long: 'http://i.imgur.com/wqpOeRQ.png';
 
 /* mixins */
 
@@ -3908,7 +3908,7 @@ div {
     position: absolute;
     width: calc(100% + 40px);
     height: calc(100% + 40px);
-    filter: blur(20px) brightness(0.46);
+    filter: blur(20px) brightness(0.5);
     background-repeat: no-repeat;
     background-size: cover;
     left: -20px;
