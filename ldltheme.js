@@ -258,6 +258,7 @@ if($('.institution-collection-list-a').length < 4){
         $("<div class='infoToggle userSelect'><div class='iconSelect'></div><div class='textSelect'>info</div></div>").appendTo(".userMenu"); //adds toggle for parent metadata
         $(".downloadLink").appendTo(".userMenu"); 
         $("<div id='share'/>").appendTo(".userMenu");        
+        $("#clip").appendTo(".userMenu");              
         $(".modsDesc").clone().appendTo(".compoundGlance");
         $(".modsSubject").clone().appendTo(".compoundGlance").wrapAll('<div class="tagsGlance"/>');
         $(".compoundLabels").insertBefore("#block-islandora-compound-object-compound-jail-display");
@@ -277,6 +278,9 @@ if($('.institution-collection-list-a').length < 4){
         }
         $("<div class='compoundArrows userSelect'/>").appendTo(".userMenu");        
         $('#islandora-compound-sequence-position, #islandora-compound-previous-link, #islandora-compound-next-link').appendTo('.compoundArrows');
+        $('.compoundChild #block-system-main .block-inner .content > div').insertAfter('.itemMenu');
+        $('#window-title').insertAfter('.itemMenu');
+
 }
 
 $("#share").jsSocials({

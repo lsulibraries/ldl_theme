@@ -3821,7 +3821,7 @@ div {
 .islandora-openseadragon {
   display: block;
   width: 100%;
-  height: 800px;
+  height: 500px;
   .openseadragon-canvas canvas {
     background-image: url(http://i.imgur.com/BJtKhwV.png) !important;
     background-color: #FFFFFF !important;
@@ -3869,6 +3869,7 @@ div {
     display: flex;
     cursor: pointer;
     margin-right: 10px;    
+    align-items: center;    
 }
 
 .menuActive {
@@ -3903,6 +3904,46 @@ div {
 //end item menu
 
 //begin compoundObject ('!important's override islandora_compound_object.jail_block.css)
+
+
+
+
+
+
+h1#window-title {
+    background: none;
+    color: white;
+    font-size: 28px;
+    width: auto;
+    margin: 20px 0px;
+    padding: 0px;
+    border: 0px;
+    letter-spacing: normal;
+    font-weight: 700;
+
+    #pdf-object-author{
+      display: none;
+    }
+}
+
+div.islandora-pdf-object, div.islandora-large-image-object {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+#share{
+  a.jssocials-share-link.jssocials-share-link-count.jssocials-share-no-count {
+      max-width: none!important;
+  }
+}
+
+.compoundParent .compoundArrows{
+  display: none;
+}
+
+.compoundArrows{
+  cursor: default;
+}
 
 .backgroundDiv {
     position: absolute;
@@ -3971,6 +4012,36 @@ div {
 }
 
   .compoundObject {
+
+#islandora-openseadragon{
+    height: 300px;
+}
+
+.islandora-openseadragon .openseadragon-canvas canvas {
+    background-image: none!important;
+    background-color: transparent !important;
+}
+
+.navigator div.openseadragon-canvas {
+//showing up as black background: transparent!important;
+}
+
+.islandora-pdf-content, .islandora-large-image-content {
+    background-color: rgba(0, 0, 0, 0.07);
+    background-image: none;
+    border: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    padding: 0px;
+    float: left;
+    width: 100% !important;
+    max-width: 100%;
+    position: relative;
+    overflow-x: hidden;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 
 form#islandora-ip-embargo-object-embargo-form {
     background: #efefef;
@@ -4076,7 +4147,7 @@ form#islandora-ip-embargo-object-embargo-form {
       }
 
       .itemMenu {
-          padding-top: 50px;
+          padding-top: 0px;
           border-bottom: 1px solid rgba(255, 255, 255, .2);      
           ul.tabs{
             border: 0px;
@@ -4111,8 +4182,9 @@ form#islandora-ip-embargo-object-embargo-form {
     padding-right: 10px;
 }
 
-a#islandora-compound-next-link {
+a#islandora-compound-next-link, a#islandora-compound-previous-link {
     margin: 0px;
+    max-width: none!important;    
 }                
 span#islandora-compound-sequence-position {
     margin: 0px;
@@ -4234,6 +4306,47 @@ padding-top:5px;
   }
 }
 }
+
+.compoundChild{
+.compoundSelect .active{
+  cursor: default;
+}
+
+div#block-system-main {
+height: 0px!important;
+}  
+  .contentIcon {
+  margin-left: 20px;
+  }
+
+  .compoundGallery_header {
+    background: #1a1a1a;
+    border-bottom: 1px solid rgba(255, 255, 255, .07);
+    .compoundParent {
+    font-size: 20px;
+    color: #ffffff;
+    padding: 10px 0px;
+    }
+}
+
+  .compoundSelect{
+    height: 80px;
+    border: 1px solid rgba(255, 255, 255, 0.07);      
+      a.compoundSelect-title {
+      padding: 40px 40px;
+      }        
+  }
+.compoundGallery {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    background: #1a1a1a;
+
+}  
+
+
+}
+
 //end compoundObject
 
 /*BEGIN test area*/

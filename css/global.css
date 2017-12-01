@@ -3005,7 +3005,7 @@ div.islandora-pdf-object, div.islandora-large-image-object {
 .islandora-openseadragon {
   display: block;
   width: 100%;
-  height: 800px; }
+  height: 500px; }
   .islandora-openseadragon .openseadragon-canvas canvas {
     background-image: url(http://i.imgur.com/BJtKhwV.png) !important;
     background-color: #FFFFFF !important; }
@@ -3043,7 +3043,8 @@ div.islandora-pdf-object, div.islandora-large-image-object {
   text-transform: uppercase;
   display: flex;
   cursor: pointer;
-  margin-right: 10px; }
+  margin-right: 10px;
+  align-items: center; }
 
 .menuActive {
   background: rgba(255, 255, 255, 0.2); }
@@ -3068,6 +3069,32 @@ div.islandora-pdf-object, div.islandora-large-image-object {
   display: flex;
   justify-content: center;
   align-items: center; }
+
+h1#window-title {
+  background: none;
+  color: white;
+  font-size: 28px;
+  width: auto;
+  margin: 20px 0px;
+  padding: 0px;
+  border: 0px;
+  letter-spacing: normal;
+  font-weight: 700; }
+  h1#window-title #pdf-object-author {
+    display: none; }
+
+div.islandora-pdf-object, div.islandora-large-image-object {
+  margin-left: 0px;
+  margin-right: 0px; }
+
+#share a.jssocials-share-link.jssocials-share-link-count.jssocials-share-no-count {
+  max-width: none !important; }
+
+.compoundParent .compoundArrows {
+  display: none; }
+
+.compoundArrows {
+  cursor: default; }
 
 .backgroundDiv {
   position: absolute;
@@ -3123,6 +3150,26 @@ div.islandora-pdf-object, div.islandora-large-image-object {
   font-weight: normal !important;
   background: rgba(255, 255, 255, 0.2) !important; }
 
+.compoundObject #islandora-openseadragon {
+  height: 300px; }
+.compoundObject .islandora-openseadragon .openseadragon-canvas canvas {
+  background-image: none !important;
+  background-color: transparent !important; }
+.compoundObject .islandora-pdf-content, .compoundObject .islandora-large-image-content {
+  background-color: rgba(0, 0, 0, 0.07);
+  background-image: none;
+  border: 0px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  padding: 0px;
+  float: left;
+  width: 100% !important;
+  max-width: 100%;
+  position: relative;
+  overflow-x: hidden;
+  margin-top: 10px;
+  margin-bottom: 10px; }
 .compoundObject form#islandora-ip-embargo-object-embargo-form {
   background: #efefef;
   margin-bottom: 20px;
@@ -3203,7 +3250,7 @@ div.islandora-pdf-object, div.islandora-large-image-object {
     transition-delay: 0.5s;
     opacity: 1; }
 .compoundObject .itemMenu {
-  padding-top: 50px;
+  padding-top: 0px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
   .compoundObject .itemMenu ul.tabs {
     border: 0px;
@@ -3226,8 +3273,9 @@ div.islandora-pdf-object, div.islandora-large-image-object {
   background-repeat: no-repeat;
   background-position: left;
   padding-right: 10px; }
-.compoundObject a#islandora-compound-next-link {
-  margin: 0px; }
+.compoundObject a#islandora-compound-next-link, .compoundObject a#islandora-compound-previous-link {
+  margin: 0px;
+  max-width: none !important; }
 .compoundObject span#islandora-compound-sequence-position {
   margin: 0px; }
 .compoundObject .compoundGallery_header a {
@@ -3318,6 +3366,30 @@ div.islandora-pdf-object, div.islandora-large-image-object {
       line-height: normal; }
       .compoundObject .compoundGlance .tagsGlance .modsSubject a {
         color: #4d4d4d; }
+
+.compoundChild .compoundSelect .active {
+  cursor: default; }
+.compoundChild div#block-system-main {
+  height: 0px !important; }
+.compoundChild .contentIcon {
+  margin-left: 20px; }
+.compoundChild .compoundGallery_header {
+  background: #1a1a1a;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07); }
+  .compoundChild .compoundGallery_header .compoundParent {
+    font-size: 20px;
+    color: #ffffff;
+    padding: 10px 0px; }
+.compoundChild .compoundSelect {
+  height: 80px;
+  border: 1px solid rgba(255, 255, 255, 0.07); }
+  .compoundChild .compoundSelect a.compoundSelect-title {
+    padding: 40px 40px; }
+.compoundChild .compoundGallery {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  background: #1a1a1a; }
 
 /*BEGIN test area*/
 section#block-islandora-solr-sort .item-list {
