@@ -4308,42 +4308,55 @@ padding-top:5px;
 }
 
 .compoundChild{
-.compoundSelect .active{
-  cursor: default;
-}
-
-div#block-system-main {
-height: 0px!important;
-}  
-  .contentIcon {
-  margin-left: 20px;
-  }
-
-  .compoundGallery_header {
-    background: #1a1a1a;
-    border-bottom: 1px solid rgba(255, 255, 255, .07);
-    .compoundParent {
-    font-size: 20px;
-    color: #ffffff;
-    padding: 10px 0px;
+    .compoundSelect .active{
+    cursor: default;
     }
-}
 
-  .compoundSelect{
+    div#block-system-main {
+      height: 0px!important;
+      }  
+      .contentIcon {
+      margin-left: 20px;
+    }
+
+    .compoundGallery_header {
+      background: #1a1a1a;
+      border-bottom: 1px solid rgba(255, 255, 255, .07);
+      .compoundParent {
+      font-size: 20px;
+      color: #ffffff;
+      padding: 10px 0px;
+      }
+    }
+
+    .compoundSelect{
     height: 80px;
     border: 1px solid rgba(255, 255, 255, 0.07);      
       a.compoundSelect-title {
       padding: 40px 40px;
       }        
-  }
-.compoundGallery {
+    }
+
+    .compoundGallery {
     display: flex;
     flex-wrap: wrap;
     padding: 10px;
     background: #1a1a1a;
+    }
 
-}  
+.compoundGlance {
+    padding-top: 0px!important;
+    background: #1a1a1a;
+}
 
+
+
+td.modsDesc, .tagsGlance {
+    padding: 20px!important;
+}      
+td.modsDesc{
+  padding-bottom: 0px!important;
+}
 
 }
 

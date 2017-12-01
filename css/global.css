@@ -3390,6 +3390,13 @@ div.islandora-pdf-object, div.islandora-large-image-object {
   flex-wrap: wrap;
   padding: 10px;
   background: #1a1a1a; }
+.compoundChild .compoundGlance {
+  padding-top: 0px !important;
+  background: #1a1a1a; }
+.compoundChild td.modsDesc, .compoundChild .tagsGlance {
+  padding: 20px !important; }
+.compoundChild td.modsDesc {
+  padding-bottom: 0px !important; }
 
 /*BEGIN test area*/
 section#block-islandora-solr-sort .item-list {
