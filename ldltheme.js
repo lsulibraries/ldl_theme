@@ -276,11 +276,16 @@ if($('.institution-collection-list-a').length < 4){
         else {
         $("body").addClass('compoundParent');
         }
+        if ($('.compoundChild #islandora-openseadragon').length){
+        $("body").addClass('compoundChildImage');
+        }
         $("<div class='compoundArrows userSelect'/>").appendTo(".userMenu");        
         $('#islandora-compound-sequence-position, #islandora-compound-previous-link, #islandora-compound-next-link').appendTo('.compoundArrows');
         $('.compoundChild #block-system-main .block-inner .content > div').insertAfter('.itemMenu');
         $('#window-title').insertAfter('.itemMenu');
-
+        $("<div class='childIcon childImage'/>").insertBefore(".compoundChild #window-title");
+        $(".childIcon, #window-title").wrapAll("<div class='childHeader'/>");
+        $('#block-system-main').remove();
 }
 
 $("#share").jsSocials({
