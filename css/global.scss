@@ -43,6 +43,9 @@ $manageLegend: 'https://i.imgur.com/3fcNTbJ.png';
 $infoLegend: 'https://i.imgur.com/zK6anrR.png';
 $downloadLegend: 'https://i.imgur.com/rthA4J4.png';
 
+$darkTransparent: rgba(0, 0, 0, .26);
+$lightTransparent: rgba(255, 255, 255, .16);
+
 .noClick{
    pointer-events: none;
 }
@@ -3858,7 +3861,6 @@ div {
 
 .userMenu {
     display: flex;
-    padding-top: 10px;
     padding-bottom: 30px;
 }
 
@@ -3876,10 +3878,6 @@ div {
     cursor: pointer;
     margin-right: 10px;    
     align-items: center;    
-}
-
-.menuActive {
-    background: rgba(255, 255, 255, .2);
 }
 
 .iconSelect {
@@ -3964,7 +3962,7 @@ div.islandora-pdf-object, div.islandora-large-image-object {
 }
 
 .contentLabel{
-    background: rgba(255, 255, 255, .20);
+    background: $darkTransparent;
     color: white;
     text-transform: uppercase;
     line-height: 14px;
@@ -3979,7 +3977,7 @@ div.islandora-pdf-object, div.islandora-large-image-object {
 .institutionLabel {
     height: 50px;
     width: 100px;
-    background: rgba(255, 255, 255, 0.2);
+    background: $darkTransparent;
     position: relative;
     margin-left: 22px;
     background-size: 48px;
@@ -4018,13 +4016,28 @@ div.islandora-pdf-object, div.islandora-large-image-object {
     }    
 }
 
+#region-content{
+            transition-duration: 1s;
+
+}
+
 .metaOpened #region-content{
 width: 67vw;
           transition-duration: 1s;
            transition-delay:0s;          
 }
 
+
+#block-islandora-compound-object-compound-jail-display .content a {
+max-width: none!important;
+}
+
+
   .compoundObject {
+
+#region-sidebar-first a:link, #region-sidebar-first a:visited {
+    color: #438fca;
+}
 
 header#section-header {
     position: fixed;
@@ -4043,7 +4056,7 @@ header#section-header {
 
 .islandora-openseadragon .openseadragon-canvas canvas {
     background-image: none!important;
-    background-color: #1a1a1a !important;
+    background-color: transparent!important;
 }
 
 .navigator div.openseadragon-canvas {
@@ -4051,7 +4064,7 @@ header#section-header {
 }
 
 .islandora-pdf-content, .islandora-large-image-content {
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: $darkTransparent;
     background-image: none;
     border: 0px;
     -webkit-border-radius: 0px;
@@ -4124,20 +4137,7 @@ form#islandora-ip-embargo-object-embargo-form {
       background-image: url($compoundLegend);
       }
 
-      #region-sidebar-first{
-      transform: scale(0, 1); /* Equal to scaleX(0.7) scaleY(0.7) */
-      -webkit-transition-property: width; /* Safari */
-      transition-property: width;
-      width: 0px;
-      transition-duration: 1s;
-        .region-sidebar-first-inner{
-           //transform: translate(0vh, 100vh);       
-          //transition-duration: 1s;
-           //transition-delay:0.5s;    
-            //position: absolute;
-padding: 40px;            
-        }
-      }
+
 
       .block-compound-jail-display .block-inner > .content{
         margin: 0 10%;
@@ -4158,13 +4158,24 @@ padding: 40px;
        }
 
       #region-sidebar-first{
-            background: #1a1a1a;
-    color: white;  
+        transform: scale(0, 1); /* Equal to scaleX(0.7) scaleY(0.7) */
+        -webkit-transition-property: width; /* Safari */
+        transition-property: width;
+        width: 0px;
+        transition-duration: 1s;
+        background: #1a1a1a;
+        color: white;          
+        opacity: 0;
+        border-right: 1px solid #262626;
+        .region-sidebar-first-inner{
+        padding: 40px;            
+        }
       }
 
       #region-sidebar-first.infoOpened{
       transform: scale(1, 1); /* Equal to scaleX(0.7) scaleY(0.7) */
       width: 33%;
+      opacity: 1;
       transition-duration: 1s;
       position: fixed;
       height: calc(100vh - 90px);    
@@ -4259,13 +4270,13 @@ span#islandora-compound-sequence-position {
       .compoundGallery {
         display: flex;
         flex-wrap: wrap;
-    border-bottom: 1px solid rgba(255, 255, 255, .2);
+    border-bottom: 1px solid rgba(255, 255, 255, .26);
     padding-bottom: 10px;        
       }
 
     #block-islandora-compound-object-compound-jail-display > div {
         border-bottom: none!important;
-        padding-bottom: 1em;
+        padding-bottom: 60px;
         padding-right: 10px;
         @include flexbox;
         justify-content: center;        
@@ -4341,8 +4352,65 @@ padding-top:5px;
 
 .compoundChild{
 
+.infoToggle {
+    width: 174px;
+    display: flex;
+    color: white;
+    margin-bottom: 11px;
+    text-transform: uppercase;
+    border: 1px solid $darkTransparent;
+    cursor: pointer;   
+    .iconSelect {
+    background-color: $darkTransparent;
+    height: 30px;
+    width: 58px;    
+    }    
+    .textSelect {
+    padding-left: 12px;
+    padding-right: 12px;
+    font-size: 13px;
+    width: 92px;
+    text-align: center;
+    }
+}
+
+.menuActive .iconSelect {
+    background-color: transparent;
+}
+
+.menuActive .textSelect {
+    background: $darkTransparent;
+}
+
+.backgroundDiv {
+    position: absolute;
+    width: calc(100% + 40px);
+    height: calc(100% + 40px);
+    filter: blur(50px) brightness(0.4) contrast(0.6);
+    background-repeat: no-repeat;
+    background-size: cover;
+    left: -20px;
+    top: -20px;
+}
+
+.childNotice {
+    height: 50px;
+    color: #FF5370;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 20px;
+    text-transform: uppercase;
+    border-right: 1px solid $lightTransparent;
+
+i {
+    margin-left: 15px;
+}
+
+}
+
 .compoundObject .islandora-openseadragon .openseadragon-canvas canvas {
-      background-color: rgb(26, 26, 26)!important;
+      background-color: transparent!important;
 }
 
 .iconSelect{
@@ -4371,14 +4439,14 @@ padding-top:5px;
 }
 
 .childHeader {
-    background: #1a1a1a;
+    background: $darkTransparent;
     display: flex;
-border-bottom: 1px solid #262626;
+margin-bottom: 1px;
 }
 
 .childIcon{
     width: 35px;
-    height: 60px;
+    height: 50px;
     float: left;
     background-repeat: no-repeat;
     background-size: 25px;
@@ -4392,15 +4460,18 @@ border-bottom: 1px solid #262626;
 }
 .islandora-large-image-content {
     margin-top: 0px;
+    margin-bottom: 15px;
 }
 
 
     h1#window-title{
-    border-right: 1px solid rgba(255, 255, 255, 0.07);      
+    border-right: 1px solid $lightTransparent;
     margin: 0px;
-    padding: 23px;
-    padding-left: 0px;
-    padding-bottom: 17px;    
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    padding-right: 20px;
 }
     .compoundSelect .active{
     cursor: default;
@@ -4414,8 +4485,8 @@ border-bottom: 1px solid #262626;
     }
 
     .compoundGallery_header {
-      background: #1a1a1a;
-      border-bottom: 1px solid rgba(255, 255, 255, .07);
+      background: $darkTransparent;
+margin-bottom:1px;
       .compoundParent {
       font-size: 20px;
       color: #ffffff;
@@ -4435,14 +4506,14 @@ border-bottom: 1px solid #262626;
     display: flex;
     flex-wrap: wrap;
     padding: 20px;
-    background: #1a1a1a;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
-    padding-bottom: 10px;  
+    background: $darkTransparent;
+    padding-bottom: 0px;  
+    border-bottom: 0px;
     }
 
 .compoundGlance {
     padding-top: 0px!important;
-    background: #1a1a1a;
+    background: $darkTransparent;
 }
 
 
@@ -4469,19 +4540,21 @@ td.modsDesc{
     span.metadataValue {
     color: #a5a5a5;
     }
-    
+
 }
 
 .nano > .nano-pane > .nano-slider {
-    background: #fff;
+    background: #a5a5a5;
   }
 
 
 .nano > .nano-pane{
-      margin-top: 20px;
-margin-bottom: 20px;
+    background: rgba(100, 100, 100, 0.25);  
+    margin-top: 20px;
+    margin-bottom: 20px;
     margin-right: 10px;
-}
+    width: 6px;    
+    }
 }
 
 //end compoundObject

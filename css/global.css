@@ -3033,7 +3033,6 @@ div.islandora-pdf-object, div.islandora-large-image-object {
 
 .userMenu {
   display: flex;
-  padding-top: 10px;
   padding-bottom: 30px; }
 
 .userSelect:hover {
@@ -3048,9 +3047,6 @@ div.islandora-pdf-object, div.islandora-large-image-object {
   cursor: pointer;
   margin-right: 10px;
   align-items: center; }
-
-.menuActive {
-  background: rgba(255, 255, 255, 0.2); }
 
 .iconSelect {
   width: 50px;
@@ -3111,7 +3107,7 @@ div.islandora-pdf-object, div.islandora-large-image-object {
   top: -20px; }
 
 .contentLabel {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.26);
   color: white;
   text-transform: uppercase;
   line-height: 14px;
@@ -3125,7 +3121,7 @@ div.islandora-pdf-object, div.islandora-large-image-object {
 .institutionLabel {
   height: 50px;
   width: 100px;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.26);
   position: relative;
   margin-left: 22px;
   background-size: 48px;
@@ -3154,11 +3150,19 @@ div.islandora-pdf-object, div.islandora-large-image-object {
   font-weight: normal !important;
   background: rgba(255, 255, 255, 0.2) !important; }
 
+#region-content {
+  transition-duration: 1s; }
+
 .metaOpened #region-content {
   width: 67vw;
   transition-duration: 1s;
   transition-delay: 0s; }
 
+#block-islandora-compound-object-compound-jail-display .content a {
+  max-width: none !important; }
+
+.compoundObject #region-sidebar-first a:link, .compoundObject #region-sidebar-first a:visited {
+  color: #438fca; }
 .compoundObject header#section-header {
   position: fixed;
   top: 0px;
@@ -3170,9 +3174,9 @@ div.islandora-pdf-object, div.islandora-large-image-object {
   background: #1a1a1a; }
 .compoundObject .islandora-openseadragon .openseadragon-canvas canvas {
   background-image: none !important;
-  background-color: #1a1a1a !important; }
+  background-color: transparent !important; }
 .compoundObject .islandora-pdf-content, .compoundObject .islandora-large-image-content {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.26);
   background-image: none;
   border: 0px;
   -webkit-border-radius: 0px;
@@ -3227,16 +3231,6 @@ div.islandora-pdf-object, div.islandora-large-image-object {
   border-bottom: 1px solid rgba(0, 0, 0, 0.08); }
 .compoundObject .contentLabel {
   background-image: url("https://i.imgur.com/azpOWoN.png"); }
-.compoundObject #region-sidebar-first {
-  transform: scale(0, 1);
-  /* Equal to scaleX(0.7) scaleY(0.7) */
-  -webkit-transition-property: width;
-  /* Safari */
-  transition-property: width;
-  width: 0px;
-  transition-duration: 1s; }
-  .compoundObject #region-sidebar-first .region-sidebar-first-inner {
-    padding: 40px; }
 .compoundObject .block-compound-jail-display .block-inner > .content {
   margin: 0 10%;
   max-width: 1200px; }
@@ -3253,12 +3247,24 @@ div.islandora-pdf-object, div.islandora-large-image-object {
   background: #FF5370;
   margin: 0px; }
 .compoundObject #region-sidebar-first {
+  transform: scale(0, 1);
+  /* Equal to scaleX(0.7) scaleY(0.7) */
+  -webkit-transition-property: width;
+  /* Safari */
+  transition-property: width;
+  width: 0px;
+  transition-duration: 1s;
   background: #1a1a1a;
-  color: white; }
+  color: white;
+  opacity: 0;
+  border-right: 1px solid #262626; }
+  .compoundObject #region-sidebar-first .region-sidebar-first-inner {
+    padding: 40px; }
 .compoundObject #region-sidebar-first.infoOpened {
   transform: scale(1, 1);
   /* Equal to scaleX(0.7) scaleY(0.7) */
   width: 33%;
+  opacity: 1;
   transition-duration: 1s;
   position: fixed;
   height: calc(100vh - 90px); }
@@ -3318,11 +3324,11 @@ div.islandora-pdf-object, div.islandora-large-image-object {
 .compoundObject .compoundGallery {
   display: flex;
   flex-wrap: wrap;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.26);
   padding-bottom: 10px; }
 .compoundObject #block-islandora-compound-object-compound-jail-display > div {
   border-bottom: none !important;
-  padding-bottom: 1em;
+  padding-bottom: 60px;
   padding-right: 10px;
   display: -webkit-box;
   display: -moz-box;
@@ -3380,8 +3386,50 @@ div.islandora-pdf-object, div.islandora-large-image-object {
       .compoundObject .compoundGlance .tagsGlance .modsSubject a {
         color: #4d4d4d; }
 
+.compoundChild .infoToggle {
+  width: 174px;
+  display: flex;
+  color: white;
+  margin-bottom: 11px;
+  text-transform: uppercase;
+  border: 1px solid rgba(0, 0, 0, 0.26);
+  cursor: pointer; }
+  .compoundChild .infoToggle .iconSelect {
+    background-color: rgba(0, 0, 0, 0.26);
+    height: 30px;
+    width: 58px; }
+  .compoundChild .infoToggle .textSelect {
+    padding-left: 12px;
+    padding-right: 12px;
+    font-size: 13px;
+    width: 92px;
+    text-align: center; }
+.compoundChild .menuActive .iconSelect {
+  background-color: transparent; }
+.compoundChild .menuActive .textSelect {
+  background: rgba(0, 0, 0, 0.26); }
+.compoundChild .backgroundDiv {
+  position: absolute;
+  width: calc(100% + 40px);
+  height: calc(100% + 40px);
+  filter: blur(50px) brightness(0.4) contrast(0.6);
+  background-repeat: no-repeat;
+  background-size: cover;
+  left: -20px;
+  top: -20px; }
+.compoundChild .childNotice {
+  height: 50px;
+  color: #FF5370;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 20px;
+  text-transform: uppercase;
+  border-right: 1px solid rgba(255, 255, 255, 0.16); }
+  .compoundChild .childNotice i {
+    margin-left: 15px; }
 .compoundChild .compoundObject .islandora-openseadragon .openseadragon-canvas canvas {
-  background-color: #1a1a1a !important; }
+  background-color: transparent !important; }
 .compoundChild .iconSelect {
   border: 0px; }
 .compoundChild .userSelect {
@@ -3398,12 +3446,12 @@ div.islandora-pdf-object, div.islandora-large-image-object {
 .compoundChild .itemMenu {
   border: 0px; }
 .compoundChild .childHeader {
-  background: #1a1a1a;
+  background: rgba(0, 0, 0, 0.26);
   display: flex;
-  border-bottom: 1px solid #262626; }
+  margin-bottom: 1px; }
 .compoundChild .childIcon {
   width: 35px;
-  height: 60px;
+  height: 50px;
   float: left;
   background-repeat: no-repeat;
   background-size: 25px;
@@ -3412,13 +3460,16 @@ div.islandora-pdf-object, div.islandora-large-image-object {
 .compoundChild .childImage {
   background-image: url(https://i.imgur.com/4LmxSra.png); }
 .compoundChild .islandora-large-image-content {
-  margin-top: 0px; }
+  margin-top: 0px;
+  margin-bottom: 15px; }
 .compoundChild h1#window-title {
-  border-right: 1px solid rgba(255, 255, 255, 0.07);
+  border-right: 1px solid rgba(255, 255, 255, 0.16);
   margin: 0px;
-  padding: 23px;
-  padding-left: 0px;
-  padding-bottom: 17px; }
+  display: flex;
+  font-size: 20px;
+  justify-content: center;
+  align-items: center;
+  padding-right: 20px; }
 .compoundChild .compoundSelect .active {
   cursor: default; }
 .compoundChild div#block-system-main {
@@ -3426,8 +3477,8 @@ div.islandora-pdf-object, div.islandora-large-image-object {
 .compoundChild .contentIcon {
   margin-left: 20px; }
 .compoundChild .compoundGallery_header {
-  background: #1a1a1a;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.07); }
+  background: rgba(0, 0, 0, 0.26);
+  margin-bottom: 1px; }
   .compoundChild .compoundGallery_header .compoundParent {
     font-size: 20px;
     color: #ffffff;
@@ -3441,12 +3492,12 @@ div.islandora-pdf-object, div.islandora-large-image-object {
   display: flex;
   flex-wrap: wrap;
   padding: 20px;
-  background: #1a1a1a;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
-  padding-bottom: 10px; }
+  background: rgba(0, 0, 0, 0.26);
+  padding-bottom: 0px;
+  border-bottom: 0px; }
 .compoundChild .compoundGlance {
   padding-top: 0px !important;
-  background: #1a1a1a; }
+  background: rgba(0, 0, 0, 0.26); }
 .compoundChild td.modsDesc, .compoundChild .tagsGlance {
   padding: 20px !important; }
 .compoundChild td.modsDesc {
@@ -3460,11 +3511,13 @@ div.islandora-pdf-object, div.islandora-large-image-object {
 .compoundChild .metadataContainer span.metadataValue {
   color: #a5a5a5; }
 .compoundChild .nano > .nano-pane > .nano-slider {
-  background: #fff; }
+  background: #a5a5a5; }
 .compoundChild .nano > .nano-pane {
+  background: rgba(100, 100, 100, 0.25);
   margin-top: 20px;
   margin-bottom: 20px;
-  margin-right: 10px; }
+  margin-right: 10px;
+  width: 6px; }
 
 /*BEGIN test area*/
 section#block-islandora-solr-sort .item-list {

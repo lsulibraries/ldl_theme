@@ -267,7 +267,7 @@ if($('.institution-collection-list-a').length < 4){
         $(".manageParent, ul.tabs").appendTo(".itemMenu").wrapAll('<div class="manageMenu"/>'); //moves the view/ip embargo/manage menu
         $("<div class='userMenu'/>").insertAfter(".manageMenu");  //inserts compoundGlance
         $("<div class='compoundGlance'/>").insertAfter(".compoundGallery");  //inserts compoundGlance
-        $("<div class='infoToggle userSelect'><div class='iconSelect'></div><div class='textSelect'>info</div></div>").appendTo(".userMenu"); //adds toggle for parent metadata
+        $("<div class='infoToggle userSelect'><div class='iconSelect'></div><div class='textSelect'>show details</div></div>").appendTo(".userMenu"); //adds toggle for parent metadata
         $(".downloadLink").addClass('userSelect').appendTo(".userMenu"); 
         $("<div id='share'/>").appendTo(".userMenu");        
         $("#clip").appendTo(".userMenu");              
@@ -294,13 +294,21 @@ if($('.institution-collection-list-a').length < 4){
         if ($('.compoundChild #islandora-openseadragon').length){
         $("body").addClass('compoundChildImage');
         }
+
+
         $("<div class='compoundArrows userSelect'/>").appendTo(".userMenu");        
         $('#islandora-compound-sequence-position, #islandora-compound-previous-link, #islandora-compound-next-link').appendTo('.compoundArrows');
         $('.compoundChild #block-system-main .block-inner .content > div').insertAfter('.itemMenu');
         $('#window-title').insertAfter('.itemMenu');
+
+        //begin compoundChild
         $("<div class='childIcon childImage'/>").insertBefore(".compoundChild #window-title");
         $(".childIcon, #window-title").wrapAll("<div class='childHeader'/>");
         $('#block-system-main').remove();
+        $('<div class="childNotice">Part of</div>').insertBefore('.compoundChild .compoundGallery_header .contentIcon');
+        $('.userMenu').insertAfter('#window-title');
+        $('.infoToggle').removeClass('userSelect').insertBefore('.childHeader');
+
 }
 
 $("#share").jsSocials({
