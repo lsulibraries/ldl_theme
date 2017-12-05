@@ -3166,7 +3166,8 @@ div.islandora-pdf-object, div.islandora-large-image-object {
   width: 100%; }
 .compoundObject #zone-content {
   justify-content: flex-end;
-  padding-top: 90px; }
+  padding-top: 90px;
+  background: #1a1a1a; }
 .compoundObject .islandora-openseadragon .openseadragon-canvas canvas {
   background-image: none !important;
   background-color: #1a1a1a !important; }
@@ -3235,10 +3236,7 @@ div.islandora-pdf-object, div.islandora-large-image-object {
   width: 0px;
   transition-duration: 1s; }
   .compoundObject #region-sidebar-first .region-sidebar-first-inner {
-    transform: translate(0vh, 100vh);
-    transition-duration: 1s;
-    transition-delay: 0.5s;
-    position: absolute; }
+    padding: 40px; }
 .compoundObject .block-compound-jail-display .block-inner > .content {
   margin: 0 10%;
   max-width: 1200px; }
@@ -3254,19 +3252,16 @@ div.islandora-pdf-object, div.islandora-large-image-object {
 .compoundObject .compoundLabel::before {
   background: #FF5370;
   margin: 0px; }
+.compoundObject #region-sidebar-first {
+  background: #1a1a1a;
+  color: white; }
 .compoundObject #region-sidebar-first.infoOpened {
   transform: scale(1, 1);
   /* Equal to scaleX(0.7) scaleY(0.7) */
   width: 33%;
   transition-duration: 1s;
   position: fixed;
-  height: calc(100vh - 90px);
-  overflow-x: auto; }
-  .compoundObject #region-sidebar-first.infoOpened .region-sidebar-first-inner {
-    transform: translate(0vh, 0vh);
-    transition-duration: 1s;
-    transition-delay: 0.5s;
-    opacity: 1; }
+  height: calc(100vh - 90px); }
 .compoundObject .itemMenu {
   padding-top: 0px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
@@ -3456,6 +3451,20 @@ div.islandora-pdf-object, div.islandora-large-image-object {
   padding: 20px !important; }
 .compoundChild td.modsDesc {
   padding-bottom: 0px !important; }
+.compoundChild .metadataContainer .metadataRow {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px; }
+.compoundChild .metadataContainer span.metadataTitle {
+  font-weight: 700; }
+.compoundChild .metadataContainer span.metadataValue {
+  color: #a5a5a5; }
+.compoundChild .nano > .nano-pane > .nano-slider {
+  background: #fff; }
+.compoundChild .nano > .nano-pane {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 10px; }
 
 /*BEGIN test area*/
 section#block-islandora-solr-sort .item-list {

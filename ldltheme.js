@@ -218,13 +218,13 @@ if($('.institution-collection-list-a').length < 4){
 //begin compoundObject 
     if ($('.block-islandora-compound-object').length){
 
+    $("#sideMods").remove();
+
 
     $("body").addClass('compoundObject');
 
 
-        $("#region-sidebar-first").addClass('nano');
-        $(".nano > .region-inner").addClass('nano-content');
-$(".nano").nanoScroller({ alwaysVisible: true });
+
 
     //find widest image
         var widest = null;
@@ -280,6 +280,7 @@ $(".nano").nanoScroller({ alwaysVisible: true });
               $(this).toggleClass('menuActive');
               $('#region-sidebar-first').toggleClass('infoOpened');
               $('body').toggleClass('metaOpened');
+        $(".nano").nanoScroller({ alwaysVisible: false });
 
           });           
         sr.reveal('.modsTable', { duration: 200, delay: 850,  easing: 'linear', scale: 1, }, 20);
@@ -309,6 +310,29 @@ $("#share").jsSocials({
     showCount: "inside",
     shares: ["twitter", "facebook"]
 });
+
+
+        $('table').each(function (){
+            $(this).replaceWith( $(this).html()
+                .replace(/<tbody/gi, "<div class='metadataContainer'")
+                .replace(/<tr/gi, "<div class='metadataRow'")
+                .replace(/<\/tr>/gi, "</div>")
+                .replace(/<td/gi, "<span")
+                .replace(/<\/td>/gi, "</span>")
+                .replace(/<\/tbody/gi, "<\/div")
+            );
+        });
+
+        $("#region-sidebar-first").addClass('nano');
+        $(".nano > .region-inner").appendTo('#side');
+        $('#sideMods, .nano > .region-inner').wrapAll('<div class="metadataSidebar"/>');
+        $(".metadataSidebar").addClass('nano-content');
+        $(".metadataRow span:first-child").addClass("metadataTitle");  
+        $(".metadataRow span:nth-child(2n)").addClass("metadataValue");  
+        $(".metadataContainer div:first-child").remove();  //removes weird h3 titles
+        $(".metadataSidebar > .region-inner > .metadataContainer:first-child").addClass("itemMetadata");  
+        $(".metadataSidebar > .region-inner > .metadataContainer:nth-child(2n + 0)").addClass("compoundMetadata");  
+
 
 //end compoundObject
 
@@ -554,6 +578,7 @@ $('.about-ldc a').onclick = function() {
             }
 
 
+
 //rotator
 
 
@@ -742,6 +767,7 @@ var currentInstitution =  $( "ul.breadcrumb a.active" ).text();
 
       $( " » " ).replaceWith( " / " );
 
+
      // $("#edit-islandora-simple-search-query")
      //   .focus(function() {
      //         if (this.value === this.defaultValue) {
@@ -818,5 +844,7 @@ var currentInstitution =  $( "ul.breadcrumb a.active" ).text();
   //});
 
 //end scroll
+
+
 }
 }(jQuery));
