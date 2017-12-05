@@ -3956,6 +3956,7 @@ div.islandora-pdf-object, div.islandora-large-image-object {
     width: calc(100% + 40px);
     height: calc(100% + 40px);
     filter: blur(20px) brightness(0.5);
+    -ms-filter: blur(5px);
     background-repeat: no-repeat;
     background-size: cover;
     left: -20px;
@@ -4017,13 +4018,31 @@ div.islandora-pdf-object, div.islandora-large-image-object {
     }    
 }
 
+.metaOpened #region-content{
+width: 67vw;
+          transition-duration: 1s;
+           transition-delay:0s;          
+}
+
   .compoundObject {
+
+header#section-header {
+    position: fixed;
+    top: 0px;
+    z-index: 888;
+    width: 100%;
+}
+
+#zone-content{
+      justify-content: flex-end;
+    padding-top: 90px;      
+}
 
 
 
 .islandora-openseadragon .openseadragon-canvas canvas {
     background-image: none!important;
-    background-color: transparent !important;
+    background-color: #1a1a1a !important;
 }
 
 .navigator div.openseadragon-canvas {
@@ -4114,7 +4133,7 @@ form#islandora-ip-embargo-object-embargo-form {
            transform: translate(0vh, 100vh);       
           transition-duration: 1s;
            transition-delay:0.5s;    
-            opacity: 0;
+            position: absolute;
         }
       }
 
@@ -4138,9 +4157,11 @@ form#islandora-ip-embargo-object-embargo-form {
 
       #region-sidebar-first.infoOpened{
       transform: scale(1, 1); /* Equal to scaleX(0.7) scaleY(0.7) */
-      width: 25%;
+      width: 33%;
       transition-duration: 1s;
-
+      position: fixed;
+      height: calc(100vh - 90px);    
+      overflow-x: auto;
         .region-sidebar-first-inner{
            transform: translate(0vh, 0vh);      
           transition-duration: 1s;
@@ -4313,8 +4334,25 @@ padding-top:5px;
 
 .compoundChild{
 
+.compoundObject .islandora-openseadragon .openseadragon-canvas canvas {
+      background-color: rgb(26, 26, 26)!important;
+}
+
+.iconSelect{
+  border: 0px;
+}
+
+.userSelect {
+    padding: 0px 0px;
+    border: 0px;
+    border-right: 1px solid #262626;
+    border-bottom: 1px solid #262626;
+    background-color: #1a1a1a;    
+    margin: 0px;    
+    }  
+
 .userMenu{
-  padding-bottom: 10px;
+  padding-bottom: 0px;
 }
 
 .navigator{
@@ -4327,6 +4365,8 @@ padding-top:5px;
 
 .childHeader {
     background: #1a1a1a;
+    display: flex;
+border-bottom: 1px solid #262626;
 }
 
 .childIcon{
@@ -4349,6 +4389,7 @@ padding-top:5px;
 
 
     h1#window-title{
+    border-right: 1px solid rgba(255, 255, 255, 0.07);      
     margin: 0px;
     padding: 23px;
     padding-left: 0px;

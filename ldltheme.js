@@ -256,7 +256,7 @@ if($('.institution-collection-list-a').length < 4){
         $("<div class='userMenu'/>").insertAfter(".manageMenu");  //inserts compoundGlance
         $("<div class='compoundGlance'/>").insertAfter(".compoundGallery");  //inserts compoundGlance
         $("<div class='infoToggle userSelect'><div class='iconSelect'></div><div class='textSelect'>info</div></div>").appendTo(".userMenu"); //adds toggle for parent metadata
-        $(".downloadLink").appendTo(".userMenu"); 
+        $(".downloadLink").addClass('userSelect').appendTo(".userMenu"); 
         $("<div id='share'/>").appendTo(".userMenu");        
         $("#clip").appendTo(".userMenu");              
         $(".modsDesc").clone().appendTo(".compoundGlance");
@@ -267,6 +267,8 @@ if($('.institution-collection-list-a').length < 4){
         $('.infoToggle').click(function(){
               $(this).toggleClass('menuActive');
               $('#region-sidebar-first').toggleClass('infoOpened');
+              $('body').toggleClass('metaOpened');
+
           });           
         sr.reveal('.modsTable', { duration: 200, delay: 850,  easing: 'linear', scale: 1, }, 20);
     
