@@ -425,6 +425,12 @@ a.institution-about-edit {
   .institution-search input[type="text"] {
     border: 2px solid $dccColor;
   }
+  .institutionLabel::before{
+    background: $dccColor;
+  }  
+  .institutionLabel{
+    background-image: url($dccLogo);
+  }    
 }
 
 .lsmTheme {
@@ -442,6 +448,12 @@ a.institution-about-edit {
   .institution-search input[type="text"] {
     border: 2px solid $lsmColor;
   }
+  .institutionLabel::before{
+    background: $lsmColor;
+  }  
+  .institutionLabel{
+    background-image: url($lsmLogo);
+  }    
 }
 
 .lsuTheme {
@@ -485,6 +497,9 @@ a.institution-about-edit {
   .institution-search input[type="text"] {
     border: 2px solid #white;
   }
+  .institutionLabel::before{
+    background: #white;
+  }  
 }
 
 .lsusTheme {
@@ -492,6 +507,9 @@ a.institution-about-edit {
     background-image: url($lsusLogo);
     cursor: pointer;
   }
+  .institutionLabel{
+    background-image: url($lsusLogo);
+  }      
 }
 
 .lsuhscsTheme {
@@ -499,6 +517,9 @@ a.institution-about-edit {
     background-image: url($lsuhscsLogo);
     cursor: pointer;
   }
+  .institutionLabel{
+    background-image: url($lsuhscsLogo);
+  }      
 }
 
 .lsuhscTheme {
@@ -506,6 +527,9 @@ a.institution-about-edit {
     background-image: url($lsuhscLogo);
     cursor: pointer;
   }
+  .institutionLabel{
+    background-image: url($lsuhscLogo);
+  }       
 }
 .latechTheme {
   .institution-header, .collectionHeader, .institution-search::before, .child-institution-collections::before {
@@ -525,6 +549,12 @@ a.institution-about-edit {
   .institution-search input[type="text"] {
     border: 2px solid $latechColor;
   }
+  .institutionLabel::before{
+    background: $latechColor;
+  }  
+  .institutionLabel{
+    background-image: url($latechLogo);
+  }  
 }
 
 .loynoTheme {
@@ -551,6 +581,12 @@ a.institution-about-edit {
   .institution-search input[type="text"] {
     border: 2px solid $loynoColor;
   }
+  .institutionLabel::before{
+    background: $loynoColor;
+  }  
+  .institutionLabel{
+    background-image: url($loynoLogo);
+  }    
 }
 
 .mcneeseTheme {
@@ -568,6 +604,12 @@ a.institution-about-edit {
   .institution-search input[type="text"] {
     border: 2px solid $mcneeseColor;
   }
+  .institutionLabel::before{
+    background: $mcneeseColor;
+  }  
+  .institutionLabel{
+    background-image: url($mcneeseLogo);
+  }    
 }
 
 .nichollsTheme {
@@ -585,6 +627,12 @@ a.institution-about-edit {
   .institution-search input[type="text"] {
     border: 2px solid $nichollsColor;
   }
+  .institutionLabel::before{
+    background: $nichollsColor;
+  }  
+  .institutionLabel{
+    background-image: url($nichollsLogo);
+  }    
 }
 
 .nsuTheme {
@@ -602,6 +650,12 @@ a.institution-about-edit {
   .institution-search input[type="text"] {
     border: 2px solid $nsuColor;
   }
+  .institutionLabel::before{
+    background: $nsuColor;
+  }  
+  .institutionLabel{
+    background-image: url($nsuLogo);
+  }    
 }
 
 .subrTheme {
@@ -627,6 +681,12 @@ a.institution-about-edit {
   .institution-search input[type="text"] {
     border: 2px solid $subrColor;
   }
+  .institutionLabel::before{
+    background: $subrColor;
+  }  
+  .institutionLabel{
+    background-image: url($subrLogo);
+  }      
 }
 
 .stateTheme {
@@ -645,6 +705,12 @@ a.institution-about-edit {
   .institution-search input[type="text"] {
     border: 2px solid $stateColor;
   }
+  .institutionLabel::before{
+    background: $stateColor;
+  }  
+  .institutionLabel{
+    background-image: url($stateLogo);
+  }      
 }
 
 .hnocTheme {
@@ -662,6 +728,12 @@ a.institution-about-edit {
   .institution-search input[type="text"] {
     border: 2px solid $hnocColor;
   }
+  .institutionLabel::before{
+    background: $hnocColor;
+  }  
+  .institutionLabel{
+    background-image: url($hnocLogo);
+  }      
 }
 
 .tulaneTheme {
@@ -683,6 +755,13 @@ a.institution-about-edit {
 .institution-collection-list-item-count {
   display: none;
 }
+
+  .institutionLabel::before{
+    background: $tulaneColor;
+  }  
+  .institutionLabel{
+    background-image: url($tulaneLogo);
+  }    
 
 
 }
@@ -706,6 +785,12 @@ a.institution-about-edit {
   .institution-search input[type="text"] {
     border: 2px solid $ullColor;
   }
+  .institutionLabel::before{
+    background: $ullColor;
+  }  
+  .institutionLabel{
+    background-image: url($ullLogo);
+  }      
 }
 
 .ulmTheme {
@@ -723,6 +808,12 @@ a.institution-about-edit {
   .institution-search input[type="text"] {
     border: 2px solid $ulmColor;
   }
+  .institutionLabel::before{
+    background: $ulmColor;
+  }  
+  .institutionLabel{
+    background-image: url($ulmLogo);
+  }      
 }
 
 .unoTheme {
@@ -740,6 +831,12 @@ a.institution-about-edit {
   .institution-search input[type="text"] {
     border: 2px solid $unoColor;
   }
+  .institutionLabel::before{
+    background: $unoColor;
+  }  
+  .institutionLabel{
+    background-image: url($unoLogo);
+  }      
 }
 
 .vvilleTheme {
@@ -761,6 +858,12 @@ a.institution-about-edit {
   .institution-search input[type="text"] {
     border: 2px solid $vvilleColor;
   }
+  .institutionLabel::before{
+    background: $vvilleColor;
+  }  
+  .institutionLabel{
+    background-image: url($vvilleLogo);
+  }      
 }
 
 .tahillTheme, .fpocTheme, .page-islandora-object-islandoraroot {

@@ -217,6 +217,10 @@ a.institution-about-edit {
   border: 2px solid #083a07; }
 .dccTheme .institution-search input[type="text"] {
   border: 2px solid #083a07; }
+.dccTheme .institutionLabel::before, .dccTheme .compoundObject .compoundLabel::before, .compoundObject .dccTheme .compoundLabel::before {
+  background: #083a07; }
+.dccTheme .institutionLabel {
+  background-image: url("http://www.dcc.edu/_resources/images/logo-white.png"); }
 
 .lsmTheme .institution-header, .lsmTheme .collectionHeader, .lsmTheme .institution-search::before, .lsmTheme .child-institution-collections::before {
   background: #5d0e8b; }
@@ -227,6 +231,10 @@ a.institution-about-edit {
   border: 2px solid #5d0e8b; }
 .lsmTheme .institution-search input[type="text"] {
   border: 2px solid #5d0e8b; }
+.lsmTheme .institutionLabel::before, .lsmTheme .compoundObject .compoundLabel::before, .compoundObject .lsmTheme .compoundLabel::before {
+  background: #5d0e8b; }
+.lsmTheme .institutionLabel {
+  background-image: url("http://i.imgur.com/uimSOt2.png"); }
 
 .lsuTheme .institution-header, .lsuTheme .collectionHeader, .lsuTheme .institution-search::before, .lsuTheme .child-institution-collections::before {
   background: #3C1053; }
@@ -253,18 +261,26 @@ a.institution-about-edit {
   border: 2px solid #white; }
 .lsuhscTheme .institution-search input[type="text"], .lsusTheme .institution-search input[type="text"], .lsuhscsTheme .institution-search input[type="text"] {
   border: 2px solid #white; }
+.lsuhscTheme .institutionLabel::before, .lsuhscTheme .compoundObject .compoundLabel::before, .compoundObject .lsuhscTheme .compoundLabel::before, .lsusTheme .institutionLabel::before, .lsusTheme .compoundObject .compoundLabel::before, .compoundObject .lsusTheme .compoundLabel::before, .lsuhscsTheme .institutionLabel::before, .lsuhscsTheme .compoundObject .compoundLabel::before, .compoundObject .lsuhscsTheme .compoundLabel::before {
+  background: #white; }
 
 .lsusTheme .collectionLogo {
   background-image: url("http://www.lsus.edu/Images/Offices%20and%20Services/HR/LSUS%20Logo%2011102015.png");
   cursor: pointer; }
+.lsusTheme .institutionLabel {
+  background-image: url("http://www.lsus.edu/Images/Offices%20and%20Services/HR/LSUS%20Logo%2011102015.png"); }
 
 .lsuhscsTheme .collectionLogo {
   background-image: url("http://i.imgur.com/1lqbxiy.png");
   cursor: pointer; }
+.lsuhscsTheme .institutionLabel {
+  background-image: url("http://i.imgur.com/1lqbxiy.png"); }
 
 .lsuhscTheme .collectionLogo {
   background-image: url("http://i.imgur.com/FQdHpzz.png");
   cursor: pointer; }
+.lsuhscTheme .institutionLabel {
+  background-image: url("http://i.imgur.com/FQdHpzz.png"); }
 
 .latechTheme .institution-header, .latechTheme .collectionHeader, .latechTheme .institution-search::before, .latechTheme .child-institution-collections::before {
   background: #003087; }
@@ -277,6 +293,10 @@ a.institution-about-edit {
   border: 2px solid #003087; }
 .latechTheme .institution-search input[type="text"] {
   border: 2px solid #003087; }
+.latechTheme .institutionLabel::before, .latechTheme .compoundObject .compoundLabel::before, .compoundObject .latechTheme .compoundLabel::before {
+  background: #003087; }
+.latechTheme .institutionLabel {
+  background-image: url("http://grfx.cstv.com/schoolslt/latc/graphics/logos/latc-state-t.gif"); }
 
 .loynoTheme .institution-header, .loynoTheme .collectionHeader, .loynoTheme .institution-search::before, .loynoTheme .child-institution-collections::before {
   background: #660000; }
@@ -292,6 +312,10 @@ a.institution-about-edit {
   border: 2px solid #660000; }
 .loynoTheme .institution-search input[type="text"] {
   border: 2px solid #660000; }
+.loynoTheme .institutionLabel::before, .loynoTheme .compoundObject .compoundLabel::before, .compoundObject .loynoTheme .compoundLabel::before {
+  background: #660000; }
+.loynoTheme .institutionLabel {
+  background-image: url("http://i.imgur.com/wsbykd6.png"); }
 
 .mcneeseTheme .institution-header, .mcneeseTheme .collectionHeader, .mcneeseTheme .institution-search::before, .mcneeseTheme .child-institution-collections::before {
   background: #00529b; }
@@ -302,6 +326,10 @@ a.institution-about-edit {
   border: 2px solid #00529b; }
 .mcneeseTheme .institution-search input[type="text"] {
   border: 2px solid #00529b; }
+.mcneeseTheme .institutionLabel::before, .mcneeseTheme .compoundObject .compoundLabel::before, .compoundObject .mcneeseTheme .compoundLabel::before {
+  background: #00529b; }
+.mcneeseTheme .institutionLabel {
+  background-image: url("http://mcneesesports.com/images/header_logo.png"); }
 
 .nichollsTheme .institution-header, .nichollsTheme .collectionHeader, .nichollsTheme .institution-search::before, .nichollsTheme .child-institution-collections::before {
   background: #ae132a; }
@@ -312,6 +340,10 @@ a.institution-about-edit {
   border: 2px solid #ae132a; }
 .nichollsTheme .institution-search input[type="text"] {
   border: 2px solid #ae132a; }
+.nichollsTheme .institutionLabel::before, .nichollsTheme .compoundObject .compoundLabel::before, .compoundObject .nichollsTheme .compoundLabel::before {
+  background: #ae132a; }
+.nichollsTheme .institutionLabel {
+  background-image: url("http://i.imgur.com/rGvlEDN.png"); }
 
 .nsuTheme .institution-header, .nsuTheme .collectionHeader, .nsuTheme .institution-search::before, .nsuTheme .child-institution-collections::before {
   background: #663399; }
@@ -322,6 +354,10 @@ a.institution-about-edit {
   border: 2px solid #663399; }
 .nsuTheme .institution-search input[type="text"] {
   border: 2px solid #663399; }
+.nsuTheme .institutionLabel::before, .nsuTheme .compoundObject .compoundLabel::before, .compoundObject .nsuTheme .compoundLabel::before {
+  background: #663399; }
+.nsuTheme .institutionLabel {
+  background-image: url("https://www.nsula.edu/wp-content/uploads/Seal.png"); }
 
 .subrTheme .institution-header, .subrTheme .collectionHeader, .subrTheme .institution-search::before, .subrTheme .child-institution-collections::before {
   background: #75B2DD;
@@ -337,6 +373,10 @@ a.institution-about-edit {
   border: 2px solid #75B2DD; }
 .subrTheme .institution-search input[type="text"] {
   border: 2px solid #75B2DD; }
+.subrTheme .institutionLabel::before, .subrTheme .compoundObject .compoundLabel::before, .compoundObject .subrTheme .compoundLabel::before {
+  background: #75B2DD; }
+.subrTheme .institutionLabel {
+  background-image: url("http://i.imgur.com/pNgJAG2.png"); }
 
 .stateTheme .institution-header, .stateTheme .collectionHeader, .stateTheme .institution-search::before, .stateTheme .child-institution-collections::before {
   background: #304da0; }
@@ -347,6 +387,10 @@ a.institution-about-edit {
   border: 2px solid #304da0; }
 .stateTheme .institution-search input[type="text"] {
   border: 2px solid #304da0; }
+.stateTheme .institutionLabel::before, .stateTheme .compoundObject .compoundLabel::before, .compoundObject .stateTheme .compoundLabel::before {
+  background: #304da0; }
+.stateTheme .institutionLabel {
+  background-image: url("http://i.imgur.com/y1H8EGr.png"); }
 
 .hnocTheme .institution-header, .hnocTheme .collectionHeader, .hnocTheme .institution-search::before, .hnocTheme .child-institution-collections::before {
   background: #254550; }
@@ -357,6 +401,10 @@ a.institution-about-edit {
   border: 2px solid #254550; }
 .hnocTheme .institution-search input[type="text"] {
   border: 2px solid #254550; }
+.hnocTheme .institutionLabel::before, .hnocTheme .compoundObject .compoundLabel::before, .compoundObject .hnocTheme .compoundLabel::before {
+  background: #254550; }
+.hnocTheme .institutionLabel {
+  background-image: url("http://i.imgur.com/lRaktDw.png"); }
 
 .tulaneTheme .institution-header, .tulaneTheme .collectionHeader, .tulaneTheme .institution-search::before, .tulaneTheme .child-institution-collections::before {
   background: #032a17; }
@@ -369,6 +417,10 @@ a.institution-about-edit {
   border: 2px solid #032a17; }
 .tulaneTheme .institution-collection-list-item-count {
   display: none; }
+.tulaneTheme .institutionLabel::before, .tulaneTheme .compoundObject .compoundLabel::before, .compoundObject .tulaneTheme .compoundLabel::before {
+  background: #032a17; }
+.tulaneTheme .institutionLabel {
+  background-image: url("http://i.imgur.com/geTKaHp.png"); }
 
 .ullTheme .institution-header, .ullTheme .collectionHeader, .ullTheme .institution-search::before, .ullTheme .child-institution-collections::before {
   background: #a00b0b; }
@@ -381,6 +433,10 @@ a.institution-about-edit {
   border: 2px solid #a00b0b; }
 .ullTheme .institution-search input[type="text"] {
   border: 2px solid #a00b0b; }
+.ullTheme .institutionLabel::before, .ullTheme .compoundObject .compoundLabel::before, .compoundObject .ullTheme .compoundLabel::before {
+  background: #a00b0b; }
+.ullTheme .institutionLabel {
+  background-image: url("http://i.imgur.com/aqD5A3q.png"); }
 
 .ulmTheme .institution-header, .ulmTheme .collectionHeader, .ulmTheme .institution-search::before, .ulmTheme .child-institution-collections::before {
   background: #800029; }
@@ -391,6 +447,10 @@ a.institution-about-edit {
   border: 2px solid #800029; }
 .ulmTheme .institution-search input[type="text"] {
   border: 2px solid #800029; }
+.ulmTheme .institutionLabel::before, .ulmTheme .compoundObject .compoundLabel::before, .compoundObject .ulmTheme .compoundLabel::before {
+  background: #800029; }
+.ulmTheme .institutionLabel {
+  background-image: url("http://www.ulm.edu/_resources/images/ulm-academic-logo-circle.png"); }
 
 .unoTheme .institution-header, .unoTheme .collectionHeader, .unoTheme .institution-search::before, .unoTheme .child-institution-collections::before {
   background: #003056; }
@@ -401,6 +461,10 @@ a.institution-about-edit {
   border: 2px solid #003056; }
 .unoTheme .institution-search input[type="text"] {
   border: 2px solid #003056; }
+.unoTheme .institutionLabel::before, .unoTheme .compoundObject .compoundLabel::before, .compoundObject .unoTheme .compoundLabel::before {
+  background: #003056; }
+.unoTheme .institutionLabel {
+  background-image: url("http://i.imgur.com/RWmzrPG.png"); }
 
 .vvilleTheme .institution-header, .vvilleTheme .collectionHeader, .vvilleTheme .institution-search::before, .vvilleTheme .child-institution-collections::before {
   background: #ede7c0;
@@ -414,6 +478,10 @@ a.institution-about-edit {
   border: 2px solid #ede7c0; }
 .vvilleTheme .institution-search input[type="text"] {
   border: 2px solid #ede7c0; }
+.vvilleTheme .institutionLabel::before, .vvilleTheme .compoundObject .compoundLabel::before, .compoundObject .vvilleTheme .compoundLabel::before {
+  background: #ede7c0; }
+.vvilleTheme .institutionLabel {
+  background-image: url("http://i.imgur.com/wqpOeRQ.png"); }
 
 .tahillTheme .institution-header, .tahillTheme .collectionHeader, .tahillTheme .institution-search::before, .tahillTheme .child-institution-collections::before, .fpocTheme .institution-header, .fpocTheme .collectionHeader, .fpocTheme .institution-search::before, .fpocTheme .child-institution-collections::before, .page-islandora-object-islandoraroot .institution-header, .page-islandora-object-islandoraroot .collectionHeader, .page-islandora-object-islandoraroot .institution-search::before, .page-islandora-object-islandoraroot .child-institution-collections::before {
   background: #272727; }
