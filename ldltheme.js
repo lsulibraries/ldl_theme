@@ -245,7 +245,7 @@ if($('.institution-collection-list-a').length < 4){
 
 
     //done finding widest image
-    $("<div class='backgroundDiv'/>").insertBefore(".compoundObject #region-content .region-content-inner"); // adds div for item background
+    $("<div class='backgroundDiv'/>").insertBefore(".compoundObject #region-sidebar-first"); // adds div for item background
         var commentedURL = $('div.widest').find('noscript').addClass('widestIMG').text().split(" "); 
         var srcclean = commentedURL[2].match(/"(.*?)"/);
         //alert(srcclean[1]);
@@ -364,6 +364,7 @@ $("#share").jsSocials({
         $(".metadataContainer div:first-child").remove();  //removes weird h3 titles
         $(".metadataSidebar > .region-inner > .metadataContainer:first-child").addClass("itemMetadata");  
         $(".metadataSidebar > .region-inner > .metadataContainer:nth-child(2n + 0)").addClass("compoundMetadata");  
+
 
 }
 //end compoundObject

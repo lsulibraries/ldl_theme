@@ -3906,8 +3906,8 @@ background:none!important;
 
 .backgroundDiv {
     position: absolute;
-    width: calc(100% + 40px);
-    height: calc(100% + 40px);
+    width: calc(100% + 140px);
+    height: calc(100% + 140px);
     filter: blur(50px) brightness(0.8) contrast(0.6);
     background-position: 50% 20%;    
     background-repeat: no-repeat;
@@ -4292,9 +4292,6 @@ transform: translate3d(0,0,0);
           }
       }
 
-      #region-content{
-        background: black;
-      }    
 
       .region-content-inner{
         z-index: 1;
@@ -4564,8 +4561,8 @@ a#clip {
 
 .backgroundDiv {
     position: absolute;
-    width: calc(100% + 40px);
-    height: calc(100% + 40px);
+    width: calc(100% + 140px);
+    height: calc(100% + 140px);
     filter: blur(50px) brightness(0.8) contrast(0.6);
     background-repeat: no-repeat;
     background-size: cover;
@@ -4688,6 +4685,7 @@ margin-bottom:1px;
 .compoundGlance {
     padding-top: 0px!important;
     background: $darkTransparent;
+    color: white;
 }
 
 

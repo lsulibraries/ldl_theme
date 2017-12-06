@@ -3052,8 +3052,8 @@ div.islandora-pdf-object, div.islandora-large-image-object {
 
 .backgroundDiv {
   position: absolute;
-  width: calc(100% + 40px);
-  height: calc(100% + 40px);
+  width: calc(100% + 140px);
+  height: calc(100% + 140px);
   filter: blur(50px) brightness(0.8) contrast(0.6);
   background-position: 50% 20%;
   background-repeat: no-repeat;
@@ -3316,8 +3316,6 @@ div.islandora-pdf-object, div.islandora-large-image-object {
   .compoundObject .itemMenu ul.tabs {
     border: 0px;
     height: 22px; }
-.compoundObject #region-content {
-  background: black; }
 .compoundObject .region-content-inner {
   z-index: 1; }
 .compoundObject #region-sidebar-first {
@@ -3507,8 +3505,8 @@ body.compoundParent .tagsGlance {
   background: rgba(0, 0, 0, 0.26); }
 .compoundChild .backgroundDiv {
   position: absolute;
-  width: calc(100% + 40px);
-  height: calc(100% + 40px);
+  width: calc(100% + 140px);
+  height: calc(100% + 140px);
   filter: blur(50px) brightness(0.8) contrast(0.6);
   background-repeat: no-repeat;
   background-size: cover;
@@ -3587,7 +3585,8 @@ body.compoundParent .tagsGlance {
   border-bottom: 0px; }
 .compoundChild .compoundGlance {
   padding-top: 0px !important;
-  background: rgba(0, 0, 0, 0.26); }
+  background: rgba(0, 0, 0, 0.26);
+  color: white; }
 .compoundChild td.modsDesc, .compoundChild .tagsGlance {
   padding: 20px !important; }
 .compoundChild td.modsDesc {
