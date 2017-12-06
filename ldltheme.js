@@ -216,7 +216,9 @@ if($('.institution-collection-list-a').length < 4){
       }//this length check avoids this from firing multiple times from using the + button on the advanced search
 
 //begin compoundObject 
-    if ($('.block-islandora-compound-object').length){
+    if ($('.block-islandora-compound-object').length && (!$("body").hasClass("audioPDF"))){
+
+
 
     $("#sideMods").remove();
 
