@@ -317,10 +317,14 @@ if($('.institution-collection-list-a').length < 4){
         $('<div class="textSelect">clip image</div>').appendTo("#clip");        
         $('#clip').addClass('userSelect');
         $("<div id='shareToggle' class='userSelect'><div class='iconSelect'></div><div class='textSelect'>share</div></div>").insertAfter("#clip");        
+        $("<div id='shareToggle' class='userSelect'><div class='iconSelect'></div><div class='textSelect'>share</div></div>").insertAfter(".compoundParent .compoundCount");        
 
         $("<div id='share'/>").insertAfter("#shareToggle");        
+        $("#islandora-compound-next-link").insertAfter("#islandora-compound-sequence-position");
+         $("<i class='fa fa-arrow-right' aria-hidden='true'></i>").appendTo("#islandora-compound-next-link");
+          $("<i class='fa fa-arrow-left' aria-hidden='true'></i>").appendTo("#islandora-compound-previous-link");
+}       
 
-}
 
 
 
