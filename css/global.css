@@ -3611,6 +3611,9 @@ body.compoundParent .tagsGlance {
   font-weight: 700; }
 .metadataContainer span.metadataValue {
   color: #a5a5a5; }
+  .metadataContainer span.metadataValue a {
+    word-break: break-all;
+    word-wrap: break-word; }
 
 /*BEGIN test area*/
 section#block-islandora-solr-sort .item-list {

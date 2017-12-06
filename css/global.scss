@@ -4711,6 +4711,10 @@ td.modsDesc{
 
     span.metadataValue {
     color: #a5a5a5;
+    a {
+        word-break: break-all;
+        word-wrap: break-word;
+    }
     }
 
 }
