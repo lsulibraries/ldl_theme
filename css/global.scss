@@ -36,7 +36,9 @@ $Violet2: #945EB8;
 
 
 $compoundLegend: 'https://i.imgur.com/azpOWoN.png';
+$childLegend: 'https://i.imgur.com/jaWlCjM.png';
 $imageLegend: 'https://i.imgur.com/4LmxSra.png';
+$shareLegend: 'https://i.imgur.com/bKhM20h.png';
 
 $viewLegend: 'https://i.imgur.com/rqTlrT3.png';
 $manageLegend: 'https://i.imgur.com/3fcNTbJ.png';
@@ -45,6 +47,8 @@ $downloadLegend: 'https://i.imgur.com/rthA4J4.png';
 
 $darkTransparent: rgba(0, 0, 0, .26);
 $lightTransparent: rgba(255, 255, 255, .16);
+
+$offWhite: rgba(255, 255, 255, .85);
 
 .noClick{
    pointer-events: none;
@@ -3864,20 +3868,24 @@ div {
     padding-bottom: 30px;
 }
 
-.userSelect:hover {
-    background: rgba(255, 255, 255, .2);
 
-}
 
 .userSelect {
     padding: 0px 0px;
     border: 1px solid rgba(255, 255, 255, 0.2);
-    color: white;
+    color: $offWhite;
     text-transform: uppercase;
     display: flex;
     cursor: pointer;
     margin-right: 10px;    
     align-items: center;    
+}
+
+.userSelect:hover {
+color:white;
+background: $darkTransparent;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+
 }
 
 .iconSelect {
@@ -3895,12 +3903,17 @@ div {
 
 .downloadSelect .iconSelect{
       background-image: url($downloadLegend);
-    background-size: 25px;      
+    background-size: 20px;      
+}
+
+#shareToggle .iconSelect{
+      background-image: url($shareLegend);
+    background-size: 20px;      
 
 }
 
 .textSelect {
-    padding: 0px 20px;
+padding-right: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -3910,6 +3923,9 @@ div {
 //begin compoundObject ('!important's override islandora_compound_object.jail_block.css)
 
 
+      .compoundChild .compoundLabel{
+      background-image: url($childLegend)!important;
+      }
 
 
 
@@ -3968,8 +3984,8 @@ div.islandora-pdf-object, div.islandora-large-image-object {
     line-height: 14px;
     padding: 10px;
     position: relative;
-            padding-left: 45px;
-                background-position: 9px 10px;
+    padding-left: 45px;
+    background-position: 9px 10px;
     background-size: 28px;
     background-repeat: no-repeat;    
  }
@@ -4022,7 +4038,7 @@ div.islandora-pdf-object, div.islandora-large-image-object {
 }
 
 .metaOpened #region-content{
-width: 67vw;
+width: 75vw;
           transition-duration: 1s;
            transition-delay:0s;          
 }
@@ -4034,6 +4050,23 @@ max-width: none!important;
 
 
   .compoundObject {
+
+div#share {
+    display: none;
+    justify-content: flex-end;
+    align-items: center;
+    flex-grow: 2;
+    padding-right: 10px;
+}
+
+.activeMenu {
+background: $darkTransparent;
+color: white;
+}
+
+.shareActive {
+    display: flex!important;
+}
 
 #region-sidebar-first a:link, #region-sidebar-first a:visited {
     color: #438fca;
@@ -4133,10 +4166,29 @@ form#islandora-ip-embargo-object-embargo-form {
     border-bottom: 1px solid rgba(0,0,0,.08);
 }
 
-      .contentLabel{
+      .compoundLabel{
       background-image: url($compoundLegend);
       }
 
+
+
+      .imageLabel{
+      background-image: url($imageLegend);
+margin-right: 24px;      
+padding-left: 48px;
+    padding-right: 25px;
+      }
+
+.imageLabel::before {
+    background: $Blue;
+    margin: 0px;
+    width: 10px;
+    height: 100%;
+    content: " ";
+    position: absolute;
+    top: 0px;
+    left: -11px;    
+}
 
 
       .block-compound-jail-display .block-inner > .content{
@@ -4174,7 +4226,7 @@ form#islandora-ip-embargo-object-embargo-form {
 
       #region-sidebar-first.infoOpened{
       transform: scale(1, 1); /* Equal to scaleX(0.7) scaleY(0.7) */
-      width: 33%;
+      width: 25%;
       opacity: 1;
       transition-duration: 1s;
       position: fixed;
@@ -4244,25 +4296,29 @@ span#islandora-compound-sequence-position {
           }      
           .compoundParent{
             font-size: 28px;
-            color: white;
+            color: $offWhite;
             padding: 10px 0px;            
+          }
+          .compoundParent:hover{
+            color:white;
           }
           a.parentLink {
               text-transform: uppercase;
-              color: white;
-              border: 1px solid rgba(255, 255, 255, .3);
+              color: $offWhite;
+              border: 1px solid $lightTransparent;
               padding: 2px 10px;
               margin-left: 10px;
+              font-weight: normal;
           }         
           a.parentLink:hover {
-              background: rgba(255, 255, 255, .2);
               border: 1px solid rgba(255, 255, 255, .2);
+              color: white;              
           }            
 
           .compoundCount {
             margin-left: 10px;
             padding: 2px 5px;
-            background: white;
+            background: $offWhite;
             text-transform: uppercase;
           }      
       }
@@ -4352,6 +4408,30 @@ padding-top:5px;
 
 .compoundChild{
 
+a#clip {
+    display: flex!important;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    color: white;
+    margin-left: 0px;    
+}
+
+#clip{ 
+
+    img {
+    filter: brightness(5) grayscale(1);
+    border: 0px !important;
+    padding: 0px;
+    margin: 0px 10px;
+    }
+
+    .textSelect{
+    }
+}
+
+
+
 .infoToggle {
     width: 174px;
     display: flex;
@@ -4359,7 +4439,8 @@ padding-top:5px;
     margin-bottom: 11px;
     text-transform: uppercase;
     border: 1px solid $darkTransparent;
-    cursor: pointer;   
+    cursor: pointer;  
+    overflow: hidden;     
     .iconSelect {
     background-color: $darkTransparent;
     height: 30px;
@@ -4372,6 +4453,10 @@ padding-top:5px;
     width: 92px;
     text-align: center;
     }
+}
+
+.infoToggle:hover{
+  background-color: $darkTransparent;
 }
 
 .menuActive .iconSelect {
@@ -4415,18 +4500,21 @@ i {
 
 .iconSelect{
   border: 0px;
+      width: 30px;
+      height: 30px;
 }
 
 .userSelect {
     padding: 0px 0px;
-    border: 0px;
-    border-right: 1px solid #262626;
-    border-bottom: 1px solid #262626;
-    background-color: #1a1a1a;    
-    margin: 0px;    
+    border: 1px solid $lightTransparent;
+    margin: 0px; 
+height: 30px;    
+margin-right: 10px;
     }  
 
 .userMenu{
+  justify-content: center;
+  align-items: center;  
   padding-bottom: 0px;
 }
 
@@ -4465,7 +4553,6 @@ margin-bottom: 1px;
 
 
     h1#window-title{
-    border-right: 1px solid $lightTransparent;
     margin: 0px;
     display: flex;
     font-size: 20px;
@@ -4489,7 +4576,6 @@ margin-bottom: 1px;
 margin-bottom:1px;
       .compoundParent {
       font-size: 20px;
-      color: #ffffff;
       padding: 10px 0px;
       }
     }

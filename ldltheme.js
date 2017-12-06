@@ -262,14 +262,13 @@ if($('.institution-collection-list-a').length < 4){
     var institutionHome = $(".depth-2 > a").attr('href'); //creates href path from breadcrumb depth-2
     $("<a href=" + institutionHome + "><div class='institutionLabel'/></a>").appendTo(".compoundLabels"); //adds institutionLabel div to show content type      
         $(".compoundObject .contentLabel").addClass("compoundLabel"); //detects contentType and assign new class to contentLabel
-        $(".compoundLabel").html("Compound <br> Object"); //text within compoundLabel      
+        $(".compoundLabel").html("Compound <br> Parent"); //text within compoundLabel      
 
         $(".manageParent, ul.tabs").appendTo(".itemMenu").wrapAll('<div class="manageMenu"/>'); //moves the view/ip embargo/manage menu
         $("<div class='userMenu'/>").insertAfter(".manageMenu");  //inserts compoundGlance
         $("<div class='compoundGlance'/>").insertAfter(".compoundGallery");  //inserts compoundGlance
         $("<div class='infoToggle userSelect'><div class='iconSelect'></div><div class='textSelect'>show details</div></div>").appendTo(".userMenu"); //adds toggle for parent metadata
-        $(".downloadLink").addClass('userSelect').appendTo(".userMenu"); 
-        $("<div id='share'/>").appendTo(".userMenu");        
+        $(".downloadLink").appendTo(".userMenu"); 
         $("#clip").appendTo(".userMenu");              
         $(".modsDesc").clone().appendTo(".compoundGlance");
         $(".modsSubject").clone().appendTo(".compoundGlance").wrapAll('<div class="tagsGlance"/>');
@@ -280,9 +279,9 @@ if($('.institution-collection-list-a').length < 4){
               $(this).toggleClass('menuActive');
               $('#region-sidebar-first').toggleClass('infoOpened');
               $('body').toggleClass('metaOpened');
-        $(".nano").nanoScroller({ alwaysVisible: false });
+              $(".nano").nanoScroller({ alwaysVisible: false });
 
-          });           
+        });           
         sr.reveal('.modsTable', { duration: 200, delay: 850,  easing: 'linear', scale: 1, }, 20);
     
         if ($('.compoundObject #block-system-main .block-inner .content > div').length){
@@ -297,19 +296,33 @@ if($('.institution-collection-list-a').length < 4){
 
 
         $("<div class='compoundArrows userSelect'/>").appendTo(".userMenu");        
+
         $('#islandora-compound-sequence-position, #islandora-compound-previous-link, #islandora-compound-next-link').appendTo('.compoundArrows');
         $('.compoundChild #block-system-main .block-inner .content > div').insertAfter('.itemMenu');
         $('#window-title').insertAfter('.itemMenu');
 
         //begin compoundChild
-        $("<div class='childIcon childImage'/>").insertBefore(".compoundChild #window-title");
+    if ($('body').hasClass('compoundChild')){
+        $(".compoundChild .compoundLabel").html("Compound <br> Child"); //text within compoundLabel      
+
+}
+
+        $("<div class='childIcon childImage'/>").insertBefore(".compoundChildImage #window-title");
+        $("<div class='contentLabel imageLabel'>Large<br>Image</div>").insertBefore(".compoundChildImage .compoundLabel");
         $(".childIcon, #window-title").wrapAll("<div class='childHeader'/>");
         $('#block-system-main').remove();
         $('<div class="childNotice">Part of</div>').insertBefore('.compoundChild .compoundGallery_header .contentIcon');
         $('.userMenu').insertAfter('#window-title');
         $('.infoToggle').removeClass('userSelect').insertBefore('.childHeader');
+        $('<div class="textSelect">clip image</div>').appendTo("#clip");        
+        $('#clip').addClass('userSelect');
+        $("<div id='shareToggle' class='userSelect'><div class='iconSelect'></div><div class='textSelect'>share</div></div>").insertAfter("#clip");        
+
+        $("<div id='share'/>").insertAfter("#shareToggle");        
 
 }
+
+
 
 $("#share").jsSocials({
     url: urlhref,
@@ -318,6 +331,12 @@ $("#share").jsSocials({
     showCount: "inside",
     shares: ["twitter", "facebook"]
 });
+
+        $('#shareToggle').click(function(){
+    $(this).toggleClass('activeMenu');
+    $('#share').toggleClass('shareActive');
+
+        });  
 
 
         $('table').each(function (){
