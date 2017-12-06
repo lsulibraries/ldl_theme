@@ -3177,11 +3177,9 @@ div.islandora-pdf-object, div.islandora-large-image-object {
   background: rgba(255, 255, 255, 0.2) !important; }
 
 #region-content {
-  transition-duration: 1s;
-  transform: translate3d(0, 0, 0); }
+  transition-duration: 1s; }
 
 .metaOpened #region-content {
-  transform: translate3d(0vw, 0vw, 0vw);
   margin-left: 25vw;
   transition-duration: 1s;
   transition-delay: 0s; }

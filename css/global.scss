@@ -4084,11 +4084,9 @@ background:none!important;
 
 #region-content{
   transition-duration: 1s;
-  transform: translate3d(0,0,0);
 }
 
 .metaOpened #region-content{
-  transform: translate3d(0vw,0vw,0vw);  
 margin-left: 25vw;
           transition-duration: 1s;
            transition-delay:0s;          
