@@ -3869,56 +3869,6 @@ div {
 }
 
 
-
-.userSelect {
-    padding: 0px 0px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: $offWhite;
-    text-transform: uppercase;
-    display: flex;
-    cursor: pointer;
-    margin-right: 10px;    
-    align-items: center;    
-    margin: 0px; 
-height: 30px;    
-margin-right: 10px;    
-}
-
-.userSelect:hover {
-color:white;
-border: 1px solid white;
-
-}
-
-.iconSelect {
-    width: 50px;
-    height: 50px;
-    background-size: 20px;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.infoToggle .iconSelect{
-      background-image: url($infoLegend);
-}
-
-.downloadSelect .iconSelect{
-      background-image: url($downloadLegend);
-    background-size: 20px;      
-}
-
-#shareToggle .iconSelect{
-      background-image: url($shareLegend);
-    background-size: 20px;      
-
-}
-
-.textSelect {
-padding-right: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 //end item menu
 
 //begin compoundObject ('!important's override islandora_compound_object.jail_block.css)
@@ -3931,26 +3881,9 @@ padding-right: 10px;
 
 
 
-h1#window-title {
-    background: none;
-    color: white;
-    font-size: 28px;
-    width: auto;
-    margin: 20px 0px;
-    padding: 0px;
-    border: 0px;
-    letter-spacing: normal;
-    font-weight: 700;
 
-    #pdf-object-author{
-      display: none;
-    }
-}
 
-div.islandora-pdf-object, div.islandora-large-image-object {
-    margin-left: 0px;
-    margin-right: 0px;
-}
+
 
 #share{
   a.jssocials-share-link.jssocials-share-link-count.jssocials-share-no-count {
@@ -4056,8 +3989,82 @@ margin-left: 25vw;
 max-width: none!important;
 }
 
+//actually begin compoundObject ('!important's override islandora_compound_object.jail_block.css)
 
   .compoundObject {
+
+
+
+.userSelect {
+    padding: 0px 0px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: $offWhite;
+    text-transform: uppercase;
+    display: flex;
+    cursor: pointer;
+    margin-right: 10px;    
+    align-items: center;    
+    margin: 0px; 
+height: 30px;    
+margin-right: 10px;    
+}
+
+.userSelect:hover {
+color:white;
+border: 1px solid white;
+
+}
+
+.iconSelect {
+    width: 50px;
+    height: 50px;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.infoToggle .iconSelect{
+      background-image: url($infoLegend);
+}
+
+.downloadSelect .iconSelect{
+      background-image: url($downloadLegend);
+    background-size: 20px;      
+}
+
+#shareToggle .iconSelect{
+      background-image: url($shareLegend);
+    background-size: 20px;      
+
+}
+
+.textSelect {
+padding-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}    
+
+div.islandora-pdf-object, div.islandora-large-image-object {
+    margin-left: 0px;
+    margin-right: 0px;
+}    
+
+h1#window-title {
+    background: none;
+    color: white;
+    font-size: 28px;
+    width: auto;
+    margin: 20px 0px;
+    padding: 0px;
+    border: 0px;
+    letter-spacing: normal;
+    font-weight: 700;
+
+    #pdf-object-author{
+      display: none;
+    }
+}    
 
 .nano > .nano-pane > .nano-slider {
     background: #a5a5a5;

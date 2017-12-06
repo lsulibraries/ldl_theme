@@ -3035,66 +3035,8 @@ div.islandora-pdf-object, div.islandora-large-image-object {
   display: flex;
   flex-wrap: wrap; }
 
-.userSelect {
-  padding: 0px 0px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: rgba(255, 255, 255, 0.85);
-  text-transform: uppercase;
-  display: flex;
-  cursor: pointer;
-  margin-right: 10px;
-  align-items: center;
-  margin: 0px;
-  height: 30px;
-  margin-right: 10px; }
-
-.userSelect:hover {
-  color: white;
-  border: 1px solid white; }
-
-.iconSelect {
-  width: 50px;
-  height: 50px;
-  background-size: 20px;
-  background-repeat: no-repeat;
-  background-position: center; }
-
-.infoToggle .iconSelect {
-  background-image: url("https://i.imgur.com/zK6anrR.png"); }
-
-.downloadSelect .iconSelect {
-  background-image: url("https://i.imgur.com/rthA4J4.png");
-  background-size: 20px; }
-
-#shareToggle .iconSelect {
-  background-image: url("https://i.imgur.com/bKhM20h.png");
-  background-size: 20px; }
-
-.textSelect {
-  padding-right: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-
 .compoundChild .compoundLabel {
   background-image: url("https://i.imgur.com/jaWlCjM.png") !important; }
-
-h1#window-title {
-  background: none;
-  color: white;
-  font-size: 28px;
-  width: auto;
-  margin: 20px 0px;
-  padding: 0px;
-  border: 0px;
-  letter-spacing: normal;
-  font-weight: 700; }
-  h1#window-title #pdf-object-author {
-    display: none; }
-
-div.islandora-pdf-object, div.islandora-large-image-object {
-  margin-left: 0px;
-  margin-right: 0px; }
 
 #share a.jssocials-share-link.jssocials-share-link-count.jssocials-share-no-count {
   max-width: none !important; }
@@ -3177,6 +3119,55 @@ div.islandora-pdf-object, div.islandora-large-image-object {
 #block-islandora-compound-object-compound-jail-display .content a {
   max-width: none !important; }
 
+.compoundObject .userSelect {
+  padding: 0px 0px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.85);
+  text-transform: uppercase;
+  display: flex;
+  cursor: pointer;
+  margin-right: 10px;
+  align-items: center;
+  margin: 0px;
+  height: 30px;
+  margin-right: 10px; }
+.compoundObject .userSelect:hover {
+  color: white;
+  border: 1px solid white; }
+.compoundObject .iconSelect {
+  width: 50px;
+  height: 50px;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: center; }
+.compoundObject .infoToggle .iconSelect {
+  background-image: url("https://i.imgur.com/zK6anrR.png"); }
+.compoundObject .downloadSelect .iconSelect {
+  background-image: url("https://i.imgur.com/rthA4J4.png");
+  background-size: 20px; }
+.compoundObject #shareToggle .iconSelect {
+  background-image: url("https://i.imgur.com/bKhM20h.png");
+  background-size: 20px; }
+.compoundObject .textSelect {
+  padding-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+.compoundObject div.islandora-pdf-object, .compoundObject div.islandora-large-image-object {
+  margin-left: 0px;
+  margin-right: 0px; }
+.compoundObject h1#window-title {
+  background: none;
+  color: white;
+  font-size: 28px;
+  width: auto;
+  margin: 20px 0px;
+  padding: 0px;
+  border: 0px;
+  letter-spacing: normal;
+  font-weight: 700; }
+  .compoundObject h1#window-title #pdf-object-author {
+    display: none; }
 .compoundObject .nano > .nano-pane > .nano-slider {
   background: #a5a5a5; }
 .compoundObject .nano > .nano-pane {

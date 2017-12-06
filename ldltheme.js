@@ -323,7 +323,7 @@ if($('.institution-collection-list-a').length < 4){
         $("#islandora-compound-next-link").insertAfter("#islandora-compound-sequence-position");
          $("<i class='fa fa-arrow-right' aria-hidden='true'></i>").appendTo("#islandora-compound-next-link");
           $("<i class='fa fa-arrow-left' aria-hidden='true'></i>").appendTo("#islandora-compound-previous-link");
-}       
+      
 
 
 
@@ -364,7 +364,7 @@ $("#share").jsSocials({
         $(".metadataSidebar > .region-inner > .metadataContainer:first-child").addClass("itemMetadata");  
         $(".metadataSidebar > .region-inner > .metadataContainer:nth-child(2n + 0)").addClass("compoundMetadata");  
 
-
+}
 //end compoundObject
 
 
