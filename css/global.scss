@@ -289,7 +289,15 @@ span.bold {
   display: none;
 }
 
+body.logged-in.compoundObject{
+  #section-header{
+    top: 60px!important;
+  }
+}
+
 .logged-in {
+
+
   .loginButton {
     display: none;
   }
@@ -5279,7 +5287,7 @@ section#section-content {
 
   .block-advanced label {
     font-size: 11px;
-@include flexbox;
+    @include flexbox;
     justify-content: center;
     align-items: center;
 }
@@ -5475,6 +5483,9 @@ section#section-content {
   .context-collections #region-sidebar-first {
     display: none;
   }
+
+
+
   .page-islandora-search .region-sidebar-first-inner {
     margin-left: auto;
     margin-right: auto;
@@ -5856,6 +5867,78 @@ border: 1px solid rgba(255, 255, 255, 0.33);
       padding: 10px;
       margin-bottom: 0px;
     }
+//compound styles mobile
+.compoundObject {
+
+.islandora-large-image-metadata{
+  display: none;
+}
+
+.backgroundDiv{
+display: none;
+}
+
+#zone-content {
+    padding-top: 50px;
+    background: #1a1a1a;
+}  
+  #region-sidebar-first,
+  {
+  display: flex;
+  }
+.compoundLabels{
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $lightTransparent;
+}
+
+.contentLabel{
+  background-size: 15px;
+font-size: 10px;  
+    padding-left: 35px;
+line-height: 10px;    
+    border: 1px solid $lightTransparent;
+}
+.institutionLabel {
+    height: 40px;
+    width: 60px;
+    background-size: 38px;
+    border: 1px solid $lightTransparent;
+
+    }
+
+.block-compound-jail-display .block-inner > .content {
+    margin: 0px 40px;
+    max-width: 1200px;
+    width: calc(100vw - 80px);
+}
+
+h1#window-title{
+    font-size: 11px;
+}
+
+.textSelect{
+    font-size: 8px;
+}
+
+
+.userSelect{
+  margin-bottom: 5px;
+  margin-right: 5px;
+}
+
+.iconSelect{
+      background-size: 10px!important;
+    border: 0px;
+    width: 20px;
+    height: 10px;      
+}
+
+.downloadSelect .iconSelect {
+    background-size: 10px;
+}
+
   }
 
 .institution-collection-list-item-label{
@@ -5863,6 +5946,7 @@ border: 1px solid rgba(255, 255, 255, 0.33);
 }
 
 
+}
   @media screen and (max-width: 740px) {
 
 
@@ -6109,6 +6193,9 @@ font-size: 12px;
       width: 100%;
       margin: 20px;
     }
+
+
+
   }
 }
 

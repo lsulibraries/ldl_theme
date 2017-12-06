@@ -103,6 +103,9 @@ span.bold {
 #block-block-1 div.support-ticket-link {
   display: none; }
 
+body.logged-in.compoundObject #section-header {
+  top: 60px !important; }
+
 .logged-in .loginButton {
   display: none; }
 .logged-in #block-block-1 .content.clearfix {
@@ -4455,8 +4458,52 @@ body {
     display: flex;
     justify-content: center;
     padding: 10px;
-    margin-bottom: 0px; } }
-@media screen and (max-width: 1260px) {
+    margin-bottom: 0px; }
+
+  .compoundObject .islandora-large-image-metadata {
+    display: none; }
+  .compoundObject .backgroundDiv {
+    display: none; }
+  .compoundObject #zone-content {
+    padding-top: 50px;
+    background: #1a1a1a; }
+  .compoundObject #region-sidebar-first {
+    display: flex; }
+  .compoundObject .compoundLabels {
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.16); }
+  .compoundObject .contentLabel {
+    background-size: 15px;
+    font-size: 10px;
+    padding-left: 35px;
+    line-height: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.16); }
+  .compoundObject .institutionLabel {
+    height: 40px;
+    width: 60px;
+    background-size: 38px;
+    border: 1px solid rgba(255, 255, 255, 0.16); }
+  .compoundObject .block-compound-jail-display .block-inner > .content {
+    margin: 0px 40px;
+    max-width: 1200px;
+    width: calc(100vw - 80px); }
+  .compoundObject h1#window-title {
+    font-size: 11px; }
+  .compoundObject .textSelect {
+    font-size: 8px; }
+  .compoundObject .userSelect {
+    margin-bottom: 5px;
+    margin-right: 5px; }
+  .compoundObject .iconSelect {
+    background-size: 10px !important;
+    border: 0px;
+    width: 20px;
+    height: 10px; }
+  .compoundObject .downloadSelect .iconSelect {
+    background-size: 10px; }
+
   .institution-collection-list-item-label {
     padding: 0px 30px; } }
 @media screen and (max-width: 1260px) and (max-width: 740px) {
