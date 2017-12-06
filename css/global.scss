@@ -3978,7 +3978,6 @@ background:none!important;
 
 .metaOpened #region-content{
   transform: translate3d(0vw,0vw,0vw);  
-width: 75vw;
 margin-left: 25vw;
           transition-duration: 1s;
            transition-delay:0s;          
@@ -4584,9 +4583,9 @@ a#clip {
     text-transform: uppercase;
     border-right: 1px solid $lightTransparent;
 
-i {
+    i {
     margin-left: 15px;
-}
+    }
 
 }
 

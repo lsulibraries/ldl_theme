@@ -3111,7 +3111,6 @@ div.islandora-pdf-object, div.islandora-large-image-object {
 
 .metaOpened #region-content {
   transform: translate3d(0vw, 0vw, 0vw);
-  width: 75vw;
   margin-left: 25vw;
   transition-duration: 1s;
   transition-delay: 0s; }
