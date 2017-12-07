@@ -107,6 +107,8 @@ $(window).on("load", function() {
 
       if ( ($( ".video-js" ).length ) && ( $( "#islandora-pdfjs" ).length )) { 
            $("body").addClass("audioPDF");
+           $("#block-islandora-compound-object-compound-jail-display").appendTo("$sideMods");
+
        }//allows collection Page styles
 
 
@@ -215,7 +217,7 @@ if($('.institution-collection-list-a').length < 4){
 
 //begin compoundObject 
 
-    if ( ($('.block-islandora-compound-object').length) && ( !$('body').hasClass('audioPDF') ) ){
+   if ( ($('.block-islandora-compound-object').length) && ( !$('body').hasClass('audioPDF') ) ){
 
 
 
