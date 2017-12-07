@@ -107,7 +107,7 @@ $(window).on("load", function() {
 
       if ( ($( ".video-js" ).length ) && ( $( "#islandora-pdfjs" ).length )) { 
            $("body").addClass("audioPDF");
-           $("#block-islandora-compound-object-compound-jail-display").appendTo("$sideMods");
+           $("#block-islandora-compound-object-compound-jail-display").appendTo("#sideMods");
 
        }//allows collection Page styles
 
