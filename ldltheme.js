@@ -106,10 +106,8 @@ $(window).on("load", function() {
 
 
       if ( ($( ".video-js" ).length ) && ( $( "#islandora-pdfjs" ).length )) { 
-           $("body").addClass('audioPDF');
+           $("body").addClass("audioPDF");
        }//allows collection Page styles
-
-
 
 
       if ( $( ".islandora-basic-collection-item-count" ).length ) { 
@@ -216,7 +214,8 @@ if($('.institution-collection-list-a').length < 4){
       }//this length check avoids this from firing multiple times from using the + button on the advanced search
 
 //begin compoundObject 
-    if ($('.block-islandora-compound-object').length && (!$("body").hasClass("audioPDF"))){
+
+    if ( ($('.block-islandora-compound-object').length) && ( !$('body').hasClass('audioPDF') ) ){
 
 
 
