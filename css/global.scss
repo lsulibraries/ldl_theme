@@ -4845,7 +4845,11 @@ section#block-islandora-solr-sort .item-list {
 //Begin oral history styles
 .audioPDF{
 
-
+div#block-islandora-compound-object-compound-jail-display {
+    height: auto;
+    overflow: auto;
+    font-size: inherit;
+}
 
 .islandora-compound-thumbs {
       border-top: 1px solid rgba(204, 204, 204, 0.09);

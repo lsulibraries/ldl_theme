@@ -3678,6 +3678,10 @@ section#block-islandora-solr-sort .item-list {
   border: 0px;
   margin: 0px; }
 
+.audioPDF div#block-islandora-compound-object-compound-jail-display {
+  height: auto;
+  overflow: auto;
+  font-size: inherit; }
 .audioPDF .islandora-compound-thumbs {
   border-top: 1px solid rgba(204, 204, 204, 0.09); }
 .audioPDF .islandora-compound-thumb {
