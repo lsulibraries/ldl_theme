@@ -2925,7 +2925,7 @@ dl.solr-thumb img {
   width: 92%;
 }
 
-.dc-title {
+.fgs-label-s {
   font-size: 20px;
   line-height: 22px;
 }
@@ -4666,7 +4666,7 @@ body {
     line-height: 20px;
   }
 
-  .dc-title {
+  .fgs-label-s {
     font-size: 16px;
     line-height: 16px;
   }
