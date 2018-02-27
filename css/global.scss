@@ -130,7 +130,7 @@ $vvilleLogo_long: 'http://i.imgur.com/wqpOeRQ.png';
   display: flex;
 }
 
-@mixin filter($filter-type,$filter-amount) { 
+@mixin filter($filter-type,$filter-amount) {
   -webkit-filter: $filter-type+unquote('(#{$filter-amount})');
   -moz-filter: $filter-type+unquote('(#{$filter-amount})');
   -ms-filter: $filter-type+unquote('(#{$filter-amount})');
@@ -337,15 +337,15 @@ body.logged-in.compoundObject{
     align-items: flex-start;
     align-self: baseline;
     font-size: 14px;
-    overflow: hidden;    
-    flex-direction: column;    
+    overflow: hidden;
+    flex-direction: column;
     @include transition-duration(1s);
     transition-delay: 0s;
     width: 100%;
-    color: rgba(255, 255, 255, 0.66);            
+    color: rgba(255, 255, 255, 0.66);
     margin-top: 60px;
     position: relative;
-    word-break: break-word;    
+    word-break: break-word;
 }
 
 
@@ -399,7 +399,7 @@ a.institution-about-edit {
     align-items: center;
     width: 25%;
     padding: 0px 80px;
-    box-sizing: border-box;    
+    box-sizing: border-box;
 }
 
 .institution-header, .collectionHeader {
@@ -427,10 +427,10 @@ a.institution-about-edit {
   }
   .institutionLabel::before{
     background: $dccColor;
-  }  
+  }
   .institutionLabel{
     background-image: url($dccLogo);
-  }    
+  }
 }
 
 .lsmTheme {
@@ -450,10 +450,10 @@ a.institution-about-edit {
   }
   .institutionLabel::before{
     background: $lsmColor;
-  }  
+  }
   .institutionLabel{
     background-image: url($lsmLogo);
-  }    
+  }
 }
 
 .lsuTheme {
@@ -473,7 +473,7 @@ a.institution-about-edit {
   }
   .institutionLabel::before{
     background: $lsuColor;
-  }  
+  }
   .institutionLabel{
     background-image: url($lsuLogo);
   }
@@ -499,7 +499,7 @@ a.institution-about-edit {
   }
   .institutionLabel::before{
     background: #white;
-  }  
+  }
 }
 
 .lsusTheme {
@@ -509,7 +509,7 @@ a.institution-about-edit {
   }
   .institutionLabel{
     background-image: url($lsusLogo);
-  }      
+  }
 }
 
 .lsuhscsTheme {
@@ -519,7 +519,7 @@ a.institution-about-edit {
   }
   .institutionLabel{
     background-image: url($lsuhscsLogo);
-  }      
+  }
 }
 
 .lsuhscTheme {
@@ -529,7 +529,7 @@ a.institution-about-edit {
   }
   .institutionLabel{
     background-image: url($lsuhscLogo);
-  }       
+  }
 }
 .latechTheme {
   .institution-header, .collectionHeader, .institution-search::before, .child-institution-collections::before {
@@ -551,10 +551,10 @@ a.institution-about-edit {
   }
   .institutionLabel::before{
     background: $latechColor;
-  }  
+  }
   .institutionLabel{
     background-image: url($latechLogo);
-  }  
+  }
 }
 
 .loynoTheme {
@@ -583,10 +583,10 @@ a.institution-about-edit {
   }
   .institutionLabel::before{
     background: $loynoColor;
-  }  
+  }
   .institutionLabel{
     background-image: url($loynoLogo);
-  }    
+  }
 }
 
 .mcneeseTheme {
@@ -606,10 +606,10 @@ a.institution-about-edit {
   }
   .institutionLabel::before{
     background: $mcneeseColor;
-  }  
+  }
   .institutionLabel{
     background-image: url($mcneeseLogo);
-  }    
+  }
 }
 
 .nichollsTheme {
@@ -629,10 +629,10 @@ a.institution-about-edit {
   }
   .institutionLabel::before{
     background: $nichollsColor;
-  }  
+  }
   .institutionLabel{
     background-image: url($nichollsLogo);
-  }    
+  }
 }
 
 .nsuTheme {
@@ -652,10 +652,10 @@ a.institution-about-edit {
   }
   .institutionLabel::before{
     background: $nsuColor;
-  }  
+  }
   .institutionLabel{
     background-image: url($nsuLogo);
-  }    
+  }
 }
 
 .subrTheme {
@@ -683,10 +683,10 @@ a.institution-about-edit {
   }
   .institutionLabel::before{
     background: $subrColor;
-  }  
+  }
   .institutionLabel{
     background-image: url($subrLogo);
-  }      
+  }
 }
 
 .stateTheme {
@@ -707,10 +707,10 @@ a.institution-about-edit {
   }
   .institutionLabel::before{
     background: $stateColor;
-  }  
+  }
   .institutionLabel{
     background-image: url($stateLogo);
-  }      
+  }
 }
 
 .hnocTheme {
@@ -730,10 +730,10 @@ a.institution-about-edit {
   }
   .institutionLabel::before{
     background: $hnocColor;
-  }  
+  }
   .institutionLabel{
     background-image: url($hnocLogo);
-  }      
+  }
 }
 
 .tulaneTheme {
@@ -758,10 +758,10 @@ a.institution-about-edit {
 
   .institutionLabel::before{
     background: $tulaneColor;
-  }  
+  }
   .institutionLabel{
     background-image: url($tulaneLogo);
-  }    
+  }
 
 
 }
@@ -787,10 +787,10 @@ a.institution-about-edit {
   }
   .institutionLabel::before{
     background: $ullColor;
-  }  
+  }
   .institutionLabel{
     background-image: url($ullLogo);
-  }      
+  }
 }
 
 .ulmTheme {
@@ -810,10 +810,10 @@ a.institution-about-edit {
   }
   .institutionLabel::before{
     background: $ulmColor;
-  }  
+  }
   .institutionLabel{
     background-image: url($ulmLogo);
-  }      
+  }
 }
 
 .unoTheme {
@@ -833,10 +833,10 @@ a.institution-about-edit {
   }
   .institutionLabel::before{
     background: $unoColor;
-  }  
+  }
   .institutionLabel{
     background-image: url($unoLogo);
-  }      
+  }
 }
 
 .vvilleTheme {
@@ -860,10 +860,10 @@ a.institution-about-edit {
   }
   .institutionLabel::before{
     background: $vvilleColor;
-  }  
+  }
   .institutionLabel{
     background-image: url($vvilleLogo);
-  }      
+  }
 }
 
 .tahillTheme, .fpocTheme, .page-islandora-object-islandoraroot {
@@ -885,9 +885,9 @@ a.institution-about-edit {
 
 .institution-logo img {
   max-width: 200px !important;
-    box-sizing: border-box; 
+    box-sizing: border-box;
     height: auto;
-    width: 100%;  
+    width: 100%;
 }
 
 
@@ -931,7 +931,7 @@ ul.institution-collection-list {
     flex-direction: column;
     position: relative;
     overflow: hidden;
-    height: 420px;    
+    height: 420px;
     cursor: pointer;
     @include transition-duration(.2s);
 a{
@@ -981,7 +981,7 @@ li.institution-collection-list-item a.institution-collection-list-item-manage-pr
     justify-content: center;
     align-items: center;
     position: absolute;
-    bottom: 5px;    
+    bottom: 5px;
 }
 
 .institution-collection-list-header {
@@ -1145,7 +1145,7 @@ form#myform {
     font-size: 11px;
     text-transform: uppercase;
     letter-spacing: 6px;
-    border-top: 1px solid rgba(255, 255, 255, 0.21);    
+    border-top: 1px solid rgba(255, 255, 255, 0.21);
 }
 
 
@@ -1164,6 +1164,11 @@ form#myform {
 
 //Sub institution styles
 
+.childCollections {
+    display: flex;
+    flex-wrap: wrap;
+    width: 75%;
+}
 
 .child-institution-description{
   display: none;
@@ -1195,6 +1200,7 @@ content: 'Affiliated with';
 
 .child-institution-container {
     position: relative;
+    width: 400px;
 }
 
 .child-institution-count-collections {
@@ -1297,7 +1303,7 @@ background: none;
   .institutionLink_meta {
       padding: 10px;
       opacity: 0;
-     letter-spacing: 1px;    
+     letter-spacing: 1px;
              width: 100%;
          @include transition-duration(.5s);
              line-height: 15px;
@@ -1311,7 +1317,7 @@ background: none;
 opacity: 1;
     @include transition-duration(.5s);
 
-  }    
+  }
   }
 
   a.institutionLink {
@@ -1401,7 +1407,7 @@ opacity: 1;
   a.institutionLink.hnocLink {
     background-color: $hnocColor;
     background-image: url($hnocLogo);
-    background-size: 140px auto;    
+    background-size: 140px auto;
   }
 
   a.institutionLink.tulaneLink {
@@ -3076,7 +3082,7 @@ div#zone-header-wrapper {
 .featuredText {
     @include flexbox;
     flex-direction: column;
-    line-height: 15px;    
+    line-height: 15px;
 }
 
 span.featuredName {
@@ -4020,7 +4026,7 @@ background:none!important;
     width: calc(100% + 140px);
     height: calc(100% + 140px);
     filter: blur(50px) brightness(0.8) contrast(0.6);
-    background-position: 50% 20%;    
+    background-position: 50% 20%;
     background-repeat: no-repeat;
     background-size: cover;
     left: -20px;
@@ -4037,7 +4043,7 @@ background:none!important;
     padding-left: 45px;
     background-position: 9px 10px;
     background-size: 28px;
-    background-repeat: no-repeat;    
+    background-repeat: no-repeat;
  }
 
 .institutionLabel {
@@ -4065,7 +4071,7 @@ background:none!important;
     .tabs {
     margin: 0px;
     padding: 0px;
-    }  
+    }
 
     li a {
     max-width: none !important;
@@ -4079,7 +4085,7 @@ background:none!important;
     li a.active {
     font-weight: normal !important;
     background: rgba(255, 255, 255, 0.20) !important;
-    }    
+    }
 }
 
 #region-content{
@@ -4089,7 +4095,7 @@ background:none!important;
 .metaOpened #region-content{
 margin-left: 25vw;
           transition-duration: 1s;
-           transition-delay:0s;          
+           transition-delay:0s;
 }
 
 
@@ -4110,11 +4116,11 @@ max-width: none!important;
     text-transform: uppercase;
     display: flex;
     cursor: pointer;
-    margin-right: 10px;    
-    align-items: center;    
-    margin: 0px; 
-height: 30px;    
-margin-right: 10px;    
+    margin-right: 10px;
+    align-items: center;
+    margin: 0px;
+height: 30px;
+margin-right: 10px;
 }
 
 .userSelect:hover {
@@ -4137,12 +4143,12 @@ border: 1px solid white;
 
 .downloadSelect .iconSelect{
       background-image: url($downloadLegend);
-    background-size: 20px;      
+    background-size: 20px;
 }
 
 #shareToggle .iconSelect{
       background-image: url($shareLegend);
-    background-size: 20px;      
+    background-size: 20px;
 
 }
 
@@ -4151,12 +4157,12 @@ padding-right: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-}    
+}
 
 div.islandora-pdf-object, div.islandora-large-image-object {
     margin-left: 0px;
     margin-right: 0px;
-}    
+}
 
 h1#window-title {
     background: none;
@@ -4172,7 +4178,7 @@ h1#window-title {
     #pdf-object-author{
       display: none;
     }
-}    
+}
 
 .nano > .nano-pane > .nano-slider {
     background: #a5a5a5;
@@ -4180,11 +4186,11 @@ h1#window-title {
 
 
 .nano > .nano-pane{
-    background: rgba(100, 100, 100, 0.25);  
+    background: rgba(100, 100, 100, 0.25);
     margin-top: 20px;
     margin-bottom: 20px;
     margin-right: 10px;
-    width: 6px;    
+    width: 6px;
     }
 
 a#islandora-compound-next-link {
@@ -4237,8 +4243,8 @@ header#section-header {
 }
 
 #zone-content{
-    padding-top: 90px;      
-    background: #1a1a1a;    
+    padding-top: 90px;
+    background: #1a1a1a;
 }
 
 
@@ -4276,22 +4282,22 @@ form#islandora-ip-embargo-object-embargo-form {
     border: 1px solid #d0d0d0;
     div#edit-public-datastreams > div {
     margin-right: 20px;
-    }    
+    }
     div#edit-public-datastreams {
     display: flex;
-    }    
+    }
     .embargoTitle {
         margin-left: 30px;
         font-size: 20px;
         padding-top: 20px;
-    }    
+    }
     span#islandora-ip-embargo-policy-source {
         margin-left: 30px;
         margin-bottom: 15px;
-    }    
+    }
     .form-type-radio .description, .form-type-checkbox .description {
     margin-left: 0px;
-    }    
+    }
       input#edit-submit {
       width: 140px;
       align-self: center;
@@ -4302,8 +4308,8 @@ form#islandora-ip-embargo-object-embargo-form {
     text-shadow: none;
     color: white;
     font-size: 12px;
-    padding: 16px;      
-      }    
+    padding: 16px;
+      }
 }
 
 #islandora-ip-embargo-object-embargo-form > div {
@@ -4330,7 +4336,7 @@ form#islandora-ip-embargo-object-embargo-form {
 
       .imageLabel{
       background-image: url($imageLegend);
-margin-right: 24px;      
+margin-right: 24px;
 padding-left: 48px;
     padding-right: 25px;
       }
@@ -4343,13 +4349,13 @@ padding-left: 48px;
     content: " ";
     position: absolute;
     top: 0px;
-    left: -11px;    
+    left: -11px;
 }
 
 
       .block-compound-jail-display .block-inner > .content{
         margin: 0 10%;
-    max-width: 1200px;        
+    max-width: 1200px;
       }
 
       .compoundLabels {
@@ -4370,11 +4376,11 @@ padding-left: 48px;
         width: 25vw;
         transition-duration: 1s;
         background: #1a1a1a;
-        color: white;          
+        color: white;
     position: absolute;
         border-right: 1px solid #262626;
         .region-sidebar-first-inner{
-        padding: 40px;            
+        padding: 40px;
         }
       }
 
@@ -4382,12 +4388,12 @@ padding-left: 48px;
 transform: translate3d(0,0,0);
       transition-duration: 1s;
       position: fixed;
-      height: calc(100vh - 90px);    
-  
+      height: calc(100vh - 90px);
+
         .region-sidebar-first-inner{
-           //transform: translate(0vh, 0vh);      
+           //transform: translate(0vh, 0vh);
           //transition-duration: 1s;
-           //transition-delay:0.5s;    
+           //transition-delay:0.5s;
            //opacity: 1;
         }
 
@@ -4397,14 +4403,14 @@ transform: translate3d(0,0,0);
           padding-top: 0px;
           ul.tabs{
             border: 0px;
-            height: 22px;            
+            height: 22px;
           }
       }
 
 
       .region-content-inner{
         z-index: 1;
-      }      
+      }
       #region-sidebar-first {
         display: block;
       }
@@ -4427,8 +4433,8 @@ transform: translate3d(0,0,0);
 
 a#islandora-compound-next-link, a#islandora-compound-previous-link {
     margin: 0px;
-    max-width: none!important;    
-}                
+    max-width: none!important;
+}
 span#islandora-compound-sequence-position {
     margin: 0px;
 }
@@ -4437,15 +4443,15 @@ span#islandora-compound-sequence-position {
           a {
             max-width: none!important;
             line-height: inherit!important;
-          }      
+          }
           .form-item {
             display: flex;
             align-items: center;
-          }      
+          }
           .compoundParent{
             font-size: 28px;
             color: $offWhite;
-            padding: 10px 0px;            
+            padding: 10px 0px;
           }
           .compoundParent:hover{
             color:white;
@@ -4457,25 +4463,25 @@ span#islandora-compound-sequence-position {
               padding: 2px 10px;
               margin-left: 10px;
               font-weight: normal;
-          }         
+          }
           a.parentLink:hover {
               border: 1px solid rgba(255, 255, 255, .2);
-              color: white;              
-          }            
+              color: white;
+          }
 
           .compoundCount {
             margin-left: 10px;
             padding: 2px 5px;
             background: $offWhite;
             text-transform: uppercase;
-          }      
+          }
       }
 
       .compoundGallery {
         display: flex;
         flex-wrap: wrap;
     border-bottom: 1px solid rgba(255, 255, 255, .26);
-    padding-bottom: 10px;        
+    padding-bottom: 10px;
       }
 
     #block-islandora-compound-object-compound-jail-display > div {
@@ -4483,7 +4489,7 @@ span#islandora-compound-sequence-position {
         padding-bottom: 60px;
         padding-right: 10px;
         @include flexbox;
-        justify-content: center;        
+        justify-content: center;
     }
 
       .compoundSelect {
@@ -4491,23 +4497,23 @@ span#islandora-compound-sequence-position {
         flex-direction: row-reverse;
         margin-right: 10px;
         margin-bottom: 10px;
-height: 80px;        
+height: 80px;
         a{
         line-height: auto!important;
-        }        
+        }
         .compoundSelect-thumbnail{
         max-width: none!important;
         line-height: auto!important;
           img {
             max-width: none !important;
-            height: 80px;    
-            margin: 0px!important;    
+            height: 80px;
+            margin: 0px!important;
             padding: 0px!important;
             border: 0px!important;
           }
           .islandora-compound-object-jail-active {
               border: 0px;
-          } //active select     
+          } //active select
         }
         a.compoundSelect-title {
             display: flex!important;
@@ -4521,15 +4527,15 @@ height: 80px;
         }
         a.compoundSelect-title.active{
             background: rgba(255, 255, 255, .07)!important;
-            
+
         }
       }
 
       .compoundSelect:hover{
         a.compoundSelect-title {
             background: rgba(255, 255, 255, 0.07);
-        }    
-      }         
+        }
+      }
 .compoundGlance{
     padding-top: 20px;
     td.modsDesc {
@@ -4562,13 +4568,13 @@ padding-top:5px;
     margin-bottom: 11px;
     text-transform: uppercase;
     border: 1px solid $darkTransparent;
-    cursor: pointer;  
-    overflow: hidden;     
+    cursor: pointer;
+    overflow: hidden;
     .iconSelect {
     background-color: $darkTransparent;
     height: 30px;
-    width: 58px!important;    
-    }    
+    width: 58px!important;
+    }
     .textSelect {
     padding-left: 12px;
     padding-right: 12px;
@@ -4604,7 +4610,7 @@ body.compoundParent{
     }
 
     #shareToggle{
-    height: 23px;      
+    height: 23px;
     margin-left: 10px;
       .iconSelect{
         background-size: 15px;
@@ -4616,7 +4622,7 @@ body.compoundParent{
     height: 200px;
     border: 1px solid $lightTransparent;
     margin-right: 20px;
-    margin-bottom: 20px;    
+    margin-bottom: 20px;
     img{
     height: 200px!important;
     }
@@ -4640,10 +4646,10 @@ a#clip {
     align-items: center;
     height: 30px;
     color: white;
-    margin-left: 0px;    
+    margin-left: 0px;
 }
 
-#clip{ 
+#clip{
 
     img {
     filter: brightness(5) grayscale(1);
@@ -4707,10 +4713,10 @@ a#clip {
 
 .userSelect {
 
-    }  
+    }
 
 .userMenu{
-  align-items: center;  
+  align-items: center;
   padding-bottom: 0px;
 }
 
@@ -4760,7 +4766,7 @@ a#clip {
 
     div#block-system-main {
       height: 0px!important;
-      }  
+      }
       .contentIcon {
       margin-left: 20px;
     }
@@ -4776,10 +4782,10 @@ margin-bottom:1px;
 
     .compoundSelect{
     height: 80px;
-    border: 1px solid rgba(255, 255, 255, 0.07);      
+    border: 1px solid rgba(255, 255, 255, 0.07);
       a.compoundSelect-title {
       padding: 40px 40px;
-      }        
+      }
     }
 
     .compoundGallery {
@@ -4787,7 +4793,7 @@ margin-bottom:1px;
     flex-wrap: wrap;
     padding: 20px;
     background: $darkTransparent;
-    padding-bottom: 0px;  
+    padding-bottom: 0px;
     border-bottom: 0px;
     }
 
@@ -4801,7 +4807,7 @@ margin-bottom:1px;
 
 td.modsDesc, .tagsGlance {
     padding: 20px!important;
-}      
+}
 td.modsDesc{
   padding-bottom: 0px!important;
 }
@@ -4894,9 +4900,9 @@ table {
       a {
       color: #96a0b0;
 
-      }  
       }
- 
+      }
+
   }
 
   .islandora-audio-object {
@@ -4910,7 +4916,7 @@ table {
         background-color: transparent;
         bottom: 40%;
         padding: 0px 137px;
-      opacity: 1 !important;      
+      opacity: 1 !important;
       }
       .vjs-big-play-button, #islandora_videojs_html5_api, .vjs-poster {
         display: none;
@@ -4921,7 +4927,7 @@ table {
       width: 100%;
       padding: 0px;
       border: 0px;
-    background: #242021;  
+    background: #242021;
             border-radius: 0px;
     }
 
@@ -4942,7 +4948,7 @@ color: #dedede;
   }
 
 .creatorLinks {
- 
+
     margin: 0px 150px;
         margin-top: 6px;
 }
@@ -4953,7 +4959,7 @@ color: #dedede;
     border: 1px solid rgba(255, 255, 255, 0.15);
     padding: 3px 10px;
     border-radius: 2px;
-    margin-bottom: 5px;    
+    margin-bottom: 5px;
     color: #afafaf;
           @include transition-duration(.5s);
 
@@ -5164,7 +5170,7 @@ input.ajax-processed {
 //contact us
 
 #block-block-14{
-  @extend section#block-islandora-solr-advanced; 
+  @extend section#block-islandora-solr-advanced;
 align-items: flex-start;
     padding-top: 50px;
 
@@ -5173,7 +5179,7 @@ align-items: flex-start;
     background: white;
     padding: 50px;
     position: relative;
-    width: 50vw;    
+    width: 50vw;
   }
 
     h3 {
@@ -5198,7 +5204,7 @@ align-items: flex-start;
 //about ldc
 
 #block-views-meeting-minutes-block-1{
- @extend #block-block-14; 
+ @extend #block-block-14;
 }
 
 //mobile menu
@@ -5220,10 +5226,10 @@ body{
     display: -webkit-flex;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;    
+    justify-content: flex-start;
     padding: 20px;
     font-size: 15px;
-    height: auto;    
+    height: auto;
 }
 
 .mobileMenu a {
@@ -5237,17 +5243,17 @@ body{
 
 .page{
   background: black;
-}  
+}
   .mobileMenu{
     z-index: 99;
     opacity:  1;
-    margin-top: 60px;    
+    margin-top: 60px;
   }
 section#section-content {
     filter: blur(2px) brightness(0.8);
     #zone-content-wrapper{
  pointer-events: none;
-}    
+}
     }
 }
 //
@@ -5261,14 +5267,14 @@ section#section-content {
     //}
     //#zone-content-wrapper, #region-header-second{
            //pointer-events: none;
-      //filter: brightness(0.2);           
+      //filter: brightness(0.2);
     //}
   //}
 //
   //.front #page.menuOn{
 //
 //
-      //filter: brightness(0.2);           
+      //filter: brightness(0.2);
 //
   //}
 //
@@ -5403,7 +5409,7 @@ section#section-content {
 
 .block-advanced .block-inner.clearfix {
     padding: 50px 20px;
-    margin: 20px;    
+    margin: 20px;
 }
 
 #block-block-14 {
@@ -5418,7 +5424,7 @@ section#section-content {
     width: 100vw;
     box-sizing: border-box;
     padding-top: 50px;
-    margin: 20px;    
+    margin: 20px;
 
 }
 
@@ -5427,9 +5433,13 @@ section#section-content {
 
   }
 
-.institution-collection-list-a, .institution-logo, .institution-search::before, .child-institution-collections::before, .child-institution-collections a  {
+.institution-collection-list-a, .institution-logo, .institution-search::before, .child-institution-collections::before, .child-institution-collections a, .childCollections::before  {
         width: 33.33%;
       }
+
+.childCollections {
+    width: 66.66%;
+}
 
   .islandora-pdf-content img {
     margin: 15px;
@@ -5635,7 +5645,7 @@ div.region-inner.region-header-first-inner, {
     background: none;
     border: 0px;
     position: relative;
-    top: 1px;    
+    top: 1px;
 }
 
 html.mobileMenuActive, body.mobileMenuActive{
@@ -5671,7 +5681,7 @@ html.mobileMenuActive, body.mobileMenuActive{
 //
 //.region-header-second-inner{
   //flex-direction: column;
-//align-items: flex-start;  
+//align-items: flex-start;
 //}
 
 #block-block-1 {
@@ -5713,13 +5723,13 @@ html.mobileMenuActive, body.mobileMenuActive{
       }
       h1#oh-title {
       margin: 0px 15px;
-    padding-top: 30px;      
+    padding-top: 30px;
       }
       .creatorLinks {
       margin: 0px 15px;
       }
        a.ohcreator {
-      margin-top: 10px;      
+      margin-top: 10px;
       }
 }
 }
@@ -5765,7 +5775,7 @@ html.mobileMenuActive, body.mobileMenuActive{
           width: auto;
           flex-grow: 1;
           height: auto;
-    word-break: break-word;          
+    word-break: break-word;
         }
         a::before {
           display: none;
@@ -5826,7 +5836,7 @@ html.mobileMenuActive, body.mobileMenuActive{
 
 div#zone-header-wrapper {
     margin-left: 5px;
-}      
+}
       #block-islandora-solr-simple {
         background: white;
         color: #474747;
@@ -5843,7 +5853,7 @@ div#zone-header-wrapper {
         padding-left: 3vw;
       }
 
-      
+
 
       div#block-block-11 {
         width: 100%;
@@ -5857,23 +5867,23 @@ div#zone-header-wrapper {
 }
 
     div#block-block-12 {
-    min-height: 600px;    
+    min-height: 600px;
     align-items: flex-start;
     height: auto;
-    }       
+    }
 
-    div#block-block-12 > .block-inner > .content.clearfix {    
+    div#block-block-12 > .block-inner > .content.clearfix {
     width: 90vw;
     }
 
     div#block-block-12 p {
-    line-height: 4.4vw;       
-    margin: 0px;      
-    color: white;      
-    margin-bottom: 17px;      
+    line-height: 4.4vw;
+    margin: 0px;
+    color: white;
+    margin-bottom: 17px;
     }
 
-    div#block-block-12 #largeSearch {    
+    div#block-block-12 #largeSearch {
     margin-left: 0px;
     }
 
@@ -5890,9 +5900,9 @@ div#block-block-12 #largeSearch .form-item-islandora-simple-search-query::after{
 }
 
 
-    div#block-block-12 #largeSearch input[type="text"] {   
-    width: 90vw;       
-    font-size: 3vw;        
+    div#block-block-12 #largeSearch input[type="text"] {
+    width: 90vw;
+    font-size: 3vw;
     padding: 0px 10px;
 border: 1px solid rgba(255, 255, 255, 0.33);
     }
@@ -5904,7 +5914,7 @@ border: 1px solid rgba(255, 255, 255, 0.33);
     #block-block-12 > .block-inner.clearfix {
         padding-top: 90px;
         padding-bottom: 90px;
-    }    
+    }
 
     #block-block-12 #largeSearch .homepageText {
       width: auto;
@@ -5962,7 +5972,7 @@ border: 1px solid rgba(255, 255, 255, 0.33);
     .islandora-inline-metadata dd {
       padding-bottom: 10px;
       width: 95%;
-    word-break: break-word;      
+    word-break: break-word;
     }
     dl.solr-thumb {
       width: 25%;
@@ -5986,7 +5996,7 @@ display: none;
 #zone-content {
     padding-top: 50px;
     background: #1a1a1a;
-}  
+}
   #region-sidebar-first,
   {
   display: flex;
@@ -6000,9 +6010,9 @@ display: none;
 
 .contentLabel{
   background-size: 15px;
-font-size: 10px;  
+font-size: 10px;
     padding-left: 35px;
-line-height: 10px;    
+line-height: 10px;
     border: 1px solid $lightTransparent;
 }
 .institutionLabel {
@@ -6037,7 +6047,7 @@ h1#window-title{
       background-size: 10px!important;
     border: 0px;
     width: 20px;
-    height: 10px;      
+    height: 10px;
 }
 
 .downloadSelect .iconSelect {
@@ -6084,7 +6094,7 @@ h1#window-title{
 .institution-collection-list-item-label{
       width: 60px;
       height: 210px;
-font-size: 12px;      
+font-size: 12px;
 }
 
 .institution-collection-description{

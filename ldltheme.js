@@ -25,9 +25,9 @@ window.FontAwesomeCdnConfig = {
     enabled: false
   },
   reporting: {
-    
+
     enabled: false
-    
+
   },
   useUrl: "use.fontawesome.com",
   faCdnUrl: "https://cdn.fontawesome.com:443",
@@ -61,7 +61,7 @@ window.FontAwesomeCdnConfig = {
  */
 !function(t,i,e,s){function o(i,e){var h=this;"object"==typeof e&&(delete e.refresh,delete e.render,t.extend(this,e)),this.$element=t(i),!this.imageSrc&&this.$element.is("img")&&(this.imageSrc=this.$element.attr("src"));var r=(this.position+"").toLowerCase().match(/\S+/g)||[];if(r.length<1&&r.push("center"),1==r.length&&r.push(r[0]),("top"==r[0]||"bottom"==r[0]||"left"==r[1]||"right"==r[1])&&(r=[r[1],r[0]]),this.positionX!=s&&(r[0]=this.positionX.toLowerCase()),this.positionY!=s&&(r[1]=this.positionY.toLowerCase()),h.positionX=r[0],h.positionY=r[1],"left"!=this.positionX&&"right"!=this.positionX&&(this.positionX=isNaN(parseInt(this.positionX))?"center":parseInt(this.positionX)),"top"!=this.positionY&&"bottom"!=this.positionY&&(this.positionY=isNaN(parseInt(this.positionY))?"center":parseInt(this.positionY)),this.position=this.positionX+(isNaN(this.positionX)?"":"px")+" "+this.positionY+(isNaN(this.positionY)?"":"px"),navigator.userAgent.match(/(iPod|iPhone|iPad)/))return this.imageSrc&&this.iosFix&&!this.$element.is("img")&&this.$element.css({backgroundImage:"url("+this.imageSrc+")",backgroundSize:"cover",backgroundPosition:this.position}),this;if(navigator.userAgent.match(/(Android)/))return this.imageSrc&&this.androidFix&&!this.$element.is("img")&&this.$element.css({backgroundImage:"url("+this.imageSrc+")",backgroundSize:"cover",backgroundPosition:this.position}),this;this.$mirror=t("<div />").prependTo("body");var a=this.$element.find(">.parallax-slider"),n=!1;0==a.length?this.$slider=t("<img />").prependTo(this.$mirror):(this.$slider=a.prependTo(this.$mirror),n=!0),this.$mirror.addClass("parallax-mirror").css({visibility:"hidden",zIndex:this.zIndex,position:"fixed",top:0,left:0,overflow:"hidden"}),this.$slider.addClass("parallax-slider").one("load",function(){h.naturalHeight&&h.naturalWidth||(h.naturalHeight=this.naturalHeight||this.height||1,h.naturalWidth=this.naturalWidth||this.width||1),h.aspectRatio=h.naturalWidth/h.naturalHeight,o.isSetup||o.setup(),o.sliders.push(h),o.isFresh=!1,o.requestRender()}),n||(this.$slider[0].src=this.imageSrc),(this.naturalHeight&&this.naturalWidth||this.$slider[0].complete||a.length>0)&&this.$slider.trigger("load")}function h(s){return this.each(function(){var h=t(this),r="object"==typeof s&&s;this==i||this==e||h.is("body")?o.configure(r):h.data("px.parallax")?"object"==typeof s&&t.extend(h.data("px.parallax"),r):(r=t.extend({},h.data(),r),h.data("px.parallax",new o(this,r))),"string"==typeof s&&("destroy"==s?o.destroy(this):o[s]())})}!function(){for(var t=0,e=["ms","moz","webkit","o"],s=0;s<e.length&&!i.requestAnimationFrame;++s)i.requestAnimationFrame=i[e[s]+"RequestAnimationFrame"],i.cancelAnimationFrame=i[e[s]+"CancelAnimationFrame"]||i[e[s]+"CancelRequestAnimationFrame"];i.requestAnimationFrame||(i.requestAnimationFrame=function(e){var s=(new Date).getTime(),o=Math.max(0,16-(s-t)),h=i.setTimeout(function(){e(s+o)},o);return t=s+o,h}),i.cancelAnimationFrame||(i.cancelAnimationFrame=function(t){clearTimeout(t)})}(),t.extend(o.prototype,{speed:.2,bleed:0,zIndex:-100,iosFix:!0,androidFix:!0,position:"center",overScrollFix:!1,refresh:function(){this.boxWidth=this.$element.outerWidth(),this.boxHeight=this.$element.outerHeight()+2*this.bleed,this.boxOffsetTop=this.$element.offset().top-this.bleed,this.boxOffsetLeft=this.$element.offset().left,this.boxOffsetBottom=this.boxOffsetTop+this.boxHeight;var t=o.winHeight,i=o.docHeight,e=Math.min(this.boxOffsetTop,i-t),s=Math.max(this.boxOffsetTop+this.boxHeight-t,0),h=this.boxHeight+(e-s)*(1-this.speed)|0,r=(this.boxOffsetTop-e)*(1-this.speed)|0;if(h*this.aspectRatio>=this.boxWidth){this.imageWidth=h*this.aspectRatio|0,this.imageHeight=h,this.offsetBaseTop=r;var a=this.imageWidth-this.boxWidth;this.offsetLeft="left"==this.positionX?0:"right"==this.positionX?-a:isNaN(this.positionX)?-a/2|0:Math.max(this.positionX,-a)}else{this.imageWidth=this.boxWidth,this.imageHeight=this.boxWidth/this.aspectRatio|0,this.offsetLeft=0;var a=this.imageHeight-h;this.offsetBaseTop="top"==this.positionY?r:"bottom"==this.positionY?r-a:isNaN(this.positionY)?r-a/2|0:r+Math.max(this.positionY,-a)}},render:function(){var t=o.scrollTop,i=o.scrollLeft,e=this.overScrollFix?o.overScroll:0,s=t+o.winHeight;this.boxOffsetBottom>t&&this.boxOffsetTop<=s?(this.visibility="visible",this.mirrorTop=this.boxOffsetTop-t,this.mirrorLeft=this.boxOffsetLeft-i,this.offsetTop=this.offsetBaseTop-this.mirrorTop*(1-this.speed)):this.visibility="hidden",this.$mirror.css({transform:"translate3d(0px, 0px, 0px)",visibility:this.visibility,top:this.mirrorTop-e,left:this.mirrorLeft,height:this.boxHeight,width:this.boxWidth}),this.$slider.css({transform:"translate3d(0px, 0px, 0px)",position:"absolute",top:this.offsetTop,left:this.offsetLeft,height:this.imageHeight,width:this.imageWidth,maxWidth:"none"})}}),t.extend(o,{scrollTop:0,scrollLeft:0,winHeight:0,winWidth:0,docHeight:1<<30,docWidth:1<<30,sliders:[],isReady:!1,isFresh:!1,isBusy:!1,setup:function(){if(!this.isReady){var s=t(e),h=t(i),r=function(){o.winHeight=h.height(),o.winWidth=h.width(),o.docHeight=s.height(),o.docWidth=s.width()},a=function(){var t=h.scrollTop(),i=o.docHeight-o.winHeight,e=o.docWidth-o.winWidth;o.scrollTop=Math.max(0,Math.min(i,t)),o.scrollLeft=Math.max(0,Math.min(e,h.scrollLeft())),o.overScroll=Math.max(t-i,Math.min(t,0))};h.on("resize.px.parallax load.px.parallax",function(){r(),o.isFresh=!1,o.requestRender()}).on("scroll.px.parallax load.px.parallax",function(){a(),o.requestRender()}),r(),a(),this.isReady=!0}},configure:function(i){"object"==typeof i&&(delete i.refresh,delete i.render,t.extend(this.prototype,i))},refresh:function(){t.each(this.sliders,function(){this.refresh()}),this.isFresh=!0},render:function(){this.isFresh||this.refresh(),t.each(this.sliders,function(){this.render()})},requestRender:function(){var t=this;this.isBusy||(this.isBusy=!0,i.requestAnimationFrame(function(){t.render(),t.isBusy=!1}))},destroy:function(e){var s,h=t(e).data("px.parallax");for(h.$mirror.remove(),s=0;s<this.sliders.length;s+=1)this.sliders[s]==h&&this.sliders.splice(s,1);t(e).data("px.parallax",!1),0===this.sliders.length&&(t(i).off("scroll.px.parallax resize.px.parallax load.px.parallax"),this.isReady=!1,o.isSetup=!1)}});var r=t.fn.parallax;t.fn.parallax=h,t.fn.parallax.Constructor=o,t.fn.parallax.noConflict=function(){return t.fn.parallax=r,this},t(e).on("ready.px.parallax.data-api",function(){t('[data-parallax="scroll"]').parallax()})}(jQuery,window,document);
 //$("#region-header-first").on('click', function(){
-  //   window.location = "../";    
+  //   window.location = "../";
 //});
 
 
@@ -105,19 +105,19 @@ $(window).on("load", function() {
       });
 
 
-      if ( ($( ".video-js" ).length ) && ( $( "#islandora-pdfjs" ).length )) { 
+      if ( ($( ".video-js" ).length ) && ( $( "#islandora-pdfjs" ).length )) {
            $("body").addClass("audioPDF");
 
        }//detection for oral history
 
-      if ( $( ".islandora-basic-collection-item-count" ).length ) { 
+      if ( $( ".islandora-basic-collection-item-count" ).length ) {
            $("body").addClass('collectionPageTest');
-           $("body").addClass('collectionPage');     
+           $("body").addClass('collectionPage');
 
 
        }//allows collection Page styles
 
-      //if ( $( ".islandora-basic-collection-wrapper > p" ).length ) { 
+      //if ( $( ".islandora-basic-collection-wrapper > p" ).length ) {
            //$("body").addClass('collectionPage');
        //}//allows collection Page styles
       $("h1#page-title").clone().prop({ id: "oh-title", class: "ohtitle"}).prependTo(".islandora-audio-content");
@@ -167,7 +167,7 @@ if($('.institution-collection-list-a').length < 4){
       $("#region-content div.tabs.clearfix").prependTo("#block-system-main");
       $(".bookmark").prependTo("#breadcrumb");
       if ($('#largeSearch').length){
-      } else{      
+      } else{
       $("#region-header-first #block-islandora-solr-simple").clone().prop({ id: "largeSearch", value:"Search LDL.."}).appendTo( $("#block-block-12 > .block-inner > div.content")).on;
       }//this length check avoids this from firing multiple times from using the + button on the advanced search
       //$("#block-block-1").clone().prop({ id: "landingAdvanced"}).appendTo("#largeSearch");
@@ -187,13 +187,16 @@ if($('.institution-collection-list-a').length < 4){
       $("<div class='homepageLogo'/>").prependTo(".messageContainer");
       $( ".site-name a span" ).replaceWith( "<span><span class='boldSpan'>Louisiana</span> Digital Library</span>" );
 
+      $('.child-institution-collections a').wrapAll('<div class="childCollections"/>'); //wraps collectionPage title
+
+
       $(".collectionPage <div class='collectionSearch'/>").insertAfter(".collectionHeader");
       $(".collectionPage #page-title").prependTo(".collectionHeader .collection-description-text");
       $(".collectionPage #block-islandora-collection-search-islandora-collection-search").appendTo(".collectionSearch");
       $("#zone-header input.form-submit").val(' ');
-      $(".institution-search input.form-submit").val(' ');    
-      $(".collectionSearch input.form-submit").val(' ');     
-      $("#largeSearch input.form-submit").val(' ');  
+      $(".institution-search input.form-submit").val(' ');
+      $(".collectionSearch input.form-submit").val(' ');
+      $("#largeSearch input.form-submit").val(' ');
       $("#block-user-login").prependTo(".footerContainer");
       if ($('.mobileMenu').length){
       } else{
@@ -213,13 +216,13 @@ if($('.institution-collection-list-a').length < 4){
           $("#block-islandora-solr-advanced, #block-block-14, #block-views-meeting-minutes-block-1").insertBefore(".mobileMenu");
       }//this length check avoids this from firing multiple times from using the + button on the advanced search
 
-    
+
     if ($("body").hasClass("audioPDF")){
      $("#block-islandora-compound-object-compound-jail-display").appendTo("#sideMods");
  }
 
 
-//begin compoundObject 
+//begin compoundObject
 
    if ( ($('.block-islandora-compound-object').length) && ( !$('body').hasClass('audioPDF') ) ){
 
@@ -235,7 +238,7 @@ if($('.institution-collection-list-a').length < 4){
 
     //find widest image
         var widest = null;
-        // remember the width of the "widest" element - probably faster than calling .width() - currently disabled - move addclasswidest to second if to 
+        // remember the width of the "widest" element - probably faster than calling .width() - currently disabled - move addclasswidest to second if to
         var widestWidth = 0;
         $(".compoundSelect").each(function() {
           if (widest == null)
@@ -253,30 +256,30 @@ if($('.institution-collection-list-a').length < 4){
 
     //done finding widest image
     $("<div class='backgroundDiv'/>").insertBefore(".compoundObject #region-sidebar-first"); // adds div for item background
-        var commentedURL = $('div.widest').find('noscript').addClass('widestIMG').text().split(" "); 
+        var commentedURL = $('div.widest').find('noscript').addClass('widestIMG').text().split(" ");
         var srcclean = commentedURL[2].match(/"(.*?)"/);
         //alert(srcclean[1]);
-        //assign background image   
-        $('.backgroundDiv').css('background-image', 'url(' + srcclean[1] + ')');   
+        //assign background image
+        $('.backgroundDiv').css('background-image', 'url(' + srcclean[1] + ')');
      //adds body class if block is present
     $(".compoundObject #block-system-main table").prop({class:"modsTable"}).appendTo(".region-sidebar-first-inner");
     $('.compoundSelect').wrapAll('<div class="compoundGallery"/>'); //wraps collectionPage title
-    $("<div class='itemMenu'/>").insertBefore(".compoundGallery_header"); 
+    $("<div class='itemMenu'/>").insertBefore(".compoundGallery_header");
     $("<div class='compoundLabels'/>").insertBefore(".itemMenu"); //adds region for contentLabel and institutionLabel
     $("<div class='contentLabel'/>").appendTo(".compoundLabels"); //adds contentLabel div to show content type
     $("<div class='contentIcon'/>").insertBefore(".compoundGallery_header > .form-item > a:first-child"); //adds contentLabel div to show content type
 
     var institutionHome = $(".depth-2 > a").attr('href'); //creates href path from breadcrumb depth-2
-    $("<a href=" + institutionHome + "><div class='institutionLabel'/></a>").appendTo(".compoundLabels"); //adds institutionLabel div to show content type      
+    $("<a href=" + institutionHome + "><div class='institutionLabel'/></a>").appendTo(".compoundLabels"); //adds institutionLabel div to show content type
         $(".compoundObject .contentLabel").addClass("compoundLabel"); //detects contentType and assign new class to contentLabel
-        $(".compoundLabel").html("Compound <br> Parent"); //text within compoundLabel      
+        $(".compoundLabel").html("Compound <br> Parent"); //text within compoundLabel
 
         $(".manageParent, ul.tabs").appendTo(".itemMenu").wrapAll('<div class="manageMenu"/>'); //moves the view/ip embargo/manage menu
         $("<div class='userMenu'/>").insertAfter(".manageMenu");  //inserts compoundGlance
         $("<div class='compoundGlance'/>").insertAfter(".compoundGallery");  //inserts compoundGlance
         $("<div class='infoToggle userSelect'><div class='iconSelect'></div><div class='textSelect'>show details</div></div>").appendTo(".userMenu"); //adds toggle for parent metadata
-        $(".downloadLink").appendTo(".userMenu"); 
-        $("#clip").appendTo(".userMenu");              
+        $(".downloadLink").appendTo(".userMenu");
+        $("#clip").appendTo(".userMenu");
         $(".modsDesc").clone().appendTo(".compoundGlance");
         $(".modsSubject").clone().appendTo(".compoundGlance").wrapAll('<div class="tagsGlance"/>');
         $(".compoundLabels").insertBefore("#block-islandora-compound-object-compound-jail-display");
@@ -288,9 +291,9 @@ if($('.institution-collection-list-a').length < 4){
               $('body').toggleClass('metaOpened');
               $(".nano").nanoScroller({ alwaysVisible: false });
 
-        });           
+        });
         sr.reveal('.modsTable', { duration: 200, delay: 850,  easing: 'linear', scale: 1, }, 20);
-    
+
         if ($('.compoundObject #block-system-main .block-inner .content > div').length){
         $("body").addClass('compoundChild');
         }
@@ -308,10 +311,10 @@ if($('.institution-collection-list-a').length < 4){
 
         //begin compoundChild
     if ($('body').hasClass('compoundChild')){
-        $(".compoundChild .compoundLabel").html("Compound <br> Child"); //text within compoundLabel      
-        $("<div class='compoundArrows userSelect'/>").appendTo(".userMenu");        
+        $(".compoundChild .compoundLabel").html("Compound <br> Child"); //text within compoundLabel
+        $("<div class='compoundArrows userSelect'/>").appendTo(".userMenu");
 
-        $('#islandora-compound-sequence-position, #islandora-compound-previous-link, #islandora-compound-next-link').appendTo('.compoundArrows');        
+        $('#islandora-compound-sequence-position, #islandora-compound-previous-link, #islandora-compound-next-link').appendTo('.compoundArrows');
 
 }
 
@@ -322,16 +325,16 @@ if($('.institution-collection-list-a').length < 4){
         $('<div class="childNotice">Part of</div>').insertBefore('.compoundChild .compoundGallery_header .contentIcon');
         $('.userMenu').insertAfter('#window-title');
         $('.infoToggle').removeClass('userSelect').insertBefore('.childHeader');
-        $('<div class="textSelect">clip image</div>').appendTo("#clip");        
+        $('<div class="textSelect">clip image</div>').appendTo("#clip");
         $('#clip').addClass('userSelect');
-        $("<div id='shareToggle' class='userSelect'><div class='iconSelect'></div><div class='textSelect'>share</div></div>").insertAfter("#clip");        
-        $("<div id='shareToggle' class='userSelect'><div class='iconSelect'></div><div class='textSelect'>share</div></div>").insertAfter(".compoundParent .compoundCount");        
+        $("<div id='shareToggle' class='userSelect'><div class='iconSelect'></div><div class='textSelect'>share</div></div>").insertAfter("#clip");
+        $("<div id='shareToggle' class='userSelect'><div class='iconSelect'></div><div class='textSelect'>share</div></div>").insertAfter(".compoundParent .compoundCount");
 
-        $("<div id='share'/>").insertAfter("#shareToggle");        
+        $("<div id='share'/>").insertAfter("#shareToggle");
         $("#islandora-compound-next-link").insertAfter("#islandora-compound-sequence-position");
          $("<i class='fa fa-arrow-right' aria-hidden='true'></i>").appendTo("#islandora-compound-next-link");
           $("<i class='fa fa-arrow-left' aria-hidden='true'></i>").appendTo("#islandora-compound-previous-link");
-      
+
 
 
 
@@ -348,7 +351,7 @@ $("#share").jsSocials({
     $(this).toggleClass('activeMenu');
     $('#share').toggleClass('shareActive');
 
-        });  
+        });
 
 
         $('table').each(function (){
@@ -366,11 +369,11 @@ $("#share").jsSocials({
         $(".nano > .region-inner").appendTo('#side');
         $('#sideMods, .nano > .region-inner').wrapAll('<div class="metadataSidebar"/>');
         $(".metadataSidebar").addClass('nano-content');
-        $(".metadataRow span:first-child").addClass("metadataTitle");  
-        $(".metadataRow span:nth-child(2n)").addClass("metadataValue");  
+        $(".metadataRow span:first-child").addClass("metadataTitle");
+        $(".metadataRow span:nth-child(2n)").addClass("metadataValue");
         $(".metadataContainer div:first-child").remove();  //removes weird h3 titles
-        $(".metadataSidebar > .region-inner > .metadataContainer:first-child").addClass("itemMetadata");  
-        $(".metadataSidebar > .region-inner > .metadataContainer:nth-child(2n + 0)").addClass("compoundMetadata");  
+        $(".metadataSidebar > .region-inner > .metadataContainer:first-child").addClass("itemMetadata");
+        $(".metadataSidebar > .region-inner > .metadataContainer:nth-child(2n + 0)").addClass("compoundMetadata");
 
 
 }
@@ -378,7 +381,7 @@ $("#share").jsSocials({
 
 
 
-      $("<a href='/'>Home</a>").appendTo(".mobileMenu");  
+      $("<a href='/'>Home</a>").appendTo(".mobileMenu");
 
 
 if ($(window).width() < 900) {
@@ -405,7 +408,7 @@ var paddingHeight2 = ($( document ).height() - $('#block-block-14').height()) + 
 
 
 
-    $.fn.menuisActive = function(){ 
+    $.fn.menuisActive = function(){
     modal.style.display = "flex";
     $(".page").addClass('blurFilter');
     $(".parallax-slider").addClass('darkFilter');
@@ -418,7 +421,7 @@ var paddingHeight2 = ($( document ).height() - $('#block-block-14').height()) + 
     $('#block-block-14').css('padding-bottom',  paddingHeight2);
 
 
-// When the user clicks on the button, open the modal 
+// When the user clicks on the button, open the modal
 btn.onclick = function() {
         $.fn.menuisActive();
 
@@ -429,14 +432,14 @@ span.onclick = function() {
     modal.style.display = "none";
     $(".page").removeClass('blurFilter');
     $(".parallax-slider").removeClass('darkFilter');
-    $("button").removeClass('is-active');    
+    $("button").removeClass('is-active');
     $("#zone-content-wrapper").removeClass('noClick');
 
       var uri = window.location.toString();
         if (uri.indexOf("#") > 0) {
             var clean_uri = uri.substring(0, uri.indexOf("#"));
             window.history.replaceState({}, document.title, clean_uri);
-        }  
+        }
 }
 
 // When the user clicks anywhere outside of the modal, close it
@@ -444,40 +447,40 @@ window.onclick = function(event) {
     if (event.target == modal){
         modal.style.display = "none";
         $(".page").removeClass('blurFilter');
-        $(".parallax-slider").removeClass('darkFilter');  
-        $("button").removeClass('is-active');    
+        $(".parallax-slider").removeClass('darkFilter');
+        $("button").removeClass('is-active');
         $("#zone-content-wrapper").removeClass('noClick');
 
   var uri = window.location.toString();
   if (uri.indexOf("#") > 0) {
       var clean_uri = uri.substring(0, uri.indexOf("#"));
       window.history.replaceState({}, document.title, clean_uri);
-  }                
+  }
     }
     if (event.target == modal2 || event.target == page) {
         modal2.style.display = "none";
         $(".page").removeClass('blurFilter');
-        $(".parallax-slider").removeClass('darkFilter');        
+        $(".parallax-slider").removeClass('darkFilter');
         $("#zone-content-wrapper").removeClass('noClick');
 
             var uri = window.location.toString();
             if (uri.indexOf("#") > 0) {
                 var clean_uri = uri.substring(0, uri.indexOf("#"));
                 window.history.replaceState({}, document.title, clean_uri);
-            }          
-    }    
+            }
+    }
     if (event.target == modal3 || event.target == page) {
         modal3.style.display = "none";
         $(".page").removeClass('blurFilter');
-        $(".parallax-slider").removeClass('darkFilter');        
+        $(".parallax-slider").removeClass('darkFilter');
         $("#zone-content-wrapper").removeClass('noClick');
 
             var uri = window.location.toString();
             if (uri.indexOf("#") > 0) {
                 var clean_uri = uri.substring(0, uri.indexOf("#"));
                 window.history.replaceState({}, document.title, clean_uri);
-            }          
-    }    
+            }
+    }
 
 }
 
@@ -500,7 +503,7 @@ var btn2 = document.getElementsByClassName("contactLink")[0];
 // Get the <span> element that closes the modal
 var span2 = document.getElementsByClassName("modalExit2")[0];
 var page = document.getElementById('page');
-// When the user clicks on the button, open the modal 
+// When the user clicks on the button, open the modal
 
 
 btn2.onclick = function() {
@@ -517,14 +520,14 @@ span2.onclick = function() {
     modal2.style.display = "none";
     $(".page").removeClass('blurFilter');
     $(".parallax-slider").removeClass('darkFilter');
-    $("button").removeClass('is-active');    
+    $("button").removeClass('is-active');
     $("#zone-content-wrapper").removeClass('noClick');
 
   var uri = window.location.toString();
   if (uri.indexOf("#") > 0) {
       var clean_uri = uri.substring(0, uri.indexOf("#"));
       window.history.replaceState({}, document.title, clean_uri);
-  }    
+  }
 }
 
       $('div.form-type-checkbox').click(function(){
@@ -547,7 +550,7 @@ $('.about-ldc a');
 // Get the <span> element that closes the modal
 var span3 = document.getElementsByClassName("modalExit3")[0];
 var page = document.getElementById('page');
-// When the user clicks on the button, open the modal 
+// When the user clicks on the button, open the modal
 
 
 btn3.onclick = function() {
@@ -564,28 +567,28 @@ span3.onclick = function() {
     modal3.style.display = "none";
     $(".page").removeClass('blurFilter');
     $(".parallax-slider").removeClass('darkFilter');
-    $("button").removeClass('is-active');    
+    $("button").removeClass('is-active');
     $("#zone-content-wrapper").removeClass('noClick');
 
   var uri = window.location.toString();
   if (uri.indexOf("#") > 0) {
       var clean_uri = uri.substring(0, uri.indexOf("#"));
       window.history.replaceState({}, document.title, clean_uri);
-  }    
+  }
 }
 
 $('.about-ldc a').onclick = function() {
     modal3.style.display = "none";
     $(".page").removeClass('blurFilter');
     $(".parallax-slider").removeClass('darkFilter');
-    $("button").removeClass('is-active');    
+    $("button").removeClass('is-active');
     $("#zone-content-wrapper").removeClass('noClick');
 
   var uri = window.location.toString();
   if (uri.indexOf("#") > 0) {
       var clean_uri = uri.substring(0, uri.indexOf("#"));
       window.history.replaceState({}, document.title, clean_uri);
-  }    
+  }
 }
 
 //end modal aboutldc
@@ -679,15 +682,15 @@ $(".featuredLink").hover(function(){
 
       $('#section-content').click(function(){
           $('#page').removeClass('menuOn');
-          $("html").removeClass('mobileMenuActive');        
+          $("html").removeClass('mobileMenuActive');
                     $('.mobileMenuIcon').removeClass('is-active');
                         $("#zone-content-wrapper").removeClass('noClick');
 
-  
+
       });
 
 
-if ( $( "#sideMods" ).length ) { 
+if ( $( "#sideMods" ).length ) {
      $("body").addClass('itemPage');
  }//allows collection Page styles
 
@@ -715,13 +718,13 @@ $('#zone-header .form-item-islandora-simple-search-query > input').each(function
 });//Adds Search text
 
 $(".latechTheme .collectionLogo").on('click', function(){
-  window.location = "/latech";    
+  window.location = "/latech";
 });
 
 
 
 
-if ( $( "#sideMods" ).length ) { 
+if ( $( "#sideMods" ).length ) {
      $("body").addClass('itemPage');
  }//allows collection Page styles
 
@@ -739,7 +742,7 @@ if($('.child-institution-collections a').length < 1){
 }
 
 $(".institution-collection-list-a").on('click', function(){
-  window.location = $(this).data("target");    
+  window.location = $(this).data("target");
 });
 
 
@@ -829,21 +832,21 @@ var currentInstitution =  $( "ul.breadcrumb a.active" ).text();
 //// Scroll to specific values
 //// scrollTo is the same
 //window.scroll({
-  //top: 2500, 
-  //left: 0, 
-  //behavior: 'smooth' 
+  //top: 2500,
+  //left: 0,
+  //behavior: 'smooth'
 //});
 //
-//// Scroll certain amounts from current position 
-//window.scrollBy({ 
+//// Scroll certain amounts from current position
+//window.scrollBy({
   //top: 100, // could be negative value
-  //left: 0, 
-  //behavior: 'smooth' 
+  //left: 0,
+  //behavior: 'smooth'
 //});
 //
 //// Scroll to a certain element
-//document.querySelector('.hello').scrollIntoView({ 
-  //behavior: 'smooth' 
+//document.querySelector('.hello').scrollIntoView({
+  //behavior: 'smooth'
 //});
 //
 //// Select all links with hashes
@@ -854,8 +857,8 @@ var currentInstitution =  $( "ul.breadcrumb a.active" ).text();
   //.click(function(event) {
     //// On-page links
     //if (
-      //location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-      //&& 
+      //location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+      //&&
       //location.hostname == this.hostname
     //) {
       //// Figure out element to scroll to
