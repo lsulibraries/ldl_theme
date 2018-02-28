@@ -267,7 +267,7 @@ if($('.institution-collection-list-a').length < 4){
     $("<div class='itemMenu'/>").insertBefore(".compoundGallery_header");
     $("<div class='compoundLabels'/>").insertBefore(".itemMenu"); //adds region for contentLabel and institutionLabel
     $("<div class='contentLabel'/>").appendTo(".compoundLabels"); //adds contentLabel div to show content type
-    $("<div class='contentIcon'/>").insertBefore(".compoundGallery_header > .form-item > a:first-child"); //adds contentLabel div to show content type
+    //$("<div class='contentIcon'/>").insertBefore(".compoundGallery_header > .form-item > a:first-child"); //adds contentLabel div to show content type
 
     var institutionHome = $(".depth-2 > a").attr('href'); //creates href path from breadcrumb depth-2
     $("<a href=" + institutionHome + "><div class='institutionLabel'/></a>").appendTo(".compoundLabels"); //adds institutionLabel div to show content type

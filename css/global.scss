@@ -45,7 +45,7 @@ $manageLegend: 'https://i.imgur.com/3fcNTbJ.png';
 $infoLegend: 'https://i.imgur.com/zK6anrR.png';
 $downloadLegend: 'https://i.imgur.com/rthA4J4.png';
 
-$darkTransparent: rgba(0, 0, 0, .26);
+$darkTransparent: rgba(0, 0, 0, .06);
 $lightTransparent: rgba(255, 255, 255, .16);
 
 $offWhite: rgba(255, 255, 255, .85);
@@ -4027,7 +4027,7 @@ background:none!important;
     width: 120%;
     height: 120%;
     filter: blur(10px) brightness(0.8) contrast(0.6);
-    background-position: 50% 20%;
+    background-position: -5vw 20%;
     background-repeat: no-repeat;
     background-size: cover;
     left: -20px;
@@ -4103,6 +4103,7 @@ margin-left: 25vw;
 
 #block-islandora-compound-object-compound-jail-display .content a {
 max-width: none!important;
+width: 100%;
 }
 
 //actually begin compoundObject ('!important's override islandora_compound_object.jail_block.css)
@@ -4246,7 +4247,6 @@ header#section-header {
 
 #zone-content{
     padding-top: 90px;
-    background: #1a1a1a;
 }
 
 
@@ -4426,11 +4426,12 @@ transform: translate3d(0,0,0);
 .contentIcon {
     background-image: url(https://i.imgur.com/azpOWoN.png);
     width: 20px;
-    height: 50px;
+    height: 29px;
     background-size: 20px;
     background-repeat: no-repeat;
-    background-position: left;
+    background-position: center;
     padding-right: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
 }
 
 a#islandora-compound-next-link, a#islandora-compound-previous-link {
@@ -4449,11 +4450,17 @@ span#islandora-compound-sequence-position {
           .form-item {
             display: flex;
             align-items: center;
+            flex-wrap: wrap;
+            position: relative;
+            margin: 0px 20px 20px 20px;
+            border: 0px !important;
           }
           .compoundParent{
             font-size: 28px;
             color: $offWhite;
-            padding: 10px 0px;
+            padding: 0px;
+            margin-left: 10px;
+
           }
           .compoundParent:hover{
             color:white;
@@ -4500,6 +4507,7 @@ span#islandora-compound-sequence-position {
         margin-right: 10px;
         margin-bottom: 10px;
 height: 80px;
+background: white;
         a{
         line-height: auto!important;
         }
@@ -4522,10 +4530,8 @@ height: 80px;
             justify-content: center;
             align-items: center;
             padding: 40px 80px;
-            background: rgba(0, 0, 0, 0.07);
             max-width: none!important;
             font-size: 20px;
-            color: white;
         }
         a.compoundSelect-title.active{
             background: rgba(255, 255, 255, .07)!important;
@@ -4594,14 +4600,16 @@ padding-top:5px;
 body.compoundParent{
     .compoundGallery_header {
     background: $darkTransparent;
-    padding-left: 10px;
     margin-bottom: 1px;
     position: relative;
     overflow: hidden;
-padding-top: 200px;    
+    padding-top: 200px;
       .compoundParent{
-      font-size: 20px;
-      color: white;
+        font-size: 40px;
+        color: white;
+        line-height: 37px;
+        width: calc(100% - 50px);
+
       }
     }
     .compoundGallery {
@@ -5999,13 +6007,9 @@ border: 1px solid rgba(255, 255, 255, 0.33);
   display: none;
 }
 
-.backgroundDiv{
-display: none;
-}
 
 #zone-content {
     padding-top: 50px;
-    background: #1a1a1a;
 }
   #region-sidebar-first,
   {
