@@ -3427,22 +3427,19 @@ div.islandora-pdf-object, div.islandora-large-image-object {
 .compoundObject .compoundGallery_header .compoundParent {
   font-size: 28px;
   color: rgba(255, 255, 255, 0.85);
-  padding: 0px;
-  margin-left: 10px; }
+  padding: 0px; }
 .compoundObject .compoundGallery_header .compoundParent:hover {
   color: white; }
 .compoundObject .compoundGallery_header a.parentLink {
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.85);
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  padding: 2px 10px;
-  margin-left: 10px;
-  font-weight: normal; }
+  padding: 5px 0px;
+  font-weight: normal;
+  margin-left: 3px; }
 .compoundObject .compoundGallery_header a.parentLink:hover {
-  border: 1px solid rgba(255, 255, 255, 0.2);
   color: white; }
 .compoundObject .compoundGallery_header .compoundCount {
-  margin-left: 10px;
+  margin-left: 3px;
   padding: 2px 5px;
   background: rgba(255, 255, 255, 0.85);
   text-transform: uppercase; }
@@ -3543,15 +3540,14 @@ body.compoundParent .compoundGallery_header {
   body.compoundParent .compoundGallery_header .compoundParent {
     font-size: 40px;
     color: white;
-    line-height: 37px;
-    width: calc(100% - 50px); }
+    line-height: 37px; }
 body.compoundParent .compoundGallery {
   display: flex;
   flex-wrap: wrap;
   border-bottom: 0px;
   margin-bottom: 1px;
   padding-bottom: 10px;
-  background: rgba(0, 0, 0, 0.06);
+  background: white;
   padding: 20px; }
 body.compoundParent #shareToggle {
   height: 23px;
