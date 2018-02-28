@@ -3388,7 +3388,9 @@ div.islandora-pdf-object, div.islandora-large-image-object {
   position: fixed;
   height: calc(100vh - 90px); }
 .compoundObject .itemMenu {
-  padding-top: 0px; }
+  padding-top: 0px;
+  position: absolute;
+  top: 0px; }
   .compoundObject .itemMenu ul.tabs {
     border: 0px;
     height: 22px; }
@@ -3435,6 +3437,7 @@ div.islandora-pdf-object, div.islandora-large-image-object {
   color: rgba(255, 255, 255, 0.85);
   padding: 5px 0px;
   font-weight: normal;
+  font-size: 16px;
   margin-left: 3px; }
 .compoundObject .compoundGallery_header a.parentLink:hover {
   color: white; }
@@ -3514,9 +3517,11 @@ div.islandora-pdf-object, div.islandora-large-image-object {
   color: white;
   margin-bottom: 11px;
   text-transform: uppercase;
-  border: 1px solid rgba(0, 0, 0, 0.06);
+  border: 1px solid #f0f0f0;
   cursor: pointer;
-  overflow: hidden; }
+  overflow: hidden;
+  border-top: 0px;
+  border-left: 0px; }
   .infoToggle .iconSelect {
     background-color: rgba(0, 0, 0, 0.06);
     height: 30px;
@@ -3527,9 +3532,6 @@ div.islandora-pdf-object, div.islandora-large-image-object {
     font-size: 13px;
     width: 92px;
     text-align: center; }
-
-.infoToggle:hover {
-  border: 1px solid rgba(255, 255, 255, 0.85); }
 
 body.compoundParent .compoundGallery_header {
   background: rgba(0, 0, 0, 0.06);
@@ -3557,9 +3559,10 @@ body.compoundParent #shareToggle {
     width: 35px; }
 body.compoundParent .compoundSelect {
   height: 200px;
-  border: 1px solid rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(0, 0, 0, 0.06);
   margin-right: 20px;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  box-shadow: 5px 5px 10px #d1d1d1; }
   body.compoundParent .compoundSelect img {
     height: 200px !important; }
 body.compoundParent .compoundGlance {
@@ -3647,7 +3650,6 @@ body.compoundParent .tagsGlance {
 .compoundChild .contentIcon {
   margin-left: 20px; }
 .compoundChild .compoundGallery_header {
-  background: rgba(0, 0, 0, 0.06);
   margin-bottom: 1px; }
   .compoundChild .compoundGallery_header .compoundParent {
     font-size: 20px;
@@ -3663,7 +3665,9 @@ body.compoundParent .tagsGlance {
   padding: 20px;
   background: rgba(0, 0, 0, 0.06);
   padding-bottom: 0px;
-  border-bottom: 0px; }
+  border-bottom: 0px;
+  justify-content: center;
+  align-items: center; }
 .compoundChild .compoundGlance {
   padding-top: 0px !important;
   background: rgba(0, 0, 0, 0.06);

@@ -4403,6 +4403,8 @@ transform: translate3d(0,0,0);
 
       .itemMenu {
           padding-top: 0px;
+    position: absolute;
+    top: 0px;
           ul.tabs{
             border: 0px;
             height: 22px;
@@ -4469,6 +4471,7 @@ span#islandora-compound-sequence-position {
               color: $offWhite;
               padding: 5px 0px;
               font-weight: normal;
+              font-size: 16px;
     margin-left: 3px;
           }
           a.parentLink:hover {
@@ -4572,9 +4575,11 @@ padding-top:5px;
     color: white;
     margin-bottom: 11px;
     text-transform: uppercase;
-    border: 1px solid $darkTransparent;
+    border: 1px solid rgb(240, 240, 240);
     cursor: pointer;
     overflow: hidden;
+    border-top: 0px;
+    border-left: 0px;
     .iconSelect {
     background-color: $darkTransparent;
     height: 30px;
@@ -4587,11 +4592,6 @@ padding-top:5px;
     width: 92px;
     text-align: center;
     }
-}
-
-.infoToggle:hover{
-      border: 1px solid $offWhite;
-
 }
 
 body.compoundParent{
@@ -4628,9 +4628,11 @@ body.compoundParent{
 
     .compoundSelect{
     height: 200px;
-    border: 1px solid $lightTransparent;
+    border: 1px solid $darkTransparent;
     margin-right: 20px;
     margin-bottom: 20px;
+    box-shadow: 5px 5px 10px #d1d1d1;
+
     img{
     height: 200px!important;
     }
@@ -4780,7 +4782,6 @@ a#clip {
     }
 
     .compoundGallery_header {
-      background: $darkTransparent;
 margin-bottom:1px;
       .compoundParent {
       font-size: 20px;
@@ -4803,6 +4804,8 @@ margin-bottom:1px;
     background: $darkTransparent;
     padding-bottom: 0px;
     border-bottom: 0px;
+    justify-content: center;
+    align-items: center;
     }
 
 .compoundGlance {

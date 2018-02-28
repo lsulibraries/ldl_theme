@@ -264,7 +264,7 @@ if($('.institution-collection-list-a').length < 4){
      //adds body class if block is present
     $(".compoundObject #block-system-main table").prop({class:"modsTable"}).appendTo(".region-sidebar-first-inner");
     $('.compoundSelect').wrapAll('<div class="compoundGallery"/>'); //wraps collectionPage title
-    $("<div class='itemMenu'/>").insertBefore(".compoundGallery_header");
+    $("<div class='itemMenu'/>").insertBefore(".backgroundDiv");
     $("<div class='compoundLabels'/>").insertBefore(".itemMenu"); //adds region for contentLabel and institutionLabel
     $("<div class='contentLabel'/>").appendTo(".compoundLabels"); //adds contentLabel div to show content type
     //$("<div class='contentIcon'/>").insertBefore(".compoundGallery_header > .form-item > a:first-child"); //adds contentLabel div to show content type
