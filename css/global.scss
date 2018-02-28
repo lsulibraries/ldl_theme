@@ -4014,6 +4014,7 @@ div {
 
 .compoundArrows{
   cursor: default;
+
 }
 
 .compoundArrows:hover{
@@ -4023,14 +4024,15 @@ background:none!important;
 
 .backgroundDiv {
     position: absolute;
-    width: calc(100% + 140px);
-    height: calc(100% + 140px);
-    filter: blur(50px) brightness(0.8) contrast(0.6);
+    width: 120%;
+    height: 120%;
+    filter: blur(10px) brightness(0.8) contrast(0.6);
     background-position: 50% 20%;
     background-repeat: no-repeat;
     background-size: cover;
     left: -20px;
-    top: -20px;
+    top: -10px;
+    z-index: -1;
 }
 
 .contentLabel{
@@ -4594,6 +4596,9 @@ body.compoundParent{
     background: $darkTransparent;
     padding-left: 10px;
     margin-bottom: 1px;
+    position: relative;
+    overflow: hidden;
+padding-top: 200px;    
       .compoundParent{
       font-size: 20px;
       color: white;

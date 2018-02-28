@@ -3713,14 +3713,15 @@ div.islandora-pdf-object, div.islandora-large-image-object {
 
 .backgroundDiv {
   position: absolute;
-  width: calc(100% + 140px);
-  height: calc(100% + 140px);
-  filter: blur(50px) brightness(0.8) contrast(0.6);
+  width: 120%;
+  height: 120%;
+  filter: blur(10px) brightness(0.8) contrast(0.6);
   background-position: 50% 20%;
   background-repeat: no-repeat;
   background-size: cover;
   left: -20px;
-  top: -20px;
+  top: -10px;
+  z-index: -1;
 }
 
 .contentLabel {
@@ -4203,6 +4204,8 @@ body.compoundParent .compoundGallery_header {
   background: rgba(0, 0, 0, 0.26);
   padding-left: 10px;
   margin-bottom: 1px;
+  position: relative;
+  overflow: hidden;
 }
 body.compoundParent .compoundGallery_header .compoundParent {
   font-size: 20px;

@@ -255,7 +255,7 @@ if($('.institution-collection-list-a').length < 4){
 
 
     //done finding widest image
-    $("<div class='backgroundDiv'/>").insertBefore(".compoundObject #region-sidebar-first"); // adds div for item background
+    $("<div class='backgroundDiv'/>").insertBefore(".compoundGallery_header .form-item"); // adds div for item background
         var commentedURL = $('div.widest').find('noscript').addClass('widestIMG').text().split(" ");
         var srcclean = commentedURL[2].match(/"(.*?)"/);
         //alert(srcclean[1]);
