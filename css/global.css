@@ -3359,7 +3359,8 @@ div.islandora-pdf-object, div.islandora-large-image-object {
   left: -11px; }
 .compoundObject .block-compound-jail-display .block-inner > .content {
   margin: 0 10%;
-  max-width: 1200px; }
+  max-width: 1200px;
+  border: 1px solid #e2e2e2; }
 .compoundObject .compoundLabels {
   display: -webkit-box;
   display: -moz-box;
@@ -3464,10 +3465,12 @@ div.islandora-pdf-object, div.islandora-large-image-object {
 .compoundObject .compoundSelect {
   display: flex;
   flex-direction: row-reverse;
+  justify-content: flex-end;
   margin-right: 10px;
   margin-bottom: 10px;
   height: 80px;
-  background: white; }
+  background: white;
+  width: calc(25% - 22px); }
   .compoundObject .compoundSelect a {
     line-height: auto !important; }
   .compoundObject .compoundSelect .compoundSelect-thumbnail {
@@ -3517,7 +3520,7 @@ div.islandora-pdf-object, div.islandora-large-image-object {
   color: white;
   margin-bottom: 11px;
   text-transform: uppercase;
-  border: 1px solid #f0f0f0;
+  border: 1px solid rgba(255, 255, 255, 0.16);
   cursor: pointer;
   overflow: hidden;
   border-top: 0px;

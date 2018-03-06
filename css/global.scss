@@ -4358,6 +4358,7 @@ padding-left: 48px;
       .block-compound-jail-display .block-inner > .content{
         margin: 0 10%;
     max-width: 1200px;
+    border: 1px solid #e2e2e2;
       }
 
       .compoundLabels {
@@ -4504,10 +4505,12 @@ span#islandora-compound-sequence-position {
       .compoundSelect {
         display: flex;
         flex-direction: row-reverse;
+        justify-content: flex-end;
         margin-right: 10px;
         margin-bottom: 10px;
 height: 80px;
 background: white;
+width: calc(25% - 22px);
         a{
         line-height: auto!important;
         }
@@ -4575,7 +4578,7 @@ padding-top:5px;
     color: white;
     margin-bottom: 11px;
     text-transform: uppercase;
-    border: 1px solid rgb(240, 240, 240);
+    border: 1px solid $lightTransparent;
     cursor: pointer;
     overflow: hidden;
     border-top: 0px;
