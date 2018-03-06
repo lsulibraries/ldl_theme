@@ -3192,8 +3192,7 @@ div.islandora-pdf-object, div.islandora-large-image-object {
   transition-delay: 0s; }
 
 #block-islandora-compound-object-compound-jail-display .content a {
-  max-width: none !important;
-  width: 100%; }
+  max-width: none !important; }
 
 .compoundObject .userSelect {
   padding: 0px 0px;
@@ -3357,6 +3356,8 @@ div.islandora-pdf-object, div.islandora-large-image-object {
   position: absolute;
   top: 0px;
   left: -11px; }
+.compoundObject .block-compound-jail-display .block-inner > .content > .compoundGallery_header > .form-item > a {
+  width: 100%; }
 .compoundObject .block-compound-jail-display .block-inner > .content {
   margin: 0 10%;
   max-width: 1200px;
@@ -3369,7 +3370,10 @@ div.islandora-pdf-object, div.islandora-large-image-object {
   display: flex;
   justify-content: flex-end;
   padding-top: 20px;
-  padding-right: 20px; }
+  padding-right: 20px;
+  position: absolute;
+  top: 0px;
+  right: 0px; }
 .compoundObject .compoundLabel::before {
   background: #FF5370;
   margin: 0px; }
@@ -3455,7 +3459,7 @@ div.islandora-pdf-object, div.islandora-large-image-object {
 .compoundObject #block-islandora-compound-object-compound-jail-display > div {
   border-bottom: none !important;
   padding-bottom: 60px;
-  padding-right: 10px;
+  padding-right: 0px;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -3470,7 +3474,7 @@ div.islandora-pdf-object, div.islandora-large-image-object {
   margin-bottom: 10px;
   height: 80px;
   background: white;
-  width: calc(25% - 22px); }
+  width: calc(33% - 22px); }
   .compoundObject .compoundSelect a {
     line-height: auto !important; }
   .compoundObject .compoundSelect .compoundSelect-thumbnail {
@@ -3488,9 +3492,9 @@ div.islandora-pdf-object, div.islandora-large-image-object {
     display: flex !important;
     justify-content: center;
     align-items: center;
-    padding: 40px 80px;
     max-width: none !important;
-    font-size: 20px; }
+    font-size: 20px;
+    flex-grow: 2; }
   .compoundObject .compoundSelect a.compoundSelect-title.active {
     background: rgba(255, 255, 255, 0.07) !important; }
 .compoundObject .compoundSelect:hover a.compoundSelect-title {
@@ -4049,6 +4053,9 @@ body {
     padding: 20px;
     display: block; } }
 @media screen and (max-width: 1260px) {
+  .compoundSelect {
+    width: calc(100% - 22px) !important; }
+
   .audioPDF #block-system-main table {
     border: 0px;
     margin-top: 0px;
@@ -4264,6 +4271,11 @@ body {
   .islandora-pdf-metadata, .islandora-large-image-metadata {
     display: block; } }
 @media screen and (max-width: 1260px) and (max-width: 900px) {
+  .compoundObject .block-compound-jail-display .block-inner > .content {
+    margin: 0px !important;
+    max-width: 0px;
+    width: 100% !important; }
+
   .institution-collection-list-item-count {
     font-size: 10px; }
 
@@ -4583,7 +4595,6 @@ body {
   .compoundObject .textSelect {
     font-size: 8px; }
   .compoundObject .userSelect {
-    margin-bottom: 5px;
     margin-right: 5px; }
   .compoundObject .iconSelect {
     background-size: 10px !important;

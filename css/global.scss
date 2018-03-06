@@ -4103,7 +4103,6 @@ margin-left: 25vw;
 
 #block-islandora-compound-object-compound-jail-display .content a {
 max-width: none!important;
-width: 100%;
 }
 
 //actually begin compoundObject ('!important's override islandora_compound_object.jail_block.css)
@@ -4355,10 +4354,15 @@ padding-left: 48px;
 }
 
 
+    .block-compound-jail-display .block-inner > .content > .compoundGallery_header > .form-item > a{
+      width: 100%;
+    }
+
       .block-compound-jail-display .block-inner > .content{
         margin: 0 10%;
     max-width: 1200px;
     border: 1px solid #e2e2e2;
+
       }
 
       .compoundLabels {
@@ -4366,6 +4370,9 @@ padding-left: 48px;
           justify-content: flex-end;
           padding-top: 20px;
           padding-right: 20px;
+          position: absolute;
+          top: 0px;
+          right: 0px;
       }
 
        .compoundLabel::before{
@@ -4497,7 +4504,7 @@ span#islandora-compound-sequence-position {
     #block-islandora-compound-object-compound-jail-display > div {
         border-bottom: none!important;
         padding-bottom: 60px;
-        padding-right: 10px;
+        padding-right: 0px;
         @include flexbox;
         justify-content: center;
     }
@@ -4510,7 +4517,7 @@ span#islandora-compound-sequence-position {
         margin-bottom: 10px;
 height: 80px;
 background: white;
-width: calc(25% - 22px);
+width: calc(33% - 22px);
         a{
         line-height: auto!important;
         }
@@ -4532,9 +4539,9 @@ width: calc(25% - 22px);
             display: flex!important;
             justify-content: center;
             align-items: center;
-            padding: 40px 80px;
             max-width: none!important;
             font-size: 20px;
+            flex-grow: 2;
         }
         a.compoundSelect-title.active{
             background: rgba(255, 255, 255, .07)!important;
@@ -5401,6 +5408,10 @@ section#section-content {
 
 @media screen and (max-width: 1260px) {
 
+      .compoundSelect {
+width: calc(100% - 22px) !important;
+}
+
 .audioPDF{
   #block-system-main{
     table{
@@ -5631,6 +5642,13 @@ section#section-content {
     display: block;
   }
   @media screen and (max-width: 900px) {
+
+.compoundObject .block-compound-jail-display .block-inner > .content {
+   margin: 0px !important;
+   max-width: 0px;
+    width: 100% !important;
+}
+
 
 .institution-collection-list-item-count{
   font-size: 10px;
@@ -6054,7 +6072,6 @@ h1#window-title{
 
 
 .userSelect{
-  margin-bottom: 5px;
   margin-right: 5px;
 }
 

@@ -282,7 +282,7 @@ if($('.institution-collection-list-a').length < 4){
         $("#clip").appendTo(".userMenu");
         $(".modsDesc").clone().appendTo(".compoundGlance");
         $(".modsSubject").clone().appendTo(".compoundGlance").wrapAll('<div class="tagsGlance"/>');
-        $(".compoundLabels").insertBefore("#block-islandora-compound-object-compound-jail-display");
+        $(".compoundLabels").insertBefore(".backgroundDiv");
         $("#islandora-ip-embargo-object-embargo-form").insertBefore(".compoundGallery"); // moves ipembargo
         $("<div class='embargoTitle'>Set IP embargo settings</div>").insertBefore(".compoundObject #islandora-ip-embargo-policy-source")//adds title for ip embargo on compounds
         $('.infoToggle').click(function(){
