@@ -206,7 +206,6 @@ a {
     text-decoration: none;
   }
   &:hover, &:active {
-    color: #808080;
     text-decoration: none;
   }
 }
@@ -4359,10 +4358,9 @@ padding-left: 48px;
     }
 
       .block-compound-jail-display .block-inner > .content{
-        margin: 0 10%;
-    max-width: 1200px;
+width: 100%;
     border: 1px solid #e2e2e2;
-
+border-top: 0px;
       }
 
       .compoundLabels {
@@ -4542,6 +4540,7 @@ width: calc(33% - 22px);
             max-width: none!important;
             font-size: 20px;
             flex-grow: 2;
+color: #686868;
         }
         a.compoundSelect-title.active{
             background: rgba(255, 255, 255, .07)!important;
@@ -4638,7 +4637,7 @@ body.compoundParent{
 
     .compoundSelect{
     height: 200px;
-    border: 1px solid $darkTransparent;
+    border: 1px solid rgba(85, 85, 85, 0.34);
     margin-right: 20px;
     margin-bottom: 20px;
     box-shadow: 5px 5px 10px #d1d1d1;
@@ -5408,8 +5407,14 @@ section#section-content {
 
 @media screen and (max-width: 1260px) {
 
+.compoundObject .block-compound-jail-display .block-inner > .content {
+   margin: 0px !important;
+    width: 100% !important;
+}
+
       .compoundSelect {
-width: calc(100% - 22px) !important;
+width: 100% !important;
+margin-right: 0px !important;
 }
 
 .audioPDF{
@@ -5630,6 +5635,10 @@ width: calc(100% - 22px) !important;
   }
 
 
+ .compoundObject .page #region-sidebar-first{
+    display: block !important;
+  }
+
 
   .page-islandora-search .region-sidebar-first-inner {
     margin-left: auto;
@@ -5643,11 +5652,7 @@ width: calc(100% - 22px) !important;
   }
   @media screen and (max-width: 900px) {
 
-.compoundObject .block-compound-jail-display .block-inner > .content {
-   margin: 0px !important;
-   max-width: 0px;
-    width: 100% !important;
-}
+
 
 
 .institution-collection-list-item-count{

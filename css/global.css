@@ -40,7 +40,6 @@ a:link, a:visited {
   color: #438fca;
   text-decoration: none; }
 a:hover, a:active {
-  color: #808080;
   text-decoration: none; }
 
 ul {
@@ -3359,9 +3358,9 @@ div.islandora-pdf-object, div.islandora-large-image-object {
 .compoundObject .block-compound-jail-display .block-inner > .content > .compoundGallery_header > .form-item > a {
   width: 100%; }
 .compoundObject .block-compound-jail-display .block-inner > .content {
-  margin: 0 10%;
-  max-width: 1200px;
-  border: 1px solid #e2e2e2; }
+  width: 100%;
+  border: 1px solid #e2e2e2;
+  border-top: 0px; }
 .compoundObject .compoundLabels {
   display: -webkit-box;
   display: -moz-box;
@@ -3494,7 +3493,8 @@ div.islandora-pdf-object, div.islandora-large-image-object {
     align-items: center;
     max-width: none !important;
     font-size: 20px;
-    flex-grow: 2; }
+    flex-grow: 2;
+    color: #686868; }
   .compoundObject .compoundSelect a.compoundSelect-title.active {
     background: rgba(255, 255, 255, 0.07) !important; }
 .compoundObject .compoundSelect:hover a.compoundSelect-title {
@@ -3566,7 +3566,7 @@ body.compoundParent #shareToggle {
     width: 35px; }
 body.compoundParent .compoundSelect {
   height: 200px;
-  border: 1px solid rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(85, 85, 85, 0.34);
   margin-right: 20px;
   margin-bottom: 20px;
   box-shadow: 5px 5px 10px #d1d1d1; }
@@ -4053,8 +4053,13 @@ body {
     padding: 20px;
     display: block; } }
 @media screen and (max-width: 1260px) {
+  .compoundObject .block-compound-jail-display .block-inner > .content {
+    margin: 0px !important;
+    width: 100% !important; }
+
   .compoundSelect {
-    width: calc(100% - 22px) !important; }
+    width: 100% !important;
+    margin-right: 0px !important; }
 
   .audioPDF #block-system-main table {
     border: 0px;
@@ -4271,11 +4276,6 @@ body {
   .islandora-pdf-metadata, .islandora-large-image-metadata {
     display: block; } }
 @media screen and (max-width: 1260px) and (max-width: 900px) {
-  .compoundObject .block-compound-jail-display .block-inner > .content {
-    margin: 0px !important;
-    max-width: 0px;
-    width: 100% !important; }
-
   .institution-collection-list-item-count {
     font-size: 10px; }
 
