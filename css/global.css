@@ -3569,7 +3569,7 @@ body.compoundParent .compoundSelect {
   border: 1px solid rgba(85, 85, 85, 0.34);
   margin-right: 20px;
   margin-bottom: 20px;
-  box-shadow: 5px 5px 10px #d1d1d1; }
+  box-shadow: -3px 3px 15px #d1d1d1; }
   body.compoundParent .compoundSelect img {
     height: 200px !important; }
 body.compoundParent .compoundGlance {
@@ -3983,6 +3983,9 @@ body {
 .mobileMenuIcon {
   display: none; }
 
+.infoToggle.mobileMetaToggle {
+  display: none; }
+
 @media screen and (min-width: 2000px) {
   .page-browse-collections tr {
     width: calc(12.5% - 11px); }
@@ -4265,6 +4268,9 @@ body {
   .page-user #region-sidebar-first,
   .context-collections #region-sidebar-first {
     display: none; }
+
+  .compoundObject .page #region-sidebar-first {
+    display: block !important; }
 
   .page-islandora-search .region-sidebar-first-inner {
     margin-left: auto;
@@ -4607,6 +4613,28 @@ body {
   .institution-collection-list-item-label {
     padding: 0px 30px; } }
 @media screen and (max-width: 1260px) and (max-width: 740px) {
+  .compoundObject .page #region-sidebar-first {
+    display: block !important;
+    width: 100vw; }
+
+  .infoToggle.mobileMetaToggle {
+    position: absolute;
+    z-index: 22;
+    bottom: -11px;
+    width: 100%;
+    background: white;
+    border: 20px solid #1a1a1a;
+    height: 100px;
+    justify-content: center;
+    color: black;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center; }
+    .infoToggle.mobileMetaToggle .textSelect {
+      font-size: 12px;
+      text-transform: initial;
+      width: 100%; }
+
   .institution-collection-list-a:hover .institution-collection-list-item-label {
     -moz-transition-duration: 0.5s;
     -o-transition-duration: 0.5s;

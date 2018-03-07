@@ -290,8 +290,10 @@ if($('.institution-collection-list-a').length < 4){
               $('#region-sidebar-first').toggleClass('infoOpened');
               $('body').toggleClass('metaOpened');
               $(".nano").nanoScroller({ alwaysVisible: false });
-
         });
+
+
+
         sr.reveal('.modsTable', { duration: 200, delay: 850,  easing: 'linear', scale: 1, }, 20);
 
         if ($('.compoundObject #block-system-main .block-inner .content > div').length){
@@ -374,7 +376,9 @@ $("#share").jsSocials({
         $(".metadataContainer div:first-child").remove();  //removes weird h3 titles
         $(".metadataSidebar > .region-inner > .metadataContainer:first-child").addClass("itemMetadata");
         $(".metadataSidebar > .region-inner > .metadataContainer:nth-child(2n + 0)").addClass("compoundMetadata");
-
+        $(".infoToggle").clone().addClass("mobileMetaToggle").appendTo("#zone-content");
+        $(".mobileMetaToggle .textSelect").replaceWith("<div class='textSelect'>Back to item view</div>");
+        $(".mobileMetaToggle .iconSelect").remove();
 
 }
 //end compoundObject

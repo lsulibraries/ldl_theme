@@ -4094,9 +4094,9 @@ background:none!important;
 }
 
 .metaOpened #region-content{
-margin-left: 25vw;
-          transition-duration: 1s;
-           transition-delay:0s;
+  margin-left: 25vw;
+  transition-duration: 1s;
+  transition-delay:0s;
 }
 
 
@@ -4640,7 +4640,7 @@ body.compoundParent{
     border: 1px solid rgba(85, 85, 85, 0.34);
     margin-right: 20px;
     margin-bottom: 20px;
-    box-shadow: 5px 5px 10px #d1d1d1;
+    box-shadow: -3px 3px 15px #d1d1d1;
 
     img{
     height: 200px!important;
@@ -5309,6 +5309,10 @@ section#section-content {
 
 .mobileMenuIcon{
   display: none;
+}
+
+.infoToggle.mobileMetaToggle {
+display: none;
 }
 
 //Begin item 2.0
@@ -6100,7 +6104,31 @@ h1#window-title{
 
 }
   @media screen and (max-width: 740px) {
+.compoundObject .page #region-sidebar-first {
+    display: block !important;
+    width: 100vw;
+}
 
+.infoToggle.mobileMetaToggle {
+    position: absolute;
+    z-index: 22;
+    bottom: -11px;
+    width: 100%;
+    background: white;
+    border: 20px solid #1a1a1a;
+    height: 100px;
+    justify-content: center;
+    color: black;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+.textSelect {
+    font-size: 12px;
+    text-transform: initial;
+    width: 100%;
+}
+
+}
 
 
 .institution-collection-list-a:hover{
