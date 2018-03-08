@@ -3201,26 +3201,26 @@ input[type="text"]::placeholder {
 
 
       input[type="text"] {
-    width: 100%;
-    font-size: 30px;
-    padding: 0px 30px;
-    height: 70px;
-    background: none;
-    color: white;
-    border-width: 1px;
-    border-left: 0px;
-    border-color: rgba(255, 255, 255, 0.33);
-    position: relative;
-    bottom: 20px;
+      width: 100%;
+      font-size: 30px;
+      padding: 0px 30px;
+      height: 70px;
+      background: none;
+      color: white;
+      border-width: 1px;
+      border-left: 0px;
+      border-color: rgba(255, 255, 255, 0.33);
+      position: relative;
+      bottom: 20px;
 
       }
 
       input[type="text"]::after {
-content:'';
-width:5px;
-height:1px;
-position: relative;
-left:10px;
+      content:'';
+      width:5px;
+      height:1px;
+      position: relative;
+      left:10px;
       }
 
       input[type="submit"] {
@@ -4385,7 +4385,7 @@ border-top: 0px;
         transition-duration: 1s;
         background: #1a1a1a;
         color: white;
-    position: absolute;
+        position: fixed;
         border-right: 1px solid #262626;
         .region-sidebar-first-inner{
         padding: 40px;
@@ -4509,7 +4509,6 @@ span#islandora-compound-sequence-position {
 
       .compoundSelect {
         display: flex;
-        flex-direction: row-reverse;
         justify-content: flex-end;
         margin-right: 10px;
         margin-bottom: 10px;
@@ -4540,6 +4539,7 @@ width: calc(33% - 22px);
             max-width: none!important;
             font-size: 20px;
             flex-grow: 2;
+                padding: 10px;
 color: #686868;
         }
         a.compoundSelect-title.active{
@@ -4636,14 +4636,12 @@ body.compoundParent{
     }
 
     .compoundSelect{
-    height: 200px;
-    border: 1px solid rgba(85, 85, 85, 0.34);
+    height: 150px;
     margin-right: 20px;
     margin-bottom: 20px;
-    box-shadow: -3px 3px 15px #d1d1d1;
-
+    box-shadow: -3px 4px 20px #d1d1d1;
     img{
-    height: 200px!important;
+    height: 150px!important;
     }
     }
     .compoundGlance {
@@ -5315,6 +5313,10 @@ section#section-content {
 display: none;
 }
 
+.metadataVertical{
+display: none;
+}
+
 //Begin item 2.0
 
 
@@ -5411,15 +5413,16 @@ display: none;
 
 @media screen and (max-width: 1260px) {
 
+        .compoundSelect {
+  width: calc(50% - 20px) !important;
+  }
+
+
 .compoundObject .block-compound-jail-display .block-inner > .content {
    margin: 0px !important;
     width: 100% !important;
 }
 
-      .compoundSelect {
-width: 100% !important;
-margin-right: 0px !important;
-}
 
 .audioPDF{
   #block-system-main{
@@ -5656,8 +5659,18 @@ margin-right: 0px !important;
   }
   @media screen and (max-width: 900px) {
 
+.metadataVertical{
+        color: #676767;
+display: block;
 
+.metadataContainer.compoundMetadata {
+    padding-top: 20px;
+}
 
+  .metadataContainer span.metadataValue {
+      color: #676767;
+  }
+}
 
 .institution-collection-list-item-count{
   font-size: 10px;
@@ -6075,9 +6088,6 @@ h1#window-title{
     font-size: 11px;
 }
 
-.textSelect{
-    font-size: 8px;
-}
 
 
 .userSelect{
@@ -6104,13 +6114,23 @@ h1#window-title{
 
 }
   @media screen and (max-width: 740px) {
+      .compoundSelect {
+width: 100% !important;
+margin-right: 0px !important;
+}
+
+
 .compoundObject .page #region-sidebar-first {
     display: block !important;
+}
+
+.metaOpened .page #region-sidebar-first {
     width: 100vw;
 }
 
+
 .infoToggle.mobileMetaToggle {
-    position: absolute;
+    position: fixed;
     z-index: 22;
     bottom: -11px;
     width: 100%;
@@ -6120,7 +6140,7 @@ h1#window-title{
     justify-content: center;
     color: black;
     box-sizing: border-box;
-    display: flex;
+    display: none; // temp
     align-items: center;
 .textSelect {
     font-size: 12px;

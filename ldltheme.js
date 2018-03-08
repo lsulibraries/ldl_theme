@@ -379,6 +379,15 @@ $("#share").jsSocials({
         $(".infoToggle").clone().addClass("mobileMetaToggle").appendTo("#zone-content");
         $(".mobileMetaToggle .textSelect").replaceWith("<div class='textSelect'>Back to item view</div>");
         $(".mobileMetaToggle .iconSelect").remove();
+        $(".metadataSidebar").clone().prop({ class: "metadataVertical"}).appendTo('.compoundGallery');
+
+
+        $('.mobileMetaToggle').click(function(){
+              $(this).toggleClass('menuActive');
+              $('#region-sidebar-first').toggleClass('infoOpened');
+              $('body').toggleClass('metaOpened');
+              $(".nano").nanoScroller({ alwaysVisible: false });
+        });
 
 }
 //end compoundObject
