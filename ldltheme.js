@@ -105,6 +105,7 @@ $(window).on("load", function() {
       });
 
 
+
       if ( ($( ".video-js" ).length ) && ( $( "#islandora-pdfjs" ).length )) {
            $("body").addClass("audioPDF");
 
@@ -266,18 +267,18 @@ if($('.institution-collection-list-a').length < 4){
     $('.compoundSelect').wrapAll('<div class="compoundGallery"/>'); //wraps collectionPage title
     $("<div class='itemMenu'/>").insertBefore(".backgroundDiv");
     $("<div class='compoundLabels'/>").insertBefore(".itemMenu"); //adds region for contentLabel and institutionLabel
-    $("<div class='contentLabel'/>").appendTo(".compoundLabels"); //adds contentLabel div to show content type
+    $("<div class='contentLabel'/>").insertBefore(".compoundGallery"); //adds contentLabel div to show content type
     //$("<div class='contentIcon'/>").insertBefore(".compoundGallery_header > .form-item > a:first-child"); //adds contentLabel div to show content type
 
     var institutionHome = $(".depth-2 > a").attr('href'); //creates href path from breadcrumb depth-2
     $("<a href=" + institutionHome + "><div class='institutionLabel'/></a>").appendTo(".compoundLabels"); //adds institutionLabel div to show content type
         $(".compoundObject .contentLabel").addClass("compoundLabel"); //detects contentType and assign new class to contentLabel
-        $(".compoundLabel").html("Compound <br> Parent"); //text within compoundLabel
+        $(".compoundLabel").html("Compound Object"); //text within compoundLabel
 
         $(".manageParent, ul.tabs").appendTo(".itemMenu").wrapAll('<div class="manageMenu"/>'); //moves the view/ip embargo/manage menu
         $("<div class='userMenu'/>").insertAfter(".manageMenu");  //inserts compoundGlance
         $("<div class='compoundGlance'/>").insertAfter(".compoundGallery");  //inserts compoundGlance
-        $("<div class='infoToggle userSelect'><div class='iconSelect'></div><div class='textSelect'>show details</div></div>").appendTo(".userMenu"); //adds toggle for parent metadata
+        $("<div class='infoToggle userSelect'><div class='iconSelect'></div><div class='textSelect'>details</div></div>").appendTo(".userMenu"); //adds toggle for parent metadata
         $(".downloadLink").appendTo(".userMenu");
         $("#clip").appendTo(".userMenu");
         $(".modsDesc").clone().appendTo(".compoundGlance");
@@ -331,13 +332,16 @@ if($('.institution-collection-list-a').length < 4){
         $('#clip').addClass('userSelect');
         $("<div id='shareToggle' class='userSelect'><div class='iconSelect'></div><div class='textSelect'>share</div></div>").insertAfter("#clip");
         $("<div id='shareToggle' class='userSelect'><div class='iconSelect'></div><div class='textSelect'>share</div></div>").insertAfter(".compoundParent .compoundCount");
-
+        $(".compoundCount").appendTo(".compoundGallery");
         $("<div id='share'/>").insertAfter("#shareToggle");
         $("#islandora-compound-next-link").insertAfter("#islandora-compound-sequence-position");
          $("<i class='fa fa-arrow-right' aria-hidden='true'></i>").appendTo("#islandora-compound-next-link");
           $("<i class='fa fa-arrow-left' aria-hidden='true'></i>").appendTo("#islandora-compound-previous-link");
 
 
+        $(".userMenu").insertBefore("#shareToggle");
+
+        $(".parentLink").clone().prop({class:"backContainer"}).insertAfter(".compoundGallery").html("<div class='backCollection'>Back to Collection</div>");
 
 
 

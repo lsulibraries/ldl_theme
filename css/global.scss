@@ -33,9 +33,10 @@ $Cyan2: #39ADB5;
 $Blue2: #6182B8;
 $Purple2: #7C4DFF;
 $Violet2: #945EB8;
-
+$LDLBlue: #327BB3;
 
 $compoundLegend: 'https://i.imgur.com/azpOWoN.png';
+$compoundLegendDark: 'https://i.imgur.com/IUHIf6A.png';
 $childLegend: 'https://i.imgur.com/jaWlCjM.png';
 $imageLegend: 'https://i.imgur.com/4LmxSra.png';
 $shareLegend: 'https://i.imgur.com/bKhM20h.png';
@@ -4031,20 +4032,24 @@ background:none!important;
     background-size: cover;
     left: -20px;
     top: -10px;
-    z-index: -1;
 }
 
 .contentLabel{
-    background: $darkTransparent;
-    color: white;
+color: #676767;
+    background: white;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.26);
+    margin: 20px;
+    margin-bottom: 0px;
     text-transform: uppercase;
-    line-height: 14px;
-    padding: 10px;
     position: relative;
-    padding-left: 45px;
-    background-position: 9px 10px;
-    background-size: 28px;
+    padding-left: 25px;
+    background-position: 2px 2px;
+    background-size: 15px;
     background-repeat: no-repeat;
+    padding-bottom: 1px;
+    font-size: 11px;
+    padding-top: 4px;
+
  }
 
 .institutionLabel {
@@ -4130,10 +4135,14 @@ border: 1px solid white;
 
 }
 
+.infoToggle:hover{
+  border: 1px solid white;
+}
+
 .iconSelect {
-    width: 50px;
+    width: 36px;
     height: 50px;
-    background-size: 20px;
+    background-size: 15px;
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -4329,7 +4338,7 @@ form#islandora-ip-embargo-object-embargo-form {
 }
 
       .compoundLabel{
-      background-image: url($compoundLegend);
+      background-image: url($compoundLegendDark);
       }
 
 
@@ -4357,11 +4366,12 @@ padding-left: 48px;
       width: 100%;
     }
 
-      .block-compound-jail-display .block-inner > .content{
-width: 100%;
-    border: 1px solid #e2e2e2;
-border-top: 0px;
-      }
+    .block-compound-jail-display .block-inner > .content{
+      width: 100%;
+      border: 1px solid #e2e2e2;
+      border-top: 0px;
+      background: white;
+    }
 
       .compoundLabels {
           @include flexbox;
@@ -4372,12 +4382,6 @@ border-top: 0px;
           top: 0px;
           right: 0px;
       }
-
-       .compoundLabel::before{
-          background: #FF5370;
-          @extend .institutionLabel::before;
-          margin: 0px;
-       }
 
       #region-sidebar-first{
         transform: translate3d(-25vw, 0vw, 0vw);
@@ -4408,9 +4412,10 @@ transform: translate3d(0,0,0);
       }
 
       .itemMenu {
-          padding-top: 0px;
-    position: absolute;
-    top: 0px;
+      padding-top: 0px;
+      position: absolute;
+      top: 0px;
+      z-index: 1;
           ul.tabs{
             border: 0px;
             height: 22px;
@@ -4473,12 +4478,11 @@ span#islandora-compound-sequence-position {
             color:white;
           }
           a.parentLink {
-              text-transform: uppercase;
               color: $offWhite;
               padding: 5px 0px;
               font-weight: normal;
               font-size: 16px;
-    margin-left: 3px;
+              margin-left: 3px;
           }
           a.parentLink:hover {
               color: white;
@@ -4493,19 +4497,50 @@ span#islandora-compound-sequence-position {
       }
 
       .compoundGallery {
-        display: flex;
-        flex-wrap: wrap;
-    border-bottom: 1px solid rgba(255, 255, 255, .26);
-    padding-bottom: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      border-bottom: 1px solid rgba(255, 255, 255, .26);
+      padding-bottom: 10px;
+      position: relative;
       }
+
+.backContainer {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    background: #438fca;
+    border: 20px solid white;
+    height: 90px;
+    margin-top: 0px;
+    width: 100%;
+    box-sizing: border-box;
+    border-top: 0px;
+}
+
+.backCollection {
+    color: white;
+}
+
+      .compoundCount {
+    position: absolute;
+    right: 20px;
+    top: -20px;
+    text-transform: uppercase;
+    font-size: 11px;
+    color: #676767;
+}
 
     #block-islandora-compound-object-compound-jail-display > div {
         border-bottom: none!important;
-        padding-bottom: 60px;
+        padding-bottom: 0px;
         padding-right: 0px;
         @include flexbox;
         justify-content: center;
     }
+
+.compoundSelect:nth-child(3n){
+  margin-right: 0px !important;
+}
 
       .compoundSelect {
         display: flex;
@@ -4514,7 +4549,7 @@ span#islandora-compound-sequence-position {
         margin-bottom: 10px;
 height: 80px;
 background: white;
-width: calc(33% - 22px);
+width: calc(33% - 10px);
         a{
         line-height: auto!important;
         }
@@ -4579,27 +4614,20 @@ padding-top:5px;
 }
 
 .infoToggle {
-    width: 174px;
     display: flex;
     color: white;
-    margin-bottom: 11px;
     text-transform: uppercase;
     border: 1px solid $lightTransparent;
     cursor: pointer;
     overflow: hidden;
-    border-top: 0px;
-    border-left: 0px;
     .iconSelect {
-    background-color: $darkTransparent;
-    height: 30px;
-    width: 58px!important;
+    height: 23px;
     }
     .textSelect {
-    padding-left: 12px;
     padding-right: 12px;
     font-size: 13px;
-    width: 92px;
     text-align: center;
+    color: rgba(255, 255, 255, 0.85);
     }
 }
 
@@ -4628,7 +4656,7 @@ body.compoundParent{
 
     #shareToggle{
     height: 23px;
-    margin-left: 10px;
+    margin-left: 4px;
       .iconSelect{
         background-size: 15px;
         width: 35px;
@@ -4645,6 +4673,8 @@ body.compoundParent{
     }
     }
     .compoundGlance {
+  display: none; //not prdoucing anything in local, mods not catching
+
     padding: 20px;
     background: $darkTransparent;
     }
@@ -5414,9 +5444,16 @@ display: none;
 @media screen and (max-width: 1260px) {
 
         .compoundSelect {
-  width: calc(50% - 20px) !important;
+  width: calc(50% - 10px) !important;
   }
 
+.compoundSelect:nth-child(2n){
+  margin-right: 0px !important;
+}
+
+.compoundObject .compoundSelect:nth-child(3n) {
+    margin-right: 20px !important;
+}
 
 .compoundObject .block-compound-jail-display .block-inner > .content {
    margin: 0px !important;
@@ -5658,10 +5695,24 @@ display: none;
     display: block;
   }
   @media screen and (max-width: 900px) {
+.compoundGallery_header .userMenu .infoToggle{
+  display: none;
+}
+
+.metadataVertical::before{
+  content:'Information';
+  position: absolute;
+  left:0px;
+  top:-20px;
+  text-transform: uppercase;
+  font-size: 11px;
+}
 
 .metadataVertical{
         color: #676767;
 display: block;
+position: relative;
+margin-top: 40px;
 
 .metadataContainer.compoundMetadata {
     padding-top: 20px;
@@ -6063,13 +6114,6 @@ border: 1px solid rgba(255, 255, 255, 0.33);
     border-bottom: 1px solid $lightTransparent;
 }
 
-.contentLabel{
-  background-size: 15px;
-font-size: 10px;
-    padding-left: 35px;
-line-height: 10px;
-    border: 1px solid $lightTransparent;
-}
 .institutionLabel {
     height: 40px;
     width: 60px;
@@ -6114,9 +6158,19 @@ h1#window-title{
 
 }
   @media screen and (max-width: 740px) {
+body.compoundParent .compoundGallery_header .compoundParent {
+    font-size: 28px;
+    color: white;
+    line-height: 19px;
+    margin-left: 2px;
+}
+
       .compoundSelect {
 width: 100% !important;
 margin-right: 0px !important;
+}
+.compoundObject .compoundSelect:nth-child(3n) {
+    margin-right: 0px !important;
 }
 
 
