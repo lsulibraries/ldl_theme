@@ -4508,7 +4508,7 @@ span#islandora-compound-sequence-position {
     display: flex !important;
     justify-content: center;
     align-items: center;
-    background: #438fca;
+    background: $LDLBlue;
     border: 20px solid white;
     height: 90px;
     margin-top: 0px;
@@ -4687,6 +4687,19 @@ body.compoundParent{
 
 .compoundChild{
 
+.compoundGallery_header .infoToggle{
+  display: none;
+}
+
+.islandora-large-image-object.islandora {
+    background: black;
+    padding: 20px;
+}
+
+.backgroundDiv{
+  display: none;
+}
+
 a#clip {
     display: flex!important;
     justify-content: center;
@@ -4773,9 +4786,8 @@ a#clip {
 
 
 .childHeader {
-    background: $darkTransparent;
+    background: black;
     display: flex;
-    margin-bottom: 1px;
     flex-wrap: wrap;
     padding: 10px 15px;
 }

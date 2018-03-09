@@ -3463,7 +3463,7 @@ div.islandora-pdf-object, div.islandora-large-image-object {
   display: flex !important;
   justify-content: center;
   align-items: center;
-  background: #438fca;
+  background: #327BB3;
   border: 20px solid white;
   height: 90px;
   margin-top: 0px;
@@ -3597,6 +3597,13 @@ body.compoundParent .compoundGlance {
 body.compoundParent .tagsGlance {
   margin-top: 10px; }
 
+.compoundChild .compoundGallery_header .infoToggle {
+  display: none; }
+.compoundChild .islandora-large-image-object.islandora {
+  background: black;
+  padding: 20px; }
+.compoundChild .backgroundDiv {
+  display: none; }
 .compoundChild a#clip {
   display: flex !important;
   justify-content: center;
@@ -3645,9 +3652,8 @@ body.compoundParent .tagsGlance {
 .compoundChild .navigator {
   border: 0px !important; }
 .compoundChild .childHeader {
-  background: rgba(0, 0, 0, 0.06);
+  background: black;
   display: flex;
-  margin-bottom: 1px;
   flex-wrap: wrap;
   padding: 10px 15px; }
 .compoundChild .childIcon {
