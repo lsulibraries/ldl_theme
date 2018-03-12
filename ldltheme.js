@@ -301,7 +301,16 @@ if($('.institution-collection-list-a').length < 4){
         }
 
 
-
+        $('table').each(function (){
+            $(this).replaceWith( $(this).html()
+                .replace(/<tbody/gi, "<div class='metadataContainer'")
+                .replace(/<tr/gi, "<div class='metadataRow'")
+                .replace(/<\/tr>/gi, "</div>")
+                .replace(/<td/gi, "<span")
+                .replace(/<\/td>/gi, "</span>")
+                .replace(/<\/tbody/gi, "<\/div")
+            );
+        });
         $('.compoundChild #block-system-main .block-inner .content > div').insertAfter('.itemMenu');
         $('#window-title').insertAfter('.itemMenu');
         $("<div class='childIcon childImage'/>").insertBefore(".compoundChildImage #window-title");
@@ -338,16 +347,7 @@ if($('.institution-collection-list-a').length < 4){
           $('#share').toggleClass('shareActive');
         });
 
-        $('table').each(function (){
-            $(this).replaceWith( $(this).html()
-                .replace(/<tbody/gi, "<div class='metadataContainer'")
-                .replace(/<tr/gi, "<div class='metadataRow'")
-                .replace(/<\/tr>/gi, "</div>")
-                .replace(/<td/gi, "<span")
-                .replace(/<\/td>/gi, "</span>")
-                .replace(/<\/tbody/gi, "<\/div")
-            );
-        });
+
 
         $("#region-sidebar-first").addClass('nano');
         $(".nano > .region-inner").appendTo('#side');
