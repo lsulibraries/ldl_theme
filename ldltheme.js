@@ -337,12 +337,12 @@ if($('.institution-collection-list-a').length < 4){
 
 
         $(".userMenu").insertBefore("#shareToggle");
+        $("#shareToggle").insertAfter(".infoToggle");
 
         $(".parentLink").clone().prop({class:"backContainer"}).insertAfter(".compoundGallery").html("<div class='backCollection'>Back to Collection</div>");
 
-        $("<div class='compoundGlance'/>").insertBefore(".backContainer");  //inserts compoundGlance
-        $(".modsDesc").clone().appendTo(".compoundGlance");
-        $(".modsSubject").clone().appendTo(".compoundGlance").wrapAll('<div class="tagsGlance"/>');
+        $(".contentLabel").wrapAll("<div class='labelContainer'/>");
+
 
 $("#share").jsSocials({
     url: urlhref,
@@ -384,7 +384,10 @@ $("#share").jsSocials({
         $(".mobileMetaToggle .iconSelect").remove();
         $(".metadataSidebar").clone().prop({ class: "metadataVertical"}).appendTo('.compoundGallery');
 
-
+        $("<div class='compoundGlance'/>").insertBefore(".metadataVertical");  //inserts compoundGlance
+        $(".metadataSidebar .modsDesc").clone().appendTo(".compoundGlance");
+        $(".metadataSidebar .modsSubject").clone().appendTo(".compoundGlance").wrapAll('<div class="tagsGlance"/>');
+        $(".tagsGlance > .modsSubject br").remove();
         $('.mobileMetaToggle').click(function(){
               $(this).toggleClass('menuActive');
               $('#region-sidebar-first').toggleClass('infoOpened');
