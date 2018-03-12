@@ -257,12 +257,10 @@ if($('.institution-collection-list-a').length < 4){
 
     //done finding widest image
     $("<div class='backgroundDiv'/>").insertBefore(".compoundGallery_header .form-item"); // adds div for item background
-        var commentedURL = $('div.widest').find('noscript').addClass('widestIMG').text().split(" ");
-        var srcclean = commentedURL[2].match(/"(.*?)"/);
-        //alert(srcclean[1]);
-        //assign background image
-        $('.backgroundDiv').css('background-image', 'url(' + srcclean[1] + ')');
-     //adds body class if block is present
+    var commentedURL = $('div.widest').find('noscript').addClass('widestIMG').text().split(" ");
+    var srcclean = commentedURL[2].match(/"(.*?)"/);
+    //assign background image
+    $('.backgroundDiv').css('background-image', 'url(' + srcclean[1] + ')');
     $(".compoundObject #block-system-main table").prop({class:"modsTable"}).appendTo(".region-sidebar-first-inner");
     $('.compoundSelect').wrapAll('<div class="compoundGallery"/>'); //wraps collectionPage title
     $("<div class='itemMenu'/>").insertBefore(".backgroundDiv");
@@ -301,16 +299,7 @@ if($('.institution-collection-list-a').length < 4){
         }
 
 
-        $('table').each(function (){
-            $(this).replaceWith( $(this).html()
-                .replace(/<tbody/gi, "<div class='metadataContainer'")
-                .replace(/<tr/gi, "<div class='metadataRow'")
-                .replace(/<\/tr>/gi, "</div>")
-                .replace(/<td/gi, "<span")
-                .replace(/<\/td>/gi, "</span>")
-                .replace(/<\/tbody/gi, "<\/div")
-            );
-        });
+
         $('.compoundChild #block-system-main .block-inner .content > div').insertAfter('.itemMenu');
         $('#window-title').insertAfter('.itemMenu');
         $("<div class='childIcon childImage'/>").insertBefore(".compoundChildImage #window-title");
@@ -329,7 +318,7 @@ if($('.institution-collection-list-a').length < 4){
         $("#islandora-compound-next-link").insertAfter("#islandora-compound-sequence-position");
         $("<i class='fa fa-arrow-right' aria-hidden='true'></i>").appendTo("#islandora-compound-next-link");
         $("<i class='fa fa-arrow-left' aria-hidden='true'></i>").appendTo("#islandora-compound-previous-link");
-        $(".userMenu").insertBefore("#shareToggle");
+        $(".userMenu").insertAfter(".headerBreadcrumb");
         $("#shareToggle").insertAfter(".infoToggle");
         $(".parentLink").clone().prop({class:"backContainer"}).insertAfter(".compoundGallery").html("<div class='backCollection'>Back to Collection</div>");
         $(".contentLabel").wrapAll("<div class='labelContainer'/>");
@@ -347,7 +336,16 @@ if($('.institution-collection-list-a').length < 4){
           $('#share').toggleClass('shareActive');
         });
 
-
+        $('table').each(function (){
+            $(this).replaceWith( $(this).html()
+                .replace(/<tbody/gi, "<div class='metadataContainer'")
+                .replace(/<tr/gi, "<div class='metadataRow'")
+                .replace(/<\/tr>/gi, "</div>")
+                .replace(/<td/gi, "<span")
+                .replace(/<\/td>/gi, "</span>")
+                .replace(/<\/tbody/gi, "<\/div")
+            );
+        });
 
         $("#region-sidebar-first").addClass('nano');
         $(".nano > .region-inner").appendTo('#side');
