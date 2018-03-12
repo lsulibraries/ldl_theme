@@ -3636,117 +3636,121 @@ body.compoundParent .compoundGlance {
 body.compoundParent .tagsGlance {
   margin-top: 10px; }
 
-.compoundChild .compoundGallery_header .infoToggle {
-  display: none; }
-.compoundChild .islandora-large-image-object.islandora {
-  background: black;
-  padding: 20px; }
-.compoundChild .backgroundDiv {
-  display: none; }
-.compoundChild a#clip {
-  display: flex !important;
-  justify-content: center;
-  align-items: center;
-  height: 30px;
-  color: white;
-  margin-left: 0px; }
-.compoundChild #clip img {
-  filter: brightness(5) grayscale(1);
-  border: 0px !important;
-  padding: 0px;
-  margin: 0px 10px; }
-.compoundChild .menuActive .iconSelect {
-  background-color: transparent; }
-.compoundChild .menuActive .textSelect {
-  background: rgba(0, 0, 0, 0.06); }
-.compoundChild .backgroundDiv {
-  position: absolute;
-  width: calc(100% + 140px);
-  height: calc(100% + 140px);
-  filter: blur(50px) brightness(0.8) contrast(0.6);
-  background-repeat: no-repeat;
-  background-size: cover;
-  left: -20px;
-  top: -20px; }
-.compoundChild .childNotice {
-  height: 50px;
-  color: #FF5370;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0px 20px;
-  text-transform: uppercase;
-  border-right: 1px solid rgba(255, 255, 255, 0.16); }
-  .compoundChild .childNotice i {
-    margin-left: 15px; }
-.compoundChild .compoundObject .islandora-openseadragon .openseadragon-canvas canvas {
-  background-color: transparent !important; }
-.compoundChild .iconSelect {
-  border: 0px;
-  width: 30px;
-  height: 30px; }
-.compoundChild .userMenu {
-  align-items: center;
-  padding-bottom: 0px; }
-.compoundChild .navigator {
-  border: 0px !important; }
-.compoundChild .childHeader {
-  background: black;
-  display: flex;
-  flex-wrap: wrap;
-  padding: 10px 15px; }
-.compoundChild .childIcon {
-  width: 35px;
-  height: 32px;
-  float: left;
-  background-repeat: no-repeat;
-  background-size: 25px;
-  background-position: 0px center; }
-.compoundChild .childImage {
-  background-image: url(https://i.imgur.com/4LmxSra.png); }
-.compoundChild .islandora-large-image-content {
-  margin-top: 0px;
-  margin-bottom: 15px; }
-.compoundChild h1#window-title {
-  margin: 0px;
-  display: flex;
-  font-size: 20px;
-  justify-content: center;
-  align-items: center;
-  padding-right: 20px; }
-.compoundChild .compoundSelect .active {
-  cursor: default; }
-.compoundChild div#block-system-main {
-  height: 0px !important; }
-.compoundChild .contentIcon {
-  margin-left: 20px; }
-.compoundChild .compoundGallery_header {
-  margin-bottom: 1px; }
-  .compoundChild .compoundGallery_header .compoundParent {
+.compoundChild {
+  background: black; }
+  .compoundChild .contentLabel, .compoundChild #block-block-9, .compoundChild .islandora-large-image-metadata {
+    display: none; }
+  .compoundChild .islandora-large-image-object.islandora {
+    background: black;
+    padding: 20px;
+    padding-bottom: 80px; }
+  .compoundChild .backgroundDiv {
+    display: none; }
+  .compoundChild a#clip {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    color: white;
+    margin-left: 0px; }
+  .compoundChild #clip img {
+    filter: brightness(5) grayscale(1);
+    border: 0px !important;
+    padding: 0px;
+    margin: 0px 10px; }
+  .compoundChild .menuActive .iconSelect {
+    background-color: transparent; }
+  .compoundChild .menuActive .textSelect {
+    background: rgba(0, 0, 0, 0.06); }
+  .compoundChild .backgroundDiv {
+    position: absolute;
+    width: calc(100% + 140px);
+    height: calc(100% + 140px);
+    filter: blur(50px) brightness(0.8) contrast(0.6);
+    background-repeat: no-repeat;
+    background-size: cover;
+    left: -20px;
+    top: -20px; }
+  .compoundChild .childNotice {
+    height: 50px;
+    color: #FF5370;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 20px;
+    text-transform: uppercase;
+    border-right: 1px solid rgba(255, 255, 255, 0.16); }
+    .compoundChild .childNotice i {
+      margin-left: 15px; }
+  .compoundChild .compoundObject .islandora-openseadragon .openseadragon-canvas canvas {
+    background-color: transparent !important; }
+  .compoundChild .iconSelect {
+    border: 0px;
+    width: 30px;
+    height: 30px; }
+  .compoundChild .userMenu {
+    align-items: center;
+    padding-bottom: 0px; }
+  .compoundChild .navigator {
+    border: 0px !important; }
+  .compoundChild .childHeader {
+    background: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.48);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.48); }
+  .compoundChild .childIcon {
+    width: 55px;
+    height: 32px;
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: center;
+    margin-right: 10px; }
+  .compoundChild .childImage {
+    background-image: url(https://i.imgur.com/4LmxSra.png); }
+  .compoundChild .islandora-large-image-content {
+    margin-top: 0px;
+    margin-bottom: 15px; }
+  .compoundChild h1#window-title {
+    margin: 0px;
+    display: flex;
     font-size: 20px;
-    padding: 10px 0px; }
-.compoundChild .compoundSelect {
-  height: 80px;
-  border: 1px solid rgba(255, 255, 255, 0.07); }
-  .compoundChild .compoundSelect a.compoundSelect-title {
-    padding: 40px 40px; }
-.compoundChild .compoundGallery {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 20px;
-  background: rgba(0, 0, 0, 0.06);
-  padding-bottom: 0px;
-  border-bottom: 0px;
-  justify-content: center;
-  align-items: center; }
-.compoundChild .compoundGlance {
-  padding-top: 0px !important;
-  background: rgba(0, 0, 0, 0.06);
-  color: white; }
-.compoundChild td.modsDesc, .compoundChild .tagsGlance {
-  padding: 20px !important; }
-.compoundChild td.modsDesc {
-  padding-bottom: 0px !important; }
+    justify-content: center;
+    align-items: center;
+    padding-right: 0px;
+    flex-grow: 2;
+    border-left: 1px solid rgba(255, 255, 255, 0.48);
+    border-right: 1px solid rgba(255, 255, 255, 0.48);
+    min-height: 60px; }
+  .compoundChild .compoundSelect .active {
+    cursor: default; }
+  .compoundChild div#block-system-main {
+    height: 0px !important; }
+  .compoundChild .contentIcon {
+    margin-left: 20px; }
+  .compoundChild .compoundGallery_header {
+    position: relative; }
+    .compoundChild .compoundGallery_header .compoundParent {
+      font-size: 20px;
+      padding: 10px 0px; }
+  .compoundChild .compoundSelect {
+    height: 80px;
+    border: 1px solid rgba(255, 255, 255, 0.07); }
+    .compoundChild .compoundSelect a.compoundSelect-title {
+      padding: 40px 40px; }
+  .compoundChild .compoundGallery {
+    display: none; }
+  .compoundChild .compoundGlance {
+    padding-top: 0px !important;
+    background: rgba(0, 0, 0, 0.06);
+    color: white; }
+  .compoundChild td.modsDesc, .compoundChild .tagsGlance {
+    padding: 20px !important; }
+  .compoundChild td.modsDesc {
+    padding-bottom: 0px !important; }
 
 .metadataContainer .metadataRow {
   display: flex;
@@ -4363,6 +4367,9 @@ body {
   .islandora-pdf-metadata, .islandora-large-image-metadata {
     display: block; } }
 @media screen and (max-width: 1260px) and (max-width: 900px) {
+  .compoundGlance {
+    display: none; }
+
   .compoundGallery_header .userMenu .infoToggle {
     display: none; }
 

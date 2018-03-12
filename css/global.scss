@@ -50,6 +50,8 @@ $descriptionLegend:'https://i.imgur.com/SVHgxtg.png';
 
 $darkTransparent: rgba(0, 0, 0, .06);
 $lightTransparent: rgba(255, 255, 255, .16);
+$lightTransparent2: rgba(255, 255, 255, 0.48);
+
 
 $offWhite: rgba(255, 255, 255, .85);
 
@@ -4732,14 +4734,15 @@ body.compoundParent{
 }
 
 .compoundChild{
-
-.compoundGallery_header .infoToggle{
+background: black;
+.contentLabel, #block-block-9, .islandora-large-image-metadata {
   display: none;
 }
 
 .islandora-large-image-object.islandora {
     background: black;
     padding: 20px;
+    padding-bottom: 80px;
 }
 
 .backgroundDiv{
@@ -4785,6 +4788,7 @@ a#clip {
     width: calc(100% + 140px);
     height: calc(100% + 140px);
     filter: blur(50px) brightness(0.8) contrast(0.6);
+
     background-repeat: no-repeat;
     background-size: cover;
     left: -20px;
@@ -4835,16 +4839,21 @@ a#clip {
     background: black;
     display: flex;
     flex-wrap: wrap;
-    padding: 10px 15px;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    border-top: 1px solid $lightTransparent2;
+    border-bottom: 1px solid $lightTransparent2;
 }
 
 .childIcon{
-    width: 35px;
+    width: 55px;
     height: 32px;
-    float: left;
     background-repeat: no-repeat;
     background-size: 25px;
-    background-position: 0px center;
+    background-position: center;
+    margin-right: 10px;
+
 }
 
 .childImage{
@@ -4863,7 +4872,11 @@ a#clip {
     font-size: 20px;
     justify-content: center;
     align-items: center;
-    padding-right: 20px;
+    padding-right: 0px;
+    flex-grow: 2;
+    border-left: 1px solid $lightTransparent2;
+    border-right: 1px solid $lightTransparent2;
+    min-height: 60px;
 }
     .compoundSelect .active{
     cursor: default;
@@ -4877,8 +4890,8 @@ a#clip {
     }
 
     .compoundGallery_header {
-margin-bottom:1px;
-      .compoundParent {
+position: relative;
+     .compoundParent {
       font-size: 20px;
       padding: 10px 0px;
       }
@@ -4893,14 +4906,7 @@ margin-bottom:1px;
     }
 
     .compoundGallery {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 20px;
-    background: $darkTransparent;
-    padding-bottom: 0px;
-    border-bottom: 0px;
-    justify-content: center;
-    align-items: center;
+    display: none;
     }
 
 .compoundGlance {
@@ -5764,6 +5770,11 @@ margin-bottom: 20px;
     display: block;
   }
   @media screen and (max-width: 900px) {
+
+.compoundGlance{
+  display: none;
+}
+
 .compoundGallery_header .userMenu .infoToggle{
   display: none;
 }

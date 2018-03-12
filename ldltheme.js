@@ -268,18 +268,13 @@ if($('.institution-collection-list-a').length < 4){
     $("<div class='itemMenu'/>").insertBefore(".backgroundDiv");
     $("<div class='contentLabel'/>").insertBefore(".compoundGallery"); //adds contentLabel div to show content type
     //$("<div class='contentIcon'/>").insertBefore(".compoundGallery_header > .form-item > a:first-child"); //adds contentLabel div to show content type
-$(".parentLink").wrapAll("<div class='headerBreadcrumb'/>");
-
+    $(".parentLink").wrapAll("<div class='headerBreadcrumb'/>");
     var institutionText = $(".depth-2 > a").clone(); //creates href path from breadcrumb depth-2
-
     var institutionHome = $(".depth-2 > a").attr('href'); //creates href path from breadcrumb depth-2
     $(institutionText).addClass("institutionSmall").insertBefore("a.parentLink"); //adds institutionLabel div to show content type
-
-$( ".institutionSmall" ).append( " /" ); //needs to be separated from the a href
-
+    $( ".institutionSmall" ).append( " /" ); //needs to be separated from the a href
         $(".compoundObject .contentLabel").addClass("compoundLabel"); //detects contentType and assign new class to contentLabel
         $(".compoundLabel").html("Compound Object"); //text within compoundLabel
-
         $(".manageParent, ul.tabs").appendTo(".itemMenu").wrapAll('<div class="manageMenu"/>'); //moves the view/ip embargo/manage menu
         $("<div class='userMenu'/>").insertAfter(".manageMenu");  //inserts compoundGlance
         $("<div class='infoToggle userSelect'><div class='iconSelect'></div><div class='textSelect'>details</div></div>").appendTo(".userMenu"); //adds toggle for parent metadata
@@ -295,10 +290,6 @@ $( ".institutionSmall" ).append( " /" ); //needs to be separated from the a href
               $(".nano").nanoScroller({ alwaysVisible: false });
         });
 
-
-
-        sr.reveal('.modsTable', { duration: 200, delay: 850,  easing: 'linear', scale: 1, }, 20);
-
         if ($('.compoundObject #block-system-main .block-inner .content > div').length){
         $("body").addClass('compoundChild');
         }
@@ -313,16 +304,6 @@ $( ".institutionSmall" ).append( " /" ); //needs to be separated from the a href
 
         $('.compoundChild #block-system-main .block-inner .content > div').insertAfter('.itemMenu');
         $('#window-title').insertAfter('.itemMenu');
-
-        //begin compoundChild
-    if ($('body').hasClass('compoundChild')){
-        $(".compoundChild .compoundLabel").html("Compound <br> Child"); //text within compoundLabel
-        $("<div class='compoundArrows userSelect'/>").appendTo(".userMenu");
-
-        $('#islandora-compound-sequence-position, #islandora-compound-previous-link, #islandora-compound-next-link').appendTo('.compoundArrows');
-
-}
-
         $("<div class='childIcon childImage'/>").insertBefore(".compoundChildImage #window-title");
         $("<div class='contentLabel imageLabel'>Large<br>Image</div>").insertBefore(".compoundChildImage .compoundLabel");
         $(".childIcon, #window-title").wrapAll("<div class='childHeader'/>");
@@ -337,32 +318,25 @@ $( ".institutionSmall" ).append( " /" ); //needs to be separated from the a href
         $(".compoundCount").appendTo(".compoundGallery");
         $("<div id='share'/>").insertAfter("#shareToggle");
         $("#islandora-compound-next-link").insertAfter("#islandora-compound-sequence-position");
-         $("<i class='fa fa-arrow-right' aria-hidden='true'></i>").appendTo("#islandora-compound-next-link");
-          $("<i class='fa fa-arrow-left' aria-hidden='true'></i>").appendTo("#islandora-compound-previous-link");
-
-
+        $("<i class='fa fa-arrow-right' aria-hidden='true'></i>").appendTo("#islandora-compound-next-link");
+        $("<i class='fa fa-arrow-left' aria-hidden='true'></i>").appendTo("#islandora-compound-previous-link");
         $(".userMenu").insertBefore("#shareToggle");
         $("#shareToggle").insertAfter(".infoToggle");
-
         $(".parentLink").clone().prop({class:"backContainer"}).insertAfter(".compoundGallery").html("<div class='backCollection'>Back to Collection</div>");
-
         $(".contentLabel").wrapAll("<div class='labelContainer'/>");
 
-
-$("#share").jsSocials({
-    url: urlhref,
-    text: title,
-    showLabel: false,
-    showCount: "inside",
-    shares: ["twitter", "facebook"]
-});
-
-        $('#shareToggle').click(function(){
-    $(this).toggleClass('activeMenu');
-    $('#share').toggleClass('shareActive');
-
+        $("#share").jsSocials({
+          url: urlhref,
+          text: title,
+          showLabel: false,
+          showCount: "inside",
+          shares: ["twitter", "facebook"]
         });
 
+        $('#shareToggle').click(function(){
+          $(this).toggleClass('activeMenu');
+          $('#share').toggleClass('shareActive');
+        });
 
         $('table').each(function (){
             $(this).replaceWith( $(this).html()
@@ -388,7 +362,6 @@ $("#share").jsSocials({
         $(".mobileMetaToggle .textSelect").replaceWith("<div class='textSelect'>Back to item view</div>");
         $(".mobileMetaToggle .iconSelect").remove();
         $(".metadataSidebar").clone().prop({ class: "metadataVertical"}).appendTo('.compoundGallery');
-
         $("<div class='compoundGlance'/>").insertBefore(".metadataVertical");  //inserts compoundGlance
         $(".metadataSidebar .modsDesc").clone().appendTo(".compoundGlance");
         $(".metadataSidebar .modsSubject").clone().appendTo(".compoundGlance").wrapAll('<div class="tagsGlance"/>');
@@ -399,9 +372,14 @@ $("#share").jsSocials({
               $('body').toggleClass('metaOpened');
               $(".nano").nanoScroller({ alwaysVisible: false });
         });
+        //begin compoundChild
+    if ($('body').hasClass('compoundChild')){
+        $(".compoundChild .compoundLabel").html("Compound <br> Child"); //text within compoundLabel
+        $("<div class='compoundArrows userSelect'/>").appendTo(".userMenu");
+        $('#islandora-compound-sequence-position, #islandora-compound-previous-link, #islandora-compound-next-link').appendTo('.compoundArrows');
 
 
-
+      }
 }
 //end compoundObject
 
@@ -476,6 +454,7 @@ span.onclick = function() {
             window.history.replaceState({}, document.title, clean_uri);
         }
 }
+
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
