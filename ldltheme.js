@@ -266,12 +266,17 @@ if($('.institution-collection-list-a').length < 4){
     $(".compoundObject #block-system-main table").prop({class:"modsTable"}).appendTo(".region-sidebar-first-inner");
     $('.compoundSelect').wrapAll('<div class="compoundGallery"/>'); //wraps collectionPage title
     $("<div class='itemMenu'/>").insertBefore(".backgroundDiv");
-    $("<div class='compoundLabels'/>").insertBefore(".itemMenu"); //adds region for contentLabel and institutionLabel
     $("<div class='contentLabel'/>").insertBefore(".compoundGallery"); //adds contentLabel div to show content type
     //$("<div class='contentIcon'/>").insertBefore(".compoundGallery_header > .form-item > a:first-child"); //adds contentLabel div to show content type
+$(".parentLink").wrapAll("<div class='headerBreadcrumb'/>");
+
+    var institutionText = $(".depth-2 > a").clone(); //creates href path from breadcrumb depth-2
 
     var institutionHome = $(".depth-2 > a").attr('href'); //creates href path from breadcrumb depth-2
-    $("<a href=" + institutionHome + "><div class='institutionLabel'/></a>").appendTo(".compoundLabels"); //adds institutionLabel div to show content type
+    $(institutionText).addClass("institutionSmall").insertBefore("a.parentLink"); //adds institutionLabel div to show content type
+
+$( ".institutionSmall" ).append( " /" ); //needs to be separated from the a href
+
         $(".compoundObject .contentLabel").addClass("compoundLabel"); //detects contentType and assign new class to contentLabel
         $(".compoundLabel").html("Compound Object"); //text within compoundLabel
 
@@ -395,6 +400,8 @@ $("#share").jsSocials({
               $(".nano").nanoScroller({ alwaysVisible: false });
         });
 
+
+
 }
 //end compoundObject
 
@@ -409,6 +416,15 @@ $('#block-block-1').find('a').each(function() {
 
   });
 }
+
+//if ($(window).width() > 1700) {
+//$('body').toggleClass("metaOpened")
+//$('#region-sidebar-first').toggleClass("infoOpened")
+//$('.mobileMetaToggle').toggleClass('menuActive');
+//}
+
+//above - this enables meta to be open by default on larger screens
+
 //modal advsearch
 
 // Get the modal

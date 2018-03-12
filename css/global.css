@@ -1428,7 +1428,7 @@ div.region-inner.region-header-first-inner {
   background-color: #363638; }
 
 #region-sidebar-first {
-  left: 0px;
+  left: -10px;
   margin: 0px;
   background-color: white;
   width: 25%;
@@ -3395,7 +3395,8 @@ div.islandora-pdf-object, div.islandora-large-image-object {
   transform: translate3d(0, 0, 0);
   transition-duration: 1s;
   position: fixed;
-  height: calc(100vh - 90px); }
+  height: calc(100vh - 90px);
+  left: 0px; }
 .compoundObject .itemMenu {
   padding-top: 0px;
   position: absolute;
@@ -3448,13 +3449,21 @@ div.islandora-pdf-object, div.islandora-large-image-object {
   padding: 0px; }
 .compoundObject .compoundGallery_header .compoundParent:hover {
   color: white; }
-.compoundObject .compoundGallery_header a.parentLink {
+.compoundObject .compoundGallery_header .headerBreadcrumb {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; }
+.compoundObject .compoundGallery_header a.parentLink, .compoundObject .compoundGallery_header a.institutionSmall {
   color: rgba(255, 255, 255, 0.85);
-  padding: 5px 0px;
+  padding: 0px;
   font-weight: normal;
   font-size: 16px;
-  margin-left: 3px; }
-.compoundObject .compoundGallery_header a.parentLink:hover {
+  margin-left: 3px;
+  margin-bottom: 5px;
+  margin-top: 5px; }
+.compoundObject .compoundGallery_header a.institutionSmall {
+  text-transform: uppercase; }
+.compoundObject .compoundGallery_header a.parentLink:hover, .compoundObject .compoundGallery_header a.institutionSmall:hover {
   color: white; }
 .compoundObject .compoundGallery_header .compoundCount {
   margin-left: 3px;
@@ -3539,12 +3548,17 @@ div.islandora-pdf-object, div.islandora-large-image-object {
 .compoundObject .compoundSelect:hover a.compoundSelect-title {
   background: rgba(255, 255, 255, 0.07); }
 .compoundObject .compoundGlance::before {
-  content: 'description';
+  content: 'description + tags';
   position: absolute;
   left: 0px;
   top: -20px;
   text-transform: uppercase;
-  font-size: 11px; }
+  font-size: 11px;
+  background-image: url("https://i.imgur.com/SVHgxtg.png");
+  padding-left: 25px;
+  background-position: 0px -2px;
+  background-size: 20px;
+  background-repeat: no-repeat; }
 .compoundObject .compoundGlance {
   position: relative;
   border-top: 1px solid rgba(0, 0, 0, 0.26);
@@ -3606,7 +3620,7 @@ body.compoundParent .compoundGallery {
   padding: 20px; }
 body.compoundParent #shareToggle {
   height: 23px;
-  margin-left: 4px; }
+  margin-left: 10px; }
   body.compoundParent #shareToggle .iconSelect {
     background-size: 15px;
     width: 35px; }
@@ -4352,13 +4366,21 @@ body {
   .compoundGallery_header .userMenu .infoToggle {
     display: none; }
 
+  #shareToggle {
+    margin-left: 0px !important; }
+
   .metadataVertical::before {
     content: 'Information';
     position: absolute;
     left: 0px;
     top: -20px;
     text-transform: uppercase;
-    font-size: 11px; }
+    font-size: 11px;
+    background-image: url("https://i.imgur.com/SVHgxtg.png");
+    padding-left: 25px;
+    background-position: 0px -2px;
+    background-size: 20px;
+    background-repeat: no-repeat; }
 
   .metadataVertical > .region-inner {
     border-top: 1px solid rgba(0, 0, 0, 0.26); }
