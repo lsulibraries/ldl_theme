@@ -3195,7 +3195,7 @@ div.islandora-pdf-object, div.islandora-large-image-object {
 
 .metaOpened #region-content {
   margin-left: 25vw;
-  transition-duration: 1s;
+  transition-duration: 1.5s;
   transition-delay: 0s; }
 
 .compoundObject .userSelect {
@@ -3384,7 +3384,7 @@ div.islandora-pdf-object, div.islandora-large-image-object {
 .compoundObject #region-sidebar-first {
   transform: translate3d(-25vw, 0vw, 0vw);
   width: 25vw;
-  transition-duration: 1s;
+  transition-duration: 1.5s;
   background: #1a1a1a;
   color: white;
   position: fixed;
@@ -4109,13 +4109,13 @@ body {
     padding: 20px;
     display: block; } }
 @media screen and (max-width: 1260px) {
-  .contentLabel, .compoundObject .compoundGallery_header .form-item, .compoundObject .backContainer {
+  .compoundObject .compoundGallery_header .form-item {
     margin: 0px 20px; }
 
   .contentLabel {
     margin-top: 20px; }
 
-  .compoundObject .compoundGallery_header .form-item, .compoundObject .backContainer {
+  .compoundObject .compoundGallery_header .form-item {
     margin-bottom: 20px; }
 
   .compoundSelect {
