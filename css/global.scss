@@ -4038,8 +4038,6 @@ background:none!important;
 color: #676767;
     background: white;
     border-bottom: 1px solid rgba(0, 0, 0, 0.26);
-    margin: 20px;
-    margin-bottom: 0px;
     text-transform: uppercase;
     position: relative;
     padding-left: 25px;
@@ -4049,7 +4047,10 @@ color: #676767;
     padding-bottom: 1px;
     font-size: 11px;
     padding-top: 4px;
-
+    max-width: 1200px;
+    margin: 0px auto;
+    box-sizing: border-box;
+    margin-top:20px;
  }
 
 .institutionLabel {
@@ -4105,9 +4106,6 @@ color: #676767;
 }
 
 
-#block-islandora-compound-object-compound-jail-display .content a {
-max-width: none!important;
-}
 
 //actually begin compoundObject ('!important's override islandora_compound_object.jail_block.css)
 
@@ -4465,8 +4463,10 @@ span#islandora-compound-sequence-position {
             align-items: center;
             flex-wrap: wrap;
             position: relative;
-            margin: 0px 20px 20px 20px;
             border: 0px !important;
+            max-width: 1200px;
+            margin: 0px auto;
+            margin-bottom: 20px;
           }
           .compoundParent{
             font-size: 28px;
@@ -4502,6 +4502,8 @@ span#islandora-compound-sequence-position {
       border-bottom: 1px solid rgba(255, 255, 255, .26);
       padding-bottom: 10px;
       position: relative;
+      max-width: 1200px;
+      margin: 0px auto;
       }
 
 .backContainer {
@@ -4509,12 +4511,13 @@ span#islandora-compound-sequence-position {
     justify-content: center;
     align-items: center;
     background: $LDLBlue;
-    border: 20px solid white;
-    height: 90px;
+    height: 80px;
     margin-top: 0px;
-    width: 100%;
     box-sizing: border-box;
     border-top: 0px;
+    max-width: 1200px !important;
+    margin: 0px auto;
+    margin-bottom: 20px;
 }
 
 .backCollection {
@@ -5454,6 +5457,17 @@ display: none;
 }
 
 @media screen and (max-width: 1260px) {
+
+.contentLabel, .compoundObject .compoundGallery_header .form-item, .compoundObject .backContainer {
+      margin: 0px 20px;
+}
+.contentLabel {
+      margin-top: 20px;
+}
+
+.compoundObject .compoundGallery_header .form-item, .compoundObject .backContainer {
+margin-bottom: 20px;
+}
 
         .compoundSelect {
   width: calc(50% - 10px) !important;
@@ -6559,8 +6573,8 @@ font-size: 12px;
 
 //jssocials CSS
 
-.jssocials-shares {
-  margin: 0.2em 0; }
+//.jssocials-shares {
+  //margin: 0.2em 0; }
 
 .jssocials-shares * {
   box-sizing: border-box; }
