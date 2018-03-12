@@ -3253,7 +3253,8 @@ div.islandora-pdf-object, div.islandora-large-image-object {
   margin-top: 20px;
   margin-bottom: 20px;
   margin-right: 10px;
-  width: 6px; }
+  width: 6px;
+  height: calc(100vh - 130px); }
 .compoundObject a#islandora-compound-next-link, .compoundObject a#islandora-compound-previous-link {
   height: 100%;
   display: flex !important;

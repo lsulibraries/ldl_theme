@@ -277,12 +277,9 @@ if($('.institution-collection-list-a').length < 4){
 
         $(".manageParent, ul.tabs").appendTo(".itemMenu").wrapAll('<div class="manageMenu"/>'); //moves the view/ip embargo/manage menu
         $("<div class='userMenu'/>").insertAfter(".manageMenu");  //inserts compoundGlance
-        $("<div class='compoundGlance'/>").insertAfter(".compoundGallery");  //inserts compoundGlance
         $("<div class='infoToggle userSelect'><div class='iconSelect'></div><div class='textSelect'>details</div></div>").appendTo(".userMenu"); //adds toggle for parent metadata
         $(".downloadLink").appendTo(".userMenu");
         $("#clip").appendTo(".userMenu");
-        $(".modsDesc").clone().appendTo(".compoundGlance");
-        $(".modsSubject").clone().appendTo(".compoundGlance").wrapAll('<div class="tagsGlance"/>');
         $(".compoundLabels").insertBefore(".backgroundDiv");
         $("#islandora-ip-embargo-object-embargo-form").insertBefore(".compoundGallery"); // moves ipembargo
         $("<div class='embargoTitle'>Set IP embargo settings</div>").insertBefore(".compoundObject #islandora-ip-embargo-policy-source")//adds title for ip embargo on compounds
@@ -343,7 +340,9 @@ if($('.institution-collection-list-a').length < 4){
 
         $(".parentLink").clone().prop({class:"backContainer"}).insertAfter(".compoundGallery").html("<div class='backCollection'>Back to Collection</div>");
 
-
+        $("<div class='compoundGlance'/>").insertBefore(".backContainer");  //inserts compoundGlance
+        $(".modsDesc").clone().appendTo(".compoundGlance");
+        $(".modsSubject").clone().appendTo(".compoundGlance").wrapAll('<div class="tagsGlance"/>');
 
 $("#share").jsSocials({
     url: urlhref,
