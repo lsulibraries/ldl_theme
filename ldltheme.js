@@ -354,8 +354,8 @@ if($('.institution-collection-list-a').length < 4){
         $(".metadataRow span:first-child").addClass("metadataTitle");
         $(".metadataRow span:nth-child(2n)").addClass("metadataValue");
         $(".metadataContainer div:first-child").remove();  //removes weird h3 titles
-        $(".metadataSidebar > .region-inner > .metadataContainer:first-child").addClass("itemMetadata");
-        $(".metadataSidebar > .region-inner > .metadataContainer:nth-child(2n + 0)").addClass("compoundMetadata");
+        $(".metadataSidebar > .region-inner > .metadataContainer:nth-child(2n + 0)").addClass("itemMetadata");
+        $(".metadataSidebar > .region-inner > .metadataContainer:nth-child(2n + 1)").addClass("compoundMetadata");
         $(".infoToggle").clone().addClass("mobileMetaToggle").appendTo("#zone-content");
         $(".mobileMetaToggle .textSelect").replaceWith("<div class='textSelect'>Back to item view</div>");
         $(".mobileMetaToggle .iconSelect").remove();
@@ -370,18 +370,22 @@ if($('.institution-collection-list-a').length < 4){
               $('body').toggleClass('metaOpened');
               $(".nano").nanoScroller({ alwaysVisible: false });
         });
-        //begin compoundChild
-    if ($('body').hasClass('compoundChild')){
-        $(".compoundChild .compoundLabel").html("Compound <br> Child"); //text within compoundLabel
-        $("<div class='compoundArrows userSelect'/>").appendTo(".userMenu");
-        $('#islandora-compound-sequence-position, #islandora-compound-previous-link, #islandora-compound-next-link').appendTo('.compoundArrows');
 
-
-      }
 }
 //end compoundObject
 
 
+//begin compoundChild
+if ($('body').hasClass('compoundChild')){
+    $(".compoundChild .compoundLabel").html("Compound <br> Child"); //text within compoundLabel
+    $("<div class='compoundArrows userSelect'/>, .infoToggle, #shareToggle").appendTo(".userMenu");
+    $(".infoToggle, #shareToggle").appendTo(".userMenu");
+    $('#islandora-compound-sequence-position, #islandora-compound-previous-link, #islandora-compound-next-link').appendTo('.compoundArrows');
+    $(".parentLink").insertBefore(".childHeader").wrapAll("<div class='parentTop'/>");
+
+
+  }
+  //end compoundChild
 
       $("<a href='/'>Home</a>").appendTo(".mobileMenu");
 
@@ -392,12 +396,15 @@ $('#block-block-1').find('a').each(function() {
 
   });
 }
+if ($('body').hasClass('compoundChild')){
+  if ($(window).width() > 1700) {
+  $('body').toggleClass("metaOpened")
+  $('#region-sidebar-first').toggleClass("infoOpened")
+  $('.mobileMetaToggle').toggleClass('menuActive');
+  $(".nano").nanoScroller({ alwaysVisible: false });
 
-//if ($(window).width() > 1700) {
-//$('body').toggleClass("metaOpened")
-//$('#region-sidebar-first').toggleClass("infoOpened")
-//$('.mobileMetaToggle').toggleClass('menuActive');
-//}
+  }
+}
 
 //above - this enables meta to be open by default on larger screens
 

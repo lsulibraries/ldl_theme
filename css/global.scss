@@ -45,6 +45,7 @@ $viewLegend: 'https://i.imgur.com/rqTlrT3.png';
 $manageLegend: 'https://i.imgur.com/3fcNTbJ.png';
 $infoLegend: 'https://i.imgur.com/zK6anrR.png';
 $downloadLegend: 'https://i.imgur.com/rthA4J4.png';
+$infoLegend2:'https://i.imgur.com/OnZTeYf.png';
 
 $descriptionLegend:'https://i.imgur.com/SVHgxtg.png';
 
@@ -4734,9 +4735,47 @@ body.compoundParent{
 }
 
 .compoundChild{
+.block-compound-jail-display .block-inner > .content {
+    width: 100%;
+    border-top: 0px;
+    background: black;
+}
+
+.parentTop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 background: black;
 .contentLabel, #block-block-9, .islandora-large-image-metadata {
   display: none;
+}
+
+.compoundMetadata, .itemMetadata{
+  border-top:1px solid $lightTransparent2;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.compoundMetadata::before{
+  position: absolute;
+  left:0px;
+  top:-20px;
+  text-transform: uppercase;
+  font-size: 11px;
+background-image: url($infoLegend2);
+    padding-left: 25px;
+    background-position: 0px -2px;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    content:'general information';
+position: absolute;
+}
+
+.itemMetadata::before{
+@extend .compoundMetadata::before;
+content:'specific information';
 }
 
 .islandora-large-image-object.islandora {
@@ -4929,7 +4968,7 @@ td.modsDesc{
 
 
 .metadataContainer{
-
+position: relative;
     .metadataRow {
     display: flex;
     flex-direction: column;

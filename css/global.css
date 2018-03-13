@@ -3638,8 +3638,35 @@ body.compoundParent .tagsGlance {
 
 .compoundChild {
   background: black; }
+  .compoundChild .block-compound-jail-display .block-inner > .content {
+    width: 100%;
+    border-top: 0px;
+    background: black; }
+  .compoundChild .parentTop {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
   .compoundChild .contentLabel, .compoundChild #block-block-9, .compoundChild .islandora-large-image-metadata {
     display: none; }
+  .compoundChild .compoundMetadata, .compoundChild .itemMetadata {
+    border-top: 1px solid rgba(255, 255, 255, 0.48);
+    padding-top: 20px;
+    padding-bottom: 20px; }
+  .compoundChild .compoundMetadata::before, .compoundChild .itemMetadata::before {
+    position: absolute;
+    left: 0px;
+    top: -20px;
+    text-transform: uppercase;
+    font-size: 11px;
+    background-image: url("https://i.imgur.com/OnZTeYf.png");
+    padding-left: 25px;
+    background-position: 0px -2px;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    content: 'general information';
+    position: absolute; }
+  .compoundChild .itemMetadata::before {
+    content: 'specific information'; }
   .compoundChild .islandora-large-image-object.islandora {
     background: black;
     padding: 20px;
@@ -3752,17 +3779,19 @@ body.compoundParent .tagsGlance {
   .compoundChild td.modsDesc {
     padding-bottom: 0px !important; }
 
-.metadataContainer .metadataRow {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 20px; }
-.metadataContainer span.metadataTitle {
-  font-weight: 700; }
-.metadataContainer span.metadataValue {
-  color: #a5a5a5; }
-  .metadataContainer span.metadataValue a {
-    word-break: break-all;
-    word-wrap: break-word; }
+.metadataContainer {
+  position: relative; }
+  .metadataContainer .metadataRow {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px; }
+  .metadataContainer span.metadataTitle {
+    font-weight: 700; }
+  .metadataContainer span.metadataValue {
+    color: #a5a5a5; }
+    .metadataContainer span.metadataValue a {
+      word-break: break-all;
+      word-wrap: break-word; }
 
 /*BEGIN test area*/
 section#block-islandora-solr-sort .item-list {
