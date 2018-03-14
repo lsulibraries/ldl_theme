@@ -370,7 +370,7 @@ if($('.institution-collection-list-a').length < 4){
               $('body').toggleClass('metaOpened');
               $(".nano").nanoScroller({ alwaysVisible: false });
         });
-
+        //$("ul.tabs").appendTo(".userMenu");
 }
 //end compoundObject
 
@@ -381,8 +381,13 @@ if ($('body').hasClass('compoundChild')){
     $("<div class='compoundArrows userSelect'/>, .infoToggle, #shareToggle").appendTo(".userMenu");
     $(".infoToggle, #shareToggle").appendTo(".userMenu");
     $('#islandora-compound-sequence-position, #islandora-compound-previous-link, #islandora-compound-next-link').appendTo('.compoundArrows');
-    $(".parentLink").insertBefore(".childHeader").wrapAll("<div class='parentTop'/>");
-
+    $(".parentLink").insertAfter("#window-title");
+    $(".backContainer").remove();
+    $(".compoundParent").html("Back");
+    $(".infoToggle:last-child").remove();
+    $(".infoToggle").insertBefore(".downloadLink");
+    $(".downloadSelect .iconSelect").html("<i class='fas fa-download'></i>");
+    $(".compoundArrows").appendTo(".childHeader");
 
   }
   //end compoundChild
@@ -397,7 +402,7 @@ $('#block-block-1').find('a').each(function() {
   });
 }
 if ($('body').hasClass('compoundChild')){
-  if ($(window).width() > 1700) {
+  if ($(window).width() > 700) {
   $('body').toggleClass("metaOpened")
   $('#region-sidebar-first').toggleClass("infoOpened")
   $('.mobileMetaToggle').toggleClass('menuActive');

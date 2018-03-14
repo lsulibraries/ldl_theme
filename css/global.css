@@ -3,6 +3,9 @@
 /* web fonts */
 @import "https://fonts.googleapis.com/css?family=Open+Sans|Roboto:100, 300, 400, 500, 600, 700";
 /*materialTheme*/
+i {
+  font-style: normal; }
+
 .noClick {
   pointer-events: none; }
 
@@ -3117,7 +3120,7 @@ div.islandora-pdf-object, div.islandora-large-image-object {
 #share a.jssocials-share-link.jssocials-share-link-count.jssocials-share-no-count {
   max-width: none !important; }
 
-.compoundParent .compoundArrows {
+.compoundParent .compoundArrows, .compoundChild .userSelect .compoundArrows, .compoundChild .infoToggle .compoundArrows {
   display: none; }
 
 .compoundArrows {
@@ -3130,7 +3133,7 @@ div.islandora-pdf-object, div.islandora-large-image-object {
   position: absolute;
   width: 120%;
   height: 120%;
-  filter: blur(10px) brightness(0.8) contrast(0.6);
+  filter: blur(10px) brightness(0.7) contrast(0.6);
   background-position: -5vw 20%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -3239,7 +3242,6 @@ div.islandora-pdf-object, div.islandora-large-image-object {
   margin-right: 0px; }
 .compoundObject h1#window-title {
   background: none;
-  color: white;
   font-size: 28px;
   width: auto;
   margin: 20px 0px;
@@ -3294,7 +3296,6 @@ div.islandora-pdf-object, div.islandora-large-image-object {
   background-image: none !important;
   background-color: transparent !important; }
 .compoundObject .islandora-pdf-content, .compoundObject .islandora-large-image-content {
-  background-color: rgba(0, 0, 0, 0.06);
   background-image: none;
   border: 0px;
   -webkit-border-radius: 0px;
@@ -3443,11 +3444,11 @@ div.islandora-pdf-object, div.islandora-large-image-object {
   margin-bottom: 20px;
   transition-duration: 1s;
   width: 100%; }
-.compoundObject .compoundGallery_header .compoundParent {
+.compoundObject .compoundGallery_header .compoundParent, .compoundObject .compoundGallery_header .compoundChild .userSelect, .compoundChild .compoundObject .compoundGallery_header .userSelect, .compoundObject .compoundGallery_header .compoundChild .infoToggle, .compoundChild .compoundObject .compoundGallery_header .infoToggle {
   font-size: 28px;
   color: rgba(255, 255, 255, 0.85);
   padding: 0px; }
-.compoundObject .compoundGallery_header .compoundParent:hover {
+.compoundObject .compoundGallery_header .compoundParent:hover, .compoundObject .compoundGallery_header .compoundChild .userSelect:hover, .compoundChild .compoundObject .compoundGallery_header .userSelect:hover, .compoundObject .compoundGallery_header .compoundChild .infoToggle:hover, .compoundChild .compoundObject .compoundGallery_header .infoToggle:hover {
   color: white; }
 .compoundObject .compoundGallery_header .headerBreadcrumb {
   display: flex;
@@ -3598,7 +3599,7 @@ div.islandora-pdf-object, div.islandora-large-image-object {
     text-align: center;
     color: rgba(255, 255, 255, 0.85); }
 
-body.compoundParent .compoundGallery_header {
+body.compoundParent .compoundGallery_header, .compoundChild body.userSelect .compoundGallery_header, .compoundChild body.infoToggle .compoundGallery_header {
   display: flex;
   justify-content: center;
   background: rgba(0, 0, 0, 0.06);
@@ -3606,11 +3607,11 @@ body.compoundParent .compoundGallery_header {
   position: relative;
   overflow: hidden;
   padding-top: 200px; }
-  body.compoundParent .compoundGallery_header .compoundParent {
+  body.compoundParent .compoundGallery_header .compoundParent, .compoundChild body.userSelect .compoundGallery_header .compoundParent, .compoundChild body.infoToggle .compoundGallery_header .compoundParent, body.compoundParent .compoundGallery_header .compoundChild .userSelect, .compoundChild body.compoundParent .compoundGallery_header .userSelect, .compoundChild body.userSelect .compoundGallery_header .userSelect, .compoundChild body.infoToggle .compoundGallery_header .userSelect, body.compoundParent .compoundGallery_header .compoundChild .infoToggle, .compoundChild body.compoundParent .compoundGallery_header .infoToggle, .compoundChild body.userSelect .compoundGallery_header .infoToggle, .compoundChild body.infoToggle .compoundGallery_header .infoToggle {
     font-size: 40px;
     color: white;
     line-height: 37px; }
-body.compoundParent .compoundGallery {
+body.compoundParent .compoundGallery, .compoundChild body.userSelect .compoundGallery, .compoundChild body.infoToggle .compoundGallery {
   display: flex;
   flex-wrap: wrap;
   border-bottom: 0px;
@@ -3618,30 +3619,121 @@ body.compoundParent .compoundGallery {
   padding-bottom: 10px;
   background: white;
   padding: 20px; }
-body.compoundParent #shareToggle {
+body.compoundParent #shareToggle, .compoundChild body.userSelect #shareToggle, .compoundChild body.infoToggle #shareToggle {
   height: 23px;
   margin-left: 10px; }
-  body.compoundParent #shareToggle .iconSelect {
+  body.compoundParent #shareToggle .iconSelect, .compoundChild body.userSelect #shareToggle .iconSelect, .compoundChild body.infoToggle #shareToggle .iconSelect {
     background-size: 15px;
     width: 35px; }
-body.compoundParent .compoundSelect {
+body.compoundParent .compoundSelect, .compoundChild body.userSelect .compoundSelect, .compoundChild body.infoToggle .compoundSelect {
   height: 150px;
   margin-right: 20px;
   margin-bottom: 20px;
   box-shadow: -3px 4px 20px #d1d1d1; }
-  body.compoundParent .compoundSelect img {
+  body.compoundParent .compoundSelect img, .compoundChild body.userSelect .compoundSelect img, .compoundChild body.infoToggle .compoundSelect img {
     height: 150px !important; }
-body.compoundParent .compoundGlance {
+body.compoundParent .compoundGlance, .compoundChild body.userSelect .compoundGlance, .compoundChild body.infoToggle .compoundGlance {
   color: #676767; }
-body.compoundParent .tagsGlance {
+body.compoundParent .tagsGlance, .compoundChild body.userSelect .tagsGlance, .compoundChild body.infoToggle .tagsGlance {
   margin-top: 10px; }
 
 .compoundChild {
-  background: black; }
+  background: white; }
+  .compoundChild span#islandora-compound-sequence-position {
+    cursor: default; }
+  .compoundChild .compoundArrows.userSelect:hover {
+    color: #676767; }
+  .compoundChild .compoundArrows.userSelect {
+    position: absolute;
+    bottom: 7px;
+    right: 0px;
+    height: 20px !important;
+    width: auto !important;
+    padding: 0px !important;
+    margin-right: 0px;
+    border: 0px !important; }
+    .compoundChild .compoundArrows.userSelect a#islandora-compound-next-link, .compoundChild .compoundArrows.userSelect .compoundObject a#islandora-compound-previous-link, .compoundObject .compoundChild .compoundArrows.userSelect a#islandora-compound-previous-link, .compoundChild .compoundArrows.userSelect a#islandora-compound-previous-link {
+      color: #676767; }
+    .compoundChild .compoundArrows.userSelect a#islandora-compound-next-link, .compoundChild .compoundArrows.userSelect .compoundObject a#islandora-compound-previous-link, .compoundObject .compoundChild .compoundArrows.userSelect a#islandora-compound-previous-link {
+      padding-right: 0px; }
+  .compoundChild .iconSelect {
+    font-family: FontAwesome; }
+  .compoundChild #region-content .region-content-inner {
+    min-height: 0px; }
+  .compoundChild .compoundGallery_header .compoundParent, .compoundChild .compoundGallery_header .userSelect, .compoundChild .compoundGallery_header .infoToggle {
+    font-size: 14px;
+    padding: 10px 40px;
+    color: #676767;
+    border: 1px solid #bababa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px; }
+  .compoundChild .userSelect, .compoundChild .infoToggle {
+    height: 43px !important;
+    width: 43px;
+    box-sizing: border-box;
+    padding: 0px !important;
+    margin-right: 20px; }
+  .compoundChild .iconSelect {
+    text-align: center;
+    font-size: 21px; }
+  .compoundChild .textSelect {
+    width: 0px;
+    margin: 0px;
+    padding: 0px;
+    opacity: 0;
+    -moz-transition-duration: 0s;
+    -o-transition-duration: 0s;
+    -webkit-transition-duration: 0s;
+    transition-duration: 0s; }
+  .compoundChild .userSelect:hover {
+    color: #327BB3;
+    border: 1px solid #bababa;
+    -moz-transition-duration: 1s;
+    -o-transition-duration: 1s;
+    -webkit-transition-duration: 1s;
+    transition-duration: 1s; }
+    .compoundChild .userSelect:hover .textSelect {
+      width: auto;
+      opacity: 1;
+      -moz-transition-duration: 1s;
+      -o-transition-duration: 1s;
+      -webkit-transition-duration: 1s;
+      transition-duration: 1s;
+      background: #327BB3;
+      color: white;
+      position: absolute;
+      top: -30px;
+      padding: 0px 10px;
+      border-radius: 20px; }
+  .compoundChild .infoToggle .textSelect {
+    padding-right: 0px;
+    font-size: 13px;
+    text-align: center;
+    color: #676767; }
+  .compoundChild .navigator {
+    background: none !important; }
+  .compoundChild .islandora-large-image-object {
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: -3px 4px 20px #f1f1f1; }
+  .compoundChild .compoundGallery_header .form-item {
+    margin: 0px !important;
+    margin-top: 20px !important;
+    flex-direction: row;
+    justify-content: space-between; }
+  .compoundChild .islandora-openseadragon {
+    display: block;
+    width: 100%;
+    height: calc(100vh - 330px); }
+  .compoundChild #region-sidebar-first .region-sidebar-first-inner {
+    padding-top: 90px; }
+  .compoundChild .parentLink {
+    color: #676767 !important; }
   .compoundChild .block-compound-jail-display .block-inner > .content {
     width: 100%;
     border-top: 0px;
-    background: black; }
+    max-width: 1200px; }
   .compoundChild .parentTop {
     display: flex;
     justify-content: center;
@@ -3649,9 +3741,9 @@ body.compoundParent .tagsGlance {
   .compoundChild .contentLabel, .compoundChild #block-block-9, .compoundChild .islandora-large-image-metadata {
     display: none; }
   .compoundChild .compoundMetadata, .compoundChild .itemMetadata {
-    border-top: 1px solid rgba(255, 255, 255, 0.48);
+    border-top: 1px solid rgba(255, 255, 255, 0.16);
     padding-top: 20px;
-    padding-bottom: 20px; }
+    padding-bottom: 80px; }
   .compoundChild .compoundMetadata::before, .compoundChild .itemMetadata::before {
     position: absolute;
     left: 0px;
@@ -3667,10 +3759,6 @@ body.compoundParent .tagsGlance {
     position: absolute; }
   .compoundChild .itemMetadata::before {
     content: 'specific information'; }
-  .compoundChild .islandora-large-image-object.islandora {
-    background: black;
-    padding: 20px;
-    padding-bottom: 80px; }
   .compoundChild .backgroundDiv {
     display: none; }
   .compoundChild a#clip {
@@ -3721,14 +3809,11 @@ body.compoundParent .tagsGlance {
   .compoundChild .navigator {
     border: 0px !important; }
   .compoundChild .childHeader {
-    background: black;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    padding: 10px;
-    border-top: 1px solid rgba(255, 255, 255, 0.48);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.48); }
+    flex-direction: column;
+    padding-top: 40px;
+    position: relative; }
   .compoundChild .childIcon {
     width: 55px;
     height: 32px;
@@ -3740,18 +3825,14 @@ body.compoundParent .tagsGlance {
     background-image: url(https://i.imgur.com/4LmxSra.png); }
   .compoundChild .islandora-large-image-content {
     margin-top: 0px;
-    margin-bottom: 15px; }
+    margin-bottom: 0px; }
   .compoundChild h1#window-title {
     margin: 0px;
     display: flex;
-    font-size: 20px;
+    font-size: 30px;
     justify-content: center;
-    align-items: center;
     padding-right: 0px;
-    flex-grow: 2;
-    border-left: 1px solid rgba(255, 255, 255, 0.48);
-    border-right: 1px solid rgba(255, 255, 255, 0.48);
-    min-height: 60px; }
+    flex-grow: 2; }
   .compoundChild .compoundSelect .active {
     cursor: default; }
   .compoundChild div#block-system-main {
@@ -3759,10 +3840,8 @@ body.compoundParent .tagsGlance {
   .compoundChild .contentIcon {
     margin-left: 20px; }
   .compoundChild .compoundGallery_header {
-    position: relative; }
-    .compoundChild .compoundGallery_header .compoundParent {
-      font-size: 20px;
-      padding: 10px 0px; }
+    position: relative;
+    padding: 0px 80px; }
   .compoundChild .compoundSelect {
     height: 80px;
     border: 1px solid rgba(255, 255, 255, 0.07); }
@@ -4754,7 +4833,7 @@ body {
   .institution-collection-list-item-label {
     padding: 0px 30px; } }
 @media screen and (max-width: 1260px) and (max-width: 740px) {
-  body.compoundParent .compoundGallery_header .compoundParent {
+  body.compoundParent .compoundGallery_header .compoundParent, .compoundChild body.userSelect .compoundGallery_header .compoundParent, .compoundChild body.infoToggle .compoundGallery_header .compoundParent, body.compoundParent .compoundGallery_header .compoundChild .userSelect, .compoundChild body.compoundParent .compoundGallery_header .userSelect, .compoundChild body.userSelect .compoundGallery_header .userSelect, .compoundChild body.infoToggle .compoundGallery_header .userSelect, body.compoundParent .compoundGallery_header .compoundChild .infoToggle, .compoundChild body.compoundParent .compoundGallery_header .infoToggle, .compoundChild body.userSelect .compoundGallery_header .infoToggle, .compoundChild body.infoToggle .compoundGallery_header .infoToggle {
     font-size: 28px;
     color: white;
     line-height: 19px;
