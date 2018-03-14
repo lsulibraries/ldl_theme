@@ -3117,10 +3117,18 @@ div.islandora-pdf-object, div.islandora-large-image-object {
 .compoundChild .compoundLabel {
   background-image: url("https://i.imgur.com/jaWlCjM.png") !important; }
 
+#share .jssocials-share {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0.3em 0.6em 0.3em 0;
+  border-radius: 50px;
+  overflow: hidden;
+  height: 33px; }
 #share a.jssocials-share-link.jssocials-share-link-count.jssocials-share-no-count {
-  max-width: none !important; }
+  max-width: none !important;
+  width: 33px !important; }
 
-.compoundParent .compoundArrows, .compoundChild .userSelect .compoundArrows, .compoundChild .infoToggle .compoundArrows {
+.compoundParent .compoundArrows, .compoundChild .userMenu .userSelect .compoundArrows {
   display: none; }
 
 .compoundArrows {
@@ -3364,8 +3372,6 @@ div.islandora-pdf-object, div.islandora-large-image-object {
   position: absolute;
   top: 0px;
   left: -11px; }
-.compoundObject .block-compound-jail-display .block-inner > .content > .compoundGallery_header > .form-item > a {
-  width: 100%; }
 .compoundObject .block-compound-jail-display .block-inner > .content {
   width: 100%;
   border-top: 0px;
@@ -3444,11 +3450,11 @@ div.islandora-pdf-object, div.islandora-large-image-object {
   margin-bottom: 20px;
   transition-duration: 1s;
   width: 100%; }
-.compoundObject .compoundGallery_header .compoundParent, .compoundObject .compoundGallery_header .compoundChild .userSelect, .compoundChild .compoundObject .compoundGallery_header .userSelect, .compoundObject .compoundGallery_header .compoundChild .infoToggle, .compoundChild .compoundObject .compoundGallery_header .infoToggle {
+.compoundObject .compoundGallery_header .compoundParent, .compoundObject .compoundGallery_header .compoundChild .userMenu .userSelect, .compoundChild .userMenu .compoundObject .compoundGallery_header .userSelect {
   font-size: 28px;
   color: rgba(255, 255, 255, 0.85);
   padding: 0px; }
-.compoundObject .compoundGallery_header .compoundParent:hover, .compoundObject .compoundGallery_header .compoundChild .userSelect:hover, .compoundChild .compoundObject .compoundGallery_header .userSelect:hover, .compoundObject .compoundGallery_header .compoundChild .infoToggle:hover, .compoundChild .compoundObject .compoundGallery_header .infoToggle:hover {
+.compoundObject .compoundGallery_header .compoundParent:hover, .compoundObject .compoundGallery_header .compoundChild .userMenu .userSelect:hover, .compoundChild .userMenu .compoundObject .compoundGallery_header .userSelect:hover {
   color: white; }
 .compoundObject .compoundGallery_header .headerBreadcrumb {
   display: flex;
@@ -3599,7 +3605,7 @@ div.islandora-pdf-object, div.islandora-large-image-object {
     text-align: center;
     color: rgba(255, 255, 255, 0.85); }
 
-body.compoundParent .compoundGallery_header, .compoundChild body.userSelect .compoundGallery_header, .compoundChild body.infoToggle .compoundGallery_header {
+body.compoundParent .compoundGallery_header, .compoundChild .userMenu body.userSelect .compoundGallery_header {
   display: flex;
   justify-content: center;
   background: rgba(0, 0, 0, 0.06);
@@ -3607,11 +3613,11 @@ body.compoundParent .compoundGallery_header, .compoundChild body.userSelect .com
   position: relative;
   overflow: hidden;
   padding-top: 200px; }
-  body.compoundParent .compoundGallery_header .compoundParent, .compoundChild body.userSelect .compoundGallery_header .compoundParent, .compoundChild body.infoToggle .compoundGallery_header .compoundParent, body.compoundParent .compoundGallery_header .compoundChild .userSelect, .compoundChild body.compoundParent .compoundGallery_header .userSelect, .compoundChild body.userSelect .compoundGallery_header .userSelect, .compoundChild body.infoToggle .compoundGallery_header .userSelect, body.compoundParent .compoundGallery_header .compoundChild .infoToggle, .compoundChild body.compoundParent .compoundGallery_header .infoToggle, .compoundChild body.userSelect .compoundGallery_header .infoToggle, .compoundChild body.infoToggle .compoundGallery_header .infoToggle {
+  body.compoundParent .compoundGallery_header .compoundParent, .compoundChild .userMenu body.userSelect .compoundGallery_header .compoundParent, body.compoundParent .compoundGallery_header .compoundChild .userMenu .userSelect, .compoundChild .userMenu body.compoundParent .compoundGallery_header .userSelect, .compoundChild .userMenu body.userSelect .compoundGallery_header .userSelect {
     font-size: 40px;
     color: white;
     line-height: 37px; }
-body.compoundParent .compoundGallery, .compoundChild body.userSelect .compoundGallery, .compoundChild body.infoToggle .compoundGallery {
+body.compoundParent .compoundGallery, .compoundChild .userMenu body.userSelect .compoundGallery {
   display: flex;
   flex-wrap: wrap;
   border-bottom: 0px;
@@ -3619,30 +3625,35 @@ body.compoundParent .compoundGallery, .compoundChild body.userSelect .compoundGa
   padding-bottom: 10px;
   background: white;
   padding: 20px; }
-body.compoundParent #shareToggle, .compoundChild body.userSelect #shareToggle, .compoundChild body.infoToggle #shareToggle {
+body.compoundParent #shareToggle, .compoundChild .userMenu body.userSelect #shareToggle {
   height: 23px;
   margin-left: 10px; }
-  body.compoundParent #shareToggle .iconSelect, .compoundChild body.userSelect #shareToggle .iconSelect, .compoundChild body.infoToggle #shareToggle .iconSelect {
+  body.compoundParent #shareToggle .iconSelect, .compoundChild .userMenu body.userSelect #shareToggle .iconSelect {
     background-size: 15px;
     width: 35px; }
-body.compoundParent .compoundSelect, .compoundChild body.userSelect .compoundSelect, .compoundChild body.infoToggle .compoundSelect {
+body.compoundParent .compoundSelect, .compoundChild .userMenu body.userSelect .compoundSelect {
   height: 150px;
   margin-right: 20px;
   margin-bottom: 20px;
   box-shadow: -3px 4px 20px #d1d1d1; }
-  body.compoundParent .compoundSelect img, .compoundChild body.userSelect .compoundSelect img, .compoundChild body.infoToggle .compoundSelect img {
+  body.compoundParent .compoundSelect img, .compoundChild .userMenu body.userSelect .compoundSelect img {
     height: 150px !important; }
-body.compoundParent .compoundGlance, .compoundChild body.userSelect .compoundGlance, .compoundChild body.infoToggle .compoundGlance {
+body.compoundParent .compoundGlance, .compoundChild .userMenu body.userSelect .compoundGlance {
   color: #676767; }
-body.compoundParent .tagsGlance, .compoundChild body.userSelect .tagsGlance, .compoundChild body.infoToggle .tagsGlance {
+body.compoundParent .tagsGlance, .compoundChild .userMenu body.userSelect .tagsGlance {
   margin-top: 10px; }
 
 .compoundChild {
   background: white; }
+  .compoundChild .headerBreadcrumb {
+    justify-content: flex-start !important; }
+    .compoundChild .headerBreadcrumb a.institutionSmall {
+      color: #676767; }
   .compoundChild span#islandora-compound-sequence-position {
-    cursor: default; }
-  .compoundChild .compoundArrows.userSelect:hover {
+    cursor: default;
     color: #676767; }
+  .compoundChild .compoundArrows.userSelect:hover, .compoundChild .compoundGallery_header .compoundParent:hover, .compoundChild .compoundGallery_header .userMenu .userSelect:hover, .compoundChild .userMenu .compoundGallery_header .userSelect:hover, .compoundChild a.institutionSmall:hover {
+    color: #676767 !important; }
   .compoundChild .compoundArrows.userSelect {
     position: absolute;
     bottom: 7px;
@@ -3660,7 +3671,7 @@ body.compoundParent .tagsGlance, .compoundChild body.userSelect .tagsGlance, .co
     font-family: FontAwesome; }
   .compoundChild #region-content .region-content-inner {
     min-height: 0px; }
-  .compoundChild .compoundGallery_header .compoundParent, .compoundChild .compoundGallery_header .userSelect, .compoundChild .compoundGallery_header .infoToggle {
+  .compoundChild .compoundGallery_header .compoundParent, .compoundChild .compoundGallery_header .userMenu .userSelect, .compoundChild .userMenu .compoundGallery_header .userSelect {
     font-size: 14px;
     padding: 10px 40px;
     color: #676767;
@@ -3668,13 +3679,18 @@ body.compoundParent .tagsGlance, .compoundChild body.userSelect .tagsGlance, .co
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 50px; }
-  .compoundChild .userSelect, .compoundChild .infoToggle {
+    border-radius: 50px;
+    width: auto; }
+  .compoundChild .userMenu .userSelect {
     height: 43px !important;
-    width: 43px;
+    width: 43px !important;
     box-sizing: border-box;
     padding: 0px !important;
-    margin-right: 20px; }
+    margin-right: 10px; }
+  .compoundChild #shareToggle {
+    margin-right: 0px; }
+  .compoundChild .jssocials-shares {
+    margin-left: 10px; }
   .compoundChild .iconSelect {
     text-align: center;
     font-size: 21px; }
@@ -3690,17 +3706,17 @@ body.compoundParent .tagsGlance, .compoundChild body.userSelect .tagsGlance, .co
   .compoundChild .userSelect:hover {
     color: #327BB3;
     border: 1px solid #bababa;
-    -moz-transition-duration: 1s;
-    -o-transition-duration: 1s;
-    -webkit-transition-duration: 1s;
-    transition-duration: 1s; }
+    -moz-transition-duration: 0.2s;
+    -o-transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s; }
     .compoundChild .userSelect:hover .textSelect {
       width: auto;
       opacity: 1;
-      -moz-transition-duration: 1s;
-      -o-transition-duration: 1s;
-      -webkit-transition-duration: 1s;
-      transition-duration: 1s;
+      -moz-transition-duration: 0.5s;
+      -o-transition-duration: 0.5s;
+      -webkit-transition-duration: 0.5s;
+      transition-duration: 0.5s;
       background: #327BB3;
       color: white;
       position: absolute;
@@ -3766,13 +3782,12 @@ body.compoundParent .tagsGlance, .compoundChild body.userSelect .tagsGlance, .co
     justify-content: center;
     align-items: center;
     height: 30px;
-    color: white;
-    margin-left: 0px; }
+    margin-left: 0px;
+    z-index: 22; }
   .compoundChild #clip img {
-    filter: brightness(5) grayscale(1);
-    border: 0px !important;
-    padding: 0px;
-    margin: 0px 10px; }
+    display: none; }
+  .compoundChild #clip .iconSelect {
+    padding-bottom: 3px; }
   .compoundChild .menuActive .iconSelect {
     background-color: transparent; }
   .compoundChild .menuActive .textSelect {
@@ -4235,6 +4250,11 @@ body {
     padding: 20px;
     display: block; } }
 @media screen and (max-width: 1260px) {
+  .compoundChild .parentLink {
+    font-size: 11px !important; }
+  .compoundChild h1#window-title {
+    font-size: 20px; }
+
   .compoundObject .compoundGallery_header .form-item {
     margin: 0px 20px; }
 
@@ -4833,7 +4853,32 @@ body {
   .institution-collection-list-item-label {
     padding: 0px 30px; } }
 @media screen and (max-width: 1260px) and (max-width: 740px) {
-  body.compoundParent .compoundGallery_header .compoundParent, .compoundChild body.userSelect .compoundGallery_header .compoundParent, .compoundChild body.infoToggle .compoundGallery_header .compoundParent, body.compoundParent .compoundGallery_header .compoundChild .userSelect, .compoundChild body.compoundParent .compoundGallery_header .userSelect, .compoundChild body.userSelect .compoundGallery_header .userSelect, .compoundChild body.infoToggle .compoundGallery_header .userSelect, body.compoundParent .compoundGallery_header .compoundChild .infoToggle, .compoundChild body.compoundParent .compoundGallery_header .infoToggle, .compoundChild body.userSelect .compoundGallery_header .infoToggle, .compoundChild body.infoToggle .compoundGallery_header .infoToggle {
+  .compoundChild .islandora-openseadragon {
+    display: block;
+    width: 100%;
+    height: calc(100vh - 240px); }
+  .compoundChild .iconSelect {
+    height: auto; }
+  .compoundChild .childHeader {
+    padding-top: 0px; }
+  .compoundChild .compoundGallery_header {
+    padding: 20px 20px;
+    height: calc(100vh - 48px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box; }
+    .compoundChild .compoundGallery_header a.institutionSmall {
+      font-size: 11px; }
+    .compoundChild .compoundGallery_header .userMenu .infoToggle {
+      display: block; }
+    .compoundChild .compoundGallery_header .compoundParent, .compoundChild .compoundGallery_header .userMenu .userSelect, .compoundChild .userMenu .compoundGallery_header .userSelect {
+      padding: 10px 30px; }
+  .compoundChild h1#window-title {
+    font-size: 20px;
+    line-height: 20px; }
+
+  body.compoundParent .compoundGallery_header .compoundParent, .compoundChild .userMenu body.userSelect .compoundGallery_header .compoundParent, body.compoundParent .compoundGallery_header .compoundChild .userMenu .userSelect, .compoundChild .userMenu body.compoundParent .compoundGallery_header .userSelect, .compoundChild .userMenu body.userSelect .compoundGallery_header .userSelect {
     font-size: 28px;
     color: white;
     line-height: 19px;
