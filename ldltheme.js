@@ -388,7 +388,7 @@ if ($('body').hasClass('compoundChild')){
     $(".infoToggle").insertBefore(".downloadLink");
     $(".infoToggle").html("<div class='userSelect'><div class='iconSelect'><i class='fas fa-align-left'></i></div><div class='textSelect'>Toggle Info</div></div>");
     $(".downloadSelect .iconSelect").html("<i class='fas fa-download'></i>");
-    $("#shareToggle .iconSelect").html("<i class='far fa-share'></i>");
+    $("#shareToggle .iconSelect").html("<i class='far fa-share-alt'></i>");
     $("#clip").html("<div class='iconSelect'><i class='fas fa-crop'></i></div><div class='textSelect'>Clip Image</div>");
     $(".compoundArrows").appendTo(".childHeader");
     $("#share").insertAfter("#shareToggle");

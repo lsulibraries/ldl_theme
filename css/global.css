@@ -4252,7 +4252,7 @@ body {
     padding: 20px;
     display: block; } }
 @media screen and (max-width: 1260px) {
-  .compoundChild .parentLink {
+  .compoundChild .parentLink, .compoundChild .institutionSmall {
     font-size: 11px !important; }
   .compoundChild h1#window-title {
     font-size: 20px; }
@@ -4500,7 +4500,7 @@ body {
   .compoundGlance {
     display: none; }
 
-  .compoundGallery_header .userMenu .infoToggle {
+  .compoundGallery_header > .form-item > .userMenu > .infoToggle {
     display: none; }
 
   #shareToggle {
@@ -4840,8 +4840,6 @@ body {
     margin: 0px 40px;
     max-width: 1200px;
     width: calc(100vw - 80px); }
-  .compoundObject h1#window-title {
-    font-size: 11px; }
   .compoundObject .userSelect {
     margin-right: 5px; }
   .compoundObject .iconSelect {
@@ -4855,6 +4853,20 @@ body {
   .institution-collection-list-item-label {
     padding: 0px 30px; } }
 @media screen and (max-width: 1260px) and (max-width: 740px) {
+  .compoundChild a.institutionSmall {
+    margin-left: 0px !important; }
+  .compoundChild .compoundArrows.userSelect {
+    position: absolute;
+    top: -20px;
+    width: 100vw !important;
+    background: black;
+    justify-content: center;
+    align-items: center;
+    left: -20px; }
+  .compoundChild #islandora-compound-sequence-position, .compoundChild a#islandora-compound-previous-link, .compoundChild a#islandora-compound-next-link, .compoundChild .compoundObject a#islandora-compound-previous-link, .compoundObject .compoundChild a#islandora-compound-previous-link {
+    color: white !important; }
+  .compoundChild .compoundArrows:hover {
+    background: black !important; }
   .compoundChild .metadataSidebar {
     position: relative; }
   .compoundChild .sidebarToggle {
@@ -4885,7 +4897,9 @@ body {
   .compoundChild .iconSelect {
     height: auto; }
   .compoundChild .childHeader {
-    padding-top: 0px; }
+    flex-direction: row;
+    padding-top: 20px;
+    height: fit-content; }
   .compoundChild .compoundGallery_header {
     padding: 20px 20px;
     height: calc(100vh - 148px);
@@ -4901,7 +4915,8 @@ body {
       padding: 10px 30px; }
   .compoundChild h1#window-title {
     font-size: 20px;
-    line-height: 20px; }
+    line-height: 20px;
+    width: 100%; }
 
   body.compoundParent .compoundGallery_header .compoundParent, .compoundChild .userMenu body.userSelect .compoundGallery_header .compoundParent, body.compoundParent .compoundGallery_header .compoundChild .userMenu .userSelect, .compoundChild .userMenu body.compoundParent .compoundGallery_header .userSelect, .compoundChild .userMenu body.userSelect .compoundGallery_header .userSelect {
     font-size: 28px;

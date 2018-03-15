@@ -5694,7 +5694,7 @@ display: none;
 @media screen and (max-width: 1260px) {
 
 .compoundChild {
-  .parentLink{
+  .parentLink, .institutionSmall{
     font-size: 11px !important;
   }
   h1#window-title {
@@ -5971,7 +5971,7 @@ margin-bottom: 20px;
   display: none;
 }
 
-.compoundGallery_header .userMenu .infoToggle{
+.compoundGallery_header > .form-item > .userMenu > .infoToggle{
   display: none;
 }
 #shareToggle{
@@ -6417,12 +6417,6 @@ border: 1px solid rgba(255, 255, 255, 0.33);
     width: calc(100vw - 80px);
 }
 
-h1#window-title{
-    font-size: 11px;
-}
-
-
-
 .userSelect{
   margin-right: 5px;
 }
@@ -6450,6 +6444,28 @@ h1#window-title{
 
 //begin compoundChild mobile
 .compoundChild{
+
+a.institutionSmall{
+  margin-left: 0px !important;
+}
+
+.compoundArrows.userSelect {
+    position: absolute;
+    top: -20px;
+    width: 100vw !important;
+    background: black;
+    justify-content: center;
+    align-items: center;
+    left: -20px;
+}
+
+#islandora-compound-sequence-position, a#islandora-compound-previous-link, a#islandora-compound-next-link {
+    color: white !important;
+}
+
+.compoundArrows:hover {
+    background: black !important;
+}
 
 .metadataSidebar{
   position: relative;
@@ -6491,7 +6507,9 @@ h1#window-title{
   }
 
   .childHeader{
-  padding-top:0px;
+    flex-direction: row;
+  padding-top:20px;
+    height: fit-content; //allows long titles  
   }
 
   .compoundGallery_header {
@@ -6514,6 +6532,7 @@ h1#window-title{
   h1#window-title {
   font-size: 20px;
   line-height: 20px;
+    width: 100%;
   }
 
 }
