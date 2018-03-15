@@ -386,8 +386,26 @@ if ($('body').hasClass('compoundChild')){
     $(".compoundParent").html("Back");
     $(".infoToggle:last-child").remove();
     $(".infoToggle").insertBefore(".downloadLink");
+    $(".infoToggle").html("<div class='userSelect'><div class='iconSelect'><i class='fas fa-align-left'></i></div><div class='textSelect'>Toggle Info</div></div>");
     $(".downloadSelect .iconSelect").html("<i class='fas fa-download'></i>");
+    $("#shareToggle .iconSelect").html("<i class='far fa-share-alt'></i>");
+    $("#clip").html("<div class='iconSelect'><i class='fas fa-crop'></i></div><div class='textSelect'>Clip Image</div>");
     $(".compoundArrows").appendTo(".childHeader");
+    $("#share").insertAfter("#shareToggle");
+    $(".parentLink").wrapAll("<div class='headerBreadcrumb'/>");
+    $(".childImage").remove();
+    $(".institutionSmall").insertBefore(".parentLink")
+    $(".infoToggle").clone().attr("class", "sidebarToggle").appendTo(".metadataSidebar");
+    $(".sidebarToggle .textSelect").html("Close");
+    $(".sidebarToggle > div").removeClass("userSelect");
+
+        $('.sidebarToggle').click(function(){
+              $(this).toggleClass('menuActive');
+              $('#region-sidebar-first').toggleClass('infoOpened');
+              $('body').toggleClass('metaOpened');
+              $(".nano").nanoScroller({ alwaysVisible: false });
+        });
+
 
   }
   //end compoundChild

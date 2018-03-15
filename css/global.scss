@@ -4012,8 +4012,18 @@ div {
 
 
 #share{
+.jssocials-share {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0.3em 0.6em 0.3em 0;
+    border-radius: 50px;
+    overflow: hidden;
+    height: 33px;
+}
+
   a.jssocials-share-link.jssocials-share-link-count.jssocials-share-no-count {
       max-width: none!important;
+    width: 33px !important;
   }
 }
 
@@ -4371,9 +4381,7 @@ padding-left: 48px;
 }
 
 
-    .block-compound-jail-display .block-inner > .content > .compoundGallery_header > .form-item > a{
-      width: 100%;
-    }
+
 
     .block-compound-jail-display .block-inner > .content{
       width: 100%;
@@ -4738,12 +4746,24 @@ body.compoundParent{
 //begin compound child
 .compoundChild{
 
+.sidebarToggle{
+  display: none;
+}
+
+.headerBreadcrumb{
+  justify-content: flex-start !important;
+  a.institutionSmall{
+    color: #676767;
+  }
+}
+
     span#islandora-compound-sequence-position{
     cursor: default;
+    color: #676767;
     }
 
-        .compoundArrows.userSelect:hover{
-        color: #676767;
+        .compoundArrows.userSelect:hover, .compoundGallery_header .compoundParent:hover, a.institutionSmall:hover{
+        color: #676767 !important;
         }
 
 .compoundArrows.userSelect {
@@ -4784,16 +4804,26 @@ body.compoundParent{
     justify-content: center;
     align-items: center;
     border-radius: 50px;
+width: auto;
 }
 
-.userSelect, .infoToggle {
+.userMenu .userSelect {
 @extend .compoundParent;
 height: 43px !important;
-width: 43px;
+width: 43px !important;
 box-sizing: border-box;
 padding: 0px !important;
-margin-right: 20px;
+margin-right: 10px;
 }
+
+#shareToggle{
+  margin-right: 0px;
+
+}
+
+  .jssocials-shares{
+    margin-left: 10px;
+  }
 
   .iconSelect{
     text-align: center;
@@ -4811,12 +4841,12 @@ margin-right: 20px;
 .userSelect:hover {
   color: $LDLBlue;
   border: 1px solid #bababa;
-    @include transition-duration(1s);
+    @include transition-duration(.2s);
 
   .textSelect{
     width: auto;
     opacity: 1;
-    @include transition-duration(1s);
+    @include transition-duration(.5s);
 background: $LDLBlue;
     color: white;
     position: absolute;
@@ -4918,20 +4948,21 @@ a#clip {
     justify-content: center;
     align-items: center;
     height: 30px;
-    color: white;
     margin-left: 0px;
+    z-index: 22;
 }
 
 #clip{
 
     img {
-    filter: brightness(5) grayscale(1);
-    border: 0px !important;
-    padding: 0px;
-    margin: 0px 10px;
+      display: none;
     }
 
     .textSelect{
+    }
+
+    .iconSelect {
+    padding-bottom: 3px;
     }
 }
 
@@ -5085,6 +5116,7 @@ td.modsDesc{
 
 .metadataContainer{
 position: relative;
+padding-top: 10px;
     .metadataRow {
     display: flex;
     flex-direction: column;
@@ -5662,6 +5694,16 @@ display: none;
 
 @media screen and (max-width: 1260px) {
 
+.compoundChild {
+  .parentLink, .institutionSmall{
+    font-size: 11px !important;
+  }
+  h1#window-title {
+
+    font-size: 20px;
+
+}
+}
 .compoundObject .compoundGallery_header .form-item {
       margin: 0px 20px;
 }
@@ -5930,7 +5972,7 @@ margin-bottom: 20px;
   display: none;
 }
 
-.compoundGallery_header .userMenu .infoToggle{
+.compoundParent .compoundGallery_header > .form-item > .userMenu > .infoToggle{
   display: none;
 }
 #shareToggle{
@@ -6376,22 +6418,11 @@ border: 1px solid rgba(255, 255, 255, 0.33);
     width: calc(100vw - 80px);
 }
 
-h1#window-title{
-    font-size: 11px;
-}
-
-
-
 .userSelect{
   margin-right: 5px;
 }
 
-.iconSelect{
-      background-size: 10px!important;
-    border: 0px;
-    width: 20px;
-    height: 10px;
-}
+
 
 .downloadSelect .iconSelect {
     background-size: 10px;
@@ -6407,7 +6438,108 @@ h1#window-title{
 }
   @media screen and (max-width: 740px) {
 
+//begin compoundChild mobile
+.compoundChild{
+.metaOpened #region-content {
+    margin-left: 0px;
+}
 
+#region-sidebar-first.infoOpened{
+    height: calc(100vh - 160px);
+}
+a.institutionSmall{
+  margin-left: 0px !important;
+}
+
+.compoundArrows.userSelect {
+    position: absolute;
+    top: -20px;
+    width: 100vw !important;
+    background: black;
+    justify-content: center;
+    align-items: center;
+    left: -20px;
+}
+
+#islandora-compound-sequence-position, a#islandora-compound-previous-link, a#islandora-compound-next-link {
+    color: white !important;
+}
+
+.compoundArrows:hover {
+    background: black !important;
+}
+
+.metadataSidebar{
+  position: relative;
+}
+
+.sidebarToggle {
+    position: fixed;
+    cursor: pointer;
+    display: block;
+    z-index: 22;
+    bottom: 0px;
+    left: 0px;
+    width: calc(100% - 40px);
+    background: $LDLBlue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    border: 20px solid #1a1a1a;
+    box-sizing: content-box;
+    .textSelect{
+      display: block;
+    opacity: 1;
+    width: 100%;
+    }
+    .iconSelect{
+      display: none;
+    }
+}
+
+.islandora-openseadragon {
+    display: block;
+    width: 100%;
+    height: calc(100vh - 340px); //100px smaller for ios bar
+}
+
+  .iconSelect{
+    height: auto;
+  }
+
+  .childHeader{
+    flex-direction: row;
+  padding-top:20px;
+    height: fit-content; //allows long titles
+  }
+
+  .compoundGallery_header {
+    padding: 20px 20px;
+    height: calc(100vh - 148px); //100px smaller for ios bar
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    a.institutionSmall{
+      font-size: 11px;
+    }
+    .userMenu .infoToggle {
+    display: block;
+    }
+    .compoundParent{
+    padding: 10px 30px;
+    }
+  }
+  h1#window-title {
+  font-size: 20px;
+  line-height: 20px;
+    width: 100%;
+  }
+
+}
+
+//end compoundChild mobile
 
 body.compoundParent .compoundGallery_header .compoundParent {
     font-size: 28px;
