@@ -4746,6 +4746,10 @@ body.compoundParent{
 //begin compound child
 .compoundChild{
 
+.sidebarToggle{
+  display: none;
+}
+
 .headerBreadcrumb{
   justify-content: flex-start !important;
   a.institutionSmall{
@@ -6447,10 +6451,39 @@ h1#window-title{
 //begin compoundChild mobile
 .compoundChild{
 
+.metadataSidebar{
+  position: relative;
+}
+
+.sidebarToggle {
+    position: fixed;
+    cursor: pointer;
+    display: block;
+    z-index: 22;
+    bottom: 0px;
+    left: 0px;
+    width: calc(100% - 40px);
+    background: $LDLBlue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    margin: 20px;
+    box-sizing: content-box;
+    .textSelect{
+      display: block;
+    opacity: 1;
+    width: 100%;
+    }
+    .iconSelect{
+      display: none;
+    }
+}
+
 .islandora-openseadragon {
     display: block;
     width: 100%;
-    height: calc(100vh - 240px);
+    height: calc(100vh - 340px); //100px smaller for ios bar
 }
 
   .iconSelect{
@@ -6463,7 +6496,7 @@ h1#window-title{
 
   .compoundGallery_header {
     padding: 20px 20px;
-    height: calc(100vh - 48px);
+    height: calc(100vh - 148px); //100px smaller for ios bar
     display: flex;
     flex-direction: column;
     justify-content: space-between;

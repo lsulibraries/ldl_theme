@@ -393,9 +393,20 @@ if ($('body').hasClass('compoundChild')){
     $(".compoundArrows").appendTo(".childHeader");
     $("#share").insertAfter("#shareToggle");
     $(".parentLink").wrapAll("<div class='headerBreadcrumb'/>");
-        $(".childImage").remove();
-
+    $(".childImage").remove();
     $(".institutionSmall").insertBefore(".parentLink")
+    $(".infoToggle").clone().attr("class", "sidebarToggle").appendTo(".metadataSidebar");
+    $(".sidebarToggle .textSelect").html("Back");
+    $(".sidebarToggle > div").removeClass("userSelect");
+
+        $('.sidebarToggle').click(function(){
+              $(this).toggleClass('menuActive');
+              $('#region-sidebar-first').toggleClass('infoOpened');
+              $('body').toggleClass('metaOpened');
+              $(".nano").nanoScroller({ alwaysVisible: false });
+        });
+
+
   }
   //end compoundChild
 

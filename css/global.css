@@ -3645,6 +3645,8 @@ body.compoundParent .tagsGlance, .compoundChild .userMenu body.userSelect .tagsG
 
 .compoundChild {
   background: white; }
+  .compoundChild .sidebarToggle {
+    display: none; }
   .compoundChild .headerBreadcrumb {
     justify-content: flex-start !important; }
     .compoundChild .headerBreadcrumb a.institutionSmall {
@@ -4853,17 +4855,40 @@ body {
   .institution-collection-list-item-label {
     padding: 0px 30px; } }
 @media screen and (max-width: 1260px) and (max-width: 740px) {
+  .compoundChild .metadataSidebar {
+    position: relative; }
+  .compoundChild .sidebarToggle {
+    position: fixed;
+    cursor: pointer;
+    display: block;
+    z-index: 22;
+    bottom: 0px;
+    left: 0px;
+    width: calc(100% - 40px);
+    background: #327BB3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    margin: 20px;
+    box-sizing: content-box; }
+    .compoundChild .sidebarToggle .textSelect {
+      display: block;
+      opacity: 1;
+      width: 100%; }
+    .compoundChild .sidebarToggle .iconSelect {
+      display: none; }
   .compoundChild .islandora-openseadragon {
     display: block;
     width: 100%;
-    height: calc(100vh - 240px); }
+    height: calc(100vh - 340px); }
   .compoundChild .iconSelect {
     height: auto; }
   .compoundChild .childHeader {
     padding-top: 0px; }
   .compoundChild .compoundGallery_header {
     padding: 20px 20px;
-    height: calc(100vh - 48px);
+    height: calc(100vh - 148px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
