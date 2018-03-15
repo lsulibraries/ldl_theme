@@ -5116,6 +5116,7 @@ td.modsDesc{
 
 .metadataContainer{
 position: relative;
+padding-top: 10px;
     .metadataRow {
     display: flex;
     flex-direction: column;
@@ -5971,7 +5972,7 @@ margin-bottom: 20px;
   display: none;
 }
 
-.compoundGallery_header > .form-item > .userMenu > .infoToggle{
+.compoundParent .compoundGallery_header > .form-item > .userMenu > .infoToggle{
   display: none;
 }
 #shareToggle{
@@ -6421,12 +6422,7 @@ border: 1px solid rgba(255, 255, 255, 0.33);
   margin-right: 5px;
 }
 
-.iconSelect{
-      background-size: 10px!important;
-    border: 0px;
-    width: 20px;
-    height: 10px;
-}
+
 
 .downloadSelect .iconSelect {
     background-size: 10px;
@@ -6444,7 +6440,13 @@ border: 1px solid rgba(255, 255, 255, 0.33);
 
 //begin compoundChild mobile
 .compoundChild{
+.metaOpened #region-content {
+    margin-left: 0px;
+}
 
+#region-sidebar-first.infoOpened{
+    height: calc(100vh - 160px);
+}
 a.institutionSmall{
   margin-left: 0px !important;
 }
@@ -6484,7 +6486,7 @@ a.institutionSmall{
     justify-content: center;
     align-items: center;
     height: 60px;
-    margin: 20px;
+    border: 20px solid #1a1a1a;
     box-sizing: content-box;
     .textSelect{
       display: block;
@@ -6509,7 +6511,7 @@ a.institutionSmall{
   .childHeader{
     flex-direction: row;
   padding-top:20px;
-    height: fit-content; //allows long titles  
+    height: fit-content; //allows long titles
   }
 
   .compoundGallery_header {

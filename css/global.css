@@ -3876,7 +3876,8 @@ body.compoundParent .tagsGlance, .compoundChild .userMenu body.userSelect .tagsG
     padding-bottom: 0px !important; }
 
 .metadataContainer {
-  position: relative; }
+  position: relative;
+  padding-top: 10px; }
   .metadataContainer .metadataRow {
     display: flex;
     flex-direction: column;
@@ -4500,7 +4501,7 @@ body {
   .compoundGlance {
     display: none; }
 
-  .compoundGallery_header > .form-item > .userMenu > .infoToggle {
+  .compoundParent .compoundGallery_header > .form-item > .userMenu > .infoToggle, .compoundChild .userMenu .userSelect .compoundGallery_header > .form-item > .userMenu > .infoToggle {
     display: none; }
 
   #shareToggle {
@@ -4842,17 +4843,16 @@ body {
     width: calc(100vw - 80px); }
   .compoundObject .userSelect {
     margin-right: 5px; }
-  .compoundObject .iconSelect {
-    background-size: 10px !important;
-    border: 0px;
-    width: 20px;
-    height: 10px; }
   .compoundObject .downloadSelect .iconSelect {
     background-size: 10px; }
 
   .institution-collection-list-item-label {
     padding: 0px 30px; } }
 @media screen and (max-width: 1260px) and (max-width: 740px) {
+  .compoundChild .metaOpened #region-content {
+    margin-left: 0px; }
+  .compoundChild #region-sidebar-first.infoOpened {
+    height: calc(100vh - 160px); }
   .compoundChild a.institutionSmall {
     margin-left: 0px !important; }
   .compoundChild .compoundArrows.userSelect {
@@ -4882,7 +4882,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 60px;
-    margin: 20px;
+    border: 20px solid #1a1a1a;
     box-sizing: content-box; }
     .compoundChild .sidebarToggle .textSelect {
       display: block;

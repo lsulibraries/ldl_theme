@@ -396,7 +396,7 @@ if ($('body').hasClass('compoundChild')){
     $(".childImage").remove();
     $(".institutionSmall").insertBefore(".parentLink")
     $(".infoToggle").clone().attr("class", "sidebarToggle").appendTo(".metadataSidebar");
-    $(".sidebarToggle .textSelect").html("Back");
+    $(".sidebarToggle .textSelect").html("Close");
     $(".sidebarToggle > div").removeClass("userSelect");
 
         $('.sidebarToggle').click(function(){
