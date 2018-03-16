@@ -3664,6 +3664,10 @@ body.logged-in.compoundChild .islandora-openseadragon {
   width: 100%;
   height: calc(100vh - 430px); }
 
+body.not-logged-in.compoundChild .manageMenu {
+  display: none;
+  padding: 0px; }
+
 .compoundChild {
   background: white; }
   .compoundChild .manageParent a {
@@ -3672,7 +3676,10 @@ body.logged-in.compoundChild .islandora-openseadragon {
     text-transform: uppercase;
     border: 1px solid #bababa;
     padding: 1px 10px;
-    letter-spacing: 1px; }
+    padding-top: 2px;
+    letter-spacing: 1px;
+    height: 25px;
+    box-sizing: border-box; }
   .compoundChild .manageMenu {
     display: flex;
     padding-bottom: 20px; }
@@ -3885,7 +3892,8 @@ body.logged-in.compoundChild .islandora-openseadragon {
     font-size: 30px;
     justify-content: center;
     padding-right: 0px;
-    flex-grow: 2; }
+    flex-grow: 2;
+    line-height: 30px; }
   .compoundChild .compoundSelect .active {
     cursor: default; }
   .compoundChild div#block-system-main {
