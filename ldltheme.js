@@ -374,6 +374,7 @@ if($('.institution-collection-list-a').length < 4){
         $(".compoundParent #islandora-compound-sequence-position").remove();
         $(".compoundParent .manageParent").remove();
         $(".compoundParent #islandora-compound-next-link").remove();
+        $(".manageMenu ul li:first-child").remove();
 
 
 }

@@ -3194,13 +3194,21 @@ div.islandora-pdf-object, div.islandora-large-image-object {
   margin: 0px;
   padding: 0px;
   border: 0px; }
+  .manageMenu .tabs li {
+    margin-right: 10px; }
 .manageMenu li a {
   max-width: none !important;
-  padding: 2px 20px !important;
+  padding: 2px 10px !important;
+  padding-top: 3px !important;
   text-transform: uppercase;
   color: white;
   background: none !important;
-  border: 1px solid rgba(255, 255, 255, 0.2) !important; }
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  height: 25px !important;
+  box-sizing: border-box;
+  margin: 0px !important; }
+.manageMenu li a:hover {
+  border: 1px solid white !important; }
 .manageMenu li a.active {
   font-weight: normal !important;
   background: rgba(255, 255, 255, 0.2) !important; }
