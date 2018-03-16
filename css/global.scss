@@ -192,6 +192,10 @@ html, body {
   margin: 0;
 }
 
+body.logged-in{
+  padding-top: 59px !important;
+}
+
 button:focus,
 button:active,
 input:focus,
@@ -4274,7 +4278,7 @@ header#section-header {
 }
 
 #zone-content{
-    padding-top: 84px;
+    padding-top: 90px;
 }
 
 
@@ -4752,7 +4756,37 @@ body.compoundParent{
 
 }
 //begin compound child
+body.logged-in.compoundChild{
+  .islandora-openseadragon {
+      display: block;
+      width: 100%;
+      height: calc(100vh - 430px);
+  }
+}
+
 .compoundChild{
+
+.manageParent a {
+    color: #474747;
+    font-weight: normal;
+    text-transform: uppercase;
+    border: 1px solid #bababa;
+    padding: 1px 10px;
+    letter-spacing: 1px;
+}
+
+.manageMenu {
+    display: flex;
+    padding-bottom: 20px;
+li a{
+  color: #474747;
+  border: 1px solid #bababa !important;
+}
+}
+
+.manageMenu > .manageParent > .form-item{
+  margin-top: 0px !important;
+}
 
 .sidebarToggle{
   display: none;

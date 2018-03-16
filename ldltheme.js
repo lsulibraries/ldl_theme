@@ -411,7 +411,9 @@ if ($('body').hasClass('compoundChild')){
               $(".nano").nanoScroller({ alwaysVisible: false });
         });
 
-        $(".manageMenu").appendTo(".childHeader")
+        $(".manageMenu").appendTo(".childHeader");
+        $(".manageParent").insertAfter(".manageMenu .tabs");
+
   }
   //end compoundChild
 

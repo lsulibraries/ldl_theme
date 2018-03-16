@@ -23,6 +23,9 @@ html, body {
   padding: 0;
   margin: 0; }
 
+body.logged-in {
+  padding-top: 59px !important; }
+
 button:focus,
 button:active,
 input:focus,
@@ -3300,7 +3303,7 @@ div.islandora-pdf-object, div.islandora-large-image-object {
   z-index: 888;
   width: 100%; }
 .compoundObject #zone-content {
-  padding-top: 84px; }
+  padding-top: 90px; }
 .compoundObject .islandora-openseadragon .openseadragon-canvas canvas {
   background-image: none !important;
   background-color: transparent !important; }
@@ -3648,8 +3651,28 @@ body.compoundParent .compoundGlance, .compoundChild .userMenu body.userSelect .c
 body.compoundParent .tagsGlance, .compoundChild .userMenu body.userSelect .tagsGlance {
   margin-top: 10px; }
 
+body.logged-in.compoundChild .islandora-openseadragon {
+  display: block;
+  width: 100%;
+  height: calc(100vh - 430px); }
+
 .compoundChild {
   background: white; }
+  .compoundChild .manageParent a {
+    color: #474747;
+    font-weight: normal;
+    text-transform: uppercase;
+    border: 1px solid #bababa;
+    padding: 1px 10px;
+    letter-spacing: 1px; }
+  .compoundChild .manageMenu {
+    display: flex;
+    padding-bottom: 20px; }
+    .compoundChild .manageMenu li a {
+      color: #474747;
+      border: 1px solid #bababa !important; }
+  .compoundChild .manageMenu > .manageParent > .form-item {
+    margin-top: 0px !important; }
   .compoundChild .sidebarToggle {
     display: none; }
   .compoundChild .headerBreadcrumb {
