@@ -4965,7 +4965,7 @@ body {
   body.compoundParent .compoundGallery_header .compoundParent, .compoundChild .userMenu body.userSelect .compoundGallery_header .compoundParent, body.compoundParent .compoundGallery_header .compoundChild .userMenu .userSelect, .compoundChild .userMenu body.compoundParent .compoundGallery_header .userSelect, .compoundChild .userMenu body.userSelect .compoundGallery_header .userSelect {
     font-size: 28px;
     color: white;
-    line-height: 19px;
+    line-height: 28px;
     margin-left: 2px; }
 
   .compoundSelect {
