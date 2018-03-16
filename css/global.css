@@ -3480,8 +3480,6 @@ div.islandora-pdf-object, div.islandora-large-image-object {
   margin-left: 3px;
   margin-bottom: 5px;
   margin-top: 5px; }
-.compoundObject .compoundGallery_header a.institutionSmall {
-  text-transform: uppercase; }
 .compoundObject .compoundGallery_header a.parentLink:hover, .compoundObject .compoundGallery_header a.institutionSmall:hover {
   color: white; }
 .compoundObject .compoundGallery_header .compoundCount {
@@ -4967,6 +4965,12 @@ body {
     color: white;
     line-height: 28px;
     margin-left: 2px; }
+
+  .compoundObject .compoundGallery_header .headerBreadcrumb {
+    font-size: 6px !important;
+    line-height: 6px;
+    padding: 10px 0px;
+    display: block; }
 
   .compoundSelect {
     width: 100% !important;

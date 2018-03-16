@@ -4534,7 +4534,6 @@ span#islandora-compound-sequence-position {
           }
 a.institutionSmall{
   @extend a.parentLink;
-  text-transform: uppercase;
 }
 
           a.parentLink:hover {
@@ -6610,6 +6609,13 @@ body.compoundParent .compoundGallery_header .compoundParent {
     color: white;
     line-height: 28px;
     margin-left: 2px;
+}
+
+.compoundObject .compoundGallery_header .headerBreadcrumb{
+  font-size: 6px !important;
+    line-height: 6px;
+    padding: 10px 0px;
+    display: block;
 }
 
       .compoundSelect {
