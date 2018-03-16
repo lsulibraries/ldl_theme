@@ -3300,7 +3300,7 @@ div.islandora-pdf-object, div.islandora-large-image-object {
   z-index: 888;
   width: 100%; }
 .compoundObject #zone-content {
-  padding-top: 90px; }
+  padding-top: 84px; }
 .compoundObject .islandora-openseadragon .openseadragon-canvas canvas {
   background-image: none !important;
   background-color: transparent !important; }
@@ -3578,6 +3578,9 @@ div.islandora-pdf-object, div.islandora-large-image-object {
     padding: 0px; }
   .compoundObject .compoundGlance .tagsGlance {
     padding-top: 5px; }
+    .compoundObject .compoundGlance .tagsGlance a.modsSubject {
+      color: #676767;
+      max-width: none !important; }
     .compoundObject .compoundGlance .tagsGlance .modsSubject {
       padding: 2px 8px;
       background: white;
@@ -3640,7 +3643,8 @@ body.compoundParent .compoundSelect, .compoundChild .userMenu body.userSelect .c
   body.compoundParent .compoundSelect img, .compoundChild .userMenu body.userSelect .compoundSelect img {
     height: 150px !important; }
 body.compoundParent .compoundGlance, .compoundChild .userMenu body.userSelect .compoundGlance {
-  color: #676767; }
+  color: #676767;
+  width: 100%; }
 body.compoundParent .tagsGlance, .compoundChild .userMenu body.userSelect .tagsGlance {
   margin-top: 10px; }
 

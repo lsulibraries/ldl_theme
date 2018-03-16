@@ -4274,7 +4274,7 @@ header#section-header {
 }
 
 #zone-content{
-    padding-top: 90px;
+    padding-top: 84px;
 }
 
 
@@ -4656,7 +4656,13 @@ position: relative;
   }
   .tagsGlance{
 padding-top:5px;
-      .modsSubject {
+
+a.modsSubject {
+    color: #676767;
+    max-width: none !important;
+}
+
+      .modsSubject{
     padding: 2px 8px;
     background: white;
     margin-right: 4px !important;
@@ -4737,6 +4743,7 @@ body.compoundParent{
     }
     .compoundGlance {
     color: #676767;
+    width: 100%;
     }
 
     .tagsGlance {

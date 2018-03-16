@@ -362,7 +362,7 @@ if($('.institution-collection-list-a').length < 4){
         $(".metadataSidebar").clone().prop({ class: "metadataVertical"}).appendTo('.compoundGallery');
         $("<div class='compoundGlance'/>").insertBefore(".metadataVertical");  //inserts compoundGlance
         $(".metadataSidebar .modsDesc").clone().appendTo(".compoundGlance");
-        $(".metadataSidebar .modsSubject").clone().appendTo(".compoundGlance").wrapAll('<div class="tagsGlance"/>');
+        $(".metadataSidebar .modsSubject a").clone().appendTo(".compoundGlance").addClass("modsSubject").wrapAll('<div class="tagsGlance"/>');
         $(".tagsGlance > .modsSubject br").remove();
         $('.mobileMetaToggle').click(function(){
               $(this).toggleClass('menuActive');
@@ -411,7 +411,7 @@ if ($('body').hasClass('compoundChild')){
               $(".nano").nanoScroller({ alwaysVisible: false });
         });
 
-
+        $(".manageMenu").appendTo(".childHeader")
   }
   //end compoundChild
 
