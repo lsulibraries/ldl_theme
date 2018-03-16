@@ -370,7 +370,12 @@ if($('.institution-collection-list-a').length < 4){
               $('body').toggleClass('metaOpened');
               $(".nano").nanoScroller({ alwaysVisible: false });
         });
-        //$("ul.tabs").appendTo(".userMenu");
+        $(".manageMenu").appendTo(".userMenu");
+        $(".compoundParent #islandora-compound-sequence-position").remove();
+        $(".compoundParent .manageParent").remove();
+        $(".compoundParent #islandora-compound-next-link").remove();
+
+
 }
 //end compoundObject
 

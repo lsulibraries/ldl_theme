@@ -3189,7 +3189,8 @@ div.islandora-pdf-object, div.islandora-large-image-object {
 
 .manageMenu .tabs {
   margin: 0px;
-  padding: 0px; }
+  padding: 0px;
+  border: 0px; }
 .manageMenu li a {
   max-width: none !important;
   padding: 2px 20px !important;
