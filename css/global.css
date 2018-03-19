@@ -3668,6 +3668,10 @@ body.not-logged-in.compoundChild .manageMenu {
 
 .compoundChild {
   background: white; }
+  .compoundChild #clip {
+    display: block !important; }
+    .compoundChild #clip img {
+      display: block !important; }
   .compoundChild .manageParent a {
     color: #474747;
     font-weight: normal;
@@ -5232,6 +5236,9 @@ body {
     width: 100%;
     margin: 20px; } }
 @media screen and (max-width: 450px) {
+  .hideme {
+    display: none !important; }
+
   .footerContainer {
     flex-direction: column-reverse; } }
 /*!

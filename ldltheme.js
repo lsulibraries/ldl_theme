@@ -334,6 +334,7 @@ if($('.institution-collection-list-a').length < 4){
         $('#shareToggle').click(function(){
           $(this).toggleClass('activeMenu');
           $('#share').toggleClass('shareActive');
+          $('.compoundChild .compoundParent').toggleClass('hideme');
         });
 
         $('table').each(function (){
@@ -375,7 +376,7 @@ if($('.institution-collection-list-a').length < 4){
         $(".compoundParent .manageParent").remove();
         $(".compoundParent #islandora-compound-next-link").remove();
         $(".manageMenu ul li:first-child").remove();
-
+        $("#clip").remove();
 
 }
 //end compoundObject
@@ -395,7 +396,7 @@ if ($('body').hasClass('compoundChild')){
     $(".infoToggle").html("<div class='userSelect'><div class='iconSelect'><i class='fas fa-align-left'></i></div><div class='textSelect'>Toggle Info</div></div>");
     $(".downloadSelect .iconSelect").html("<i class='fas fa-download'></i>");
     $("#shareToggle .iconSelect").html("<i class='far fa-share-alt'></i>");
-    $("#clip").html("<div class='iconSelect'><i class='fas fa-crop'></i></div><div class='textSelect'>Clip Image</div>");
+    $("#clip.userSelect").html("<div class='iconSelect'><i class='fas fa-crop'></i></div><div class='textSelect'>Clip Image</div>");
     $(".compoundArrows").appendTo(".childHeader");
     $("#share").insertAfter("#shareToggle");
     $(".parentLink").wrapAll("<div class='headerBreadcrumb'/>");

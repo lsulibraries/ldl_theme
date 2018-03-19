@@ -256,6 +256,8 @@ form#admin-form {
   margin: 3vw;
 }
 
+
+
 div#breadcrumb {
   @include flexbox;
   align-items: center;
@@ -4784,6 +4786,13 @@ body.not-logged-in.compoundChild{
 
 .compoundChild{
 
+
+#clip {
+  display: block !important;
+  img{
+    display: block !important;
+  }
+}
 .manageParent a {
     color: #474747;
     font-weight: normal;
@@ -6907,6 +6916,11 @@ font-size: 12px;
 }
 
 @media screen and (max-width: 450px) {
+
+.hideme{
+  display: none !important;
+}
+
   .footerContainer {
     flex-direction: column-reverse;
   }
