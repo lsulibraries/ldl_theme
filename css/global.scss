@@ -4716,6 +4716,11 @@ a.modsSubject {
 }
 
 body.compoundParent{
+
+#block-islandora-compound-object-compound-jail-display .content a{
+  max-width: none;
+}
+
     .compoundGallery_header {
           display: flex;
     justify-content: center;

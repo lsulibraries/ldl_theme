@@ -3618,6 +3618,8 @@ div.islandora-pdf-object, div.islandora-large-image-object {
     text-align: center;
     color: rgba(255, 255, 255, 0.85); }
 
+body.compoundParent #block-islandora-compound-object-compound-jail-display .content a, .compoundChild .userMenu body.userSelect #block-islandora-compound-object-compound-jail-display .content a {
+  max-width: none; }
 body.compoundParent .compoundGallery_header, .compoundChild .userMenu body.userSelect .compoundGallery_header {
   display: flex;
   justify-content: center;
