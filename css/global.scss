@@ -2038,7 +2038,6 @@ div.region-inner.region-header-first-inner {
 }
 
 #region-sidebar-first {
-  left: -10px;
   margin: 0px;
   background-color: white;
   width: 25%;
@@ -4142,7 +4141,7 @@ color: #676767;
 }
 
 .metaOpened #region-content{
-  margin-left: 25vw;
+  margin-left: 25%;
   transition-duration: 1.5s;
   transition-delay:0s;
 }
@@ -4419,13 +4418,17 @@ padding-left: 48px;
       }
 
       #region-sidebar-first{
-        transform: translate3d(-25vw, 0vw, 0vw);
+        transform: translate3d(-800px, 0vw, 0vw);
         width: 25vw;
         transition-duration: 1.5s;
         background: #1a1a1a;
         color: white;
         position: fixed;
         border-right: 1px solid #262626;
+        left: 0px;
+        bottom: 0px;
+      height: calc(100vh - 90px);
+
         .region-sidebar-first-inner{
         padding: 40px;
         }
@@ -4435,8 +4438,8 @@ padding-left: 48px;
 transform: translate3d(0,0,0);
       transition-duration: 1s;
       position: fixed;
-      height: calc(100vh - 90px);
     left: 0px;
+    bottom: 0px;
         .region-sidebar-first-inner{
            //transform: translate(0vh, 0vh);
           //transition-duration: 1s;
