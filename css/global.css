@@ -3821,10 +3821,10 @@ body.not-logged-in.compoundChild .manageMenu {
     background-position: 0px -2px;
     background-size: 20px;
     background-repeat: no-repeat;
-    content: 'general information';
+    content: 'compound information';
     position: absolute; }
   .compoundChild .itemMetadata::before {
-    content: 'specific information'; }
+    content: 'piece information'; }
   .compoundChild .backgroundDiv {
     display: none; }
   .compoundChild a#clip {
