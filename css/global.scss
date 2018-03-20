@@ -6517,12 +6517,25 @@ border: 1px solid rgba(255, 255, 255, 0.33);
 
 //begin compoundChild mobile
 .compoundChild{
-.metaOpened #region-content {
-    margin-left: 0px;
+
+
+#region-content {
+    margin-left: 0px !important;
+}
+
+#region-sidebar-first{
+    height: calc(100vh - 160px) !important;
+    width: 100vw !important;
+    transform: translate(-100vw);
+    @include transition-duration(.5s);
+
 }
 
 #region-sidebar-first.infoOpened{
-    height: calc(100vh - 160px);
+    transform: translate(0vw);
+    @include transition-duration(.5s);
+
+
 }
 a.institutionSmall{
   margin-left: 0px !important;

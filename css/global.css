@@ -4898,10 +4898,22 @@ body {
   .institution-collection-list-item-label {
     padding: 0px 30px; } }
 @media screen and (max-width: 1260px) and (max-width: 740px) {
-  .compoundChild .metaOpened #region-content {
-    margin-left: 0px; }
+  .compoundChild #region-content {
+    margin-left: 0px !important; }
+  .compoundChild #region-sidebar-first {
+    height: calc(100vh - 160px) !important;
+    width: 100vw !important;
+    transform: translate(-100vw);
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s; }
   .compoundChild #region-sidebar-first.infoOpened {
-    height: calc(100vh - 160px); }
+    transform: translate(0vw);
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s; }
   .compoundChild a.institutionSmall {
     margin-left: 0px !important; }
   .compoundChild .compoundArrows.userSelect {
