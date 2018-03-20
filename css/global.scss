@@ -5055,17 +5055,20 @@ a#clip {
     background: $darkTransparent;
 }
 
+
+
 .backgroundDiv {
     position: absolute;
     width: calc(100% + 140px);
     height: calc(100% + 140px);
     filter: blur(50px) brightness(0.8) contrast(0.6);
-
     background-repeat: no-repeat;
     background-size: cover;
     left: -20px;
     top: -20px;
 }
+
+
 
 .childNotice {
     height: 50px;
@@ -6943,6 +6946,15 @@ font-size: 12px;
     flex-direction: column-reverse;
   }
 }
+
+//end media querySelector
+
+.IEuser .backgroundDiv{
+  background-color: black !important;
+  background-image: none !important;
+}
+
+
 
 
 /*!

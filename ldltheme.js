@@ -223,6 +223,9 @@ if($('.institution-collection-list-a').length < 4){
  }
 
 
+
+
+
 //begin compoundObject
 
    if ( ($('.block-islandora-compound-object').length) && ( !$('body').hasClass('audioPDF') ) ){
@@ -419,7 +422,13 @@ if ($('body').hasClass('compoundChild')){
   }
   //end compoundChild
 
-      $("<a href='/'>Home</a>").appendTo(".mobileMenu");
+if (navigator.appName == 'Microsoft Internet Explorer' ||  !!(navigator.userAgent.match(/Trident/) || navigator.userAgent.match(/rv:11/)) || (typeof $.browser !== "undefined" && $.browser.msie == 1))
+{
+alert("Please use Google Chrome, Mozilla Firefox or Safari.");
+$("body").addClass("IEuser");
+}
+
+ $("<a href='/'>Home</a>").appendTo(".mobileMenu");
 
 
 if ($(window).width() < 900) {

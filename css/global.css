@@ -5256,6 +5256,10 @@ body {
 
   .footerContainer {
     flex-direction: column-reverse; } }
+.IEuser .backgroundDiv {
+  background-color: black !important;
+  background-image: none !important; }
+
 /*!
  * Hamburgers
  * @description Tasty CSS-animated hamburgers
