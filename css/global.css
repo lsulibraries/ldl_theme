@@ -3737,7 +3737,8 @@ body.not-logged-in.compoundChild .manageMenu {
     padding: 0px !important;
     margin-right: 10px; }
   .compoundChild #shareToggle {
-    margin-right: 0px; }
+    margin-right: 0px;
+    z-index: 2; }
   .compoundChild .jssocials-shares {
     margin-left: 10px; }
   .compoundChild .iconSelect {
