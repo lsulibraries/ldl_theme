@@ -3610,8 +3610,7 @@ div.islandora-pdf-object, div.islandora-large-image-object {
   color: white;
   text-transform: uppercase;
   border: 1px solid rgba(255, 255, 255, 0.16);
-  cursor: pointer;
-  overflow: hidden; }
+  cursor: pointer; }
   .infoToggle .iconSelect {
     height: 23px; }
   .infoToggle .textSelect {
@@ -3733,6 +3732,7 @@ body.not-logged-in.compoundChild .manageMenu {
     border-radius: 50px;
     width: auto; }
   .compoundChild .userMenu .userSelect {
+    position: relative;
     height: 43px !important;
     width: 43px !important;
     box-sizing: border-box;
@@ -3747,14 +3747,19 @@ body.not-logged-in.compoundChild .manageMenu {
     text-align: center;
     font-size: 21px; }
   .compoundChild .textSelect {
-    width: 0px;
+    position: absolute;
     margin: 0px;
     padding: 0px;
     opacity: 0;
     -moz-transition-duration: 0s;
     -o-transition-duration: 0s;
     -webkit-transition-duration: 0s;
-    transition-duration: 0s; }
+    transition-duration: 0s;
+    width: auto; }
+  .compoundChild .downloadSelect .textSelect {
+    min-width: 96px; }
+  .compoundChild #shareToggle .textSelect {
+    min-width: 65px !important; }
   .compoundChild .userSelect:hover {
     color: #327BB3;
     border: 1px solid #bababa;
@@ -3773,13 +3778,16 @@ body.not-logged-in.compoundChild .manageMenu {
       color: white;
       position: absolute;
       top: -30px;
+      left: 0px;
       padding: 0px 10px;
       border-radius: 20px; }
   .compoundChild .infoToggle .textSelect {
     padding-right: 0px;
     font-size: 13px;
     text-align: center;
-    color: #676767; }
+    color: #676767;
+    width: 100px !important;
+    position: absolute; }
   .compoundChild .navigator {
     background: none !important; }
   .compoundChild .islandora-large-image-object {

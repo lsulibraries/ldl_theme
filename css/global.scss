@@ -4706,7 +4706,6 @@ a.modsSubject {
     text-transform: uppercase;
     border: 1px solid $lightTransparent;
     cursor: pointer;
-    overflow: hidden;
     .iconSelect {
     height: 23px;
     }
@@ -4889,6 +4888,7 @@ width: auto;
 
 .userMenu .userSelect {
 @extend .compoundParent;
+position: relative;
 height: 43px !important;
 width: 43px !important;
 box-sizing: border-box;
@@ -4911,12 +4911,22 @@ z-index: 2;
   }
 
   .textSelect{
-    width: 0px;
+position: absolute;
     margin: 0px;
     padding: 0px;
     opacity: 0;
     @include transition-duration(0s);
-  }
+width: auto;
+ }
+
+  .downloadSelect .textSelect{
+min-width: 96px; //needed for IE
+ }
+
+  #shareToggle .textSelect{
+min-width: 65px !important; //needed for IE
+ }
+
 
 .userSelect:hover {
   color: $LDLBlue;
@@ -4931,6 +4941,7 @@ background: $LDLBlue;
     color: white;
     position: absolute;
     top: -30px;
+    left: 0px;
     padding: 0px 10px;
     border-radius: 20px;
   }
@@ -4941,6 +4952,12 @@ background: $LDLBlue;
     font-size: 13px;
     text-align: center;
     color: #676767;
+          width: 100px !important;
+    position: absolute;
+}
+
+.infoToggle:hover .textSelect{
+
 }
 
 .navigator{
