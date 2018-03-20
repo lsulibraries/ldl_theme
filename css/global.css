@@ -3213,12 +3213,12 @@ div.islandora-pdf-object, div.islandora-large-image-object {
   background: rgba(255, 255, 255, 0.2) !important; }
 
 #region-content {
-  transition-duration: 1s; }
+  transition-duration: 0.5s; }
 
 .metaOpened #region-content {
   margin-left: 25%;
-  transition-duration: 1.5s;
-  transition-delay: 0s; }
+  transition-duration: 1s;
+  transition-delay: 0.4s; }
 
 .compoundObject .userSelect {
   padding: 0px 0px;
