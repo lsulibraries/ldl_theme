@@ -4983,11 +4983,14 @@ body {
     .compoundChild .compoundGallery_header .userMenu .infoToggle {
       display: block; }
     .compoundChild .compoundGallery_header .compoundParent, .compoundChild .compoundGallery_header .userMenu .userSelect, .compoundChild .userMenu .compoundGallery_header .userSelect {
-      padding: 10px 30px; }
+      padding: 10px 30px;
+      z-index: 22; }
   .compoundChild h1#window-title {
     font-size: 20px;
     line-height: 20px;
     width: 100%; }
+  .compoundChild .sidebarToggle .textSelect {
+    position: inherit; }
 
   body.compoundParent .compoundGallery_header .compoundParent, .compoundChild .userMenu body.userSelect .compoundGallery_header .compoundParent, body.compoundParent .compoundGallery_header .compoundChild .userMenu .userSelect, .compoundChild .userMenu body.compoundParent .compoundGallery_header .userSelect, .compoundChild .userMenu body.userSelect .compoundGallery_header .userSelect {
     font-size: 28px;

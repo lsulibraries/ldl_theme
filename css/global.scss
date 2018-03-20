@@ -6642,6 +6642,7 @@ a.institutionSmall{
     }
     .compoundParent{
     padding: 10px 30px;
+    z-index: 22;
     }
   }
   h1#window-title {
@@ -6649,6 +6650,10 @@ a.institutionSmall{
   line-height: 20px;
     width: 100%;
   }
+
+.sidebarToggle .textSelect {
+    position: inherit;
+}
 
 }
 
