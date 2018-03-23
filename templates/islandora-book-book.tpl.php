@@ -10,6 +10,9 @@
     <?php print $viewer; ?>
   </div>
 <?php endif; ?>
+<div class="book-thumbnail">
+  <img src="<?php print "/islandora/object/{$object->id}/datastream/TN/view" ?>"></img>
+</div>
 
 <?php if($display_metadata === 1): ?>
   <div class="islandora-book-metadata">
