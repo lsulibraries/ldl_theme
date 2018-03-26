@@ -358,6 +358,7 @@ if($('.institution-collection-list-a').length < 4){
         $(".metadataRow span:first-child").addClass("metadataTitle");
         $(".metadataRow span:nth-child(2n)").addClass("metadataValue");
         $(".metadataContainer div:first-child").remove();  //removes weird h3 titles
+        $(".metadataSidebar > .region-inner > .alpha-debug-block").remove();
         $(".metadataSidebar > .region-inner > .metadataContainer:nth-child(2n + 0)").addClass("itemMetadata");
         $(".metadataSidebar > .region-inner > .metadataContainer:nth-child(2n + 1)").addClass("compoundMetadata");
         $(".infoToggle").clone().addClass("mobileMetaToggle").appendTo("#zone-content");
