@@ -308,6 +308,15 @@ body.logged-in.compoundObject{
   #section-header{
     top: 60px!important;
   }
+
+  #region-sidebar-first{
+    height: calc(100vh - 150px);
+  }
+
+.nano > .nano-pane {
+    height: calc(100vh - 190px);
+}
+
 }
 
 .logged-in {
