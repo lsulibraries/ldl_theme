@@ -4569,11 +4569,11 @@ body.not-logged-in.compoundChild .manageMenu {
   background-position: 0px -2px;
   background-size: 20px;
   background-repeat: no-repeat;
-  content: 'compound information';
+  content: 'piece information';
   position: absolute;
 }
 .compoundChild .itemMetadata::before {
-  content: 'piece information';
+  content: 'compound information';
 }
 .compoundChild .backgroundDiv {
   display: none;

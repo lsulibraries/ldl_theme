@@ -5032,13 +5032,13 @@ background: white;
   background-position: 0px -2px;
   background-size: 20px;
   background-repeat: no-repeat;
-  content:'compound information';
+  content:'piece information';
   position: absolute;
 }
 
 .itemMetadata::before{
 @extend .compoundMetadata::before;
-content:'piece information';
+content:'compound information';
 }
 
 .islandora-large-image-object.islandora {
