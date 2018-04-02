@@ -4722,6 +4722,10 @@ body.not-logged-in.compoundChild .manageMenu {
   word-wrap: break-word;
 }
 
+body.bookViewer #book-viewer {
+  display: none;
+}
+
 /*BEGIN test area*/
 section#block-islandora-solr-sort .item-list {
   border: 0px;

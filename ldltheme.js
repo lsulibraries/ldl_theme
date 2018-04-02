@@ -423,6 +423,20 @@ if ($('body').hasClass('compoundChild')){
   }
   //end compoundChild
 
+
+// Begin book viewer
+
+   if ( ($('#book-viewer').length) && ( !$('body').hasClass('audioPDF') ) ){
+
+    $("#sideMods").remove();
+    $("body").addClass('bookViewer');
+
+  }
+
+// end book viewer
+
+
+
 if (navigator.appName == 'Microsoft Internet Explorer' ||  !!(navigator.userAgent.match(/Trident/) || navigator.userAgent.match(/rv:11/)) || (typeof $.browser !== "undefined" && $.browser.msie == 1))
 {
 //alert("Please use Google Chrome, Mozilla Firefox or Safari.");
