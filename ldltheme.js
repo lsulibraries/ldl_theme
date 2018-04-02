@@ -465,6 +465,7 @@ var span = document.getElementsByClassName("modalExit")[0];
 //get remaining padding height
 var paddingHeight = ($( document ).height() - $('#block-islandora-solr-advanced').height()) + 'px';
 var paddingHeight2 = ($( document ).height() - $('#block-block-14').height()) + 'px';
+var paddingHeight3 = ($( document ).height() - $('#block-views-meeting-minutes-block-1').height()) + 'px';
 
 
 
@@ -479,6 +480,7 @@ var paddingHeight2 = ($( document ).height() - $('#block-block-14').height()) + 
 
     $('section#block-islandora-solr-advanced').css('padding-bottom',  paddingHeight);
     $('#block-block-14').css('padding-bottom',  paddingHeight2);
+    $('#block-views-meeting-minutes-block-1').css('padding-bottom',  paddingHeight3);
 
 
 // When the user clicks on the button, open the modal
@@ -505,7 +507,7 @@ span.onclick = function() {
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
-    if (event.target == modal){
+    if (event.target == modal || event.target == page){
         modal.style.display = "none";
         $(".page").removeClass('blurFilter');
         $(".parallax-slider").removeClass('darkFilter');
