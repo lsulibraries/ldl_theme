@@ -188,7 +188,7 @@ if($('.institution-collection-list-a').length < 4){
       $("<div class='homepageLogo'/>").prependTo(".messageContainer");
       $( ".site-name a span" ).replaceWith( "<span><span class='boldSpan'>Louisiana</span> Digital Library</span>" );
 
-      $('.child-institution-collections a').wrapAll('<div class="childCollections"/>'); //wraps collectionPage title
+     // $('.child-institution-collections a').wrapAll('<div class="childCollections"/>'); disables overflow fix for many child collections running off the page. this is a reversion because of <a> bug / diff in test vs production
 
 
       $(".collectionPage <div class='collectionSearch'/>").insertAfter(".collectionHeader");
