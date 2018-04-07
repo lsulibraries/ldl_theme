@@ -800,9 +800,9 @@ $('.child-institution-container').each(function() {
     $(this).children(".child-institution-count-collections, .child-institution-count-items").appendTo($(this).find('.childCounts'));
 });
 
-if($('.child-institution-collections a').length < 1){
-   $('.child-institution-collections').remove();
-}
+//if($('.child-institution-collections a').length < 1){
+  // $('.child-institution-collections').remove();
+// } // different number of a tags on production versus testing , disable this for production
 
 $(".institution-collection-list-a").on('click', function(){
   window.location = $(this).data("target");
