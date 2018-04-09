@@ -4264,6 +4264,9 @@ body {
       border-radius: 10px 0px 0px 0px; }
     .view-display-id-minigrid tr:nth-child(89) {
       border-radius: 0px 0px 0px 10px; } }
+.datastreamPage #block-islandora-compound-object-compound-jail-display {
+  height: auto !important; }
+
 /*END test area*/
 @media screen and (max-width: 1770px) {
   .view-islandora-collection-landing-pages tr {

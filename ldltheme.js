@@ -223,12 +223,14 @@ if($('.institution-collection-list-a').length < 4){
  }
 
 
-
+    if ($("body").attr('class').indexOf('datastream') > -1) {
+        $("body").addClass('datastreamPage');
+    }
 
 
 //begin compoundObject
 
-   if ( ($('.block-islandora-compound-object').length) && ( !$('body').hasClass('audioPDF') ) ){
+   if ( ($('.block-islandora-compound-object').length) && ( !$('body').hasClass('audioPDF') ) && ( !$('body').hasClass('datastreamPage') ) ) {
 
 
 
