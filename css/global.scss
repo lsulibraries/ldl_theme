@@ -111,7 +111,7 @@ $subrLogo: 'http://i.imgur.com/pNgJAG2.png';
 $stateLogo: 'http://i.imgur.com/y1H8EGr.png';
 $hnocLogo: 'http://i.imgur.com/lRaktDw.png';
 $tulaneLogo: 'http://i.imgur.com/geTKaHp.png';
-$ullLogo: 'http://i.imgur.com/aqD5A3q.png';
+$ullLogo: 'https://www.louisiana.edu/sites/louisiana/files/ull-logo_0.png';
 $ulmLogo: 'http://www.ulm.edu/_resources/images/ulm-academic-logo-circle.png';
 $unoLogo: 'http://i.imgur.com/RWmzrPG.png';
 $vvilleLogo: 'http://i.imgur.com/wqpOeRQ.png';
@@ -1442,6 +1442,7 @@ opacity: 1;
   a.institutionLink.ullLink {
     background-color: $ullColor;
     background-image: url($ullLogo);
+    background-size: 170px auto;    
   }
 
   a.institutionLink.ulmLink {
@@ -4695,6 +4696,7 @@ a.modsSubject {
     padding: 2px 8px;
     background: white;
     margin-right: 4px !important;
+    margin-top: 4px;
     display: inline-block;
     text-transform: uppercase;
     font-size: 12px;
@@ -5744,13 +5746,13 @@ display: none;
 }
 
 .datastreamPage{
-  
+
 #block-islandora-compound-object-compound-jail-display {
     height: auto !important;
   }
 }
 
-/*END test area*/
+/* area*/
 @media screen and (max-width: 1770px) {
   .view-islandora-collection-landing-pages tr {
     width: 30%;
