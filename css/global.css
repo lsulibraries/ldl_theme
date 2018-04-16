@@ -3576,8 +3576,6 @@ div.islandora-pdf-object, div.islandora-large-image-object {
     height: 130px; }
   .compoundObject .compoundSelect a.compoundSelect-title.active {
     background: rgba(255, 255, 255, 0.07) !important; }
-.compoundObject .compoundSelect:hover a.compoundSelect-title {
-  background: rgba(255, 255, 255, 0.07); }
 .compoundObject .compoundGlance::before {
   content: 'description + tags';
   position: absolute;

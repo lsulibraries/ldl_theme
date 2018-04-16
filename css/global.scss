@@ -4664,11 +4664,7 @@ overflow: hidden;
         }
       }
 
-      .compoundSelect:hover{
-        a.compoundSelect-title {
-            background: rgba(255, 255, 255, 0.07);
-        }
-      }
+
 .compoundGlance::before{
   content:'description + tags';
   position: absolute;
