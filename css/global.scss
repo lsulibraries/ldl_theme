@@ -1442,7 +1442,7 @@ opacity: 1;
   a.institutionLink.ullLink {
     background-color: $ullColor;
     background-image: url($ullLogo);
-    background-size: 170px auto;    
+    background-size: 170px auto;
   }
 
   a.institutionLink.ulmLink {
@@ -4622,6 +4622,8 @@ a.institutionSmall{
 height: 80px;
 background: white;
 width: calc(33% - 10px);
+position: relative;
+overflow: hidden;
         a{
         line-height: auto!important;
         }
@@ -4646,8 +4648,15 @@ width: calc(33% - 10px);
             max-width: none!important;
             font-size: 20px;
             flex-grow: 2;
-                padding: 10px;
-color: #686868;
+            padding: 10px;
+            color: #686868;
+
+            position: absolute;
+            left: 0px;
+            width: 130px;
+            background: white;
+            height: 130px;
+
         }
         a.compoundSelect-title.active{
             background: rgba(255, 255, 255, .07)!important;
