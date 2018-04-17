@@ -3961,8 +3961,7 @@ body.not-logged-in.compoundChild .manageMenu {
       word-wrap: break-word; }
 
 body.bookViewer #book-viewer {
-  display: none;
-}
+  display: none; }
 
 /*BEGIN test area*/
 section#block-islandora-solr-sort .item-list {
@@ -5018,7 +5017,7 @@ body {
 
   .compoundObject .compoundGallery_header .headerBreadcrumb {
     font-size: 6px !important;
-    line-height: 6px;
+    line-height: 16px;
     padding: 10px 0px;
     display: block; }
 
