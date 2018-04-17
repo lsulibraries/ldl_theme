@@ -188,7 +188,7 @@ if($('.institution-collection-list-a').length < 4){
       $("<div class='homepageLogo'/>").prependTo(".messageContainer");
       $( ".site-name a span" ).replaceWith( "<span><span class='boldSpan'>Louisiana</span> Digital Library</span>" );
 
-      $('.child-institution-collections a').wrapAll('<div class="childCollections"/>'); //wraps collectionPage title
+     // $('.child-institution-collections a').wrapAll('<div class="childCollections"/>'); disables overflow fix for many child collections running off the page. this is a reversion because of <a> bug / diff in test vs production
 
 
       $(".collectionPage <div class='collectionSearch'/>").insertAfter(".collectionHeader");
@@ -223,12 +223,14 @@ if($('.institution-collection-list-a').length < 4){
  }
 
 
-
+    if ($("body").attr('class').indexOf('datastream') > -1) {
+        $("body").addClass('datastreamPage');
+    }
 
 
 //begin compoundObject
 
-   if ( ($('.block-islandora-compound-object').length) && ( !$('body').hasClass('audioPDF') ) ){
+   if ( ($('.block-islandora-compound-object').length) && ( !$('body').hasClass('audioPDF') ) && ( !$('body').hasClass('datastreamPage') ) ) {
 
 
 
@@ -479,6 +481,7 @@ var span = document.getElementsByClassName("modalExit")[0];
 //get remaining padding height
 var paddingHeight = ($( document ).height() - $('#block-islandora-solr-advanced').height()) + 'px';
 var paddingHeight2 = ($( document ).height() - $('#block-block-14').height()) + 'px';
+var paddingHeight3 = ($( document ).height() - $('#block-views-meeting-minutes-block-1').height()) + 'px';
 
 
 
@@ -493,6 +496,7 @@ var paddingHeight2 = ($( document ).height() - $('#block-block-14').height()) + 
 
     $('section#block-islandora-solr-advanced').css('padding-bottom',  paddingHeight);
     $('#block-block-14').css('padding-bottom',  paddingHeight2);
+    $('#block-views-meeting-minutes-block-1').css('padding-bottom',  paddingHeight3);
 
 
 // When the user clicks on the button, open the modal
@@ -519,7 +523,7 @@ span.onclick = function() {
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
-    if (event.target == modal){
+    if (event.target == modal || event.target == page){
         modal.style.display = "none";
         $(".page").removeClass('blurFilter');
         $(".parallax-slider").removeClass('darkFilter');
@@ -812,9 +816,9 @@ $('.child-institution-container').each(function() {
     $(this).children(".child-institution-count-collections, .child-institution-count-items").appendTo($(this).find('.childCounts'));
 });
 
-if($('.child-institution-collections a').length < 1){
-   $('.child-institution-collections').remove();
-}
+//if($('.child-institution-collections a').length < 1){
+  // $('.child-institution-collections').remove();
+// } // different number of a tags on production versus testing , disable this for production
 
 $(".institution-collection-list-a").on('click', function(){
   window.location = $(this).data("target");
@@ -825,6 +829,29 @@ var currentInstitution =  $( "ul.breadcrumb a.active" ).text();
 //$('.institution-search #myform input').each(function() {
   //$(this).attr('placeholder', 'Search only within ' + currentInstitution );
 //});//Adds Search text
+
+    //begin show more compound script
+    var compound_showChar = 45;  // How many characters are shown by default
+    var compound_ellipsestext = "...";
+    var compound_moretext = "Show more";
+    var compound_lesstext = "Show less";
+
+
+    $('.compoundSelect-title').each(function() {
+        var compound_content = $(this).html();
+
+        if(compound_content.length > compound_showChar) {
+
+            var c2 = compound_content.substr(0, compound_showChar);
+            var h2 = compound_content.substr(compound_showChar, compound_content.length - compound_showChar);
+
+            var html2 = c2 + compound_ellipsestext;
+
+            $(this).html(html2);
+        }
+
+    });
+
 
 
     //begin show more script
