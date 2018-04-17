@@ -5260,7 +5260,16 @@ padding-top: 10px;
 //Begin bookViewer
 body.bookViewer{
   #book-viewer{
-    display: none;
+
+    .logo{
+    display: none; //hides logo
+    }
+
+    #BRcontainer {
+    margin-top: 50px; //allows book to not be covered by top nav bar
+    margin-bottom: 50px; //allows book to not be covered by bottom nav bar
+    }
+
   }
 }
 //End bookViewer

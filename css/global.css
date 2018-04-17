@@ -3960,8 +3960,11 @@ body.not-logged-in.compoundChild .manageMenu {
       word-break: break-all;
       word-wrap: break-word; }
 
-body.bookViewer #book-viewer {
+body.bookViewer #book-viewer .logo {
   display: none; }
+body.bookViewer #book-viewer #BRcontainer {
+  margin-top: 50px;
+  margin-bottom: 50px; }
 
 /*BEGIN test area*/
 section#block-islandora-solr-sort .item-list {
