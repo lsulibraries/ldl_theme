@@ -5260,6 +5260,11 @@ padding-top: 10px;
 //Begin bookViewer
 body.bookViewer{
   #book-viewer{
+    .BRpageimage {
+        background-color: white; //loading page background color
+    }
+
+
     #BRtoolbar{
     background-color: white;
     .logo{
@@ -5269,6 +5274,8 @@ body.bookViewer{
     text-decoration: none; //book title above the viewer
     margin-left: 30px; //book title above the viewer
     }
+
+
   }
 
     #BRcontainer {
