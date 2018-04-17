@@ -432,7 +432,8 @@ if ($('body').hasClass('compoundChild')){
 
     $("#sideMods").remove();
     $("body").addClass('bookViewer');
-
+    bookTitle = $(".modsTitle").html(); // finds full title for book
+    $("#BRreturn a").text(bookTitle); // undoes default title truncation
   }
 
 // end book viewer

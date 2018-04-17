@@ -3960,8 +3960,13 @@ body.not-logged-in.compoundChild .manageMenu {
       word-break: break-all;
       word-wrap: break-word; }
 
-body.bookViewer #book-viewer .logo {
-  display: none; }
+body.bookViewer #book-viewer #BRtoolbar {
+  background-color: white; }
+  body.bookViewer #book-viewer #BRtoolbar .logo {
+    display: none; }
+  body.bookViewer #book-viewer #BRtoolbar #BRreturn a {
+    text-decoration: none;
+    margin-left: 30px; }
 body.bookViewer #book-viewer #BRcontainer {
   margin-top: 50px;
   margin-bottom: 50px; }
