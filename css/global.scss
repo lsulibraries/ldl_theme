@@ -5256,6 +5256,16 @@ padding-top: 10px;
 
 //end compoundObject
 
+
+//Begin bookViewer
+body.bookViewer{
+  #book-viewer{
+    display: none;
+  }
+}
+//End bookViewer
+
+
 /*BEGIN test area*/
 
 section#block-islandora-solr-sort .item-list {

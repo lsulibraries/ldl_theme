@@ -425,6 +425,20 @@ if ($('body').hasClass('compoundChild')){
   }
   //end compoundChild
 
+
+// Begin book viewer
+
+   if ( ($('#book-viewer').length) && ( !$('body').hasClass('audioPDF') ) ){
+
+    $("#sideMods").remove();
+    $("body").addClass('bookViewer');
+
+  }
+
+// end book viewer
+
+
+
 if (navigator.appName == 'Microsoft Internet Explorer' ||  !!(navigator.userAgent.match(/Trident/) || navigator.userAgent.match(/rv:11/)) || (typeof $.browser !== "undefined" && $.browser.msie == 1))
 {
 //alert("Please use Google Chrome, Mozilla Firefox or Safari.");
@@ -815,6 +829,29 @@ var currentInstitution =  $( "ul.breadcrumb a.active" ).text();
 //$('.institution-search #myform input').each(function() {
   //$(this).attr('placeholder', 'Search only within ' + currentInstitution );
 //});//Adds Search text
+
+    //begin show more compound script
+    var compound_showChar = 45;  // How many characters are shown by default
+    var compound_ellipsestext = "...";
+    var compound_moretext = "Show more";
+    var compound_lesstext = "Show less";
+
+
+    $('.compoundSelect-title').each(function() {
+        var compound_content = $(this).html();
+
+        if(compound_content.length > compound_showChar) {
+
+            var c2 = compound_content.substr(0, compound_showChar);
+            var h2 = compound_content.substr(compound_showChar, compound_content.length - compound_showChar);
+
+            var html2 = c2 + compound_ellipsestext;
+
+            $(this).html(html2);
+        }
+
+    });
+
 
 
     //begin show more script
