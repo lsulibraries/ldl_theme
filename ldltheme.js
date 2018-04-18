@@ -437,9 +437,16 @@ if ($('body').hasClass('compoundChild')){
     $("#book-viewer").wrapAll("<div class='bookContainer'/>"); // adds container to bookViewer
     window.dispatchEvent(new Event('resize')); // triggers resize for #book-viewer to adjust to new container size
 
-
     $("<div class='book_header'/>").insertBefore(".bookContainer"); //creates header for book items
+    $("<div class='backgroundDiv'/>").appendTo(".book_header"); //creates header for book items
+    thumbnailURL = $(".book-thumbnail img").prop('src');
+    $('.backgroundDiv').css('background-image', 'url(' + thumbnailURL + ')');
+    $("<div class='book_headerMenu'/>").appendTo(".book_header"); //creates header for book items
 
+    $("#BRreturn a").clone().attr("id", "bookTitle").appendTo(".book_headerMenu"); // undoes default title truncation
+    $("#BRreturn a").remove(); // undoes default title truncation
+    $("#block-system-main > .tabs").remove(); // temporarily removes tabs until menu is set
+    $("#pageCount").insertBefore(".bookContainer"); //temporarily moves count
 
   }
 

@@ -4248,7 +4248,6 @@ h1#window-title {
     margin-bottom: 20px;
     margin-right: 10px;
     width: 6px;
-    height: calc(100vh - 130px);
     }
 
 a#islandora-compound-next-link {
@@ -5258,6 +5257,14 @@ padding-top: 10px;
 
 //new floating header
 body.headerversiontwo{
+
+  div#zone-header {
+    margin-left: 0vw;
+  transition-duration: 1s;
+  transition-delay:0.2s;
+
+  }
+
   #zone-content {
   padding-top: 0px !important;
   }
@@ -5275,13 +5282,16 @@ body.headerversiontwo{
   }
 #region-sidebar-first  {
   height: 100vh;
+
 }
 }
 
 body.headerversiontwo.metaOpened{
-  div#region-header-first {
-    margin-left: 450px;
-    width: calc(100vw - 470px);
+  div#zone-header {
+    margin-left: 25vw;
+    width: calc(75vw - 20px);
+  transition-duration: 1s;
+  transition-delay:0s;
   }
 }
 
@@ -5297,9 +5307,43 @@ display: none;
 //Begin bookViewer
 body.bookViewer{
 
+header#section-header {
+    position: fixed;
+    top: 0px;
+    z-index: 888;
+    width: 100%;
+}
+
+.backgroundDiv{
+  background-position: -5vw 70%;
+}
+
 .bookContainer{
   max-width: 1200px;
   margin: 0 auto;
+    box-shadow: -3px 4px 20px #f1f1f1;
+border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.book_headerMenu{
+z-index: 2;
+display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    position: relative;
+    border: 0px !important;
+    max-width: 1200px;
+    margin: 0px 20px;
+    margin-bottom: 20px;
+    transition-duration: 1s;
+    width: 100%;
+
+    #bookTitle{
+    font-size: 40px;
+    color: white;
+    line-height: 37px;
+    }
 }
 
 .book_header{
@@ -5310,7 +5354,6 @@ body.bookViewer{
   position: relative;
   overflow: hidden;
   padding-top: 200px;
-  padding: 20px 20px;
 }
 
   #book-viewer{
@@ -5333,8 +5376,10 @@ body.bookViewer{
   }
 
     #BRcontainer {
-    margin-top: 50px; //allows book to not be covered by top nav bar
-    margin-bottom: 50px; //allows book to not be covered by bottom nav bar
+    border-top: 50px solid white; //allows book to not be covered by top nav bar
+    border-bottom: 50px solid white; //allows book to not be covered by bottom nav bar
+    background: white;
+
     }
 
 
