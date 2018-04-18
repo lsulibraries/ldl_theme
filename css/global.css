@@ -3275,14 +3275,6 @@ div.islandora-pdf-object, div.islandora-large-image-object {
   font-weight: 700; }
   .compoundObject h1#window-title #pdf-object-author {
     display: none; }
-.compoundObject .nano > .nano-pane > .nano-slider {
-  background: #a5a5a5; }
-.compoundObject .nano > .nano-pane {
-  background: rgba(100, 100, 100, 0.25);
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin-right: 10px;
-  width: 6px; }
 .compoundObject a#islandora-compound-next-link, .compoundObject a#islandora-compound-previous-link {
   height: 100%;
   display: flex !important;
@@ -3944,6 +3936,14 @@ body.not-logged-in.compoundChild .manageMenu {
   .compoundChild td.modsDesc {
     padding-bottom: 0px !important; }
 
+body.headerversiontwo .nano > .nano-pane > .nano-slider {
+  background: #a5a5a5; }
+body.headerversiontwo .nano > .nano-pane {
+  background: rgba(100, 100, 100, 0.25);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 10px;
+  width: 6px; }
 body.headerversiontwo .metadataContainer {
   position: relative;
   padding-top: 10px; }

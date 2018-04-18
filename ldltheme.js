@@ -467,9 +467,12 @@ if ($('body').hasClass('compoundChild')){
     $("#region-sidebar-first").addClass('nano');
     $(".nano > .region-inner").appendTo('#side');
     $('#sideMods, .nano > .region-inner').wrapAll('<div class="metadataSidebar"/>');
-    $(".metadataSidebar").addClass('nano-content');
-    $(".metadataRow span:first-child").addClass("metadataTitle");
-    $(".metadataRow span:nth-child(2n)").addClass("metadataValue");
+    $(".metadataSidebar").addClass('nano-content'); //adds nanobar
+    $(".metadataRow span:first-child").addClass("metadataTitle");//adds styles to metadata divs
+    $(".metadataRow span:nth-child(2n)").addClass("metadataValue");//adds styles to metadata divs
+    $(".metadataContainer div:first-child").remove();  //removes weird h3 MODS titles
+
+
     $('.infoToggle').click(function(){
           $(this).toggleClass('menuActive');
           $('#region-sidebar-first').toggleClass('infoOpened');

@@ -4237,18 +4237,7 @@ h1#window-title {
     }
 }
 
-.nano > .nano-pane > .nano-slider {
-    background: #a5a5a5;
-  }
 
-
-.nano > .nano-pane{
-    background: rgba(100, 100, 100, 0.25);
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-right: 10px;
-    width: 6px;
-    }
 
 a#islandora-compound-next-link {
 
@@ -5236,6 +5225,19 @@ td.modsDesc{
 
 //new floating header
 body.headerversiontwo{
+
+.nano > .nano-pane > .nano-slider {
+    background: #a5a5a5;
+  }
+
+
+.nano > .nano-pane{
+    background: rgba(100, 100, 100, 0.25);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    width: 6px;
+    }
 
 .metadataContainer{
 position: relative;
