@@ -5307,6 +5307,29 @@ display: none;
 //Begin bookViewer
 body.bookViewer{
 
+.bookLabel {
+    background-image: url(https://i.imgur.com/IUHIf6A.png);
+}
+
+#BRnav{
+  background-color: white;
+  box-shadow: none;
+}
+
+#BRnavCntlBtm{
+  display: none;
+}
+
+#pageCount{
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+
+#block-system-main{
+  background: white;
+}
+
 header#section-header {
     position: fixed;
     top: 0px;
@@ -5323,6 +5346,8 @@ header#section-header {
   margin: 0 auto;
     box-shadow: -3px 4px 20px #f1f1f1;
 border: 1px solid rgba(0, 0, 0, 0.06);
+margin-top: 20px;
+
 }
 
 .book_headerMenu{
@@ -5364,6 +5389,7 @@ display: flex;
 
     #BRtoolbar{
     background-color: white;
+    box-shadow: none;
     .logo{
     display: none; //hides logo
     }
@@ -5379,7 +5405,6 @@ display: flex;
     border-top: 50px solid white; //allows book to not be covered by top nav bar
     border-bottom: 50px solid white; //allows book to not be covered by bottom nav bar
     background: white;
-
     }
 
 
@@ -5849,7 +5874,20 @@ display: none;
 }
 
 //Begin item 2.0
+span.breadcrumbDivider {
+    color: rgba(255, 255, 255, 0.85);
+    padding: 0px;
+    font-weight: normal;
+    font-size: 16px;
+    margin-left: 4px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    vertical-align: text-top;
+}
 
+.headerBreadcrumb a:hover{
+  text-decoration: underline;
+}
 
 //End item 2.0
 

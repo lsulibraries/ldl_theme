@@ -275,7 +275,7 @@ if($('.institution-collection-list-a').length < 4){
     var institutionText = $(".depth-2 > a").clone(); //creates href path from breadcrumb depth-2
     var institutionHome = $(".depth-2 > a").attr('href'); //creates href path from breadcrumb depth-2
     $(institutionText).addClass("institutionSmall").insertBefore("a.parentLink"); //adds institutionLabel div to show content type
-    $( ".institutionSmall" ).append( " /" ); //needs to be separated from the a href
+    $( " <span class='breadcrumbDivider'>/</span>" ).insertAfter( ".institutionSmall" ); //needs to be separated from the a href
         $(".compoundObject .contentLabel").addClass("compoundLabel"); //detects contentType and assign new class to contentLabel
         $(".compoundLabel").html("Compound Object"); //text within compoundLabel
         $(".manageParent, ul.tabs").appendTo(".itemMenu").wrapAll('<div class="manageMenu"/>'); //moves the view/ip embargo/manage menu
@@ -436,17 +436,18 @@ if ($('body').hasClass('compoundChild')){
     $("#BRreturn a").text(bookTitle); // undoes default title truncation
     $("#book-viewer").wrapAll("<div class='bookContainer'/>"); // adds container to bookViewer
     window.dispatchEvent(new Event('resize')); // triggers resize for #book-viewer to adjust to new container size
-
     $("<div class='book_header'/>").insertBefore(".bookContainer"); //creates header for book items
     $("<div class='backgroundDiv'/>").appendTo(".book_header"); //creates header for book items
     thumbnailURL = $(".book-thumbnail img").prop('src');
     $('.backgroundDiv').css('background-image', 'url(' + thumbnailURL + ')');
     $("<div class='book_headerMenu'/>").appendTo(".book_header"); //creates header for book items
-
     $("#BRreturn a").clone().attr("id", "bookTitle").appendTo(".book_headerMenu"); // undoes default title truncation
     $("#BRreturn a").remove(); // undoes default title truncation
     $("#block-system-main > .tabs").remove(); // temporarily removes tabs until menu is set
-    $("#pageCount").insertBefore(".bookContainer"); //temporarily moves count
+    $("<div class='labelContainer'/>").insertBefore(".bookContainer"); //temporarily moves count
+    $("<div class='contentLabel bookLabel'>Book Object</div>").appendTo(".labelContainer"); //temporarily moves count
+    $("#pageCount").appendTo(".bookLabel"); //temporarily moves count
+
 
   }
 

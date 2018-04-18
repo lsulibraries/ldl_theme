@@ -5,7 +5,7 @@
  */
 ?>
 <div id="pageCount">
-<?php print count($viewer_params['pages']); ?>
+<?php print count($viewer_params['pages']); ?> pages
 </div>
 <?php if(isset($viewer)): ?>
   <div id="book-viewer">

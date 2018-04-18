@@ -3985,6 +3985,19 @@ body.headerversiontwo.metaOpened div#zone-header {
 body.headerversiontwo.metaOpened.compoundChild div#zone-header {
   display: none; }
 
+body.bookViewer .bookLabel {
+  background-image: url(https://i.imgur.com/IUHIf6A.png); }
+body.bookViewer #BRnav {
+  background-color: white;
+  box-shadow: none; }
+body.bookViewer #BRnavCntlBtm {
+  display: none; }
+body.bookViewer #pageCount {
+  position: absolute;
+  right: 0px;
+  top: 0px; }
+body.bookViewer #block-system-main {
+  background: white; }
 body.bookViewer header#section-header {
   position: fixed;
   top: 0px;
@@ -3996,7 +4009,8 @@ body.bookViewer .bookContainer {
   max-width: 1200px;
   margin: 0 auto;
   box-shadow: -3px 4px 20px #f1f1f1;
-  border: 1px solid rgba(0, 0, 0, 0.06); }
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  margin-top: 20px; }
 body.bookViewer .book_headerMenu {
   z-index: 2;
   display: flex;
@@ -4025,7 +4039,8 @@ body.bookViewer .book_header {
 body.bookViewer #book-viewer .BRpageimage {
   background-color: white; }
 body.bookViewer #book-viewer #BRtoolbar {
-  background-color: white; }
+  background-color: white;
+  box-shadow: none; }
   body.bookViewer #book-viewer #BRtoolbar .logo {
     display: none; }
   body.bookViewer #book-viewer #BRtoolbar #BRreturn a {
@@ -4328,6 +4343,19 @@ body {
 
 .metadataVertical {
   display: none; }
+
+span.breadcrumbDivider {
+  color: rgba(255, 255, 255, 0.85);
+  padding: 0px;
+  font-weight: normal;
+  font-size: 16px;
+  margin-left: 4px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  vertical-align: text-top; }
+
+.headerBreadcrumb a:hover {
+  text-decoration: underline; }
 
 @media screen and (min-width: 2000px) {
   .page-browse-collections tr {
