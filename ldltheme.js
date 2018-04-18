@@ -463,12 +463,13 @@ if ($('body').hasClass('compoundChild')){
     });
 
     $('.region-sidebar-first-inner').wrapAll('<div class="metadataSidebar"/>');
-    $(".islandora-book-metadata > .metadataContainer").appendTo(".metadataSidebar");
+    $(".islandora-book-metadata > .metadataContainer").appendTo(".region-sidebar-first-inner");
     $("#region-sidebar-first").addClass('nano');
     $(".nano > .region-inner").appendTo('#side');
     $('#sideMods, .nano > .region-inner').wrapAll('<div class="metadataSidebar"/>');
     $(".metadataSidebar").addClass('nano-content');
-    
+    $(".metadataRow span:first-child").addClass("metadataTitle");
+    $(".metadataRow span:nth-child(2n)").addClass("metadataValue");
     $('.infoToggle').click(function(){
           $(this).toggleClass('menuActive');
           $('#region-sidebar-first').toggleClass('infoOpened');
