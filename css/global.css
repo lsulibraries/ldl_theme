@@ -3309,7 +3309,7 @@ div.islandora-pdf-object, div.islandora-large-image-object {
 .compoundObject #region-sidebar-first a:link, .compoundObject #region-sidebar-first a:visited {
   color: #438fca; }
 .compoundObject header#section-header {
-  position: fixed;
+  position: absolute;
   top: 0px;
   z-index: 888;
   width: 100%; }
@@ -3959,6 +3959,8 @@ body.not-logged-in.compoundChild .manageMenu {
       word-break: break-all;
       word-wrap: break-word; }
 
+body.headerversiontwo #block-islandora-solr-simple {
+  background: white; }
 body.headerversiontwo div#zone-header {
   margin-left: 0vw;
   transition-duration: 1s;
@@ -3985,8 +3987,22 @@ body.headerversiontwo.metaOpened div#zone-header {
 body.headerversiontwo.metaOpened.compoundChild div#zone-header {
   display: none; }
 
+body.bookViewer .institutionSmall {
+  color: rgba(255, 255, 255, 0.85);
+  padding: 0px;
+  font-weight: normal;
+  font-size: 16px;
+  margin-left: 3px;
+  margin-bottom: 5px;
+  margin-top: 5px; }
+body.bookViewer .headerBreadcrumb {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; }
 body.bookViewer .bookLabel {
-  background-image: url(https://i.imgur.com/IUHIf6A.png); }
+  background-image: url(https://i.imgur.com/Dm9Wu42.png);
+  background-size: 25px;
+  background-position: 0px 0px; }
 body.bookViewer #BRnav {
   background-color: white;
   box-shadow: none; }
@@ -3999,7 +4015,7 @@ body.bookViewer #pageCount {
 body.bookViewer #block-system-main {
   background: white; }
 body.bookViewer header#section-header {
-  position: fixed;
+  position: absolute;
   top: 0px;
   z-index: 888;
   width: 100%; }

@@ -4293,7 +4293,7 @@ color: white;
 }
 
 header#section-header {
-    position: fixed;
+    position: absolute;
     top: 0px;
     z-index: 888;
     width: 100%;
@@ -5258,6 +5258,10 @@ padding-top: 10px;
 //new floating header
 body.headerversiontwo{
 
+#block-islandora-solr-simple{
+  background: white;
+}
+
   div#zone-header {
     margin-left: 0vw;
   transition-duration: 1s;
@@ -5307,8 +5311,26 @@ display: none;
 //Begin bookViewer
 body.bookViewer{
 
+.institutionSmall{
+      color: rgba(255, 255, 255, 0.85);
+    padding: 0px;
+    font-weight: normal;
+    font-size: 16px;
+    margin-left: 3px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.headerBreadcrumb {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
 .bookLabel {
-    background-image: url(https://i.imgur.com/IUHIf6A.png);
+    background-image: url(https://i.imgur.com/Dm9Wu42.png);
+    background-size: 25px;
+    background-position: 0px 0px;
 }
 
 #BRnav{
@@ -5331,7 +5353,7 @@ body.bookViewer{
 }
 
 header#section-header {
-    position: fixed;
+    position: absolute;
     top: 0px;
     z-index: 888;
     width: 100%;

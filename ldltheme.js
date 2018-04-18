@@ -83,6 +83,7 @@ $(window).on("load", function() {
         $(this).colourBrightness();//
       });
 
+
 });
 
 
@@ -446,8 +447,19 @@ if ($('body').hasClass('compoundChild')){
     $("#block-system-main > .tabs").remove(); // temporarily removes tabs until menu is set
     $("<div class='labelContainer'/>").insertBefore(".bookContainer"); //temporarily moves count
     $("<div class='contentLabel bookLabel'>Book Object</div>").appendTo(".labelContainer"); //temporarily moves count
-    $("#pageCount").appendTo(".bookLabel"); //temporarily moves count
+    $("#pageCount").appendTo(".bookLabel"); // moves count
+    $("<div class='headerBreadcrumb'/>").appendTo(".book_headerMenu"); //temporarily moves count
 
+    var institutionText = $(".depth-2 > a").clone(); //creates href path from breadcrumb depth-2
+    var institutionHome = $(".depth-2 > a").attr('href'); //creates href path from breadcrumb depth-2
+    var collectionText = $(".depth-3 > a").clone(); //creates href path from breadcrumb depth-2
+    var collectionHome = $(".depth-3 > a").attr('href'); //creates href path from breadcrumb depth-2
+
+    $(institutionText).addClass("institutionSmall").appendTo(".headerBreadcrumb"); //creates institution breadcrumb
+    $( " <span class='breadcrumbDivider'>/</span>" ).insertAfter( ".institutionSmall" ); //needs to be separated from the a href
+    $(collectionText).addClass("institutionSmall").insertAfter(".breadcrumbDivider"); //creates collection breadcrumb
+    $("<div class='userMenu'/>").appendTo(".book_headerMenu"); //temporarily moves count
+        $("<div class='infoToggle userSelect'><div class='iconSelect'></div><div class='textSelect'>details</div></div>").appendTo(".userMenu"); //adds toggle for parent metadata
 
   }
 
@@ -457,6 +469,8 @@ if ($('body').hasClass('compoundChild')){
 if ( ($('body').hasClass('compoundObject')) || ($('body').hasClass('bookViewer')) ){
   $('body').addClass('headerversiontwo');
 }
+
+
 
 if (navigator.appName == 'Microsoft Internet Explorer' ||  !!(navigator.userAgent.match(/Trident/) || navigator.userAgent.match(/rv:11/)) || (typeof $.browser !== "undefined" && $.browser.msie == 1))
 {
