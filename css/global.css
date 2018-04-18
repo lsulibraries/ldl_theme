@@ -3960,9 +3960,38 @@ body.not-logged-in.compoundChild .manageMenu {
       word-break: break-all;
       word-wrap: break-word; }
 
+body.headerversiontwo #zone-content {
+  padding-top: 0px !important; }
+body.headerversiontwo #region-header-first, body.headerversiontwo #region-header-second, body.headerversiontwo #zone-header {
+  background-color: transparent; }
+body.headerversiontwo #breadcrumb {
+  display: none; }
+body.headerversiontwo .site-name a {
+  color: white; }
+body.headerversiontwo .region-header-second-inner {
+  min-height: 0px; }
+body.headerversiontwo #region-sidebar-first {
+  height: 100vh; }
+
+body.headerversiontwo.metaOpened div#region-header-first {
+  margin-left: 450px;
+  width: calc(100vw - 470px); }
+
+body.headerversiontwo.metaOpened.compoundChild div#zone-header {
+  display: none; }
+
 body.bookViewer .bookContainer {
   max-width: 1200px;
   margin: 0 auto; }
+body.bookViewer .book_header {
+  display: flex;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.06);
+  margin-bottom: 1px;
+  position: relative;
+  overflow: hidden;
+  padding-top: 200px;
+  padding: 20px 20px; }
 body.bookViewer #book-viewer .BRpageimage {
   background-color: white; }
 body.bookViewer #book-viewer #BRtoolbar {

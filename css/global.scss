@@ -5256,6 +5256,43 @@ padding-top: 10px;
 
 //end compoundObject
 
+//new floating header
+body.headerversiontwo{
+  #zone-content {
+  padding-top: 0px !important;
+  }
+  #region-header-first, #region-header-second, #zone-header {
+  background-color: transparent;
+  }
+  #breadcrumb{
+  display: none;
+  }
+  .site-name a{
+  color: white;
+  }
+  .region-header-second-inner{
+  min-height: 0px;
+  }
+#region-sidebar-first  {
+  height: 100vh;
+}
+}
+
+body.headerversiontwo.metaOpened{
+  div#region-header-first {
+    margin-left: 450px;
+    width: calc(100vw - 470px);
+  }
+}
+
+body.headerversiontwo.metaOpened.compoundChild{
+  div#zone-header{
+display: none;
+}
+
+}
+
+//end new header
 
 //Begin bookViewer
 body.bookViewer{
@@ -5263,6 +5300,17 @@ body.bookViewer{
 .bookContainer{
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.book_header{
+  display: flex;
+  justify-content: center;
+  background: $darkTransparent;
+  margin-bottom: 1px;
+  position: relative;
+  overflow: hidden;
+  padding-top: 200px;
+  padding: 20px 20px;
 }
 
   #book-viewer{
@@ -5288,6 +5336,7 @@ body.bookViewer{
     margin-top: 50px; //allows book to not be covered by top nav bar
     margin-bottom: 50px; //allows book to not be covered by bottom nav bar
     }
+
 
 
 

@@ -438,12 +438,17 @@ if ($('body').hasClass('compoundChild')){
     window.dispatchEvent(new Event('resize')); // triggers resize for #book-viewer to adjust to new container size
 
 
+    $("<div class='book_header'/>").insertBefore(".bookContainer"); //creates header for book items
+
 
   }
 
 // end book viewer
 
 
+if ( ($('body').hasClass('compoundObject')) || ($('body').hasClass('bookViewer')) ){
+  $('body').addClass('headerversiontwo');
+}
 
 if (navigator.appName == 'Microsoft Internet Explorer' ||  !!(navigator.userAgent.match(/Trident/) || navigator.userAgent.match(/rv:11/)) || (typeof $.browser !== "undefined" && $.browser.msie == 1))
 {
