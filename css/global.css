@@ -3959,6 +3959,40 @@ body.not-logged-in.compoundChild .manageMenu {
       word-break: break-all;
       word-wrap: break-word; }
 
+body.headerversiontwo #region-sidebar-first {
+  transform: translate3d(-800px, 0vw, 0vw);
+  width: 25vw;
+  transition-duration: 1.5s;
+  background: #1a1a1a;
+  color: white;
+  position: fixed;
+  border-right: 1px solid #262626;
+  left: 0px;
+  bottom: 0px;
+  height: calc(100vh - 90px); }
+body.headerversiontwo #region-sidebar-first.infoOpened {
+  transform: translate3d(0, 0, 0);
+  transition-duration: 1s;
+  position: fixed;
+  left: 0px;
+  bottom: 0px; }
+body.headerversiontwo div#block-block-1 a {
+  color: white; }
+body.headerversiontwo .infoToggle .iconSelect {
+  background-image: url(https://i.imgur.com/zK6anrR.png);
+  width: 36px;
+  background-size: 15px;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 23px; }
+body.headerversiontwo .infoToggle .textSelect {
+  padding-right: 12px;
+  font-size: 13px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 body.headerversiontwo #block-islandora-solr-simple {
   background: white; }
 body.headerversiontwo div#zone-header {
@@ -3987,6 +4021,10 @@ body.headerversiontwo.metaOpened div#zone-header {
 body.headerversiontwo.metaOpened.compoundChild div#zone-header {
   display: none; }
 
+body.bookViewer #BRtwopageview {
+  border: 1px solid rgba(0, 0, 0, 0.26); }
+body.bookViewer #BRbookcover {
+  box-shadow: none; }
 body.bookViewer .institutionSmall {
   color: rgba(255, 255, 255, 0.85);
   padding: 0px;
@@ -4065,7 +4103,8 @@ body.bookViewer #book-viewer #BRtoolbar {
 body.bookViewer #book-viewer #BRcontainer {
   border-top: 50px solid white;
   border-bottom: 50px solid white;
-  background: white; }
+  background: white;
+  height: 900px; }
 
 /*BEGIN test area*/
 section#block-islandora-solr-sort .item-list {

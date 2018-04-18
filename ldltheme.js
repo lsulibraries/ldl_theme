@@ -233,15 +233,8 @@ if($('.institution-collection-list-a').length < 4){
 
    if ( ($('.block-islandora-compound-object').length) && ( !$('body').hasClass('audioPDF') ) && ( !$('body').hasClass('datastreamPage') ) ) {
 
-
-
     $("#sideMods").remove();
-
-
     $("body").addClass('compoundObject');
-
-
-
 
     //find widest image
         var widest = null;
@@ -259,10 +252,8 @@ if($('.institution-collection-list-a').length < 4){
             widestWidth = $(this).width();
           }
         });
-
-
     //done finding widest image
-    $("<div class='backgroundDiv'/>").insertBefore(".compoundGallery_header .form-item"); // adds div for item background
+        $("<div class='backgroundDiv'/>").insertBefore(".compoundGallery_header .form-item"); // adds div for item background
     var commentedURL = $('div.widest').find('noscript').addClass('widestIMG').text().split(" ");
     var srcclean = commentedURL[2].match(/"(.*?)"/);
     //assign background image
@@ -431,7 +422,6 @@ if ($('body').hasClass('compoundChild')){
 
    if ( ($('#book-viewer').length) && ( !$('body').hasClass('audioPDF') ) ){
 
-    $("#sideMods").remove();
     $("body").addClass('bookViewer');
     bookTitle = $(".modsTitle").html(); // finds full title for book
     $("#BRreturn a").text(bookTitle); // undoes default title truncation
@@ -460,6 +450,32 @@ if ($('body').hasClass('compoundChild')){
     $(collectionText).addClass("institutionSmall").insertAfter(".breadcrumbDivider"); //creates collection breadcrumb
     $("<div class='userMenu'/>").appendTo(".book_headerMenu"); //temporarily moves count
         $("<div class='infoToggle userSelect'><div class='iconSelect'></div><div class='textSelect'>details</div></div>").appendTo(".userMenu"); //adds toggle for parent metadata
+
+    $('table').each(function (){
+        $(this).replaceWith( $(this).html()
+            .replace(/<tbody/gi, "<div class='metadataContainer'")
+            .replace(/<tr/gi, "<div class='metadataRow'")
+            .replace(/<\/tr>/gi, "</div>")
+            .replace(/<td/gi, "<span")
+            .replace(/<\/td>/gi, "</span>")
+            .replace(/<\/tbody/gi, "<\/div")
+        );
+    });
+
+    $('.region-sidebar-first-inner').wrapAll('<div class="metadataSidebar"/>');
+    $(".islandora-book-metadata > .metadataContainer").appendTo(".metadataSidebar");
+    $("#region-sidebar-first").addClass('nano');
+    $(".nano > .region-inner").appendTo('#side');
+    $('#sideMods, .nano > .region-inner').wrapAll('<div class="metadataSidebar"/>');
+    $(".metadataSidebar").addClass('nano-content');
+    
+    $('.infoToggle').click(function(){
+          $(this).toggleClass('menuActive');
+          $('#region-sidebar-first').toggleClass('infoOpened');
+          $('body').toggleClass('metaOpened');
+          $(".nano").nanoScroller({ alwaysVisible: false });
+    });
+
 
   }
 
