@@ -434,6 +434,11 @@ if ($('body').hasClass('compoundChild')){
     $("body").addClass('bookViewer');
     bookTitle = $(".modsTitle").html(); // finds full title for book
     $("#BRreturn a").text(bookTitle); // undoes default title truncation
+    $("#book-viewer").wrapAll("<div class='bookContainer'/>"); // adds container to bookViewer
+    window.dispatchEvent(new Event('resize')); // triggers resize for #book-viewer to adjust to new container size
+
+
+
   }
 
 // end book viewer

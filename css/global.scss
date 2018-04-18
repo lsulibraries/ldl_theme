@@ -5259,6 +5259,12 @@ padding-top: 10px;
 
 //Begin bookViewer
 body.bookViewer{
+
+.bookContainer{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
   #book-viewer{
     .BRpageimage {
         background-color: white; //loading page background color
