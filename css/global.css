@@ -108,11 +108,10 @@ span.bold {
 #block-block-1 div.support-ticket-link {
   display: none; }
 
-body.logged-in.compoundObject #section-header {
-  top: 60px !important; }
-body.logged-in.compoundObject #region-sidebar-first {
+#region-sidebar-first {
   height: calc(100vh - 150px); }
-body.logged-in.compoundObject .nano > .nano-pane {
+
+.nano > .nano-pane {
   height: calc(100vh - 190px); }
 
 .logged-in .loginButton {
@@ -3225,42 +3224,6 @@ div.islandora-pdf-object, div.islandora-large-image-object {
   transition-duration: 1s;
   transition-delay: 0.4s; }
 
-.compoundObject .userSelect {
-  padding: 0px 0px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: rgba(255, 255, 255, 0.85);
-  text-transform: uppercase;
-  display: flex;
-  cursor: pointer;
-  margin-right: 10px;
-  align-items: center;
-  margin: 0px;
-  height: 30px;
-  margin-right: 10px; }
-.compoundObject .userSelect:hover {
-  color: white;
-  border: 1px solid white; }
-.compoundObject .infoToggle:hover {
-  border: 1px solid white; }
-.compoundObject .iconSelect {
-  width: 36px;
-  height: 50px;
-  background-size: 15px;
-  background-repeat: no-repeat;
-  background-position: center; }
-.compoundObject .infoToggle .iconSelect {
-  background-image: url("https://i.imgur.com/zK6anrR.png"); }
-.compoundObject .downloadSelect .iconSelect {
-  background-image: url("https://i.imgur.com/rthA4J4.png");
-  background-size: 20px; }
-.compoundObject #shareToggle .iconSelect {
-  background-image: url("https://i.imgur.com/bKhM20h.png");
-  background-size: 20px; }
-.compoundObject .textSelect {
-  padding-right: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
 .compoundObject div.islandora-pdf-object, .compoundObject div.islandora-large-image-object {
   margin-left: 0px;
   margin-right: 0px; }
@@ -3936,6 +3899,59 @@ body.not-logged-in.compoundChild .manageMenu {
   .compoundChild td.modsDesc {
     padding-bottom: 0px !important; }
 
+body.logged-in.headerversiontwo #section-header {
+  top: 60px !important; }
+
+body.headerversiontwo .userSelect {
+  padding: 0px 0px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.85);
+  text-transform: uppercase;
+  display: flex;
+  cursor: pointer;
+  margin-right: 10px;
+  align-items: center;
+  margin: 0px; }
+body.headerversiontwo .userSelect:hover {
+  color: white;
+  border: 1px solid white; }
+body.headerversiontwo .infoToggle:hover {
+  border: 1px solid white; }
+body.headerversiontwo .iconSelect {
+  width: 36px;
+  height: 50px;
+  background-size: 15px;
+  background-repeat: no-repeat;
+  background-position: center; }
+body.headerversiontwo .infoToggle .iconSelect {
+  background-image: url("https://i.imgur.com/zK6anrR.png"); }
+body.headerversiontwo .downloadSelect .iconSelect {
+  background-image: url("https://i.imgur.com/rthA4J4.png");
+  background-size: 20px; }
+body.headerversiontwo #shareToggle .iconSelect {
+  background-image: url("https://i.imgur.com/bKhM20h.png");
+  background-size: 20px; }
+body.headerversiontwo .textSelect {
+  padding-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+body.headerversiontwo div#share {
+  display: none;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 10px; }
+body.headerversiontwo #shareToggle {
+  height: 23px;
+  margin-left: 10px; }
+  body.headerversiontwo #shareToggle .iconSelect {
+    background-size: 15px;
+    width: 35px; }
+body.headerversiontwo .activeMenu {
+  background: rgba(0, 0, 0, 0.06);
+  color: white; }
+body.headerversiontwo .shareActive {
+  display: flex !important; }
 body.headerversiontwo .nano > .nano-pane > .nano-slider {
   background: #a5a5a5; }
 body.headerversiontwo .nano > .nano-pane {
@@ -4023,6 +4039,12 @@ body.headerversiontwo.metaOpened div#zone-header {
 body.headerversiontwo.metaOpened.compoundChild div#zone-header {
   display: none; }
 
+body.bookViewer .manageMenu .tabs {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  padding-left: 10px;
+  padding-top: 4px; }
 body.bookViewer #BRtwopageview {
   border: 1px solid rgba(0, 0, 0, 0.26); }
 body.bookViewer #BRbookcover {
@@ -4095,7 +4117,7 @@ body.bookViewer .book_header {
 body.bookViewer #book-viewer .BRpageimage {
   background-color: white; }
 body.bookViewer #book-viewer #BRtoolbar {
-  background-color: white;
+  background-color: transparent;
   box-shadow: none; }
   body.bookViewer #book-viewer #BRtoolbar .logo {
     display: none; }

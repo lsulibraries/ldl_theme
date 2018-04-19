@@ -434,7 +434,8 @@ if ($('body').hasClass('compoundChild')){
     $("<div class='book_headerMenu'/>").appendTo(".book_header"); //creates header for book items
     $("#BRreturn a").clone().attr("id", "bookTitle").appendTo(".book_headerMenu"); // undoes default title truncation
     $("#BRreturn a").remove(); // undoes default title truncation
-    $("#block-system-main > .tabs").remove(); // temporarily removes tabs until menu is set
+
+
     $("<div class='labelContainer'/>").insertBefore(".bookContainer"); //temporarily moves count
     $("<div class='contentLabel bookLabel'>Book Object</div>").appendTo(".labelContainer"); //temporarily moves count
     $("#pageCount").appendTo(".bookLabel"); // moves count
@@ -449,7 +450,11 @@ if ($('body').hasClass('compoundChild')){
     $( " <span class='breadcrumbDivider'>/</span>" ).insertAfter( ".institutionSmall" ); //needs to be separated from the a href
     $(collectionText).addClass("institutionSmall").insertAfter(".breadcrumbDivider"); //creates collection breadcrumb
     $("<div class='userMenu'/>").appendTo(".book_headerMenu"); //temporarily moves count
-        $("<div class='infoToggle userSelect'><div class='iconSelect'></div><div class='textSelect'>details</div></div>").appendTo(".userMenu"); //adds toggle for parent metadata
+    $("<div class='infoToggle userSelect'><div class='iconSelect'></div><div class='textSelect'>details</div></div>").appendTo(".userMenu"); //adds toggle for parent metadata
+
+    $("#block-system-main > div.tabs > ul.tabs").appendTo(".userMenu").wrapAll('<div class="manageMenu"/>'); //moves the view/ip embargo/manage menu
+    $("#block-system-main > .tabs").remove(); // temporarily removes tabs until menu is set
+
 
     $('table').each(function (){
         $(this).replaceWith( $(this).html()
@@ -480,6 +485,22 @@ if ($('body').hasClass('compoundChild')){
           $(".nano").nanoScroller({ alwaysVisible: false });
     });
 
+        $("<div id='shareToggle' class='userSelect'><div class='iconSelect'></div><div class='textSelect'>share</div></div>").insertAfter(".infoToggle");
+        $("<div id='share'/>").insertAfter(".userMenu");
+
+
+        $("#share").jsSocials({
+          url: urlhref,
+          text: title,
+          showLabel: false,
+          showCount: "inside",
+          shares: ["twitter", "facebook"]
+        });
+
+        $('#shareToggle').click(function(){
+          $(this).toggleClass('activeMenu');
+          $('#share').toggleClass('shareActive');
+        });
 
   }
 
