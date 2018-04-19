@@ -3173,7 +3173,8 @@ div.islandora-pdf-object, div.islandora-large-image-object {
   margin-top: 20px; }
 
 .labelContainer {
-  margin: 0px 20px; }
+  margin: 0px 20px;
+  margin-bottom: 20px; }
 
 .institutionLabel {
   height: 50px;
@@ -3456,22 +3457,6 @@ div.islandora-pdf-object, div.islandora-large-image-object {
   position: relative;
   max-width: 1200px;
   margin: 0px auto; }
-.compoundObject .backContainer {
-  display: flex !important;
-  justify-content: center;
-  align-items: center;
-  background: #327BB3;
-  height: 80px;
-  margin-top: 0px;
-  box-sizing: border-box;
-  border-top: 0px;
-  max-width: 1200px !important;
-  margin: 0px auto;
-  border: 20px solid white;
-  border-top: 0px;
-  box-sizing: content-box; }
-.compoundObject .backCollection {
-  color: white; }
 .compoundObject .compoundCount {
   position: absolute;
   right: 20px;
@@ -3902,6 +3887,34 @@ body.not-logged-in.compoundChild .manageMenu {
 body.logged-in.headerversiontwo #section-header {
   top: 60px !important; }
 
+body.headerversiontwo .backCollection {
+  color: white; }
+body.headerversiontwo .backContainer {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  background: #327BB3;
+  height: 80px;
+  margin-top: 0px;
+  box-sizing: border-box;
+  border-top: 0px;
+  max-width: 1200px !important;
+  margin: 0px auto;
+  border: 20px solid white;
+  border-top: 0px;
+  box-sizing: content-box; }
+  body.headerversiontwo .backContainer a {
+    color: white; }
+body.headerversiontwo .descriptionText {
+  color: #676767;
+  background: white;
+  position: relative;
+  max-width: 1200px;
+  margin: 0px auto;
+  box-sizing: border-box;
+  margin-top: 10px; }
+body.headerversiontwo a.jssocials-share-link {
+  line-height: inherit; }
 body.headerversiontwo .userSelect {
   padding: 0px 0px;
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -4065,6 +4078,13 @@ body.bookViewer .bookLabel {
   background-image: url(https://i.imgur.com/Dm9Wu42.png);
   background-size: 25px;
   background-position: 0px 0px; }
+body.bookViewer .bookDesc {
+  background-image: url(https://i.imgur.com/SVHgxtg.png);
+  padding-left: 25px;
+  background-position: 0px 2px;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  padding-bottom: 5px; }
 body.bookViewer #BRnav {
   background-color: white;
   box-shadow: none; }

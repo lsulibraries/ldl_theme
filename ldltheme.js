@@ -436,8 +436,8 @@ if ($('body').hasClass('compoundChild')){
     $("#BRreturn a").remove(); // undoes default title truncation
 
 
-    $("<div class='labelContainer'/>").insertBefore(".bookContainer"); //temporarily moves count
-    $("<div class='contentLabel bookLabel'>Book Object</div>").appendTo(".labelContainer"); //temporarily moves count
+    $("<div class='labelContainer'/>").insertBefore(".bookContainer"); //adds label break
+    $("<div class='contentLabel bookLabel'>Book Object</div>").appendTo(".labelContainer"); //adds label break
     $("#pageCount").appendTo(".bookLabel"); // moves count
     $("<div class='headerBreadcrumb'/>").appendTo(".book_headerMenu"); //temporarily moves count
 
@@ -478,6 +478,17 @@ if ($('body').hasClass('compoundChild')){
     $(".metadataContainer div:first-child").remove();  //removes weird h3 MODS titles
 
 
+    $(".book-thumbnail").remove();  //removes unused parts
+    $("<div class='labelContainer descContainer'/>").insertAfter(".bookContainer"); //adds label break
+    $("<div class='contentLabel bookDesc'>description + tags</div>").appendTo(".descContainer"); //adds label break
+    $("<div class='descriptionText'/>").insertAfter(".bookDesc"); //adds label break
+    $(".metadataSidebar .modsDesc").clone().appendTo(".descriptionText");
+
+    $("#book-viewer div div ul li a").clone().prop({class:"backContainer"}).insertAfter(".descContainer").html("<div class='backCollection'>Back to Collection</div>");
+    $(".islandora-book-metadata").remove(); //removes unused parts    
+
+
+
     $('.infoToggle').click(function(){
           $(this).toggleClass('menuActive');
           $('#region-sidebar-first').toggleClass('infoOpened');
@@ -501,6 +512,8 @@ if ($('body').hasClass('compoundChild')){
           $(this).toggleClass('activeMenu');
           $('#share').toggleClass('shareActive');
         });
+
+
 
   }
 
