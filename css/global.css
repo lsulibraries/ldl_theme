@@ -4052,37 +4052,88 @@ body.headerversiontwo.metaOpened div#zone-header {
 body.headerversiontwo.metaOpened.compoundChild div#zone-header {
   display: none; }
 
+body.bookViewer a.pageImages {
+  display: inline;
+  border: 1px solid grey;
+  margin-left: 10px;
+  line-height: 2;
+  padding: 0px 6px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-style: normal;
+  color: #676767; }
+body.bookViewer #pageCount2 {
+  margin-top: 10px; }
+body.bookViewer a#bookTitle2 {
+  cursor: default;
+  color: #676767;
+  font-style: italic;
+  font-size: 20px; }
+body.bookViewer .book-thumbnailData {
+  margin-left: 20px;
+  border-left: 1px solid #dedede;
+  padding-left: 20px;
+  max-width: 680px;
+  color: #676767;
+  font-style: italic; }
+body.bookViewer .bookPreviewContainer {
+  display: flex;
+  max-width: 1200px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 30px; }
 body.bookViewer .bookPreview {
   max-width: 1200px;
-  margin: 0 auto;
   display: flex;
-  margin-top: 20px;
-  box-shadow: -3px 4px 20px #f1f1f1;
-  border: 1px solid rgba(0, 0, 0, 0.06);
   box-sizing: border-box;
   justify-content: space-between;
-  align-items: center; }
+  align-items: center;
+  flex-direction: column;
+  width: fit-content;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden; }
   body.bookViewer .bookPreview .bookMenu {
-    display: flex;
-    flex-grow: 1; }
+    flex-grow: 1;
+    position: absolute;
+    transform: translateY(200px);
+    transition-duration: 1s; }
   body.bookViewer .bookPreview .chooseMenu {
     display: flex;
-    text-transform: uppercase;
-    font-size: 15px;
-    color: #676767;
-    height: 250px;
+    font-size: 13px;
+    color: #ffffff;
     justify-content: space-between;
-    flex-grow: 2; }
+    flex-grow: 2;
+    background: #F78C6C; }
   body.bookViewer .bookPreview .chooseBook {
-    padding: 4px 12px;
     display: flex;
-    align-items: center;
     box-sizing: border-box;
-    width: 220px;
-    height: 100%;
-    justify-content: center; }
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px 20px; }
+  body.bookViewer .bookPreview .chooseIcon {
+    font-family: FontAwesome;
+    font-size: 24px;
+    margin-right: 10px;
+    color: white; }
+  body.bookViewer .bookPreview .chooseText {
+    font-size: 14px;
+    line-height: 15px; }
+  body.bookViewer .bookPreview .book-thumbnail {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
   body.bookViewer .bookPreview .book-thumbnail img {
-    height: 290px; }
+    height: 200px; }
+body.bookViewer .bookPreview:hover .bookMenu {
+  transition-duration: 1s;
+  flex-grow: 1;
+  position: absolute;
+  transform: translateY(120px); }
 body.bookViewer .manageMenu .tabs {
   margin: 0px;
   padding: 0px;
@@ -4139,9 +4190,9 @@ body.bookViewer .bookContainer {
   margin: 0 auto;
   box-shadow: -3px 4px 20px #f1f1f1;
   border: 1px solid rgba(0, 0, 0, 0.06);
-  margin-top: 20px; }
+  margin-top: 20px;
+  display: none; }
 body.bookViewer .book_headerMenu {
-  z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: flex-start;

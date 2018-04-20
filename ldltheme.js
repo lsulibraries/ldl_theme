@@ -434,8 +434,6 @@ if ($('body').hasClass('compoundChild')){
     $("<div class='book_headerMenu'/>").appendTo(".book_header"); //creates header for book items
     $("#BRreturn a").clone().attr("id", "bookTitle").appendTo(".book_headerMenu"); // undoes default title truncation
     $("#BRreturn a").remove(); // undoes default title truncation
-
-
     $("<div class='labelContainer'/>").insertBefore(".bookContainer"); //adds label break
     $("<div class='contentLabel bookLabel'>Book Object</div>").appendTo(".labelContainer"); //adds label break
     $("#pageCount").appendTo(".bookLabel"); // moves count
@@ -451,11 +449,14 @@ if ($('body').hasClass('compoundChild')){
     $(collectionText).addClass("institutionSmall").insertAfter(".breadcrumbDivider"); //creates collection breadcrumb
     $("<div class='userMenu'/>").appendTo(".book_headerMenu"); //temporarily moves count
     $("<div class='infoToggle userSelect'><div class='iconSelect'></div><div class='textSelect'>details</div></div>").appendTo(".userMenu"); //adds toggle for parent metadata
-
     $("#block-system-main > div.tabs > ul.tabs").appendTo(".userMenu").wrapAll('<div class="manageMenu"/>'); //moves the view/ip embargo/manage menu
     $("#block-system-main > .tabs").remove(); // temporarily removes tabs until menu is set
 
 
+
+
+
+    //begin metadata move
     $('table').each(function (){
         $(this).replaceWith( $(this).html()
             .replace(/<tbody/gi, "<div class='metadataContainer'")
@@ -466,7 +467,6 @@ if ($('body').hasClass('compoundChild')){
             .replace(/<\/tbody/gi, "<\/div")
         );
     });
-
     $('.region-sidebar-first-inner').wrapAll('<div class="metadataSidebar"/>');
     $(".islandora-book-metadata > .metadataContainer").appendTo(".region-sidebar-first-inner");
     $("#region-sidebar-first").addClass('nano');
@@ -476,32 +476,37 @@ if ($('body').hasClass('compoundChild')){
     $(".metadataRow span:first-child").addClass("metadataTitle");//adds styles to metadata divs
     $(".metadataRow span:nth-child(2n)").addClass("metadataValue");//adds styles to metadata divs
     $(".metadataContainer div:first-child").remove();  //removes weird h3 MODS titles
-
-
+    //end metadata move
 
     $("<div class='labelContainer descContainer'/>").insertAfter(".bookContainer"); //adds label break
-    $("<div class='contentLabel bookDesc'>description + tags</div>").appendTo(".descContainer"); //adds label break
+    $("<div class='contentLabel bookDesc'>tags</div>").appendTo(".descContainer"); //adds label break
     $("<div class='descriptionText'/>").insertAfter(".bookDesc"); //adds label break
-    $(".metadataSidebar .modsDesc").clone().appendTo(".descriptionText");
-
     $("#book-viewer div div ul li a").clone().prop({class:"backContainer"}).insertAfter(".descContainer").html("<div class='backCollection'>Back to Collection</div>");
+    $("<div class='bookPreviewContainer'/>").insertAfter(".bookLabel"); //adds label break
+    $("<div class='bookPreview'/>").appendTo(".bookPreviewContainer"); //adds label break
+    $(".book-thumbnail").appendTo(".bookPreview");
+    $("<div class='book-thumbnailData'/>").appendTo(".bookPreviewContainer");
+    $("#bookTitle").clone().attr("id", "bookTitle2").appendTo(".book-thumbnailData"); // undoes default title truncation
+    $("#pageCount").attr("id", "pageCount2").appendTo(".book-thumbnailData"); // undoes default title truncation
+    //$("<div class='pageImages'>Browse Pages as Images</div>").appendTo("#pageCount2"); // undoes default title truncation
+    $(".metadataSidebar .modsDesc").clone().appendTo(".book-thumbnailData");
 
+$('a[href*="pages"]').each(function() {
+    $(this).addClass("pageImages").text("Browse Pages as Images").appendTo("#pageCount2"); 
 
-    $("<div class='bookPreview'/>").insertAfter(".bookLabel"); //adds label break
+});
+
+    //use bookbox
+    $(".bookContainer").insertAfter("#page");
+    //end bookbox
 
     $("<div class='bookMenu'/>").appendTo(".bookPreview"); //adds label break
     //$("#bookTitle").clone().attr("id", "bookmenuTitle").appendTo(".bookMenu"); // undoes default title truncation
     $("<div class='chooseMenu'/>").appendTo(".bookMenu"); //adds label break
 
-    $("<div class='chooseBook chooseViewer'> Open Book Viewer </div>").appendTo(".chooseMenu"); //adds label break
-    $("<div class='chooseBook choosePages'> Open Pages as Images </div>").appendTo(".chooseMenu"); //adds label break
-    $("<div class='chooseBook chooseDownload'>Download Book as PDF </div>").appendTo(".chooseMenu"); //adds label break
-    $("<div class='chooseBook chooseDetails'>Open Details</div>").appendTo(".chooseMenu"); //adds label break
+    $("<div class='chooseBook chooseViewer'><div class='chooseIcon'><i class='fas fa-book'></i></div><div class='chooseText'>Open Book Viewer</div></div>").appendTo(".chooseMenu"); //adds label break
 
-    $(".book-thumbnail").appendTo(".bookPreview");
-//use bookbox
-    //$(".bookContainer").insertAfter("#page");
-//end bookbox
+
 
     $('.infoToggle').click(function(){
           $(this).toggleClass('menuActive');
