@@ -4052,6 +4052,37 @@ body.headerversiontwo.metaOpened div#zone-header {
 body.headerversiontwo.metaOpened.compoundChild div#zone-header {
   display: none; }
 
+body.bookViewer .bookPreview {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  margin-top: 20px;
+  box-shadow: -3px 4px 20px #f1f1f1;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center; }
+  body.bookViewer .bookPreview .bookMenu {
+    display: flex;
+    flex-grow: 1; }
+  body.bookViewer .bookPreview .chooseMenu {
+    display: flex;
+    text-transform: uppercase;
+    font-size: 15px;
+    color: #676767;
+    height: 250px;
+    justify-content: space-between;
+    flex-grow: 2; }
+  body.bookViewer .bookPreview .chooseBook {
+    padding: 4px 12px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    width: 220px;
+    height: 100%;
+    justify-content: center; }
+  body.bookViewer .bookPreview .book-thumbnail img {
+    height: 290px; }
 body.bookViewer .manageMenu .tabs {
   margin: 0px;
   padding: 0px;

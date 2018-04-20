@@ -5419,6 +5419,50 @@ display: none;
 //Begin bookViewer
 body.bookViewer{
 
+.bookPreview {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    margin-top: 20px;
+    box-shadow: -3px 4px 20px #f1f1f1;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+ .book-thumbnail {
+}
+
+.bookMenu {
+    display: flex;
+    flex-grow: 1;
+}
+
+.chooseMenu{
+    display: flex;
+    text-transform: uppercase;
+    font-size: 15px;
+    color: #676767;
+    height: 250px;
+    justify-content: space-between;
+flex-grow: 2;    
+}
+
+.chooseBook {
+    padding: 4px 12px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    width: 220px;
+    height: 100%;
+    justify-content: center;
+}
+
+.book-thumbnail img {
+    height: 290px;
+}
+
+}
+
 .manageMenu .tabs {
     margin: 0px;
     padding: 0px;

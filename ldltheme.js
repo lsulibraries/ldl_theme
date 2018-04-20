@@ -478,16 +478,30 @@ if ($('body').hasClass('compoundChild')){
     $(".metadataContainer div:first-child").remove();  //removes weird h3 MODS titles
 
 
-    $(".book-thumbnail").remove();  //removes unused parts
+
     $("<div class='labelContainer descContainer'/>").insertAfter(".bookContainer"); //adds label break
     $("<div class='contentLabel bookDesc'>description + tags</div>").appendTo(".descContainer"); //adds label break
     $("<div class='descriptionText'/>").insertAfter(".bookDesc"); //adds label break
     $(".metadataSidebar .modsDesc").clone().appendTo(".descriptionText");
 
     $("#book-viewer div div ul li a").clone().prop({class:"backContainer"}).insertAfter(".descContainer").html("<div class='backCollection'>Back to Collection</div>");
-    $(".islandora-book-metadata").remove(); //removes unused parts    
 
 
+    $("<div class='bookPreview'/>").insertAfter(".bookLabel"); //adds label break
+
+    $("<div class='bookMenu'/>").appendTo(".bookPreview"); //adds label break
+    //$("#bookTitle").clone().attr("id", "bookmenuTitle").appendTo(".bookMenu"); // undoes default title truncation
+    $("<div class='chooseMenu'/>").appendTo(".bookMenu"); //adds label break
+
+    $("<div class='chooseBook chooseViewer'> Open Book Viewer </div>").appendTo(".chooseMenu"); //adds label break
+    $("<div class='chooseBook choosePages'> Open Pages as Images </div>").appendTo(".chooseMenu"); //adds label break
+    $("<div class='chooseBook chooseDownload'>Download Book as PDF </div>").appendTo(".chooseMenu"); //adds label break
+    $("<div class='chooseBook chooseDetails'>Open Details</div>").appendTo(".chooseMenu"); //adds label break
+
+    $(".book-thumbnail").appendTo(".bookPreview");
+//use bookbox
+    //$(".bookContainer").insertAfter("#page");
+//end bookbox
 
     $('.infoToggle').click(function(){
           $(this).toggleClass('menuActive');
