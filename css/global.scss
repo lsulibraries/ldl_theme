@@ -3392,6 +3392,7 @@ dd.solr-value {
 
 #page {
   overflow: hidden;
+  transition-duration: 1s;
 }
 
 #region-content::before {
@@ -4003,6 +4004,7 @@ div {
 .userMenu {
     display: flex;
     flex-wrap: wrap;
+margin-top: 10px;
 }
 
 
@@ -5434,9 +5436,6 @@ a.pageImages {
 
 }
 
-#pageCount2{
-  margin-top: 10px;
-}
 
 a#bookTitle2 {
     cursor: default;

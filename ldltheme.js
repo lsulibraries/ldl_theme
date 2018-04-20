@@ -486,13 +486,13 @@ if ($('body').hasClass('compoundChild')){
     $("<div class='bookPreview'/>").appendTo(".bookPreviewContainer"); //adds label break
     $(".book-thumbnail").appendTo(".bookPreview");
     $("<div class='book-thumbnailData'/>").appendTo(".bookPreviewContainer");
-    $("#bookTitle").clone().attr("id", "bookTitle2").appendTo(".book-thumbnailData"); // undoes default title truncation
+    //$("#bookTitle").clone().attr("id", "bookTitle2").appendTo(".book-thumbnailData"); // undoes default title truncation
     $("#pageCount").attr("id", "pageCount2").appendTo(".book-thumbnailData"); // undoes default title truncation
     //$("<div class='pageImages'>Browse Pages as Images</div>").appendTo("#pageCount2"); // undoes default title truncation
     $(".metadataSidebar .modsDesc").clone().appendTo(".book-thumbnailData");
 
 $('a[href*="pages"]').each(function() {
-    $(this).addClass("pageImages").text("Browse Pages as Images").appendTo("#pageCount2"); 
+    $(this).addClass("pageImages").text("Browse Pages as Images").appendTo("#pageCount2");
 
 });
 
