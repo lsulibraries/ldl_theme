@@ -4191,7 +4191,11 @@ body.bookViewer .bookContainer {
   box-shadow: -3px 4px 20px #f1f1f1;
   border: 1px solid rgba(0, 0, 0, 0.06);
   margin-top: 20px;
-  display: none; }
+  display: none;
+  position: absolute;
+  top: 0px;
+  width: 90vw;
+  margin-left: 10vw; }
 body.bookViewer .book_headerMenu {
   display: flex;
   flex-direction: column;
@@ -4342,7 +4346,7 @@ section#block-islandora-solr-sort .item-list {
   #islandora-solr-advanced-search-form .selectedCheck label.option {
     color: white !important; }
 
-span.modalExit, span.modalExit2, span.modalExit3 {
+span.modalExit, span.modalExit2, span.modalExit3, span.modalExit4 {
   position: absolute;
   top: 0px;
   right: 0px;
@@ -4353,7 +4357,8 @@ span.modalExit, span.modalExit2, span.modalExit3 {
   background-repeat: no-repeat;
   background-size: 20px auto;
   background-position: center;
-  cursor: pointer; }
+  cursor: pointer;
+  z-index: 999; }
 
 section#block-islandora-solr-advanced, #block-block-14, #block-views-meeting-minutes-block-1 {
   position: absolute;

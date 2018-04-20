@@ -211,6 +211,7 @@ if($('.institution-collection-list-a').length < 4){
       $("<span class='modalExit'/>").insertBefore("#block-islandora-solr-advanced .block-title");
       $("<span class='modalExit2'/>").insertBefore("#block-block-14 h2");
       $("<span class='modalExit3'/>").insertBefore(".about-ldc .view-header");
+      $("<span class='modalExit4'/>").insertBefore("#BookReader");
 
 
       if ($('body > #block-islandora-solr-advanced, body > #block-block-14, body > #block-views-meeting-minutes-block-1').length){
@@ -497,7 +498,7 @@ $('a[href*="pages"]').each(function() {
 });
 
     //use bookbox
-    $(".bookContainer").insertAfter("#page");
+    $(".bookContainer").insertBefore("#page");
     //end bookbox
 
     $("<div class='bookMenu'/>").appendTo(".bookPreview"); //adds label break
@@ -666,7 +667,18 @@ window.onclick = function(event) {
                 window.history.replaceState({}, document.title, clean_uri);
             }
     }
+    if (event.target == modal4 || event.target == page) {
+        modal4.style.display = "none";
+        $(".page").removeClass('blurFilter');
+        $(".parallax-slider").removeClass('darkFilter');
+        $("#zone-content-wrapper").removeClass('noClick');
 
+            var uri = window.location.toString();
+            if (uri.indexOf("#") > 0) {
+                var clean_uri = uri.substring(0, uri.indexOf("#"));
+                window.history.replaceState({}, document.title, clean_uri);
+            }
+    }
 }
 
       $('div.form-type-checkbox input').click(function(){
@@ -779,6 +791,48 @@ $('.about-ldc a').onclick = function() {
 //end modal aboutldc
 
 
+//modal bookviewer
+
+// Get the modal
+var modal4 = document.getElementsByClassName('bookContainer')[0];
+
+// Get the button that opens the modal
+var btn4 = document.getElementsByClassName("bookPreview")[0];
+
+// Get the <span> element that closes the modal
+var span4 = document.getElementsByClassName("modalExit4")[0];
+var page = document.getElementById('page');
+// When the user clicks on the button, open the modal
+
+
+btn4.onclick = function() {
+    modal4.style.display = "block";
+    $(".page").addClass('blurFilter');
+    $(".parallax-slider").addClass('darkFilter');
+    $("html").removeClass('mobileMenuActive');
+    $("#zone-content-wrapper").addClass('noClick');
+    window.dispatchEvent(new Event('resize')); // triggers resize for #book-viewer to adjust to new container size
+
+}
+
+// When the user clicks on <span> (x), close the modal
+span4.onclick = function() {
+    modal4.style.display = "none";
+    $(".page").removeClass('blurFilter');
+    $(".parallax-slider").removeClass('darkFilter');
+    $("button").removeClass('is-active');
+    $("#zone-content-wrapper").removeClass('noClick');
+
+  var uri = window.location.toString();
+  if (uri.indexOf("#") > 0) {
+      var clean_uri = uri.substring(0, uri.indexOf("#"));
+      window.history.replaceState({}, document.title, clean_uri);
+  }
+}
+
+
+//end modal bookviewer
+
 
 //modal anchor setup
  var hash = window.location.hash;
@@ -802,6 +856,15 @@ $('.about-ldc a').onclick = function() {
               $(".page").addClass('blurFilter');
               $(".parallax-slider").addClass('darkFilter');
               $("#zone-content-wrapper").addClass('noClick');
+
+            }
+
+            if (hash == "#bookviewer") {
+              modal4.style.display = "block";
+              $(".page").addClass('blurFilter');
+              $(".parallax-slider").addClass('darkFilter');
+              $("#zone-content-wrapper").addClass('noClick');
+              window.dispatchEvent(new Event('resize')); // triggers resize for #book-viewer to adjust to new container size
 
             }
 
