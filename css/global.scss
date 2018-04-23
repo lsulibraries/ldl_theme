@@ -5620,6 +5620,10 @@ height: fit-content;
     margin: 0 auto;
 }
 
+#BookReader{
+  position: relative;
+}
+
 .book_headerMenu{
 display: flex;
     flex-direction: column;
