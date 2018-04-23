@@ -804,7 +804,7 @@ btn4.onclick = function() {
     $(".page").addClass('blurFilter');
     $(".parallax-slider").addClass('darkFilter');
     $("html").removeClass('mobileMenuActive');
-    $("#zone-content-wrapper").addClass('noClick');
+    $("#zone-content-wrapper").addClass("noClick"); //somehow not working
     window.dispatchEvent(new Event('resize')); // triggers resize for #book-viewer to adjust to new container size
 
 }
@@ -922,14 +922,14 @@ $(".featuredLink").hover(function(){
               $("#zone-content-wrapper").toggleClass('noClick');
       });
 
-      $('#section-content').click(function(){
-          $('#page').removeClass('menuOn');
-          $("html").removeClass('mobileMenuActive');
-                    $('.mobileMenuIcon').removeClass('is-active');
-                        $("#zone-content-wrapper").removeClass('noClick');
+   //   $('#section-content').click(function(){
+     //     $('#page').removeClass('menuOn');
+    //      $("html").removeClass('mobileMenuActive');
+      //              $('.mobileMenuIcon').removeClass('is-active');
+     //                   $("#zone-content-wrapper").removeClass('noClick');
+    //  });
 
-
-      });
+    //above is currently disabled as it impedes modal4
 
 
 if ( $( "#sideMods" ).length ) {
