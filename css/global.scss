@@ -5612,16 +5612,12 @@ header#section-header {
 }
 
 .bookContainer{
-  max-width: 1200px;
-  margin: 0 auto;
-    box-shadow: -3px 4px 20px #f1f1f1;
-border: 1px solid rgba(0, 0, 0, 0.06);
-margin-top: 20px;
-display: none;
-    position: absolute;
-    top: 0px;
-    width: 90vw;
-    margin-left: 10vw;
+height: fit-content;
+}
+
+#book-viewer{
+      max-width: 970px;
+    margin: 0 auto;
 }
 
 .book_headerMenu{
@@ -6052,7 +6048,7 @@ align-items: flex-start;
 
 //about ldc
 
-#block-views-meeting-minutes-block-1{
+#block-views-meeting-minutes-block-1, .bookContainer{
  @extend #block-block-14;
 }
 

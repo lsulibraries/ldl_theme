@@ -498,7 +498,7 @@ $('a[href*="pages"]').each(function() {
 });
 
     //use bookbox
-    $(".bookContainer").insertBefore("#page");
+    $(".bookContainer").insertBefore(".mobileMenu");
     //end bookbox
 
     $("<div class='bookMenu'/>").appendTo(".bookPreview"); //adds label break
@@ -786,13 +786,12 @@ $('.about-ldc a').onclick = function() {
 
 
 //modal bookviewer
+   if ( ($('#book-viewer').length) && ( !$('body').hasClass('audioPDF') ) ){
 
 // Get the modal
 var modal4 = document.getElementsByClassName('bookContainer')[0];
-
 // Get the button that opens the modal
 var btn4 = document.getElementsByClassName("bookPreview")[0];
-
 // Get the <span> element that closes the modal
 var span4 = document.getElementsByClassName("modalExit4")[0];
 var page = document.getElementById('page');
@@ -823,7 +822,7 @@ span4.onclick = function() {
       window.history.replaceState({}, document.title, clean_uri);
   }
 }
-
+}
 
 //end modal bookviewer
 
@@ -853,14 +852,6 @@ span4.onclick = function() {
 
             }
 
-            if (hash == "#bookviewer") {
-              modal4.style.display = "block";
-              $(".page").addClass('blurFilter');
-              $(".parallax-slider").addClass('darkFilter');
-              $("#zone-content-wrapper").addClass('noClick');
-              window.dispatchEvent(new Event('resize')); // triggers resize for #book-viewer to adjust to new container size
-
-            }
 
 
 
@@ -915,6 +906,7 @@ $(".featuredLink").hover(function(){
 });
 
 
+
       $('.mobileMenuIcon, .menuOn').click(function(){
           $("#page").toggleClass('menuOn');
           $("html").toggleClass('mobileMenuActive');
@@ -922,14 +914,13 @@ $(".featuredLink").hover(function(){
               $("#zone-content-wrapper").toggleClass('noClick');
       });
 
-   //   $('#section-content').click(function(){
-     //     $('#page').removeClass('menuOn');
-    //      $("html").removeClass('mobileMenuActive');
-      //              $('.mobileMenuIcon').removeClass('is-active');
-     //                   $("#zone-content-wrapper").removeClass('noClick');
-    //  });
+  $('#section-content').click(function(){
+     $('#page').removeClass('menuOn');
+   $("html").removeClass('mobileMenuActive');
+             $('.mobileMenuIcon').removeClass('is-active');
+                 $("#zone-content-wrapper").removeClass('noClick');
+   });
 
-    //above is currently disabled as it impedes modal4
 
 
 if ( $( "#sideMods" ).length ) {
