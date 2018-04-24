@@ -4191,7 +4191,8 @@ body.bookViewer #book-viewer {
   max-width: 970px;
   margin: 0 auto; }
 body.bookViewer #BookReader {
-  position: relative; }
+  position: relative;
+  background-color: transparent; }
 body.bookViewer .book_headerMenu {
   display: flex;
   flex-direction: column;
@@ -4227,9 +4228,7 @@ body.bookViewer #book-viewer #BRtoolbar {
     text-decoration: none;
     margin-left: 30px; }
 body.bookViewer #book-viewer #BRcontainer {
-  border-top: 50px solid white;
-  border-bottom: 50px solid white;
-  background: white;
+  background: transparent;
   height: 900px; }
 
 /*BEGIN test area*/

@@ -5622,6 +5622,7 @@ height: fit-content;
 
 #BookReader{
   position: relative;
+  background-color: transparent;
 }
 
 .book_headerMenu{
@@ -5675,9 +5676,8 @@ background-color: transparent;
   }
 
     #BRcontainer {
-    border-top: 50px solid white; //allows book to not be covered by top nav bar
-    border-bottom: 50px solid white; //allows book to not be covered by bottom nav bar
-    background: white;
+
+    background: transparent;
     height: 900px; //overrrides default height of 680px
     }
 

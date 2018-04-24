@@ -499,6 +499,7 @@ $('a[href*="pages"]').each(function() {
 
     //use bookbox
     $(".bookContainer").insertBefore(".mobileMenu");
+    $(".islandora-book-metadata").remove();    
     //end bookbox
 
     $("<div class='bookMenu'/>").appendTo(".bookPreview"); //adds label break
