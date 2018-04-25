@@ -4188,11 +4188,11 @@ body.bookViewer .backgroundDiv {
 body.bookViewer .bookContainer {
   height: fit-content; }
 body.bookViewer #book-viewer {
-  max-width: 970px;
-  margin: 0 auto; }
+  margin-left: 200px; }
 body.bookViewer #BookReader {
   position: relative;
-  background-color: transparent; }
+  background-color: transparent;
+  max-width: calc(100vw - 200px); }
 body.bookViewer .book_headerMenu {
   display: flex;
   flex-direction: column;

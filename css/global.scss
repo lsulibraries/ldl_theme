@@ -5616,13 +5616,14 @@ height: fit-content;
 }
 
 #book-viewer{
-      max-width: 970px;
-    margin: 0 auto;
+    margin-left: 200px;
+
 }
 
 #BookReader{
   position: relative;
   background-color: transparent;
+  max-width: calc(100vw - 200px);  
 }
 
 .book_headerMenu{
