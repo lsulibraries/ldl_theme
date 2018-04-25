@@ -4054,182 +4054,193 @@ body.headerversiontwo.metaOpened div#zone-header {
 body.headerversiontwo.metaOpened.compoundChild div#zone-header {
   display: none; }
 
-body.bookViewer a.pageImages {
-  display: inline;
-  border: 1px solid grey;
-  margin-left: 10px;
-  line-height: 2;
-  padding: 0px 6px;
-  border-radius: 10px;
-  text-transform: uppercase;
-  font-size: 11px;
-  font-style: normal;
-  color: #676767; }
-body.bookViewer a#bookTitle2 {
-  cursor: default;
-  color: #676767;
-  font-style: italic;
-  font-size: 20px; }
-body.bookViewer .book-thumbnailData {
-  margin-left: 20px;
-  border-left: 1px solid #dedede;
-  padding-left: 20px;
-  max-width: 680px;
-  color: #676767;
-  font-style: italic; }
-body.bookViewer .bookPreviewContainer {
-  display: flex;
-  max-width: 1200px;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  margin-top: 30px; }
-body.bookViewer .bookPreview {
-  max-width: 1200px;
-  display: flex;
-  box-sizing: border-box;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
-  width: fit-content;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden; }
-  body.bookViewer .bookPreview .bookMenu {
-    flex-grow: 1;
-    position: absolute;
-    transform: translateY(200px);
-    transition-duration: 1s; }
-  body.bookViewer .bookPreview .chooseMenu {
+body.bookViewer {
+  background: black; }
+  body.bookViewer .blurFilter {
+    filter: blur(5px) brightness(0.2);
+    background: black; }
+  body.bookViewer a.pageImages {
+    display: inline;
+    border: 1px solid grey;
+    margin-left: 10px;
+    line-height: 2;
+    padding: 0px 6px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-style: normal;
+    color: #676767; }
+  body.bookViewer a#bookTitle2 {
+    cursor: default;
+    color: #676767;
+    font-style: italic;
+    font-size: 20px; }
+  body.bookViewer .book-thumbnailData {
+    margin-left: 20px;
+    border-left: 1px solid #dedede;
+    padding-left: 20px;
+    max-width: 680px;
+    color: #676767;
+    font-style: italic; }
+  body.bookViewer .bookPreviewContainer {
     display: flex;
-    font-size: 13px;
-    color: #ffffff;
-    justify-content: space-between;
-    flex-grow: 2;
-    background: #F78C6C; }
-  body.bookViewer .bookPreview .chooseBook {
-    display: flex;
-    box-sizing: border-box;
-    height: 80px;
+    max-width: 1200px;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    padding: 20px 20px; }
-  body.bookViewer .bookPreview .chooseIcon {
-    font-family: FontAwesome;
-    font-size: 24px;
-    margin-right: 10px;
-    color: white; }
-  body.bookViewer .bookPreview .chooseText {
-    font-size: 14px;
-    line-height: 15px; }
-  body.bookViewer .bookPreview .book-thumbnail {
+    margin: 0 auto;
+    margin-top: 30px; }
+  body.bookViewer .bookPreview {
+    max-width: 1200px;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: fit-content;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden; }
+    body.bookViewer .bookPreview .bookMenu {
+      flex-grow: 1;
+      position: absolute;
+      transform: translateY(200px);
+      transition-duration: 1s; }
+    body.bookViewer .bookPreview .chooseMenu {
+      display: flex;
+      font-size: 13px;
+      color: #ffffff;
+      justify-content: space-between;
+      flex-grow: 2;
+      background: #F78C6C; }
+    body.bookViewer .bookPreview .chooseBook {
+      display: flex;
+      box-sizing: border-box;
+      height: 80px;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding: 20px 20px; }
+    body.bookViewer .bookPreview .chooseIcon {
+      font-family: FontAwesome;
+      font-size: 24px;
+      margin-right: 10px;
+      color: white; }
+    body.bookViewer .bookPreview .chooseText {
+      font-size: 14px;
+      line-height: 15px; }
+    body.bookViewer .bookPreview .book-thumbnail {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    body.bookViewer .bookPreview .book-thumbnail img {
+      height: 200px; }
+  body.bookViewer .bookPreview:hover .bookMenu {
+    transition-duration: 1s;
+    flex-grow: 1;
+    position: absolute;
+    transform: translateY(120px); }
+  body.bookViewer .manageMenu .tabs {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    padding-left: 10px;
+    padding-top: 4px; }
+  body.bookViewer #BRtwopageview {
+    border: 1px solid rgba(0, 0, 0, 0.26); }
+  body.bookViewer #BRbookcover {
+    box-shadow: none; }
+  body.bookViewer .institutionSmall {
+    color: rgba(255, 255, 255, 0.85);
+    padding: 0px;
+    font-weight: normal;
+    font-size: 16px;
+    margin-left: 3px;
+    margin-bottom: 5px;
+    margin-top: 5px; }
+  body.bookViewer .headerBreadcrumb {
     display: flex;
     justify-content: center;
-    align-items: center; }
-  body.bookViewer .bookPreview .book-thumbnail img {
-    height: 200px; }
-body.bookViewer .bookPreview:hover .bookMenu {
-  transition-duration: 1s;
-  flex-grow: 1;
-  position: absolute;
-  transform: translateY(120px); }
-body.bookViewer .manageMenu .tabs {
-  margin: 0px;
-  padding: 0px;
-  border: 0px;
-  padding-left: 10px;
-  padding-top: 4px; }
-body.bookViewer #BRtwopageview {
-  border: 1px solid rgba(0, 0, 0, 0.26); }
-body.bookViewer #BRbookcover {
-  box-shadow: none; }
-body.bookViewer .institutionSmall {
-  color: rgba(255, 255, 255, 0.85);
-  padding: 0px;
-  font-weight: normal;
-  font-size: 16px;
-  margin-left: 3px;
-  margin-bottom: 5px;
-  margin-top: 5px; }
-body.bookViewer .headerBreadcrumb {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start; }
-body.bookViewer .bookLabel {
-  background-image: url(https://i.imgur.com/Dm9Wu42.png);
-  background-size: 25px;
-  background-position: 0px 0px; }
-body.bookViewer .bookDesc {
-  background-image: url(https://i.imgur.com/SVHgxtg.png);
-  padding-left: 25px;
-  background-position: 0px 2px;
-  background-size: 20px;
-  background-repeat: no-repeat;
-  padding-bottom: 5px; }
-body.bookViewer #BRnav {
-  background-color: white;
-  box-shadow: none; }
-body.bookViewer #BRnavCntlBtm {
-  display: none; }
-body.bookViewer #pageCount {
-  position: absolute;
-  right: 0px;
-  top: 0px; }
-body.bookViewer #block-system-main {
-  background: white; }
-body.bookViewer header#section-header {
-  position: absolute;
-  top: 0px;
-  z-index: 888;
-  width: 100%; }
-body.bookViewer .backgroundDiv {
-  background-position: -5vw 70%; }
-body.bookViewer .bookContainer {
-  height: fit-content; }
-body.bookViewer #book-viewer {
-  margin-left: 200px; }
-body.bookViewer #BookReader {
-  position: relative;
-  background-color: transparent;
-  max-width: calc(100vw - 200px); }
-body.bookViewer .book_headerMenu {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  position: relative;
-  border: 0px !important;
-  max-width: 1200px;
-  margin: 0px 20px;
-  margin-bottom: 20px;
-  transition-duration: 1s;
-  width: 100%; }
-  body.bookViewer .book_headerMenu #bookTitle {
-    font-size: 40px;
-    color: white;
-    line-height: 37px; }
-body.bookViewer .book_header {
-  display: flex;
-  justify-content: center;
-  background: rgba(0, 0, 0, 0.06);
-  margin-bottom: 1px;
-  position: relative;
-  overflow: hidden;
-  padding-top: 200px; }
-body.bookViewer #book-viewer .BRpageimage {
-  background-color: white; }
-body.bookViewer #book-viewer #BRtoolbar {
-  background-color: transparent;
-  box-shadow: none; }
-  body.bookViewer #book-viewer #BRtoolbar .logo {
+    align-items: flex-start; }
+  body.bookViewer .bookLabel {
+    background-image: url(https://i.imgur.com/Dm9Wu42.png);
+    background-size: 25px;
+    background-position: 0px 0px; }
+  body.bookViewer .bookDesc {
+    background-image: url(https://i.imgur.com/SVHgxtg.png);
+    padding-left: 25px;
+    background-position: 0px 2px;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    padding-bottom: 5px; }
+  body.bookViewer #BRnav {
+    background-color: white;
+    box-shadow: none;
+    position: absolute;
+    top: 30px;
+    width: calc(100% - 120px); }
+  body.bookViewer #BRnavCntlBtm {
     display: none; }
-  body.bookViewer #book-viewer #BRtoolbar #BRreturn a {
-    text-decoration: none;
-    margin-left: 30px; }
-body.bookViewer #book-viewer #BRcontainer {
-  background: transparent;
-  height: 900px; }
+  body.bookViewer #pageCount {
+    position: absolute;
+    right: 0px;
+    top: 0px; }
+  body.bookViewer #block-system-main {
+    background: white; }
+  body.bookViewer header#section-header {
+    position: absolute;
+    top: 0px;
+    z-index: 888;
+    width: 100%; }
+  body.bookViewer .backgroundDiv {
+    background-position: -5vw 70%; }
+  body.bookViewer #BookReader {
+    position: relative;
+    background-color: transparent; }
+  body.bookViewer .book_headerMenu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    position: relative;
+    border: 0px !important;
+    max-width: 1200px;
+    margin: 0px 20px;
+    margin-bottom: 20px;
+    transition-duration: 1s;
+    width: 100%; }
+    body.bookViewer .book_headerMenu #bookTitle {
+      font-size: 40px;
+      color: white;
+      line-height: 37px; }
+  body.bookViewer .book_header {
+    display: flex;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.06);
+    margin-bottom: 1px;
+    position: relative;
+    overflow: hidden;
+    padding-top: 200px; }
+  body.bookViewer #book-viewer .BRpageimage {
+    background-color: white; }
+  body.bookViewer #book-viewer #BRtoolbar {
+    width: calc(100% - 120px);
+    background-color: transparent;
+    box-shadow: none;
+    position: absolute;
+    top: -50px;
+    margin: 0px; }
+    body.bookViewer #book-viewer #BRtoolbar .logo {
+      display: none; }
+    body.bookViewer #book-viewer #BRtoolbar #BRreturn a {
+      text-decoration: none;
+      margin-left: 30px; }
+  body.bookViewer #book-viewer #BRcontainer {
+    position: relative;
+    top: 30px;
+    background: transparent;
+    height: 900px; }
+  body.bookViewer #book-viewer .ui-widget-content {
+    border: 0px !important; }
 
 /*BEGIN test area*/
 section#block-islandora-solr-sort .item-list {
@@ -4341,7 +4352,7 @@ section#block-islandora-solr-sort .item-list {
   #islandora-solr-advanced-search-form .selectedCheck label.option {
     color: white !important; }
 
-span.modalExit, span.modalExit2, span.modalExit3, span.modalExit4 {
+span.modalExit, span.modalExit2, span.modalExit3 {
   position: absolute;
   top: 0px;
   right: 0px;
@@ -4354,6 +4365,22 @@ span.modalExit, span.modalExit2, span.modalExit3, span.modalExit4 {
   background-position: center;
   cursor: pointer;
   z-index: 999; }
+
+span.modalExit4 {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  height: 76px;
+  width: 110px;
+  background-color: #FF5370;
+  cursor: pointer;
+  z-index: 999;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 2px; }
 
 section#block-islandora-solr-advanced, #block-block-14, #block-views-meeting-minutes-block-1, .bookContainer {
   position: absolute;

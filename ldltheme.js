@@ -211,7 +211,7 @@ if($('.institution-collection-list-a').length < 4){
       $("<span class='modalExit'/>").insertBefore("#block-islandora-solr-advanced .block-title");
       $("<span class='modalExit2'/>").insertBefore("#block-block-14 h2");
       $("<span class='modalExit3'/>").insertBefore(".about-ldc .view-header");
-      $("<span class='modalExit4'/>").insertBefore("#BRtoolbar");
+      $("<span class='modalExit4'>Exit</span>").insertBefore("#BookReader");
 
 
       if ($('body > #block-islandora-solr-advanced, body > #block-block-14, body > #block-views-meeting-minutes-block-1').length){
@@ -499,7 +499,7 @@ $('a[href*="pages"]').each(function() {
 
     //use bookbox
     $(".bookContainer").insertBefore(".mobileMenu");
-    $(".islandora-book-metadata").remove();    
+    $(".islandora-book-metadata").remove();
     //end bookbox
 
     $("<div class='bookMenu'/>").appendTo(".bookPreview"); //adds label break

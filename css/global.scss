@@ -5420,6 +5420,11 @@ display: none;
 
 //Begin bookViewer
 body.bookViewer{
+  background: black;
+.blurFilter {
+    filter: blur(5px) brightness(0.2);
+    background: black;
+}
 
 a.pageImages {
     display: inline;
@@ -5582,8 +5587,11 @@ overflow: hidden;
 }
 
 #BRnav{
-  background-color: white;
-  box-shadow: none;
+background-color: white;
+    box-shadow: none;
+    position: absolute;
+    top: 30px;
+    width: calc(100% - 120px);
 }
 
 #BRnavCntlBtm{
@@ -5611,19 +5619,14 @@ header#section-header {
   background-position: -5vw 70%;
 }
 
-.bookContainer{
-height: fit-content;
-}
 
 #book-viewer{
-    margin-left: 200px;
 
 }
 
 #BookReader{
   position: relative;
   background-color: transparent;
-  max-width: calc(100vw - 200px);  
 }
 
 .book_headerMenu{
@@ -5663,8 +5666,12 @@ display: flex;
 
 
     #BRtoolbar{
+    width: calc(100% - 120px);
 background-color: transparent;
     box-shadow: none;
+    position: absolute;
+    top: -50px;
+    margin: 0px;
     .logo{
     display: none; //hides logo
     }
@@ -5677,12 +5684,17 @@ background-color: transparent;
   }
 
     #BRcontainer {
-
+    position: relative;
+    top: 30px;
     background: transparent;
     height: 900px; //overrrides default height of 680px
     }
 
 
+
+  .ui-widget-content{
+    border: 0px !important;
+  }
 
 
   }
@@ -5850,7 +5862,7 @@ label.option {
 }
 
 }
-span.modalExit, span.modalExit2, span.modalExit3, span.modalExit4 {
+span.modalExit, span.modalExit2, span.modalExit3 {
     position: absolute;
     top: 0px;
     right: 0px;
@@ -5865,6 +5877,23 @@ span.modalExit, span.modalExit2, span.modalExit3, span.modalExit4 {
   z-index: 999;
 }
 
+
+ span.modalExit4 {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    height: 76px;
+    width: 110px;
+    background-color: #FF5370;
+    cursor: pointer;
+    z-index: 999;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
 
 
 
