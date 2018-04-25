@@ -5549,6 +5549,7 @@ overflow: hidden;
 
 #BRtwopageview{
       border: 1px solid rgba(0, 0, 0, 0.26);
+    top: 60px !important;      
 }
 
 #BRbookcover{
@@ -5590,7 +5591,7 @@ overflow: hidden;
 background-color: white;
     box-shadow: none;
     position: absolute;
-    top: 30px;
+    top: 40px;
     width: calc(100% - 120px);
 }
 
@@ -5620,8 +5621,14 @@ header#section-header {
 }
 
 
-#book-viewer{
+.bookContainer{
 
+}
+
+#book-viewer{
+      max-width: 1200px;
+    position: relative;
+    margin: 0 auto;
 }
 
 #BookReader{
@@ -5667,6 +5674,7 @@ display: flex;
 
     #BRtoolbar{
     width: calc(100% - 120px);
+
 background-color: transparent;
     box-shadow: none;
     position: absolute;
@@ -5680,13 +5688,14 @@ background-color: transparent;
     margin-left: 30px; //book title above the viewer
     }
 
-
+    #BRtoolbarbuttons .BRicon{
+      display: none;
+    }
   }
 
     #BRcontainer {
     position: relative;
-    top: 30px;
-    background: transparent;
+    background: white;
     height: 900px; //overrrides default height of 680px
     }
 
@@ -5698,6 +5707,18 @@ background-color: transparent;
 
 
   }
+
+form#booksearch input[type=search]{
+  border: 0px;
+      padding: 6px;
+
+}
+
+#BRtoolbarbuttons {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
 }
 //End bookViewer
 
@@ -5880,9 +5901,9 @@ span.modalExit, span.modalExit2, span.modalExit3 {
 
  span.modalExit4 {
     position: absolute;
-    top: 5px;
-    right: 5px;
-    height: 76px;
+    top: -45px;
+    right: 0px;
+    height: 40px;
     width: 110px;
     background-color: #FF5370;
     cursor: pointer;

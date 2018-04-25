@@ -4146,7 +4146,8 @@ body.bookViewer {
     padding-left: 10px;
     padding-top: 4px; }
   body.bookViewer #BRtwopageview {
-    border: 1px solid rgba(0, 0, 0, 0.26); }
+    border: 1px solid rgba(0, 0, 0, 0.26);
+    top: 60px !important; }
   body.bookViewer #BRbookcover {
     box-shadow: none; }
   body.bookViewer .institutionSmall {
@@ -4176,7 +4177,7 @@ body.bookViewer {
     background-color: white;
     box-shadow: none;
     position: absolute;
-    top: 30px;
+    top: 40px;
     width: calc(100% - 120px); }
   body.bookViewer #BRnavCntlBtm {
     display: none; }
@@ -4193,6 +4194,10 @@ body.bookViewer {
     width: 100%; }
   body.bookViewer .backgroundDiv {
     background-position: -5vw 70%; }
+  body.bookViewer #book-viewer {
+    max-width: 1200px;
+    position: relative;
+    margin: 0 auto; }
   body.bookViewer #BookReader {
     position: relative;
     background-color: transparent; }
@@ -4234,13 +4239,20 @@ body.bookViewer {
     body.bookViewer #book-viewer #BRtoolbar #BRreturn a {
       text-decoration: none;
       margin-left: 30px; }
+    body.bookViewer #book-viewer #BRtoolbar #BRtoolbarbuttons .BRicon {
+      display: none; }
   body.bookViewer #book-viewer #BRcontainer {
     position: relative;
-    top: 30px;
-    background: transparent;
+    background: white;
     height: 900px; }
   body.bookViewer #book-viewer .ui-widget-content {
     border: 0px !important; }
+  body.bookViewer form#booksearch input[type=search] {
+    border: 0px;
+    padding: 6px; }
+  body.bookViewer #BRtoolbarbuttons {
+    display: flex;
+    flex-direction: row-reverse; }
 
 /*BEGIN test area*/
 section#block-islandora-solr-sort .item-list {
@@ -4368,9 +4380,9 @@ span.modalExit, span.modalExit2, span.modalExit3 {
 
 span.modalExit4 {
   position: absolute;
-  top: 5px;
-  right: 5px;
-  height: 76px;
+  top: -45px;
+  right: 0px;
+  height: 40px;
   width: 110px;
   background-color: #FF5370;
   cursor: pointer;
