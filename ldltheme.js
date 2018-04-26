@@ -537,6 +537,7 @@ $('a[href*="pages"]').each(function() {
 
 $("form#booksearch button").text("Search");
 
+        $(".metadataSidebar .modsSubject a").clone().appendTo(".descContainer .descriptionText").addClass("modsSubject").wrapAll('<div class="tagsGlance"/>');
 
   }
 
