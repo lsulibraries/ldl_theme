@@ -4245,7 +4245,10 @@ body.bookViewer {
   body.bookViewer #book-viewer #BRcontainer {
     position: relative;
     background: white;
-    height: 900px; }
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 900px;
+    width: calc(100% - 20px); }
   body.bookViewer #book-viewer .ui-widget-content {
     border: 0px !important; }
   body.bookViewer #booksearch {

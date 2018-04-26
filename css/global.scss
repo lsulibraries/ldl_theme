@@ -5696,7 +5696,10 @@ background-color: transparent;
     #BRcontainer {
     position: relative;
     background: white;
+        margin-left: 10px;
+    margin-right: 10px;
     height: 900px; //overrrides default height of 680px
+    width: calc(100% - 20px);    
     }
 
 
