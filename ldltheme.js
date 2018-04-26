@@ -535,6 +535,8 @@ $('a[href*="pages"]').each(function() {
         });
 
 
+$("form#booksearch button").text("Search");
+
 
   }
 

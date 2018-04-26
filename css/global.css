@@ -4177,8 +4177,7 @@ body.bookViewer {
     background-color: white;
     box-shadow: none;
     position: absolute;
-    top: 40px;
-    width: calc(100% - 120px); }
+    top: 40px; }
   body.bookViewer #BRnavCntlBtm {
     display: none; }
   body.bookViewer #pageCount {
@@ -4200,7 +4199,8 @@ body.bookViewer {
     margin: 0 auto; }
   body.bookViewer #BookReader {
     position: relative;
-    background-color: transparent; }
+    background-color: transparent;
+    top: 30px; }
   body.bookViewer .book_headerMenu {
     display: flex;
     flex-direction: column;
@@ -4229,6 +4229,7 @@ body.bookViewer {
     background-color: white; }
   body.bookViewer #book-viewer #BRtoolbar {
     width: calc(100% - 120px);
+    display: flex;
     background-color: transparent;
     box-shadow: none;
     position: absolute;
@@ -4247,12 +4248,57 @@ body.bookViewer {
     height: 900px; }
   body.bookViewer #book-viewer .ui-widget-content {
     border: 0px !important; }
+  body.bookViewer #booksearch {
+    display: flex; }
   body.bookViewer form#booksearch input[type=search] {
     border: 0px;
-    padding: 6px; }
+    padding: 6px;
+    height: 40px;
+    margin: 0px;
+    display: flex; }
+  body.bookViewer form#booksearch button {
+    width: 100px;
+    height: 40px;
+    line-height: inherit;
+    border: none;
+    background-color: #327BB3;
+    text-align: center;
+    color: #fff;
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 13px;
+    text-transform: uppercase;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    letter-spacing: 2px;
+    text-shadow: none; }
   body.bookViewer #BRtoolbarbuttons {
     display: flex;
     flex-direction: row-reverse; }
+  body.bookViewer #pagenum {
+    position: fixed;
+    left: calc(50% - 21px);
+    top: 30px;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    height: 40px;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border: 1px solid #ffffff2e;
+    border-radius: 10px; }
+    body.bookViewer #pagenum span {
+      color: #ffffff;
+      font-style: normal;
+      font-family: Roboto;
+      font-weight: 400; }
 
 /*BEGIN test area*/
 section#block-islandora-solr-sort .item-list {
@@ -4380,7 +4426,7 @@ span.modalExit, span.modalExit2, span.modalExit3 {
 
 span.modalExit4 {
   position: absolute;
-  top: -45px;
+  top: -18px;
   right: 0px;
   height: 40px;
   width: 110px;
