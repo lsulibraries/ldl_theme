@@ -4177,7 +4177,9 @@ body.bookViewer {
     background-color: white;
     box-shadow: none;
     position: absolute;
-    top: 40px; }
+    top: 40px;
+    width: calc(100% - 40px);
+    margin-left: 20px; }
   body.bookViewer #BRnavCntlBtm {
     display: none; }
   body.bookViewer #pageCount {
@@ -4234,6 +4236,7 @@ body.bookViewer {
     box-shadow: none;
     position: absolute;
     top: -50px;
+    left: 10px;
     margin: 0px; }
     body.bookViewer #book-viewer #BRtoolbar .logo {
       display: none; }
@@ -4430,7 +4433,7 @@ span.modalExit, span.modalExit2, span.modalExit3 {
 span.modalExit4 {
   position: absolute;
   top: -18px;
-  right: 0px;
+  right: 10px;
   height: 40px;
   width: 110px;
   background-color: #FF5370;

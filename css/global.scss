@@ -5592,6 +5592,8 @@ background-color: white;
     box-shadow: none;
     position: absolute;
     top: 40px;
+    width: calc(100% - 40px);
+    margin-left: 20px;
 }
 
 #BRnavCntlBtm{
@@ -5679,6 +5681,7 @@ background-color: transparent;
     box-shadow: none;
     position: absolute;
     top: -50px;
+    left:10px;
     margin: 0px;
     .logo{
     display: none; //hides logo
@@ -5699,7 +5702,7 @@ background-color: transparent;
         margin-left: 10px;
     margin-right: 10px;
     height: 900px; //overrrides default height of 680px
-    width: calc(100% - 20px);    
+    width: calc(100% - 20px);
     }
 
 
@@ -5956,7 +5959,7 @@ span.modalExit, span.modalExit2, span.modalExit3 {
  span.modalExit4 {
     position: absolute;
     top: -18px;
-    right: 0px;
+    right: 10px;
     height: 40px;
     width: 110px;
     background-color: #FF5370;
