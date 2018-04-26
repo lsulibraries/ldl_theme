@@ -808,6 +808,7 @@ btn4.onclick = function() {
     $("html").removeClass('mobileMenuActive');
     $("#zone-content-wrapper").addClass("noClick"); //somehow not working
     window.dispatchEvent(new Event('resize')); // triggers resize for #book-viewer to adjust to new container size
+    window.scrollTo(0,0); //scrolls to top
 
 }
 

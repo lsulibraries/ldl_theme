@@ -6366,6 +6366,17 @@ span.breadcrumbDivider {
 
 @media screen and (max-width: 1260px) {
 
+body.bookViewer {
+  .bookPreviewContainer{
+    flex-direction: column;
+    .book-thumbnailData{
+    border: 0px;
+    margin-left: 0px;
+    margin-top: 20px;
+    }
+  }
+}
+
 .compoundChild {
   .parentLink, .institutionSmall{
     font-size: 11px !important;
