@@ -3907,7 +3907,7 @@ body.headerversiontwo .tagsGlance .modsSubject {
   line-height: normal;
   border: 1px solid rgba(0, 0, 0, 0.26);
   letter-spacing: 1px; }
-body.headerversiontwo .compoundObject .compoundGlance .tagsGlance a.modsSubject {
+body.headerversiontwo .tagsGlance a.modsSubject {
   color: #676767;
   max-width: none !important; }
 body.headerversiontwo .backCollection {
