@@ -1923,11 +1923,14 @@ a.islandora-pdf-link {
 }
 
 #zone-header {
-  background-color: #1a1a1a;
   width: 100%;
   @include flexbox;
   flex-direction: column;
   margin: 0px;
+}
+
+body:not(.headerversiontwo) #zone-header {
+  background-color: #1a1a1a;
 }
 
 #region-content {
