@@ -1325,9 +1325,6 @@ a.islandora-pdf-link {
   flex-direction: column;
   margin: 0px; }
 
-body:not(.headerversiontwo) #zone-header {
-  background-color: #1a1a1a; }
-
 #region-content {
   width: 100%;
   margin: 0px;
