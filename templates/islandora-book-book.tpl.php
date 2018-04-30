@@ -4,11 +4,12 @@
  * Template file to style output.
  */
 ?>
-<?php print count($viewer_params['pages']); ?>
+<div id="pageCount">
+<?php print count($viewer_params['pages']); ?> pages
+</div>
 <?php if(isset($viewer)): ?>
   <div id="book-viewer">
     <?php print $viewer; ?>
-  </div>
 <?php endif; ?>
 <div class="book-thumbnail">
   <img src="<?php print "/islandora/object/{$object->id}/datastream/TN/view" ?>"></img>

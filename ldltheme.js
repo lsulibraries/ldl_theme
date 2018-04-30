@@ -83,6 +83,7 @@ $(window).on("load", function() {
         $(this).colourBrightness();//
       });
 
+
 });
 
 
@@ -210,6 +211,7 @@ if($('.institution-collection-list-a').length < 4){
       $("<span class='modalExit'/>").insertBefore("#block-islandora-solr-advanced .block-title");
       $("<span class='modalExit2'/>").insertBefore("#block-block-14 h2");
       $("<span class='modalExit3'/>").insertBefore(".about-ldc .view-header");
+      $("<span class='modalExit4'>Exit</span>").insertBefore("#BookReader");
 
 
       if ($('body > #block-islandora-solr-advanced, body > #block-block-14, body > #block-views-meeting-minutes-block-1').length){
@@ -232,15 +234,8 @@ if($('.institution-collection-list-a').length < 4){
 
    if ( ($('.block-islandora-compound-object').length) && ( !$('body').hasClass('audioPDF') ) && ( !$('body').hasClass('datastreamPage') ) ) {
 
-
-
     $("#sideMods").remove();
-
-
     $("body").addClass('compoundObject');
-
-
-
 
     //find widest image
         var widest = null;
@@ -258,10 +253,8 @@ if($('.institution-collection-list-a').length < 4){
             widestWidth = $(this).width();
           }
         });
-
-
     //done finding widest image
-    $("<div class='backgroundDiv'/>").insertBefore(".compoundGallery_header .form-item"); // adds div for item background
+        $("<div class='backgroundDiv'/>").insertBefore(".compoundGallery_header .form-item"); // adds div for item background
     var commentedURL = $('div.widest').find('noscript').addClass('widestIMG').text().split(" ");
     var srcclean = commentedURL[2].match(/"(.*?)"/);
     //assign background image
@@ -275,7 +268,7 @@ if($('.institution-collection-list-a').length < 4){
     var institutionText = $(".depth-2 > a").clone(); //creates href path from breadcrumb depth-2
     var institutionHome = $(".depth-2 > a").attr('href'); //creates href path from breadcrumb depth-2
     $(institutionText).addClass("institutionSmall").insertBefore("a.parentLink"); //adds institutionLabel div to show content type
-    $( ".institutionSmall" ).append( " /" ); //needs to be separated from the a href
+    $( " <span class='breadcrumbDivider'>/</span>" ).insertAfter( ".institutionSmall" ); //needs to be separated from the a href
         $(".compoundObject .contentLabel").addClass("compoundLabel"); //detects contentType and assign new class to contentLabel
         $(".compoundLabel").html("Compound Object"); //text within compoundLabel
         $(".manageParent, ul.tabs").appendTo(".itemMenu").wrapAll('<div class="manageMenu"/>'); //moves the view/ip embargo/manage menu
@@ -430,12 +423,130 @@ if ($('body').hasClass('compoundChild')){
 
    if ( ($('#book-viewer').length) && ( !$('body').hasClass('audioPDF') ) ){
 
-    $("#sideMods").remove();
     $("body").addClass('bookViewer');
+    bookTitle = $(".modsTitle").html(); // finds full title for book
+    $("#BRreturn a").text(bookTitle); // undoes default title truncation
+    $("#book-viewer").wrapAll("<div class='bookContainer'/>"); // adds container to bookViewer
+    window.dispatchEvent(new Event('resize')); // triggers resize for #book-viewer to adjust to new container size
+    $("<div class='book_header'/>").insertBefore(".bookContainer"); //creates header for book items
+    $("<div class='backgroundDiv'/>").appendTo(".book_header"); //creates header for book items
+    thumbnailURL = $(".book-thumbnail img").prop('src');
+    $('.backgroundDiv').css('background-image', 'url(' + thumbnailURL + ')');
+    $("<div class='book_headerMenu'/>").appendTo(".book_header"); //creates header for book items
+    $("#BRreturn a").clone().attr("id", "bookTitle").appendTo(".book_headerMenu"); // undoes default title truncation
+    $("#BRreturn a").remove(); // undoes default title truncation
+    $("<div class='labelContainer'/>").insertBefore(".bookContainer"); //adds label break
+    $("<div class='contentLabel bookLabel'>Book Object</div>").appendTo(".labelContainer"); //adds label break
+    $("#pageCount").appendTo(".bookLabel"); // moves count
+    $("<div class='headerBreadcrumb'/>").appendTo(".book_headerMenu"); //temporarily moves count
+
+    var institutionText = $(".depth-2 > a").clone(); //creates href path from breadcrumb depth-2
+    var institutionHome = $(".depth-2 > a").attr('href'); //creates href path from breadcrumb depth-2
+    var collectionText = $(".depth-3 > a").clone(); //creates href path from breadcrumb depth-2
+    var collectionHome = $(".depth-3 > a").attr('href'); //creates href path from breadcrumb depth-2
+
+    $(institutionText).addClass("institutionSmall").appendTo(".headerBreadcrumb"); //creates institution breadcrumb
+    $( " <span class='breadcrumbDivider'>/</span>" ).insertAfter( ".institutionSmall" ); //needs to be separated from the a href
+    $(collectionText).addClass("institutionSmall").insertAfter(".breadcrumbDivider"); //creates collection breadcrumb
+    $("<div class='userMenu'/>").appendTo(".book_headerMenu"); //temporarily moves count
+    $("<div class='infoToggle userSelect'><div class='iconSelect'></div><div class='textSelect'>details</div></div>").appendTo(".userMenu"); //adds toggle for parent metadata
+    $("#block-system-main > div.tabs > ul.tabs").appendTo(".userMenu").wrapAll('<div class="manageMenu"/>'); //moves the view/ip embargo/manage menu
+    $("#block-system-main > .tabs").remove(); // temporarily removes tabs until menu is set
+
+
+
+
+
+    //begin metadata move
+    $('table').each(function (){
+        $(this).replaceWith( $(this).html()
+            .replace(/<tbody/gi, "<div class='metadataContainer'")
+            .replace(/<tr/gi, "<div class='metadataRow'")
+            .replace(/<\/tr>/gi, "</div>")
+            .replace(/<td/gi, "<span")
+            .replace(/<\/td>/gi, "</span>")
+            .replace(/<\/tbody/gi, "<\/div")
+        );
+    });
+    $('.region-sidebar-first-inner').wrapAll('<div class="metadataSidebar"/>');
+    $(".islandora-book-metadata > .metadataContainer").appendTo(".region-sidebar-first-inner");
+    $("#region-sidebar-first").addClass('nano');
+    $(".nano > .region-inner").appendTo('#side');
+    $('#sideMods, .nano > .region-inner').wrapAll('<div class="metadataSidebar"/>');
+    $(".metadataSidebar").addClass('nano-content'); //adds nanobar
+    $(".metadataRow span:first-child").addClass("metadataTitle");//adds styles to metadata divs
+    $(".metadataRow span:nth-child(2n)").addClass("metadataValue");//adds styles to metadata divs
+    $(".metadataContainer div:first-child").remove();  //removes weird h3 MODS titles
+    //end metadata move
+
+    $("<div class='labelContainer descContainer'/>").insertAfter(".bookContainer"); //adds label break
+    $("<div class='contentLabel bookDesc'>tags</div>").appendTo(".descContainer"); //adds label break
+    $("<div class='descriptionText'/>").insertAfter(".bookDesc"); //adds label break
+    $("#book-viewer div div ul li a").clone().prop({class:"backContainer"}).insertAfter(".descContainer").html("<div class='backCollection'>Back to Collection</div>");
+    $("<div class='bookPreviewContainer'/>").insertAfter(".bookLabel"); //adds label break
+    $("<div class='bookPreview'/>").appendTo(".bookPreviewContainer"); //adds label break
+    $(".book-thumbnail").appendTo(".bookPreview");
+    $("<div class='book-thumbnailData'/>").appendTo(".bookPreviewContainer");
+    //$("#bookTitle").clone().attr("id", "bookTitle2").appendTo(".book-thumbnailData"); // undoes default title truncation
+    $("#pageCount").attr("id", "pageCount2").appendTo(".book-thumbnailData"); // undoes default title truncation
+    //$("<div class='pageImages'>Browse Pages as Images</div>").appendTo("#pageCount2"); // undoes default title truncation
+    $(".metadataSidebar .modsDesc").clone().appendTo(".book-thumbnailData");
+
+$('a[href*="pages"]').each(function() {
+    $(this).addClass("pageImages").text("Browse Pages as Images").appendTo("#pageCount2");
+
+});
+
+    //use bookbox
+    $(".bookContainer").insertBefore(".mobileMenu");
+    $(".islandora-book-metadata").remove();
+    //end bookbox
+
+    $("<div class='bookMenu'/>").appendTo(".bookPreview"); //adds label break
+    //$("#bookTitle").clone().attr("id", "bookmenuTitle").appendTo(".bookMenu"); // undoes default title truncation
+    $("<div class='chooseMenu'/>").appendTo(".bookMenu"); //adds label break
+
+    $("<div class='chooseBook chooseViewer'><div class='chooseIcon'><i class='fas fa-book'></i></div><div class='chooseText'>Open Book Viewer</div></div>").appendTo(".chooseMenu"); //adds label break
+
+
+
+    $('.infoToggle').click(function(){
+          $(this).toggleClass('menuActive');
+          $('#region-sidebar-first').toggleClass('infoOpened');
+          $('body').toggleClass('metaOpened');
+          $(".nano").nanoScroller({ alwaysVisible: false });
+    });
+
+        $("<div id='shareToggle' class='userSelect'><div class='iconSelect'></div><div class='textSelect'>share</div></div>").insertAfter(".infoToggle");
+        $("<div id='share'/>").insertAfter(".userMenu");
+
+
+        $("#share").jsSocials({
+          url: urlhref,
+          text: title,
+          showLabel: false,
+          showCount: "inside",
+          shares: ["twitter", "facebook"]
+        });
+
+        $('#shareToggle').click(function(){
+          $(this).toggleClass('activeMenu');
+          $('#share').toggleClass('shareActive');
+        });
+
+
+$("form#booksearch button").text("Search");
+
+        $(".metadataSidebar .modsSubject a").clone().appendTo(".descContainer .descriptionText").addClass("modsSubject").wrapAll('<div class="tagsGlance"/>');
 
   }
 
 // end book viewer
+
+
+if ( ($('body').hasClass('compoundObject')) || ($('body').hasClass('bookViewer')) ){
+  $('body').addClass('headerversiontwo');
+}
 
 
 
@@ -560,7 +671,12 @@ window.onclick = function(event) {
                 window.history.replaceState({}, document.title, clean_uri);
             }
     }
-
+    if (event.target == modal4 || event.target == page) {
+        modal4.style.display = "none";
+        $(".page").removeClass('blurFilter');
+        $(".parallax-slider").removeClass('darkFilter');
+        $("#zone-content-wrapper").removeClass('noClick');
+    }
 }
 
       $('div.form-type-checkbox input').click(function(){
@@ -673,6 +789,48 @@ $('.about-ldc a').onclick = function() {
 //end modal aboutldc
 
 
+//modal bookviewer
+   if ( ($('#book-viewer').length) && ( !$('body').hasClass('audioPDF') ) ){
+
+// Get the modal
+var modal4 = document.getElementsByClassName('bookContainer')[0];
+// Get the button that opens the modal
+var btn4 = document.getElementsByClassName("bookPreview")[0];
+// Get the <span> element that closes the modal
+var span4 = document.getElementsByClassName("modalExit4")[0];
+var page = document.getElementById('page');
+// When the user clicks on the button, open the modal
+
+
+btn4.onclick = function() {
+    modal4.style.display = "block";
+    $(".page").addClass('blurFilter');
+    $(".parallax-slider").addClass('darkFilter');
+    $("html").removeClass('mobileMenuActive');
+    $("#zone-content-wrapper").addClass("noClick"); //somehow not working
+    window.dispatchEvent(new Event('resize')); // triggers resize for #book-viewer to adjust to new container size
+    window.scrollTo(0,0); //scrolls to top
+
+}
+
+// When the user clicks on <span> (x), close the modal
+span4.onclick = function() {
+    modal4.style.display = "none";
+    $(".page").removeClass('blurFilter');
+    $(".parallax-slider").removeClass('darkFilter');
+    $("button").removeClass('is-active');
+    $("#zone-content-wrapper").removeClass('noClick');
+
+  var uri = window.location.toString();
+  if (uri.indexOf("#") > 0) {
+      var clean_uri = uri.substring(0, uri.indexOf("#"));
+      window.history.replaceState({}, document.title, clean_uri);
+  }
+}
+}
+
+//end modal bookviewer
+
 
 //modal anchor setup
  var hash = window.location.hash;
@@ -698,6 +856,7 @@ $('.about-ldc a').onclick = function() {
               $("#zone-content-wrapper").addClass('noClick');
 
             }
+
 
 
 
@@ -752,6 +911,7 @@ $(".featuredLink").hover(function(){
 });
 
 
+
       $('.mobileMenuIcon, .menuOn').click(function(){
           $("#page").toggleClass('menuOn');
           $("html").toggleClass('mobileMenuActive');
@@ -759,14 +919,13 @@ $(".featuredLink").hover(function(){
               $("#zone-content-wrapper").toggleClass('noClick');
       });
 
-      $('#section-content').click(function(){
-          $('#page').removeClass('menuOn');
-          $("html").removeClass('mobileMenuActive');
-                    $('.mobileMenuIcon').removeClass('is-active');
-                        $("#zone-content-wrapper").removeClass('noClick');
+  $('#section-content').click(function(){
+     $('#page').removeClass('menuOn');
+   $("html").removeClass('mobileMenuActive');
+             $('.mobileMenuIcon').removeClass('is-active');
+                 $("#zone-content-wrapper").removeClass('noClick');
+   });
 
-
-      });
 
 
 if ( $( "#sideMods" ).length ) {

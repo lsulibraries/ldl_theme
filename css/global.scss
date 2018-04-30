@@ -304,10 +304,6 @@ span.bold {
   display: none;
 }
 
-body.logged-in.compoundObject{
-  #section-header{
-    top: 60px!important;
-  }
 
   #region-sidebar-first{
     height: calc(100vh - 150px);
@@ -317,7 +313,7 @@ body.logged-in.compoundObject{
     height: calc(100vh - 190px);
 }
 
-}
+
 
 .logged-in {
 
@@ -3396,6 +3392,7 @@ dd.solr-value {
 
 #page {
   overflow: hidden;
+  transition-duration: 1s;
 }
 
 #region-content::before {
@@ -4007,6 +4004,7 @@ div {
 .userMenu {
     display: flex;
     flex-wrap: wrap;
+margin-top: 10px;
 }
 
 
@@ -4089,6 +4087,7 @@ color: #676767;
 
  .labelContainer {
     margin: 0px 20px;
+    margin-bottom: 20px;
 }
 
 .institutionLabel {
@@ -4163,59 +4162,6 @@ color: #676767;
 
 
 
-.userSelect {
-    padding: 0px 0px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: $offWhite;
-    text-transform: uppercase;
-    display: flex;
-    cursor: pointer;
-    margin-right: 10px;
-    align-items: center;
-    margin: 0px;
-height: 30px;
-margin-right: 10px;
-}
-
-.userSelect:hover {
-color:white;
-border: 1px solid white;
-
-}
-
-.infoToggle:hover{
-  border: 1px solid white;
-}
-
-.iconSelect {
-    width: 36px;
-    height: 50px;
-    background-size: 15px;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.infoToggle .iconSelect{
-      background-image: url($infoLegend);
-}
-
-.downloadSelect .iconSelect{
-      background-image: url($downloadLegend);
-    background-size: 20px;
-}
-
-#shareToggle .iconSelect{
-      background-image: url($shareLegend);
-    background-size: 20px;
-
-}
-
-.textSelect {
-padding-right: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 div.islandora-pdf-object, div.islandora-large-image-object {
     margin-left: 0px;
@@ -4237,19 +4183,7 @@ h1#window-title {
     }
 }
 
-.nano > .nano-pane > .nano-slider {
-    background: #a5a5a5;
-  }
 
-
-.nano > .nano-pane{
-    background: rgba(100, 100, 100, 0.25);
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-right: 10px;
-    width: 6px;
-    height: calc(100vh - 130px);
-    }
 
 a#islandora-compound-next-link {
 
@@ -4294,7 +4228,7 @@ color: white;
 }
 
 header#section-header {
-    position: fixed;
+    position: absolute;
     top: 0px;
     z-index: 888;
     width: 100%;
@@ -4573,25 +4507,9 @@ a.institutionSmall{
       margin: 0px auto;
       }
 
-.backContainer {
-    display: flex !important;
-    justify-content: center;
-    align-items: center;
-    background: $LDLBlue;
-    height: 80px;
-    margin-top: 0px;
-    box-sizing: border-box;
-    border-top: 0px;
-    max-width: 1200px !important;
-    margin: 0px auto;
-    border: 20px solid white;
-    border-top:0px;
-    box-sizing: content-box;
-}
 
-.backCollection {
-    color: white;
-}
+
+
 
       .compoundCount {
     position: absolute;
@@ -4771,6 +4689,8 @@ body.compoundParent{
         width: 35px;
       }
     }
+
+
 
     .compoundSelect{
     height: 150px;
@@ -5230,6 +5150,147 @@ td.modsDesc{
 }
 
 
+
+
+
+//end compoundObject
+
+//new floating header
+body.logged-in.headerversiontwo{
+  #section-header{
+    top: 60px!important;
+  }
+}
+
+body.headerversiontwo{
+
+.backCollection {
+    color: white;
+}
+
+.backContainer {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    background: $LDLBlue;
+    height: 80px;
+    margin-top: 0px;
+    box-sizing: border-box;
+    border-top: 0px;
+    max-width: 1200px !important;
+    margin: 0px auto;
+    border: 20px solid white;
+    border-top:0px;
+    box-sizing: content-box;
+    a{
+      color: white;
+    }
+}
+
+.descriptionText {
+    color: #676767;
+    background: white;
+    position: relative;
+    max-width: 1200px;
+    margin: 0px auto;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+
+a.jssocials-share-link{
+  line-height: inherit;
+}
+
+.userSelect {
+    padding: 0px 0px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: $offWhite;
+    text-transform: uppercase;
+    display: flex;
+    cursor: pointer;
+    margin-right: 10px;
+    align-items: center;
+    margin: 0px;
+}
+
+.userSelect:hover {
+color:white;
+border: 1px solid white;
+
+}
+
+.infoToggle:hover{
+  border: 1px solid white;
+}
+
+.iconSelect {
+    width: 36px;
+    height: 50px;
+    background-size: 15px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.infoToggle .iconSelect{
+      background-image: url($infoLegend);
+}
+
+.downloadSelect .iconSelect{
+      background-image: url($downloadLegend);
+    background-size: 20px;
+}
+
+#shareToggle .iconSelect{
+      background-image: url($shareLegend);
+    background-size: 20px;
+
+}
+
+.textSelect {
+padding-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div#share {
+    display: none;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 10px;
+}
+
+    #shareToggle{
+    height: 23px;
+    margin-left: 10px;
+      .iconSelect{
+        background-size: 15px;
+        width: 35px;
+      }
+    }
+
+.activeMenu {
+background: $darkTransparent;
+color: white;
+}
+
+.shareActive {
+    display: flex!important;
+}
+
+.nano > .nano-pane > .nano-slider {
+    background: #a5a5a5;
+  }
+
+
+.nano > .nano-pane{
+    background: rgba(100, 100, 100, 0.25);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    width: 6px;
+    }
+
 .metadataContainer{
 position: relative;
 padding-top: 10px;
@@ -5253,15 +5314,468 @@ padding-top: 10px;
 
 }
 
+ #region-sidebar-first {
+    transform: translate3d(-800px, 0vw, 0vw);
+    width: 25vw;
+    transition-duration: 1.5s;
+    background: #1a1a1a;
+    color: white;
+    position: fixed;
+    border-right: 1px solid #262626;
+    left: 0px;
+    bottom: 0px;
+    height: calc(100vh - 90px);
+    display: block;
+}
 
-//end compoundObject
+#region-sidebar-first .region-sidebar-first-inner {
+    padding: 40px;
+}
 
+#region-sidebar-first.infoOpened {
+    transform: translate3d(0, 0, 0);
+    transition-duration: 1s;
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+}
+
+
+
+div#block-block-1 a {
+    color: white;
+}
+
+.infoToggle .iconSelect {
+    background-image: url(https://i.imgur.com/zK6anrR.png);
+    width: 36px;
+    background-size: 15px;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 23px;
+
+}
+
+.infoToggle .textSelect {
+    padding-right: 12px;
+    font-size: 13px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#block-islandora-solr-simple{
+  background: white;
+}
+
+  div#zone-header {
+    margin-left: 0vw;
+  transition-duration: 1s;
+  transition-delay:0.2s;
+
+  }
+
+  #zone-content {
+  padding-top: 0px !important;
+  }
+  #region-header-first, #region-header-second, #zone-header {
+  background-color: transparent;
+  }
+  #breadcrumb{
+  display: none;
+  }
+  .site-name a{
+  color: white;
+  }
+  .region-header-second-inner{
+  min-height: 0px;
+  }
+#region-sidebar-first  {
+  height: 100vh;
+
+}
+}
+
+body.headerversiontwo.metaOpened{
+  div#zone-header {
+    margin-left: 25vw;
+    width: calc(75vw - 20px);
+  transition-duration: 1s;
+  transition-delay:0s;
+  }
+}
+
+body.headerversiontwo.metaOpened.compoundChild{
+  div#zone-header{
+display: none;
+}
+
+
+}
+
+//end new header
 
 //Begin bookViewer
 body.bookViewer{
-  #book-viewer{
-    display: none;
+  background: black;
+.blurFilter {
+    filter: blur(5px) brightness(0.2);
+    background: black;
+}
+
+a.pageImages {
+    display: inline;
+    border: 1px solid grey;
+    margin-left: 10px;
+    line-height: 2;
+    padding: 0px 6px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-style: normal;
+
+      color: #676767;
+
+}
+
+
+a#bookTitle2 {
+    cursor: default;
+    color: #676767;
+    font-style: italic;
+    font-size: 20px;
+}
+
+.book-thumbnailData {
+    margin-left: 20px;
+    border-left: 1px solid #dedede;
+    padding-left: 20px;
+    max-width: 680px;
+    color: #676767;
+    font-style: italic;
+}
+
+.bookPreviewContainer {
+    display: flex;
+    max-width: 1200px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.bookPreview {
+    max-width: 1200px;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: fit-content;
+    cursor: pointer;
+    position: relative;
+overflow: hidden;
+.bookMenu {
+    flex-grow: 1;
+    position: absolute;
+    transform: translateY(200px);
+      transition-duration: 1s;
+
+}
+
+.chooseMenu{
+    display: flex;
+    font-size: 13px;
+    color: #ffffff;
+    justify-content: space-between;
+    flex-grow: 2;
+    background: #F78C6C;
+}
+
+.chooseBook {
+    display: flex;
+    box-sizing: border-box;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px 20px;
+}
+
+.chooseIcon{
+    font-family: FontAwesome;
+    font-size: 24px;
+    margin-right: 10px;
+    color: white;
+}
+
+.chooseText{
+    font-size: 14px;
+    line-height: 15px;
+}
+
+.book-thumbnail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.book-thumbnail img {
+    height: 200px;
+}
+
+}
+
+.bookPreview:hover{
+  .bookMenu{
+      transition-duration: 1s;
+
+        flex-grow: 1;
+    position: absolute;
+    transform: translateY(120px);
   }
+}
+
+.manageMenu .tabs {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    padding-left: 10px;
+    padding-top: 4px;
+}
+
+#BRtwopageview{
+      border: 1px solid rgba(0, 0, 0, 0.26);
+    top: 60px !important;
+}
+
+#BRbookcover{
+  box-shadow: none;
+}
+
+.institutionSmall{
+      color: rgba(255, 255, 255, 0.85);
+    padding: 0px;
+    font-weight: normal;
+    font-size: 16px;
+    margin-left: 3px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.headerBreadcrumb {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.bookLabel {
+    background-image: url(https://i.imgur.com/Dm9Wu42.png);
+    background-size: 25px;
+    background-position: 0px 0px;
+}
+
+.bookDesc {
+    background-image: url(https://i.imgur.com/SVHgxtg.png);
+    padding-left: 25px;
+    background-position: 0px 2px;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    padding-bottom: 5px;
+}
+
+#BRnav{
+background-color: white;
+    box-shadow: none;
+    position: absolute;
+    top: 40px;
+    width: calc(100% - 40px);
+    margin-left: 20px;
+}
+
+#BRnavCntlBtm{
+  display: none;
+}
+
+#pageCount{
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+
+#block-system-main{
+  background: white;
+}
+
+header#section-header {
+    position: absolute;
+    top: 0px;
+    z-index: 888;
+    width: 100%;
+}
+
+.backgroundDiv{
+  background-position: -5vw 70%;
+}
+
+
+.bookContainer{
+
+}
+
+#book-viewer{
+      max-width: 1200px;
+    position: relative;
+    margin: 0 auto;
+}
+
+#BookReader{
+  position: relative;
+  background-color: transparent;
+    top: 30px;
+}
+
+.book_headerMenu{
+display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    position: relative;
+    border: 0px !important;
+    max-width: 1200px;
+    margin: 0px 20px;
+    margin-bottom: 20px;
+    transition-duration: 1s;
+    width: 100%;
+
+    #bookTitle{
+    font-size: 40px;
+    color: white;
+    line-height: 37px;
+    }
+}
+
+.book_header{
+  display: flex;
+  justify-content: center;
+  background: $darkTransparent;
+  margin-bottom: 1px;
+  position: relative;
+  overflow: hidden;
+  padding-top: 200px;
+}
+
+  #book-viewer{
+    .BRpageimage {
+        background-color: white; //loading page background color
+    }
+
+
+    #BRtoolbar{
+    width: calc(100% - 120px);
+display: flex;
+background-color: transparent;
+    box-shadow: none;
+    position: absolute;
+    top: -50px;
+    left:10px;
+    margin: 0px;
+    .logo{
+    display: none; //hides logo
+    }
+    #BRreturn a {
+    text-decoration: none; //book title above the viewer
+    margin-left: 30px; //book title above the viewer
+    }
+
+    #BRtoolbarbuttons .BRicon{
+      display: none;
+    }
+  }
+
+    #BRcontainer {
+    position: relative;
+    background: white;
+        margin-left: 10px;
+    margin-right: 10px;
+    height: 900px; //overrrides default height of 680px
+    width: calc(100% - 20px);
+    }
+
+
+
+  .ui-widget-content{
+    border: 0px !important;
+  }
+
+
+  }
+
+#booksearch{
+  display: flex;
+}
+
+form#booksearch input[type=search]{
+  border: 0px;
+      padding: 6px;
+height: 40px;
+margin: 0px;
+display: flex;
+}
+
+
+form#booksearch button{
+      width: 100px;
+    height: 40px;
+    line-height: inherit;
+    border: none;
+    background-color: $LDLBlue;
+    text-align: center;
+    color: #fff;
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 13px;
+    text-transform: uppercase;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+letter-spacing: 2px;
+text-shadow: none;
+}
+#BRtoolbarbuttons {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+#pagenum{
+      position: fixed;
+    left: calc(50% - 21px);
+    top: 30px;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    height: 40px;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border: 1px solid #ffffff2e;
+    border-radius: 10px;
+    span {
+    color: #ffffff;
+    font-style: normal;
+    font-family: Roboto;
+    font-weight: 400;
+    }
+}
+
 }
 //End bookViewer
 
@@ -5438,8 +5952,26 @@ span.modalExit, span.modalExit2, span.modalExit3 {
     background-size: 20px auto;
     background-position: center;
     cursor: pointer;
+  z-index: 999;
 }
 
+
+ span.modalExit4 {
+    position: absolute;
+    top: -18px;
+    right: 10px;
+    height: 40px;
+    width: 110px;
+    background-color: #FF5370;
+    cursor: pointer;
+    z-index: 999;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
 
 
 
@@ -5628,7 +6160,7 @@ align-items: flex-start;
 
 //about ldc
 
-#block-views-meeting-minutes-block-1{
+#block-views-meeting-minutes-block-1, .bookContainer{
  @extend #block-block-14;
 }
 
@@ -5725,7 +6257,20 @@ display: none;
 }
 
 //Begin item 2.0
+span.breadcrumbDivider {
+    color: rgba(255, 255, 255, 0.85);
+    padding: 0px;
+    font-weight: normal;
+    font-size: 16px;
+    margin-left: 4px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    vertical-align: text-top;
+}
 
+.headerBreadcrumb a:hover{
+  text-decoration: underline;
+}
 
 //End item 2.0
 
@@ -5826,6 +6371,17 @@ display: none;
 }
 
 @media screen and (max-width: 1260px) {
+
+body.bookViewer {
+  .bookPreviewContainer{
+    flex-direction: column;
+    .book-thumbnailData{
+    border: 0px;
+    margin-left: 0px;
+    margin-top: 20px;
+    }
+  }
+}
 
 .compoundChild {
   .parentLink, .institutionSmall{
@@ -6701,7 +7257,7 @@ body.compoundParent .compoundGallery_header .compoundParent {
 
 .compoundObject .compoundGallery_header .headerBreadcrumb{
   font-size: 6px !important;
-    line-height: 6px;
+    line-height: 16px;
     padding: 10px 0px;
     display: block;
 }
