@@ -305,16 +305,6 @@ span.bold {
 }
 
 
-  #region-sidebar-first{
-    height: calc(100vh - 150px);
-  }
-
-.nano > .nano-pane {
-    height: calc(100vh - 190px);
-}
-
-
-
 .logged-in {
 
 
@@ -4371,7 +4361,6 @@ padding-left: 48px;
         border-right: 1px solid #262626;
         left: 0px;
         bottom: 0px;
-      height: calc(100vh - 90px);
 
         .region-sidebar-first-inner{
         padding: 40px;
@@ -5155,6 +5144,25 @@ td.modsDesc{
 
 //end compoundObject
 
+body:not(.compoundChildImage) {
+
+.iconSelect{
+    width: 36px;
+    height: 50px;
+    background-size: 15px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+    #shareToggle{
+    height: 23px;
+    margin-left: 10px;
+      .iconSelect{
+        background-size: 15px;
+        width: 35px;
+      }
+    }
+}
 //new floating header
 body.logged-in.headerversiontwo{
   #section-header{
@@ -5245,13 +5253,6 @@ border: 1px solid white;
   border: 1px solid white;
 }
 
-.iconSelect {
-    width: 36px;
-    height: 50px;
-    background-size: 15px;
-    background-repeat: no-repeat;
-    background-position: center;
-}
 
 .infoToggle .iconSelect{
       background-image: url($infoLegend);
@@ -5282,14 +5283,6 @@ div#share {
     padding-right: 10px;
 }
 
-    #shareToggle{
-    height: 23px;
-    margin-left: 10px;
-      .iconSelect{
-        background-size: 15px;
-        width: 35px;
-      }
-    }
 
 .activeMenu {
 background: $darkTransparent;
@@ -5346,7 +5339,7 @@ padding-top: 10px;
     border-right: 1px solid #262626;
     left: 0px;
     bottom: 0px;
-    height: calc(100vh - 90px);
+    height: 100vh !important;
     display: block;
 }
 
