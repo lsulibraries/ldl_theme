@@ -3889,6 +3889,22 @@ body.not-logged-in.compoundChild .manageMenu {
 body.logged-in.headerversiontwo #section-header {
   top: 60px !important; }
 
+body.headerversiontwo #region-sidebar-first a:link, body.headerversiontwo #region-sidebar-first a:visited {
+  color: #438fca; }
+body.headerversiontwo .tagsGlance .modsSubject {
+  padding: 2px 8px;
+  background: white;
+  margin-right: 4px !important;
+  margin-top: 4px;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: normal;
+  border: 1px solid rgba(0, 0, 0, 0.26);
+  letter-spacing: 1px; }
+body.headerversiontwo .compoundObject .compoundGlance .tagsGlance a.modsSubject {
+  color: #676767;
+  max-width: none !important; }
 body.headerversiontwo .backCollection {
   color: white; }
 body.headerversiontwo .backContainer {
