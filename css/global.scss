@@ -5547,10 +5547,17 @@ overflow: hidden;
     padding-top: 4px;
 }
 
-#BRtwopageview{
+#BRtwopageview {
       border: 1px solid rgba(0, 0, 0, 0.26);
     top: 60px !important;
 }
+
+#BRpageview {
+      border: 1px solid rgba(0, 0, 0, 0.26);
+    top: 40px !important;
+    position: relative;
+}
+
 
 #BRbookcover{
   box-shadow: none;
@@ -5592,7 +5599,7 @@ background-color: white;
     box-shadow: none;
     position: absolute;
     top: 40px;
-    width: calc(100% - 40px);
+    width: calc(100% - 30px);
     margin-left: 20px;
 }
 

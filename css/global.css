@@ -4148,6 +4148,10 @@ body.bookViewer {
   body.bookViewer #BRtwopageview {
     border: 1px solid rgba(0, 0, 0, 0.26);
     top: 60px !important; }
+  body.bookViewer #BRpageview {
+    border: 1px solid rgba(0, 0, 0, 0.26);
+    top: 40px !important;
+    position: relative; }
   body.bookViewer #BRbookcover {
     box-shadow: none; }
   body.bookViewer .institutionSmall {
@@ -4178,7 +4182,7 @@ body.bookViewer {
     box-shadow: none;
     position: absolute;
     top: 40px;
-    width: calc(100% - 40px);
+    width: calc(100% - 30px);
     margin-left: 20px; }
   body.bookViewer #BRnavCntlBtm {
     display: none; }
