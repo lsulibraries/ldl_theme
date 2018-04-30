@@ -5419,6 +5419,8 @@ div#block-block-1 a {
   height: 100vh;
 
 }
+
+
 }
 
 body.headerversiontwo.metaOpened{
@@ -5437,6 +5439,8 @@ display: none;
 
 
 }
+
+
 
 //end new header
 
@@ -6686,6 +6690,12 @@ margin-bottom: 20px;
   }
   @media screen and (max-width: 900px) {
 
+
+
+body.bookViewer .bookDesc, body.bookViewer .infoToggle,  body.bookViewer #pagenum{
+  display: none;
+}
+
 .compoundGlance{
   display: none;
 }
@@ -6726,7 +6736,7 @@ margin-top: 40px;
     padding-top: 20px;
 }
 
-  .metadataContainer span.metadataValue {
+ .region-sidebar-first-inner .metadataContainer span.metadataValue {
       color: #676767;
   }
 }

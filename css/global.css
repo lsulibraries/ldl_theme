@@ -4974,6 +4974,9 @@ span.breadcrumbDivider {
   .islandora-pdf-metadata, .islandora-large-image-metadata {
     display: block; } }
 @media screen and (max-width: 1260px) and (max-width: 900px) {
+  body.bookViewer .bookDesc, body.bookViewer .infoToggle, body.bookViewer #pagenum {
+    display: none; }
+
   .compoundGlance {
     display: none; }
 
@@ -5006,7 +5009,7 @@ span.breadcrumbDivider {
     margin-top: 40px; }
     .metadataVertical .metadataContainer.compoundMetadata {
       padding-top: 20px; }
-    .metadataVertical .metadataContainer span.metadataValue {
+    .metadataVertical .region-sidebar-first-inner .metadataContainer span.metadataValue {
       color: #676767; }
 
   .institution-collection-list-item-count {

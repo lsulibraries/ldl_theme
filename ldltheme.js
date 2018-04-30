@@ -538,11 +538,6 @@ $('a[href*="pages"]').each(function() {
 $("form#booksearch button").text("Search");
 $(".metadataSidebar .modsSubject a").clone().appendTo(".descContainer .descriptionText").addClass("modsSubject").wrapAll('<div class="tagsGlance"/>');
 $(".metadataSidebar").clone().prop({ class: "metadataVertical"}).appendTo('.content .descContainer .descriptionText');
-if ($(window).width() < 900) {
-$(".bookDesc").remove();
-$(".infoToggle").remove();
-
-}
 
 }
 
