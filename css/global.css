@@ -4967,8 +4967,34 @@ span.breadcrumbDivider {
   .islandora-pdf-metadata, .islandora-large-image-metadata {
     display: block; } }
 @media screen and (max-width: 1260px) and (max-width: 900px) {
+  .bookContainer {
+    padding-top: 30px !important; }
+
+  #BRtoolbar {
+    width: calc(100% - 20px) !important; }
+
+  #BRcontainer {
+    height: 80vh !important; }
+
+  span.modalExit4 {
+    position: absolute;
+    bottom: -80px !important;
+    right: 10px;
+    height: 50px;
+    width: calc(100% - 20px);
+    top: auto; }
+
+  input#textSrch {
+    width: calc(100vw - 120px); }
+
+  form#booksearch input[type=search] {
+    min-width: 0px !important; }
+
+  #pagenum {
+    display: none !important; }
+
   body.bookViewer .bookDesc, body.bookViewer .infoToggle, body.bookViewer #pagenum {
-    display: none; }
+    display: none !important; }
 
   .compoundGlance {
     display: none; }
