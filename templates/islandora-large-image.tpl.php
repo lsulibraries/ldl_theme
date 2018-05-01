@@ -23,9 +23,14 @@
 ?>
 <div class="islandora-large-image-object islandora" vocab="http://schema.org/" prefix="dcterms: http://purl.org/dc/terms/" typeof="ImageObject">
   <div class="islandora-large-image-content-wrapper clearfix">
-<div class="image-thumbnail">
-  <img src="<?php print "/islandora/object/{$islandora_object}/datastream/TN/view" ?>"></img>
-</div>
+
+<?php if ($parent_collections): ?>
+  <div class="image-thumbnail">  <!--needs a conditional to avoid compoundObject children -->
+    <img src="<?php print "/islandora/object/{$islandora_object}/datastream/TN/view" ?>"></img>  <!--needs a conditional to avoid compoundObject children -->
+  </div>  <!--needs a conditional to avoid compoundObject children -->
+<?php endif; ?>
+
+
 
        <?php print l('<div class="downloadSelect userSelect"><div class="iconSelect"></div><div class="textSelect">Download</div></div>', "islandora/object/{$islandora_object}/datastream/JPG/download",  array('attributes' => array('class' => 'downloadLink', ), 'html' => TRUE,)); ?>
        <?php if ($parent_collections): ?>
