@@ -383,6 +383,7 @@ if($('.institution-collection-list-a').length < 4){
 
 //begin compoundChild
 if ($('body').hasClass('compoundChild')){
+
     $(".compoundChild .compoundLabel").html("Compound <br> Child"); //text within compoundLabel
     $("<div class='compoundArrows userSelect'/>, .infoToggle, #shareToggle").appendTo(".userMenu");
     $(".infoToggle, #shareToggle").appendTo(".userMenu");
@@ -414,6 +415,7 @@ if ($('body').hasClass('compoundChild')){
 
         $(".manageMenu").appendTo(".childHeader");
         $(".manageParent").insertAfter(".manageMenu .tabs");
+    $( ".breadcrumbDivider" ).insertAfter( ".institutionSmall" );
 
   }
   //end compoundChild
@@ -557,7 +559,22 @@ if ( ($('.image-thumbnail').length) && ( !$('body').hasClass('audioPDF') ) ){
   imageTitle = $(".modsTitle").html(); // finds full title for book
   $("<div class='image_headerMenu'/>").appendTo(".image_header"); //creates header for book items
   $("<div class='imageTitle'/>").text(imageTitle).appendTo(".image_headerMenu"); // undoes default title truncation
+  $("<div class='labelContainer'/>").insertBefore(".imageContainer"); //adds label break
+  $("<div class='contentLabel imageLabel'>Large Image Object</div>").appendTo(".labelContainer"); //adds label break
+  $("<div class='headerBreadcrumb'/>").appendTo(".image_headerMenu"); //temporarily moves count
 
+  var institutionText = $(".depth-2 > a").clone(); //creates href path from breadcrumb depth-2
+  var institutionHome = $(".depth-2 > a").attr('href'); //creates href path from breadcrumb depth-2
+  var collectionText = $(".depth-3 > a").clone(); //creates href path from breadcrumb depth-2
+  var collectionHome = $(".depth-3 > a").attr('href'); //creates href path from breadcrumb depth-2
+
+  $(institutionText).addClass("institutionSmall").appendTo(".headerBreadcrumb"); //creates institution breadcrumb
+  $( " <span class='breadcrumbDivider'>/</span>" ).insertAfter( ".institutionSmall" ); //needs to be separated from the a href
+  $(collectionText).addClass("institutionSmall").insertAfter(".breadcrumbDivider"); //creates collection breadcrumb
+  $("<div class='userMenu'/>").appendTo(".book_headerMenu"); //temporarily moves count
+  $("<div class='infoToggle userSelect'><div class='iconSelect'></div><div class='textSelect'>details</div></div>").appendTo(".userMenu"); //adds toggle for parent metadata
+  $("#block-system-main > div.tabs > ul.tabs").appendTo(".userMenu").wrapAll('<div class="manageMenu"/>'); //moves the view/ip embargo/manage menu
+  $("#block-system-main > .tabs").remove(); // temporarily removes tabs until menu is set
 
 }
 

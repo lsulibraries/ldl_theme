@@ -3615,6 +3615,8 @@ body.not-logged-in.compoundChild .manageMenu {
 
 .compoundChild {
   background: white; }
+  .compoundChild span.breadcrumbDivider {
+    color: #676767; }
   .compoundChild #clip {
     display: block !important; }
     .compoundChild #clip img {
@@ -3894,6 +3896,18 @@ body:not(.compoundChildImage) #shareToggle {
 body.logged-in.headerversiontwo #section-header {
   top: 60px !important; }
 
+body.headerversiontwo .headerBreadcrumb {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; }
+body.headerversiontwo .institutionSmall {
+  color: rgba(255, 255, 255, 0.85);
+  padding: 0px;
+  font-weight: normal;
+  font-size: 16px;
+  margin-left: 3px;
+  margin-bottom: 5px;
+  margin-top: 5px; }
 body.headerversiontwo #region-sidebar-first a:link, body.headerversiontwo #region-sidebar-first a:visited {
   color: #438fca; }
 body.headerversiontwo .tagsGlance .modsSubject {
@@ -4164,14 +4178,6 @@ body.bookViewer {
     position: relative; }
   body.bookViewer #BRbookcover {
     box-shadow: none; }
-  body.bookViewer .institutionSmall {
-    color: rgba(255, 255, 255, 0.85);
-    padding: 0px;
-    font-weight: normal;
-    font-size: 16px;
-    margin-left: 3px;
-    margin-bottom: 5px;
-    margin-top: 5px; }
   body.bookViewer .headerBreadcrumb {
     display: flex;
     justify-content: center;
@@ -4320,10 +4326,14 @@ body.bookViewer {
       font-family: Roboto;
       font-weight: 400; }
 
-div.islandora-large-image-content {
+body.largeImage header#section-header {
+  position: absolute;
+  top: 0px;
+  z-index: 888;
+  width: 100%; }
+body.largeImage div.islandora-large-image-content {
   display: none; }
-
-.image_header {
+body.largeImage .image_header {
   display: flex;
   justify-content: center;
   background: rgba(0, 0, 0, 0.06);
@@ -4331,8 +4341,7 @@ div.islandora-large-image-content {
   position: relative;
   overflow: hidden;
   padding-top: 200px; }
-
-.image_headerMenu {
+body.largeImage .image_headerMenu {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -4344,7 +4353,7 @@ div.islandora-large-image-content {
   margin-bottom: 20px;
   transition-duration: 1s;
   width: 100%; }
-  .image_headerMenu .imageTitle {
+  body.largeImage .image_headerMenu .imageTitle {
     font-size: 40px;
     color: white;
     line-height: 37px; }

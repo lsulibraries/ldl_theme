@@ -4718,7 +4718,9 @@ body.not-logged-in.compoundChild{
 
 .compoundChild{
 
-
+span.breadcrumbDivider {
+    color: #676767;
+}
 #clip {
   display: block !important;
   img{
@@ -5171,6 +5173,23 @@ body.logged-in.headerversiontwo{
 }
 
 body.headerversiontwo{
+.headerBreadcrumb {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+.institutionSmall{
+      color: rgba(255, 255, 255, 0.85);
+    padding: 0px;
+    font-weight: normal;
+    font-size: 16px;
+    margin-left: 3px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
 
  #region-sidebar-first a:link,  #region-sidebar-first a:visited {
     color: #438fca;
@@ -5584,15 +5603,7 @@ overflow: hidden;
   box-shadow: none;
 }
 
-.institutionSmall{
-      color: rgba(255, 255, 255, 0.85);
-    padding: 0px;
-    font-weight: normal;
-    font-size: 16px;
-    margin-left: 3px;
-    margin-bottom: 5px;
-    margin-top: 5px;
-}
+
 
 .headerBreadcrumb {
     display: flex;
@@ -5809,6 +5820,13 @@ text-shadow: none;
 
 
 //begin largeImage 2.0
+body.largeImage{
+header#section-header {
+    position: absolute;
+    top: 0px;
+    z-index: 888;
+    width: 100%;
+}
 
 div.islandora-large-image-content{
   display: none;
@@ -5826,22 +5844,25 @@ div.islandora-large-image-content{
 
 .image_headerMenu{
 display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    position: relative;
-    border: 0px !important;
-    max-width: 1200px;
-    margin: 0px 20px;
-    margin-bottom: 20px;
-    transition-duration: 1s;
-    width: 100%;
+flex-direction: column;
+align-items: flex-start;
+flex-wrap: wrap;
+position: relative;
+border: 0px !important;
+max-width: 1200px;
+margin: 0px 20px;
+margin-bottom: 20px;
+transition-duration: 1s;
+width: 100%;
 
-    .imageTitle{
-    font-size: 40px;
-    color: white;
-    line-height: 37px;
-    }
+.imageTitle{
+font-size: 40px;
+color: white;
+line-height: 37px;
+}
+
+
+}
 }
 
 //end largeImage 2.0
