@@ -23,18 +23,22 @@
 ?>
 <div class="islandora-large-image-object islandora" vocab="http://schema.org/" prefix="dcterms: http://purl.org/dc/terms/" typeof="ImageObject">
   <div class="islandora-large-image-content-wrapper clearfix">
+<div class="image-thumbnail">
+  <img src="<?php print "/islandora/object/{$islandora_object}/datastream/TN/view" ?>"></img>
+</div>
+
        <?php print l('<div class="downloadSelect userSelect"><div class="iconSelect"></div><div class="textSelect">Download</div></div>', "islandora/object/{$islandora_object}/datastream/JPG/download",  array('attributes' => array('class' => 'downloadLink', ), 'html' => TRUE,)); ?>
        <?php if ($parent_collections): ?>
       <div class="parent-collections">
         <h2><?php print t('Found in collection(s):'); ?></h2>
-        
+
           <?php foreach ($parent_collections as $collection): ?>
             <p class="collection-title"><?php print l($collection->label, "islandora/object/{$collection->id}"); ?>
           <?php endforeach; ?></p>
-    </div>      
+    </div>
 
     <?php endif; ?>
-    
+
     <?php if ($islandora_content): ?>
       <?php if (isset($image_clip)): ?>
         <?php print $image_clip; ?>
