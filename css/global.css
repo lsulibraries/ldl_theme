@@ -4113,7 +4113,8 @@ body.bookViewer {
       flex-grow: 1;
       position: absolute;
       transform: translateY(200px);
-      transition-duration: 1s; }
+      transition-duration: 1s;
+      left: 0px; }
     body.bookViewer .bookPreview .chooseMenu {
       display: flex;
       font-size: 13px;
