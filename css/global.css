@@ -4968,6 +4968,13 @@ span.breadcrumbDivider {
   .islandora-pdf-metadata, .islandora-large-image-metadata {
     display: block; } }
 @media screen and (max-width: 1260px) and (max-width: 900px) {
+  #bookTitle {
+    font-size: 30px !important;
+    line-height: 35px !important; }
+
+  .book_header, .compoundGallery_header {
+    padding-top: 100px !important; }
+
   .bookContainer {
     padding-top: 30px !important; }
 
