@@ -4320,6 +4320,35 @@ body.bookViewer {
       font-family: Roboto;
       font-weight: 400; }
 
+div.islandora-large-image-content {
+  display: none; }
+
+.image_header {
+  display: flex;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.06);
+  margin-bottom: 1px;
+  position: relative;
+  overflow: hidden;
+  padding-top: 200px; }
+
+.image_headerMenu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  position: relative;
+  border: 0px !important;
+  max-width: 1200px;
+  margin: 0px 20px;
+  margin-bottom: 20px;
+  transition-duration: 1s;
+  width: 100%; }
+  .image_headerMenu .imageTitle {
+    font-size: 40px;
+    color: white;
+    line-height: 37px; }
+
 /*BEGIN test area*/
 section#block-islandora-solr-sort .item-list {
   border: 0px;

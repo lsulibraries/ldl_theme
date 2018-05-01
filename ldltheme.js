@@ -548,14 +548,22 @@ $(".metadataSidebar").clone().prop({ class: "metadataVertical"}).appendTo('.cont
 
 // begin largeImage 2.0
 
-   if ( ($('.image-thumbnail').length) && ( !$('body').hasClass('audioPDF') ) ){
+if ( ($('.image-thumbnail').length) && ( !$('body').hasClass('audioPDF') ) ){
   $('body').addClass('largeImage');
+  $("<div class='image_header'/>").insertBefore(".islandora-large-image-object"); //creates header for image items
+  $("<div class='backgroundDiv'/>").appendTo(".image_header"); //creates header for book items
+  thumbnailURL = $(".image-thumbnail img").prop('src');
+  $('.backgroundDiv').css('background-image', 'url(' + thumbnailURL + ')');
+  imageTitle = $(".modsTitle").html(); // finds full title for book
+  $("<div class='image_headerMenu'/>").appendTo(".image_header"); //creates header for book items
+  $("<div class='imageTitle'/>").text(imageTitle).appendTo(".image_headerMenu"); // undoes default title truncation
 
-   }
+
+}
 
 //end largeImage 2.0
 
-if ( ($('body').hasClass('compoundObject')) || ($('body').hasClass('bookViewer')) ){
+if ( ($('body').hasClass('compoundObject')) || ($('body').hasClass('bookViewer')) || ($('body').hasClass('largeImage'))){
   $('body').addClass('headerversiontwo');
 }
 
