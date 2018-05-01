@@ -546,6 +546,15 @@ $(".metadataSidebar").clone().prop({ class: "metadataVertical"}).appendTo('.cont
 // end book viewer
 
 
+// begin largeImage 2.0
+
+   if ( ($('.image-thumbnail').length) && ( !$('body').hasClass('audioPDF') ) ){
+  $('body').addClass('largeImage');
+
+   }
+
+//end largeImage 2.0
+
 if ( ($('body').hasClass('compoundObject')) || ($('body').hasClass('bookViewer')) ){
   $('body').addClass('headerversiontwo');
 }
