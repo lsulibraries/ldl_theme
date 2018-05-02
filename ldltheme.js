@@ -212,7 +212,7 @@ if($('.institution-collection-list-a').length < 4){
       $("<span class='modalExit2'/>").insertBefore("#block-block-14 h2");
       $("<span class='modalExit3'/>").insertBefore(".about-ldc .view-header");
       $("<span class='modalExit4'>Exit</span>").insertBefore("#BookReader");
-      $("<span class='modalExit5'>Exit</span>").insertBefore(".openseadragon-container");
+      $("<span class='modalExit5'>Exit</span>").insertBefore(".dragonContainer");
 
 
       if ($('body > #block-islandora-solr-advanced, body > #block-block-14, body > #block-views-meeting-minutes-block-1').length){
@@ -657,6 +657,8 @@ $(".metadataSidebar").clone().prop({ class: "metadataVertical"}).appendTo('.cont
 $(".downloadLink").insertAfter(".infoToggle");
 
     //setup for modal
+        $("#islandora-openseadragon > .openseadragon-container").addClass("dragonContainer");
+
     $("#islandora-openseadragon").insertBefore(".mobileMenu");
 }
 
@@ -973,7 +975,7 @@ var page = document.getElementById('page');
 
 
 btn5.onclick = function() {
-    modal5.style.display = "block";
+    modal5.style.display = "flex";
     $(".page").addClass('blurFilter');
     $(".parallax-slider").addClass('darkFilter');
     $("html").removeClass('mobileMenuActive');

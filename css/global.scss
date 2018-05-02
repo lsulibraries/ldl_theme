@@ -5179,16 +5179,24 @@ body.headerversiontwo{
     background: black;
 }
 
-.openseadragon-container {
-    width: 90vw !important;
+.modalExit5{
+background: white;
+}
+
+.dragonContainer {
+    width: 80vw !important;
     margin: 0 auto !important;
     background: rgba(255, 255, 255, 0.18) !important;
     border: 1px solid #616161 !important;
-    height: 90vh !important;
+    height: 80vh !important;
 }
 
 #islandora-openseadragon{
   display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
   position: absolute;
   z-index: 2;
   height: 100vh;
