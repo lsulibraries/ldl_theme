@@ -507,7 +507,6 @@ $('a[href*="pages"]').each(function() {
     $("<div class='bookMenu'/>").appendTo(".bookPreview"); //adds label break
     //$("#bookTitle").clone().attr("id", "bookmenuTitle").appendTo(".bookMenu"); // undoes default title truncation
     $("<div class='chooseMenu'/>").appendTo(".bookMenu"); //adds label break
-
     $("<div class='chooseBook chooseViewer'><div class='chooseIcon'><i class='fas fa-book'></i></div><div class='chooseText'>Open Book Viewer</div></div>").appendTo(".chooseMenu"); //adds label break
 
 
@@ -559,7 +558,6 @@ if ( ($('.image-thumbnail').length) && ( !$('body').hasClass('audioPDF') ) ){
   imageTitle = $(".modsTitle").html(); // finds full title for book
   $("<div class='image_headerMenu'/>").appendTo(".image_header"); //creates header for book items
   $("<div class='imageTitle'/>").text(imageTitle).appendTo(".image_headerMenu"); // undoes default title truncation
-  $("<div class='labelContainer'/>").insertBefore(".imageContainer"); //adds label break
   $("<div class='contentLabel imageLabel'>Large Image Object</div>").appendTo(".labelContainer"); //adds label break
   $("<div class='headerBreadcrumb'/>").appendTo(".image_headerMenu"); //temporarily moves count
 
@@ -571,11 +569,25 @@ if ( ($('.image-thumbnail').length) && ( !$('body').hasClass('audioPDF') ) ){
   $(institutionText).addClass("institutionSmall").appendTo(".headerBreadcrumb"); //creates institution breadcrumb
   $( " <span class='breadcrumbDivider'>/</span>" ).insertAfter( ".institutionSmall" ); //needs to be separated from the a href
   $(collectionText).addClass("institutionSmall").insertAfter(".breadcrumbDivider"); //creates collection breadcrumb
-  $("<div class='userMenu'/>").appendTo(".book_headerMenu"); //temporarily moves count
+  $("<div class='userMenu'/>").appendTo(".image_headerMenu"); //temporarily moves count
   $("<div class='infoToggle userSelect'><div class='iconSelect'></div><div class='textSelect'>details</div></div>").appendTo(".userMenu"); //adds toggle for parent metadata
   $("#block-system-main > div.tabs > ul.tabs").appendTo(".userMenu").wrapAll('<div class="manageMenu"/>'); //moves the view/ip embargo/manage menu
   $("#block-system-main > .tabs").remove(); // temporarily removes tabs until menu is set
+  $(".islandora-large-image-object").addClass("imageContainer"); //adds label break
 
+  $("<div class='labelContainer'/>").insertBefore(".imageContainer"); //adds label break
+  $("<div class='contentLabel imageLabel'>Image Object</div>").appendTo(".labelContainer"); //adds label break
+    $("<div class='imagePreview'/>").appendTo(".imageContainer"); //adds label break
+    $(".image-thumbnail").appendTo(".imagePreview");
+    $("<div class='image-thumbnailData'/>").insertAfter(".imagePreview");
+
+
+
+
+    $("<div class='imageMenu'/>").appendTo(".imagePreview"); //adds label break
+    //$("#bookTitle").clone().attr("id", "bookmenuTitle").appendTo(".bookMenu"); // undoes default title truncation
+    $("<div class='chooseMenu'/>").appendTo(".imageMenu"); //adds label break
+    $("<div class='chooseImage chooseViewer'><div class='chooseIcon'><i class='fa fa-photo'></i></div><div class='chooseText'>Open Image Viewer</div></div>").appendTo(".chooseMenu"); //adds label break
 }
 
 //end largeImage 2.0

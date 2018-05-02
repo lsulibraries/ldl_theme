@@ -3895,6 +3895,74 @@ body:not(.compoundChildImage) #shareToggle {
 body.logged-in.headerversiontwo #section-header {
   top: 60px !important; }
 
+body.headerversiontwo .bookPreview, body.headerversiontwo .imagePreview {
+  max-width: 1200px;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  width: fit-content;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden; }
+  body.headerversiontwo .bookPreview .bookMenu, body.headerversiontwo .bookPreview .imageMenu, body.headerversiontwo .imagePreview .bookMenu, body.headerversiontwo .imagePreview .imageMenu {
+    flex-grow: 1;
+    position: absolute;
+    transition-duration: 1s;
+    left: 0px;
+    bottom: -80px;
+    width: 100%; }
+  body.headerversiontwo .bookPreview .chooseMenu, body.headerversiontwo .imagePreview .chooseMenu {
+    display: flex;
+    font-size: 13px;
+    color: #ffffff;
+    justify-content: space-between;
+    flex-grow: 2;
+    background: #F78C6C; }
+  body.headerversiontwo .bookPreview .chooseBook, body.headerversiontwo .bookPreview .chooseImage, body.headerversiontwo .imagePreview .chooseBook, body.headerversiontwo .imagePreview .chooseImage {
+    display: flex;
+    box-sizing: border-box;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px 20px; }
+  body.headerversiontwo .bookPreview .chooseIcon, body.headerversiontwo .imagePreview .chooseIcon {
+    font-family: FontAwesome;
+    font-size: 24px;
+    margin-right: 10px;
+    color: white; }
+  body.headerversiontwo .bookPreview .chooseText, body.headerversiontwo .imagePreview .chooseText {
+    font-size: 14px;
+    line-height: 15px; }
+  body.headerversiontwo .bookPreview .book-thumbnail, body.headerversiontwo .bookPreview .image-thumbnail, body.headerversiontwo .imagePreview .book-thumbnail, body.headerversiontwo .imagePreview .image-thumbnail {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  body.headerversiontwo .bookPreview .book-thumbnail img, body.headerversiontwo .imagePreview .book-thumbnail img {
+    height: 200px; }
+body.headerversiontwo .bookPreview:hover .bookMenu, body.headerversiontwo .bookPreview:hover .imageMenu, body.headerversiontwo .imagePreview:hover .bookMenu, body.headerversiontwo .imagePreview:hover .imageMenu {
+  transition-duration: 1s;
+  flex-grow: 1;
+  position: absolute;
+  transform: translateY(-80px);
+  width: 100%; }
+body.headerversiontwo .imageContainer {
+  display: flex;
+  max-width: 1200px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 30px; }
+body.headerversiontwo #block-system-main {
+  background: white; }
+body.headerversiontwo .manageMenu .tabs {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  padding-left: 10px;
+  padding-top: 4px; }
 body.headerversiontwo .headerBreadcrumb {
   display: flex;
   justify-content: center;
@@ -4111,63 +4179,6 @@ body.bookViewer {
     align-items: center;
     margin: 0 auto;
     margin-top: 30px; }
-  body.bookViewer .bookPreview {
-    max-width: 1200px;
-    display: flex;
-    box-sizing: border-box;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    width: fit-content;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden; }
-    body.bookViewer .bookPreview .bookMenu {
-      flex-grow: 1;
-      position: absolute;
-      transform: translateY(200px);
-      transition-duration: 1s;
-      left: 0px; }
-    body.bookViewer .bookPreview .chooseMenu {
-      display: flex;
-      font-size: 13px;
-      color: #ffffff;
-      justify-content: space-between;
-      flex-grow: 2;
-      background: #F78C6C; }
-    body.bookViewer .bookPreview .chooseBook {
-      display: flex;
-      box-sizing: border-box;
-      height: 80px;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      padding: 20px 20px; }
-    body.bookViewer .bookPreview .chooseIcon {
-      font-family: FontAwesome;
-      font-size: 24px;
-      margin-right: 10px;
-      color: white; }
-    body.bookViewer .bookPreview .chooseText {
-      font-size: 14px;
-      line-height: 15px; }
-    body.bookViewer .bookPreview .book-thumbnail {
-      display: flex;
-      justify-content: center;
-      align-items: center; }
-    body.bookViewer .bookPreview .book-thumbnail img {
-      height: 200px; }
-  body.bookViewer .bookPreview:hover .bookMenu {
-    transition-duration: 1s;
-    flex-grow: 1;
-    position: absolute;
-    transform: translateY(120px); }
-  body.bookViewer .manageMenu .tabs {
-    margin: 0px;
-    padding: 0px;
-    border: 0px;
-    padding-left: 10px;
-    padding-top: 4px; }
   body.bookViewer #BRtwopageview {
     border: 1px solid rgba(0, 0, 0, 0.26);
     top: 60px !important; }
