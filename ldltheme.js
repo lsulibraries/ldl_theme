@@ -212,6 +212,7 @@ if($('.institution-collection-list-a').length < 4){
       $("<span class='modalExit2'/>").insertBefore("#block-block-14 h2");
       $("<span class='modalExit3'/>").insertBefore(".about-ldc .view-header");
       $("<span class='modalExit4'>Exit</span>").insertBefore("#BookReader");
+      $("<span class='modalExit5'>Exit</span>").insertBefore(".openseadragon-container");
 
 
       if ($('body > #block-islandora-solr-advanced, body > #block-block-14, body > #block-views-meeting-minutes-block-1').length){
@@ -655,7 +656,8 @@ $(".metadataSidebar .modsSubject a").clone().appendTo(".descContainer .descripti
 $(".metadataSidebar").clone().prop({ class: "metadataVertical"}).appendTo('.content .descContainer .descriptionText');
 $(".downloadLink").insertAfter(".infoToggle");
 
-
+    //setup for modal
+    $("#islandora-openseadragon").insertBefore(".mobileMenu");
 }
 
 //end largeImage 2.0
@@ -793,7 +795,15 @@ window.onclick = function(event) {
         $(".parallax-slider").removeClass('darkFilter');
         $("#zone-content-wrapper").removeClass('noClick');
     }
+    if (event.target == modal5 || event.target == page) {
+        modal5.style.display = "none";
+        $(".page").removeClass('blurFilter');
+        $(".parallax-slider").removeClass('darkFilter');
+        $("#zone-content-wrapper").removeClass('noClick');
+    }
+
 }
+
 
       $('div.form-type-checkbox input').click(function(){
           $(this).toggleClass('selectedCheck');
@@ -946,6 +956,50 @@ span4.onclick = function() {
 }
 
 //end modal bookviewer
+
+
+
+//modal imageViewer
+   if ( ($('#islandora-openseadragon').length) && ( !$('body').hasClass('audioPDF') ) ){
+
+// Get the modal
+var modal5 = document.getElementById('islandora-openseadragon');
+// Get the button that opens the modal
+var btn5 = document.getElementsByClassName("imagePreview")[0];
+// Get the <span> element that closes the modal
+var span5 = document.getElementsByClassName("modalExit5")[0];
+var page = document.getElementById('page');
+// When the user clicks on the button, open the modal
+
+
+btn5.onclick = function() {
+    modal5.style.display = "block";
+    $(".page").addClass('blurFilter');
+    $(".parallax-slider").addClass('darkFilter');
+    $("html").removeClass('mobileMenuActive');
+    $("#zone-content-wrapper").addClass("noClick"); //somehow not working
+    window.dispatchEvent(new Event('resize')); // triggers resize for #book-viewer to adjust to new container size
+    window.scrollTo(0,0); //scrolls to top
+
+}
+
+// When the user clicks on <span> (x), close the modal
+span5.onclick = function() {
+    modal5.style.display = "none";
+    $(".page").removeClass('blurFilter');
+    $(".parallax-slider").removeClass('darkFilter');
+    $("button").removeClass('is-active');
+    $("#zone-content-wrapper").removeClass('noClick');
+
+  var uri = window.location.toString();
+  if (uri.indexOf("#") > 0) {
+      var clean_uri = uri.substring(0, uri.indexOf("#"));
+      window.history.replaceState({}, document.title, clean_uri);
+  }
+}
+}
+
+//end modal imageViewer
 
 
 //modal anchor setup
