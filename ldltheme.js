@@ -212,7 +212,6 @@ if($('.institution-collection-list-a').length < 4){
       $("<span class='modalExit2'/>").insertBefore("#block-block-14 h2");
       $("<span class='modalExit3'/>").insertBefore(".about-ldc .view-header");
       $("<span class='modalExit4'>Exit</span>").insertBefore("#BookReader");
-      $("<span class='modalExit5'>Exit</span>").insertBefore(".dragonContainer");
 
 
       if ($('body > #block-islandora-solr-advanced, body > #block-block-14, body > #block-views-meeting-minutes-block-1').length){
@@ -658,6 +657,7 @@ $(".downloadLink").insertAfter(".infoToggle");
 
     //setup for modal
         $("#islandora-openseadragon > .openseadragon-container").addClass("dragonContainer");
+      $("<span class='modalExit5'>Exit</span>").insertBefore(".dragonContainer");
 
     $("#islandora-openseadragon").insertBefore(".mobileMenu");
 }
@@ -794,13 +794,11 @@ window.onclick = function(event) {
     if (event.target == modal4 || event.target == page) {
         modal4.style.display = "none";
         $(".page").removeClass('blurFilter');
-        $(".parallax-slider").removeClass('darkFilter');
         $("#zone-content-wrapper").removeClass('noClick');
     }
     if (event.target == modal5 || event.target == page) {
         modal5.style.display = "none";
         $(".page").removeClass('blurFilter');
-        $(".parallax-slider").removeClass('darkFilter');
         $("#zone-content-wrapper").removeClass('noClick');
     }
 
@@ -933,7 +931,6 @@ var page = document.getElementById('page');
 btn4.onclick = function() {
     modal4.style.display = "block";
     $(".page").addClass('blurFilter');
-    $(".parallax-slider").addClass('darkFilter');
     $("html").removeClass('mobileMenuActive');
     $("#zone-content-wrapper").addClass("noClick"); //somehow not working
     window.dispatchEvent(new Event('resize')); // triggers resize for #book-viewer to adjust to new container size
@@ -977,10 +974,8 @@ var page = document.getElementById('page');
 btn5.onclick = function() {
     modal5.style.display = "flex";
     $(".page").addClass('blurFilter');
-    $(".parallax-slider").addClass('darkFilter');
     $("html").removeClass('mobileMenuActive');
     $("#zone-content-wrapper").addClass("noClick"); //somehow not working
-    window.dispatchEvent(new Event('resize')); // triggers resize for #book-viewer to adjust to new container size
     window.scrollTo(0,0); //scrolls to top
 
 }
