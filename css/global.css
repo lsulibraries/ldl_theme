@@ -3904,7 +3904,8 @@ body.headerversiontwo {
     background: black; }
   body.headerversiontwo .modalExit5 {
     top: calc(10vh - 50px) !important;
-    right: calc(10vw - 10px) !important; }
+    right: calc(10vw - 10px) !important;
+    width: 110px !important; }
   body.headerversiontwo .modalDetails {
     background-color: #327BB3 !important;
     width: 150px !important;
@@ -5079,6 +5080,10 @@ span.breadcrumbDivider {
   .islandora-pdf-metadata, .islandora-large-image-metadata {
     display: block; } }
 @media screen and (max-width: 1260px) and (max-width: 900px) {
+  body.headerversiontwo .dragonContainer {
+    top: 10px !important;
+    width: 85vw !important; }
+
   #bookTitle {
     font-size: 30px !important;
     line-height: 35px !important; }

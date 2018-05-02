@@ -660,7 +660,7 @@ $(".downloadLink").insertAfter(".infoToggle");
 
     $("#islandora-openseadragon > .openseadragon-container").addClass("dragonContainer");
     $("<span class='modalExit5'>Exit</span>").insertBefore(".dragonContainer");
-    $("<span class='modalDetails'>View Details</span>").insertAfter(".modalExit5");
+    $("<span class='modalDetails'>Toggle Details</span>").insertAfter(".modalExit5");
     $("#islandora-openseadragon").insertBefore(".mobileMenu");
     $("<div class='detailsContainer nano'/>").insertAfter(".dragonContainer > .openseadragon-canvas");
     $("<div class='imageDetails nano-content'/>").appendTo(".detailsContainer");

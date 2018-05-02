@@ -5190,6 +5190,7 @@ body.headerversiontwo{
   @extend .modalExit4;
   top: calc(10vh - 50px) !important;
   right: calc(10vw - 10px)  !important;
+  width: 110px !important;
 }
 
 .modalDetails{
@@ -6871,6 +6872,11 @@ margin-bottom: 20px;
     display: block;
   }
   @media screen and (max-width: 900px) {
+body.headerversiontwo  .dragonContainer{
+top: 10px !important;
+width: 85vw !important;
+}
+
 #bookTitle{
   font-size: 30px !important;
   line-height: 35px !important;
