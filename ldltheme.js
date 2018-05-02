@@ -588,6 +588,72 @@ if ( ($('.image-thumbnail').length) && ( !$('body').hasClass('audioPDF') ) ){
     //$("#bookTitle").clone().attr("id", "bookmenuTitle").appendTo(".bookMenu"); // undoes default title truncation
     $("<div class='chooseMenu'/>").appendTo(".imageMenu"); //adds label break
     $("<div class='chooseImage chooseViewer'><div class='chooseIcon'><i class='fa fa-photo'></i></div><div class='chooseText'>Open Image Viewer</div></div>").appendTo(".chooseMenu"); //adds label break
+
+
+
+
+    //begin metadata move
+    $('table').each(function (){
+        $(this).replaceWith( $(this).html()
+            .replace(/<tbody/gi, "<div class='metadataContainer'")
+            .replace(/<tr/gi, "<div class='metadataRow'")
+            .replace(/<\/tr>/gi, "</div>")
+            .replace(/<td/gi, "<span")
+            .replace(/<\/td>/gi, "</span>")
+            .replace(/<\/tbody/gi, "<\/div")
+        );
+    });
+    $(".islandora-book-metadata > .metadataContainer").appendTo(".region-sidebar-first-inner");
+    $("#region-sidebar-first").addClass('nano');
+    $(".nano > .region-inner").appendTo('#side');
+    $('#sideMods, .nano > .region-inner').wrapAll('<div class="metadataSidebar"/>');
+    $(".metadataSidebar").addClass('nano-content'); //adds nanobar
+    $(".metadataRow span:first-child").addClass("metadataTitle");//adds styles to metadata divs
+    $(".metadataRow span:nth-child(2n)").addClass("metadataValue");//adds styles to metadata divs
+    $(".metadataContainer div:first-child").remove();  //removes weird h3 MODS titles
+    $("#sideMods").appendTo(".region-sidebar-first-inner");
+    $("#sideMods").addClass("metadataContainer");
+
+    //end metadata move
+
+
+
+    $('.infoToggle').click(function(){
+          $(this).toggleClass('menuActive');
+          $('#region-sidebar-first').toggleClass('infoOpened');
+          $('body').toggleClass('metaOpened');
+          $(".nano").nanoScroller({ alwaysVisible: false });
+    });
+
+        $("<div id='shareToggle' class='userSelect'><div class='iconSelect'></div><div class='textSelect'>share</div></div>").insertAfter(".infoToggle");
+        $("<div id='share'/>").insertAfter(".userMenu");
+
+
+        $("#share").jsSocials({
+          url: urlhref,
+          text: title,
+          showLabel: false,
+          showCount: "inside",
+          shares: ["twitter", "facebook"]
+        });
+
+        $('#shareToggle').click(function(){
+          $(this).toggleClass('activeMenu');
+          $('#share').toggleClass('shareActive');
+        });
+
+
+    $(".metadataSidebar .modsDesc").clone().appendTo(".image-thumbnailData");
+
+    $("<div class='labelContainer descContainer'/>").insertAfter(".imageContainer"); //adds label break
+    $("<div class='contentLabel bookDesc'>tags</div>").appendTo(".descContainer"); //adds label break
+    $("a.institutionSmall:last-child").clone().prop({class:"backContainer"}).insertAfter(".descContainer").html("<div class='backCollection'>Back to Collection</div>");
+
+    $("<div class='descriptionText'/>").insertAfter(".bookDesc"); //adds label break
+
+$(".metadataSidebar .modsSubject a").clone().appendTo(".descContainer .descriptionText").addClass("modsSubject").wrapAll('<div class="tagsGlance"/>');
+$(".metadataSidebar").clone().prop({ class: "metadataVertical"}).appendTo('.content .descContainer .descriptionText');
+
 }
 
 //end largeImage 2.0

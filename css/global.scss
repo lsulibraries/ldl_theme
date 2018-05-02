@@ -5175,6 +5175,32 @@ body.logged-in.headerversiontwo{
 
 body.headerversiontwo{
 
+#region-header-first input#edit-islandora-simple-search-query--2{
+  color: black !important;
+}
+
+
+.bookDesc {
+    background-image: url(https://i.imgur.com/SVHgxtg.png);
+    padding-left: 25px;
+    background-position: 0px 2px;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    padding-bottom: 5px;
+}
+
+.book-thumbnailData, .image-thumbnailData {
+    margin-left: 20px;
+    border-left: 1px solid #dedede;
+    padding-left: 20px;
+    max-width: 680px;
+    color: #676767;
+    font-style: italic;
+}
+
+#sideMods{
+  padding: 0px;
+}
 
 .bookPreview, .imagePreview {
     max-width: 1200px;
@@ -5437,6 +5463,7 @@ padding-top: 10px;
 
     span.metadataTitle {
     font-weight: 700;
+    color: white;
     }
 
     span.metadataValue {
@@ -5588,14 +5615,7 @@ a#bookTitle2 {
     font-size: 20px;
 }
 
-.book-thumbnailData {
-    margin-left: 20px;
-    border-left: 1px solid #dedede;
-    padding-left: 20px;
-    max-width: 680px;
-    color: #676767;
-    font-style: italic;
-}
+
 
 .bookPreviewContainer {
     display: flex;
@@ -5643,14 +5663,7 @@ a#bookTitle2 {
     background-position: 0px 0px;
 }
 
-.bookDesc {
-    background-image: url(https://i.imgur.com/SVHgxtg.png);
-    padding-left: 25px;
-    background-position: 0px 2px;
-    background-size: 20px;
-    background-repeat: no-repeat;
-    padding-bottom: 5px;
-}
+
 
 #BRnav{
 background-color: white;

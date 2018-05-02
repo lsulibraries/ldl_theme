@@ -3895,6 +3895,24 @@ body:not(.compoundChildImage) #shareToggle {
 body.logged-in.headerversiontwo #section-header {
   top: 60px !important; }
 
+body.headerversiontwo #region-header-first input#edit-islandora-simple-search-query--2 {
+  color: black !important; }
+body.headerversiontwo .bookDesc {
+  background-image: url(https://i.imgur.com/SVHgxtg.png);
+  padding-left: 25px;
+  background-position: 0px 2px;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  padding-bottom: 5px; }
+body.headerversiontwo .book-thumbnailData, body.headerversiontwo .image-thumbnailData {
+  margin-left: 20px;
+  border-left: 1px solid #dedede;
+  padding-left: 20px;
+  max-width: 680px;
+  color: #676767;
+  font-style: italic; }
+body.headerversiontwo #sideMods {
+  padding: 0px; }
 body.headerversiontwo .bookPreview, body.headerversiontwo .imagePreview {
   max-width: 1200px;
   display: flex;
@@ -4073,7 +4091,8 @@ body.headerversiontwo .metadataContainer {
     flex-direction: column;
     margin-bottom: 20px; }
   body.headerversiontwo .metadataContainer span.metadataTitle {
-    font-weight: 700; }
+    font-weight: 700;
+    color: white; }
   body.headerversiontwo .metadataContainer span.metadataValue {
     color: #a5a5a5; }
     body.headerversiontwo .metadataContainer span.metadataValue a {
@@ -4165,13 +4184,6 @@ body.bookViewer {
     color: #676767;
     font-style: italic;
     font-size: 20px; }
-  body.bookViewer .book-thumbnailData {
-    margin-left: 20px;
-    border-left: 1px solid #dedede;
-    padding-left: 20px;
-    max-width: 680px;
-    color: #676767;
-    font-style: italic; }
   body.bookViewer .bookPreviewContainer {
     display: flex;
     max-width: 1200px;
@@ -4197,13 +4209,6 @@ body.bookViewer {
     background-image: url(https://i.imgur.com/Dm9Wu42.png);
     background-size: 25px;
     background-position: 0px 0px; }
-  body.bookViewer .bookDesc {
-    background-image: url(https://i.imgur.com/SVHgxtg.png);
-    padding-left: 25px;
-    background-position: 0px 2px;
-    background-size: 20px;
-    background-repeat: no-repeat;
-    padding-bottom: 5px; }
   body.bookViewer #BRnav {
     background-color: white;
     box-shadow: none;
