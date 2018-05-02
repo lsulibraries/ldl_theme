@@ -3908,6 +3908,9 @@ body.headerversiontwo {
     background: rgba(255, 255, 255, 0.18) !important;
     border: 1px solid #616161 !important;
     height: 80vh !important; }
+  body.headerversiontwo .navigator {
+    background: transparent !important;
+    border: 0px !important; }
   body.headerversiontwo #islandora-openseadragon {
     display: none;
     justify-content: center;
