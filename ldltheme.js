@@ -656,10 +656,25 @@ $(".metadataSidebar").clone().prop({ class: "metadataVertical"}).appendTo('.cont
 $(".downloadLink").insertAfter(".infoToggle");
 
     //setup for modal
-        $("#islandora-openseadragon > .openseadragon-container").addClass("dragonContainer");
-      $("<span class='modalExit5'>Exit</span>").insertBefore(".dragonContainer");
 
+
+    $("#islandora-openseadragon > .openseadragon-container").addClass("dragonContainer");
+    $("<span class='modalExit5'>Exit</span>").insertBefore(".dragonContainer");
+    $("<span class='modalDetails'>View Details</span>").insertAfter(".modalExit5");
     $("#islandora-openseadragon").insertBefore(".mobileMenu");
+    $("<div class='detailsContainer nano'/>").insertAfter(".dragonContainer > .openseadragon-canvas");
+    $("<div class='imageDetails nano-content'/>").appendTo(".detailsContainer");
+$("#region-sidebar-first > .metadataSidebar > .region-inner >  .metadataContainer").clone().prop({id:"imageMeta"}).appendTo(".imageDetails");
+//$("#imageMeta").addClass("nano-content");
+
+        $('.modalDetails').click(function(){
+          $('.imageDetails').toggleClass('imageDetailsActive');
+                    $('.detailsContainer').toggleClass('detailsContainerActive');
+
+  $(".nano").nanoScroller({ alwaysVisible: false });
+        });
+
+    //end modalSetup
 }
 
 //end largeImage 2.0
