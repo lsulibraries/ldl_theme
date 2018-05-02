@@ -4471,9 +4471,7 @@ span#islandora-compound-sequence-position {
               margin-bottom: 5px;
               margin-top:5px;
           }
-a.institutionSmall{
-  @extend a.parentLink;
-}
+
 
           a.parentLink:hover {
               color: white;
@@ -5294,6 +5292,7 @@ width: 100%;
     align-items: center;
     margin: 0 auto;
     margin-top: 30px;
+    padding: 0px 20px;    
 }
 
 #block-system-main{
@@ -5322,6 +5321,7 @@ width: 100%;
     margin-left: 3px;
     margin-bottom: 5px;
     margin-top: 5px;
+    vertical-align: baseline !important;
 }
 
 
@@ -6398,7 +6398,6 @@ span.breadcrumbDivider {
     margin-left: 4px;
     margin-bottom: 5px;
     margin-top: 5px;
-    vertical-align: text-top;
 }
 
 .headerBreadcrumb a:hover{
@@ -6795,7 +6794,7 @@ margin-bottom: 20px;
 
 }
 
-.book_header, .compoundGallery_header{
+.book_header, .compoundGallery_header, .image_header{
   padding-top: 100px !important;
 }
 .bookContainer {
@@ -7435,11 +7434,11 @@ body.compoundParent .compoundGallery_header .compoundParent {
     margin-left: 2px;
 }
 
-.compoundObject .compoundGallery_header .headerBreadcrumb{
+.headerversiontwo .headerBreadcrumb{
   font-size: 6px !important;
     line-height: 16px;
     padding: 10px 0px;
-    display: block;
+    display: block !important;
 }
 
       .compoundSelect {
