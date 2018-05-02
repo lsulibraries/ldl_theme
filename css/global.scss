@@ -3382,7 +3382,8 @@ dd.solr-value {
 
 #page {
   overflow: hidden;
-  transition-duration: 1s;
+
+
 }
 
 #region-content::before {
@@ -5596,6 +5597,7 @@ overflow: hidden;
       border: 1px solid rgba(0, 0, 0, 0.26);
     top: 40px !important;
     position: relative;
+    background: white;
 }
 
 

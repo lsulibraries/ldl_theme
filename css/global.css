@@ -2582,8 +2582,7 @@ dd.solr-value.mods-origininfo-dateissued-ms a {
   color: #808080; }
 
 #page {
-  overflow: hidden;
-  transition-duration: 1s; }
+  overflow: hidden; }
 
 #region-content::before {
   content: "";
@@ -4175,7 +4174,8 @@ body.bookViewer {
   body.bookViewer #BRpageview {
     border: 1px solid rgba(0, 0, 0, 0.26);
     top: 40px !important;
-    position: relative; }
+    position: relative;
+    background: white; }
   body.bookViewer #BRbookcover {
     box-shadow: none; }
   body.bookViewer .headerBreadcrumb {
