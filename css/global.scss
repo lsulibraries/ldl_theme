@@ -6885,6 +6885,31 @@ margin-bottom: 20px;
     display: block;
   }
   @media screen and (max-width: 900px) {
+
+body.largeImage{
+
+.downloadSelect{
+  margin-left: 0px !important;
+  margin-right: 10px !important;
+}
+
+  .tagsGlance, .bookDesc, .infoToggle{
+    display: none;
+  }
+
+.islandora-large-image-object.islandora.imageContainer {
+    flex-direction: column;
+}
+
+.image-thumbnailData{
+  margin-left:0px;
+  margin-top: 10px;
+  border-left: 0px;
+  padding-left: 0px;
+}
+
+}
+
 body.headerversiontwo  .dragonContainer{
 top: 10px !important;
 width: 85vw !important;
