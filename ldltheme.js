@@ -383,6 +383,7 @@ if($('.institution-collection-list-a').length < 4){
 
 //begin compoundChild
 if ($('body').hasClass('compoundChild')){
+
     $(".compoundChild .compoundLabel").html("Compound <br> Child"); //text within compoundLabel
     $("<div class='compoundArrows userSelect'/>, .infoToggle, #shareToggle").appendTo(".userMenu");
     $(".infoToggle, #shareToggle").appendTo(".userMenu");
@@ -414,6 +415,7 @@ if ($('body').hasClass('compoundChild')){
 
         $(".manageMenu").appendTo(".childHeader");
         $(".manageParent").insertAfter(".manageMenu .tabs");
+    $( ".breadcrumbDivider" ).insertAfter( ".institutionSmall" );
 
   }
   //end compoundChild
@@ -505,7 +507,6 @@ $('a[href*="pages"]').each(function() {
     $("<div class='bookMenu'/>").appendTo(".bookPreview"); //adds label break
     //$("#bookTitle").clone().attr("id", "bookmenuTitle").appendTo(".bookMenu"); // undoes default title truncation
     $("<div class='chooseMenu'/>").appendTo(".bookMenu"); //adds label break
-
     $("<div class='chooseBook chooseViewer'><div class='chooseIcon'><i class='fas fa-book'></i></div><div class='chooseText'>Open Book Viewer</div></div>").appendTo(".chooseMenu"); //adds label break
 
 
@@ -546,7 +547,140 @@ $(".metadataSidebar").clone().prop({ class: "metadataVertical"}).appendTo('.cont
 // end book viewer
 
 
-if ( ($('body').hasClass('compoundObject')) || ($('body').hasClass('bookViewer')) ){
+// begin largeImage 2.0
+
+if ( ($('.image-thumbnail').length) && ( !$('body').hasClass('audioPDF') ) ){
+  $('body').addClass('largeImage');
+  $("<div class='image_header'/>").insertBefore(".islandora-large-image-object"); //creates header for image items
+  $("<div class='backgroundDiv'/>").appendTo(".image_header"); //creates header for book items
+  thumbnailURL = $(".image-thumbnail img").prop('src');
+  $('.backgroundDiv').css('background-image', 'url(' + thumbnailURL + ')');
+  imageTitle = $(".modsTitle").html(); // finds full title for book
+  $("<div class='image_headerMenu'/>").appendTo(".image_header"); //creates header for book items
+  $("<div class='imageTitle'/>").text(imageTitle).appendTo(".image_headerMenu"); // undoes default title truncation
+  $("<div class='contentLabel imageLabel'>Large Image Object</div>").appendTo(".labelContainer"); //adds label break
+  $("<div class='headerBreadcrumb'/>").appendTo(".image_headerMenu"); //temporarily moves count
+
+  var institutionText = $(".depth-2 > a").clone(); //creates href path from breadcrumb depth-2
+  var institutionHome = $(".depth-2 > a").attr('href'); //creates href path from breadcrumb depth-2
+  var collectionText = $(".depth-3 > a").clone(); //creates href path from breadcrumb depth-2
+  var collectionHome = $(".depth-3 > a").attr('href'); //creates href path from breadcrumb depth-2
+
+  $(institutionText).addClass("institutionSmall").appendTo(".headerBreadcrumb"); //creates institution breadcrumb
+  $( " <span class='breadcrumbDivider'>/</span>" ).insertAfter( ".institutionSmall" ); //needs to be separated from the a href
+  $(collectionText).addClass("institutionSmall").insertAfter(".breadcrumbDivider"); //creates collection breadcrumb
+  $("<div class='userMenu'/>").appendTo(".image_headerMenu"); //temporarily moves count
+  $("<div class='infoToggle userSelect'><div class='iconSelect'></div><div class='textSelect'>details</div></div>").appendTo(".userMenu"); //adds toggle for parent metadata
+  $("#block-system-main > div.tabs > ul.tabs").appendTo(".userMenu").wrapAll('<div class="manageMenu"/>'); //moves the view/ip embargo/manage menu
+  $("#block-system-main > .tabs").remove(); // temporarily removes tabs until menu is set
+  $(".islandora-large-image-object").addClass("imageContainer"); //adds label break
+
+  $("<div class='labelContainer'/>").insertBefore(".imageContainer"); //adds label break
+  $("<div class='contentLabel imageLabel'>Image Object</div>").appendTo(".labelContainer"); //adds label break
+    $("<div class='imagePreview'/>").appendTo(".imageContainer"); //adds label break
+    $(".image-thumbnail").appendTo(".imagePreview");
+    $("<div class='image-thumbnailData'/>").insertAfter(".imagePreview");
+
+
+
+
+    $("<div class='imageMenu'/>").appendTo(".imagePreview"); //adds label break
+    //$("#bookTitle").clone().attr("id", "bookmenuTitle").appendTo(".bookMenu"); // undoes default title truncation
+    $("<div class='chooseMenu'/>").appendTo(".imageMenu"); //adds label break
+    $("<div class='chooseImage chooseViewer'><div class='chooseIcon'><i class='fa fa-photo'></i></div><div class='chooseText'>Open Image Viewer</div></div>").appendTo(".chooseMenu"); //adds label break
+
+
+
+
+    //begin metadata move
+    $('table').each(function (){
+        $(this).replaceWith( $(this).html()
+            .replace(/<tbody/gi, "<div class='metadataContainer'")
+            .replace(/<tr/gi, "<div class='metadataRow'")
+            .replace(/<\/tr>/gi, "</div>")
+            .replace(/<td/gi, "<span")
+            .replace(/<\/td>/gi, "</span>")
+            .replace(/<\/tbody/gi, "<\/div")
+        );
+    });
+    $(".islandora-book-metadata > .metadataContainer").appendTo(".region-sidebar-first-inner");
+    $("#region-sidebar-first").addClass('nano');
+    $(".nano > .region-inner").appendTo('#side');
+    $('#sideMods, .nano > .region-inner').wrapAll('<div class="metadataSidebar"/>');
+    $(".metadataSidebar").addClass('nano-content'); //adds nanobar
+    $(".metadataRow span:first-child").addClass("metadataTitle");//adds styles to metadata divs
+    $(".metadataRow span:nth-child(2n)").addClass("metadataValue");//adds styles to metadata divs
+    $(".metadataContainer div:first-child").remove();  //removes weird h3 MODS titles
+    $("#sideMods").appendTo(".region-sidebar-first-inner");
+    $("#sideMods").addClass("metadataContainer");
+
+    //end metadata move
+
+
+
+    $('.infoToggle').click(function(){
+          $(this).toggleClass('menuActive');
+          $('#region-sidebar-first').toggleClass('infoOpened');
+          $('body').toggleClass('metaOpened');
+          $(".nano").nanoScroller({ alwaysVisible: false });
+    });
+
+        $("<div id='shareToggle' class='userSelect'><div class='iconSelect'></div><div class='textSelect'>share</div></div>").insertAfter(".infoToggle");
+        $("<div id='share'/>").insertAfter(".userMenu");
+
+
+        $("#share").jsSocials({
+          url: urlhref,
+          text: title,
+          showLabel: false,
+          showCount: "inside",
+          shares: ["twitter", "facebook"]
+        });
+
+        $('#shareToggle').click(function(){
+          $(this).toggleClass('activeMenu');
+          $('#share').toggleClass('shareActive');
+        });
+
+
+    $(".metadataSidebar .modsDesc").clone().appendTo(".image-thumbnailData");
+
+    $("<div class='labelContainer descContainer'/>").insertAfter(".imageContainer"); //adds label break
+    $("<div class='contentLabel bookDesc'>tags</div>").appendTo(".descContainer"); //adds label break
+    $("a.institutionSmall:last-child").clone().prop({class:"backContainer"}).insertAfter(".descContainer").html("<div class='backCollection'>Back to Collection</div>");
+
+    $("<div class='descriptionText'/>").insertAfter(".bookDesc"); //adds label break
+
+$(".metadataSidebar .modsSubject a").clone().appendTo(".descContainer .descriptionText").addClass("modsSubject").wrapAll('<div class="tagsGlance"/>');
+$(".metadataSidebar").clone().prop({ class: "metadataVertical"}).appendTo('.content .descContainer .descriptionText');
+$(".downloadLink").insertAfter(".infoToggle");
+     $("<i class='fa fa-photo' aria-hidden='true'></i>").appendTo(".imageLabel");
+
+    //setup for modal
+
+
+    $("#islandora-openseadragon > .openseadragon-container").addClass("dragonContainer");
+    $("<span class='modalExit5'>Exit</span>").insertBefore(".dragonContainer");
+    $("<span class='modalDetails'>Toggle Details</span>").insertAfter(".modalExit5");
+    $("#islandora-openseadragon").insertBefore(".mobileMenu");
+    $("<div class='detailsContainer nano'/>").insertAfter(".dragonContainer > .openseadragon-canvas");
+    $("<div class='imageDetails nano-content'/>").appendTo(".detailsContainer");
+    $("#region-sidebar-first > .metadataSidebar > .region-inner >  .metadataContainer").clone().prop({id:"imageMeta"}).appendTo(".imageDetails");
+
+
+        $('.modalDetails').click(function(){
+          $('.imageDetails').toggleClass('imageDetailsActive');
+                    $('.detailsContainer').toggleClass('detailsContainerActive');
+
+  $(".nano").nanoScroller({ alwaysVisible: false });
+        });
+
+    //end modalSetup
+}
+
+//end largeImage 2.0
+
+if ( ($('body').hasClass('compoundObject')) || ($('body').hasClass('bookViewer')) || ($('body').hasClass('largeImage'))){
   $('body').addClass('headerversiontwo');
 }
 
@@ -676,10 +810,16 @@ window.onclick = function(event) {
     if (event.target == modal4 || event.target == page) {
         modal4.style.display = "none";
         $(".page").removeClass('blurFilter');
-        $(".parallax-slider").removeClass('darkFilter');
         $("#zone-content-wrapper").removeClass('noClick');
     }
+    if (event.target == modal5 || event.target == page) {
+        modal5.style.display = "none";
+        $(".page").removeClass('blurFilter');
+        $("#zone-content-wrapper").removeClass('noClick');
+    }
+
 }
+
 
       $('div.form-type-checkbox input').click(function(){
           $(this).toggleClass('selectedCheck');
@@ -807,7 +947,6 @@ var page = document.getElementById('page');
 btn4.onclick = function() {
     modal4.style.display = "block";
     $(".page").addClass('blurFilter');
-    $(".parallax-slider").addClass('darkFilter');
     $("html").removeClass('mobileMenuActive');
     $("#zone-content-wrapper").addClass("noClick"); //somehow not working
     window.dispatchEvent(new Event('resize')); // triggers resize for #book-viewer to adjust to new container size
@@ -832,6 +971,48 @@ span4.onclick = function() {
 }
 
 //end modal bookviewer
+
+
+
+//modal imageViewer
+   if ( ($('#islandora-openseadragon').length) && ( !$('body').hasClass('audioPDF') ) ){
+
+// Get the modal
+var modal5 = document.getElementById('islandora-openseadragon');
+// Get the button that opens the modal
+var btn5 = document.getElementsByClassName("imagePreview")[0];
+// Get the <span> element that closes the modal
+var span5 = document.getElementsByClassName("modalExit5")[0];
+var page = document.getElementById('page');
+// When the user clicks on the button, open the modal
+
+
+btn5.onclick = function() {
+    modal5.style.display = "flex";
+    $(".page").addClass('blurFilter');
+    $("html").removeClass('mobileMenuActive');
+    $("#zone-content-wrapper").addClass("noClick"); //somehow not working
+    window.scrollTo(0,0); //scrolls to top
+
+}
+
+// When the user clicks on <span> (x), close the modal
+span5.onclick = function() {
+    modal5.style.display = "none";
+    $(".page").removeClass('blurFilter');
+    $(".parallax-slider").removeClass('darkFilter');
+    $("button").removeClass('is-active');
+    $("#zone-content-wrapper").removeClass('noClick');
+
+  var uri = window.location.toString();
+  if (uri.indexOf("#") > 0) {
+      var clean_uri = uri.substring(0, uri.indexOf("#"));
+      window.history.replaceState({}, document.title, clean_uri);
+  }
+}
+}
+
+//end modal imageViewer
 
 
 //modal anchor setup

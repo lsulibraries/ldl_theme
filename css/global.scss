@@ -3382,7 +3382,8 @@ dd.solr-value {
 
 #page {
   overflow: hidden;
-  transition-duration: 1s;
+
+
 }
 
 #region-content::before {
@@ -4470,9 +4471,7 @@ span#islandora-compound-sequence-position {
               margin-bottom: 5px;
               margin-top:5px;
           }
-a.institutionSmall{
-  @extend a.parentLink;
-}
+
 
           a.parentLink:hover {
               color: white;
@@ -4718,7 +4717,9 @@ body.not-logged-in.compoundChild{
 
 .compoundChild{
 
-
+span.breadcrumbDivider {
+    color: #676767;
+}
 #clip {
   display: block !important;
   img{
@@ -5172,6 +5173,236 @@ body.logged-in.headerversiontwo{
 
 body.headerversiontwo{
 
+
+.metadataVertical{
+  .metadataTitle{
+    color: #676767 !important;
+  }
+}
+
+.blurFilter {
+    filter: blur(5px) brightness(0.2);
+    background: black;
+}
+
+.modalExit5{
+  @extend .modalExit4;
+  top: calc(10vh - 50px) !important;
+  right: calc(10vw - 10px)  !important;
+  width: 110px !important;
+}
+
+.modalDetails{
+  @extend .modalExit4;
+  background-color: $LDLBlue !important;
+    width: 150px !important;
+    top: calc(10vh - 50px) !important;
+    left: calc(10vw - 10px) !important;
+ }
+
+.imageDetails {
+    width: 300px;
+    z-index: 99;
+    position: absolute;
+    background: black;
+    padding: 40px;
+height: calc(80vh - 80px);
+transition-duration: 1s;
+}
+
+.imageDetailsActive{
+transform: translateX(0px);
+transition-duration: 1s;
+}
+
+.dragonContainer {
+    width: 80vw !important;
+    margin: 0 auto !important;
+    background: rgba(255, 255, 255, 0.18) !important;
+    border: 1px solid #616161 !important;
+    height: 80vh !important;
+}
+
+.detailsContainer {
+    width: 300px;
+    padding: 40px;
+    transform: translateX(-380px);
+transition-duration: 1s;
+height: calc(80vh - 80px);
+.nano-pane{
+  z-index: 222;
+}
+}
+
+.detailsContainerActive{
+transform: translateX(0px);
+transition-duration: 1s;
+}
+
+.navigator {
+    background: transparent !important;
+    border: 0px !important;
+}
+
+
+
+  .islandora-openseadragon .openseadragon-canvas canvas {
+background-image: none !important;
+background-color: transparent !important;
+}
+
+#region-header-first input#edit-islandora-simple-search-query--2{
+  color: black !important;
+}
+
+.downloadSelect{
+  margin-left: 10px !important;
+}
+
+.downloadLink .iconSelect{
+  height: 23px !important;
+}
+
+.bookDesc {
+    background-image: url(https://i.imgur.com/SVHgxtg.png);
+    padding-left: 25px;
+    background-position: 0px 2px;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    padding-bottom: 5px;
+}
+
+.book-thumbnailData, .image-thumbnailData {
+    margin-left: 20px;
+    border-left: 1px solid #dedede;
+    padding-left: 20px;
+    max-width: 680px;
+    color: #676767;
+    font-style: italic;
+}
+
+#sideMods{
+  padding: 0px;
+}
+
+.bookPreview, .imagePreview {
+    max-width: 1200px;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: fit-content;
+    cursor: pointer;
+    position: relative;
+overflow: hidden;
+
+
+.bookMenu, .imageMenu{
+    flex-grow: 1;
+    position: absolute;
+      transition-duration: 1s;
+     left:0px;
+     bottom: -80px;
+     width: 100%;
+
+}
+
+
+.chooseMenu{
+    display: flex;
+    font-size: 13px;
+    color: #ffffff;
+    justify-content: space-between;
+    flex-grow: 2;
+    background: #F78C6C;
+}
+
+.chooseBook, .chooseImage {
+    display: flex;
+    box-sizing: border-box;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px 20px;
+}
+
+.chooseIcon{
+    font-family: FontAwesome;
+    font-size: 24px;
+    margin-right: 10px;
+    color: white;
+}
+
+.chooseText{
+    font-size: 14px;
+    line-height: 15px;
+}
+
+.book-thumbnail, .image-thumbnail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.book-thumbnail img{
+    height: 200px;
+}
+
+}
+
+.bookPreview:hover, .imagePreview:hover{
+  .bookMenu, .imageMenu{
+transition-duration: 1s;
+flex-grow: 1;
+position: absolute;
+transform: translateY(-80px);
+width: 100%;
+}
+
+}
+
+.imageContainer{
+      display: flex;
+    max-width: 1200px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 30px;
+    padding: 0px 20px;
+}
+
+#block-system-main{
+  background: white;
+}
+.manageMenu .tabs {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    padding-left: 10px;
+    padding-top: 4px;
+}
+
+.headerBreadcrumb {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+.institutionSmall{
+      color: rgba(255, 255, 255, 0.85);
+    padding: 0px;
+    font-weight: normal;
+    font-size: 16px;
+    margin-left: 3px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    vertical-align: baseline !important;
+}
+
+
  #region-sidebar-first a:link,  #region-sidebar-first a:visited {
     color: #438fca;
 }
@@ -5317,6 +5548,7 @@ padding-top: 10px;
 
     span.metadataTitle {
     font-weight: 700;
+    color: white;
     }
 
     span.metadataValue {
@@ -5439,11 +5671,7 @@ display: none;
 
 //Begin bookViewer
 body.bookViewer{
-  background: black;
-.blurFilter {
-    filter: blur(5px) brightness(0.2);
-    background: black;
-}
+
 
 a.pageImages {
     display: inline;
@@ -5468,14 +5696,7 @@ a#bookTitle2 {
     font-size: 20px;
 }
 
-.book-thumbnailData {
-    margin-left: 20px;
-    border-left: 1px solid #dedede;
-    padding-left: 20px;
-    max-width: 680px;
-    color: #676767;
-    font-style: italic;
-}
+
 
 .bookPreviewContainer {
     display: flex;
@@ -5486,87 +5707,11 @@ a#bookTitle2 {
     margin-top: 30px;
 }
 
-.bookPreview {
-    max-width: 1200px;
-    display: flex;
-    box-sizing: border-box;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    width: fit-content;
-    cursor: pointer;
-    position: relative;
-overflow: hidden;
-.bookMenu {
-    flex-grow: 1;
-    position: absolute;
-    transform: translateY(200px);
-      transition-duration: 1s;
 
-     left:0px;
 
-}
 
-.chooseMenu{
-    display: flex;
-    font-size: 13px;
-    color: #ffffff;
-    justify-content: space-between;
-    flex-grow: 2;
-    background: #F78C6C;
-}
 
-.chooseBook {
-    display: flex;
-    box-sizing: border-box;
-    height: 80px;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 20px 20px;
-}
 
-.chooseIcon{
-    font-family: FontAwesome;
-    font-size: 24px;
-    margin-right: 10px;
-    color: white;
-}
-
-.chooseText{
-    font-size: 14px;
-    line-height: 15px;
-}
-
-.book-thumbnail {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.book-thumbnail img {
-    height: 200px;
-}
-
-}
-
-.bookPreview:hover{
-  .bookMenu{
-      transition-duration: 1s;
-
-        flex-grow: 1;
-    position: absolute;
-    transform: translateY(120px);
-  }
-}
-
-.manageMenu .tabs {
-    margin: 0px;
-    padding: 0px;
-    border: 0px;
-    padding-left: 10px;
-    padding-top: 4px;
-}
 
 #BRtwopageview {
       border: 1px solid rgba(0, 0, 0, 0.26);
@@ -5577,6 +5722,7 @@ overflow: hidden;
       border: 1px solid rgba(0, 0, 0, 0.26);
     top: 40px !important;
     position: relative;
+    background: white;
 }
 
 
@@ -5584,15 +5730,7 @@ overflow: hidden;
   box-shadow: none;
 }
 
-.institutionSmall{
-      color: rgba(255, 255, 255, 0.85);
-    padding: 0px;
-    font-weight: normal;
-    font-size: 16px;
-    margin-left: 3px;
-    margin-bottom: 5px;
-    margin-top: 5px;
-}
+
 
 .headerBreadcrumb {
     display: flex;
@@ -5606,14 +5744,7 @@ overflow: hidden;
     background-position: 0px 0px;
 }
 
-.bookDesc {
-    background-image: url(https://i.imgur.com/SVHgxtg.png);
-    padding-left: 25px;
-    background-position: 0px 2px;
-    background-size: 20px;
-    background-repeat: no-repeat;
-    padding-bottom: 5px;
-}
+
 
 #BRnav{
 background-color: white;
@@ -5807,6 +5938,80 @@ text-shadow: none;
 }
 //End bookViewer
 
+
+//begin largeImage 2.0
+body.largeImage{
+
+  background: black;
+
+#islandora-openseadragon{
+  display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+  position: absolute;
+  z-index: 2;
+  height: 100vh;
+}
+
+.labelContainer{
+  position: relative;
+}
+
+div.labelContainer > .contentLabel > i{
+    position: absolute;
+    top: 5px;
+    left: 0px;
+    font-size: 15px;
+
+}
+
+header#section-header {
+    position: absolute;
+    top: 0px;
+    z-index: 888;
+    width: 100%;
+}
+
+div.islandora-large-image-content{
+  display: none;
+}
+
+.image_header{
+  display: flex;
+  justify-content: center;
+  background: $darkTransparent;
+  margin-bottom: 1px;
+  position: relative;
+  overflow: hidden;
+  padding-top: 200px;
+}
+
+.image_headerMenu{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+flex-wrap: wrap;
+position: relative;
+border: 0px !important;
+max-width: 1200px;
+margin: 0px 20px;
+margin-bottom: 20px;
+transition-duration: 1s;
+width: 100%;
+
+.imageTitle{
+font-size: 40px;
+color: white;
+line-height: 37px;
+}
+
+
+}
+}
+
+//end largeImage 2.0
 
 /*BEGIN test area*/
 
@@ -6293,7 +6498,6 @@ span.breadcrumbDivider {
     margin-left: 4px;
     margin-bottom: 5px;
     margin-top: 5px;
-    vertical-align: text-top;
 }
 
 .headerBreadcrumb a:hover{
@@ -6684,13 +6888,74 @@ margin-bottom: 20px;
     display: block;
   }
   @media screen and (max-width: 900px) {
+
+body.largeImage{
+
+.dragonContainer .detailsContainer{
+  display: none;
+}
+
+.modalExit5{
+  right: 5px !important;
+  top: 5px !important;
+}
+
+.modalDetails{
+  left: 5px !important;
+  top: 5px !important;
+  display: none !important;
+
+}
+.detailsContainer{
+  z-index: 9999;
+}
+
+
+.detailsContainer, .imageDetails{
+    width: auto !important;
+    background: black;
+    top: 40px;
+    height: calc(100vh - 40px);
+    box-sizing: border-box;
+}
+.imageDetails{
+    padding: 20px;
+}
+
+.downloadSelect{
+  margin-left: 0px !important;
+  margin-right: 10px !important;
+}
+
+  .tagsGlance, .bookDesc, .infoToggle{
+    display: none;
+  }
+
+.islandora-large-image-object.islandora.imageContainer {
+    flex-direction: column;
+}
+
+.image-thumbnailData{
+  margin-left:0px;
+  margin-top: 10px;
+  border-left: 0px;
+  padding-left: 0px;
+}
+
+}
+
+body.headerversiontwo  .dragonContainer{
+height: 100vh !important;
+width: 100vw !important;
+}
+
 #bookTitle{
   font-size: 30px !important;
   line-height: 35px !important;
 
 }
 
-.book_header, .compoundGallery_header{
+.book_header, .compoundGallery_header, .image_header{
   padding-top: 100px !important;
 }
 .bookContainer {
@@ -6711,7 +6976,7 @@ span.modalExit4 {
     position: absolute;
     bottom: -80px !important;
     right: 10px;
-    height: 50px;
+    height: 30px;
     width: calc(100% - 20px);
     top: auto;
   }
@@ -7330,11 +7595,11 @@ body.compoundParent .compoundGallery_header .compoundParent {
     margin-left: 2px;
 }
 
-.compoundObject .compoundGallery_header .headerBreadcrumb{
+.headerversiontwo .headerBreadcrumb{
   font-size: 6px !important;
     line-height: 16px;
     padding: 10px 0px;
-    display: block;
+    display: block !important;
 }
 
       .compoundSelect {
