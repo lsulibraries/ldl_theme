@@ -6888,6 +6888,33 @@ margin-bottom: 20px;
 
 body.largeImage{
 
+.modalExit5{
+  right: 5px !important;
+  top: 5px !important;
+}
+
+.modalDetails{
+  left: 5px !important;
+  top: 5px !important;
+  display: none !important;
+
+}
+.detailsContainer{
+  z-index: 9999;
+}
+
+
+.detailsContainer, .imageDetails{
+    width: auto !important;
+    background: black;
+    top: 40px;
+    height: calc(100vh - 40px);
+    box-sizing: border-box;
+}
+.imageDetails{
+    padding: 20px;
+}
+
 .downloadSelect{
   margin-left: 0px !important;
   margin-right: 10px !important;
@@ -6911,8 +6938,8 @@ body.largeImage{
 }
 
 body.headerversiontwo  .dragonContainer{
-top: 10px !important;
-width: 85vw !important;
+height: 100vh !important;
+width: 100vw !important;
 }
 
 #bookTitle{
@@ -6942,7 +6969,7 @@ span.modalExit4 {
     position: absolute;
     bottom: -80px !important;
     right: 10px;
-    height: 50px;
+    height: 30px;
     width: calc(100% - 20px);
     top: auto;
   }

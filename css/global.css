@@ -5087,6 +5087,23 @@ span.breadcrumbDivider {
   .islandora-pdf-metadata, .islandora-large-image-metadata {
     display: block; } }
 @media screen and (max-width: 1260px) and (max-width: 900px) {
+  body.largeImage .modalExit5 {
+    right: 5px !important;
+    top: 5px !important; }
+  body.largeImage .modalDetails {
+    left: 5px !important;
+    top: 5px !important;
+    display: none !important; }
+  body.largeImage .detailsContainer {
+    z-index: 9999; }
+  body.largeImage .detailsContainer, body.largeImage .imageDetails {
+    width: auto !important;
+    background: black;
+    top: 40px;
+    height: calc(100vh - 40px);
+    box-sizing: border-box; }
+  body.largeImage .imageDetails {
+    padding: 20px; }
   body.largeImage .downloadSelect {
     margin-left: 0px !important;
     margin-right: 10px !important; }
@@ -5101,8 +5118,8 @@ span.breadcrumbDivider {
     padding-left: 0px; }
 
   body.headerversiontwo .dragonContainer {
-    top: 10px !important;
-    width: 85vw !important; }
+    height: 100vh !important;
+    width: 100vw !important; }
 
   #bookTitle {
     font-size: 30px !important;
@@ -5124,7 +5141,7 @@ span.breadcrumbDivider {
     position: absolute;
     bottom: -80px !important;
     right: 10px;
-    height: 50px;
+    height: 30px;
     width: calc(100% - 20px);
     top: auto; }
 
