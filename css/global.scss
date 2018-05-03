@@ -5173,7 +5173,6 @@ body.logged-in.headerversiontwo{
 
 body.headerversiontwo{
 
-  background: black;
 
 .metadataVertical{
   .metadataTitle{
@@ -5246,16 +5245,7 @@ transition-duration: 1s;
 }
 
 
-#islandora-openseadragon{
-  display: none;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
 
-  position: absolute;
-  z-index: 2;
-  height: 100vh;
-}
   .islandora-openseadragon .openseadragon-canvas canvas {
 background-image: none !important;
 background-color: transparent !important;
@@ -5951,6 +5941,19 @@ text-shadow: none;
 
 //begin largeImage 2.0
 body.largeImage{
+
+  background: black;
+
+#islandora-openseadragon{
+  display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+  position: absolute;
+  z-index: 2;
+  height: 100vh;
+}
 
 .labelContainer{
   position: relative;
@@ -6887,6 +6890,10 @@ margin-bottom: 20px;
   @media screen and (max-width: 900px) {
 
 body.largeImage{
+
+.dragonContainer .detailsContainer{
+  display: none;
+}
 
 .modalExit5{
   right: 5px !important;
