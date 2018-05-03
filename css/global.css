@@ -4401,6 +4401,13 @@ body.bookViewer #pagenum {
     font-family: Roboto;
     font-weight: 400; }
 
+body.largeImage .labelContainer {
+  position: relative; }
+body.largeImage div.labelContainer > .contentLabel > i {
+  position: absolute;
+  top: 5px;
+  left: 0px;
+  font-size: 15px; }
 body.largeImage header#section-header {
   position: absolute;
   top: 0px;

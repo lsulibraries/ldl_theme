@@ -654,6 +654,7 @@ if ( ($('.image-thumbnail').length) && ( !$('body').hasClass('audioPDF') ) ){
 $(".metadataSidebar .modsSubject a").clone().appendTo(".descContainer .descriptionText").addClass("modsSubject").wrapAll('<div class="tagsGlance"/>');
 $(".metadataSidebar").clone().prop({ class: "metadataVertical"}).appendTo('.content .descContainer .descriptionText');
 $(".downloadLink").insertAfter(".infoToggle");
+     $("<i class='fa fa-photo' aria-hidden='true'></i>").appendTo(".imageLabel");
 
     //setup for modal
 
@@ -664,8 +665,8 @@ $(".downloadLink").insertAfter(".infoToggle");
     $("#islandora-openseadragon").insertBefore(".mobileMenu");
     $("<div class='detailsContainer nano'/>").insertAfter(".dragonContainer > .openseadragon-canvas");
     $("<div class='imageDetails nano-content'/>").appendTo(".detailsContainer");
-$("#region-sidebar-first > .metadataSidebar > .region-inner >  .metadataContainer").clone().prop({id:"imageMeta"}).appendTo(".imageDetails");
-//$("#imageMeta").addClass("nano-content");
+    $("#region-sidebar-first > .metadataSidebar > .region-inner >  .metadataContainer").clone().prop({id:"imageMeta"}).appendTo(".imageDetails");
+
 
         $('.modalDetails').click(function(){
           $('.imageDetails').toggleClass('imageDetailsActive');

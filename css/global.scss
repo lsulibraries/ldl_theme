@@ -5951,6 +5951,19 @@ text-shadow: none;
 
 //begin largeImage 2.0
 body.largeImage{
+
+.labelContainer{
+  position: relative;
+}
+
+div.labelContainer > .contentLabel > i{
+    position: absolute;
+    top: 5px;
+    left: 0px;
+    font-size: 15px;
+
+}
+
 header#section-header {
     position: absolute;
     top: 0px;
