@@ -67,3 +67,20 @@ function alpha_preprocess_html(&$vars) {
     }
   }
 }
+
+
+function alpha_preprocess_islandora_basic_collection_grid(&$variables){
+  $cmodellist = [];
+  foreach($variables['collection_results'] as $key => $value) {
+    $object = islandora_object_load($variables['collection_results'][$key]['object']['value']);
+    $models = $object->models;
+    foreach($models as $k => $v){
+      if($v != 'fedora-system:FedoraObject-3.0'){
+          $cmodellist[$object->id] = $v;
+      }
+    }
+  }
+  foreach($cmodellist as $key => $value){
+    $variables['associated_objects_array'][$key]['model'] = $value;
+  }
+}
