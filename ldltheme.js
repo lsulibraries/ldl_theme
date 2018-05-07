@@ -423,7 +423,7 @@ if ($('body').hasClass('compoundChild')){
 
 // Begin book viewer
 
-   if ( ($('#book-viewer').length) && ( !$('body').hasClass('audioPDF') ) ){
+   if ( ($('#book-viewer').length) && ( !$('body').hasClass('audioPDF') ) && ( !$('.islandora-newspaper-issue').length ) ){
 
     $("body").addClass('bookViewer');
     bookTitle = $(".modsTitle").html(); // finds full title for book
