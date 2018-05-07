@@ -211,7 +211,7 @@ if($('.institution-collection-list-a').length < 4){
       $("<span class='modalExit'/>").insertBefore("#block-islandora-solr-advanced .block-title");
       $("<span class='modalExit2'/>").insertBefore("#block-block-14 h2");
       $("<span class='modalExit3'/>").insertBefore(".about-ldc .view-header");
-      $("<span class='modalExit4'>Exit</span>").insertBefore("#BookReader");
+      $("<span class='modalExit4'>Exit</span>").insertBefore(".bookViewer #BookReader");
 
 
       if ($('body > #block-islandora-solr-advanced, body > #block-block-14, body > #block-views-meeting-minutes-block-1').length){
