@@ -979,7 +979,7 @@ span4.onclick = function() {
 //escape key closes modals
 $(document).keyup(function(e) {
      if (e.keyCode == 27) { // escape key maps to keycode `27`
-    $(".bookContainer, #block-islandora-solr-advanced, #block-views-meeting-minutes-block-1, #block-block-14, #islandora-openseadragon").css("display","none");
+    $(".bookContainer, #block-islandora-solr-advanced, #block-views-meeting-minutes-block-1, #block-block-14, body:not(.compoundChildImage) #islandora-openseadragon").css("display","none");
     $(".page").removeClass('blurFilter');
     $(".parallax-slider").removeClass('darkFilter');
     $("button").removeClass('is-active');

@@ -4446,6 +4446,9 @@ body.largeImage {
       color: white;
       line-height: 37px; }
 
+body.compoundChildImage {
+  background: white !important; }
+
 /*BEGIN test area*/
 section#block-islandora-solr-sort .item-list {
   border: 0px;
