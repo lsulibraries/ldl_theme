@@ -680,6 +680,9 @@ $(".downloadLink").insertAfter(".infoToggle");
 
 //end largeImage 2.0
 
+
+
+
 if ( ($('body').hasClass('compoundObject')) || ($('body').hasClass('bookViewer')) || ($('body').hasClass('largeImage'))){
   $('body').addClass('headerversiontwo');
 }
@@ -1042,6 +1045,12 @@ span5.onclick = function() {
 
 
 
+
+//begin error messages
+//$('#messages').insertBefore('#section-content');
+//$("<i class='fa fa-exclamation-triangle'></i>").prependTo("#messages .status");
+
+//end error messages
 
 //rotator
 

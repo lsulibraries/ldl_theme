@@ -46,7 +46,6 @@ $manageLegend: 'https://i.imgur.com/3fcNTbJ.png';
 $infoLegend: 'https://i.imgur.com/zK6anrR.png';
 $downloadLegend: 'https://i.imgur.com/rthA4J4.png';
 $infoLegend2:'https://i.imgur.com/OnZTeYf.png';
-
 $descriptionLegend:'https://i.imgur.com/SVHgxtg.png';
 
 $darkTransparent: rgba(0, 0, 0, .06);
@@ -5166,9 +5165,17 @@ body:not(.compoundChildImage) {
 }
 //new floating header
 body.logged-in.headerversiontwo{
+#toolbar{
+      z-index: 9999 !important;
+}
+
   #section-header{
     top: 60px!important;
   }
+.metadataContainer {
+    padding-top: 30px !important;
+}
+
 }
 
 body.headerversiontwo{
@@ -6012,6 +6019,24 @@ line-height: 37px;
 }
 
 //end largeImage 2.0
+
+//begin error messages
+///#messages{
+  ///position: relative;
+  ///margin: 0px;
+  ///width: 100%;
+///background: #21252b;
+///
+  ///.messages{
+    ///background: #282c34;
+  ///}
+///}
+
+//body.front #messages{
+  //position: absolute;
+  //top: 200px;
+//}
+//end error messages
 
 /*BEGIN test area*/
 

@@ -3892,8 +3892,12 @@ body:not(.compoundChildImage) #shareToggle {
     background-size: 15px;
     width: 35px; }
 
+body.logged-in.headerversiontwo #toolbar {
+  z-index: 9999 !important; }
 body.logged-in.headerversiontwo #section-header {
   top: 60px !important; }
+body.logged-in.headerversiontwo .metadataContainer {
+  padding-top: 30px !important; }
 
 body.headerversiontwo .metadataVertical .metadataTitle {
   color: #676767 !important; }
