@@ -4200,7 +4200,7 @@ body.headerversiontwo {
   body.headerversiontwo div#zone-header {
     margin-left: 0vw;
     transition-duration: 1s;
-    transition-delay: 0.2s; }
+    transition-delay: 0.1s; }
   body.headerversiontwo #zone-content {
     padding-top: 0px !important; }
   body.headerversiontwo #region-header-first, body.headerversiontwo #region-header-second, body.headerversiontwo #zone-header {
