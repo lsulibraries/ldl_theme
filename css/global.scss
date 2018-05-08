@@ -6068,22 +6068,42 @@ line-height: 37px;
 
 //end largeImage 2.0
 
+//begin OCR styles
+div#BRfulltext .BRfloatMeta{
+  max-height: 1200px;
+}
 
+#cboxContent{
+  padding: 0px !important;
+}
+.textLeft, .textRight {
+    padding: 20px !important;
+    box-sizing: border-box;
+}
 
 #cboxContent{
     border: 0px;
     border-radius: 0px;
 }
 div.BRfloatHead {
-    background-color: #fff !important;
-    padding: 10px 10px 15px;
-    color: #676767;
+  background-color: #676767!important;
+    padding: 15px 10px 15px;
+    color: #ffffff;
+    font-family: Roboto;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 13px;
+    padding-left: 30px;
+    letter-spacing: 2px;
+    margin: 0px;
 }
 a.floatShut{
-      filter: grayscale(1) brightness(0.3);
+      filter: grayscale(1) brightness(1);
 }
 
-
+ a.floatShut:hover {
+    background-position: inherit !important;
+}
 
 button.BRicon.full_text.cboxElement {
   display: flex !important;
@@ -6098,6 +6118,8 @@ button.BRicon.full_text.cboxElement {
     justify-content: center;
     align-items: center;
 }
+
+//end OCR styles
 
 body.compoundChildImage {
   background: white !important;
