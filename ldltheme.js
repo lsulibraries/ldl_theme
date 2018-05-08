@@ -934,6 +934,8 @@ $('.about-ldc a').onclick = function() {
 //end modal aboutldc
 
 
+
+
 //modal bookviewer
    if ( ($('#book-viewer').length) && ( !$('body').hasClass('audioPDF') ) ){
 
@@ -972,6 +974,20 @@ span4.onclick = function() {
   }
 }
 }
+
+
+//escape key closes modals
+$(document).keyup(function(e) {
+     if (e.keyCode == 27) { // escape key maps to keycode `27`
+    $(".bookContainer, #block-islandora-solr-advanced, #block-views-meeting-minutes-block-1, #block-block-14, #islandora-openseadragon").css("display","none");
+    $(".page").removeClass('blurFilter');
+    $(".parallax-slider").removeClass('darkFilter');
+    $("button").removeClass('is-active');
+    $("#zone-content-wrapper").removeClass('noClick');
+  }
+});
+
+
 
 //end modal bookviewer
 
