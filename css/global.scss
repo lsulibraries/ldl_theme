@@ -5675,9 +5675,57 @@ display: none;
 
 
 //end new header
+#BRpager .ui-slider-handle {
+    position: absolute;
+    width: 28px;
+    height: 35px;
+    top: -3px;
+    margin-left: -19px;
+     background: url(https://i.imgur.com/uQgtRjj.png) !important;
+     border: 0px;
+    z-index: 103;
+}
 
+div#BRnavline {
+    position: relative;
+    height: 10px;
+    width: auto;
+    background-color: #e7e7e7;
+    top: -16px;
+    margin: 0 10px;
+    border-radius: 90px;
+    border: 1px solid #b5b5b5;
+}
+
+div#BRpage {
+    position: relative;
+    top: 8px;
+    right: 4px;
+}
+
+
+
+#BRtoolbar{
+  overflow: visible;
+}
+
+.BRnavend{
+  display: none;
+}
+
+.BRicon{
+  background-image: url(https://i.imgur.com/IhxEDq2.png) !important;
+
+}
+
+.twopg {
+    position: relative !important;
+    right: 3px !important;
+}
 //Begin bookViewer
 body.bookViewer{
+
+
 
 
 a.pageImages {
@@ -5758,8 +5806,9 @@ background-color: white;
     box-shadow: none;
     position: absolute;
     top: 40px;
-    width: calc(100% - 30px);
-    margin-left: 20px;
+width: calc(100% - 20px);
+    margin-left: 10px;
+    padding-bottom: 20px;
 }
 
 #BRnavCntlBtm{
@@ -5870,7 +5919,6 @@ background-color: transparent;
     height: 900px; //overrrides default height of 680px
     width: calc(100% - 20px);
     }
-
 
 
   .ui-widget-content{
@@ -6019,6 +6067,37 @@ line-height: 37px;
 }
 
 //end largeImage 2.0
+
+
+
+#cboxContent{
+    border: 0px;
+    border-radius: 0px;
+}
+div.BRfloatHead {
+    background-color: #fff !important;
+    padding: 10px 10px 15px;
+    color: #676767;
+}
+a.floatShut{
+      filter: grayscale(1) brightness(0.3);
+}
+
+
+
+button.BRicon.full_text.cboxElement {
+  display: flex !important;
+    position: absolute;
+    background: white !important;
+    right: 20px;
+    top: 2px;
+    z-index: 999;
+    border-radius: 0px;
+    height: 40px;
+    width: 150px;
+    justify-content: center;
+    align-items: center;
+}
 
 body.compoundChildImage {
   background: white !important;
@@ -6920,7 +6999,15 @@ margin-bottom: 20px;
   }
   @media screen and (max-width: 900px) {
 
+button.BRicon.full_text.cboxElement{
+  display: none !important;
+}
+
 body.largeImage{
+.imageTitle{
+    font-size: 30px !important;
+    line-height: 35px !important;
+}
 
 .dragonContainer .detailsContainer{
   display: none;

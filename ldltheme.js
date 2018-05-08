@@ -536,15 +536,26 @@ $('a[href*="pages"]').each(function() {
         });
 
 
+
 $("form#booksearch button").text("Search");
 $(".metadataSidebar .modsSubject a").clone().appendTo(".descContainer .descriptionText").addClass("modsSubject").wrapAll('<div class="tagsGlance"/>');
 $(".metadataSidebar").clone().prop({ class: "metadataVertical"}).appendTo('.content .descContainer .descriptionText');
 
-}
+$("button .BRicon").css("background-image", "url(https://i.imgur.com/cQTyYRT.png)");
 
+$("button.BRicon.full_text.cboxElement").html("VIEW TEXT ONLY");
 
+//begin OCR detection - does not work, timeout is not dependable
+ // $(".full_text").trigger( "click" );
+//setTimeout(function() {
+ // if ( ($('div.textLeft').html() == '') && ( $('div.textRight').html() == '' ) ){
+ // $('body').addClass('noOCR');
+  //$(".floatShut").trigger( "click" );
+ // }
+//}, 1);
+//end OCR detection
 
-// end book viewer
+} // end book viewer
 
 
 // begin largeImage 2.0
