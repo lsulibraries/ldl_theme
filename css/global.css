@@ -4485,6 +4485,11 @@ body.largeImage {
       color: white;
       line-height: 37px; }
 
+div#colorbox {
+  top: 0px !important;
+  margin-top: 125px;
+  padding-top: 125px; }
+
 #cboxContent {
   padding: 0px !important; }
 

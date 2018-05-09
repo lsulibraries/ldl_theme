@@ -545,6 +545,7 @@ $("button .BRicon").css("background-image", "url(https://i.imgur.com/cQTyYRT.png
 
 $("button.BRicon.full_text.cboxElement").html("VIEW TEXT ONLY");
 
+
 //begin OCR detection - does not work, timeout is not dependable
  // $(".full_text").trigger( "click" );
 //setTimeout(function() {
@@ -967,7 +968,6 @@ btn4.onclick = function() {
     $("#zone-content-wrapper").addClass("noClick"); //somehow not working
     window.dispatchEvent(new Event('resize')); // triggers resize for #book-viewer to adjust to new container size
     window.scrollTo(0,0); //scrolls to top
-
 }
 
 // When the user clicks on <span> (x), close the modal
