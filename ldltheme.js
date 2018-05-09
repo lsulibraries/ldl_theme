@@ -425,7 +425,7 @@ if ($('body').hasClass('compoundChild')){
    if ( ($('#book-viewer').length) && ( !$('body').hasClass('audioPDF') ) && ( !$('.islandora-newspaper-issue').length ) ){
 
     $("body").addClass('bookViewer');
-    $("<span class='modalExit4'>Exit</span>").insertBefore("body.bookViewer #BookReader");
+    $("<span class='modalExit4'><i class='fa fa-times'></i> Exit</span>").insertBefore("body.bookViewer #BookReader");
     bookTitle = $(".modsTitle").html(); // finds full title for book
     $("#BRreturn a").text(bookTitle); // undoes default title truncation
     $("#book-viewer").wrapAll("<div class='bookContainer'/>"); // adds container to bookViewer
@@ -537,13 +537,55 @@ $('a[href*="pages"]').each(function() {
 
 
 
-$("form#booksearch button").text("Search");
 $(".metadataSidebar .modsSubject a").clone().appendTo(".descContainer .descriptionText").addClass("modsSubject").wrapAll('<div class="tagsGlance"/>');
 $(".metadataSidebar").clone().prop({ class: "metadataVertical"}).appendTo('.content .descContainer .descriptionText');
 
 $("button .BRicon").css("background-image", "url(https://i.imgur.com/cQTyYRT.png)");
 
-$("button.BRicon.full_text.cboxElement").html("VIEW TEXT ONLY");
+$("button.BRicon.full_text.cboxElement").html("<i class='fa fa-align-left'></i> VIEW TEXT ONLY");
+$("<div class='booksearchToggle'/>").insertBefore("#textSrch");
+$("form#booksearch .booksearchToggle").html("<i class='fa fa-search'></i>Search");
+$("form#booksearch button").html("GO");
+
+$("<div class='viewerTitle'/>").insertBefore("#BRtoolbar");
+$(".viewerTitle").text(bookTitle);
+
+
+    $("<span class='bookDetails'><i class='fa fa-toggle-off'></i>Toggle Details</span>").insertAfter("#btnSrch");
+$(".booksearchToggle").click(function(){
+            $('#textSrch').toggleClass('active');
+            $('#btnSrch').toggleClass('active');
+            $('.bookDetails').toggleClass('active');
+
+          });
+
+
+    $("<div class='bookSidebar'><div class='bookMetaContainer'></div></div>").appendTo("#BookReader"); //sets double-bagged container
+    $("#region-sidebar-first > .metadataSidebar > .region-inner >  .metadataContainer ").clone().prop({id:"bookMeta"}).appendTo(".bookMetaContainer"); //fills container
+        $(".bookMetaContainer").addClass("nano-content");
+
+    $(".bookSidebar").addClass("nano");
+    //begins book in-viwer metadata toggle function
+    $('.bookDetails').toggle(function() {
+        $('.bookDetails').html('<i class="fa fa-toggle-on"></i>Toggle Details');
+    }, function() {
+        $('.bookDetails').html('<i class="fa fa-toggle-off"></i>Toggle Details');
+    });
+
+    $('.bookDetails').click(function(){
+              $('.bookMetaContainer').toggleClass('active');
+                            $(".nano").nanoScroller({ alwaysVisible: false });
+
+              $('.bookSidebar .nano-pane').toggleClass('active');
+
+              $('.detailsContainer').toggleClass('detailsContainerActive');
+
+    });
+
+    //ends book in-viwer metadata toggle function
+
+
+
 
 //begin OCR detection - does not work, timeout is not dependable
  // $(".full_text").trigger( "click" );
@@ -967,7 +1009,6 @@ btn4.onclick = function() {
     $("#zone-content-wrapper").addClass("noClick"); //somehow not working
     window.dispatchEvent(new Event('resize')); // triggers resize for #book-viewer to adjust to new container size
     window.scrollTo(0,0); //scrolls to top
-
 }
 
 // When the user clicks on <span> (x), close the modal
