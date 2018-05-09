@@ -4400,18 +4400,24 @@ body.bookViewer #booksearch {
 body.bookViewer form#booksearch input[type=search] {
   border: 0px;
   padding: 6px;
-  height: 32px;
+  height: 12px;
   margin: 0px;
   display: flex;
-  padding-left: 20px;
-  width: 150px;
-  min-width: 0px !important; }
+  padding-left: 10px;
+  width: 130px;
+  min-width: 0px !important;
+  background-color: #ffffff !important;
+  position: relative;
+  top: 0px;
+  border-top: 4px solid #327bb3;
+  border-bottom: 4px solid #327bb3;
+  box-sizing: content-box; }
 body.bookViewer form#booksearch button#btnSrch {
   padding: 0px;
   margin: 0px !important;
   height: 32px !important;
   background: #327bb3 !important;
-  border-radius: 0px !important; }
+  border-radius: 0px 20px 20px 0px; }
 body.bookViewer #booksearch #textSrch, body.bookViewer #booksearch #btnSrch, body.bookViewer .bookDetails {
   transform: translateX(-180px);
   transition-duration: 0.5s; }
