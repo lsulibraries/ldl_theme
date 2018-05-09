@@ -562,7 +562,9 @@ $(".booksearchToggle").click(function(){
 
     $("<div class='bookSidebar'><div class='bookMetaContainer'></div></div>").appendTo("#BookReader"); //sets double-bagged container
     $("#region-sidebar-first > .metadataSidebar > .region-inner >  .metadataContainer ").clone().prop({id:"bookMeta"}).appendTo(".bookMetaContainer"); //fills container
-    $("#bookMeta").addClass("nano");
+        $(".bookMetaContainer").addClass("nano-content");
+
+    $(".bookSidebar").addClass("nano");
     //begins book in-viwer metadata toggle function
     $('.bookDetails').toggle(function() {
         $('.bookDetails').html('<i class="fa fa-toggle-on"></i>Toggle Details');
@@ -572,8 +574,12 @@ $(".booksearchToggle").click(function(){
 
     $('.bookDetails').click(function(){
               $('.bookMetaContainer').toggleClass('active');
+                            $(".nano").nanoScroller({ alwaysVisible: false });
+
+              $('.bookSidebar .nano-pane').toggleClass('active');
+
               $('.detailsContainer').toggleClass('detailsContainerActive');
-              $(".nano").nanoScroller({ alwaysVisible: false });
+
     });
 
     //ends book in-viwer metadata toggle function

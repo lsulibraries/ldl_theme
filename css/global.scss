@@ -5339,7 +5339,10 @@ overflow: hidden;
     font-family: FontAwesome;
     font-size: 24px;
     margin-right: 10px;
-    color: white;
+i{
+      color: white !important;
+      font-size: inherit !important;
+}
 }
 
 .chooseText{
@@ -5775,14 +5778,13 @@ div#BRnavpos {
 
 #BRtwopageview {
       border: 0px;
-    top: 60px !important;
+    top: 10px !important;
 }
 
 #BRpageview {
-      border: 1px solid rgba(0, 0, 0, 0.26);
-    top: 40px !important;
+    top: 20px !important;
     position: relative;
-    background: white;
+    background: transparent;
 }
 
 
@@ -5921,10 +5923,12 @@ background-color: transparent;
     #BRcontainer {
     position: relative;
     background: rgba(255, 255, 255, 0.70);
-    height: 1020px;
-    top: 20px;
+    height: calc(100vh - 170px);
+    top: 29px;
     left: 10px;
     width: calc(100% - 20px);
+    padding-bottom: 10px;
+    border-radius: 0px 0px 20px 20px;
     }
 
 
@@ -5993,8 +5997,8 @@ span.bookDetails {
     align-items: center;
     padding: 0px 20px;
     border-right: 1px solid #cecece;
-    i{
-      color: #474747 !important;
+    i:not(.chooseIcon > i){
+      color: #676767 !important;
     }
 }
 
@@ -6010,7 +6014,6 @@ form#booksearch .booksearchToggle{
     color: #fff;
     font-family: "Roboto";
     font-weight: 400;
-    font-size: 13px;
     text-transform: uppercase;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
@@ -6021,6 +6024,9 @@ form#booksearch .booksearchToggle{
     margin: 0px;
 letter-spacing: 2px;
 text-shadow: none;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 #BRtoolbarbuttons {
     display: flex;
@@ -6078,27 +6084,35 @@ i{
     font-size: 15px;
 }
 
+
+
 .modalExit4 i {
   color: white;
     line-height: 16px;
     margin-right: 4px;
 }
 
- #booksearch i{
+ .booksearchToggle i{
   color: white;
     line-height: 16px;
     margin-right: 7px;
  }
 
+.bookDetails i{
+      margin-right: 10px;
+      color: #676767;
+      font-size: 15px;
+}
+
 .bookSidebar{
       position: absolute;
-    background: rgba(0, 0, 0, 0.7);
-    height: 1020px;
+    height: calc(100vh - 160px);
     top: 20px;
     left: 10px;
     width: calc(100% - 20px);
     overflow: hidden;
     top: 62px;
+    border-radius: 0px 0px 0px 20px;
 }
 
 .bookMetaContainer {
@@ -6109,9 +6123,19 @@ i{
     background: black;
     transform: translateX(-25vw);
     transition-duration: 0.5s;
+    height: calc(100vh - 171px);
 }
 
-.bookMetaContainer.active {
+.bookSidebar .nano-pane {
+    position: absolute;
+    left: 24vw;
+    z-index: 99999;
+    height: calc(100vh - 200px);
+    transform: translateX(-25vw);
+
+}
+
+.bookMetaContainer.active, .bookSidebar .nano-pane.active {
     transform: translateX(0vw);
     transition-duration: 0.5s;
 }
