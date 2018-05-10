@@ -7187,6 +7187,74 @@ margin-bottom: 20px;
   }
   @media screen and (max-width: 900px) {
 
+
+.bookViewer{
+
+#BRnavpos{
+      position: absolute !important;
+    top: 60px;
+    width: calc(100vw - 20px);
+    left: -40px;
+    padding: 0px;
+    background: white;
+    padding-top: 0px;
+    padding-bottom: 5px;
+    height: 20px !important;
+
+div#BRpager {
+    position: relative;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 40px;
+    top: -20px;
+}
+
+div#BRnavline {
+    position: relative;
+    height: 10px;
+    width: auto;
+    background-color: #e7e7e7;
+    top: -30px;
+    margin: 0 10px;
+    border-radius: 90px;
+    border: 1px solid #b5b5b5;
+}
+.bt-wrapper{
+  top: 24px !important;
+}
+
+}
+
+
+#textSrch{
+      border-radius: 20px 0px 0px 0px;
+    border-left: 4px solid #327bb3 !important;
+}
+
+.booksearchToggle{
+  display: none !important;
+}
+
+span.bookDetails {
+    background: white;
+    width: 50%;
+}
+
+#booksearch{
+      width: calc(100vw - 20px);
+      background: #327bb3;
+    border-radius: 20px 20px 0px 0px !important;
+}
+
+.viewerTitle{
+    display: none !important;
+  }
+
+  #BRpage{
+    right: 61px;
+  }
+}
+
 button.BRicon.full_text.cboxElement{
   display: none !important;
 }
@@ -7280,10 +7348,11 @@ height: 80vh !important;
 
 span.modalExit4 {
     position: absolute;
-    bottom: -80px !important;
+    bottom: -60px !important;
     right: 10px;
     height: 30px;
     width: calc(100% - 20px);
+    border-radius: 0px 0px 20px 20px;
     top: auto;
   }
 

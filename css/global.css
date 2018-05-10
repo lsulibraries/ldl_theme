@@ -5301,6 +5301,50 @@ span.breadcrumbDivider {
   .islandora-pdf-metadata, .islandora-large-image-metadata {
     display: block; } }
 @media screen and (max-width: 1260px) and (max-width: 900px) {
+  .bookViewer #BRnavpos {
+    position: absolute !important;
+    top: 60px;
+    width: calc(100vw - 20px);
+    left: -40px;
+    padding: 0px;
+    background: white;
+    padding-top: 0px;
+    padding-bottom: 5px;
+    height: 20px !important; }
+    .bookViewer #BRnavpos div#BRpager {
+      position: relative;
+      margin-left: 10px;
+      margin-right: 10px;
+      height: 40px;
+      top: -20px; }
+    .bookViewer #BRnavpos div#BRnavline {
+      position: relative;
+      height: 10px;
+      width: auto;
+      background-color: #e7e7e7;
+      top: -30px;
+      margin: 0 10px;
+      border-radius: 90px;
+      border: 1px solid #b5b5b5; }
+    .bookViewer #BRnavpos .bt-wrapper {
+      top: 24px !important; }
+  .bookViewer #textSrch {
+    border-radius: 20px 0px 0px 0px;
+    border-left: 4px solid #327bb3 !important; }
+  .bookViewer .booksearchToggle {
+    display: none !important; }
+  .bookViewer span.bookDetails {
+    background: white;
+    width: 50%; }
+  .bookViewer #booksearch {
+    width: calc(100vw - 20px);
+    background: #327bb3;
+    border-radius: 20px 20px 0px 0px !important; }
+  .bookViewer .viewerTitle {
+    display: none !important; }
+  .bookViewer #BRpage {
+    right: 61px; }
+
   button.BRicon.full_text.cboxElement {
     display: none !important; }
 
@@ -5361,10 +5405,11 @@ span.breadcrumbDivider {
 
   span.modalExit4, body.headerversiontwo span.modalExit5, body.headerversiontwo span.modalDetails {
     position: absolute;
-    bottom: -80px !important;
+    bottom: -60px !important;
     right: 10px;
     height: 30px;
     width: calc(100% - 20px);
+    border-radius: 0px 0px 20px 20px;
     top: auto; }
 
   input#textSrch {
