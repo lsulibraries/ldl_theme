@@ -3934,7 +3934,9 @@ body.headerversiontwo {
     border-right: 1px solid #cecece;
     height: 100%; }
     body.headerversiontwo .modalDetails i {
-      margin-right: 10px; }
+      margin-right: 10px;
+      color: #676767;
+      font-size: 15px; }
   body.headerversiontwo .imageDetails {
     width: 300px;
     z-index: 99;
@@ -4626,7 +4628,7 @@ body.largeImage {
     align-items: center;
     background: white;
     height: 32px;
-    width: calc(100% - 225px);
+    width: calc(80vw + 2px);
     display: flex;
     margin: 0px;
     position: relative;

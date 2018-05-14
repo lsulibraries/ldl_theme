@@ -5224,6 +5224,8 @@ position: relative;
     height: 100%;
     i{
       margin-right: 10px;
+      color: #676767;
+    font-size: 15px;      
     }
  }
 
@@ -6245,7 +6247,7 @@ line-height: 37px;
     align-items: center;
     background: white;
     height: 32px;
-    width: calc(100% - 225px);
+    width: calc(80vw + 2px);
     display: flex;
     margin: 0px;
     position: relative;
