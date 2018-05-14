@@ -5193,18 +5193,38 @@ background: black;
 }
 
 .modalExit5{
-  @extend .modalExit4;
-  top: calc(10vh - 50px) !important;
-  right: calc(10vw - 10px)  !important;
-  width: 110px !important;
+    height: 32px;
+    width: 110px;
+    background-color: #FF5370;
+    cursor: pointer;
+    z-index: 999;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 0px 20px 0px 0px;
+    i{
+      margin-right: 4px;
+    }
 }
 
 .modalDetails{
-  @extend .modalExit4;
-  background-color: $LDLBlue !important;
-    width: 150px !important;
-    top: calc(10vh - 50px) !important;
-    left: calc(10vw - 10px) !important;
+position: relative;
+    cursor: pointer;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 20px;
+    border-right: 1px solid #cecece;
+    height: 100%;
+    i{
+      margin-right: 10px;
+    }
  }
 
 .imageDetails {
@@ -5228,6 +5248,7 @@ transition-duration: 1s;
     background: rgba(255, 255, 255, 0.18) !important;
     border: 1px solid #616161 !important;
     height: 80vh !important;
+    border-radius: 0px 0px 20px 20px;
 }
 
 .detailsContainer {
@@ -6216,9 +6237,34 @@ font-size: 40px;
 color: white;
 line-height: 37px;
 }
-
-
 }
+
+.imageToolbar {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    height: 32px;
+    width: calc(100% - 225px);
+    display: flex;
+    margin: 0px;
+    position: relative;
+    border-radius: 20px 20px 0px 0px;
+    overflow: hidden
+}
+
+.innerimageTitle{
+    background: white;
+    margin-left: 40px;
+    margin-right: 40px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
 }
 
 //end largeImage 2.0
@@ -6541,6 +6587,8 @@ $color_2: white;
 .form-item.form-type-checkbox {
     margin-top: 0px !important;
 }
+
+
 
 .form-item.form-type-checkboxes.form-item-namespaces {
     margin-top: 20px !important;
@@ -7187,6 +7235,74 @@ margin-bottom: 20px;
   }
   @media screen and (max-width: 900px) {
 
+
+.bookViewer{
+
+#BRnavpos{
+      position: absolute !important;
+    top: 60px;
+    width: calc(100vw - 20px);
+    left: -40px;
+    padding: 0px;
+    background: white;
+    padding-top: 0px;
+    padding-bottom: 5px;
+    height: 20px !important;
+
+div#BRpager {
+    position: relative;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 40px;
+    top: -20px;
+}
+
+div#BRnavline {
+    position: relative;
+    height: 10px;
+    width: auto;
+    background-color: #e7e7e7;
+    top: -30px;
+    margin: 0 10px;
+    border-radius: 90px;
+    border: 1px solid #b5b5b5;
+}
+.bt-wrapper{
+  top: 24px !important;
+}
+
+}
+
+
+#textSrch{
+      border-radius: 20px 0px 0px 0px;
+    border-left: 4px solid #327bb3 !important;
+}
+
+.booksearchToggle{
+  display: none !important;
+}
+
+span.bookDetails {
+    background: white;
+    width: 50%;
+}
+
+#booksearch{
+      width: calc(100vw - 20px);
+      background: #327bb3;
+    border-radius: 20px 20px 0px 0px !important;
+}
+
+.viewerTitle{
+    display: none !important;
+  }
+
+  #BRpage{
+    right: 61px;
+  }
+}
+
 button.BRicon.full_text.cboxElement{
   display: none !important;
 }
@@ -7201,10 +7317,6 @@ body.largeImage{
   display: none;
 }
 
-.modalExit5{
-  right: 5px !important;
-  top: 5px !important;
-}
 
 .modalDetails{
   left: 5px !important;
@@ -7252,6 +7364,7 @@ body.largeImage{
 
 body.headerversiontwo  .dragonContainer{
 height: 100vh !important;
+
 width: 100vw !important;
 }
 
@@ -7280,10 +7393,11 @@ height: 80vh !important;
 
 span.modalExit4 {
     position: absolute;
-    bottom: -80px !important;
+    bottom: -60px !important;
     right: 10px;
     height: 30px;
     width: calc(100% - 20px);
+    border-radius: 0px 0px 20px 20px;
     top: auto;
   }
 
