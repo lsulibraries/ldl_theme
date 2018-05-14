@@ -3907,14 +3907,36 @@ body.headerversiontwo {
     filter: blur(5px) brightness(0.2);
     background: black; }
   body.headerversiontwo .modalExit5 {
-    top: calc(10vh - 50px) !important;
-    right: calc(10vw - 10px) !important;
-    width: 110px !important; }
+    height: 32px;
+    width: 110px;
+    background-color: #FF5370;
+    cursor: pointer;
+    z-index: 999;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 0px 20px 0px 0px; }
+    body.headerversiontwo .modalExit5 i {
+      margin-right: 4px; }
   body.headerversiontwo .modalDetails {
-    background-color: #327BB3 !important;
-    width: 150px !important;
-    top: calc(10vh - 50px) !important;
-    left: calc(10vw - 10px) !important; }
+    position: relative;
+    cursor: pointer;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 20px;
+    border-right: 1px solid #cecece;
+    height: 100%; }
+    body.headerversiontwo .modalDetails i {
+      margin-right: 10px;
+      color: #676767;
+      font-size: 15px; }
   body.headerversiontwo .imageDetails {
     width: 300px;
     z-index: 99;
@@ -3931,7 +3953,8 @@ body.headerversiontwo {
     margin: 0 auto !important;
     background: rgba(255, 255, 255, 0.18) !important;
     border: 1px solid #616161 !important;
-    height: 80vh !important; }
+    height: 80vh !important;
+    border-radius: 0px 0px 20px 20px; }
   body.headerversiontwo .detailsContainer {
     width: 300px;
     padding: 40px;
@@ -4508,7 +4531,7 @@ body.bookViewer i {
   margin-right: 10px;
   color: #676767;
   font-size: 15px; }
-body.bookViewer .modalExit4 i, body.bookViewer body.headerversiontwo .modalExit5 i, body.headerversiontwo body.bookViewer .modalExit5 i, body.bookViewer body.headerversiontwo .modalDetails i, body.headerversiontwo body.bookViewer .modalDetails i {
+body.bookViewer .modalExit4 i {
   color: white;
   line-height: 16px;
   margin-right: 4px; }
@@ -4599,6 +4622,28 @@ body.largeImage {
       font-size: 40px;
       color: white;
       line-height: 37px; }
+  body.largeImage .imageToolbar {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    height: 32px;
+    width: calc(80vw + 2px);
+    display: flex;
+    margin: 0px;
+    position: relative;
+    border-radius: 20px 20px 0px 0px;
+    overflow: hidden; }
+  body.largeImage .innerimageTitle {
+    background: white;
+    margin-left: 40px;
+    margin-right: 40px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    letter-spacing: 1px; }
 
 div#colorbox {
   top: 0px !important;
@@ -4777,7 +4822,7 @@ span.modalExit, span.modalExit2, span.modalExit3 {
   cursor: pointer;
   z-index: 999; }
 
-span.modalExit4, body.headerversiontwo span.modalExit5, body.headerversiontwo span.modalDetails {
+span.modalExit4 {
   position: absolute;
   top: -10px;
   right: 10px;
@@ -5301,6 +5346,50 @@ span.breadcrumbDivider {
   .islandora-pdf-metadata, .islandora-large-image-metadata {
     display: block; } }
 @media screen and (max-width: 1260px) and (max-width: 900px) {
+  .bookViewer #BRnavpos {
+    position: absolute !important;
+    top: 60px;
+    width: calc(100vw - 20px);
+    left: -40px;
+    padding: 0px;
+    background: white;
+    padding-top: 0px;
+    padding-bottom: 5px;
+    height: 20px !important; }
+    .bookViewer #BRnavpos div#BRpager {
+      position: relative;
+      margin-left: 10px;
+      margin-right: 10px;
+      height: 40px;
+      top: -20px; }
+    .bookViewer #BRnavpos div#BRnavline {
+      position: relative;
+      height: 10px;
+      width: auto;
+      background-color: #e7e7e7;
+      top: -30px;
+      margin: 0 10px;
+      border-radius: 90px;
+      border: 1px solid #b5b5b5; }
+    .bookViewer #BRnavpos .bt-wrapper {
+      top: 24px !important; }
+  .bookViewer #textSrch {
+    border-radius: 20px 0px 0px 0px;
+    border-left: 4px solid #327bb3 !important; }
+  .bookViewer .booksearchToggle {
+    display: none !important; }
+  .bookViewer span.bookDetails {
+    background: white;
+    width: 50%; }
+  .bookViewer #booksearch {
+    width: calc(100vw - 20px);
+    background: #327bb3;
+    border-radius: 20px 20px 0px 0px !important; }
+  .bookViewer .viewerTitle {
+    display: none !important; }
+  .bookViewer #BRpage {
+    right: 61px; }
+
   button.BRicon.full_text.cboxElement {
     display: none !important; }
 
@@ -5309,9 +5398,6 @@ span.breadcrumbDivider {
     line-height: 35px !important; }
   body.largeImage .dragonContainer .detailsContainer {
     display: none; }
-  body.largeImage .modalExit5 {
-    right: 5px !important;
-    top: 5px !important; }
   body.largeImage .modalDetails {
     left: 5px !important;
     top: 5px !important;
@@ -5359,12 +5445,13 @@ span.breadcrumbDivider {
   #BRcontainer {
     height: 80vh !important; }
 
-  span.modalExit4, body.headerversiontwo span.modalExit5, body.headerversiontwo span.modalDetails {
+  span.modalExit4 {
     position: absolute;
-    bottom: -80px !important;
+    bottom: -60px !important;
     right: 10px;
     height: 30px;
     width: calc(100% - 20px);
+    border-radius: 0px 0px 20px 20px;
     top: auto; }
 
   input#textSrch {
