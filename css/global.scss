@@ -96,39 +96,38 @@ $ulmColor: #800029;
 $unoColor: #003056;
 $vvilleColor: #ede7c0;
 
-$dccLogo: 'http://www.dcc.edu/_resources/images/logo-white.png';
-$lsmLogo: 'http://i.imgur.com/uimSOt2.png';
-$lsuLogo: 'http://reu.cct.lsu.edu/documents/logos/LSU_Gold_CMYK.png';
-$lsusLogo: 'http://www.lsus.edu/Images/Offices%20and%20Services/HR/LSUS%20Logo%2011102015.png';
-$lsuhscLogo: 'http://i.imgur.com/FQdHpzz.png';
-$lsuhscsLogo: 'http://i.imgur.com/1lqbxiy.png';
-$latechLogo: 'http://grfx.cstv.com/schoolslt/latc/graphics/logos/latc-state-t.gif';
-$loynoLogo: 'http://i.imgur.com/wsbykd6.png';
-$mcneeseLogo: 'http://mcneesesports.com/images/header_logo.png';
-$nichollsLogo: 'http://i.imgur.com/rGvlEDN.png';
-$nsuLogo: 'https://www.nsula.edu/wp-content/uploads/Seal.png';
-$subrLogo: 'http://i.imgur.com/pNgJAG2.png';
-$stateLogo: 'http://i.imgur.com/y1H8EGr.png';
-$hnocLogo: 'http://i.imgur.com/lRaktDw.png';
-$tulaneLogo: 'http://i.imgur.com/geTKaHp.png';
-$ullLogo: 'https://www.louisiana.edu/sites/louisiana/files/ull-logo_0.png';
-$ulmLogo: 'http://www.ulm.edu/_resources/images/ulm-academic-logo-circle.png';
-$unoLogo: 'http://i.imgur.com/RWmzrPG.png';
-$vvilleLogo: 'http://i.imgur.com/wqpOeRQ.png';
-$ldlLogo: 'http://i.imgur.com/MuY1yyN.png';
-
-$dccLogo_long: 'http://www.dcc.edu/_resources/images/delgado-logo-white.png';
-$latechLogo_long: 'http://i.imgur.com/72REb5M.png';
-$loynoLogo_long: 'http://i.imgur.com/23i7KxR.png';
-$mcneeseLogo_long: "https://www.mcneese.edu/sites/all/themes/mcneese/images/logo.png";
-$nichollsLogo_long: "https://www.nicholls.edu/wp-content/themes/nicholls-2015-core/nicholls/images/logo/Nicholls-N-Sword-w-text.png";
-$nsuLogo_long: "https://www.nsula.edu/wp-content/uploads/wordmarksmall2.png";
-$subrLogo_long: "http://www.subr.edu/images/subr_logo.gif";
-$loynoLogo_long: "http://i.imgur.com/23i7KxR.png";
-$tulaneLogo_long: "https://upload.wikimedia.org/wikipedia/en/thumb/7/7e/Tulane_logo.svg/1024px-Tulane_logo.svg.png";
-$ullLogo_long: "https://www.louisiana.edu/sites/louisiana/files/ull-logo_0.png";
-$unoLogo_long: "http://i.imgur.com/RBtG5qz.png";
-$vvilleLogo_long: 'http://i.imgur.com/wqpOeRQ.png';
+$dccLogo: '../images/logo-white.png';
+$lsmLogo: '../images/uimSOt2.png';
+$lsuLogo: '../images/LSU_Gold_CMYK.png';
+$lsusLogo: '../images/LSUS%20Logo%2011102015.png';
+$lsuhscLogo: '../images/FQdHpzz.png';
+$lsuhscsLogo: '../images/1lqbxiy.png';
+$latechLogo: '../images/latc-state-t.gif';
+$loynoLogo: '../images/wsbykd6.png';
+$mcneeseLogo: '../images/header_logo.png';
+$nichollsLogo: '../images/rGvlEDN.png';
+$nsuLogo: '../images/Seal.png';
+$subrLogo: '../images/pNgJAG2.png';
+$stateLogo: '../images/y1H8EGr.png';
+$hnocLogo: '../images/lRaktDw.png';
+$tulaneLogo: '../images/geTKaHp.png';
+$ullLogo: '../images/ull-logo_0.png';
+$ulmLogo: '../images/ulm-academic-logo-circle.png';
+$unoLogo: '../images/RWmzrPG.png';
+$vvilleLogo: '../images/wqpOeRQ.png';
+$ldlLogo: '../images/MuY1yyN.png';
+$dccLogo_long: '../images/delgado-logo-white.png';
+$latechLogo_long: '../images/72REb5M.png';
+$loynoLogo_long: '../images/23i7KxR.png';
+$mcneeseLogo_long: "../images/logo.png";
+$nichollsLogo_long: "../images/Nicholls-N-Sword-w-text.png";
+$nsuLogo_long: "../images/wordmarksmall2.png";
+$subrLogo_long: "../images/subr_logo.gif";
+$loynoLogo_long: "../images/23i7KxR.png";
+$tulaneLogo_long: "../images/1024px-Tulane_logo.svg.png";
+$ullLogo_long: "../images/ull-logo_0.png";
+$unoLogo_long: "../images/RBtG5qz.png";
+$vvilleLogo_long: '../images/wqpOeRQ.png';
 
 /* mixins */
 
@@ -160,7 +159,7 @@ $vvilleLogo_long: 'http://i.imgur.com/wqpOeRQ.png';
 }
 
 @mixin gradientImage() {
-  background-image: url(http://i.imgur.com/PuUOH7M.png);
+  background-image: url(../images/PuUOH7M.png);
   background-size: contain;
 }
 
@@ -1029,7 +1028,7 @@ li.institution-collection-list-item a.institution-collection-list-item-manage-pr
 
 //li.institution-collection-list-item > a::before {
   //content: "";
-  //background-image: url(http://i.imgur.com/QwO6pT6.png);
+  //background-image: url(../images/QwO6pT6.png);
   //width: 128px;
   //height: 60px;
   //display: block;
@@ -1141,7 +1140,7 @@ form#myform {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 25px 25px;
-    background-image: url(http://i.imgur.com/NpfYQT0.png);
+    background-image: url(../images/NpfYQT0.png);
   }
 
   .form-item, .form-actions {
@@ -1563,7 +1562,7 @@ opacity: 1;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 25px 25px;
-    background-image: url(http://i.imgur.com/NpfYQT0.png);
+    background-image: url(../images/NpfYQT0.png);
   }
 }
 
@@ -1705,7 +1704,7 @@ dd.islandora-basic-collection-caption a {
       background-repeat: no-repeat;
       background-position: 27px 3px;
       background-size: 22px 22px;
-      background-image: url(http://i.imgur.com/zBCP7zk.png);
+      background-image: url(../images/zBCP7zk.png);
     }
   }
 }
@@ -2867,7 +2866,7 @@ div.islandora-solr-content {
   @include flexbox;
   align-items: center;
   height: 100%;
-  background-image: url("http://i.imgur.com/spWRfgt.png");
+  background-image: url("../images/spWRfgt.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 80%;
@@ -2975,7 +2974,7 @@ div.scrollPrompt::before{
     content: '';
     width: 20px;
     height: 20px;
-    background-image: url(https://i.imgur.com/0kRges9.png);
+    background-image: url(../images/0kRges9.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -3149,7 +3148,7 @@ display: block;
     padding-left: 15px;
 
     .welcomeLabel {
-      background-image: url(http://i.imgur.com/i41HVJl.png);
+      background-image: url(../images/i41HVJl.png);
       background-size: 40%;
       background-position: center;
       background-repeat: no-repeat;
@@ -3208,7 +3207,7 @@ display: block;
 
 .form-item-islandora-simple-search-query::after{
 content: '';
-    background-image: url(https://i.imgur.com/9ytB8Dg.png);
+    background-image: url(../images/9ytB8Dg.png);
     position: absolute;
     left: 1px;
     top: -13px;
@@ -3259,7 +3258,7 @@ input[type="text"]::placeholder {
         background-repeat: no-repeat;
         background-position: center;
         background-size: 30px 30px;
-        background-image: url(https://i.imgur.com/SH5syLP.png);
+        background-image: url(../images/SH5syLP.png);
       }
     }
   }
@@ -3279,7 +3278,7 @@ input[type="text"]::placeholder {
   }
 
   .homepageLogo {
-    background-image: url(http://i.imgur.com/MuY1yyN.png);
+    background-image: url(../images/MuY1yyN.png);
     width: 130px;
     height: 200px;
     background-repeat: no-repeat;
@@ -3295,7 +3294,7 @@ input[type="text"]::placeholder {
 .page-browse-collections .landingHero {
   height: 480px;
   background-repeat: no-repeat;
-  background-image: url(http://i.imgur.com/KKIfFbM.jpg);
+  background-image: url(../images/KKIfFbM.jpg);
   background-size: cover;
   background-position: 184px 25%;
   display: block;
@@ -3598,7 +3597,7 @@ p {
     height: 24px;
     width: 24px;
     padding: 0px;
-    background: url("http://i.imgur.com/jDEiAY1.png") no-repeat;
+    background: url("../images/jDEiAY1.png") no-repeat;
     margin-bottom: 2px;
     margin-top: 0px;
   }
@@ -3607,7 +3606,7 @@ p {
     height: 24px;
     width: 24px;
     padding: 0px;
-    background: url("http://i.imgur.com/Od6ahq5.png") no-repeat;
+    background: url("../images/Od6ahq5.png") no-repeat;
     margin-bottom: 2px;
     margin-top: 0px;
   }
@@ -3681,7 +3680,7 @@ p {
 
 .islandora-pdf-content, .islandora-large-image-content {
   background-color: #FFF;
-  background-image: url(http://i.imgur.com/BJtKhwV.png);
+  background-image: url(../images/BJtKhwV.png);
   border: 1px solid #ccc;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -3977,7 +3976,7 @@ div {
   width: 100%;
   height: 500px;
   .openseadragon-canvas canvas {
-    background-image: url(http://i.imgur.com/BJtKhwV.png) !important;
+    background-image: url(../images/BJtKhwV.png) !important;
     background-color: #FFFFFF !important;
   }
 }
@@ -4485,7 +4484,7 @@ transform: translate3d(0,0,0);
       }
 
 .contentIcon {
-    background-image: url(https://i.imgur.com/azpOWoN.png);
+    background-image: url(../images/azpOWoN.png);
     width: 20px;
     height: 29px;
     background-size: 20px;
@@ -5165,7 +5164,7 @@ a#clip {
 }
 
 .childImage{
-      background-image: url(https://i.imgur.com/4LmxSra.png);
+      background-image: url(../images/4LmxSra.png);
 
 }
 .islandora-large-image-content {
@@ -5423,7 +5422,7 @@ span.modalExit, span.modalExit2, span.modalExit3 {
     height: 40px;
     width: 40px;
     background-color: #FF5370;
-    background-image: url(https://i.imgur.com/7w1xBZb.png);
+    background-image: url(../images/7w1xBZb.png);
     background-repeat: no-repeat;
     background-size: 20px auto;
     background-position: center;
@@ -5987,7 +5986,7 @@ margin-bottom: 20px;
   .page-browse-collections .landingHero {
     height: 480px;
     background-repeat: no-repeat;
-    background-image: url(http://i.imgur.com/KKIfFbM.jpg);
+    background-image: url(../images/KKIfFbM.jpg);
     background-size: cover;
     background-position: 0px 0px;
     display: block;
@@ -6885,7 +6884,7 @@ font-size: 12px;
         @include flexbox;
         align-items: center;
         height: 100%;
-        background-image: url(http://i.imgur.com/spWRfgt.png) no-repeat;
+        background-image: url(../images/spWRfgt.png) no-repeat;
         width: 100%;
         background-repeat: no-repeat;
         background-position: center;
