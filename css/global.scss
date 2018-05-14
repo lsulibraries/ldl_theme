@@ -5225,7 +5225,7 @@ position: relative;
     i{
       margin-right: 10px;
       color: #676767;
-    font-size: 15px;      
+    font-size: 15px;
     }
  }
 
@@ -7310,6 +7310,20 @@ button.BRicon.full_text.cboxElement{
 }
 
 body.largeImage{
+
+.imageToolbar{
+  width: 100vw;
+  border-radius: 0px;
+  span{
+    border-radius: 0px;
+  }
+}
+
+.innerimageTitle {
+  font-size: 11px;
+  line-height: 11px;
+}
+
 .imageTitle{
     font-size: 30px !important;
     line-height: 35px !important;

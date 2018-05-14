@@ -5393,6 +5393,14 @@ span.breadcrumbDivider {
   button.BRicon.full_text.cboxElement {
     display: none !important; }
 
+  body.largeImage .imageToolbar {
+    width: 100vw;
+    border-radius: 0px; }
+    body.largeImage .imageToolbar span {
+      border-radius: 0px; }
+  body.largeImage .innerimageTitle {
+    font-size: 11px;
+    line-height: 11px; }
   body.largeImage .imageTitle {
     font-size: 30px !important;
     line-height: 35px !important; }
