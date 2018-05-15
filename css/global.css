@@ -5383,7 +5383,8 @@ span.breadcrumbDivider {
   body.bookViewer span.bookDetails {
     background: white;
     width: 50%;
-    border-left: 1px solid #cecece; }
+    border-left: 1px solid #cecece;
+    padding-right: 130px; }
   body.bookViewer .bookSidebar {
     top: 87px;
     height: calc(100vh - 188px) !important;
@@ -5396,7 +5397,7 @@ span.breadcrumbDivider {
     transform: translateX(-100vw); }
   body.bookViewer #book-viewer #BRcontainer {
     top: 86px;
-    height: calc(100vh - 170px) !important; }
+    height: calc(100vh - 220px) !important; }
   body.bookViewer form#booksearch {
     width: calc(100vw - 20px);
     background: #ffffff !important;
@@ -5479,15 +5480,6 @@ span.breadcrumbDivider {
     justify-content: center;
     align-items: center;
     flex-direction: row; }
-
-  span.modalExit4 {
-    position: absolute;
-    bottom: -110px !important;
-    right: 10px;
-    height: 30px;
-    width: calc(100% - 20px);
-    border-radius: 0px 0px 20px 20px;
-    top: auto; }
 
   input#textSrch {
     width: calc(100vw - 120px); }

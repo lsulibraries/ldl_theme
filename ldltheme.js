@@ -586,6 +586,11 @@ $(".booksearchToggle").click(function(){
     if ($(window).width() < 900) {
           $('.onepg').trigger('click').once();
           $('.zoom_out').trigger('click').once();
+          $('.zoom_in').trigger('click').once();
+          $('.zoom_out').trigger('click').once();
+          $('.zoom_out').trigger('click').once();
+          $('.zoom_out').trigger('click').once();
+          $('.zoom_out').trigger('click').once();
 
           $('.booksearchToggle').trigger('click').once();
           $('#textSrch').attr("placeholder", "Search" );
