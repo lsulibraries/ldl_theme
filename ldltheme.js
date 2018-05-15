@@ -577,7 +577,6 @@ $(".booksearchToggle").click(function(){
               $('.bookMetaContainer').toggleClass('active');
                             $(".nano").nanoScroller({ alwaysVisible: false });
 
-              $('.bookSidebar .nano-pane').toggleClass('active');
 
               $('.detailsContainer').toggleClass('detailsContainerActive');
 
@@ -1025,6 +1024,11 @@ btn4.onclick = function() {
     window.scrollTo(0,0); //scrolls to top
     if ($(window).width() < 900) {
     $('html').addClass('fixed');
+          $('.zoom_out').trigger('click');
+
+          $('.zoom_out').trigger('click');
+
+
 }
 
 }

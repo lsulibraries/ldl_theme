@@ -4434,7 +4434,7 @@ body.bookViewer form#booksearch input[type=search] {
   display: flex;
   padding-left: 10px;
   width: 130px;
-  min-width: 0px !important;
+  min-width: 60px !important;
   background-color: #ffffff !important;
   position: relative;
   top: 0px;
@@ -5352,9 +5352,9 @@ span.breadcrumbDivider {
   body.bookViewer #BRnavpos {
     position: absolute !important;
     top: 60px;
-    width: calc(100vw - 20px);
-    left: -40px;
-    padding: 0px;
+    width: 100%;
+    left: -60px;
+    padding: 0px 20px;
     background: white;
     padding-top: 0px;
     padding-bottom: 5px;
@@ -5382,33 +5382,47 @@ span.breadcrumbDivider {
     display: none !important; }
   body.bookViewer span.bookDetails {
     background: white;
-    width: 50%;
+    width: 100%;
     border-left: 1px solid #cecece;
     padding-right: 130px; }
   body.bookViewer .bookSidebar {
     top: 87px;
-    height: calc(100vh - 188px) !important;
+    height: calc(100vh - 211px);
     border-radius: 0px;
-    width: calc(100vw - 20px); }
+    width: 100%;
+    left: 0px; }
   body.bookViewer .nano-pane {
     left: auto !important; }
   body.bookViewer .bookMetaContainer {
     width: auto;
-    transform: translateX(-100vw); }
+    transform: translateX(-100vw);
+    height: calc(100vh - 221px); }
+  body.bookViewer .bookSidebar .nano-pane {
+    height: auto;
+    transform: translateX(0vw);
+    right: 10px !important; }
   body.bookViewer #book-viewer #BRcontainer {
     top: 86px;
-    height: calc(100vh - 220px) !important; }
+    height: calc(100vh - 220px) !important;
+    width: 100%;
+    left: 0px;
+    border-radius: 0px !important; }
+  body.bookViewer span.modalExit4 {
+    right: 0px;
+    border-radius: 0px; }
   body.bookViewer form#booksearch {
-    width: calc(100vw - 20px);
+    width: 100vw;
     background: #ffffff !important;
-    border-radius: 20px 20px 0px 0px !important; }
+    border-radius: 0px !important; }
     body.bookViewer form#booksearch input {
       border-top: 4px solid white !important;
-      border-bottom: 4px solid white !important; }
+      border-bottom: 4px solid white !important;
+      width: 90px !important; }
     body.bookViewer form#booksearch button#btnSrch {
       background: white !important;
       color: #676767;
-      margin-right: 20px !important; }
+      margin-right: 0px !important;
+      width: 0px; }
   body.bookViewer .viewerTitle {
     display: none !important; }
 
@@ -5471,10 +5485,12 @@ span.breadcrumbDivider {
     padding-top: 100px !important; }
 
   .bookContainer {
-    padding-top: 30px !important; }
+    padding-top: 10px !important; }
 
   #BRtoolbar {
-    width: calc(100% - 20px) !important; }
+    width: 100% !important;
+    left: 0px !important;
+    background: white !important; }
 
   #BRcontainer {
     height: 80vh !important; }
@@ -5483,7 +5499,9 @@ span.breadcrumbDivider {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row; }
+    flex-direction: row;
+    width: calc(100% - 0px) !important;
+    margin-left: 0px !important; }
 
   input#textSrch {
     width: calc(100vw - 120px); }
