@@ -585,13 +585,6 @@ $(".booksearchToggle").click(function(){
 
     if ($(window).width() < 900) {
           $('.onepg').trigger('click').once();
-          $('.zoom_out').trigger('click').once();
-          $('.zoom_in').trigger('click').once();
-          $('.zoom_out').trigger('click').once();
-          $('.zoom_out').trigger('click').once();
-          $('.zoom_out').trigger('click').once();
-          $('.zoom_out').trigger('click').once();
-
           $('.booksearchToggle').trigger('click').once();
           $('#textSrch').attr("placeholder", "Search" );
             $('#btnSrch').toggleClass('active');
@@ -1090,6 +1083,9 @@ btn5.onclick = function() {
     $("html").removeClass('mobileMenuActive');
     $("#zone-content-wrapper").addClass("noClick"); //somehow not working
     window.scrollTo(0,0); //scrolls to top
+    if ($(window).width() < 900) {
+    $('html').addClass('fixed');
+}
 
 }
 
@@ -1100,6 +1096,7 @@ span5.onclick = function() {
     $(".parallax-slider").removeClass('darkFilter');
     $("button").removeClass('is-active');
     $("#zone-content-wrapper").removeClass('noClick');
+    $('html').removeClass('fixed');
 
   var uri = window.location.toString();
   if (uri.indexOf("#") > 0) {
@@ -1282,7 +1279,7 @@ var currentInstitution =  $( "ul.breadcrumb a.active" ).text();
     var compound_lesstext = "Show less";
 
 
-    $('.compoundSelect-title').each(function() {
+    $('.compoundSelect-title, .innerimageTitle').each(function() {
         var compound_content = $(this).html();
 
         if(compound_content.length > compound_showChar) {

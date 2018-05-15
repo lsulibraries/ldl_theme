@@ -7291,7 +7291,7 @@ span.bookDetails {
     background: white;
     width: 50%;
     border-left: 1px solid #cecece;
-    padding-right: 130px;    
+    padding-right: 130px;
 }
 
 .bookSidebar {
@@ -7356,6 +7356,11 @@ body.largeImage{
 .innerimageTitle {
   font-size: 11px;
   line-height: 11px;
+  display: none; //not enough room for long titles
+}
+
+.modalExit5{
+  width: 100%;
 }
 
 .imageTitle{
@@ -7414,7 +7419,7 @@ body.largeImage{
 
 body.headerversiontwo  .dragonContainer{
 height: 100vh !important;
-
+border-radius: 0px;
 width: 100vw !important;
 }
 

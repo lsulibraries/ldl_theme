@@ -5422,7 +5422,10 @@ span.breadcrumbDivider {
       border-radius: 0px; }
   body.largeImage .innerimageTitle {
     font-size: 11px;
-    line-height: 11px; }
+    line-height: 11px;
+    display: none; }
+  body.largeImage .modalExit5 {
+    width: 100%; }
   body.largeImage .imageTitle {
     font-size: 30px !important;
     line-height: 35px !important; }
@@ -5457,6 +5460,7 @@ span.breadcrumbDivider {
 
   body.headerversiontwo .dragonContainer {
     height: 100vh !important;
+    border-radius: 0px;
     width: 100vw !important; }
 
   #bookTitle {
