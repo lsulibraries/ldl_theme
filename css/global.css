@@ -26,6 +26,9 @@ html, body {
 body.logged-in {
   padding-top: 59px !important; }
 
+.fixed {
+  position: fixed !important; }
+
 button:focus,
 button:active,
 input:focus,
@@ -5346,7 +5349,7 @@ span.breadcrumbDivider {
   .islandora-pdf-metadata, .islandora-large-image-metadata {
     display: block; } }
 @media screen and (max-width: 1260px) and (max-width: 900px) {
-  .bookViewer #BRnavpos {
+  body.bookViewer #BRnavpos {
     position: absolute !important;
     top: 60px;
     width: calc(100vw - 20px);
@@ -5356,13 +5359,13 @@ span.breadcrumbDivider {
     padding-top: 0px;
     padding-bottom: 5px;
     height: 20px !important; }
-    .bookViewer #BRnavpos div#BRpager {
+    body.bookViewer #BRnavpos div#BRpager {
       position: relative;
       margin-left: 10px;
       margin-right: 10px;
       height: 40px;
       top: -20px; }
-    .bookViewer #BRnavpos div#BRnavline {
+    body.bookViewer #BRnavpos div#BRnavline {
       position: relative;
       height: 10px;
       width: auto;
@@ -5371,23 +5374,41 @@ span.breadcrumbDivider {
       margin: 0 10px;
       border-radius: 90px;
       border: 1px solid #b5b5b5; }
-    .bookViewer #BRnavpos .bt-wrapper {
+    body.bookViewer #BRnavpos .bt-wrapper {
       top: 24px !important; }
-  .bookViewer #textSrch {
-    border-radius: 20px 0px 0px 0px;
-    border-left: 4px solid #327bb3 !important; }
-  .bookViewer .booksearchToggle {
-    display: none !important; }
-  .bookViewer span.bookDetails {
+  body.bookViewer #textSrch {
+    border-radius: 20px 0px 0px 0px; }
+  body.bookViewer span.bookDetails {
     background: white;
-    width: 50%; }
-  .bookViewer #booksearch {
+    width: 50%;
+    border-left: 1px solid #cecece; }
+  body.bookViewer .bookSidebar {
+    top: 87px;
+    height: calc(100vh - 188px) !important;
+    border-radius: 0px;
+    width: calc(100vw - 20px); }
+  body.bookViewer .nano-pane {
+    left: auto !important; }
+  body.bookViewer .bookMetaContainer {
+    width: auto;
+    transform: translateX(-100vw); }
+  body.bookViewer #book-viewer #BRcontainer {
+    top: 86px;
+    height: calc(100vh - 170px) !important; }
+  body.bookViewer form#booksearch {
     width: calc(100vw - 20px);
-    background: #327bb3;
+    background: #ffffff !important;
     border-radius: 20px 20px 0px 0px !important; }
-  .bookViewer .viewerTitle {
+    body.bookViewer form#booksearch input {
+      border-top: 4px solid white !important;
+      border-bottom: 4px solid white !important; }
+    body.bookViewer form#booksearch button#btnSrch {
+      background: white !important;
+      color: #676767;
+      margin-right: 20px !important; }
+  body.bookViewer .viewerTitle {
     display: none !important; }
-  .bookViewer #BRpage {
+  body.bookViewer #BRpage {
     right: 61px; }
 
   button.BRicon.full_text.cboxElement {
@@ -5455,7 +5476,7 @@ span.breadcrumbDivider {
 
   span.modalExit4 {
     position: absolute;
-    bottom: -60px !important;
+    bottom: -110px !important;
     right: 10px;
     height: 30px;
     width: calc(100% - 20px);

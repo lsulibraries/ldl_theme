@@ -586,9 +586,10 @@ $(".booksearchToggle").click(function(){
     if ($(window).width() < 900) {
           $('.onepg').trigger('click').once();
           $('.zoom_out').trigger('click').once();
-            $('#textSrch').toggleClass('active');
             $('#btnSrch').toggleClass('active');
             $('.bookDetails').toggleClass('active');
+            $('.bookDetails').toggleClass('active');
+
           }
 
     //ends book in-viwer metadata toggle function
@@ -1021,6 +1022,10 @@ btn4.onclick = function() {
     $("#zone-content-wrapper").addClass("noClick"); //somehow not working
     window.dispatchEvent(new Event('resize')); // triggers resize for #book-viewer to adjust to new container size
     window.scrollTo(0,0); //scrolls to top
+    if ($(window).width() < 900) {
+    $('html').addClass('fixed');
+}
+
 }
 
 // When the user clicks on <span> (x), close the modal
@@ -1030,6 +1035,7 @@ span4.onclick = function() {
     $(".parallax-slider").removeClass('darkFilter');
     $("button").removeClass('is-active');
     $("#zone-content-wrapper").removeClass('noClick');
+    $("html").removeClass("fixed");
 
   var uri = window.location.toString();
   if (uri.indexOf("#") > 0) {

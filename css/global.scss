@@ -195,6 +195,10 @@ body.logged-in{
   padding-top: 59px !important;
 }
 
+.fixed{
+  position: fixed !important;
+}
+
 button:focus,
 button:active,
 input:focus,
@@ -7237,8 +7241,7 @@ margin-bottom: 20px;
   }
   @media screen and (max-width: 900px) {
 
-
-.bookViewer{
+body.bookViewer{
 
 #BRnavpos{
       position: absolute !important;
@@ -7278,22 +7281,53 @@ div#BRnavline {
 
 #textSrch{
       border-radius: 20px 0px 0px 0px;
-    border-left: 4px solid #327bb3 !important;
 }
 
 .booksearchToggle{
-  display: none !important;
 }
 
 span.bookDetails {
     background: white;
     width: 50%;
+    border-left: 1px solid #cecece;
 }
 
-#booksearch{
+.bookSidebar {
+  top: 87px;
+      height: calc(100vh - 188px) !important;
+    border-radius: 0px;
+    width: calc(100vw - 20px);
+
+}
+
+.nano-pane{
+  left: auto !important;
+}
+
+.bookMetaContainer{
+  width: auto;
+    transform: translateX(-100vw);
+}
+
+
+#book-viewer #BRcontainer{
+  top: 86px;
+    height: calc(100vh - 170px) !important;
+}
+form#booksearch{
       width: calc(100vw - 20px);
-      background: #327bb3;
+      background: #ffffff !important;
     border-radius: 20px 20px 0px 0px !important;
+    input{
+      border-top: 4px solid white !important;
+      border-bottom: 4px solid white !important;
+    }
+
+    button#btnSrch{
+      background: white !important;
+      color: #676767;
+margin-right: 20px !important;
+    }
 }
 
 .viewerTitle{
@@ -7407,9 +7441,13 @@ width: 100vw !important;
 height: 80vh !important;
 }
 
+#BRnav{
+
+}
+
 span.modalExit4 {
     position: absolute;
-    bottom: -60px !important;
+    bottom: -110px !important;
     right: 10px;
     height: 30px;
     width: calc(100% - 20px);
