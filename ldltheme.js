@@ -431,7 +431,19 @@ if ($('body').hasClass('compoundChild')){
     bookTitle = $(".modsTitle").html(); // finds full title for book
     $("#BRreturn a").text(bookTitle); // undoes default title truncation
     $("#book-viewer").wrapAll("<div class='bookContainer'/>"); // adds container to bookViewer
-    window.dispatchEvent(new Event('resize')); // triggers resize for #book-viewer to adjust to new container size
+
+
+
+if (navigator.userAgent.indexOf('MSIE') !== -1 || navigator.appVersion.indexOf('Trident/') > 0) {
+var resizeEvent = window.document.createEvent('UIEvents');
+resizeEvent .initUIEvent('resize', true, false, window, 0);
+window.dispatchEvent(resizeEvent);
+    } else {
+       window.dispatchEvent(new Event('resize'));
+
+    }// triggers resize for #book-viewer to adjust to new container size Even Internet explorer 11 does not support resize event. Therefore, I have resolved this by using following solution.
+
+
     $("<div class='book_header'/>").insertBefore(".bookContainer"); //creates header for book items
     $("<div class='backgroundDiv'/>").appendTo(".book_header"); //creates header for book items
     thumbnailURL = $(".book-thumbnail img").prop('src');
@@ -502,7 +514,7 @@ $('a[href*="pages"]').each(function() {
 });
 
     //use bookbox
-    $(".bookContainer").insertBefore(".mobileMenu");
+    $("div.bookContainer").insertBefore("div.mobileMenu");
     $(".islandora-book-metadata").remove();
     //end bookbox
 
@@ -1020,14 +1032,22 @@ btn4.onclick = function() {
     $(".page").addClass('blurFilter');
     $("html").removeClass('mobileMenuActive');
     $("#zone-content-wrapper").addClass("noClick"); //somehow not working
-    window.dispatchEvent(new Event('resize')); // triggers resize for #book-viewer to adjust to new container size
+
+
+if (navigator.userAgent.indexOf('MSIE') !== -1 || navigator.appVersion.indexOf('Trident/') > 0) {
+     var evt = document.createEvent('UIEvents');
+     evt.initUIEvent('resize', true, false, window, 0);
+     window.dispatchEvent(evt);
+    } else {
+       window.dispatchEvent(new Event('resize'));
+
+    }
+
+ // triggers resize for #book-viewer to adjust to new container size
     window.scrollTo(0,0); //scrolls to top
     if ($(window).width() < 900) {
     $('html').addClass('fixed');
-          $('.zoom_out').trigger('click');
-
-          $('.zoom_out').trigger('click');
-
+    $('.zoom_out').trigger('click').once();
 
 }
 
