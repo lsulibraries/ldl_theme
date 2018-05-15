@@ -5378,6 +5378,8 @@ span.breadcrumbDivider {
       top: 24px !important; }
   body.bookViewer #textSrch {
     border-radius: 20px 0px 0px 0px; }
+  body.bookViewer .booksearchToggle {
+    display: none !important; }
   body.bookViewer span.bookDetails {
     background: white;
     width: 50%;
@@ -5408,8 +5410,6 @@ span.breadcrumbDivider {
       margin-right: 20px !important; }
   body.bookViewer .viewerTitle {
     display: none !important; }
-  body.bookViewer #BRpage {
-    right: 61px; }
 
   button.BRicon.full_text.cboxElement {
     display: none !important; }
@@ -5473,6 +5473,12 @@ span.breadcrumbDivider {
 
   #BRcontainer {
     height: 80vh !important; }
+
+  #BRnav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row; }
 
   span.modalExit4 {
     position: absolute;

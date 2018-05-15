@@ -7284,6 +7284,7 @@ div#BRnavline {
 }
 
 .booksearchToggle{
+  display: none!important;
 }
 
 span.bookDetails {
@@ -7334,9 +7335,7 @@ margin-right: 20px !important;
     display: none !important;
   }
 
-  #BRpage{
-    right: 61px;
-  }
+
 }
 
 button.BRicon.full_text.cboxElement{
@@ -7442,7 +7441,10 @@ height: 80vh !important;
 }
 
 #BRnav{
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
 }
 
 span.modalExit4 {

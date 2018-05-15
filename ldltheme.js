@@ -586,6 +586,9 @@ $(".booksearchToggle").click(function(){
     if ($(window).width() < 900) {
           $('.onepg').trigger('click').once();
           $('.zoom_out').trigger('click').once();
+
+          $('.booksearchToggle').trigger('click').once();
+          $('#textSrch').attr("placeholder", "Search" );
             $('#btnSrch').toggleClass('active');
             $('.bookDetails').toggleClass('active');
             $('.bookDetails').toggleClass('active');
