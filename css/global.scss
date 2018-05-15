@@ -6136,7 +6136,7 @@ i{
     height: calc(100vh - 160px);
     top: 20px;
     left: 10px;
-    width: calc(100% - 20px);
+width: calc(25vw - 17px);
     overflow: hidden;
     top: 62px;
     border-radius: 0px 0px 0px 20px;
@@ -6155,10 +6155,11 @@ i{
 
 .bookSidebar .nano-pane {
     position: absolute;
-    left: 24vw;
+    right: 0px;
     z-index: 99999;
-    height: calc(100vh - 200px);
-    transform: translateX(-25vw);
+    height: auto;
+    transform: translateX(0px);
+
 
 }
 
@@ -7316,6 +7317,11 @@ span.bookDetails {
       height: auto;
     transform: translateX(0vw);
     right: 10px !important;
+position: absolute; //test2
+right: 0px;
+z-index: 99999;
+
+
 }
 
 #book-viewer #BRcontainer{
