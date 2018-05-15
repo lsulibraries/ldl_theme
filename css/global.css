@@ -3959,7 +3959,7 @@ body.headerversiontwo {
     height: 80vh !important;
     border-radius: 0px 0px 20px 20px; }
   body.headerversiontwo .detailsContainer {
-    width: 300px;
+    width: 283px;
     padding: 40px;
     transform: translateX(-380px);
     transition-duration: 1s;
@@ -4965,6 +4965,9 @@ section#block-islandora-solr-advanced, #block-block-14, #block-views-meeting-min
     border-bottom: 1px solid rgba(0, 0, 0, 0.16);
     font-weight: 500; }
 
+#cboxOverlay, #colorbox {
+  z-index: 99999999; }
+
 a.alpha-grid-toggle, a.alpha-block-toggle {
   display: none; }
 
@@ -5349,6 +5352,14 @@ span.breadcrumbDivider {
   .islandora-pdf-metadata, .islandora-large-image-metadata {
     display: block; } }
 @media screen and (max-width: 1260px) and (max-width: 900px) {
+  body.iOSuser #book-viewer #BRcontainer {
+    height: calc(100vh - 230px) !important; }
+  body.iOSuser .bookSidebar {
+    top: 87px;
+    height: calc(100vh - 221px) !important; }
+  body.iOSuser .bookMetaContainer {
+    height: calc(100vh - 221px) !important; }
+
   body.bookViewer #BRnavpos {
     position: absolute !important;
     top: 60px;
@@ -5387,7 +5398,7 @@ span.breadcrumbDivider {
     padding-right: 130px; }
   body.bookViewer .bookSidebar {
     top: 87px;
-    height: calc(100vh - 211px);
+    height: calc(100vh - 119px);
     border-radius: 0px;
     width: 100%;
     left: 0px; }
@@ -5396,7 +5407,8 @@ span.breadcrumbDivider {
   body.bookViewer .bookMetaContainer {
     width: auto;
     transform: translateX(-100vw);
-    height: calc(100vh - 221px); }
+    height: calc(100vh - 87px);
+    padding-top: 0px; }
   body.bookViewer .bookSidebar .nano-pane {
     height: auto;
     transform: translateX(0vw);
@@ -5406,7 +5418,7 @@ span.breadcrumbDivider {
     z-index: 99999; }
   body.bookViewer #book-viewer #BRcontainer {
     top: 86px;
-    height: calc(100vh - 220px) !important;
+    height: 100vh;
     width: 100%;
     left: 0px;
     border-radius: 0px !important; }
@@ -5494,9 +5506,6 @@ span.breadcrumbDivider {
     width: 100% !important;
     left: 0px !important;
     background: white !important; }
-
-  #BRcontainer {
-    height: 80vh !important; }
 
   #BRnav {
     display: flex;

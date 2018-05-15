@@ -5258,7 +5258,7 @@ transition-duration: 1s;
 }
 
 .detailsContainer {
-    width: 300px;
+width: 283px;
     padding: 40px;
     transform: translateX(-380px);
 transition-duration: 1s;
@@ -6750,6 +6750,10 @@ align-items: flex-start;
  @extend #block-block-14;
 }
 
+#cboxOverlay, #colorbox{
+  z-index: 99999999;
+}
+
 //mobile menu
 
 a.alpha-grid-toggle, a.alpha-block-toggle{
@@ -7242,6 +7246,19 @@ margin-bottom: 20px;
   }
   @media screen and (max-width: 900px) {
 
+body.iOSuser{
+    #book-viewer #BRcontainer{
+    height: calc(100vh - 230px) !important;
+    }
+    .bookSidebar {
+    top: 87px;
+    height: calc(100vh - 221px) !important;
+    }
+    .bookMetaContainer {
+    height: calc(100vh - 221px) !important;
+    }
+}
+
 body.bookViewer{
 
 #BRnavpos{
@@ -7297,7 +7314,7 @@ span.bookDetails {
 
 .bookSidebar {
   top: 87px;
-    height: calc(100vh - 211px);
+    height: calc(100vh - 119px);
     border-radius: 0px;
     width: 100%;
     left: 0px;
@@ -7311,7 +7328,8 @@ span.bookDetails {
 .bookMetaContainer{
   width: auto;
     transform: translateX(-100vw);
-    height: calc(100vh - 221px);
+    height: calc(100vh - 87px);
+    padding-top: 0px;
 }
 .bookSidebar .nano-pane{
       height: auto;
@@ -7326,11 +7344,13 @@ z-index: 99999;
 
 #book-viewer #BRcontainer{
   top: 86px;
-    height: calc(100vh - 220px) !important;
+    height: 100vh;
     width:  100%;
     left:0px;
     border-radius: 0px !important;
 }
+
+
 
 span.modalExit4 {
     right: 0px;
@@ -7466,10 +7486,6 @@ width: 100vw !important;
     left: 0px !important;
     background: white !important;
   }
-
-#BRcontainer{
-height: 80vh !important;
-}
 
 #BRnav{
     display: flex;

@@ -773,6 +773,14 @@ if (navigator.appName == 'Microsoft Internet Explorer' ||  !!(navigator.userAgen
 $("body").addClass("IEuser");
 }
 
+
+    var isSafari = !!navigator.userAgent.match(/Version\/[\d\.]+.*Safari/);
+    var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+
+    if (isSafari && iOS) {
+$("body").addClass("iOSuser");
+    }
+
  $("<a href='/'>Home</a>").appendTo(".mobileMenu");
 
 
