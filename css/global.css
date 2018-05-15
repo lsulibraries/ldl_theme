@@ -5352,6 +5352,21 @@ span.breadcrumbDivider {
   .islandora-pdf-metadata, .islandora-large-image-metadata {
     display: block; } }
 @media screen and (max-width: 1260px) and (max-width: 900px) {
+  body.compoundChildImage {
+    background: white !important; }
+    body.compoundChildImage .metadataSidebar.nano-content {
+      padding-top: 160px; }
+    body.compoundChildImage #zone-header {
+      display: none; }
+    body.compoundChildImage .compoundGallery_header {
+      padding-top: 20px !important; }
+    body.compoundChildImage .userMenu {
+      margin-top: 0px; }
+    body.compoundChildImage .infoToggle .userSelect {
+      margin-right: 0px !important; }
+    body.compoundChildImage .iconSelect {
+      height: 30px !important; }
+
   body.iOSuser #book-viewer #BRcontainer {
     height: calc(100vh - 230px) !important; }
   body.iOSuser .bookSidebar {

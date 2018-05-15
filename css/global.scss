@@ -7246,6 +7246,36 @@ margin-bottom: 20px;
   }
   @media screen and (max-width: 900px) {
 
+body.compoundChildImage {
+      background: white !important;
+      .metadataSidebar.nano-content {
+      padding-top: 160px;
+      }
+      #zone-header{
+      display: none;
+      }
+
+      .compoundGallery_header{
+      padding-top: 20px !important;
+      }
+
+      .userMenu {
+      margin-top: 0px;
+      }
+
+      .infoToggle .userSelect{
+        margin-right: 0px !important;
+      }
+
+      .iconSelect{
+      height: 30px !important;
+      }
+
+}
+
+
+
+
 body.iOSuser{
     #book-viewer #BRcontainer{
     height: calc(100vh - 230px) !important;
