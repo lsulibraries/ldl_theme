@@ -2921,6 +2921,10 @@ div.islandora-solr-content {
 }
 
 .parallax-slider{
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -ms-filter: blur(5px);
+  -o-filter: blur(5px);
   filter: blur(5px);
     transition: filter 1s;
 }
@@ -4052,6 +4056,10 @@ background:none!important;
     position: absolute;
     width: 120%;
     height: 120%;
+      -webkit-filter: blur(10px) brightness(0.7) contrast(0.6);
+      -moz-filter: blur(10px) brightness(0.7) contrast(0.6);
+      -ms-filter: blur(10px) brightness(0.7) contrast(0.6);
+      -o-filter:blur(10px) brightness(0.7) contrast(0.6);
     filter: blur(10px) brightness(0.7) contrast(0.6);
     background-position: -5vw 20%;
     background-repeat: no-repeat;
@@ -5010,6 +5018,10 @@ a#clip {
     position: absolute;
     width: calc(100% + 140px);
     height: calc(100% + 140px);
+  -webkit-filter: blur(50px) brightness(0.8) contrast(0.6);
+  -moz-filter: blur(50px) brightness(0.8) contrast(0.6);
+  -ms-filter: blur(50px) brightness(0.8) contrast(0.6);
+  -o-filter: blur(50px) brightness(0.8) contrast(0.6);
     filter: blur(50px) brightness(0.8) contrast(0.6);
     background-repeat: no-repeat;
     background-size: cover;
@@ -5192,6 +5204,10 @@ background: black;
 }
 
 .blurFilter {
+  -webkit-filter: blur(5px) brightness(0.2);
+  -moz-filter: blur(5px) brightness(0.2);
+  -ms-filter: blur(5px) brightness(0.2);
+  -o-filter: blur(5px) brightness(0.2);
     filter: blur(5px) brightness(0.2);
     background: black;
 }
@@ -6312,6 +6328,10 @@ div.BRfloatHead {
     margin: 0px;
 }
 a.floatShut{
+  -webkit-filter: grayscale(1) brightness(1);
+  -moz-filter: grayscale(1) brightness(1);
+  -ms-filter:grayscale(1) brightness(1);
+  -o-filter: grayscale(1) brightness(1);
       filter: grayscale(1) brightness(1);
 }
 
@@ -6501,10 +6521,18 @@ color: #dedede;
 //End oral history styles
 
 .darkFilter{
+    -webkit-filter: blur(5px) brightness(0.8);
+    -moz-filter: blur(5px) brightness(0.8);
+    -ms-filter: blur(5px) brightness(0.8);
+    -o-filter: blur(5px) brightness(0.8);
     filter: blur(5px) brightness(0.8);
 }
 
 .blurFilter{
+    -webkit-filter: blur(5px) brightness(0.8);
+    -moz-filter: blur(5px) brightness(0.8);
+    -ms-filter: blur(5px) brightness(0.8);
+    -o-filter: blur(5px) brightness(0.8);
     filter: blur(5px) brightness(0.8);
 }
 
@@ -6797,6 +6825,10 @@ body{
     margin-top: 60px;
   }
 section#section-content {
+  -webkit-filter:blur(2px) brightness(0.8);
+  -moz-filter: blur(2px) brightness(0.8);
+  -ms-filter: blur(2px) brightness(0.8);
+  -o-filter: blur(2px) brightness(0.8);
     filter: blur(2px) brightness(0.8);
     #zone-content-wrapper{
  pointer-events: none;

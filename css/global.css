@@ -2186,6 +2186,10 @@ div.islandora-solr-content {
   background: #242424; }
 
 .parallax-slider {
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -ms-filter: blur(5px);
+  -o-filter: blur(5px);
   filter: blur(5px);
   transition: filter 1s; }
 
@@ -3144,6 +3148,10 @@ div.islandora-pdf-object, div.islandora-large-image-object {
   position: absolute;
   width: 120%;
   height: 120%;
+  -webkit-filter: blur(10px) brightness(0.7) contrast(0.6);
+  -moz-filter: blur(10px) brightness(0.7) contrast(0.6);
+  -ms-filter: blur(10px) brightness(0.7) contrast(0.6);
+  -o-filter: blur(10px) brightness(0.7) contrast(0.6);
   filter: blur(10px) brightness(0.7) contrast(0.6);
   background-position: -5vw 20%;
   background-repeat: no-repeat;
@@ -3804,6 +3812,10 @@ body.not-logged-in.compoundChild .manageMenu {
     position: absolute;
     width: calc(100% + 140px);
     height: calc(100% + 140px);
+    -webkit-filter: blur(50px) brightness(0.8) contrast(0.6);
+    -moz-filter: blur(50px) brightness(0.8) contrast(0.6);
+    -ms-filter: blur(50px) brightness(0.8) contrast(0.6);
+    -o-filter: blur(50px) brightness(0.8) contrast(0.6);
     filter: blur(50px) brightness(0.8) contrast(0.6);
     background-repeat: no-repeat;
     background-size: cover;
@@ -3907,6 +3919,10 @@ body.headerversiontwo {
   body.headerversiontwo .metadataVertical .metadataTitle {
     color: #676767 !important; }
   body.headerversiontwo .blurFilter {
+    -webkit-filter: blur(5px) brightness(0.2);
+    -moz-filter: blur(5px) brightness(0.2);
+    -ms-filter: blur(5px) brightness(0.2);
+    -o-filter: blur(5px) brightness(0.2);
     filter: blur(5px) brightness(0.2);
     background: black; }
   body.headerversiontwo .modalExit5 {
@@ -4676,6 +4692,10 @@ div.BRfloatHead {
   margin: 0px; }
 
 a.floatShut {
+  -webkit-filter: grayscale(1) brightness(1);
+  -moz-filter: grayscale(1) brightness(1);
+  -ms-filter: grayscale(1) brightness(1);
+  -o-filter: grayscale(1) brightness(1);
   filter: grayscale(1) brightness(1); }
 
 a.floatShut:hover {
@@ -4800,9 +4820,17 @@ section#block-islandora-solr-sort .item-list {
   background-color: #242021; }
 
 .darkFilter {
+  -webkit-filter: blur(5px) brightness(0.8);
+  -moz-filter: blur(5px) brightness(0.8);
+  -ms-filter: blur(5px) brightness(0.8);
+  -o-filter: blur(5px) brightness(0.8);
   filter: blur(5px) brightness(0.8); }
 
 .blurFilter {
+  -webkit-filter: blur(5px) brightness(0.8);
+  -moz-filter: blur(5px) brightness(0.8);
+  -ms-filter: blur(5px) brightness(0.8);
+  -o-filter: blur(5px) brightness(0.8);
   filter: blur(5px) brightness(0.8); }
 
 #islandora-solr-advanced-search-form .selectedCheck {
@@ -5002,6 +5030,10 @@ body {
   opacity: 1;
   margin-top: 60px; }
 .mobileMenuActive section#section-content {
+  -webkit-filter: blur(2px) brightness(0.8);
+  -moz-filter: blur(2px) brightness(0.8);
+  -ms-filter: blur(2px) brightness(0.8);
+  -o-filter: blur(2px) brightness(0.8);
   filter: blur(2px) brightness(0.8); }
   .mobileMenuActive section#section-content #zone-content-wrapper {
     pointer-events: none; }
