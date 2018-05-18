@@ -4137,6 +4137,16 @@ body.headerversiontwo {
     margin-top: 10px; }
   body.headerversiontwo a.jssocials-share-link {
     line-height: inherit; }
+  body.headerversiontwo .userSelect::after {
+    content: ' ';
+    width: 30%;
+    height: 1px;
+    background: white;
+    border: 1px solid white;
+    position: absolute;
+    bottom: -8px;
+    left: 1%;
+    opacity: 0; }
   body.headerversiontwo .userSelect {
     padding: 0px 0px;
     text-transform: uppercase;
@@ -4156,8 +4166,8 @@ body.headerversiontwo {
     color: #676767;
     height: 23px; }
     body.headerversiontwo .userSelect .iconSelect {
-      background: #FF5370;
-      box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.19);
+      background: #FFCB6B;
+      box-shadow: inset -2px 0px 6px rgba(0, 0, 0, 0.19);
       display: none;
       background-image: none !important;
       width: 16px !important;
@@ -4177,6 +4187,12 @@ body.headerversiontwo {
     margin-left: 5px !important; }
   body.headerversiontwo .downloadLink .iconSelect {
     height: 23px !important; }
+  body.headerversiontwo .userSelect:hover:after {
+    content: ' ';
+    width: 96%;
+    background: white;
+    opacity: 0.9;
+    transition-duration: 0.5s; }
   body.headerversiontwo div.infoToggle.menuActive, body.headerversiontwo div#shareToggle.activeMenu {
     transform: skew(-20deg) translateX(0px);
     -webkit-transform: skew(-20deg) translateX(0px);
@@ -4188,7 +4204,8 @@ body.headerversiontwo {
       display: block;
       height: 23px; }
   body.headerversiontwo div#shareToggle.activeMenu {
-    margin-left: 20px; }
+    margin-left: 20px;
+    transition-duration: 0s; }
   body.headerversiontwo .infoToggle .iconSelect {
     background-image: url(https://i.imgur.com/zK6anrR.png);
     width: 36px;
