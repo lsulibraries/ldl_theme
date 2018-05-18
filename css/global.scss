@@ -5163,6 +5163,15 @@ body.logged-in.headerversiontwo{
 body.headerversiontwo{
 background: black;
 
+.userMenu{
+  position: absolute;
+  bottom: 0px;
+}
+
+.extendBottom{
+  padding-bottom: 80px !important;
+}
+
 .metadataVertical{
   .metadataTitle{
     color: #676767 !important;
@@ -5523,6 +5532,7 @@ content: ' ';
     bottom: -8px;
     left: 1%;
     opacity: 0;
+    transition-duration: 0.2s;
 }
 
 .userSelect {
@@ -5583,6 +5593,11 @@ padding-right: 10px;
   transition-duration: 0.5s;
 }
 
+
+.userSelect.activeMenu:hover:after, .userSelect.menuActive:hover:after{
+      padding-left: 15px;
+    left: -14px;
+}
 
 div.infoToggle.menuActive, div#shareToggle.activeMenu{
 
@@ -5655,6 +5670,8 @@ div#share {
     justify-content: flex-end;
     align-items: center;
     padding-right: 10px;
+    position: absolute;
+    bottom: 35px;
 }
 
 .shareActive {
@@ -5985,7 +6002,7 @@ display: flex;
     margin-bottom: 20px;
     transition-duration: 1s;
     width: 100%;
-
+padding-bottom: 30px;
     #bookTitle{
     font-size: 40px;
     color: white;
@@ -6322,6 +6339,7 @@ margin: 0px 20px;
 margin-bottom: 20px;
 transition-duration: 1s;
 width: 100%;
+padding-bottom: 30px;
 
 .imageTitle{
 font-size: 40px;

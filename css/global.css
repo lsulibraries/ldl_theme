@@ -3893,6 +3893,11 @@ body.logged-in.headerversiontwo .metadataContainer {
 
 body.headerversiontwo {
   background: black; }
+  body.headerversiontwo .userMenu {
+    position: absolute;
+    bottom: 0px; }
+  body.headerversiontwo .extendBottom {
+    padding-bottom: 80px !important; }
   body.headerversiontwo .metadataVertical .metadataTitle {
     color: #676767 !important; }
   body.headerversiontwo .blurFilter {
@@ -4146,7 +4151,8 @@ body.headerversiontwo {
     position: absolute;
     bottom: -8px;
     left: 1%;
-    opacity: 0; }
+    opacity: 0;
+    transition-duration: 0.2s; }
   body.headerversiontwo .userSelect {
     padding: 0px 0px;
     text-transform: uppercase;
@@ -4193,6 +4199,9 @@ body.headerversiontwo {
     background: white;
     opacity: 0.9;
     transition-duration: 0.5s; }
+  body.headerversiontwo .userSelect.activeMenu:hover:after, body.headerversiontwo .userSelect.menuActive:hover:after {
+    padding-left: 15px;
+    left: -14px; }
   body.headerversiontwo div.infoToggle.menuActive, body.headerversiontwo div#shareToggle.activeMenu {
     transform: skew(-20deg) translateX(0px);
     -webkit-transform: skew(-20deg) translateX(0px);
@@ -4232,7 +4241,9 @@ body.headerversiontwo {
     display: none;
     justify-content: flex-end;
     align-items: center;
-    padding-right: 10px; }
+    padding-right: 10px;
+    position: absolute;
+    bottom: 35px; }
   body.headerversiontwo .shareActive {
     display: flex !important; }
   body.headerversiontwo .nano > .nano-pane > .nano-slider {
@@ -4434,7 +4445,8 @@ body.bookViewer .book_headerMenu {
   margin: 0px 20px;
   margin-bottom: 20px;
   transition-duration: 1s;
-  width: 100%; }
+  width: 100%;
+  padding-bottom: 30px; }
   body.bookViewer .book_headerMenu #bookTitle {
     font-size: 40px;
     color: white;
@@ -4677,7 +4689,8 @@ body.largeImage {
     margin: 0px 20px;
     margin-bottom: 20px;
     transition-duration: 1s;
-    width: 100%; }
+    width: 100%;
+    padding-bottom: 30px; }
     body.largeImage .image_headerMenu .imageTitle {
       font-size: 40px;
       color: white;

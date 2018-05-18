@@ -546,6 +546,8 @@ $('a[href*="pages"]').each(function() {
         $('#shareToggle').click(function(){
           $(this).toggleClass('activeMenu');
           $('#share').toggleClass('shareActive');
+          $('.book_headerMenu').toggleClass('extendBottom');
+
         });
 
 
@@ -714,6 +716,7 @@ if ( ($('.image-thumbnail').length) && ( !$('body').hasClass('audioPDF') ) ){
         $('#shareToggle').click(function(){
           $(this).toggleClass('activeMenu');
           $('#share').toggleClass('shareActive');
+          $('.image_headerMenu').toggleClass('extendBottom');
         });
 
 
