@@ -32,11 +32,15 @@
 
 <div class="downloadSelect userSelect">
 <div class="downloadList">
-         <?php print l('Medium Size JPG', "islandora/object/{$islandora_object}/datastream/JPG/download",  array('attributes' => array('class' => 'downloadLink', ), 'html' => TRUE,)); ?>
-       <?php print l('Medium Size JPG', "islandora/object/{$islandora_object}/datastream/JPG/download",  array('attributes' => array('class' => 'downloadLink', ), 'html' => TRUE,)); ?>
+<?php foreach ($downloads as $key => $values): ?>
+   <?php print l(sprintf(
+     '<div class="datastream-download-details"><div class="datastream-download-label">%s</div>
+  <div class="datastream-download-size">%s</div></div>', $values['label'], $values['size']), $values['href'],  array('attributes' => array('class' => "downloadLink $key", ), 'html' => TRUE,)); ?>
+<?php endforeach; ?>
 </div>       
 <div class="iconSelect"></div><div class="textSelect">Download</div>
 </div>
+
 
 
        <?php if ($parent_collections): ?>

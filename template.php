@@ -1,5 +1,22 @@
 <?php
 
+function alpha_preprocess_islandora_large_image(&$variables) {
+
+  $pid = $variables['islandora_object']->id;
+  $variables['downloads'] = array();
+  module_load_include('inc', 'islandora', 'includes/datastream');
+  foreach($variables['islandora_object'] as $ds) {
+    if(in_array($ds->id, array('RELS-EXT', 'Thumbnail'))) {
+      continue;
+    }
+    $variables['downloads'][$ds->id] = array(
+      'href' => "/islandora/object/$pid/datastream/$ds->id/download",
+      'size' => islandora_datastream_get_human_readable_size($ds),
+      'label' => $ds->label,
+    );
+  }
+}
+
 /**
  * @file
  * This file is empty by default because the base theme chain (Alpha & Omega) provides
