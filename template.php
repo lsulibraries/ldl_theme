@@ -6,7 +6,7 @@ function alpha_preprocess_islandora_large_image(&$variables) {
   $variables['downloads'] = array();
   module_load_include('inc', 'islandora', 'includes/datastream');
   foreach($variables['islandora_object'] as $ds) {
-    if(in_array($ds->id, array('RELS-EXT', 'Thumbnail'))) {
+    if(in_array($ds->id, array('RELS-EXT'))) {
       continue;
     }
     $variables['downloads'][$ds->id] = array(
