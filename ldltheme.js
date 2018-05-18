@@ -307,7 +307,6 @@ if($('.institution-collection-list-a').length < 4){
         $('#block-system-main').remove();
         $('<div class="childNotice">Part of</div>').insertBefore('.compoundChild .compoundGallery_header .contentIcon');
         $('.userMenu').insertAfter('#window-title');
-        $('.infoToggle').removeClass('userSelect').insertBefore('.childHeader');
         $('<div class="textSelect">clip image</div>').appendTo("#clip");
         $('#clip').addClass('userSelect');
         $("<div id='shareToggle' class='userSelect'><div class='iconSelect'></div><div class='textSelect'>share</div></div>").insertAfter("#clip");
@@ -357,7 +356,7 @@ if($('.institution-collection-list-a').length < 4){
         $(".metadataSidebar > .region-inner > .alpha-debug-block").remove();
         $(".metadataSidebar > .region-inner > .metadataContainer:nth-child(2n + 0)").addClass("itemMetadata");
         $(".metadataSidebar > .region-inner > .metadataContainer:nth-child(2n + 1)").addClass("compoundMetadata");
-        $(".infoToggle").clone().addClass("mobileMetaToggle").appendTo("#zone-content");
+        //$(".infoToggle").clone().addClass("mobileMetaToggle").appendTo("#zone-content");
         $(".mobileMetaToggle .textSelect").replaceWith("<div class='textSelect'>Back to item view</div>");
         $(".mobileMetaToggle .iconSelect").remove();
         $(".metadataSidebar").clone().prop({ class: "metadataVertical"}).appendTo('.compoundGallery');
