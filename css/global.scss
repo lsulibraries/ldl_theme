@@ -5163,6 +5163,9 @@ body.logged-in.headerversiontwo{
 body.headerversiontwo{
 background: black;
 
+
+
+
 #share .jssocials-share {
     display: inline-block;
     vertical-align: top;
@@ -5182,7 +5185,7 @@ background: black;
 }
 
 .extendBottom{
-  padding-bottom: 80px !important;
+  padding-bottom: 80px;
 }
 
 .metadataVertical{
@@ -5535,9 +5538,80 @@ a.jssocials-share-link{
 
 //begin actionBar
 
-a.downloadLink {
-    display: none;
+
+
+.downloadList {
+    margin: 20px;
+    padding-left: 10px;
+    overflow: hidden;
+    height: auto;
+    pointer-events: none;
+    position: absolute;
+    bottom: 40px;
+  border-left: 1px solid transparent;
+
+    a.downloadLink{
+    color: white;
+    }
+    .datastream-download-details{
+    padding: 0px 10px;
+        opacity: 0;
+        transition-duration: 0.2s;
+        transform: translateX(50px);
+    }
+    .datastream-download-details {
+    display: flex;
+    width: 300px;
+    justify-content: space-between;
+    }
+
+
 }
+
+.extendList{
+  display: block;
+  pointer-events: inherit;
+  height: auto;
+  transition-duration: 1s;
+  border-left: 1px solid white;
+transition: border 2s;
+.datastream-download-details{
+          transform: translateX(0px);
+  opacity: 1;
+
+}
+
+
+
+   a:nth-child(1) .datastream-download-details {
+  transition-delay: 0.2s;
+  }
+
+   a:nth-child(2) .datastream-download-details {
+  transition-delay: 0.3s;
+  }
+
+   a:nth-child(3) .datastream-download-details {
+  transition-delay: 0.4s;
+  }
+
+   a:nth-child(4) .datastream-download-details {
+  transition-delay: 0.5s;
+  }
+
+   a:nth-child(5) .datastream-download-details {
+  transition-delay: 0.6s;
+  }
+
+   a:nth-child(6) .datastream-download-details {
+  transition-delay: 0.7s;
+  }
+
+     a:nth-child(7) .datastream-download-details {
+    transition-delay: 0.8s;
+    }
+
+};
 
 .userSelect::after{
 content: ' ';
@@ -5619,7 +5693,10 @@ padding-right: 10px;
 
 .downloadSelect.userSelect.menuActive {
     margin-left: 19px !important;
-    transition-duration: 0s; 
+    transition-duration: 0s;
+
+
+
 }
 
 div.userSelect.menuActive, div#shareToggle.activeMenu{
@@ -5636,12 +5713,21 @@ div.userSelect.menuActive, div#shareToggle.activeMenu{
     -moz-transform: skew(-20deg) translateX(0px);
     -o-transform: skew(-20deg) translateX(0px);
 margin-left: 15px;
-transition-duration: 0.5s;
+transition-duration: 0s;
+
+
+
 }
 div#shareToggle.activeMenu{
       margin-left: 20px;
 
-      transition-duration: 0s;
+  transition:
+    /* step 1 */
+    left      1s,
+
+    padding-left   0s,
+    /* step 2 */
+    background 0.5s 1s;
 
 }
 
@@ -5689,16 +5775,26 @@ div#shareToggle.activeMenu{
 
 
 div#share {
-    display: none;
     justify-content: flex-end;
     align-items: center;
     padding-right: 10px;
     padding-left: 3px;
+    transform: translateX(50px);
+    transition-duration: 0.5s;
+    opacity: 0;
+    display: flex;
+    pointer-events: none;
 }
 
-.shareActive {
-    display: flex!important;
+div#share.shareActive {
+    display: flex !important;
+    transform: translateX(0px);
+    transition-duration: 0.5s;
+    opacity: 1;
+    pointer-events: inherit;
+    margin-left: 2px;
 }
+
 
 
 //ends actionBar

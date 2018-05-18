@@ -663,6 +663,7 @@ if ( ($('.image-thumbnail').length) && ( !$('body').hasClass('audioPDF') ) ){
     //$("#bookTitle").clone().attr("id", "bookmenuTitle").appendTo(".bookMenu"); // undoes default title truncation
     $("<div class='chooseMenu'/>").appendTo(".imageMenu"); //adds label break
     $("<div class='chooseImage chooseViewer'><div class='chooseIcon'><i class='fa fa-photo'></i></div><div class='chooseText'>Open Image Viewer</div></div>").appendTo(".chooseMenu"); //adds label break
+    $(".downloadList").insertAfter(".headerBreadcrumb");
 
 
 
@@ -717,12 +718,18 @@ if ( ($('.image-thumbnail').length) && ( !$('body').hasClass('audioPDF') ) ){
           $('#share').toggleClass('shareActive');
         });
 
+
+        downloadHeight = $('.downloadList').height();
         $('.downloadSelect').click(function(){
+          $('.downloadList').toggleClass('extendList');
           $('.image_headerMenu').toggleClass('extendBottom');
-          $(this).toggleClass('menuActive');
+          $('.downloadSelect').toggleClass('menuActive');
 
         });
-
+          $('.downloadSelect').toggle(
+            function(){$('.image_headerMenu').css({"padding-bottom": downloadHeight - 50});},
+            function(){$('.image_headerMenu').css({"padding-bottom": "30px"});}
+          );
 
 
 
