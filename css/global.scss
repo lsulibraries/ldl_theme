@@ -5316,12 +5316,13 @@ background-color: transparent !important;
 }
 
 .book-thumbnailData, .image-thumbnailData {
-    margin-left: 20px;
-    border-left: 1px solid #dedede;
+    border: 1px solid #dedede;
     padding-left: 20px;
     max-width: 680px;
     color: #676767;
     font-style: italic;
+    width: 600px;
+    padding: 20px;
 }
 
 #sideMods{
@@ -5417,6 +5418,7 @@ width: 100%;
     margin: 0 auto;
     margin-top: 30px;
     padding: 0px 20px;
+    flex-direction: column;
 }
 
 #block-system-main{
@@ -5508,6 +5510,20 @@ a.jssocials-share-link{
   line-height: inherit;
 }
 
+//begin actionBar
+
+.userSelect::after{
+content: ' ';
+    width: 30%;
+    height: 1px;
+    background: white;
+    border: 1px solid white;
+    position: absolute;
+    bottom: -8px;
+    left: 1%;
+    opacity: 0;
+}
+
 .userSelect {
     padding: 0px 0px;
     text-transform: uppercase;
@@ -5527,8 +5543,8 @@ a.jssocials-share-link{
     color: #676767;
     height: 23px;
     .iconSelect{
-    background: #FF5370;
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.19);
+    background: $Yellow;
+    box-shadow: inset -2px 0px 6px rgba(0, 0, 0, 0.19);
     display: none;
     background-image: none !important;
     width: 16px !important;
@@ -5558,10 +5574,19 @@ padding-right: 10px;
 }
 
 
-
+.userSelect:hover:after{
+  content: ' ';
+  width: 96%;
+  background: white;
+  opacity: 0.9;
+  transition-duration: 0.5s;
+}
 
 
 div.infoToggle.menuActive, div#shareToggle.activeMenu{
+
+
+
 .iconSelect{
   display: block;
   height: 23px;
@@ -5576,6 +5601,9 @@ transition-duration: 0.5s;
 }
 div#shareToggle.activeMenu{
       margin-left: 20px;
+
+      transition-duration: 0s;
+
 }
 
 
@@ -5632,6 +5660,8 @@ div#share {
     display: flex!important;
 }
 
+
+//ends actionBar
 .nano > .nano-pane > .nano-slider {
     background: #a5a5a5;
   }
