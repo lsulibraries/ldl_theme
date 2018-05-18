@@ -546,7 +546,6 @@ $('a[href*="pages"]').each(function() {
         $('#shareToggle').click(function(){
           $(this).toggleClass('activeMenu');
           $('#share').toggleClass('shareActive');
-          $('.book_headerMenu').toggleClass('extendBottom');
 
         });
 
@@ -702,7 +701,7 @@ if ( ($('.image-thumbnail').length) && ( !$('body').hasClass('audioPDF') ) ){
     });
 
         $("<div id='shareToggle' class='userSelect'><div class='iconSelect'></div><div class='textSelect'>share</div></div>").insertAfter(".infoToggle");
-        $("<div id='share'/>").insertAfter(".userMenu");
+        $("<div id='share'/>").insertAfter("#shareToggle");
 
 
         $("#share").jsSocials({
@@ -716,8 +715,15 @@ if ( ($('.image-thumbnail').length) && ( !$('body').hasClass('audioPDF') ) ){
         $('#shareToggle').click(function(){
           $(this).toggleClass('activeMenu');
           $('#share').toggleClass('shareActive');
-          $('.image_headerMenu').toggleClass('extendBottom');
         });
+
+        $('.downloadSelect').click(function(){
+          $('.image_headerMenu').toggleClass('extendBottom');
+          $(this).toggleClass('menuActive');
+
+        });
+
+
 
 
     $(".metadataSidebar .modsDesc").clone().appendTo(".image-thumbnailData");
@@ -730,7 +736,11 @@ if ( ($('.image-thumbnail').length) && ( !$('body').hasClass('audioPDF') ) ){
 
 $(".metadataSidebar .modsSubject a").clone().appendTo(".descContainer .descriptionText").addClass("modsSubject").wrapAll('<div class="tagsGlance"/>');
 $(".metadataSidebar").clone().prop({ class: "metadataVertical"}).appendTo('.content .descContainer .descriptionText');
-$(".downloadLink").insertAfter(".infoToggle");
+
+
+$(".downloadSelect").insertAfter(".infoToggle");
+
+
      $("<i class='fa fa-photo' aria-hidden='true'></i>").appendTo(".imageLabel");
 
     //setup for modal
@@ -765,6 +775,9 @@ $(".downloadLink").insertAfter(".infoToggle");
 
 if ( ($('body').hasClass('compoundObject')) || ($('body').hasClass('bookViewer')) || ($('body').hasClass('largeImage'))){
   $('body').addClass('headerversiontwo');
+
+
+
 }
 
 

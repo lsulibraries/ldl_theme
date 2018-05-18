@@ -3893,6 +3893,17 @@ body.logged-in.headerversiontwo .metadataContainer {
 
 body.headerversiontwo {
   background: black; }
+  body.headerversiontwo #share .jssocials-share {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0.3em 0.6em 0.3em 0;
+    overflow: hidden;
+    height: 23px;
+    transform: skew(-20deg);
+    border-radius: 3px;
+    margin-right: 4px;
+    margin-top: 0px;
+    margin-bottom: 0px; }
   body.headerversiontwo .userMenu {
     position: absolute;
     bottom: 0px; }
@@ -4142,6 +4153,8 @@ body.headerversiontwo {
     margin-top: 10px; }
   body.headerversiontwo a.jssocials-share-link {
     line-height: inherit; }
+  body.headerversiontwo a.downloadLink {
+    display: none; }
   body.headerversiontwo .userSelect::after {
     content: ' ';
     width: 30%;
@@ -4202,14 +4215,17 @@ body.headerversiontwo {
   body.headerversiontwo .userSelect.activeMenu:hover:after, body.headerversiontwo .userSelect.menuActive:hover:after {
     padding-left: 15px;
     left: -14px; }
-  body.headerversiontwo div.infoToggle.menuActive, body.headerversiontwo div#shareToggle.activeMenu {
+  body.headerversiontwo .downloadSelect.userSelect.menuActive {
+    margin-left: 19px !important;
+    transition-duration: 0s; }
+  body.headerversiontwo div.userSelect.menuActive, body.headerversiontwo div#shareToggle.activeMenu {
     transform: skew(-20deg) translateX(0px);
     -webkit-transform: skew(-20deg) translateX(0px);
     -moz-transform: skew(-20deg) translateX(0px);
     -o-transform: skew(-20deg) translateX(0px);
     margin-left: 15px;
     transition-duration: 0.5s; }
-    body.headerversiontwo div.infoToggle.menuActive .iconSelect, body.headerversiontwo div#shareToggle.activeMenu .iconSelect {
+    body.headerversiontwo div.userSelect.menuActive .iconSelect, body.headerversiontwo div#shareToggle.activeMenu .iconSelect {
       display: block;
       height: 23px; }
   body.headerversiontwo div#shareToggle.activeMenu {
@@ -4242,8 +4258,7 @@ body.headerversiontwo {
     justify-content: flex-end;
     align-items: center;
     padding-right: 10px;
-    position: absolute;
-    bottom: 35px; }
+    padding-left: 3px; }
   body.headerversiontwo .shareActive {
     display: flex !important; }
   body.headerversiontwo .nano > .nano-pane > .nano-slider {
@@ -6448,7 +6463,7 @@ body.IEuser .backgroundDiv {
 
 .jssocials-share-logo {
   width: 1em;
-  vertical-align: middle;
+  vertical-align: top;
   font-size: 1.5em; }
 
 img.jssocials-share-logo {

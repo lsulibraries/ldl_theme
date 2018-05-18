@@ -5163,6 +5163,19 @@ body.logged-in.headerversiontwo{
 body.headerversiontwo{
 background: black;
 
+#share .jssocials-share {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0.3em 0.6em 0.3em 0;
+    overflow: hidden;
+    height: 23px;
+    transform: skew(-20deg);
+    border-radius: 3px;
+    margin-right: 4px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
 .userMenu{
   position: absolute;
   bottom: 0px;
@@ -5522,6 +5535,10 @@ a.jssocials-share-link{
 
 //begin actionBar
 
+a.downloadLink {
+    display: none;
+}
+
 .userSelect::after{
 content: ' ';
     width: 30%;
@@ -5599,7 +5616,13 @@ padding-right: 10px;
     left: -14px;
 }
 
-div.infoToggle.menuActive, div#shareToggle.activeMenu{
+
+.downloadSelect.userSelect.menuActive {
+    margin-left: 19px !important;
+    transition-duration: 0s; 
+}
+
+div.userSelect.menuActive, div#shareToggle.activeMenu{
 
 
 
@@ -5670,8 +5693,7 @@ div#share {
     justify-content: flex-end;
     align-items: center;
     padding-right: 10px;
-    position: absolute;
-    bottom: 35px;
+    padding-left: 3px;
 }
 
 .shareActive {
@@ -8683,7 +8705,7 @@ body.IEuser {
 
 .jssocials-share-logo {
   width: 1em;
-  vertical-align: middle;
+  vertical-align: top;
   font-size: 1.5em; }
 
 img.jssocials-share-logo {

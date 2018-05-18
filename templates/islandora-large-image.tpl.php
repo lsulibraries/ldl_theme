@@ -30,9 +30,12 @@
   </div>  <!--needs a conditional to avoid compoundObject children -->
 <?php endif; ?>
 
+<div class="downloadSelect userSelect">
+       <?php print l('Medium Size JPG', "islandora/object/{$islandora_object}/datastream/JPG/download",  array('attributes' => array('class' => 'downloadLink', ), 'html' => TRUE,)); ?>  
+<div class="iconSelect"></div><div class="textSelect">Download</div>
+</div>
 
 
-       <?php print l('<div class="downloadSelect userSelect"><div class="iconSelect"></div><div class="textSelect">Download</div></div>', "islandora/object/{$islandora_object}/datastream/JPG/download",  array('attributes' => array('class' => 'downloadLink', ), 'html' => TRUE,)); ?>
        <?php if ($parent_collections): ?>
       <div class="parent-collections">
         <h2><?php print t('Found in collection(s):'); ?></h2>
