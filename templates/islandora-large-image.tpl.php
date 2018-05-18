@@ -31,7 +31,10 @@
 <?php endif; ?>
 
 <div class="downloadSelect userSelect">
-       <?php print l('Medium Size JPG', "islandora/object/{$islandora_object}/datastream/JPG/download",  array('attributes' => array('class' => 'downloadLink', ), 'html' => TRUE,)); ?>  
+<div class="downloadList">
+         <?php print l('Medium Size JPG', "islandora/object/{$islandora_object}/datastream/JPG/download",  array('attributes' => array('class' => 'downloadLink', ), 'html' => TRUE,)); ?>
+       <?php print l('Medium Size JPG', "islandora/object/{$islandora_object}/datastream/JPG/download",  array('attributes' => array('class' => 'downloadLink', ), 'html' => TRUE,)); ?>
+</div>       
 <div class="iconSelect"></div><div class="textSelect">Download</div>
 </div>
 
