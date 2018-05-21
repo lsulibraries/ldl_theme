@@ -5180,13 +5180,9 @@ background: black;
 }
 
 .userMenu{
-  position: absolute;
-  bottom: 0px;
+
 }
 
-.extendBottom{
-  padding-bottom: 80px;
-}
 
 .metadataVertical{
   .metadataTitle{
@@ -5541,76 +5537,53 @@ a.jssocials-share-link{
 
 
 .downloadList {
-    margin: 20px;
-    padding-left: 10px;
-    overflow: hidden;
-    height: auto;
-    pointer-events: none;
-    position: absolute;
-    bottom: 40px;
-  border-left: 1px solid transparent;
-
+  display: flex;
+  background: rgba(255, 255, 255, 0.07);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: inherit;
+  height: auto;
+  transition-duration: 1s;
+  transition: opacity 3s;
+opacity: 0;
+    width: 100vw;
+    bottom: 0px;
+    margin-bottom: 0px;
+    position: fixed;
+    top: 325px;
+    z-index: 1;
+    height: fit-content;
+pointer-events: none;
     a.downloadLink{
     color: white;
     }
     .datastream-download-details{
-    padding: 0px 10px;
-        opacity: 0;
-        transition-duration: 0.2s;
-        transform: translateX(50px);
-    }
-    .datastream-download-details {
+
+        opacity: 1;
+        transition-duration: 0s;
     display: flex;
-    width: 300px;
+    width: 278px;
     justify-content: space-between;
+    background: #ffffff1f;
+    padding: 2px 10px;
+    margin: 1px;
     }
 
+
+}
+
+.downloadList_container{
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px 0px;
 
 }
 
 .extendList{
-  display: block;
   pointer-events: inherit;
-  height: auto;
-  transition-duration: 1s;
-  border-left: 1px solid white;
-transition: border 2s;
-.datastream-download-details{
-          transform: translateX(0px);
   opacity: 1;
-
-}
-
-
-
-   a:nth-child(1) .datastream-download-details {
-  transition-delay: 0.2s;
-  }
-
-   a:nth-child(2) .datastream-download-details {
-  transition-delay: 0.3s;
-  }
-
-   a:nth-child(3) .datastream-download-details {
-  transition-delay: 0.4s;
-  }
-
-   a:nth-child(4) .datastream-download-details {
-  transition-delay: 0.5s;
-  }
-
-   a:nth-child(5) .datastream-download-details {
-  transition-delay: 0.6s;
-  }
-
-   a:nth-child(6) .datastream-download-details {
-  transition-delay: 0.7s;
-  }
-
-     a:nth-child(7) .datastream-download-details {
-    transition-delay: 0.8s;
-    }
-
 };
 
 .userSelect::after{
@@ -6443,6 +6416,7 @@ div.islandora-large-image-content{
   position: relative;
   overflow: hidden;
   padding-top: 200px;
+      transition-duration: 1s;
 }
 
 .image_headerMenu{
@@ -6457,7 +6431,6 @@ margin: 0px 20px;
 margin-bottom: 20px;
 transition-duration: 1s;
 width: 100%;
-padding-bottom: 30px;
 
 .imageTitle{
 font-size: 40px;

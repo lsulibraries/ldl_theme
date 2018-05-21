@@ -32,12 +32,16 @@
 
 <div class="downloadSelect userSelect">
 <div class="downloadList">
+  <div class="downloadList_container">
+
 <?php foreach ($downloads as $key => $values): ?>
    <?php print l(sprintf(
      '<div class="datastream-download-details"><div class="datastream-download-label">%s</div>
   <div class="datastream-download-size">%s</div></div>', $values['label'], $values['size']), $values['href'],  array('attributes' => array('class' => "downloadLink $key", ), 'html' => TRUE,)); ?>
 <?php endforeach; ?>
-</div>       
+  </div>
+
+</div>
 <div class="iconSelect"></div><div class="textSelect">Download</div>
 </div>
 
