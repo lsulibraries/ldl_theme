@@ -5533,7 +5533,10 @@ a.jssocials-share-link{
 }
 
 //begin actionBar
-
+a.downloadLink:hover {
+    transition-duration: 0s;
+    background: rgba(255, 255, 255, 0.10980392156862745);
+}
 
 
 .downloadList {
@@ -5547,10 +5550,10 @@ a.jssocials-share-link{
   transition-duration: 1s;
   transition: opacity 3s;
 opacity: 0;
-    width: 100vw;
+    width: 100%;
     bottom: 0px;
     margin-bottom: 0px;
-    position: fixed;
+    position: absolute;
     top: 325px;
     z-index: 1;
     height: fit-content;
@@ -5563,7 +5566,7 @@ pointer-events: none;
         opacity: 1;
         transition-duration: 0s;
     display: flex;
-    width: 278px;
+    width: 200px;
     justify-content: space-between;
     background: #ffffff1f;
     padding: 2px 10px;
@@ -5577,7 +5580,7 @@ pointer-events: none;
   max-width: 1200px;
   display: flex;
   flex-wrap: wrap;
-  padding: 10px 0px;
+  padding: 10px 20px;
 
 }
 
@@ -5768,6 +5771,9 @@ div#share.shareActive {
     margin-left: 2px;
 }
 
+.downloadLink{
+      transition-duration: 0.2s;
+}
 
 
 //ends actionBar
