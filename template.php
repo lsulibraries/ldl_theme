@@ -1,5 +1,105 @@
 <?php
 
+/**
+ * Prepares variables for islandora_newspaper templates.
+ *
+ * Default template: islandora-newspaper.tpl.php.
+ *
+ * @param array $variables
+ *   An associative array containing:
+ *   - object: An AbstractObject for which to generate the display.
+ */
+function alpha_preprocess_islandora_newspaper(array &$variables) {
+  module_load_include('inc', 'islandora', 'includes/metadata');
+  drupal_add_js('misc/collapse.js');
+  $object = $variables['object'];
+  $issues = islandora_newspaper_get_issues($object);
+  $grouped_issues = islandora_newspaper_group_issues($issues);
+  $output = array(
+    'controls' => array(
+      '#theme' => 'links',
+      '#attributes' => array(
+        'class' => array('links', 'inline'),
+      ),
+      '#links' => array(
+        array(
+          'title' => t('Expand all months'),
+          'href' => "javascript://void(0)",
+          'html' => TRUE,
+          'external' => TRUE,
+          'attributes' => array(
+            'onclick' => "Drupal.toggleFieldset(jQuery('fieldset.month.collapsed'));",
+          ),
+        ),
+        array(
+          'title' => t('Collapse all months'),
+          'href' => "javascript://void(0)",
+          'html' => TRUE,
+          'external' => TRUE,
+          'attributes' => array(
+            'onclick' => "Drupal.toggleFieldset(jQuery('fieldset.month:not(.collapsed)'));",
+          ),
+        ),
+      ),
+    ),
+    'tabs' => array(
+      '#type' => 'vertical_tabs',
+    ),
+  );
+  $tabs = &$output['tabs'];
+  $counts = array();
+  foreach ($grouped_issues as $year => $months) {
+    $count[$year]['all'] = 0;
+    $tabs[$year] = array(
+      '#title' => $year,
+      '#type' => 'fieldset',
+    );
+    foreach ($months as $month => $days) {
+      $count[$year][$month] = 0;
+      $month_name = t("@date", array(
+        "@date" => date("F", mktime(0, 0, 0, $month, 1, 2000)),
+      ));
+      $tabs[$year][$month] = array(
+        '#title' => $month_name,
+        '#type' => 'fieldset',
+        '#attributes' => array(
+          'class' => array('collapsible', 'collapsed', 'month'),
+        ),
+      );
+      foreach ($days as $day => $issues) {
+        foreach ($issues as $issue) {
+          $count[$year]['all']++;
+          $count[$year][$month]++;
+          $tabs[$year][$month][$day][] = array(
+            '#theme' => 'link',
+            '#prefix' => '<div>',
+            '#suffix' => '</div>',
+            '#text' => t("@month @day, @year", array(
+                '@year' => $year,
+                '@month' => $month_name,
+                '@day' => $day,
+                )),
+            '#path' => "islandora/object/{$issue['pid']}",
+            '#options' => array(
+              'attributes' => array(),
+              'html' => FALSE,
+            ),
+          );
+        }
+      }
+      ksort($tabs[$year][$month]);
+    }
+    ksort($tabs[$year]);
+  }
+  ksort($tabs);
+
+  $variables['islandora_content_render_array'] = $output;
+  $variables['parent_collections'] = islandora_get_parents_from_rels_ext($object);
+  $variables['metadata'] = islandora_retrieve_metadata_markup($object);
+  $variables['description'] = islandora_retrieve_description_markup($object);
+  $variables['counts'] = json_encode($counts);
+}
+
 function alpha_preprocess_islandora_large_image(&$variables) {
 
   $pid = $variables['islandora_object']->id;
