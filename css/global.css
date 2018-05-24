@@ -2201,7 +2201,7 @@ body.logged-in.front div#zone-header {
   position: absolute;
   width: calc(100% - 40px); }
 
-.not-logged-in .manageMenu ul {
+.not-logged-in .manageMenu {
   display: none; }
 
 .front .scrollPrompt {
@@ -3389,47 +3389,48 @@ div.islandora-pdf-object, div.islandora-large-image-object {
   max-width: none !important; }
 .compoundObject span#islandora-compound-sequence-position {
   margin: 0px; }
-.compoundObject .compoundGallery_header a {
-  max-width: none !important;
-  line-height: inherit !important;
-  width: fit-content !important; }
-.compoundObject .compoundGallery_header .form-item {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  position: relative;
-  border: 0px !important;
-  max-width: 1200px;
-  margin: 0px 20px;
-  margin-bottom: 20px;
-  transition-duration: 1s;
-  width: 100%; }
-.compoundObject .compoundGallery_header .compoundParent, .compoundObject .compoundGallery_header .compoundChild .userMenu .userSelect, .compoundChild .userMenu .compoundObject .compoundGallery_header .userSelect {
-  font-size: 28px;
-  color: rgba(255, 255, 255, 0.85);
-  padding: 0px; }
-.compoundObject .compoundGallery_header .compoundParent:hover, .compoundObject .compoundGallery_header .compoundChild .userMenu .userSelect:hover, .compoundChild .userMenu .compoundObject .compoundGallery_header .userSelect:hover {
-  color: white; }
-.compoundObject .compoundGallery_header .headerBreadcrumb {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start; }
-.compoundObject .compoundGallery_header a.parentLink {
-  color: rgba(255, 255, 255, 0.85);
-  padding: 0px;
-  font-weight: normal;
-  font-size: 16px;
-  margin-left: 3px;
-  margin-bottom: 5px;
-  margin-top: 5px; }
-.compoundObject .compoundGallery_header a.parentLink:hover {
-  color: white; }
-.compoundObject .compoundGallery_header .compoundCount {
-  margin-left: 3px;
-  padding: 2px 5px;
-  background: rgba(255, 255, 255, 0.85);
-  text-transform: uppercase; }
+.compoundObject .compoundGallery_header {
+  padding-bottom: 20px; }
+  .compoundObject .compoundGallery_header a {
+    max-width: none !important;
+    line-height: inherit !important;
+    width: fit-content !important; }
+  .compoundObject .compoundGallery_header .form-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    position: relative;
+    border: 0px !important;
+    max-width: 1200px;
+    margin: 0px 20px;
+    transition-duration: 1s;
+    width: 100%; }
+  .compoundObject .compoundGallery_header .compoundParent, .compoundObject .compoundGallery_header .compoundChild .userMenu .userSelect, .compoundChild .userMenu .compoundObject .compoundGallery_header .userSelect {
+    font-size: 28px;
+    color: rgba(255, 255, 255, 0.85);
+    padding: 0px; }
+  .compoundObject .compoundGallery_header .compoundParent:hover, .compoundObject .compoundGallery_header .compoundChild .userMenu .userSelect:hover, .compoundChild .userMenu .compoundObject .compoundGallery_header .userSelect:hover {
+    color: white; }
+  .compoundObject .compoundGallery_header .headerBreadcrumb {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; }
+  .compoundObject .compoundGallery_header a.parentLink {
+    color: rgba(255, 255, 255, 0.85);
+    padding: 0px;
+    font-weight: normal;
+    font-size: 16px;
+    margin-left: 3px;
+    margin-bottom: 5px;
+    margin-top: 5px; }
+  .compoundObject .compoundGallery_header a.parentLink:hover {
+    color: white; }
+  .compoundObject .compoundGallery_header .compoundCount {
+    margin-left: 3px;
+    padding: 2px 5px;
+    background: rgba(255, 255, 255, 0.85);
+    text-transform: uppercase; }
 .compoundObject .compoundGallery {
   display: flex;
   flex-wrap: wrap;
@@ -4506,10 +4507,9 @@ body.bookViewer .book_headerMenu {
   border: 0px !important;
   max-width: 1200px;
   margin: 0px 20px;
-  margin-bottom: 20px;
   transition-duration: 1s;
   width: 100%;
-  padding-bottom: 30px; }
+  padding-bottom: 20px; }
   body.bookViewer .book_headerMenu #bookTitle {
     font-size: 40px;
     color: white;
@@ -4663,9 +4663,7 @@ body.bookViewer .viewerTitle {
   letter-spacing: 1px;
   border-left: 1px solid #cecece; }
 body.bookViewer i {
-  margin-right: 10px;
-  color: #676767;
-  font-size: 15px; }
+  margin-right: 10px; }
 body.bookViewer .modalExit4 i {
   color: white;
   line-height: 16px;
@@ -6534,7 +6532,7 @@ img.jssocials-share-logo {
   line-height: 1; }
 
 .jssocials-share-link.jssocials-share-link-count {
-  padding-top: .2em; }
+  padding-top: 0.2em; }
 
 .jssocials-share-link.jssocials-share-link-count .jssocials-share-count {
   display: block;

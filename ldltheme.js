@@ -312,12 +312,14 @@ if($('.institution-collection-list-a').length < 4){
         $("<div id='shareToggle' class='userSelect'><div class='iconSelect'></div><div class='textSelect'>share</div></div>").insertAfter("#clip");
         $("<div id='shareToggle' class='userSelect'><div class='iconSelect'></div><div class='textSelect'>share</div></div>").insertAfter(".compoundParent .compoundCount");
         $(".compoundCount").appendTo(".compoundGallery");
-        $("<div id='share'/>").insertAfter("#shareToggle");
         $("#islandora-compound-next-link").insertAfter("#islandora-compound-sequence-position");
         $("<i class='fa fa-arrow-right' aria-hidden='true'></i>").appendTo("#islandora-compound-next-link");
         $("<i class='fa fa-arrow-left' aria-hidden='true'></i>").appendTo("#islandora-compound-previous-link");
         $(".userMenu").insertAfter(".headerBreadcrumb");
         $("#shareToggle").insertAfter(".infoToggle");
+
+        $("<div id='share'/>").insertAfter("#shareToggle");
+        
         $(".parentLink").clone().prop({class:"backContainer"}).insertAfter(".compoundGallery").html("<div class='backCollection'>Back to Collection</div>");
         $(".contentLabel").wrapAll("<div class='labelContainer'/>");
 
@@ -532,7 +534,7 @@ $('a[href*="pages"]').each(function() {
     });
 
         $("<div id='shareToggle' class='userSelect'><div class='iconSelect'></div><div class='textSelect'>share</div></div>").insertAfter(".infoToggle");
-        $("<div id='share'/>").insertAfter(".userMenu");
+        $("<div id='share'/>").insertAfter("#shareToggle");
 
 
         $("#share").jsSocials({
