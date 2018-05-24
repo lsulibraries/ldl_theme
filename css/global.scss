@@ -2940,7 +2940,9 @@ body.logged-in.front div#zone-header {
 }
 
 .not-logged-in{
-  .manageMenu ul{
+
+
+  .manageMenu {
     display: none;
   }
 }
@@ -4405,6 +4407,7 @@ span#islandora-compound-sequence-position {
 }
 
       .compoundGallery_header {
+        padding-bottom: 20px;
           a {
             max-width: none!important;
             line-height: inherit!important;
@@ -4419,7 +4422,6 @@ span#islandora-compound-sequence-position {
             border: 0px !important;
             max-width: 1200px;
             margin: 0px 20px;
-            margin-bottom: 20px;
             transition-duration: 1s;
             width: 100%;
           }
@@ -6103,10 +6105,9 @@ display: flex;
     border: 0px !important;
     max-width: 1200px;
     margin: 0px 20px;
-    margin-bottom: 20px;
     transition-duration: 1s;
     width: 100%;
-padding-bottom: 30px;
+padding-bottom: 20px;
     #bookTitle{
     font-size: 40px;
     color: white;
@@ -6312,8 +6313,8 @@ font-size: 13px;
 }
 i{
     margin-right: 10px;
-    color: #676767;
-    font-size: 15px;
+
+
 }
 
 
@@ -8798,7 +8799,7 @@ body.IEuser {
 .jssocials-share {
   display: inline-block;
   vertical-align: top;
-  margin: 0.3em 0.6em 0.3em 0; }
+  margin: 0.3em 0.6em 0.3em 0;  }
 
 .jssocials-share:last-child {
   margin-right: 0; }
@@ -8818,7 +8819,7 @@ img.jssocials-share-logo {
   text-decoration: none;
   line-height: 1; }
   .jssocials-share-link.jssocials-share-link-count {
-    padding-top: .2em; }
+    padding-top: .2em ; }
     .jssocials-share-link.jssocials-share-link-count .jssocials-share-count {
       display: block;
       font-size: .6em;
