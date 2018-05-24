@@ -5554,6 +5554,7 @@ a.downloadLink:hover {
   height: auto;
   transition-duration: 1s;
   transition: opacity 3s;
+    min-height: 70px;
 opacity: 0;
     width: 100%;
     bottom: 0px;
@@ -5592,6 +5593,7 @@ pointer-events: none;
 .extendList{
   pointer-events: inherit;
   opacity: 1;
+
 };
 
 .userSelect::after{
@@ -7466,6 +7468,24 @@ margin-bottom: 20px;
   }
   @media screen and (max-width: 900px) {
 
+body.headerversiontwo{
+  .downloadList{
+    top:248px;
+    .datastream-download-details{
+      width: auto;
+    }
+  }
+
+  .downloadLink{
+    width: 250px;
+  }
+
+div#shareToggle.activeMenu {
+    margin-left: 15px !important;
+}
+
+}
+
 body.compoundChildImage {
       background: white !important;
       .metadataSidebar.nano-content {
@@ -7690,7 +7710,7 @@ body.largeImage{
 
 .downloadSelect{
   margin-left: 0px !important;
-  margin-right: 10px !important;
+  margin-right: 5px !important;
 }
 
   .tagsGlance, .bookDesc, .infoToggle{
