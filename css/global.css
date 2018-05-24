@@ -3872,6 +3872,8 @@ body:not(.compoundChildImage) #shareToggle {
     background-size: 15px;
     width: 35px; }
 
+body.logged-in.headerversiontwo div#shareToggle.activeMenu {
+  margin-left: 0px; }
 body.logged-in.headerversiontwo #shareToggle {
   margin-left: 0px; }
 body.logged-in.headerversiontwo #toolbar {
@@ -4713,6 +4715,72 @@ body.bookViewer div#bookMeta {
 
 body.largeImage, body.newspaperSet {
   background: black; }
+  body.largeImage .months-container, body.newspaperSet .months-container {
+    display: none; }
+  body.largeImage .total-issue-count, body.newspaperSet .total-issue-count {
+    font-style: italic;
+    padding-top: 20px; }
+  body.largeImage .newspaper-thumbnailData, body.newspaperSet .newspaper-thumbnailData {
+    flex-direction: column;
+    max-width: 1200px;
+    color: #676767;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0px 20px;
+    margin-bottom: 20px; }
+  body.largeImage .islandora-newspaper-content-wrapper, body.newspaperSet .islandora-newspaper-content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+  body.largeImage .islandora-newspaper-grid, body.newspaperSet .islandora-newspaper-grid {
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 0px;
+    margin-bottom: 1px;
+    padding-bottom: 10px;
+    background: white;
+    position: relative;
+    max-width: 1200px;
+    margin: 0px 20px; }
+    body.largeImage .islandora-newspaper-grid .publication-year-container, body.newspaperSet .islandora-newspaper-grid .publication-year-container {
+      height: 80px;
+      margin-right: 20px;
+      margin-bottom: 20px;
+      box-shadow: -3px 4px 20px #e8e8e8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: white;
+      width: calc(33% - 10px);
+      position: relative;
+      overflow: hidden;
+      color: #676767; }
+    body.largeImage .islandora-newspaper-grid .publication-year-container-label, body.newspaperSet .islandora-newspaper-grid .publication-year-container-label {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center; }
+    body.largeImage .islandora-newspaper-grid span.issues-year-total, body.newspaperSet .islandora-newspaper-grid span.issues-year-total {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 120px;
+      font-size: 15px;
+      text-transform: uppercase;
+      flex-grow: 1;
+      letter-spacing: 1px; }
+    body.largeImage .islandora-newspaper-grid span.publication-year, body.newspaperSet .islandora-newspaper-grid span.publication-year {
+      width: 130px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-right: 1px solid rgba(206, 206, 206, 0.44);
+      height: 50px;
+      font-size: 21px; }
+    body.largeImage .islandora-newspaper-grid .publication-year-container:nth-child(3n), body.newspaperSet .islandora-newspaper-grid .publication-year-container:nth-child(3n) {
+      margin-right: 0px !important; }
   body.largeImage #islandora-openseadragon, body.newspaperSet #islandora-openseadragon {
     display: none;
     justify-content: center;

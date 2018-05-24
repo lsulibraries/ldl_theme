@@ -653,8 +653,7 @@ if ( ($('.islandora-newspaper-object').length) && ( !$('body').hasClass('audioPD
   $("<div class='contentLabel newspaperLabel'>newspaper Object</div>").appendTo(".labelContainer"); //adds label break
     $("<div class='newspaperPreview'/>").appendTo(".newspaperContainer"); //adds label break
     $(".newspaper-thumbnail").appendTo(".newspaperPreview");
-    $("<div class='newspaper-thumbnailData'/>").insertAfter(".newspaperPreview");
-
+    $("<div class='newspaper-thumbnailData'/>").insertAfter(".total-issue-count");
 
 
 
@@ -684,6 +683,7 @@ if ( ($('.islandora-newspaper-object').length) && ( !$('body').hasClass('audioPD
     $(".metadataContainer div:first-child").remove();  //removes weird h3 MODS titles
     $("#sideMods").appendTo(".region-sidebar-first-inner");
     $("#sideMods").addClass("metadataContainer");
+    $(".islandora-newspaper-metadata").remove();
 
     //end metadata move
 
@@ -743,6 +743,16 @@ $(".downloadSelect").insertAfter(".infoToggle");
 
 
      $("<i class='fa fa-photo' aria-hidden='true'></i>").appendTo(".newspaperLabel");
+    $(".total-issue-count").insertAfter(".newspaper-thumbnailData > span");
+
+//begin newspaper selection logic
+$(".publication-year-container").click(function(){
+  $(this).toggleClass('activeYear');
+  $(".publication-year-container").not(".activeYear").addClass("inactiveYear");
+
+});
+//end newspaper selection logic
+
 
 }
 // end newspaper 2.0
@@ -905,7 +915,7 @@ $(".downloadSelect").insertAfter(".infoToggle");
 
 
 
-if ( ($('body').hasClass('compoundObject')) || ($('body').hasClass('bookViewer')) || ($('body').hasClass('largeImage')) || ($('body').addClass('islandora-newspaper-object'))){
+if ( ($('body').hasClass('compoundObject')) || ($('body').hasClass('bookViewer')) || ($('body').hasClass('largeImage')) || ($('body').hasClass('newspaperSet'))){
   $('body').addClass('headerversiontwo');
 
 $('.manageMenu').insertBefore('#shareToggle');
