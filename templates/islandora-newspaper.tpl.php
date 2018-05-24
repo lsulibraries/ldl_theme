@@ -14,10 +14,41 @@
  */
 ?>
 <div class="islandora-newspaper-object islandora">
-  <div data-counts="<?php print $counts; ?>" class="islandora-newspaper-content-wrapper clearfix">
-    <?php if ($islandora_content): ?>
+  <div class="islandora-newspaper-content-wrapper clearfix">
+    <?php if ($issues): ?>
       <div class="islandora-newspaper-content">
-        <?php print $islandora_content; ?>
+        <div class='total-issue-count'><?php print $totalIssueCount; ?></div>
+        <?php foreach ($issues as $year => $data): ?>
+          <div class="publication-year-container">
+            <div class="publication-year-container-label">
+              <span class="publication-year">Year: <?php print $year; ?></span>
+              <span class="issues-year-total">Year count: <?php print $data['issue-count']; ?> issues</span>
+            </div>
+            <div class="months-container">
+              <?php foreach ($data['months'] as $month => $data): ?>
+                <div class="month-container">
+                  <div class='month-container-label'>
+                    <span class='month-container-label-month'>Month:
+                      <?php print $month; ?>
+                    </span>
+                    <span class='month-container-label-count'>Month count:
+                      <?php print $data['count']; ?>
+                    </span>
+                    <div class='month-issues-container'>
+                      <?php foreach ($data['issues'] as $issue): ?>
+                        <div class='issue-container'>
+                          <div class='issue-label'>Issue label: <?php print $issue['label']; ?></div>
+                          <div class='issue-href'>/islandora/object/<?php print $issue['pid']; ?></div>
+                          <div class='issue-date'>Issue Date (pre-formatted): <?php print $issue['formatted-date']; ?></div>
+                        </div>
+                      <?php endforeach; ?>
+                    </div>
+                  </div>
+                </div>
+              <?php endforeach; ?>
+            </div>
+          </div>
+        <?php endforeach; ?>
       </div>
     <?php endif; ?>
   </div>
