@@ -16,13 +16,14 @@
 <div class="islandora-newspaper-object islandora">
   <div class="islandora-newspaper-content-wrapper clearfix">
     <?php if ($issues): ?>
-      <div class="islandora-newspaper-content">
-        <div class='total-issue-count'><?php print $totalIssueCount; ?></div>
+              <div class='total-issue-count'>This newspaper contains <?php print $totalIssueCount; ?> issues across x years.</div>
+
+      <div class="islandora-newspaper-grid">
         <?php foreach ($issues as $year => $data): ?>
           <div class="publication-year-container">
             <div class="publication-year-container-label">
-              <span class="publication-year">Year: <?php print $year; ?></span>
-              <span class="issues-year-total">Year count: <?php print $data['issue-count']; ?> issues</span>
+              <span class="publication-year"><?php print $year; ?></span>
+              <span class="issues-year-total"><?php print $data['issue-count']; ?> issues</span>
             </div>
             <div class="months-container">
               <?php foreach ($data['months'] as $month => $data): ?>
