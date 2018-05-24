@@ -782,7 +782,7 @@ $(".downloadSelect").insertAfter(".infoToggle");
 if ( ($('body').hasClass('compoundObject')) || ($('body').hasClass('bookViewer')) || ($('body').hasClass('largeImage'))){
   $('body').addClass('headerversiontwo');
 
-
+$('.manageMenu').insertBefore('#shareToggle');
 
 }
 

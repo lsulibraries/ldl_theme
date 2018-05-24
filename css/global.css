@@ -3884,6 +3884,8 @@ body:not(.compoundChildImage) #shareToggle {
     background-size: 15px;
     width: 35px; }
 
+body.logged-in.headerversiontwo #shareToggle {
+  margin-left: 0px; }
 body.logged-in.headerversiontwo #toolbar {
   z-index: 9999 !important; }
 body.logged-in.headerversiontwo #section-header {

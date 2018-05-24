@@ -5147,6 +5147,11 @@ body:not(.compoundChildImage) {
 }
 //new floating header
 body.logged-in.headerversiontwo{
+
+#shareToggle{
+  margin-left: 0px;
+}
+
 #toolbar{
       z-index: 9999 !important;
 }
