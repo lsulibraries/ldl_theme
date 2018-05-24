@@ -3786,19 +3786,6 @@ body.not-logged-in.compoundChild .manageMenu {
     background-color: transparent; }
   .compoundChild .menuActive .textSelect {
     background: rgba(0, 0, 0, 0.06); }
-  .compoundChild .backgroundDiv {
-    position: absolute;
-    width: calc(100% + 140px);
-    height: calc(100% + 140px);
-    -webkit-filter: blur(50px) brightness(0.8) contrast(0.6);
-    -moz-filter: blur(50px) brightness(0.8) contrast(0.6);
-    -ms-filter: blur(50px) brightness(0.8) contrast(0.6);
-    -o-filter: blur(50px) brightness(0.8) contrast(0.6);
-    filter: blur(50px) brightness(0.8) contrast(0.6);
-    background-repeat: no-repeat;
-    background-size: cover;
-    left: -20px;
-    top: -20px; }
   .compoundChild .childNotice {
     height: 50px;
     color: #FF5370;
@@ -3895,7 +3882,24 @@ body.logged-in.headerversiontwo .metadataContainer {
   padding-top: 30px !important; }
 
 body.headerversiontwo {
-  background: black; }
+  background: black;
+  margin: 0px; }
+  body.headerversiontwo .imageTitle, body.headerversiontwo .newspaperTitle {
+    font-size: 40px;
+    color: white;
+    line-height: 37px; }
+  body.headerversiontwo .image_headerMenu, body.headerversiontwo .newspaper_headerMenu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    position: relative;
+    border: 0px !important;
+    max-width: 1200px;
+    margin: 0px 20px;
+    margin-bottom: 20px;
+    transition-duration: 1s;
+    width: 100%; }
   body.headerversiontwo #share .jssocials-share {
     display: inline-block;
     vertical-align: top;
@@ -4707,9 +4711,9 @@ body.bookViewer div#bookMeta {
   padding: 40px;
   box-sizing: border-box; }
 
-body.largeImage {
+body.largeImage, body.newspaperSet {
   background: black; }
-  body.largeImage #islandora-openseadragon {
+  body.largeImage #islandora-openseadragon, body.newspaperSet #islandora-openseadragon {
     display: none;
     justify-content: center;
     align-items: center;
@@ -4717,21 +4721,21 @@ body.largeImage {
     position: absolute;
     z-index: 2;
     height: 100vh; }
-  body.largeImage .labelContainer {
+  body.largeImage .labelContainer, body.newspaperSet .labelContainer {
     position: relative; }
-  body.largeImage div.labelContainer > .contentLabel > i {
+  body.largeImage div.labelContainer > .contentLabel > i, body.newspaperSet div.labelContainer > .contentLabel > i {
     position: absolute;
     top: 5px;
     left: 0px;
     font-size: 15px; }
-  body.largeImage header#section-header {
+  body.largeImage header#section-header, body.newspaperSet header#section-header {
     position: absolute;
     top: 0px;
     z-index: 888;
     width: 100%; }
-  body.largeImage div.islandora-large-image-content {
+  body.largeImage div.islandora-large-image-content, body.newspaperSet div.islandora-large-image-content {
     display: none; }
-  body.largeImage .image_header {
+  body.largeImage .image_header, body.largeImage .newspaper_header, body.newspaperSet .image_header, body.newspaperSet .newspaper_header {
     display: flex;
     justify-content: center;
     background: rgba(0, 0, 0, 0.06);
@@ -4740,23 +4744,7 @@ body.largeImage {
     overflow: hidden;
     padding-top: 200px;
     transition-duration: 1s; }
-  body.largeImage .image_headerMenu {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    position: relative;
-    border: 0px !important;
-    max-width: 1200px;
-    margin: 0px 20px;
-    margin-bottom: 20px;
-    transition-duration: 1s;
-    width: 100%; }
-    body.largeImage .image_headerMenu .imageTitle {
-      font-size: 40px;
-      color: white;
-      line-height: 37px; }
-  body.largeImage .imageToolbar {
+  body.largeImage .imageToolbar, body.newspaperSet .imageToolbar {
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
@@ -4768,7 +4756,7 @@ body.largeImage {
     position: relative;
     border-radius: 20px 20px 0px 0px;
     overflow: hidden; }
-  body.largeImage .innerimageTitle {
+  body.largeImage .innerimageTitle, body.newspaperSet .innerimageTitle {
     background: white;
     margin-left: 40px;
     margin-right: 40px;

@@ -4982,20 +4982,7 @@ a#clip {
 
 
 
-.backgroundDiv {
-    position: absolute;
-    width: calc(100% + 140px);
-    height: calc(100% + 140px);
-  -webkit-filter: blur(50px) brightness(0.8) contrast(0.6);
-  -moz-filter: blur(50px) brightness(0.8) contrast(0.6);
-  -ms-filter: blur(50px) brightness(0.8) contrast(0.6);
-  -o-filter: blur(50px) brightness(0.8) contrast(0.6);
-    filter: blur(50px) brightness(0.8) contrast(0.6);
-    background-repeat: no-repeat;
-    background-size: cover;
-    left: -20px;
-    top: -20px;
-}
+
 
 
 
@@ -5167,11 +5154,34 @@ body.logged-in.headerversiontwo{
 
 }
 
+//begin shared item 2.0 Styles
+
 body.headerversiontwo{
 background: black;
 
+margin: 0px;
+
+.imageTitle, .newspaperTitle{
+font-size: 40px;
+color: white;
+line-height: 37px;
+}
+
+.image_headerMenu, .newspaper_headerMenu{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+flex-wrap: wrap;
+position: relative;
+border: 0px !important;
+max-width: 1200px;
+margin: 0px 20px;
+margin-bottom: 20px;
+transition-duration: 1s;
+width: 100%;
 
 
+}
 
 #share .jssocials-share {
     display: inline-block;
@@ -6384,7 +6394,7 @@ div#bookMeta {
 
 
 //begin largeImage 2.0
-body.largeImage{
+body.largeImage, body.newspaperSet{
 
   background: black;
 
@@ -6422,7 +6432,7 @@ div.islandora-large-image-content{
   display: none;
 }
 
-.image_header{
+.image_header, .newspaper_header{
   display: flex;
   justify-content: center;
   background: $darkTransparent;
@@ -6433,25 +6443,7 @@ div.islandora-large-image-content{
       transition-duration: 1s;
 }
 
-.image_headerMenu{
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-flex-wrap: wrap;
-position: relative;
-border: 0px !important;
-max-width: 1200px;
-margin: 0px 20px;
-margin-bottom: 20px;
-transition-duration: 1s;
-width: 100%;
 
-.imageTitle{
-font-size: 40px;
-color: white;
-line-height: 37px;
-}
-}
 
 .imageToolbar {
     flex-direction: row-reverse;
