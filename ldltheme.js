@@ -678,7 +678,7 @@ if ( ($('.islandora-newspaper-object').length) && ( !$('body').hasClass('audioPD
             .replace(/<\/tbody/gi, "<\/div")
         );
     });
-    $(".islandora-book-metadata > .metadataContainer").appendTo(".region-sidebar-first-inner");
+    $(".islandora-newspaper-metadata > .metadataContainer").appendTo(".region-sidebar-first-inner");
     $("#region-sidebar-first").addClass('nano');
     $(".nano > .region-inner").appendTo('#side');
     $('#sideMods, .nano > .region-inner').wrapAll('<div class="metadataSidebar"/>');
