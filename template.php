@@ -1,5 +1,43 @@
 <?php
 
+/**
+ * Prepares variables for islandora_newspaper templates.
+ *
+ * Default template: islandora-newspaper.tpl.php.
+ *
+ * @param array $variables
+ *   An associative array containing:
+ *   - object: An AbstractObject for which to generate the display.
+ */
+function alpha_preprocess_islandora_newspaper(array &$variables) {
+
+  $issues = [];
+  $grouped_issues = islandora_newspaper_group_issues(
+    islandora_newspaper_get_issues($variables['object'])
+  );
+  $issueTotal = 0;
+  foreach($grouped_issues as $year => $months) {
+    $nest[$year]['months'] = [];
+    $nest[$year]['issue-count'] = 0;
+    foreach($months as $month => $days) {
+      $month = date("M", mktime(0, 0, 0, $month, 1, 2000));
+      $nest[$year]['months'][$month]['issues'] = [];
+      foreach ($days as $day => $issues) {
+        foreach ($issues as $issue) {
+          $issue['formatted-date'] = $issue['issued']->format('Y-m-d');
+          $nest[$year]['months'][$month]['issues'][] = $issue;
+        }
+      }
+      $mounthIssues = count($nest[$year]['months'][$month]['issues']);
+      $nest[$year]['months'][$month]['count'] = $mounthIssues;
+      $nest[$year]['issue-count'] += $mounthIssues;
+      $issueTotal += $mounthIssues;
+    }
+    $variables['issues'] = $nest;
+  }
+  $variables['totalIssueCount'] = $issueTotal;
+}
+
 function alpha_preprocess_islandora_large_image(&$variables) {
 
   $pid = $variables['islandora_object']->id;
