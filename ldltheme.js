@@ -749,6 +749,19 @@ $(".downloadSelect").insertAfter(".infoToggle");
 $(".publication-year-container").click(function(){
   $(this).toggleClass('activeYear');
   $(".publication-year-container").not(".activeYear").addClass("inactiveYear");
+  $(".islandora-newspaper-navigation").toggleClass('secondStage');
+  $(".yearSelect").removeClass('activeSelect');
+  $(".monthSelect").addClass('activeSelect');
+});
+
+
+$(".yearSelect, .selectBack").click(function(){
+  $(".newsSelect").removeClass('activeSelect');
+  $(".yearSelect").addClass('activeSelect');
+  $(".publication-year-container").removeClass("inactiveYear");
+  $(".publication-year-container").removeClass("activeYear");
+  $(".islandora-newspaper-navigation").removeClass('secondStage');
+
 
 });
 //end newspaper selection logic

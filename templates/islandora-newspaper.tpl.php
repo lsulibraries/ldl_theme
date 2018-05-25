@@ -18,7 +18,7 @@
     <?php if ($issues): ?>
               <div class='total-issue-count'>This newspaper contains <?php print $totalIssueCount; ?> issues across <?php print $totalYearCount; ?> years.</div>
       <div class="islandora-newspaper-navigation">
-        <div class="newsSelect yearSelect">
+        <div class="newsSelect yearSelect activeSelect">
           <span>Select Year</span>
         </div>
         <div class="newsSelect monthSelect">
@@ -29,12 +29,16 @@
         </div>
         <div class="newsIndicator">
           <div class="activeIndicator"></div>
-        </div>        
+        </div>
         </div>
       </div>
       <div class="islandora-newspaper-grid">
         <?php foreach ($issues as $year => $data): ?>
           <div class="publication-year-container">
+            <div class="selectBack">
+              <i class="fas fa-angle-double-left"></i>
+              <span>Back</span>
+            </div>
             <div class="publication-year-container-label">
               <span class="publication-year"><?php print $year; ?></span>
               <span class="issues-year-total"><?php print $data['issue-count']; ?> issues</span>
@@ -43,11 +47,11 @@
               <?php foreach ($data['months'] as $month => $data): ?>
                 <div class="month-container">
                   <div class='month-container-label'>
-                    <span class='month-container-label-month'>Month:
+                    <span class='month-container-label-month'>
                       <?php print $month; ?>
                     </span>
-                    <span class='month-container-label-count'>Month count:
-                      <?php print $data['count']; ?>
+                    <span class='month-container-label-count'>
+                      <?php print $data['count']; ?> issues
                     </span>
                     <div class='month-issues-container'>
                       <?php foreach ($data['issues'] as $issue): ?>
