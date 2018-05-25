@@ -16,7 +16,9 @@ function alpha_preprocess_islandora_newspaper(array &$variables) {
     islandora_newspaper_get_issues($variables['object'])
   );
   $issueTotal = 0;
+  $yearTotal = 0;
   foreach($grouped_issues as $year => $months) {
+    $yearTotal++;
     $nest[$year]['months'] = [];
     $nest[$year]['issue-count'] = 0;
     foreach($months as $month => $days) {
@@ -36,6 +38,7 @@ function alpha_preprocess_islandora_newspaper(array &$variables) {
     $variables['issues'] = $nest;
   }
   $variables['totalIssueCount'] = $issueTotal;
+  $variables['totalYearCount'] = $yearTotal;
 }
 
 function alpha_preprocess_islandora_large_image(&$variables) {
