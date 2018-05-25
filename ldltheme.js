@@ -746,24 +746,67 @@ $(".downloadSelect").insertAfter(".infoToggle");
     $(".total-issue-count").insertAfter(".newspaper-thumbnailData > span");
 
 //begin newspaper selection logic
-$(".publication-year-container").click(function(){
-  $(this).toggleClass('activeYear');
-  $(".publication-year-container").not(".activeYear").addClass("inactiveYear");
+
+    var monthButton = $('.month-container-label');
+
+
+$('.publication-year-container-label').click(function(){
+  $(this).parent().addClass('activeYear');
+  $(".viewYears").not(".activeYear").addClass("inactiveYear");
   $(".islandora-newspaper-navigation").toggleClass('secondStage');
   $(".yearSelect").removeClass('activeSelect');
+  $(".publication-year-container").removeClass("viewYears");
   $(".monthSelect").addClass('activeSelect');
+  $(".newspaperContainer").removeClass("yearLevel");
+  $(".newspaperContainer").addClass("monthLevel");
 });
 
 
-$(".yearSelect, .selectBack").click(function(){
+monthButton.click(function(){
+  $(this).addClass('activeMonth');
+  $(".month-container-label").not(".activeMonth").addClass("inactiveYear");
+  $(".islandora-newspaper-navigation").addClass('thirdStage');
+  $(".islandora-newspaper-navigation").removeClass('secondStage');
+  $(".newsSelect").removeClass('activeSelect');
+  $(".issueSelect").addClass('activeSelect');
+  $(".newspaperContainer").removeClass("monthLevel");
+  $(".newspaperContainer").addClass("issueLevel");
+  var monthLabel = $(this).find(".month-container-label-month").clone().addClass("monthTempLabel");
+  monthLabel.insertAfter($(this).parent().parent().parent().find("span.publication-year"));
+
+});
+
+
+//back to month
+$(".monthSelect, .monthBack").click(function(){
+  $(".monthTempLabel").remove();
+  $(".newsSelect").removeClass('activeSelect');
+  $(".monthSelect").addClass('activeSelect');
+  $(".islandora-newspaper-navigation").addClass('secondStage');
+  $(".islandora-newspaper-navigation").removeClass('thirdStage');
+  $(".newspaperContainer").removeClass("issueLevel");
+  $(".month-container-label").removeClass("inactiveYear");
+  $(".month-container-label").removeClass("activeMonth");
+
+});
+
+//back to year
+$(".yearSelect, .yearBack").click(function(){
+  $(".monthTempLabel").remove();
   $(".newsSelect").removeClass('activeSelect');
   $(".yearSelect").addClass('activeSelect');
   $(".publication-year-container").removeClass("inactiveYear");
   $(".publication-year-container").removeClass("activeYear");
+  $(".publication-year-container").addClass("viewYears");
   $(".islandora-newspaper-navigation").removeClass('secondStage');
-
-
+  $(".islandora-newspaper-navigation").removeClass('thirdStage');
+  $(".newspaperContainer").removeClass("monthLevel");
+  $(".newspaperContainer").removeClass("issueLevel");
 });
+
+
+
+
 //end newspaper selection logic
 
 

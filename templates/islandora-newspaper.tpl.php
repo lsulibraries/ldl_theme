@@ -3,7 +3,7 @@
 /**
  * @file
  * This is the template file for the object page for newspaper
- *
+ *<div class='issue-date'>Issue Date (pre-formatted): <?php print $issue['formatted-date']; ?></div>
  * Available variables:
  * - $islandora_content: A rendered vertical tabbed newspapper issue browser.
  * - $parent_collections: An array containing parent collection IslandoraFedoraObject(s).
@@ -34,11 +34,16 @@
       </div>
       <div class="islandora-newspaper-grid">
         <?php foreach ($issues as $year => $data): ?>
-          <div class="publication-year-container">
-            <div class="selectBack">
+          <div class="publication-year-container viewYears">
+            <div class="selectBack yearBack">
               <i class="fas fa-angle-double-left"></i>
               <span>Back</span>
             </div>
+            <div class="selectBack monthBack">
+              <i class="fas fa-angle-double-left"></i>
+              <span>Back</span>
+            </div>
+
             <div class="publication-year-container-label">
               <span class="publication-year"><?php print $year; ?></span>
               <span class="issues-year-total"><?php print $data['issue-count']; ?> issues</span>
@@ -56,9 +61,7 @@
                     <div class='month-issues-container'>
                       <?php foreach ($data['issues'] as $issue): ?>
                         <div class='issue-container'>
-                          <div class='issue-label'>Issue label: <?php print $issue['label']; ?></div>
-                          <div class='issue-href'>/islandora/object/<?php print $issue['pid']; ?></div>
-                          <div class='issue-date'>Issue Date (pre-formatted): <?php print $issue['formatted-date']; ?></div>
+                          <a href="/islandora/object/<?php print $issue['pid']; ?>"><?php print $issue['formatted-date']; ?></a>
                         </div>
                       <?php endforeach; ?>
                     </div>

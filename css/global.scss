@@ -6393,7 +6393,9 @@ div#bookMeta {
 
 }
 //End bookViewer
-
+.newsSelect {
+    font-size: 19px;
+  }
 
 //begin largeImage 2.0
 body.largeImage, body.newspaperSet{
@@ -6412,6 +6414,7 @@ body.largeImage, body.newspaperSet{
     text-transform: uppercase;
     opacity: 0.4;
     color: #676767;
+    transition-duration: 0.5s;
 }
 
 
@@ -6489,6 +6492,7 @@ body.largeImage, body.newspaperSet{
     position: relative;
     max-width: 1200px;
     margin: 0px 20px;
+    width: 100%;
 
     .publication-year-container{
     height: 80px;
@@ -6574,16 +6578,26 @@ span.publication-year {
 
 
 }
+.monthLevel .publication-year-container-label {
+    pointer-events: none;
+}
 
+.monthSelect{
+    pointer-events: none;
+}
+
+.issueLevel .monthSelect{
+    pointer-events: inherit !important;
+}
 
 //begin activeYear
 .islandora-newspaper-grid .publication-year-container.activeYear{
     width: 100%;
     z-index: 2;
-    height: 320px;
+    height: fit-content;
     flex-direction: row;
-
-.selectBack{
+    margin-right: 0px;
+.yearBack{
   display: flex;
 }
 
@@ -6608,6 +6622,14 @@ span.issues-year-total{
     display: none;
 }
 
+.activeMonth{
+  width:auto !important;
+}
+
+.activeMonth .month-issues-container{
+  display: flex;
+}
+
 .publication-year-container-label {
     width: 400px !important;
 
@@ -6617,7 +6639,11 @@ span.issues-year-total{
 .months-container{
     display: flex;
     flex-wrap: wrap;
+    padding: 20px 0px;
+    padding-bottom: 30px;
+    padding-right: 20px;
 }
+
 
 .month-container {
     position: relative;
@@ -6634,7 +6660,7 @@ span.issues-year-total{
     position: relative;
     width: 80px;
     margin-bottom: 20px;
-    border-radius: 3px;    
+    border-radius: 3px;
 }
 
 span.month-container-label-month {
@@ -6656,11 +6682,67 @@ span.month-container-label-count {
     box-sizing: content-box;
     border-radius: 0px 0px 3px 3px;
 }
-
 }
 
 //end activeYear
 
+
+//begin issueLevel styleSheets
+
+.issueLevel{
+
+.issue-container {
+    padding: 0px 20px;
+    font-size: 20px;
+    background: #327bb3;
+    margin-right: 10px;
+    border-radius: 3px;
+    letter-spacing: 2px;
+    padding-bottom: 2px;
+
+}
+
+.issue-container a{
+  color: white;
+}
+
+    .yearSelect, .monthSelect{
+      cursor: pointer;
+    }
+
+    .yearSelect:hover, .monthSelect:hover{
+opacity: 0.8;
+    transition-duration: 0.5s;
+
+   }
+
+
+  .months-container{
+    flex-grow: 2;
+  }
+
+.activeMonth{
+  border:0px !important;
+  margin-bottom: 0px !important;
+}
+
+.activeMonth > span{
+  display: none;
+}
+
+  span.month-container-label-month.monthTempLabel {
+    font-size: 32px !important;
+}
+
+  span.publication-year{
+        font-size: 16px !important;
+    position: relative;
+    right: 1px;
+    top: 9px;
+  }
+}
+
+//end issueLevel style
 
 //begin navigation stages
 
