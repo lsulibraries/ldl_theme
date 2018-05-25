@@ -17,7 +17,21 @@
   <div class="islandora-newspaper-content-wrapper clearfix">
     <?php if ($issues): ?>
               <div class='total-issue-count'>This newspaper contains <?php print $totalIssueCount; ?> issues across <?php print $totalYearCount; ?> years.</div>
-
+      <div class="islandora-newspaper-navigation">
+        <div class="newsSelect yearSelect">
+          <span>Select Year</span>
+        </div>
+        <div class="newsSelect monthSelect">
+          <span>Select Month</span>
+        </div>
+        <div class="newsSelect issueSelect">
+          <span>Select Issue</span>
+        </div>
+        <div class="newsIndicator">
+          <div class="activeIndicator"></div>
+        </div>        
+        </div>
+      </div>
       <div class="islandora-newspaper-grid">
         <?php foreach ($issues as $year => $data): ?>
           <div class="publication-year-container">
@@ -67,4 +81,3 @@
     <?php endif; ?>
     <?php print $metadata; ?>
   </div>
-</div>

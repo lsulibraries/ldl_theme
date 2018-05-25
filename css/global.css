@@ -4715,6 +4715,39 @@ body.bookViewer div#bookMeta {
 
 body.largeImage, body.newspaperSet {
   background: black; }
+  body.largeImage .islandora-newspaper-object.islandora.newspaperContainer, body.newspaperSet .islandora-newspaper-object.islandora.newspaperContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  body.largeImage .newsIndicator, body.newspaperSet .newsIndicator {
+    position: absolute;
+    border-bottom: 1px solid #cecece;
+    bottom: 0px;
+    width: 100%; }
+  body.largeImage .activeIndicator, body.newspaperSet .activeIndicator {
+    width: 25%;
+    height: 8px;
+    background: #327bb3;
+    transform: translateX(15%); }
+  body.largeImage .islandora-newspaper-navigation, body.newspaperSet .islandora-newspaper-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 0px;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    background: white;
+    position: relative;
+    max-width: 1200px;
+    margin: 0px 20px;
+    margin-bottom: 40px;
+    width: 100%;
+    justify-content: space-around;
+    position: relative; }
+  body.largeImage .newsSelect, body.newspaperSet .newsSelect {
+    font-size: 19px;
+    text-transform: uppercase;
+    opacity: 0.4; }
   body.largeImage .months-container, body.newspaperSet .months-container {
     display: none; }
   body.largeImage .total-issue-count, body.newspaperSet .total-issue-count {
@@ -6782,7 +6815,7 @@ img.jssocials-share-logo {
   top: 0;
   bottom: 0;
   visibility: hidden\9;
-  /* Target only IE7 and IE8 with this hack */
+  /* Target only IE7 and IE8 with this hsack */
   opacity: .01;
   -webkit-transition: .2s;
   -moz-transition: .2s;
