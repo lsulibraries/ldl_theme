@@ -802,6 +802,8 @@ $(".yearSelect, .yearBack").click(function(){
   $(".islandora-newspaper-navigation").removeClass('thirdStage');
   $(".newspaperContainer").removeClass("monthLevel");
   $(".newspaperContainer").removeClass("issueLevel");
+  $(".month-container-label").removeClass("inactiveYear");
+  $(".month-container-label").removeClass("activeMonth");  
 });
 
 
