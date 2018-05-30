@@ -843,18 +843,19 @@ $.getScript('https://designmodo.com/demo/calendarjquerycss3/js/jquery-ui-datepic
    var monthsQuantity = $(".activeYear .months-container .month-container").length;
 
 
+var issueLinks = [];
 
-var events = [
-    { Title: "Five K for charity", Date: new Date("02/13/1983") },
-    { Title: "Dinner", Date: new Date("02/25/1983") },
-    { Title: "Meeting with manager", Date: new Date("03/01/1983") }
-];
+$( ".issue-container" ).each(function( index ) {
+        var date = new Date($(this).find("a").html());
+        issueLinks.push({link: $(this).find("a").attr("href"), Date: date});
+});
 
+console.log(issueLinks);
 
 $("#calendar").datepicker({
     beforeShowDay: function(date) {
         var result = [true, '', null];
-        var matching = $.grep(events, function(event) {
+        var matching = $.grep(issueLinks, function(event) {
             return event.Date.valueOf() === date.valueOf();
         });
 
@@ -869,17 +870,17 @@ $("#calendar").datepicker({
             i = 0,
             event = null;
 
-        while (i < events.length && !event) {
-            date = events[i].Date;
+        while (i < issueLinks.length && !event) {
+            date = issueLinks[i].Date;
 
             if (selectedDate.valueOf() === date.valueOf()) {
-                event = events[i];
+                event = issueLinks[i];
             }
-            i++;
         }
         if (event) {
-            alert(event.Title);
+            location.href=issueLinks[i].link;
         }
+        i++;
     }
 });
 
