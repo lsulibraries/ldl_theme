@@ -876,11 +876,11 @@ $("#calendar").datepicker({
             if (selectedDate.valueOf() === date.valueOf()) {
                 event = issueLinks[i];
             }
+            i++;
         }
         if (event) {
-            location.href=issueLinks[i].link;
+            location.href=issueLinks[i - 1].link;
         }
-        i++;
     }
 });
 
