@@ -781,6 +781,16 @@ monthButton.click(function(){
   $(".newspaperContainer").addClass("issueLevel");
 var monthLabel = $(this).find(".month-container-label-month").clone().addClass("monthTempLabel");
   monthLabel.insertAfter($(this).parent().parent().parent().find("span.publication-year"));
+var yearChosen = $(".activeYear .publication-year").html();
+var monthLink = $(this).find(".month-issues-container .issue-container a").html();
+var monthChosen = monthLink.substr(5,2); // => "Tabs1"
+
+
+var somestr =  + monthChosen + "/01/" + yearChosen + "";
+alert('You set the calendar to ' + monthChosen + ' .');
+
+$( "#calendar" ).datepicker( "setDate", somestr );
+
 
 });
 
@@ -826,18 +836,23 @@ $(".yearSelect, .yearBack").click(function(){
 //begin datepicker
 //datepicker
 
-        $("<div id='calendar'/>").insertAfter(".newspaper-thumbnailData");
-
-
-
+$("<div id='calendar'/>").insertAfter(".newspaper-thumbnailData");
 
 $.getScript('https://designmodo.com/demo/calendarjquerycss3/js/jquery-ui-datepicker.min.js', function() {
+
+   var monthsQuantity = $(".activeYear .months-container .month-container").length;
+
    $('#calendar').datepicker({
         inline: true,
         firstDay: 1,
         showOtherMonths: true,
-        dayNamesMin: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+        numberOfMonths: 1,
+        dayNamesMin: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+        setDate: 10/12/2012,
     });
+
+
+
 });
 
 
