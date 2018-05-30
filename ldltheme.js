@@ -879,7 +879,10 @@ $("#calendar").datepicker({
             i++;
         }
         if (event) {
-            location.href=issueLinks[i - 1].link;
+          window.open(
+              issueLinks[i - 1].link,
+              '_blank' // <- This is what makes it open in a new window.
+            );
         }
     }
 });
