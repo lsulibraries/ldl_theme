@@ -6437,6 +6437,10 @@ body.largeImage, body.newspaperSet{
     opacity: 1;
 }
 
+#calendar{
+  display: none;
+}
+
 .islandora-newspaper-navigation{
     display: flex;
     flex-wrap: wrap;
@@ -6750,6 +6754,10 @@ span.month-container-label-count {
 //begin issueLevel styleSheets
 
 .issueLevel{
+
+#calendar{
+  display: block !important;
+}
 
 .islandora-newspaper-grid .publication-year-container .publication-year-container-label{
 pointer-events: none !important;

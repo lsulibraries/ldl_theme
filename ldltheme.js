@@ -779,17 +779,17 @@ monthButton.click(function(){
   $(".issueSelect").addClass('activeSelect');
   $(".newspaperContainer").removeClass("monthLevel");
   $(".newspaperContainer").addClass("issueLevel");
-var monthLabel = $(this).find(".month-container-label-month").clone().addClass("monthTempLabel");
+  var monthLabel = $(this).find(".month-container-label-month").clone().addClass("monthTempLabel");
   monthLabel.insertAfter($(this).parent().parent().parent().find("span.publication-year"));
-var yearChosen = $(".activeYear .publication-year").html();
-var monthLink = $(this).find(".month-issues-container .issue-container a").html();
-var monthChosen = monthLink.substr(5,2); // => "Tabs1"
+  var yearChosen = $(this).find(".date-year").html();
+  var monthChosen = $(this).find(".date-month").html();
+  var somestr =  + monthChosen + "/01/" + yearChosen + "";
+  $( "#calendar" ).datepicker( "setDate", somestr );
+  $( "#calendar" ).insertBefore(".months-container");
 
+//begin link import for dates
 
-var somestr =  + monthChosen + "/01/" + yearChosen + "";
-alert('You set the calendar to ' + monthChosen + ' .');
-
-$( "#calendar" ).datepicker( "setDate", somestr );
+//end link import for dates
 
 
 });
@@ -842,14 +842,46 @@ $.getScript('https://designmodo.com/demo/calendarjquerycss3/js/jquery-ui-datepic
 
    var monthsQuantity = $(".activeYear .months-container .month-container").length;
 
-   $('#calendar').datepicker({
-        inline: true,
-        firstDay: 1,
-        showOtherMonths: true,
-        numberOfMonths: 1,
-        dayNamesMin: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
-        setDate: 10/12/2012,
-    });
+
+
+var events = [
+    { Title: "Five K for charity", Date: new Date("02/13/1983") },
+    { Title: "Dinner", Date: new Date("02/25/1983") },
+    { Title: "Meeting with manager", Date: new Date("03/01/1983") }
+];
+
+
+$("#calendar").datepicker({
+    beforeShowDay: function(date) {
+        var result = [true, '', null];
+        var matching = $.grep(events, function(event) {
+            return event.Date.valueOf() === date.valueOf();
+        });
+
+        if (matching.length) {
+            result = [true, 'highlight', null];
+        }
+        return result;
+    },
+    onSelect: function(dateText) {
+        var date,
+            selectedDate = new Date(dateText),
+            i = 0,
+            event = null;
+
+        while (i < events.length && !event) {
+            date = events[i].Date;
+
+            if (selectedDate.valueOf() === date.valueOf()) {
+                event = events[i];
+            }
+            i++;
+        }
+        if (event) {
+            alert(event.Title);
+        }
+    }
+});
 
 
 

@@ -4742,6 +4742,8 @@ body.largeImage, body.newspaperSet {
     transition-duration: 1s; }
   body.largeImage .activeSelect, body.newspaperSet .activeSelect {
     opacity: 1; }
+  body.largeImage #calendar, body.newspaperSet #calendar {
+    display: none; }
   body.largeImage .islandora-newspaper-navigation, body.newspaperSet .islandora-newspaper-navigation {
     display: flex;
     flex-wrap: wrap;
@@ -4953,6 +4955,8 @@ body.largeImage, body.newspaperSet {
       color: white;
       box-sizing: content-box;
       border-radius: 0px 0px 3px 3px; }
+  body.largeImage .issueLevel #calendar, body.newspaperSet .issueLevel #calendar {
+    display: block !important; }
   body.largeImage .issueLevel .islandora-newspaper-grid .publication-year-container .publication-year-container-label, body.newspaperSet .issueLevel .islandora-newspaper-grid .publication-year-container .publication-year-container-label {
     pointer-events: none !important;
     height: 180px;
