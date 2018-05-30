@@ -27,6 +27,9 @@ function alpha_preprocess_islandora_newspaper(array &$variables) {
       foreach ($days as $day => $issues) {
         foreach ($issues as $issue) {
           $issue['formatted-date'] = $issue['issued']->format('Y-m-d');
+          $issue['formatted-date-year'] = $issue['issued']->format('Y');
+          $issue['formatted-date-month'] = $issue['issued']->format('m');
+          $issue['formatted-date-day'] = $issue['issued']->format('d');
           $nest[$year]['months'][$month]['issues'][] = $issue;
         }
       }

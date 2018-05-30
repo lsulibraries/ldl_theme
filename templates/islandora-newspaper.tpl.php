@@ -63,6 +63,9 @@
                         <div class='issue-container'>
                           <a href="/islandora/object/<?php print $issue['pid']; ?>"><?php print $issue['formatted-date']; ?></a>
                         </div>
+                        <div class='date-year'><?php print $issue['formatted-date-year']; ?></div>
+                        <div class='date-month'><?php print $issue['formatted-date-month']; ?></div>
+                        <div class='date-day'><?php print $issue['formatted-date-day']; ?></div>
                       <?php endforeach; ?>
                     </div>
                   </div>
