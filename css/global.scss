@@ -6507,13 +6507,27 @@ body.largeImage, body.newspaperSet{
     position: relative;
     overflow: hidden;
     color: #676767;
+      transition-duration: 0.5s;
+          border-bottom: 2px solid transparent;
+
     }
+
+.publication-year-container:hover{
+    border-bottom: 2px solid #cecece;
+  transition-duration: 0s;
+}
+
 .publication-year-container-label {
     display: flex;
     width: 100%;
     justify-content: space-between;
     align-items: center;
+    cursor: pointer;
+    height: 80px;
+
 }
+
+
 
 span.issues-year-total {
     display: flex;
@@ -6555,6 +6569,8 @@ span.publication-year {
     align-items: center;
     border-radius: 3px;
     border: 1px solid #327bb3;
+    cursor: pointer;
+  transition-duration: 0.5s;
 
     i{
     font-family: fontAwesome;
@@ -6578,8 +6594,50 @@ span.publication-year {
 
 
 }
+
+.selectBack:hover{
+  transform: translateX(5px);
+  transition-duration: 0.5s;
+}
+
+
+
 .monthLevel .publication-year-container-label {
     pointer-events: none;
+}
+
+.monthLevel{
+
+.month-container{
+  width: 30%;
+}
+
+  .publication-year-container {
+    flex-direction: column !important;
+  }
+
+  .publication-year-container-label {
+    width: auto !important;
+    flex-direction: column;
+        height: 180px;
+justify-content: center;
+  }
+
+span.issues-year-total {
+    flex-grow: 0 !important;
+}
+
+      .yearSelect:hover{
+      opacity: 0.8;
+      transition-duration: 0.5s;
+      cursor: pointer;
+     }
+
+.publication-year-container:hover{
+  transform: translateY(0px);
+  transition-duration: 0s;
+}
+
 }
 
 .monthSelect{
@@ -6642,11 +6700,14 @@ span.issues-year-total{
     padding: 20px 0px;
     padding-bottom: 30px;
     padding-right: 20px;
+        justify-content: center;
+    width: 100%;
 }
 
 
 .month-container {
     position: relative;
+        cursor: pointer;
 
 }
 
@@ -6658,7 +6719,6 @@ span.issues-year-total{
     border: 1px solid #bbbbbb;
     margin: 10px;
     position: relative;
-    width: 80px;
     margin-bottom: 20px;
     border-radius: 3px;
 }
@@ -6690,6 +6750,30 @@ span.month-container-label-count {
 //begin issueLevel styleSheets
 
 .issueLevel{
+
+.islandora-newspaper-grid .publication-year-container .publication-year-container-label{
+pointer-events: none !important;
+    height: 180px;
+    justify-content: center;
+flex-direction: row-reverse;
+}
+
+.islandora-newspaper-grid .publication-year-container{
+  flex-direction: column;
+}
+
+.publication-year-container:hover{
+  transform: translateY(0px);
+  transition-duration: 0s;
+}
+
+.monthBack{
+  display: flex !important;
+}
+
+  .yearBack, .issues-year-total{
+    display: none !important;
+  }
 
 .issue-container {
     padding: 0px 20px;
@@ -6735,10 +6819,7 @@ opacity: 0.8;
 }
 
   span.publication-year{
-        font-size: 16px !important;
-    position: relative;
-    right: 1px;
-    top: 9px;
+margin-left:  10px;
   }
 }
 

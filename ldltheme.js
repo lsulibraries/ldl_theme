@@ -759,6 +759,9 @@ $('.publication-year-container-label').click(function(){
   $(".monthSelect").addClass('activeSelect');
   $(".newspaperContainer").removeClass("yearLevel");
   $(".newspaperContainer").addClass("monthLevel");
+  //var yearText = $(this).find('.publication-year').html();
+  //$(".yearSelect").html(yearText);
+
 });
 
 
@@ -771,7 +774,7 @@ monthButton.click(function(){
   $(".issueSelect").addClass('activeSelect');
   $(".newspaperContainer").removeClass("monthLevel");
   $(".newspaperContainer").addClass("issueLevel");
-  var monthLabel = $(this).find(".month-container-label-month").clone().addClass("monthTempLabel");
+var monthLabel = $(this).find(".month-container-label-month").clone().addClass("monthTempLabel");
   monthLabel.insertAfter($(this).parent().parent().parent().find("span.publication-year"));
 
 });
@@ -787,6 +790,7 @@ $(".monthSelect, .monthBack").click(function(){
   $(".newspaperContainer").removeClass("issueLevel");
   $(".month-container-label").removeClass("inactiveYear");
   $(".month-container-label").removeClass("activeMonth");
+  $(".newspaperContainer").addClass("monthLevel");
 
 });
 
@@ -803,7 +807,9 @@ $(".yearSelect, .yearBack").click(function(){
   $(".newspaperContainer").removeClass("monthLevel");
   $(".newspaperContainer").removeClass("issueLevel");
   $(".month-container-label").removeClass("inactiveYear");
-  $(".month-container-label").removeClass("activeMonth");  
+  $(".month-container-label").removeClass("activeMonth");
+//$(".yearSelect").html("Select Year");
+
 });
 
 
