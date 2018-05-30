@@ -6757,6 +6757,19 @@ span.month-container-label-count {
 
 #calendar{
   display: block !important;
+
+.ui-datepicker td a {
+    text-align: center;
+  }
+
+td.highlight {
+
+    background: #327bb3;
+    a{
+      color: white;
+    }
+}
+
 }
 
 .islandora-newspaper-grid .publication-year-container .publication-year-container-label{

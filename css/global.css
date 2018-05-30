@@ -4957,6 +4957,12 @@ body.largeImage, body.newspaperSet {
       border-radius: 0px 0px 3px 3px; }
   body.largeImage .issueLevel #calendar, body.newspaperSet .issueLevel #calendar {
     display: block !important; }
+    body.largeImage .issueLevel #calendar .ui-datepicker td a, body.newspaperSet .issueLevel #calendar .ui-datepicker td a {
+      text-align: center; }
+    body.largeImage .issueLevel #calendar td.highlight, body.newspaperSet .issueLevel #calendar td.highlight {
+      background: #327bb3; }
+      body.largeImage .issueLevel #calendar td.highlight a, body.newspaperSet .issueLevel #calendar td.highlight a {
+        color: white; }
   body.largeImage .issueLevel .islandora-newspaper-grid .publication-year-container .publication-year-container-label, body.newspaperSet .issueLevel .islandora-newspaper-grid .publication-year-container .publication-year-container-label {
     pointer-events: none !important;
     height: 180px;
