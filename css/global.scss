@@ -6441,6 +6441,14 @@ body.largeImage, body.newspaperSet{
   display: none;
 }
 
+td.highlight {
+
+    background: #327bb3;
+    a{
+      color: white;
+    }
+}
+
 .islandora-newspaper-navigation{
     display: flex;
     flex-wrap: wrap;
@@ -6612,6 +6620,37 @@ span.publication-year {
 
 .monthLevel{
 
+#calendar{
+    display: block !important;
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 0px;
+    margin-bottom: 1px;
+    padding-bottom: 10px;
+    background: white;
+    position: relative;
+    max-width: 1200px;
+    margin: 0px 20px;
+    width: 100%;
+}
+
+.ui-datepicker-inline{
+  display: flex !important;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100% !important;
+
+.ui-datepicker-group {
+    width: 33%;
+}
+
+}
+
+#calendar{
+  display: block !important;
+}
+
 .month-container{
   width: 30%;
 }
@@ -6755,6 +6794,12 @@ span.month-container-label-count {
 
 .issueLevel{
 
+
+
+.publication-year-container-label, .months-container{
+  display: none !important;
+}
+
 #calendar{
   display: block !important;
 
@@ -6762,13 +6807,7 @@ span.month-container-label-count {
     text-align: center;
   }
 
-td.highlight {
 
-    background: #327bb3;
-    a{
-      color: white;
-    }
-}
 
 }
 

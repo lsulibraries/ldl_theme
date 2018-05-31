@@ -4744,6 +4744,10 @@ body.largeImage, body.newspaperSet {
     opacity: 1; }
   body.largeImage #calendar, body.newspaperSet #calendar {
     display: none; }
+  body.largeImage td.highlight, body.newspaperSet td.highlight {
+    background: #327bb3; }
+    body.largeImage td.highlight a, body.newspaperSet td.highlight a {
+      color: white; }
   body.largeImage .islandora-newspaper-navigation, body.newspaperSet .islandora-newspaper-navigation {
     display: flex;
     flex-wrap: wrap;
@@ -4866,6 +4870,28 @@ body.largeImage, body.newspaperSet {
     transition-duration: 0.5s; }
   body.largeImage .monthLevel .publication-year-container-label, body.newspaperSet .monthLevel .publication-year-container-label {
     pointer-events: none; }
+  body.largeImage .monthLevel #calendar, body.newspaperSet .monthLevel #calendar {
+    display: block !important;
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 0px;
+    margin-bottom: 1px;
+    padding-bottom: 10px;
+    background: white;
+    position: relative;
+    max-width: 1200px;
+    margin: 0px 20px;
+    width: 100%; }
+  body.largeImage .monthLevel .ui-datepicker-inline, body.newspaperSet .monthLevel .ui-datepicker-inline {
+    display: flex !important;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100% !important; }
+    body.largeImage .monthLevel .ui-datepicker-inline .ui-datepicker-group, body.newspaperSet .monthLevel .ui-datepicker-inline .ui-datepicker-group {
+      width: 33%; }
+  body.largeImage .monthLevel #calendar, body.newspaperSet .monthLevel #calendar {
+    display: block !important; }
   body.largeImage .monthLevel .month-container, body.newspaperSet .monthLevel .month-container {
     width: 30%; }
   body.largeImage .monthLevel .publication-year-container, body.newspaperSet .monthLevel .publication-year-container {
@@ -4955,14 +4981,12 @@ body.largeImage, body.newspaperSet {
       color: white;
       box-sizing: content-box;
       border-radius: 0px 0px 3px 3px; }
+  body.largeImage .issueLevel .publication-year-container-label, body.largeImage .issueLevel .months-container, body.newspaperSet .issueLevel .publication-year-container-label, body.newspaperSet .issueLevel .months-container {
+    display: none !important; }
   body.largeImage .issueLevel #calendar, body.newspaperSet .issueLevel #calendar {
     display: block !important; }
     body.largeImage .issueLevel #calendar .ui-datepicker td a, body.newspaperSet .issueLevel #calendar .ui-datepicker td a {
       text-align: center; }
-    body.largeImage .issueLevel #calendar td.highlight, body.newspaperSet .issueLevel #calendar td.highlight {
-      background: #327bb3; }
-      body.largeImage .issueLevel #calendar td.highlight a, body.newspaperSet .issueLevel #calendar td.highlight a {
-        color: white; }
   body.largeImage .issueLevel .islandora-newspaper-grid .publication-year-container .publication-year-container-label, body.newspaperSet .issueLevel .islandora-newspaper-grid .publication-year-container .publication-year-container-label {
     pointer-events: none !important;
     height: 180px;

@@ -764,9 +764,12 @@ $('.publication-year-container-label').click(function(){
   $(".monthSelect").addClass('activeSelect');
   $(".newspaperContainer").removeClass("yearLevel");
   $(".newspaperContainer").addClass("monthLevel");
-  //var yearText = $(this).find('.publication-year').html();
-  //$(".yearSelect").html(yearText);
+  var yearChosen = $(this).find(".publication-year").html();
+  var somestr =  "01/01/" + yearChosen + "";
+  $( "#calendar" ).datepicker( "setDate", somestr );
+$( "#calendar" ).datepicker( "option", "numberOfMonths", 12 );
 
+  console.log(somestr);
 });
 
 
@@ -779,19 +782,14 @@ monthButton.click(function(){
   $(".issueSelect").addClass('activeSelect');
   $(".newspaperContainer").removeClass("monthLevel");
   $(".newspaperContainer").addClass("issueLevel");
+    $( "#calendar" ).datepicker("refresh");
   var monthLabel = $(this).find(".month-container-label-month").clone().addClass("monthTempLabel");
   monthLabel.insertAfter($(this).parent().parent().parent().find("span.publication-year"));
   var yearChosen = $(this).find(".date-year").html();
   var monthChosen = $(this).find(".date-month").html();
-  var somestr =  + monthChosen + "/01/" + yearChosen + "";
-  $( "#calendar" ).datepicker( "setDate", somestr );
-  $( "#calendar" ).insertBefore(".months-container");
-
-//begin link import for dates
-
-//end link import for dates
-
-
+  var somestr2 =  + monthChosen + "/01/" + yearChosen + "";
+  $( "#calendar" ).datepicker( "setDate", somestr2 );
+  $( "#calendar" ).datepicker( "option", "numberOfMonths", 1 );
 });
 
 
@@ -806,6 +804,11 @@ $(".monthSelect, .monthBack").click(function(){
   $(".month-container-label").removeClass("inactiveYear");
   $(".month-container-label").removeClass("activeMonth");
   $(".newspaperContainer").addClass("monthLevel");
+  var yearChosen = $(".activeYear").find(".publication-year").html();
+  var somestr =  "01/01/" + yearChosen + "";
+  $( "#calendar" ).datepicker( "setDate", somestr );
+
+  $( "#calendar" ).datepicker( "option", "numberOfMonths", 12 );
 
 });
 
@@ -836,7 +839,7 @@ $(".yearSelect, .yearBack").click(function(){
 //begin datepicker
 //datepicker
 
-$("<div id='calendar'/>").insertAfter(".newspaper-thumbnailData");
+$("<div id='calendar'/>").insertAfter(".islandora-newspaper-grid");
 
 $.getScript('https://designmodo.com/demo/calendarjquerycss3/js/jquery-ui-datepicker.min.js', function() {
 
