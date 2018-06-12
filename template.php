@@ -82,6 +82,7 @@ function alpha_preprocess_islandora_basic_collection_wrapper(&$variables) {
   $pidParts = explode(':', $islandora_object->id);
   $pid = $pidParts[0];
 
+
   $result = db_query("select u.alias, n.title "
       . "from field_revision_field_lp_pid f "
       . "join node n on f.revision_id = n.vid "

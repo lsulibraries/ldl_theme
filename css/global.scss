@@ -6632,6 +6632,25 @@ span.publication-year {
     max-width: 1200px;
     margin: 0px 20px;
     width: 100%;
+    .ui-datepicker-multi .ui-datepicker-group table {
+        width: 95%;
+        margin: 0 auto .4em;
+        border: 0px;
+    }
+
+.ui-datepicker td {
+    border: 1px solid #cecece !important;
+      a{
+            display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+      }
+}
+.ui-datepicker td.ui-state-disabled {
+    border: 0px !important;
+}
+
 }
 
 .ui-datepicker-inline{
@@ -6643,7 +6662,15 @@ span.publication-year {
 
 .ui-datepicker-group {
     width: 33%;
+    table{
+      width: auto;
+    }
+    thead{
+      display: none;
+    }
 }
+
+
 
 }
 
@@ -6797,7 +6824,7 @@ span.month-container-label-count {
 
 
 .publication-year-container-label, .months-container{
-  display: none !important;
+  //test for lazy load display: none !important;
 }
 
 #calendar{

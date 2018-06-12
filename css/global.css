@@ -4882,6 +4882,19 @@ body.largeImage, body.newspaperSet {
     max-width: 1200px;
     margin: 0px 20px;
     width: 100%; }
+    body.largeImage .monthLevel #calendar .ui-datepicker-multi .ui-datepicker-group table, body.newspaperSet .monthLevel #calendar .ui-datepicker-multi .ui-datepicker-group table {
+      width: 95%;
+      margin: 0 auto .4em;
+      border: 0px; }
+    body.largeImage .monthLevel #calendar .ui-datepicker td, body.newspaperSet .monthLevel #calendar .ui-datepicker td {
+      border: 1px solid #cecece !important; }
+      body.largeImage .monthLevel #calendar .ui-datepicker td a, body.newspaperSet .monthLevel #calendar .ui-datepicker td a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40px; }
+    body.largeImage .monthLevel #calendar .ui-datepicker td.ui-state-disabled, body.newspaperSet .monthLevel #calendar .ui-datepicker td.ui-state-disabled {
+      border: 0px !important; }
   body.largeImage .monthLevel .ui-datepicker-inline, body.newspaperSet .monthLevel .ui-datepicker-inline {
     display: flex !important;
     flex-wrap: wrap;
@@ -4890,6 +4903,10 @@ body.largeImage, body.newspaperSet {
     width: 100% !important; }
     body.largeImage .monthLevel .ui-datepicker-inline .ui-datepicker-group, body.newspaperSet .monthLevel .ui-datepicker-inline .ui-datepicker-group {
       width: 33%; }
+      body.largeImage .monthLevel .ui-datepicker-inline .ui-datepicker-group table, body.newspaperSet .monthLevel .ui-datepicker-inline .ui-datepicker-group table {
+        width: auto; }
+      body.largeImage .monthLevel .ui-datepicker-inline .ui-datepicker-group thead, body.newspaperSet .monthLevel .ui-datepicker-inline .ui-datepicker-group thead {
+        display: none; }
   body.largeImage .monthLevel #calendar, body.newspaperSet .monthLevel #calendar {
     display: block !important; }
   body.largeImage .monthLevel .month-container, body.newspaperSet .monthLevel .month-container {
