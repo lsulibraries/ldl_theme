@@ -58,7 +58,9 @@ function newspaper_issue_first_page_pid($object) {
 
     }
 EOQ;
-  $results = $object->repository->ri->sparqlQuery($query);
+
+  $connection = islandora_get_tuque_connection();
+  $results = $connection->repository->ri->sparqlQuery($query);
 
   // Get rid of the "extra" info...
   $map = function($o) {
