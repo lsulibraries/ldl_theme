@@ -30,7 +30,7 @@ function alpha_preprocess_islandora_newspaper(array &$variables) {
           $issue['formatted-date-year'] = $issue['issued']->format('Y');
           $issue['formatted-date-month'] = $issue['issued']->format('m');
           $issue['formatted-date-day'] = $issue['issued']->format('d');
-          $issue['cover-pid'] = newspaper_issue_first_page_pid($issue);
+          $issue['cover-pid'] = newspaper_issue_first_page_pid($issue['pid']);
           $nest[$year]['months'][$month]['issues'][] = $issue;
 
         }
@@ -46,20 +46,20 @@ function alpha_preprocess_islandora_newspaper(array &$variables) {
   $variables['totalYearCount'] = $yearTotal;
 }
 
-function newspaper_issue_first_page_pid($object) {
+function newspaper_issue_first_page_pid($pid) {
   $query = <<<EOQ
   PREFIX islandora-rels-ext: <http://islandora.ca/ontology/relsext#>
     SELECT ?pid
     FROM <#ri>
     WHERE {
-      ?pid <fedora-rels-ext:isMemberOf> <info:fedora/{$object->id}> ;
+      ?pid <fedora-rels-ext:isMemberOf> <info:fedora/$pid> ;
            islandora-rels-ext:isSequenceNumber '1' ;
            <fedora-model:state> <fedora-model:Active> .
 
     }
 EOQ;
-
   $connection = islandora_get_tuque_connection();
+
   $results = $connection->repository->ri->sparqlQuery($query);
 
   // Get rid of the "extra" info...
