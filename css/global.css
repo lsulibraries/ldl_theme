@@ -4998,8 +4998,6 @@ body.largeImage, body.newspaperSet {
       color: white;
       box-sizing: content-box;
       border-radius: 0px 0px 3px 3px; }
-  body.largeImage .issueLevel .publication-year-container-label, body.largeImage .issueLevel .months-container, body.newspaperSet .issueLevel .publication-year-container-label, body.newspaperSet .issueLevel .months-container {
-    display: none !important; }
   body.largeImage .issueLevel #calendar, body.newspaperSet .issueLevel #calendar {
     display: block !important; }
     body.largeImage .issueLevel #calendar .ui-datepicker td a, body.newspaperSet .issueLevel #calendar .ui-datepicker td a {

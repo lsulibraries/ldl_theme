@@ -93,6 +93,14 @@ $(window).on("load", function() {
 
 });
 
+$.getScript( "../../sites/all/libraries/JAIL/src/jail.js" )
+  .done(function( script, textStatus ) {
+    console.log( textStatus );
+  })
+  .fail(function( jqxhr, settings, exception ) {
+    $( "div.log" ).text( "Triggered ajaxError handler." );
+});
+
 
 
       var title = document.getElementsByTagName("title")[0].innerHTML;
@@ -775,6 +783,7 @@ $( "#calendar" ).datepicker( "option", "numberOfMonths", 12 );
 
 monthButton.click(function(){
   $(this).addClass('activeMonth');
+ $('img.lazy').jail();
   $(".month-container-label").not(".activeMonth").addClass("inactiveYear");
   $(".islandora-newspaper-navigation").addClass('thirdStage');
   $(".islandora-newspaper-navigation").removeClass('secondStage');
