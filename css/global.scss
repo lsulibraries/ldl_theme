@@ -6402,6 +6402,8 @@ body.largeImage, body.newspaperSet{
 
   background: black;
 
+
+
 .islandora-newspaper-object.islandora.newspaperContainer {
     display: flex;
     flex-direction: column;
@@ -6467,8 +6469,13 @@ td.highlight {
 }
 
 
-.months-container{
-  display: none;
+.month-container{
+  //display: none;
+}
+
+.month-container::first-child{
+  display: block;
+      pointer-events: none;
 }
 
 .total-issue-count {
@@ -6509,34 +6516,81 @@ td.highlight {
     .publication-year-container{
     height: 80px;
     margin-right: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     box-shadow: -3px 4px 20px #e8e8e8;
     display: flex;
     justify-content: center;
     align-items: center;
     background: white;
-    width: calc(33% - 10px);
+    width: calc(20% - 16px);
     position: relative;
     overflow: hidden;
     color: #676767;
-      transition-duration: 0.5s;
+      transition-duration: 0.2s;
           border-bottom: 2px solid transparent;
 
     }
+.viewYears{
+    height: fit-content;
+    flex-direction: column-reverse;
+    .months-container{
+    width: 100%;
+    max-height: 500px;
+    flex-grow: 2;
+    }
+    .date-year, .date-month, .date-day, .issue-container > a, .month-container-label-month, .month-container-label-count{
+    display: none;
+    }
+    img.lazy {
+    width: auto !important;
+    height: 340px;
+    max-width: none;
+      transition-duration: 0.5s;
+
+    }
+    .month-container-label{
+    pointer-events: none;
+    }
+   .month-container:first-child {
+   display: block;
+   }
+   .month-container{
+   display: none;
+   }
+
+    .issue-container{
+    display: none;
+    }
+    .issue-container:first-child {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    height: fit-content;
+    }
+}
+
 
 .publication-year-container:hover{
     border-bottom: 2px solid #cecece;
-  transition-duration: 0s;
+  transition-duration: 0.5s;
+
+  img.lazy{
+    transform: scale3d(1.1,1.1,1.1);
+  transition-duration: 0.2s;
+
+  }
 }
 
 .publication-year-container-label {
     display: flex;
     width: 100%;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
+    align-items: flex-start;
     cursor: pointer;
     height: 80px;
-
+    flex-direction: column;
+    padding-left: 20px;
+    border-top: 1px solid #cecece;
 }
 
 
@@ -6545,24 +6599,23 @@ span.issues-year-total {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 120px;
-    font-size: 15px;
+    font-size: 13px;
     text-transform: uppercase;
-    flex-grow: 1;
     letter-spacing: 1px;
+    line-height: 3px;
+    padding-bottom: 10px;
 }
 
 span.publication-year {
-    width: 130px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-right: 1px solid rgba(206, 206, 206, 0.44);
-    height: 50px;
-    font-size: 21px;
+    font-size: 25px;
+    letter-spacing: 3px;
+
 }
 
-.publication-year-container:nth-child(3n) {
+.publication-year-container:nth-child(5n) {
     margin-right: 0px !important;
 }
 

@@ -12,7 +12,13 @@
  *
  * @see template_preprocess_islandora_newspaper()
  */
+
+
 ?>
+<script src="/sites/all/libraries/JAIL/src/jail.js">
+</script>
+
+
 <div class="islandora-newspaper-object islandora">
   <div class="islandora-newspaper-content-wrapper clearfix">
     <?php if ($issues): ?>
@@ -62,7 +68,7 @@
                       <?php foreach ($data['issues'] as $issue): ?>
                         <div class='issue-container'>
                           <a href="/islandora/object/<?php print $issue['pid']; ?>"><?php print $issue['formatted-date']; ?></a>
-                          <img src="/islandora/object/<?php print $issue['cover-pid']; ?>/datastream/JPG/view" class="lazy"></a>
+                          <img data-src="/islandora/object/<?php print $issue['cover-pid']; ?>/datastream/JPG/view" src="#" class="lazy"></a>
                         </div>
                         <div class='date-year'><?php print $issue['formatted-date-year']; ?></div>
                         <div class='date-month'><?php print $issue['formatted-date-month']; ?></div>
