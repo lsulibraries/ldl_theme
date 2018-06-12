@@ -30,7 +30,9 @@ function alpha_preprocess_islandora_newspaper(array &$variables) {
           $issue['formatted-date-year'] = $issue['issued']->format('Y');
           $issue['formatted-date-month'] = $issue['issued']->format('m');
           $issue['formatted-date-day'] = $issue['issued']->format('d');
+          $issue['cover-pid'] = newspaper_issue_first_page_pid($issue->id);
           $nest[$year]['months'][$month]['issues'][] = $issue;
+
         }
       }
       $mounthIssues = count($nest[$year]['months'][$month]['issues']);
@@ -42,6 +44,40 @@ function alpha_preprocess_islandora_newspaper(array &$variables) {
   }
   $variables['totalIssueCount'] = $issueTotal;
   $variables['totalYearCount'] = $yearTotal;
+}
+
+function newspaper_issue_first_page_pid($issue_pid) {
+  $query = <<<EOQ
+  PREFIX islandora-rels-ext: <http://islandora.ca/ontology/relsext#>
+    SELECT ?pid
+    FROM <#ri>
+    WHERE {
+      ?pid <fedora-rels-ext:isMemberOf> <info:fedora/{$object->id}> ;
+           islandora-rels-ext:isSequenceNumber '1' ;
+           <fedora-model:state> <fedora-model:Active> .
+
+    }
+EOQ;
+  $results = $object->repository->ri->sparqlQuery($query);
+
+  // Get rid of the "extra" info...
+  $map = function($o) {
+    foreach ($o as $key => &$info) {
+      $info = $info['value'];
+    }
+
+    $o = array_filter($o);
+
+    return $o;
+  };
+  $pages = array_map($map, $results);
+
+  // Grab the PIDs...
+  $get_pid = function($o) {
+    return $o['pid'];
+  };
+  $pids = array_map($get_pid, $pages);
+  return $pids[0];
 }
 
 function alpha_preprocess_islandora_large_image(&$variables) {

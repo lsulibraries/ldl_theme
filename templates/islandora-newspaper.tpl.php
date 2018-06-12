@@ -63,6 +63,7 @@
                         <div class='issue-container'>
                           <a href="/islandora/object/<?php print $issue['pid']; ?>"><?php print $issue['formatted-date']; ?></a>
                           <img data-src="/islandora/object/lsu-hodgepodge%3A16/datastream/JPG/view" src="#" class="lazy"></a>
+                          <span><?php print $issue['cover-pid']; ?></span>
                         </div>
                         <div class='date-year'><?php print $issue['formatted-date-year']; ?></div>
                         <div class='date-month'><?php print $issue['formatted-date-month']; ?></div>
