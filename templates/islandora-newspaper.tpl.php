@@ -25,13 +25,13 @@
               <div class='total-issue-count'>This newspaper contains <?php print $totalIssueCount; ?> issues across <?php print $totalYearCount; ?> years.</div>
       <div class="islandora-newspaper-navigation">
         <div class="newsSelect yearSelect activeSelect">
-          <span>Select Year</span>
+          <span>Step 1: Select Year</span>
         </div>
         <div class="newsSelect monthSelect">
-          <span>Select Month</span>
+          <span>Step 2: Select Month</span>
         </div>
         <div class="newsSelect issueSelect">
-          <span>Select Issue</span>
+          <span>Step 3: Select Issue</span>
         </div>
         <div class="newsIndicator">
           <div class="activeIndicator"></div>
@@ -42,8 +42,8 @@
         <?php foreach ($issues as $year => $data): ?>
           <div class="publication-year-container viewYears">
             <div class="selectBack yearBack">
-              <i class="fas fa-angle-double-left"></i>
-              <span>Back</span>
+              <span class="backText">Back</span>
+              <span class="backShape"></span>
             </div>
             <div class="selectBack monthBack">
               <i class="fas fa-angle-double-left"></i>

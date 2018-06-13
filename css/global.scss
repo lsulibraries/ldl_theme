@@ -6412,11 +6412,14 @@ body.largeImage, body.newspaperSet{
 }
 
 .newsSelect {
-    font-size: 19px;
+    font-size: 12px;
     text-transform: uppercase;
-    opacity: 0.4;
+    opacity: 1;
     color: #676767;
     transition-duration: 0.5s;
+    letter-spacing: 2px;
+     padding: 0px 30px;
+
 }
 
 
@@ -6425,13 +6428,17 @@ body.largeImage, body.newspaperSet{
     border-bottom: 1px solid #cecece;
     bottom: 0px;
     width: 100%;
+    transform: skew(-20deg);
+    height: 10px;
+    background: #cecece;
 }
 
 .activeIndicator {
-    width: 25%;
-    height: 8px;
-    background: #327bb3;
-    transform: translateX(15%);
+    width: 100%;
+    height: 10px;
+    background: #676767;
+    transform: scale3d(0.3, 1, 1);
+        transform-origin: left;
     transition-duration: 1s;
 }
 
@@ -6444,25 +6451,22 @@ body.largeImage, body.newspaperSet{
 }
 
 td.highlight {
-
-    background: #327bb3;
-    a{
-      color: white;
-    }
+    .circleDay{
+    background: #a3a3a3;
+}
 }
 
 .islandora-newspaper-navigation{
     display: flex;
     flex-wrap: wrap;
     border-bottom: 0px;
-
-    padding-top: 50px;
-    padding-bottom: 30px;
+    padding-top: 10px;
+    padding-bottom: 20px;
     background: white;
     position: relative;
     max-width: 1200px;
     margin: 0px 20px;
-    margin-bottom: 40px;
+    margin-bottom: 0px;
     width: 100%;
     justify-content: space-around;
     position: relative;
@@ -6512,6 +6516,7 @@ td.highlight {
     max-width: 1200px;
     margin: 0px 20px;
     width: 100%;
+    margin-top:40px;
 
     .publication-year-container{
     height: 80px;
@@ -6619,41 +6624,35 @@ span.publication-year {
 
 .selectBack {
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 2px;
+    right: 3px;
     display: none;
     justify-content: center;
-    align-items: center;
-    border-radius: 3px;
-    border: 1px solid #327bb3;
+    align-items: flex-start;
     cursor: pointer;
-  transition-duration: 0.5s;
+    transition-duration: 0.5s;
 
-    i{
-    font-family: fontAwesome;
-    font-size: 14px;
-    margin-right: 7px;
-    color: #327bb3;
-    margin-left: 7px;
-    }
 
-    span {
-    background: #327bb3;
-    color: white;
-    padding: 2px 10px;
+    span.backText {
     text-transform: uppercase;
     font-size: 11px;
-    height: 22px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative;
+    top: -1px;
+    right: 7px;
+    letter-spacing: 1px;
     }
 
+span.backShape {
+    width: 40px;
+    height: 12px !important;
+    background: #676767;
+    transform: skew(-20deg);
+}
 
 }
 
 .selectBack:hover{
-  transform: translateX(5px);
+  transform: translateX(-5px);
   transition-duration: 0.5s;
 }
 
@@ -6665,8 +6664,67 @@ span.publication-year {
 
 .monthLevel{
 
+.islandora-newspaper-grid{
+  margin-top: 0px;
+}
+
+
+.monthSelect {
+    opacity: 1;
+}
+
+#calendar{
+  display: none;
+}
+
+.publication-year-container{
+  box-shadow: none;
+}
+
+.publication-year-container.activeYear .month-container-label:hover{
+      box-shadow: -3px 4px 20px #e8e8e8;
+      transition-duration: 0.2s;
+}
+
+.ui-datepicker-calendar{
+  border: 0px;
+  margin-bottom: 10px;
+}
+
+.ui-datepicker-title {
+    letter-spacing: 2px;
+    font-size: 16px;
+}
+
+span.ui-datepicker-month {
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.ui-datepicker-calendar thead {
+    display: none;
+}
+
+
+.ui-datepicker-calendar td {
+    padding: 0px !important;
+}
 .ui-datepicker-calendar td:not(.ui-state-disabled) {
-    border: 1px solid;
+    position: relative;
+    height: 18px;
+    width: 18px;
+  a{
+    display: none;
+  }
+  .circleDay {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 3px;
+    left: 0px;
+    border-radius: 100%;
+    border: 1px solid #cecece;
+}
 }
 
 .month-container-label{
@@ -6695,8 +6753,6 @@ span.publication-year {
   display: none;
 }
 #calendar{
-    display: block !important;
-    display: flex;
     flex-wrap: wrap;
     border-bottom: 0px;
     margin-bottom: 1px;
@@ -6749,10 +6805,6 @@ span.publication-year {
 
 }
 
-#calendar{
-  display: block !important;
-}
-
 .month-container{
   width: 25%;
 }
@@ -6777,7 +6829,7 @@ span.issues-year-total {
 }
 
       .yearSelect:hover{
-      opacity: 0.8;
+        border-bottom: 1px solid #cecece;
       transition-duration: 0.5s;
       cursor: pointer;
      }
@@ -6789,12 +6841,15 @@ span.issues-year-total {
 
 }
 
-.monthSelect{
+.monthSelect, .issueSelect{
     pointer-events: none;
+    opacity: 0;
 }
 
 .issueLevel .monthSelect{
     pointer-events: inherit !important;
+        opacity: 1 !important;
+
 }
 
 //begin activeYear
@@ -6837,7 +6892,6 @@ span.issues-year-total{
 
 .publication-year-container-label {
     width: 400px !important;
-
      flex-direction: column;
 
 }
@@ -6847,10 +6901,18 @@ span.issues-year-total{
     padding: 20px 0px;
     padding-bottom: 30px;
     padding-right: 20px;
-        justify-content: center;
+    justify-content: center;
     width: 100%;
+    padding-top: 30px;
+    border-left: 1px solid #cecece;
+    margin-left: 70px;
+    padding-left: 40px;
+    margin-top: 40px;
 }
 
+.publication-year-container:hover{
+  border-bottom: 0px !important;
+}
 
 .month-container {
     position: relative;
@@ -6863,11 +6925,14 @@ span.issues-year-total{
     flex-wrap: wrap;
     flex-direction: column;
     padding: 20px;
-    border: 1px solid #bbbbbb;
     margin: 10px;
     position: relative;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     border-radius: 3px;
+    margin-top: 0px;
+    padding-bottom: 0px;
+    border: 0px;
+    transition-duration: 0.5s;
 }
 
 span.month-container-label-month {
@@ -6993,14 +7058,14 @@ margin-left:  10px;
 
 .secondStage{
   .activeIndicator {
-    transform: translateX(150%);
+    transform: scale3d(0.66, 1, 1);
     }
 }
 
 
 .thirdStage{
   .activeIndicator {
-    transform: translateX(285%);
+    transform: scale3d(1, 1, 1);
     }
 }
 

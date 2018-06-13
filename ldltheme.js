@@ -791,8 +791,12 @@ $('.publication-year-container-label').click(function(){
   $(".newspaperContainer").addClass("monthLevel");
   var yearChosen = $(this).find(".publication-year").html();
   var somestr =  "01/01/" + yearChosen + "";
+
   $( "#calendar" ).datepicker( "setDate", somestr );
   $( "#calendar" ).datepicker( "option", "numberOfMonths", 12 );
+$( "#calendar" ).datepicker( "option", "monthNames", [ "Jan", "Feb", "Mar", "Apr", "Mar", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ] );
+
+
     console.log(somestr);
   $("<div class='issuePreview'></div>").insertBefore(".activeYear .months-container");
   $(".activeYear .firstMonthCover").appendTo(".issuePreview");
@@ -813,6 +817,9 @@ $('.publication-year-container-label').click(function(){
       });
 
       $("<div class='circleDay'></div>").appendTo(".ui-datepicker-calendar td");
+
+
+
 });
 
 
@@ -828,7 +835,7 @@ monthButton.click(function(){
   $(".issueSelect").addClass('activeSelect');
   $(".newspaperContainer").removeClass("monthLevel");
   $(".newspaperContainer").addClass("issueLevel");
-    $( "#calendar" ).datepicker("refresh");
+  $( "#calendar" ).datepicker("refresh");
   var monthLabel = $(this).find(".month-container-label-month").clone().addClass("monthTempLabel");
   monthLabel.insertAfter($(this).parent().parent().parent().find("span.publication-year"));
   var yearChosen = $(this).find(".date-year").html();
