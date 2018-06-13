@@ -56,7 +56,7 @@
             </div>
             <div class="months-container">
               <?php foreach ($data['months'] as $month => $data): ?>
-                <div class="month-container">
+                <div class="month-container no-calendar">
                   <div class='month-container-label'>
                     <span class='month-container-label-month'>
                       <?php print $month; ?>

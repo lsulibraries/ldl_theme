@@ -6526,13 +6526,17 @@ td.highlight {
     position: relative;
     overflow: hidden;
     color: #676767;
-      transition-duration: 0.2s;
+      transition-duration: 0.5s;
           border-bottom: 2px solid transparent;
 
     }
 .viewYears{
-    height: fit-content;
+    height: 420px;
     flex-direction: column-reverse;
+.ui-datepicker-group{
+  display: none;
+}
+
     .months-container{
     width: 100%;
     max-height: 500px;
@@ -6545,8 +6549,6 @@ td.highlight {
     width: auto !important;
     height: 340px;
     max-width: none;
-      transition-duration: 0.5s;
-
     }
     .month-container-label{
     pointer-events: none;
@@ -6564,21 +6566,13 @@ td.highlight {
     .issue-container:first-child {
     display: flex;
     justify-content: center;
-    overflow: hidden;
-    height: fit-content;
     }
 }
 
 
 .publication-year-container:hover{
     border-bottom: 2px solid #cecece;
-  transition-duration: 0.5s;
-
-  img.lazy{
-    transform: scale3d(1.1,1.1,1.1);
-  transition-duration: 0.2s;
-
-  }
+  transition-duration: 0s;
 }
 
 .publication-year-container-label {
@@ -6589,8 +6583,7 @@ td.highlight {
     cursor: pointer;
     height: 80px;
     flex-direction: column;
-    padding-left: 20px;
-    border-top: 1px solid #cecece;
+    margin-left: 30px;
 }
 
 
@@ -6602,7 +6595,7 @@ span.issues-year-total {
     font-size: 13px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    line-height: 3px;
+    line-height: 5px;
     padding-bottom: 10px;
 }
 
@@ -6611,8 +6604,7 @@ span.publication-year {
     justify-content: center;
     align-items: center;
     font-size: 25px;
-    letter-spacing: 3px;
-
+    letter-spacing: 2px;
 }
 
 .publication-year-container:nth-child(5n) {
@@ -6673,6 +6665,35 @@ span.publication-year {
 
 .monthLevel{
 
+.ui-datepicker-calendar td:not(.ui-state-disabled) {
+    border: 1px solid;
+}
+
+.month-container-label{
+  & > span, a.ui-corner-all {
+    display: none;
+  }
+  div.month-issues-container{
+    display: none;
+  }
+}
+
+.issuePreview{
+      height: auto;
+    overflow: hidden;
+    width: 30%;
+    margin: 40px;
+    img.lazy {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        width: 320px;
+    }
+}
+
+.publication-year-container-label{
+  display: none;
+}
 #calendar{
     display: block !important;
     display: flex;
@@ -6715,6 +6736,7 @@ span.publication-year {
 
 .ui-datepicker-group {
     width: 33%;
+    pointer-events: none;
     table{
       width: auto;
     }
@@ -6732,12 +6754,16 @@ span.publication-year {
 }
 
 .month-container{
-  width: 30%;
+  width: 25%;
 }
 
-  .publication-year-container {
-    flex-direction: column !important;
-  }
+.publication-year-container.activeYear {
+    width: 100%;
+    z-index: 2;
+    height: fit-content;
+    flex-direction: row !important;
+    margin-right: 0px;
+}
 
   .publication-year-container-label {
     width: auto !important;
@@ -6799,9 +6825,7 @@ span.issues-year-total{
   font-size: inherit;
 }
 
-.month-issues-container {
-    display: none;
-}
+
 
 .activeMonth{
   width:auto !important;

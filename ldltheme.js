@@ -756,7 +756,13 @@ $(".downloadSelect").insertAfter(".infoToggle");
     $(".total-issue-count").insertAfter(".newspaper-thumbnailData > span");
 
 //begin newspaper selection logic
-$('.months-container .month-container::first-child .month-container-label::first-child .issue-container::first-child img.lazy').addClass('firstMonthCover');
+$('.months-container .month-container::first-child .month-container-label::first-child .issue-container::first-child img.lazy').addClass('firstYearCover');
+
+
+    $(' .month-container').each(function (){
+        $(this).find("img.lazy").first().addClass('firstMonthCover');
+    });
+
 
     var monthButton = $('.month-container-label');
 
@@ -765,10 +771,11 @@ $('.months-container .month-container::first-child .month-container-label::first
 
 
 
+  $('.firstYearCover').jail({
+     effect: 'fadeIn',
+   event: 'scroll',
+   });
 
-      $('.firstMonthCover').delay(0).jail({
-             effect: 'fadeIn',
-           });
 
 
 
@@ -785,8 +792,27 @@ $('.publication-year-container-label').click(function(){
   var yearChosen = $(this).find(".publication-year").html();
   var somestr =  "01/01/" + yearChosen + "";
   $( "#calendar" ).datepicker( "setDate", somestr );
-$( "#calendar" ).datepicker( "option", "numberOfMonths", 12 );
-  console.log(somestr);
+  $( "#calendar" ).datepicker( "option", "numberOfMonths", 12 );
+    console.log(somestr);
+  $("<div class='issuePreview'></div>").insertBefore(".activeYear .months-container");
+  $(".activeYear .firstMonthCover").appendTo(".issuePreview");
+
+
+  $(".activeYear .firstMonthCover").jail({
+     effect: 'fadeIn',
+     event: 'load',
+   });
+
+  $("div#calendar > div.ui-datepicker-inline > div.ui-datepicker-group").each(function(){
+     $(this).appendTo('div.activeYear > div.months-container > div.no-calendar > div.month-container-label');
+     $(this).parent().parent().removeClass("no-calendar").addClass("with-calendar");
+  });
+  $("div.with-calendar").each(function(){
+         $(this).find("div.ui-datepicker-group:not(:last)").remove();
+
+      });
+
+      $("<div class='circleDay'></div>").appendTo(".ui-datepicker-calendar td");
 });
 
 
@@ -794,7 +820,6 @@ $( "#calendar" ).datepicker( "option", "numberOfMonths", 12 );
 monthButton.click(function(){
   $(this).addClass('activeMonth');
 
-    $('.activeMonth img.lazy').jail();
 
   $(".month-container-label").not(".activeMonth").addClass("inactiveYear");
   $(".islandora-newspaper-navigation").addClass('thirdStage');
