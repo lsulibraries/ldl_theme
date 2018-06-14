@@ -642,7 +642,7 @@ if ( ($('.islandora-newspaper-object').length) && ( !$('body').hasClass('audioPD
   imageTitle = $(".modsTitle").html(); // finds full title for book
   $("<div class='newspaper_headerMenu'/>").appendTo(".newspaper_header"); //creates header for book items
   $("<div class='newspaperTitle'/>").text(imageTitle).appendTo(".newspaper_headerMenu"); // undoes default title truncation
-  $("<div class='contentLabel newspaperLabel'>Newspaper Object</div>").appendTo(".labelContainer"); //adds label break
+  //$("<div class='contentLabel newspaperLabel'>Newspaper Summary</div>").appendTo(".labelContainer"); //adds label break
   $("<div class='headerBreadcrumb'/>").appendTo(".newspaper_headerMenu"); //temporarily moves count
 
   var institutionText = $(".depth-2 > a").clone(); //creates href path from breadcrumb depth-2
@@ -660,7 +660,7 @@ if ( ($('.islandora-newspaper-object').length) && ( !$('body').hasClass('audioPD
   $(".islandora-newspaper-object").addClass("newspaperContainer"); //adds label break
 
   $("<div class='labelContainer'/>").insertBefore(".newspaperContainer"); //adds label break
-  $("<div class='contentLabel newspaperLabel'>newspaper Object</div>").appendTo(".labelContainer"); //adds label break
+  $("<div class='contentLabel newspaperLabel'>newspaper summary</div>").appendTo(".labelContainer"); //adds label break
     $("<div class='newspaperPreview'/>").appendTo(".newspaperContainer"); //adds label break
     $(".newspaper-thumbnail").appendTo(".newspaperPreview");
     $("<div class='newspaper-thumbnailData'/>").insertAfter(".total-issue-count");
@@ -773,14 +773,25 @@ $('.months-container .month-container::first-child .month-container-label::first
 
   $('.firstYearCover').jail({
      effect: 'fadeIn',
-   event: 'scroll',
+     offset: '50',
+     event: 'scroll'
    });
 
 
 
 
+  $(".month-container").hover(
+  function() {
+      $( this ).find(".firstMonthCover").jail().clone().appendTo(".issuePreview");
 
-$('.publication-year-container-label').click(function(){
+  }, function() {
+    $("div.issuePreview").find( ".firstMonthCover:last" ).remove();
+  }
+
+);
+
+
+  $('.publication-year-container-label').click(function(){
   $(this).parent().addClass('activeYear');
   $(".viewYears").not(".activeYear").addClass("inactiveYear");
   $(".islandora-newspaper-navigation").toggleClass('secondStage');
@@ -791,43 +802,29 @@ $('.publication-year-container-label').click(function(){
   $(".newspaperContainer").addClass("monthLevel");
   var yearChosen = $(this).find(".publication-year").html();
   var somestr =  "01/01/" + yearChosen + "";
-
   $( "#calendar" ).datepicker( "setDate", somestr );
   $( "#calendar" ).datepicker( "option", "numberOfMonths", 12 );
-$( "#calendar" ).datepicker( "option", "monthNames", [ "Jan", "Feb", "Mar", "Apr", "Mar", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ] );
-
-
-    console.log(somestr);
-  $("<div class='issuePreview'></div>").insertBefore(".activeYear .months-container");
-  $(".activeYear .firstMonthCover").appendTo(".issuePreview");
-
-
-  $(".activeYear .firstMonthCover").jail({
-     effect: 'fadeIn',
-     event: 'load',
-   });
-
+  $( "#calendar" ).datepicker( "option", "monthNames", [ "Jan", "Feb", "Mar", "Apr", "Mar", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ] );
+  console.log(somestr);
+  $("<div class='issuePreview'></div>").insertBefore(".months-container");
   $("div#calendar > div.ui-datepicker-inline > div.ui-datepicker-group").each(function(){
      $(this).appendTo('div.activeYear > div.months-container > div.no-calendar > div.month-container-label');
      $(this).parent().parent().removeClass("no-calendar").addClass("with-calendar");
   });
   $("div.with-calendar").each(function(){
-         $(this).find("div.ui-datepicker-group:not(:last)").remove();
-
-      });
-
-      $("<div class='circleDay'></div>").appendTo(".ui-datepicker-calendar td");
-
-
-
+     $(this).find("div.ui-datepicker-group:not(:last)").remove();
+  });
+  $("<div class='circleDay'></div>").appendTo(".ui-datepicker-calendar td");
+  $(this).find(".month-container").trigger("hover");
+  $(".with-calendar").each(function() {
+     $( this ).find(".firstMonthCover").jail({loadHiddenImages : true});
+  });
 });
 
 
 
 monthButton.click(function(){
   $(this).addClass('activeMonth');
-
-
   $(".month-container-label").not(".activeMonth").addClass("inactiveYear");
   $(".islandora-newspaper-navigation").addClass('thirdStage');
   $(".islandora-newspaper-navigation").removeClass('secondStage');
@@ -883,6 +880,8 @@ $(".yearSelect, .yearBack").click(function(){
 
 });
 
+
+//$("<div class='contentLabel newspaperLabel2'>Newspaper Selection</div>").insertAfter(".newspaper-thumbnailData");
 
 
 

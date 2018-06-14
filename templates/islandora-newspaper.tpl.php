@@ -46,8 +46,8 @@
               <span class="backShape"></span>
             </div>
             <div class="selectBack monthBack">
-              <i class="fas fa-angle-double-left"></i>
-              <span>Back</span>
+              <span class="backText">Back</span>
+              <span class="backShape"></span>
             </div>
 
             <div class="publication-year-container-label">

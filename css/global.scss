@@ -4089,6 +4089,13 @@ color: #676767;
     margin-top:20px;
  }
 
+.contentLabel.newspaperLabel2 {
+    width: 100%;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+
  .labelContainer {
     margin: 0px 20px;
     margin-bottom: 20px;
@@ -6402,7 +6409,9 @@ body.largeImage, body.newspaperSet{
 
   background: black;
 
-
+.firstMonthCover:not(.firstYearCover){
+  display: none;
+}
 
 .islandora-newspaper-object.islandora.newspaperContainer {
     display: flex;
@@ -6664,6 +6673,11 @@ span.backShape {
 
 .monthLevel{
 
+
+.firstMonthCover{
+  display: block;
+}
+
 .islandora-newspaper-grid{
   margin-top: 0px;
 }
@@ -6683,7 +6697,7 @@ span.backShape {
 
 .publication-year-container.activeYear .month-container-label:hover{
       box-shadow: -3px 4px 20px #e8e8e8;
-      transition-duration: 0.2s;
+      transition-duration: 0s;
 }
 
 .ui-datepicker-calendar{
@@ -6731,8 +6745,9 @@ span.ui-datepicker-month {
   & > span, a.ui-corner-all {
     display: none;
   }
-  div.month-issues-container{
-    display: none;
+  div.month-issues-container:not(img){
+    opacity: 0;
+    position: absolute;
   }
 }
 
@@ -6743,8 +6758,8 @@ span.ui-datepicker-month {
     margin: 40px;
     img.lazy {
         position: absolute;
-        top: 20px;
-        left: 20px;
+        top: 100px;
+        left: 0px;
         width: 320px;
     }
 }
@@ -6899,11 +6914,11 @@ span.issues-year-total{
     display: flex;
     flex-wrap: wrap;
     padding: 20px 0px;
-    padding-bottom: 30px;
+    padding-bottom: 60px;
     padding-right: 20px;
     justify-content: center;
     width: 100%;
-    padding-top: 30px;
+    padding-top: 60px;
     border-left: 1px solid #cecece;
     margin-left: 70px;
     padding-left: 40px;
