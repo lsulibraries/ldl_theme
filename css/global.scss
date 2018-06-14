@@ -6580,13 +6580,28 @@ td.highlight {
     .issue-container:first-child {
     display: flex;
     justify-content: center;
+    height: 340px;
+    overflow: hidden;
     }
 }
 
+  .firstYearCover,  .publication-year-container-label span{
+    transition-duration: 0.2s;
+  }
+
+
 
 .publication-year-container:hover{
-    border-bottom: 2px solid #cecece;
-  transition-duration: 0s;
+
+  .firstYearCover{
+    transform: scale3d(1.1, 1.1, 1.1);
+    transition-duration: 0.2s;
+  }
+  .publication-year-container-label span{
+        transform: translate3d(5px, 0px, 0px);
+        transition-duration: 0.2s;
+  }
+
 }
 
 .publication-year-container-label {
@@ -6597,7 +6612,18 @@ td.highlight {
     cursor: pointer;
     height: 80px;
     flex-direction: column;
-    margin-left: 30px;
+    position: absolute;
+    height: 420px !important;
+    span.publication-year {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+}
+span.issues-year-total {
+    position: absolute;
+    bottom: 15px;
+    left: 30px;
+}
 }
 
 
@@ -6671,7 +6697,52 @@ span.backShape {
     pointer-events: none;
 }
 
+.issuePreview, .grid-loading-notice{
+  display: none;
+}
+
+
 .monthLevel{
+
+.grid-loading-notice {
+    position: absolute;
+    top: 60px;
+    right: 0px;
+    z-index: 99;
+}
+
+.issuePreview{
+  display: flex;
+    height: auto;
+    overflow: hidden;
+    width: 30%;
+    margin: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .monthPrompt {
+    border: 1px solid #cecece;
+    height: 410px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+}
+
+    img{
+      transform: translate3d(10px, 0px, 0px);
+      transition-duration: 1s;
+    }
+    img.slide{
+      transform: translate3d(0px, 0px, 0px);
+      transition-duration: 1s;
+    }
+
+}
 
 
 .firstMonthCover{
@@ -6830,6 +6901,7 @@ span.ui-datepicker-month {
     height: fit-content;
     flex-direction: row !important;
     margin-right: 0px;
+    height: -moz-fit-content;
 }
 
   .publication-year-container-label {
@@ -6849,9 +6921,10 @@ span.issues-year-total {
       cursor: pointer;
      }
 
-.publication-year-container:hover{
+.publication-year-container, .publication-year-container:hover{
   transform: translateY(0px);
   transition-duration: 0s;
+  border-bottom: 0px;
 }
 
 }
@@ -6939,8 +7012,8 @@ span.issues-year-total{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    padding: 20px;
-    margin: 10px;
+    padding: 20px !important;
+    margin: 10px !important;
     position: relative;
     margin-bottom: 0px;
     border-radius: 3px;

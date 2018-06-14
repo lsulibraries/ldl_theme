@@ -54,6 +54,11 @@
               <span class="publication-year"><?php print $year; ?></span>
               <span class="issues-year-total"><?php print $data['issue-count']; ?> issues</span>
             </div>
+            <div class="issuePreview">
+              <div class="monthPrompt">
+                <span>Select a month</span>
+              </div>
+            </div>
             <div class="months-container">
               <?php foreach ($data['months'] as $month => $data): ?>
                 <div class="month-container no-calendar">

@@ -773,16 +773,14 @@ $('.months-container .month-container::first-child .month-container-label::first
 
   $('.firstYearCover').jail({
      effect: 'fadeIn',
-     offset: '50',
-     event: 'scroll'
+     event: 'scroll',
+     placeholder : 'http://creativeme.guru/app/img/loader.gif',
    });
-
-
 
 
   $(".month-container").hover(
   function() {
-      $( this ).find(".firstMonthCover").jail().clone().appendTo(".issuePreview");
+      $( this ).find(".firstMonthCover").jail().clone().appendTo(".issuePreview").addClass("slide");
 
   }, function() {
     $("div.issuePreview").find( ".firstMonthCover:last" ).remove();
@@ -791,12 +789,14 @@ $('.months-container .month-container::first-child .month-container-label::first
 );
 
 
+
+
   $('.publication-year-container-label').click(function(){
-  $(this).parent().addClass('activeYear');
-  $(".viewYears").not(".activeYear").addClass("inactiveYear");
-  $(".islandora-newspaper-navigation").toggleClass('secondStage');
-  $(".yearSelect").removeClass('activeSelect');
-  $(".publication-year-container").removeClass("viewYears");
+  $(this).parent().addClass('activeYear'); // choose year
+  $(".viewYears").not(".activeYear").addClass("inactiveYear"); // unchoose other years
+  $(".islandora-newspaper-navigation").toggleClass('secondStage'); // update progress bar
+  $(".yearSelect").removeClass('activeSelect'); // update progress bar
+  $(".publication-year-container").removeClass("viewYears"); // unchoose other years
   $(".monthSelect").addClass('activeSelect');
   $(".newspaperContainer").removeClass("yearLevel");
   $(".newspaperContainer").addClass("monthLevel");
@@ -806,7 +806,6 @@ $('.months-container .month-container::first-child .month-container-label::first
   $( "#calendar" ).datepicker( "option", "numberOfMonths", 12 );
   $( "#calendar" ).datepicker( "option", "monthNames", [ "Jan", "Feb", "Mar", "Apr", "Mar", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ] );
   console.log(somestr);
-  $("<div class='issuePreview'></div>").insertBefore(".months-container");
   $("div#calendar > div.ui-datepicker-inline > div.ui-datepicker-group").each(function(){
      $(this).appendTo('div.activeYear > div.months-container > div.no-calendar > div.month-container-label');
      $(this).parent().parent().removeClass("no-calendar").addClass("with-calendar");
@@ -815,7 +814,6 @@ $('.months-container .month-container::first-child .month-container-label::first
      $(this).find("div.ui-datepicker-group:not(:last)").remove();
   });
   $("<div class='circleDay'></div>").appendTo(".ui-datepicker-calendar td");
-  $(this).find(".month-container").trigger("hover");
   $(".with-calendar").each(function() {
      $( this ).find(".firstMonthCover").jail({loadHiddenImages : true});
   });

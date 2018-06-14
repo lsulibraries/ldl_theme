@@ -4845,10 +4845,17 @@ body.largeImage, body.newspaperSet {
         display: none; }
       body.largeImage .islandora-newspaper-grid .viewYears .issue-container:first-child, body.newspaperSet .islandora-newspaper-grid .viewYears .issue-container:first-child {
         display: flex;
-        justify-content: center; }
-    body.largeImage .islandora-newspaper-grid .publication-year-container:hover, body.newspaperSet .islandora-newspaper-grid .publication-year-container:hover {
-      border-bottom: 2px solid #cecece;
-      transition-duration: 0s; }
+        justify-content: center;
+        height: 340px;
+        overflow: hidden; }
+    body.largeImage .islandora-newspaper-grid .firstYearCover, body.largeImage .islandora-newspaper-grid .publication-year-container-label span, body.newspaperSet .islandora-newspaper-grid .firstYearCover, body.newspaperSet .islandora-newspaper-grid .publication-year-container-label span {
+      transition-duration: 0.2s; }
+    body.largeImage .islandora-newspaper-grid .publication-year-container:hover .firstYearCover, body.newspaperSet .islandora-newspaper-grid .publication-year-container:hover .firstYearCover {
+      transform: scale3d(1.1, 1.1, 1.1);
+      transition-duration: 0.2s; }
+    body.largeImage .islandora-newspaper-grid .publication-year-container:hover .publication-year-container-label span, body.newspaperSet .islandora-newspaper-grid .publication-year-container:hover .publication-year-container-label span {
+      transform: translate3d(5px, 0px, 0px);
+      transition-duration: 0.2s; }
     body.largeImage .islandora-newspaper-grid .publication-year-container-label, body.newspaperSet .islandora-newspaper-grid .publication-year-container-label {
       display: flex;
       width: 100%;
@@ -4857,7 +4864,16 @@ body.largeImage, body.newspaperSet {
       cursor: pointer;
       height: 80px;
       flex-direction: column;
-      margin-left: 30px; }
+      position: absolute;
+      height: 420px !important; }
+      body.largeImage .islandora-newspaper-grid .publication-year-container-label span.publication-year, body.newspaperSet .islandora-newspaper-grid .publication-year-container-label span.publication-year {
+        position: absolute;
+        bottom: 30px;
+        left: 30px; }
+      body.largeImage .islandora-newspaper-grid .publication-year-container-label span.issues-year-total, body.newspaperSet .islandora-newspaper-grid .publication-year-container-label span.issues-year-total {
+        position: absolute;
+        bottom: 15px;
+        left: 30px; }
     body.largeImage .islandora-newspaper-grid span.issues-year-total, body.newspaperSet .islandora-newspaper-grid span.issues-year-total {
       display: flex;
       justify-content: center;
@@ -4903,6 +4919,38 @@ body.largeImage, body.newspaperSet {
     transition-duration: 0.5s; }
   body.largeImage .monthLevel .publication-year-container-label, body.newspaperSet .monthLevel .publication-year-container-label {
     pointer-events: none; }
+  body.largeImage .issuePreview, body.largeImage .grid-loading-notice, body.newspaperSet .issuePreview, body.newspaperSet .grid-loading-notice {
+    display: none; }
+  body.largeImage .monthLevel .grid-loading-notice, body.newspaperSet .monthLevel .grid-loading-notice {
+    position: absolute;
+    top: 60px;
+    right: 0px;
+    z-index: 99; }
+  body.largeImage .monthLevel .issuePreview, body.newspaperSet .monthLevel .issuePreview {
+    display: flex;
+    height: auto;
+    overflow: hidden;
+    width: 30%;
+    margin: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    body.largeImage .monthLevel .issuePreview .monthPrompt, body.newspaperSet .monthLevel .issuePreview .monthPrompt {
+      border: 1px solid #cecece;
+      height: 410px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px; }
+    body.largeImage .monthLevel .issuePreview img, body.newspaperSet .monthLevel .issuePreview img {
+      transform: translate3d(10px, 0px, 0px);
+      transition-duration: 1s; }
+    body.largeImage .monthLevel .issuePreview img.slide, body.newspaperSet .monthLevel .issuePreview img.slide {
+      transform: translate3d(0px, 0px, 0px);
+      transition-duration: 1s; }
   body.largeImage .monthLevel .firstMonthCover, body.newspaperSet .monthLevel .firstMonthCover {
     display: block; }
   body.largeImage .monthLevel .islandora-newspaper-grid, body.newspaperSet .monthLevel .islandora-newspaper-grid {
@@ -5003,7 +5051,8 @@ body.largeImage, body.newspaperSet {
     z-index: 2;
     height: fit-content;
     flex-direction: row !important;
-    margin-right: 0px; }
+    margin-right: 0px;
+    height: -moz-fit-content; }
   body.largeImage .monthLevel .publication-year-container-label, body.newspaperSet .monthLevel .publication-year-container-label {
     width: auto !important;
     flex-direction: column;
@@ -5015,9 +5064,10 @@ body.largeImage, body.newspaperSet {
     border-bottom: 1px solid #cecece;
     transition-duration: 0.5s;
     cursor: pointer; }
-  body.largeImage .monthLevel .publication-year-container:hover, body.newspaperSet .monthLevel .publication-year-container:hover {
+  body.largeImage .monthLevel .publication-year-container, body.largeImage .monthLevel .publication-year-container:hover, body.newspaperSet .monthLevel .publication-year-container, body.newspaperSet .monthLevel .publication-year-container:hover {
     transform: translateY(0px);
-    transition-duration: 0s; }
+    transition-duration: 0s;
+    border-bottom: 0px; }
   body.largeImage .monthSelect, body.largeImage .issueSelect, body.newspaperSet .monthSelect, body.newspaperSet .issueSelect {
     pointer-events: none;
     opacity: 0; }
@@ -5074,8 +5124,8 @@ body.largeImage, body.newspaperSet {
       display: flex;
       flex-wrap: wrap;
       flex-direction: column;
-      padding: 20px;
-      margin: 10px;
+      padding: 20px !important;
+      margin: 10px !important;
       position: relative;
       margin-bottom: 0px;
       border-radius: 3px;
