@@ -773,17 +773,18 @@ $('.months-container .month-container::first-child .month-container-label::first
 
   $('.firstYearCover').jail({
      effect: 'fadeIn',
-     event: 'scroll',
-     placeholder : 'http://creativeme.guru/app/img/loader.gif',
+     event: 'load',
+     placeholder: 'http://creativeme.guru/app/img/loader.gif',
+     id: "firstYear",
+
    });
 
 
   $(".month-container").hover(
   function() {
-      $( this ).find(".firstMonthCover").jail().clone().appendTo(".issuePreview").addClass("slide");
-
+      $( this ).find(".firstMonthCover").jail().clone().appendTo(".issuePreview");
   }, function() {
-    $("div.issuePreview").find( ".firstMonthCover:last" ).remove();
+   $("div.issuePreview").find( ".firstMonthCover:last" ).fadeOut("slow", function() { $(this).remove(); });;
   }
 
 );
@@ -811,11 +812,20 @@ $('.months-container .month-container::first-child .month-container-label::first
      $(this).parent().parent().removeClass("no-calendar").addClass("with-calendar");
   });
   $("div.with-calendar").each(function(){
+
      $(this).find("div.ui-datepicker-group:not(:last)").remove();
+     if (!($(this).find("td.highlight").length)){
+       $(this).addClass("filler-calendar");
+     }
+
+
   });
   $("<div class='circleDay'></div>").appendTo(".ui-datepicker-calendar td");
   $(".with-calendar").each(function() {
-     $( this ).find(".firstMonthCover").jail({loadHiddenImages : true});
+     $( this ).find(".firstMonthCover").jail({
+       loadHiddenImages : true,
+       id: "firstMonth",
+     });
   });
 });
 
@@ -838,6 +848,7 @@ monthButton.click(function(){
   var somestr2 =  + monthChosen + "/01/" + yearChosen + "";
   $( "#calendar" ).datepicker( "setDate", somestr2 );
   $( "#calendar" ).datepicker( "option", "numberOfMonths", 1 );
+
 });
 
 
@@ -855,7 +866,6 @@ $(".monthSelect, .monthBack").click(function(){
   var yearChosen = $(".activeYear").find(".publication-year").html();
   var somestr =  "01/01/" + yearChosen + "";
   $( "#calendar" ).datepicker( "setDate", somestr );
-
   $( "#calendar" ).datepicker( "option", "numberOfMonths", 12 );
 
 });
@@ -874,7 +884,8 @@ $(".yearSelect, .yearBack").click(function(){
   $(".newspaperContainer").removeClass("issueLevel");
   $(".month-container-label").removeClass("inactiveYear");
   $(".month-container-label").removeClass("activeMonth");
-//$(".yearSelect").html("Select Year");
+  $(".circleDay").remove();
+  //$(".filler-calendar").remove();
 
 });
 
