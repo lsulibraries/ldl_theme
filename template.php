@@ -21,9 +21,16 @@ function alpha_preprocess_islandora_newspaper(array &$variables) {
     $yearTotal++;
     $nest[$year]['months'] = [];
     $nest[$year]['issue-count'] = 0;
-    foreach($months as $month => $days) {
-      $month = date("M", mktime(0, 0, 0, $month, 1, 2000));
+    $month_enum = ['01','02','03','04','05','06','07','08','09','10','11','12'];
+    foreach($month_enum as $num) {
+      $month = date("M", mktime(0, 0, 0, $num, 1, 2000));
       $nest[$year]['months'][$month]['issues'] = [];
+      if(array_key_exists($num, $months)) {
+        $days = $months[$num];
+      }
+      else {
+        $days = [];
+      }
       foreach ($days as $day => $issues) {
         foreach ($issues as $issue) {
           $issue['formatted-date'] = $issue['issued']->format('m/d/Y');
@@ -41,6 +48,7 @@ function alpha_preprocess_islandora_newspaper(array &$variables) {
       $issueTotal += $mounthIssues;
     }
     $variables['issues'] = $nest;
+
   }
   $variables['totalIssueCount'] = $issueTotal;
   $variables['totalYearCount'] = $yearTotal;
