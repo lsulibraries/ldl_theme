@@ -756,7 +756,12 @@ $(".downloadSelect").insertAfter(".infoToggle");
     $(".total-issue-count").insertAfter(".newspaper-thumbnailData > span");
 
 //begin newspaper selection logic
-$('.months-container .month-container::first-child .month-container-label::first-child .issue-container::first-child img.lazy').addClass('firstYearCover');
+    $(' .months-container').each(function (){
+      if($(this).find("img.lazy").length){
+        $(this).find("img.lazy").first().addClass('firstYearCover').parent().parent().parent().parent().addClass('loadedMonth');
+
+      }
+    });
 
 
     $(' .month-container').each(function (){

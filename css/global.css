@@ -4838,7 +4838,7 @@ body.largeImage, body.newspaperSet {
         max-width: none; }
       body.largeImage .islandora-newspaper-grid .viewYears .month-container-label, body.newspaperSet .islandora-newspaper-grid .viewYears .month-container-label {
         pointer-events: none; }
-      body.largeImage .islandora-newspaper-grid .viewYears .month-container:first-child, body.newspaperSet .islandora-newspaper-grid .viewYears .month-container:first-child {
+      body.largeImage .islandora-newspaper-grid .viewYears .month-container.loadedMonth, body.newspaperSet .islandora-newspaper-grid .viewYears .month-container.loadedMonth {
         display: block; }
       body.largeImage .islandora-newspaper-grid .viewYears .month-container, body.newspaperSet .islandora-newspaper-grid .viewYears .month-container {
         display: none; }

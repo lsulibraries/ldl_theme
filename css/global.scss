@@ -6569,7 +6569,7 @@ td.highlight {
     .month-container-label{
     pointer-events: none;
     }
-   .month-container:first-child {
+   .month-container.loadedMonth {
    display: block;
    }
    .month-container{
