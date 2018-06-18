@@ -882,7 +882,7 @@ monthButton.click(function(){
         });
 
     });
-
+  $("#calendar").remove();
 });
 
 

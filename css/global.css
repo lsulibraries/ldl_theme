@@ -5140,7 +5140,7 @@ body.largeImage, body.newspaperSet {
       color: white;
       box-sizing: content-box;
       border-radius: 0px 0px 3px 3px; }
-  body.largeImage .issueLevel .issue-container, body.largeImage .issueLevel .dayIssue, body.newspaperSet .issueLevel .issue-container, body.newspaperSet .issueLevel .dayIssue {
+  body.largeImage .issueLevel .issue-container, body.largeImage .issueLevel .publication-year-container-label, body.largeImage .issueLevel .dayIssue, body.newspaperSet .issueLevel .issue-container, body.newspaperSet .issueLevel .publication-year-container-label, body.newspaperSet .issueLevel .dayIssue {
     display: none !important; }
   body.largeImage .issueLevel .issuePreviewDay, body.newspaperSet .issueLevel .issuePreviewDay {
     height: 700px;
