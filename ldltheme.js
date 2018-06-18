@@ -759,7 +759,6 @@ $(".downloadSelect").insertAfter(".infoToggle");
     $(' .months-container').each(function (){
       if($(this).find("img.lazy").length){
         $(this).find("img.lazy").first().addClass('firstYearCover').parent().parent().parent().parent().addClass('loadedMonth');
-
       }
     });
 
@@ -767,6 +766,8 @@ $(".downloadSelect").insertAfter(".infoToggle");
     $(' .month-container').each(function (){
         $(this).find("img.lazy").first().addClass('firstMonthCover');
     });
+
+
 
 
     var monthButton = $('.month-container-label');
@@ -787,15 +788,27 @@ $(".downloadSelect").insertAfter(".infoToggle");
 
   $(".month-container").hover(
   function() {
-      $( this ).find(".firstMonthCover").jail().clone().appendTo(".issuePreview");
+    if($(".monthLevel").length){
+    $( this ).find(".firstMonthCover").jail().clone().appendTo(".issuePreview");
+  }
   }, function() {
    $("div.issuePreview").find( ".firstMonthCover:last" ).fadeOut("slow", function() { $(this).remove(); });;
   }
-
 );
 
 
+ $("td.highlight").hover(
+  function() {
+    if($(".issueLevel").length){
+    $( this ).find(".dayIssue").jail().clone().appendTo(".issuePreview");
+  }
+  }, function() {
+   $("div.issuePreview").find( ".firstMonthCover:last" ).fadeOut("slow", function() { $(this).remove(); });;
+  }
+);
 
+
+$*
 
   $('.publication-year-container-label').click(function(){
   $(this).parent().addClass('activeYear'); // choose year
@@ -847,12 +860,28 @@ monthButton.click(function(){
   $(".newspaperContainer").addClass("issueLevel");
   $( "#calendar" ).datepicker("refresh");
   var monthLabel = $(this).find(".month-container-label-month").clone().addClass("monthTempLabel");
-  monthLabel.insertAfter($(this).parent().parent().parent().find("span.publication-year"));
+  //monthLabel.insertAfter($(this).parent().parent().parent().find("span.publication-year"));
   var yearChosen = $(this).find(".date-year").html();
   var monthChosen = $(this).find(".date-month").html();
   var somestr2 =  + monthChosen + "/01/" + yearChosen + "";
   $( "#calendar" ).datepicker( "setDate", somestr2 );
   $( "#calendar" ).datepicker( "option", "numberOfMonths", 1 );
+  var tdnum =  1; //script for counting days in month and adding classes
+  $("div.activeMonth td:not('.ui-state-disabled')").each(function(){ //script for counting days in month and adding classes
+      $(this).addClass("dayNumber_" + tdnum); //script for counting days in month and adding classes
+      tdnum++; //script for counting days in month and adding classes
+  }); //script for counting days in month and adding classes
+
+
+    $('div.activeMonth .issue-container').each(function (){
+        var issueDay = ($(this).find("a").html().slice(3, 5).replace(/^0+/, ''));
+        $(this).find("img").addClass("dayIssue coverDay_" + issueDay);
+        $(this).find("img").clone().appendTo($(".dayNumber_" + issueDay)).jail({
+          loadHiddenImages : true,
+          id: "eachDay",
+        });
+
+    });
 
 });
 
@@ -872,7 +901,11 @@ $(".monthSelect, .monthBack").click(function(){
   var somestr =  "01/01/" + yearChosen + "";
   $( "#calendar" ).datepicker( "setDate", somestr );
   $( "#calendar" ).datepicker( "option", "numberOfMonths", 12 );
+    $('div.issue-container').each(function (){
 
+        $(this).find("img.dayIssue").remove();
+
+    });
 });
 
 //back to year
@@ -959,6 +992,7 @@ $("#calendar").datepicker({
 
 
 });
+
 
 
 

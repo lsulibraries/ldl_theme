@@ -7054,6 +7054,10 @@ span.month-container-label-count {
 
 .issueLevel{
 
+.issue-container, .dayIssue{
+  display: none !important;
+}
+
 .issuePreviewDay{
     height: 700px;
     overflow: hidden;
