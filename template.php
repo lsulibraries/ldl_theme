@@ -50,6 +50,7 @@ function alpha_preprocess_islandora_newspaper(array &$variables) {
     $variables['issues'] = $nest;
 
   }
+  ksort($variables['issues']);
   $variables['totalIssueCount'] = $issueTotal;
   $variables['totalYearCount'] = $yearTotal;
 }
