@@ -4915,6 +4915,8 @@ body.largeImage, body.newspaperSet {
   body.largeImage .selectBack:hover, body.newspaperSet .selectBack:hover {
     transform: translateX(-5px);
     transition-duration: 0.5s; }
+  body.largeImage span.filler-border, body.newspaperSet span.filler-border {
+    display: none; }
   body.largeImage .monthLevel .publication-year-container-label, body.newspaperSet .monthLevel .publication-year-container-label {
     pointer-events: none; }
   body.largeImage .issuePreview, body.largeImage .grid-loading-notice, body.newspaperSet .issuePreview, body.newspaperSet .grid-loading-notice {
@@ -5140,8 +5142,61 @@ body.largeImage, body.newspaperSet {
       color: white;
       box-sizing: content-box;
       border-radius: 0px 0px 3px 3px; }
-  body.largeImage .issueLevel .issue-container, body.largeImage .issueLevel .publication-year-container-label, body.largeImage .issueLevel .dayIssue, body.newspaperSet .issueLevel .issue-container, body.newspaperSet .issueLevel .publication-year-container-label, body.newspaperSet .issueLevel .dayIssue {
+  body.largeImage .issueLevel .ui-datepicker-title, body.newspaperSet .issueLevel .ui-datepicker-title {
+    font-size: 24px;
+    letter-spacing: 2px;
+    padding-left: 15px;
+    padding-bottom: 20px; }
+    body.largeImage .issueLevel .ui-datepicker-title span.ui-datepicker-month, body.newspaperSet .issueLevel .ui-datepicker-title span.ui-datepicker-month {
+      text-transform: uppercase;
+      font-weight: 700; }
+  body.largeImage .issueLevel span.filler-border, body.newspaperSet .issueLevel span.filler-border {
+    display: block;
+    width: calc(100% - 220px);
+    height: 20px;
+    border-bottom: 1px solid #cecece;
+    position: absolute;
+    right: 32px; }
+  body.largeImage .issueLevel thead, body.newspaperSet .issueLevel thead {
+    font-size: 11px; }
+  body.largeImage .issueLevel .month-container, body.newspaperSet .issueLevel .month-container {
+    cursor: auto; }
+  body.largeImage .issueLevel .dayContainer a, body.largeImage .issueLevel .dayContainer, body.largeImage .issueLevel td, body.newspaperSet .issueLevel .dayContainer a, body.newspaperSet .issueLevel .dayContainer, body.newspaperSet .issueLevel td {
+    cursor: default; }
+  body.largeImage .issueLevel .highlight .dayContainer a, body.largeImage .issueLevel td.highlight, body.largeImage .issueLevel .highlight .dayContainer, body.newspaperSet .issueLevel .highlight .dayContainer a, body.newspaperSet .issueLevel td.highlight, body.newspaperSet .issueLevel .highlight .dayContainer {
+    color: white;
+    cursor: pointer !important; }
+  body.largeImage .issueLevel .highlight .dayContainer, body.newspaperSet .issueLevel .highlight .dayContainer {
+    background: #676767;
+    border: 1px solid #676767; }
+  body.largeImage .issueLevel #calendar, body.largeImage .issueLevel .issue-container, body.largeImage .issueLevel .publication-year-container-label, body.largeImage .issueLevel .dayIssue, body.largeImage .issueLevel a.ui-datepicker-prev, body.largeImage .issueLevel a.ui-datepicker-next, body.newspaperSet .issueLevel #calendar, body.newspaperSet .issueLevel .issue-container, body.newspaperSet .issueLevel .publication-year-container-label, body.newspaperSet .issueLevel .dayIssue, body.newspaperSet .issueLevel a.ui-datepicker-prev, body.newspaperSet .issueLevel a.ui-datepicker-next {
     display: none !important; }
+  body.largeImage .issueLevel td.ui-datepicker-other-month.ui-datepicker-unselectable.ui-state-disabled, body.newspaperSet .issueLevel td.ui-datepicker-other-month.ui-datepicker-unselectable.ui-state-disabled {
+    opacity: 0;
+    height: 0px;
+    padding: 0px; }
+  body.largeImage .issueLevel table.ui-datepicker-calendar, body.newspaperSet .issueLevel table.ui-datepicker-calendar {
+    border: 0px; }
+  body.largeImage .issueLevel th, body.newspaperSet .issueLevel th {
+    text-align: center;
+    background: transparent;
+    border: 0px;
+    color: #898989;
+    font-weight: 700; }
+  body.largeImage .issueLevel .dayContainer, body.newspaperSet .issueLevel .dayContainer {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    padding: 0px;
+    margin: 4px 2px;
+    border: 1px solid #cecece;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2px; }
+  body.largeImage .issueLevel .dayContainer a, body.newspaperSet .issueLevel .dayContainer a {
+    font-size: 20px;
+    color: #898989; }
   body.largeImage .issueLevel .issuePreviewDay, body.newspaperSet .issueLevel .issuePreviewDay {
     height: 700px;
     overflow: hidden;
@@ -5181,10 +5236,8 @@ body.largeImage, body.newspaperSet {
     flex-direction: row !important;
     margin-right: 0px;
     height: -moz-fit-content; }
-  body.largeImage .issueLevel #calendar, body.newspaperSet .issueLevel #calendar {
-    display: block !important; }
-    body.largeImage .issueLevel #calendar .ui-datepicker td a, body.newspaperSet .issueLevel #calendar .ui-datepicker td a {
-      text-align: center; }
+  body.largeImage .issueLevel #calendar .ui-datepicker td a, body.newspaperSet .issueLevel #calendar .ui-datepicker td a {
+    text-align: center; }
   body.largeImage .issueLevel .islandora-newspaper-grid .publication-year-container .publication-year-container-label, body.newspaperSet .issueLevel .islandora-newspaper-grid .publication-year-container .publication-year-container-label {
     pointer-events: none !important;
     height: 180px;

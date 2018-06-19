@@ -6690,7 +6690,9 @@ span.backShape {
   transition-duration: 0.5s;
 }
 
-
+span.filler-border {
+display: none;
+}
 
 .monthLevel .publication-year-container-label {
     pointer-events: none;
@@ -7054,8 +7056,87 @@ span.month-container-label-count {
 
 .issueLevel{
 
-.issue-container, .publication-year-container-label, .dayIssue{
+.ui-datepicker-title {
+    font-size: 24px;
+    letter-spacing: 2px;
+    padding-left: 15px;
+    padding-bottom: 20px;
+    span.ui-datepicker-month {
+    text-transform: uppercase;
+    font-weight: 700;
+}
+}
+
+
+span.filler-border {
+    display: block;
+    width: calc(100% - 220px);
+    height: 20px;
+    border-bottom: 1px solid #cecece;
+    position: absolute;
+    right: 32px;
+}
+
+thead {
+    font-size: 11px;
+}
+
+.month-container{
+  cursor: auto;
+}
+.dayContainer a, .dayContainer, td {
+    cursor: default;
+}
+
+.highlight .dayContainer a, td.highlight, .highlight .dayContainer {
+    color: white;
+    cursor: pointer !important;
+}
+
+.highlight .dayContainer {
+    background: #676767;
+    border: 1px solid #676767;
+}
+
+#calendar, .issue-container, .publication-year-container-label, .dayIssue, a.ui-datepicker-prev, a.ui-datepicker-next{
   display: none !important;
+}
+
+td.ui-datepicker-other-month.ui-datepicker-unselectable.ui-state-disabled {
+    opacity: 0;
+    height: 0px;
+    padding: 0px;
+}
+
+
+table.ui-datepicker-calendar{
+  border: 0px;
+}
+
+th {
+    text-align: center;
+    background: transparent;
+    border: 0px;
+      color: #898989;
+      font-weight: 700;
+}
+
+.dayContainer {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    padding: 0px;
+    margin: 4px 2px;
+    border: 1px solid #cecece;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2px;
+}
+
+.dayContainer a{
+      font-size: 20px;
+      color: #898989;
 }
 
 .issuePreviewDay{
@@ -7120,7 +7201,6 @@ span.month-container-label-count {
 }
 
 #calendar{
-  display: block !important;
 
 .ui-datepicker td a {
     text-align: center;

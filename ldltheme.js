@@ -808,7 +808,6 @@ $(".downloadSelect").insertAfter(".infoToggle");
 );
 
 
-$*
 
   $('.publication-year-container-label').click(function(){
   $(this).parent().addClass('activeYear'); // choose year
@@ -871,8 +870,9 @@ monthButton.click(function(){
       $(this).addClass("dayNumber_" + tdnum); //script for counting days in month and adding classes
       tdnum++; //script for counting days in month and adding classes
   }); //script for counting days in month and adding classes
-
-
+if (!($(".filler-border").length)){
+    $("<span class='filler-border'/>").insertBefore(".ui-datepicker-month");
+}
     $('div.activeMonth .issue-container').each(function (){
         var issueDay = ($(this).find("a").html().slice(3, 5).replace(/^0+/, ''));
         $(this).find("img").addClass("dayIssue coverDay_" + issueDay);
@@ -880,9 +880,20 @@ monthButton.click(function(){
           loadHiddenImages : true,
           id: "eachDay",
         });
-
     });
-  $("#calendar").remove();
+
+if (!($(".dayContainer").length)){
+  $('.ui-datepicker-calendar td').each(function (){
+     $(this).children().wrapAll("<div class='dayContainer'/>");
+  }); //currently making new nest per click
+}
+
+
+$("td.ui-datepicker-other-month.ui-datepicker-unselectable.ui-state-disabled").html().remove();
+
+
+
+
 });
 
 
@@ -901,11 +912,14 @@ $(".monthSelect, .monthBack").click(function(){
   var somestr =  "01/01/" + yearChosen + "";
   $( "#calendar" ).datepicker( "setDate", somestr );
   $( "#calendar" ).datepicker( "option", "numberOfMonths", 12 );
-    $('div.issue-container').each(function (){
+    $('td.highlight').each(function (){
 
         $(this).find("img.dayIssue").remove();
 
     });
+
+
+
 });
 
 //back to year
