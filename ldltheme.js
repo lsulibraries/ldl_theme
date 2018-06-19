@@ -889,6 +889,13 @@ if (!($(".dayContainer").length)){
 }
 
 
+  $('.ui-datepicker-calendar tr').each(function (){
+    if (!($(this).find("a.ui-state-default").length)){
+      $(this).remove();
+    }
+  }); //currently making new nest per click
+
+
 $("td.ui-datepicker-other-month.ui-datepicker-unselectable.ui-state-disabled").html().remove();
 
 
