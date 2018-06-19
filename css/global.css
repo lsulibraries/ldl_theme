@@ -5142,6 +5142,31 @@ body.largeImage, body.newspaperSet {
       color: white;
       box-sizing: content-box;
       border-radius: 0px 0px 3px 3px; }
+  body.largeImage .issueLevel .issuePreview, body.newspaperSet .issueLevel .issuePreview {
+    height: 700px;
+    overflow: hidden;
+    width: 50%;
+    margin: 0px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-top: 50px; }
+    body.largeImage .issueLevel .issuePreview img.lazy, body.newspaperSet .issueLevel .issuePreview img.lazy {
+      position: absolute;
+      width: 580px;
+      transition-duration: inherit !important;
+      border: 1px solid #cecece; }
+    body.largeImage .issueLevel .issuePreview .monthPrompt, body.newspaperSet .issueLevel .issuePreview .monthPrompt {
+      border: 1px solid #cecece;
+      height: 410px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px; }
   body.largeImage .issueLevel .ui-datepicker-title, body.newspaperSet .issueLevel .ui-datepicker-title {
     font-size: 24px;
     letter-spacing: 2px;
@@ -5169,7 +5194,7 @@ body.largeImage, body.newspaperSet {
   body.largeImage .issueLevel .highlight .dayContainer, body.newspaperSet .issueLevel .highlight .dayContainer {
     background: #676767;
     border: 1px solid #676767; }
-  body.largeImage .issueLevel #calendar, body.largeImage .issueLevel .issue-container, body.largeImage .issueLevel .publication-year-container-label, body.largeImage .issueLevel .dayIssue, body.largeImage .issueLevel a.ui-datepicker-prev, body.largeImage .issueLevel a.ui-datepicker-next, body.newspaperSet .issueLevel #calendar, body.newspaperSet .issueLevel .issue-container, body.newspaperSet .issueLevel .publication-year-container-label, body.newspaperSet .issueLevel .dayIssue, body.newspaperSet .issueLevel a.ui-datepicker-prev, body.newspaperSet .issueLevel a.ui-datepicker-next {
+  body.largeImage .issueLevel #calendar, body.largeImage .issueLevel .issue-container, body.largeImage .issueLevel .publication-year-container-label, body.largeImage .issueLevel .dayContainer > .dayIssue, body.largeImage .issueLevel a.ui-datepicker-prev, body.largeImage .issueLevel a.ui-datepicker-next, body.newspaperSet .issueLevel #calendar, body.newspaperSet .issueLevel .issue-container, body.newspaperSet .issueLevel .publication-year-container-label, body.newspaperSet .issueLevel .dayContainer > .dayIssue, body.newspaperSet .issueLevel a.ui-datepicker-prev, body.newspaperSet .issueLevel a.ui-datepicker-next {
     display: none !important; }
   body.largeImage .issueLevel td.ui-datepicker-other-month.ui-datepicker-unselectable.ui-state-disabled, body.newspaperSet .issueLevel td.ui-datepicker-other-month.ui-datepicker-unselectable.ui-state-disabled {
     opacity: 0;

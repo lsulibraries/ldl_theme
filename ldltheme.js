@@ -797,6 +797,8 @@ $(".downloadSelect").insertAfter(".infoToggle");
 );
 
 
+
+
  $("td.highlight").hover(
   function() {
     if($(".issueLevel").length){
@@ -889,17 +891,30 @@ if (!($(".dayContainer").length)){
 }
 
 
-  $('.ui-datepicker-calendar tr').each(function (){
+  $('.ui-datepicker-calendar tbody tr').each(function (){
     if (!($(this).find("a.ui-state-default").length)){
       $(this).remove();
     }
   }); //currently making new nest per click
 
 
-$("td.ui-datepicker-other-month.ui-datepicker-unselectable.ui-state-disabled").html().remove();
+$("td.ui-datepicker-other-month.ui-datepicker-unselectable.ui-state-disabled").html().remove;
 
 
+  $( ".dayContainer" ).promise().done(function() {
+      $(this).find("img.lazy").addClass("hiKyle");
 
+
+       $("td.highlight").hover(
+        function() {
+          $( this ).find(".dayIssue").clone().appendTo(".issuePreview");
+        }, function() {
+         $("div.issuePreview").find( ".dayIssue:last" ).fadeOut("slow", function() { $(this).remove(); });;
+        }
+      );
+
+
+  });
 
 });
 
@@ -1017,12 +1032,10 @@ $("#calendar").datepicker({
 
 
 
-
 //end datepicker
 
 }
 // end newspaper 2.0
-
 
 // begin largeImage 2.0
 

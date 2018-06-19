@@ -7056,6 +7056,40 @@ span.month-container-label-count {
 
 .issueLevel{
 
+.issuePreview{
+    height: 700px;
+    overflow: hidden;
+    width: 50%;
+    margin: 0px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-top: 50px;
+    img.lazy {
+    position: absolute;
+    width: 580px;
+    transition-duration: inherit !important;
+        border: 1px solid #cecece;
+
+    }
+
+    .monthPrompt {
+    border: 1px solid #cecece;
+    height: 410px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+}
+
+
+
+}
+
 .ui-datepicker-title {
     font-size: 24px;
     letter-spacing: 2px;
@@ -7098,7 +7132,7 @@ thead {
     border: 1px solid #676767;
 }
 
-#calendar, .issue-container, .publication-year-container-label, .dayIssue, a.ui-datepicker-prev, a.ui-datepicker-next{
+#calendar, .issue-container, .publication-year-container-label, .dayContainer > .dayIssue, a.ui-datepicker-prev, a.ui-datepicker-next{
   display: none !important;
 }
 
