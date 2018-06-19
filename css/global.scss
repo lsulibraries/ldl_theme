@@ -6694,16 +6694,24 @@ span.filler-border {
 display: none;
 }
 
+
+
+
 .monthLevel .publication-year-container-label {
     pointer-events: none;
 }
 
-.issuePreview, .grid-loading-notice{
+.issuePreview, .grid-loading-notice, .monthPrompt, .dayPrompt{
   display: none;
 }
 
+.dayContainer > .dayIssue, .highlight > .dayIssue{
+  display: none !important;
+}
 
 .monthLevel{
+
+
 
 .publication-year-container:hover{
 
@@ -7074,7 +7082,9 @@ span.month-container-label-count {
 
     }
 
-    .monthPrompt {
+
+
+    .dayPrompt {
     border: 1px solid #cecece;
     height: 410px;
     width: 100%;

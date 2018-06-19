@@ -4919,8 +4919,10 @@ body.largeImage, body.newspaperSet {
     display: none; }
   body.largeImage .monthLevel .publication-year-container-label, body.newspaperSet .monthLevel .publication-year-container-label {
     pointer-events: none; }
-  body.largeImage .issuePreview, body.largeImage .grid-loading-notice, body.newspaperSet .issuePreview, body.newspaperSet .grid-loading-notice {
+  body.largeImage .issuePreview, body.largeImage .grid-loading-notice, body.largeImage .monthPrompt, body.largeImage .dayPrompt, body.newspaperSet .issuePreview, body.newspaperSet .grid-loading-notice, body.newspaperSet .monthPrompt, body.newspaperSet .dayPrompt {
     display: none; }
+  body.largeImage .dayContainer > .dayIssue, body.largeImage .highlight > .dayIssue, body.newspaperSet .dayContainer > .dayIssue, body.newspaperSet .highlight > .dayIssue {
+    display: none !important; }
   body.largeImage .monthLevel .publication-year-container:hover .firstYearCover, body.newspaperSet .monthLevel .publication-year-container:hover .firstYearCover {
     transform: scale3d(1, 1, 1);
     transition-duration: 0.2s; }
@@ -5157,7 +5159,7 @@ body.largeImage, body.newspaperSet {
       width: 580px;
       transition-duration: inherit !important;
       border: 1px solid #cecece; }
-    body.largeImage .issueLevel .issuePreview .monthPrompt, body.newspaperSet .issueLevel .issuePreview .monthPrompt {
+    body.largeImage .issueLevel .issuePreview .dayPrompt, body.newspaperSet .issueLevel .issuePreview .dayPrompt {
       border: 1px solid #cecece;
       height: 410px;
       width: 100%;

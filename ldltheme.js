@@ -738,21 +738,16 @@ if ( ($('.islandora-newspaper-object').length) && ( !$('body').hasClass('audioPD
 
 
     $(".metadataSidebar .modsDesc").clone().appendTo(".newspaper-thumbnailData");
-
     $("<div class='labelContainer descContainer'/>").insertAfter(".newspaperContainer"); //adds label break
     $("<div class='contentLabel bookDesc'>tags</div>").appendTo(".descContainer"); //adds label break
     $("a.institutionSmall:last-child").clone().prop({class:"backContainer"}).insertAfter(".descContainer").html("<div class='backCollection'>Back to Collection</div>");
-
     $("<div class='descriptionText'/>").insertAfter(".bookDesc"); //adds label break
-
-$(".metadataSidebar .modsSubject a").clone().appendTo(".descContainer .descriptionText").addClass("modsSubject").wrapAll('<div class="tagsGlance"/>');
-$(".metadataSidebar").clone().prop({ class: "metadataVertical"}).appendTo('.content .descContainer .descriptionText');
-
-
-$(".downloadSelect").insertAfter(".infoToggle");
+    $(".metadataSidebar .modsSubject a").clone().appendTo(".descContainer .descriptionText").addClass("modsSubject").wrapAll('<div class="tagsGlance"/>');
+    $(".metadataSidebar").clone().prop({ class: "metadataVertical"}).appendTo('.content .descContainer .descriptionText');
+    $(".downloadSelect").insertAfter(".infoToggle");
 
 
-     $("<i class='fa fa-photo' aria-hidden='true'></i>").appendTo(".newspaperLabel");
+    $("<i class='fa fa-photo' aria-hidden='true'></i>").appendTo(".newspaperLabel");
     $(".total-issue-count").insertAfter(".newspaper-thumbnailData > span");
 
 //begin newspaper selection logic
@@ -898,18 +893,15 @@ if (!($(".dayContainer").length)){
   }); //currently making new nest per click
 
 
-$("td.ui-datepicker-other-month.ui-datepicker-unselectable.ui-state-disabled").html().remove;
+$("td.ui-datepicker-unselectable.ui-state-disabled").html().remove;
 
 
   $( ".dayContainer" ).promise().done(function() {
-      $(this).find("img.lazy").addClass("hiKyle");
-
-
        $("td.highlight").hover(
         function() {
           $( this ).find(".dayIssue").clone().appendTo(".issuePreview");
         }, function() {
-         $("div.issuePreview").find( ".dayIssue:last" ).fadeOut("slow", function() { $(this).remove(); });;
+         $("div.issuePreview").find( "img" ).fadeOut("slow", function() { $(this).remove(); });
         }
       );
 

@@ -58,6 +58,9 @@
               <div class="monthPrompt">
                 <span>Select a month</span>
               </div>
+              <div class="dayPrompt">
+                <span>Select a day</span>
+              </div>
             </div>
             <div class="months-container">
               <?php foreach ($data['months'] as $month => $data): ?>
