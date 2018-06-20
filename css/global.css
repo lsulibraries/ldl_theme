@@ -3157,7 +3157,8 @@ div.islandora-pdf-object, div.islandora-large-image-object {
   background-repeat: no-repeat;
   background-size: cover;
   left: -20px;
-  top: -10px; }
+  top: -10px;
+  background-color: black; }
 
 .contentLabel {
   color: #676767;
@@ -3578,7 +3579,7 @@ body.compoundParent #block-islandora-compound-object-compound-jail-display .cont
 body.compoundParent .compoundGallery_header, .compoundChild .userMenu body.userSelect .compoundGallery_header {
   display: flex;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.06);
+  background: #232323;
   margin-bottom: 1px;
   position: relative;
   overflow: hidden;

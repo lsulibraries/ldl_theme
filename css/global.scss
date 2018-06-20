@@ -4066,6 +4066,7 @@ background:none!important;
     background-size: cover;
     left: -20px;
     top: -10px;
+    background-color: black;
 }
 
 .contentLabel{
@@ -4657,9 +4658,10 @@ body.compoundParent{
 }
 
     .compoundGallery_header {
+
           display: flex;
     justify-content: center;
-    background: $darkTransparent;
+    background: #232323;
     margin-bottom: 1px;
     position: relative;
     overflow: hidden;
