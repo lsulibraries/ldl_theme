@@ -3499,7 +3499,6 @@ div.islandora-pdf-object, div.islandora-large-image-object {
       border: 0px; }
   .compoundObject .compoundSelect a.compoundSelect-title {
     display: flex !important;
-    justify-content: center;
     align-items: center;
     max-width: none !important;
     font-size: 20px;
