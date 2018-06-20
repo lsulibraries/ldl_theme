@@ -264,10 +264,13 @@ if($('.institution-collection-list-a').length < 4){
 
 
 
-    $('.compoundSelect').each(function() {
-    if ($(this).children("noscript:contains('embargo_embargoed')")){
-      $(this).addClass("embargoed");
-    }
+    $('.compoundSelect noscript').each(function() {
+      str = $(this).html();
+      if (str.indexOf("embargo") >= 0){
+        $(this).parent().parent().addClass("embargoed");
+        $("body").addClass("containsEmbargo");
+      }
+
     });
 
 
