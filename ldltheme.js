@@ -258,6 +258,23 @@ if($('.institution-collection-list-a').length < 4){
         $("<div class='backgroundDiv'/>").insertBefore(".compoundGallery_header .form-item"); // adds div for item background
     var commentedURL = $('div.widest').find('noscript').addClass('widestIMG').text().split(" ");
     var srcclean = commentedURL[2].match(/"(.*?)"/);
+
+
+    //begin embargo detection
+
+
+
+    $('.compoundSelect').each(function() {
+    if ($(this).children("noscript:contains('embargo_embargoed')")){
+      $(this).addClass("embargoed");
+    }
+    });
+
+
+
+
+    //end embargo detection
+
     //assign background image
     $('.backgroundDiv').css('background-image', 'url(' + srcclean[1] + ')');
     $(".compoundObject #block-system-main table").prop({class:"modsTable"}).appendTo(".region-sidebar-first-inner");
@@ -319,7 +336,7 @@ if($('.institution-collection-list-a').length < 4){
         $("#shareToggle").insertAfter(".infoToggle");
 
         $("<div id='share'/>").insertAfter("#shareToggle");
-        
+
         $(".parentLink").clone().prop({class:"backContainer"}).insertAfter(".compoundGallery").html("<div class='backCollection'>Back to Collection</div>");
         $(".contentLabel").wrapAll("<div class='labelContainer'/>");
 
