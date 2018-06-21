@@ -280,6 +280,11 @@ if($('.institution-collection-list-a').length < 4){
       }
 
 
+
+      if (($('.ip-embargo-details').length) && (!$('.object-title').length)){
+        $('body').addClass('objectHidden');
+      }
+
 $(".ip-embargo-details").insertBefore(".content > div.islandora").wrapAll("<div class='alertBox_container'/>").wrapAll("<div class='alertBox'/>");
 
 $("<span class='alertIcon'/>").insertBefore(".ip-embargo-details");

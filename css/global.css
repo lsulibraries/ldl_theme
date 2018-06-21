@@ -3616,6 +3616,8 @@ body.not-logged-in.compoundChild .manageMenu {
 
 .compoundChild {
   background: white; }
+  .compoundChild.objectHidden .islandora-large-image-content-wrapper, .compoundChild.objectHidden .compoundArrows, .compoundChild.objectHidden .downloadLink, .compoundChild.objectHidden .headerBreadcrumb {
+    display: none !important; }
   .compoundChild.activeEmbargo {
     background: white; }
     .compoundChild.activeEmbargo .ip-embargo-details {

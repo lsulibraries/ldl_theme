@@ -4712,6 +4712,12 @@ body.not-logged-in.compoundChild{
 .compoundChild{
 
 
+&.objectHidden{
+  .islandora-large-image-content-wrapper, .compoundArrows, .downloadLink, .headerBreadcrumb{
+    display: none !important;
+}
+}
+
 &.activeEmbargo{
 
 
@@ -4724,7 +4730,7 @@ body.not-logged-in.compoundChild{
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
 }
 
 .alertBox {
