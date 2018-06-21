@@ -3618,6 +3618,12 @@ body.not-logged-in.compoundChild .manageMenu {
   background: white; }
   .compoundChild.objectHidden .islandora-large-image-content-wrapper, .compoundChild.objectHidden .compoundArrows, .compoundChild.objectHidden .downloadLink, .compoundChild.objectHidden .headerBreadcrumb {
     display: none !important; }
+  .compoundChild.objectHidden .compoundGallery_header {
+    height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
   .compoundChild.activeEmbargo {
     background: white; }
     .compoundChild.activeEmbargo .ip-embargo-details {
