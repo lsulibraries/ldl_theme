@@ -273,10 +273,12 @@ if($('.institution-collection-list-a').length < 4){
     });
 
 
-      if ($('.ip-embargo-list-details').length){
+      if ($('.ip-embargo-details').length){
         $('body').addClass('activeEmbargo');
       }
 
+
+$(".ip-embargo-details").insertBefore(".content > div.islandora");
 
 
     //end embargo detection
