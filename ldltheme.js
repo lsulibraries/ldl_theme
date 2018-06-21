@@ -273,8 +273,8 @@ if($('.institution-collection-list-a').length < 4){
     });
 
 
-      if (('head').indexOf('islandora_ip_embargo') >= 0){
-        $(this).parent().addClass("this_is_embargoed");
+      if ($('.ip-embargo-list-details').length){
+        $('body').addClass('activeEmbargo');
       }
 
 
