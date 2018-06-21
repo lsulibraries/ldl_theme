@@ -3501,14 +3501,12 @@ div.islandora-pdf-object, div.islandora-large-image-object {
     display: flex !important;
     align-items: center;
     max-width: none !important;
-    font-size: 20px;
+    font-size: 17px;
     flex-grow: 2;
     padding: 10px;
     color: #686868;
-    position: absolute;
-    left: 0px;
-    width: 130px;
-    background: white;
+    padding-left: 20px;
+    background: transparent;
     height: 130px; }
   .compoundObject .compoundSelect a.compoundSelect-title.active {
     background: rgba(255, 255, 255, 0.07) !important; }
