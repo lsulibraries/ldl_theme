@@ -3618,6 +3618,21 @@ body.not-logged-in.compoundChild .manageMenu {
   background: white; }
   .compoundChild.activeEmbargo {
     background: white; }
+    .compoundChild.activeEmbargo .ip-embargo-details {
+      background: #e9e9e9;
+      padding: 20px; }
+    .compoundChild.activeEmbargo .alertBox {
+      display: flex;
+      border: 1px solid #e9e9e9;
+      border-radius: 3px;
+      overflow: hidden;
+      margin: 50px 0px; }
+      .compoundChild.activeEmbargo .alertBox span.alertIcon {
+        background-image: url(https://i.imgur.com/R1bk60c.png);
+        width: 130px;
+        background-size: 50px auto;
+        background-position: center;
+        background-repeat: no-repeat; }
     .compoundChild.activeEmbargo .compoundGallery_header {
       position: relative;
       padding: 30px 80px; }

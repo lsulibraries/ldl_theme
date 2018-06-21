@@ -278,9 +278,9 @@ if($('.institution-collection-list-a').length < 4){
       }
 
 
-$(".ip-embargo-details").insertBefore(".content > div.islandora");
+$(".ip-embargo-details").insertBefore(".content > div.islandora").wrapAll("<div class='alertBox'/>");
 
-
+$("<span class='alertIcon'/>").insertBefore(".ip-embargo-details");
     //end embargo detection
 
     //assign background image
