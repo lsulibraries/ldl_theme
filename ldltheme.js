@@ -635,44 +635,44 @@ $(".booksearchToggle").click(function(){
 
 // begin newspaper 2.0
 if ( ($('.islandora-newspaper-object').length) && ( !$('body').hasClass('audioPDF') ) ){
-  $('body').addClass('newspaperSet');
+  $('body').addClass('newspaperSet'); // newspaper body class
   $("<div class='newspaper_header'/>").insertBefore(".islandora-newspaper-object"); //creates header for newspaper items
-  $("<div class='backgroundDiv'/>").appendTo(".newspaper_header"); //creates header for newspaper items
-  $('.backgroundDiv').css('background-image', 'url(http://louisianadigitallibrary.org/islandora/object/hnoc-clf:8432/datastream/TN/view)');
+  $("<div class='backgroundDiv'/>").appendTo(".newspaper_header"); //creates header background for newspaper items
+  $('.backgroundDiv').css('background-image', 'url(http://louisianadigitallibrary.org/islandora/object/hnoc-clf:8432/datastream/TN/view)'); //temporary static image
   imageTitle = $(".modsTitle").html(); // finds full title for book
   $("<div class='newspaper_headerMenu'/>").appendTo(".newspaper_header"); //creates header for book items
   $("<div class='newspaperTitle'/>").text(imageTitle).appendTo(".newspaper_headerMenu"); // undoes default title truncation
   //$("<div class='contentLabel newspaperLabel'>Newspaper Summary</div>").appendTo(".labelContainer"); //adds label break
   $("<div class='headerBreadcrumb'/>").appendTo(".newspaper_headerMenu"); //temporarily moves count
 
-  var institutionText = $(".depth-2 > a").clone(); //creates href path from breadcrumb depth-2
-  var institutionHome = $(".depth-2 > a").attr('href'); //creates href path from breadcrumb depth-2
-  var collectionText = $(".depth-3 > a").clone(); //creates href path from breadcrumb depth-2
-  var collectionHome = $(".depth-3 > a").attr('href'); //creates href path from breadcrumb depth-2
 
-  $(institutionText).addClass("institutionSmall").appendTo(".headerBreadcrumb"); //creates institution breadcrumb
-  $( " <span class='breadcrumbDivider'>/</span>" ).insertAfter( ".institutionSmall" ); //needs to be separated from the a href
-  $(collectionText).addClass("institutionSmall").insertAfter(".breadcrumbDivider"); //creates collection breadcrumb
-  $("<div class='userMenu'/>").appendTo(".newspaper_headerMenu"); //temporarily moves count
-  $("<div class='infoToggle userSelect'><div class='iconSelect'></div><div class='textSelect'>details</div></div>").appendTo(".userMenu"); //adds toggle for parent metadata
-  $("#block-system-main > div.tabs > ul.tabs").appendTo(".userMenu").wrapAll('<div class="manageMenu"/>'); //moves the view/ip embargo/manage menu
-  $("#block-system-main > .tabs").remove(); // temporarily removes tabs until menu is set
-  $(".islandora-newspaper-object").addClass("newspaperContainer"); //adds label break
+  // begin header links
+      var institutionText = $(".depth-2 > a").clone(); //creates href path from breadcrumb depth-2
+      var institutionHome = $(".depth-2 > a").attr('href'); //creates href path from breadcrumb depth-2
+      var collectionText = $(".depth-3 > a").clone(); //creates href path from breadcrumb depth-3
+      var collectionHome = $(".depth-3 > a").attr('href'); //creates href path from breadcrumb depth-3
+      $(institutionText).addClass("institutionSmall").appendTo(".headerBreadcrumb"); //creates institution breadcrumb
+      $( " <span class='breadcrumbDivider'>/</span>" ).insertAfter( ".institutionSmall" ); //needs to be separated from the a href
+      $(collectionText).addClass("institutionSmall").insertAfter(".breadcrumbDivider"); //creates collection breadcrumb
+      $("<div class='userMenu'/>").appendTo(".newspaper_headerMenu"); //temporarily moves count
+      $("<div class='infoToggle userSelect'><div class='iconSelect'></div><div class='textSelect'>details</div></div>").appendTo(".userMenu"); //adds toggle for parent metadata
+      $("#block-system-main > div.tabs > ul.tabs").appendTo(".userMenu").wrapAll('<div class="manageMenu"/>'); //moves the view/ip embargo/manage menu
+      $("#block-system-main > .tabs").remove(); // temporarily removes tabs until menu is set
+      $(".islandora-newspaper-object").addClass("newspaperContainer"); //adds label break
+  // end header links
 
-  $("<div class='labelContainer'/>").insertBefore(".newspaperContainer"); //adds label break
-  $("<div class='contentLabel newspaperLabel'>newspaper summary</div>").appendTo(".labelContainer"); //adds label break
+
+  // begin newspaper container
+    $("<div class='labelContainer'/>").insertBefore(".newspaperContainer"); //adds label break
+    $("<div class='contentLabel newspaperLabel'>newspaper summary</div>").appendTo(".labelContainer"); //adds label break
     $("<div class='newspaperPreview'/>").appendTo(".newspaperContainer"); //adds label break
     $(".newspaper-thumbnail").appendTo(".newspaperPreview");
     $("<div class='newspaper-thumbnailData'/>").insertAfter(".total-issue-count");
-
-
-
     $(".downloadList").insertAfter(".newspaper_headerMenu");
+  // end newspaper container
 
 
-
-
-    //begin metadata move
+  //begin metadata move
     $('table').each(function (){
         $(this).replaceWith( $(this).html()
             .replace(/<tbody/gi, "<div class='metadataContainer'")
@@ -694,47 +694,40 @@ if ( ($('.islandora-newspaper-object').length) && ( !$('body').hasClass('audioPD
     $("#sideMods").appendTo(".region-sidebar-first-inner");
     $("#sideMods").addClass("metadataContainer");
     $(".islandora-newspaper-metadata").remove();
-
-    //end metadata move
-
+  //end metadata move
 
 
+  //begin toggle functions
     $('.infoToggle').click(function(){
           $(this).toggleClass('menuActive');
           $('#region-sidebar-first').toggleClass('infoOpened');
           $('body').toggleClass('metaOpened');
           $(".nano").nanoScroller({ alwaysVisible: false });
     });
+    $("<div id='shareToggle' class='userSelect'><div class='iconSelect'></div><div class='textSelect'>share</div></div>").insertAfter(".infoToggle");
+    $("<div id='share'/>").insertAfter("#shareToggle");
+    $("#share").jsSocials({
+      url: urlhref,
+      text: title,
+      showLabel: false,
+      showCount: "inside",
+      shares: ["twitter", "facebook"]
+    });
+    $('#shareToggle').click(function(){
+      $(this).toggleClass('activeMenu');
+      $('#share').toggleClass('shareActive');
+    });
+    downloadHeight = $('.downloadList_container').height();
+    $('.downloadSelect').click(function(){
+      $('.downloadList').toggleClass('extendList');
+      $('.downloadSelect').toggleClass('menuActive');
 
-        $("<div id='shareToggle' class='userSelect'><div class='iconSelect'></div><div class='textSelect'>share</div></div>").insertAfter(".infoToggle");
-        $("<div id='share'/>").insertAfter("#shareToggle");
-
-
-        $("#share").jsSocials({
-          url: urlhref,
-          text: title,
-          showLabel: false,
-          showCount: "inside",
-          shares: ["twitter", "facebook"]
-        });
-
-        $('#shareToggle').click(function(){
-          $(this).toggleClass('activeMenu');
-          $('#share').toggleClass('shareActive');
-        });
-
-
-        downloadHeight = $('.downloadList_container').height();
-        $('.downloadSelect').click(function(){
-          $('.downloadList').toggleClass('extendList');
-          $('.downloadSelect').toggleClass('menuActive');
-
-        });
-          $('.downloadSelect').toggle(
-            function(){$('.newspaper_header').css({"padding-bottom": "70px"});},
-            function(){$('.newspaper_header').css({"padding-bottom": "inherit"});}
-          );
-
+    });
+      $('.downloadSelect').toggle(
+        function(){$('.newspaper_header').css({"padding-bottom": "70px"});},
+        function(){$('.newspaper_header').css({"padding-bottom": "inherit"});}
+      );
+  //end toggle funtions
 
 
     $(".metadataSidebar .modsDesc").clone().appendTo(".newspaper-thumbnailData");
@@ -745,103 +738,89 @@ if ( ($('.islandora-newspaper-object').length) && ( !$('body').hasClass('audioPD
     $(".metadataSidebar .modsSubject a").clone().appendTo(".descContainer .descriptionText").addClass("modsSubject").wrapAll('<div class="tagsGlance"/>');
     $(".metadataSidebar").clone().prop({ class: "metadataVertical"}).appendTo('.content .descContainer .descriptionText');
     $(".downloadSelect").insertAfter(".infoToggle");
-
-
     $("<i class='fa fa-photo' aria-hidden='true'></i>").appendTo(".newspaperLabel");
     $(".total-issue-count").insertAfter(".newspaper-thumbnailData > span");
 
-//begin newspaper selection logic
-    $(' .months-container').each(function (){
+//begin newspaper selection
+    $(' .months-container').each(function (){ //Finds first cover of the year and labels loaded months
       if($(this).find("img.lazy").length){
         $(this).find("img.lazy").first().addClass('firstYearCover').parent().parent().parent().parent().addClass('loadedMonth');
       }
     });
 
-
-    $(' .month-container').each(function (){
+    $(' .month-container').each(function (){ // Finds cover for first day of each month
         $(this).find("img.lazy").first().addClass('firstMonthCover');
     });
 
-
-
-
-    var monthButton = $('.month-container-label');
-
-
-
-
-
-
-  $('.firstYearCover').jail({
+    $('.firstYearCover').jail({ //initializes JAIL for first year covers
      effect: 'fadeIn',
      event: 'load',
      placeholder: 'http://creativeme.guru/app/img/loader.gif',
      id: "firstYear",
-
-   });
-
-
-  $(".month-container").hover(
-  function() {
-    if($(".monthLevel").length){
-    $( this ).find(".firstMonthCover").jail().clone().appendTo(".issuePreview");
-  }
-  }, function() {
-   $("div.issuePreview").find( ".firstMonthCover:last" ).fadeOut("slow", function() { $(this).remove(); });;
-  }
-);
+    });
 
 
+    $(".month-container").hover( //hover for showing first month covers
+      function() {
+        if($(".monthLevel").length){
+        $( this ).find(".firstMonthCover").jail().clone().appendTo(".issuePreview");
+      }
+      }, function() {
+       $("div.issuePreview").find( ".firstMonthCover:last" ).fadeOut("slow", function() { $(this).remove(); });;
+      }
+    );
 
+   $("td.highlight").hover( //hover for showing first day covers
+    function() {
+      if($(".issueLevel").length){
+      $( this ).find(".dayIssue").jail().clone().appendTo(".issuePreview");
+    }
+    }, function() {
+     $("div.issuePreview").find( ".firstMonthCover:last" ).fadeOut("slow", function() { $(this).remove(); });;
+    }
+  );
 
- $("td.highlight").hover(
-  function() {
-    if($(".issueLevel").length){
-    $( this ).find(".dayIssue").jail().clone().appendTo(".issuePreview");
-  }
-  }, function() {
-   $("div.issuePreview").find( ".firstMonthCover:last" ).fadeOut("slow", function() { $(this).remove(); });;
-  }
-);
-
-
+   var monthButton = $('.month-container-label');
 
   $('.publication-year-container-label').click(function(){
-  $(this).parent().addClass('activeYear'); // choose year
-  $(".viewYears").not(".activeYear").addClass("inactiveYear"); // unchoose other years
-  $(".islandora-newspaper-navigation").toggleClass('secondStage'); // update progress bar
-  $(".yearSelect").removeClass('activeSelect'); // update progress bar
-  $(".publication-year-container").removeClass("viewYears"); // unchoose other years
-  $(".monthSelect").addClass('activeSelect');
-  $(".newspaperContainer").removeClass("yearLevel");
-  $(".newspaperContainer").addClass("monthLevel");
-  var yearChosen = $(this).find(".publication-year").html();
-  var somestr =  "01/01/" + yearChosen + "";
-  $( "#calendar" ).datepicker( "setDate", somestr );
-  $( "#calendar" ).datepicker( "option", "numberOfMonths", 12 );
-  $( "#calendar" ).datepicker( "option", "monthNames", [ "Jan", "Feb", "Mar", "Apr", "Mar", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ] );
-  console.log(somestr);
-  $("div#calendar > div.ui-datepicker-inline > div.ui-datepicker-group").each(function(){
-     $(this).appendTo('div.activeYear > div.months-container > div.no-calendar > div.month-container-label');
-     $(this).parent().parent().removeClass("no-calendar").addClass("with-calendar");
-  });
-  $("div.with-calendar").each(function(){
 
-     $(this).find("div.ui-datepicker-group:not(:last)").remove();
-     if (!($(this).find("td.highlight").length)){
-       $(this).addClass("filler-calendar");
-     }
+    // choose year, change indicators, change options for datepicker
+    $(this).parent().addClass('activeYear'); // choose year
+    $(".viewYears").not(".activeYear").addClass("inactiveYear"); // unchoose other years
+    $(".islandora-newspaper-navigation").toggleClass('secondStage'); // update progress bar
+    $(".yearSelect").removeClass('activeSelect'); // update progress bar
+    $(".publication-year-container").removeClass("viewYears"); // unchoose other years
+    $(".monthSelect").addClass('activeSelect'); // makes months visible
+    $(".newspaperContainer").removeClass("yearLevel"); //updates status for container
+    $(".newspaperContainer").addClass("monthLevel"); //updates status for container
+    var yearChosen = $(this).find(".publication-year").html(); //determine what year was chosen
+    var somestr =  "01/01/" + yearChosen + ""; //determine what year was chosen
+    $( "#calendar" ).datepicker( "setDate", somestr ); // initialize year
+    $( "#calendar" ).datepicker( "option", "numberOfMonths", 12 ); // initialize months
+    $( "#calendar" ).datepicker( "option", "monthNames", [ "Jan", "Feb", "Mar", "Apr", "Mar", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ] ); // initialize months
+    console.log(somestr);
+
+    // move calendars into the links
+    $("div#calendar > div.ui-datepicker-inline > div.ui-datepicker-group").each(function(){
+       $(this).appendTo('div.activeYear > div.months-container > div.no-calendar > div.month-container-label');
+       $(this).parent().parent().removeClass("no-calendar").addClass("with-calendar");
+    });
 
 
+    $("div.with-calendar").each(function(){
+       $(this).find("div.ui-datepicker-group:not(:last)").remove();
+       if (!($(this).find("td.highlight").length)){
+         $(this).addClass("filler-calendar");
+       }
+    });
+    $("<div class='circleDay'></div>").appendTo(".ui-datepicker-calendar td");
+    $(".with-calendar").each(function() {
+       $( this ).find(".firstMonthCover").jail({
+         loadHiddenImages : true,
+         id: "firstMonth",
+       });
+    });
   });
-  $("<div class='circleDay'></div>").appendTo(".ui-datepicker-calendar td");
-  $(".with-calendar").each(function() {
-     $( this ).find(".firstMonthCover").jail({
-       loadHiddenImages : true,
-       id: "firstMonth",
-     });
-  });
-});
 
 
 
