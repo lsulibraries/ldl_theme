@@ -742,25 +742,29 @@ if ( ($('.islandora-newspaper-object').length) && ( !$('body').hasClass('audioPD
     $(".total-issue-count").insertAfter(".newspaper-thumbnailData > span");
 
 //begin newspaper selection
-    $(' .months-container').each(function (){ //Finds first cover of the year and labels loaded months
+
+     //Finds first cover of the year and labels loaded months
+    $(' .months-container').each(function (){
       if($(this).find("img.lazy").length){
         $(this).find("img.lazy").first().addClass('firstYearCover').parent().parent().parent().parent().addClass('loadedMonth');
       }
     });
 
-    $(' .month-container').each(function (){ // Finds cover for first day of each month
+     // Finds cover for first day of each month
+    $(' .month-container').each(function (){
         $(this).find("img.lazy").first().addClass('firstMonthCover');
     });
 
-    $('.firstYearCover').jail({ //initializes JAIL for first year covers
+    //initializes JAIL for first year covers
+    $('.firstYearCover').jail({
      effect: 'fadeIn',
      event: 'load',
      placeholder: 'http://creativeme.guru/app/img/loader.gif',
      id: "firstYear",
     });
 
-
-    $(".month-container").hover( //hover for showing first month covers
+    //hover for showing first month covers
+    $(".month-container").hover(
       function() {
         if($(".monthLevel").length){
         $( this ).find(".firstMonthCover").jail().clone().appendTo(".issuePreview");
@@ -770,7 +774,8 @@ if ( ($('.islandora-newspaper-object').length) && ( !$('body').hasClass('audioPD
       }
     );
 
-   $("td.highlight").hover( //hover for showing first day covers
+    //hover for showing first day covers
+    $("td.highlight").hover(
     function() {
       if($(".issueLevel").length){
       $( this ).find(".dayIssue").jail().clone().appendTo(".issuePreview");
@@ -778,7 +783,7 @@ if ( ($('.islandora-newspaper-object').length) && ( !$('body').hasClass('audioPD
     }, function() {
      $("div.issuePreview").find( ".firstMonthCover:last" ).fadeOut("slow", function() { $(this).remove(); });;
     }
-  );
+    );
 
    var monthButton = $('.month-container-label');
 
@@ -883,8 +888,6 @@ $("td.ui-datepicker-unselectable.ui-state-disabled").html().remove;
          $("div.issuePreview").find( "img" ).fadeOut("slow", function() { $(this).remove(); });
         }
       );
-
-
   });
 
 });
@@ -905,11 +908,9 @@ $(".monthSelect, .monthBack").click(function(){
   var somestr =  "01/01/" + yearChosen + "";
   $( "#calendar" ).datepicker( "setDate", somestr );
   $( "#calendar" ).datepicker( "option", "numberOfMonths", 12 );
-    $('td.highlight').each(function (){
-
-        $(this).find("img.dayIssue").remove();
-
-    });
+  $('td.highlight').each(function (){
+     $(this).find("img.dayIssue").remove();
+   });
 
 
 
@@ -943,70 +944,59 @@ $(".yearSelect, .yearBack").click(function(){
 
 
 //begin datepicker
-//datepicker
 
-$("<div id='calendar'/>").insertAfter(".islandora-newspaper-grid");
+$("<div id='calendar'/>").insertAfter(".islandora-newspaper-grid"); //create container for calendars
 
 $.getScript('https://designmodo.com/demo/calendarjquerycss3/js/jquery-ui-datepicker.min.js', function() {
-
-   var monthsQuantity = $(".activeYear .months-container .month-container").length;
-
-
-var issueLinks = [];
-
-$( ".issue-container" ).each(function( index ) {
+    var monthsQuantity = $(".activeYear .months-container .month-container").length;
+    var issueLinks = [];
+    $( ".issue-container" ).each(function( index ) { // get links for each day
         var date = new Date($(this).find("a").html());
-        issueLinks.push({link: $(this).find("a").attr("href"), Date: date});
-});
+        issueLinks.push({link: $(this).find("a").attr("href"), Date: date}); // matches link and day in array
+    });
+    console.log(issueLinks);
+    $("#calendar").datepicker({
+        beforeShowDay: function(date) { // creates event for particular day
+            var result = [true, '', null];
+            var matching = $.grep(issueLinks, function(event) {
+                return event.Date.valueOf() === date.valueOf();
+            });
 
-console.log(issueLinks);
-
-$("#calendar").datepicker({
-    beforeShowDay: function(date) {
-        var result = [true, '', null];
-        var matching = $.grep(issueLinks, function(event) {
-            return event.Date.valueOf() === date.valueOf();
-        });
-
-        if (matching.length) {
-            result = [true, 'highlight', null];
-        }
-        return result;
-    },
-    onSelect: function(dateText) {
-        var date,
-            selectedDate = new Date(dateText),
-            i = 0,
-            event = null;
-
-        while (i < issueLinks.length && !event) {
-            date = issueLinks[i].Date;
-
-            if (selectedDate.valueOf() === date.valueOf()) {
-                event = issueLinks[i];
+            if (matching.length) {
+                result = [true, 'highlight', null];
             }
-            i++;
+            return result;
+        },
+        onSelect: function(dateText) { // what happens when someone clicks a day
+            var date,
+                selectedDate = new Date(dateText),
+                i = 0,
+                event = null;
+
+            while (i < issueLinks.length && !event) { // only iterate as many times are there as issues, and only if none are null
+                date = issueLinks[i].Date;
+
+                if (selectedDate.valueOf() === date.valueOf()) {
+                    event = issueLinks[i];
+                }
+                i++;
+            }
+            if (event) {
+              window.open(
+                  issueLinks[i - 1].link,
+                  '_blank' // <- This is what makes it open in a new window.
+                );
+            }
         }
-        if (event) {
-          window.open(
-              issueLinks[i - 1].link,
-              '_blank' // <- This is what makes it open in a new window.
-            );
-        }
-    }
+    });
 });
-
-
-
-});
-
-
-
 
 //end datepicker
 
 }
 // end newspaper 2.0
+
+
 
 // begin largeImage 2.0
 
