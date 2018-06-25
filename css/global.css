@@ -3138,6 +3138,21 @@ div.islandora-pdf-object, div.islandora-large-image-object {
 .compoundParent .compoundArrows, .compoundChild .userMenu .userSelect .compoundArrows {
   display: none; }
 
+.compoundSelect.embargoed::after {
+  content: 'restricted';
+  position: absolute;
+  background: #FF5370;
+  color: white;
+  opacity: 0.75;
+  top: calc(50% - 20px);
+  font-size: 14px;
+  border-radius: 2px;
+  padding: 0px 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transform: rotate(20deg);
+  right: 10px; }
+
 .compoundArrows {
   cursor: default; }
 
@@ -3157,7 +3172,8 @@ div.islandora-pdf-object, div.islandora-large-image-object {
   background-repeat: no-repeat;
   background-size: cover;
   left: -20px;
-  top: -10px; }
+  top: -10px;
+  background-color: black; }
 
 .contentLabel {
   color: #676767;
@@ -3488,17 +3504,14 @@ div.islandora-pdf-object, div.islandora-large-image-object {
       border: 0px; }
   .compoundObject .compoundSelect a.compoundSelect-title {
     display: flex !important;
-    justify-content: center;
     align-items: center;
     max-width: none !important;
-    font-size: 20px;
+    font-size: 17px;
     flex-grow: 2;
     padding: 10px;
     color: #686868;
-    position: absolute;
-    left: 0px;
-    width: 130px;
-    background: white;
+    padding-left: 20px;
+    background: transparent;
     height: 130px; }
   .compoundObject .compoundSelect a.compoundSelect-title.active {
     background: rgba(255, 255, 255, 0.07) !important; }
@@ -3561,7 +3574,7 @@ body.compoundParent #block-islandora-compound-object-compound-jail-display .cont
 body.compoundParent .compoundGallery_header, .compoundChild .userMenu body.userSelect .compoundGallery_header {
   display: flex;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.06);
+  background: #232323;
   margin-bottom: 1px;
   position: relative;
   overflow: hidden;
@@ -3608,6 +3621,45 @@ body.not-logged-in.compoundChild .manageMenu {
 
 .compoundChild {
   background: white; }
+  .compoundChild.objectHidden .islandora-large-image-content-wrapper, .compoundChild.objectHidden .compoundArrows, .compoundChild.objectHidden .downloadLink, .compoundChild.objectHidden .headerBreadcrumb {
+    display: none !important; }
+  .compoundChild.objectHidden .compoundGallery_header {
+    height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .compoundChild.activeEmbargo {
+    background: white; }
+    .compoundChild.activeEmbargo .ip-embargo-details {
+      background: #e9e9e9;
+      padding: 30px 50px; }
+    .compoundChild.activeEmbargo .alertBox_container {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    .compoundChild.activeEmbargo .alertBox {
+      display: flex;
+      border-radius: 10px;
+      overflow: hidden;
+      margin: 50px 0px;
+      background: whitesmoke;
+      width: 740px; }
+      .compoundChild.activeEmbargo .alertBox .mods-access-condition-contact {
+        color: #333;
+        overflow: hidden;
+        margin: 20px 0px;
+        font-style: italic;
+        margin-bottom: 0px; }
+      .compoundChild.activeEmbargo .alertBox span.alertIcon {
+        background-image: url(https://i.imgur.com/R1bk60c.png);
+        width: 240px;
+        background-size: 50px auto;
+        background-position: center;
+        background-repeat: no-repeat; }
+    .compoundChild.activeEmbargo .compoundGallery_header {
+      position: relative;
+      padding: 30px 80px; }
   .compoundChild span.breadcrumbDivider {
     color: #676767; }
   .compoundChild #clip {

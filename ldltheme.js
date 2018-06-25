@@ -85,6 +85,8 @@ $(window).on("load", function() {
       sr.reveal('.solr-fields, .islandora-solr-sort li, .page-browse-collections tr, .islandora-pdf-content', { duration: 200, delay: 350,  easing: 'linear', scale: 1, viewFactor: 0.01, }, 20);
       sr.reveal('.solr-thumb img', { duration: 200, delay: 850,  easing: 'linear', scale: 1, viewFactor: 0.01, }, 20);
       sr.reveal('.islandora-basic-collection-grid dl', { duration: 100, delay: 200,  easing: 'ease-in', }, 20);
+      sr.reveal('.alertBox_container', { duration: 100, delay: 0,  easing: 'ease-in', opacity: 1 }, 20);
+
       sr.reveal('.bookmarkWelcome', { duration: 800, delay: 100,  easing: 'linear', scale: 1, viewFactor: 0.01, }, 50);
       $("a > .institutionLink_meta").each(function() {
         $(this).colourBrightness();//
@@ -264,6 +266,36 @@ if($('.institution-collection-list-a').length < 4){
         $("<div class='backgroundDiv'/>").insertBefore(".compoundGallery_header .form-item"); // adds div for item background
     var commentedURL = $('div.widest').find('noscript').addClass('widestIMG').text().split(" ");
     var srcclean = commentedURL[2].match(/"(.*?)"/);
+
+
+    //begin embargo detection
+
+
+
+    $('.compoundSelect noscript').each(function() {
+      str = $(this).html();
+      if (str.indexOf("embargo") >= 0){
+        $(this).parent().parent().addClass("embargoed");
+        $("body").addClass("containsEmbargo");
+      }
+    });
+
+
+      if ($('.ip-embargo-details').length){
+        $('body').addClass('activeEmbargo');
+      }
+
+
+
+      if (($('.ip-embargo-details').length) && (!$('.object-title').length)){
+        $('body').addClass('objectHidden');
+      }
+
+$(".ip-embargo-details").insertBefore(".content > div.islandora").wrapAll("<div class='alertBox_container'/>").wrapAll("<div class='alertBox'/>");
+
+$("<span class='alertIcon'/>").insertBefore(".ip-embargo-details");
+    //end embargo detection
+
     //assign background image
     $('.backgroundDiv').css('background-image', 'url(' + srcclean[1] + ')');
     $(".compoundObject #block-system-main table").prop({class:"modsTable"}).appendTo(".region-sidebar-first-inner");
