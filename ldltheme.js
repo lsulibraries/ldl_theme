@@ -109,38 +109,42 @@ function moveMetadata(){  //begin metadata move
 
 
 function actionToggles(){ //begin toggle functions
-   $('.infoToggle').click(function(){
-         var infoToggle = $('.infoToggle');
-         $(infoToggle).toggleClass('menuActive');
-         $('#region-sidebar-first').toggleClass('infoOpened');
-         $('body').toggleClass('metaOpened');
-         $(".nano").nanoScroller({ alwaysVisible: false });
-   });
-   $("<div id='shareToggle' class='userSelect'><div class='iconSelect'></div><div class='textSelect'>share</div></div>").insertAfter(".infoToggle");
-   $("<div id='share'/>").insertAfter("#shareToggle");
-   $("#share").jsSocials({
-     url: urlhref,
-     text: title,
-     showLabel: false,
-     showCount: "inside",
-     shares: ["twitter", "facebook"]
-   });
-   $('#shareToggle').click(function(){
-     var shareToggle = $('#shareToggle');
-     $(shareToggle).toggleClass('activeMenu');
-     $('#share').toggleClass('shareActive');
-   });
-   downloadHeight = $('.downloadList_container').height();
-   $('.downloadSelect').click(function(){
-     $('.downloadList').toggleClass('extendList');
-     $('.downloadSelect').toggleClass('menuActive');
+  var shareToggle = $('#shareToggle');
+  var infoToggle = $('.infoToggle');
+ $(infoToggle).click(function(){
+   $(infoToggle).toggleClass('menuActive');
+   $('#region-sidebar-first').toggleClass('infoOpened');
+   $('body').toggleClass('metaOpened');
+   $(".nano").nanoScroller({ alwaysVisible: false });
+ });
+ $("<div id='shareToggle' class='userSelect'><div class='iconSelect'></div><div class='textSelect'>share</div></div>").insertAfter(".infoToggle");
+ $("<div id='share'/>").insertAfter("#shareToggle");
+ $("#share").jsSocials({
+   url: urlhref,
+   text: title,
+   showLabel: false,
+   showCount: "inside",
+   shares: ["twitter", "facebook"]
+ });
+ $('#shareToggle').click(function(){
+   $(shareToggle).toggleClass('activeMenu');
+   $('#share').toggleClass('shareActive');
+ });
+ downloadHeight = $('.downloadList_container').height();
+ $('.downloadSelect').click(function(){
+   $('.downloadList').toggleClass('extendList');
+   $('.downloadSelect').toggleClass('menuActive');
 
-   });
-     $('.downloadSelect').toggle(
-       function(){$('.newspaper_header').css({"padding-bottom": "70px"});},
-       function(){$('.newspaper_header').css({"padding-bottom": "inherit"});}
-     );
-    console.log('info toggle made');
+ });
+   $('.newspaperSet .downloadSelect').toggle(
+     function(){$('.newspaper_header').css({"padding-bottom": "70px"});},
+     function(){$('.newspaper_header').css({"padding-bottom": "inherit"});}
+   );
+  $('.largeImage .downloadSelect').toggle(
+    function(){$('.image_header').css({"padding-bottom": "70px"});},
+    function(){$('.image_header').css({"padding-bottom": "inherit"});}
+  );
+  console.log('info toggle made');
 } //end toggle funtions
 
 
@@ -1053,43 +1057,8 @@ if ( ($('.image-thumbnail').length) && ( !$('body').hasClass('audioPDF') ) ){
 moveMetadata();
     //end metadata move
 
+actionToggles();
 
-
-    $('.infoToggle').click(function(){
-          $(this).toggleClass('menuActive');
-          $('#region-sidebar-first').toggleClass('infoOpened');
-          $('body').toggleClass('metaOpened');
-          $(".nano").nanoScroller({ alwaysVisible: false });
-    });
-
-        $("<div id='shareToggle' class='userSelect'><div class='iconSelect'></div><div class='textSelect'>share</div></div>").insertAfter(".infoToggle");
-        $("<div id='share'/>").insertAfter("#shareToggle");
-
-
-        $("#share").jsSocials({
-          url: urlhref,
-          text: title,
-          showLabel: false,
-          showCount: "inside",
-          shares: ["twitter", "facebook"]
-        });
-
-        $('#shareToggle').click(function(){
-          $(this).toggleClass('activeMenu');
-          $('#share').toggleClass('shareActive');
-        });
-
-
-        downloadHeight = $('.downloadList_container').height();
-        $('.downloadSelect').click(function(){
-          $('.downloadList').toggleClass('extendList');
-          $('.downloadSelect').toggleClass('menuActive');
-
-        });
-          $('.downloadSelect').toggle(
-            function(){$('.image_header').css({"padding-bottom": "70px"});},
-            function(){$('.image_header').css({"padding-bottom": "inherit"});}
-          );
 
 
 
@@ -1755,96 +1724,19 @@ var currentInstitution =  $( "ul.breadcrumb a.active" ).text();
       $($div).prependTo("#grid-9");
 
 
-//var newHeight = $( document ).height();
-//$(".page-islandora-object .region-content-inner").height(newHeight);
-
       $('.collectionSearch input#edit-islandora-simple-search-query').each(function() {
 
       $(this).attr('placeholder', 'Search this collection' );
       });
-      //$('input[name="op"]').val("");
       $('#block-user-login input[name="op"]').val("Login");
-      //$('.page-user input[name="op"]:nth-child(1)').val("Login");
 
       $( " » " ).replaceWith( " / " );
 
-
-     // $("#edit-islandora-simple-search-query")
-     //   .focus(function() {
-     //         if (this.value === this.defaultValue) {
-     //             this.value = '';
-      //        }
-      //  })
-      //  .blur(function() {
-      //        if (this.value === '') {
-      //            this.value = this.defaultValue;
-       //       }
-     // });
 
     }
   }
 
 
-////begin smooth scroll anchor
-//
-//// Scroll to specific values
-//// scrollTo is the same
-//window.scroll({
-  //top: 2500,
-  //left: 0,
-  //behavior: 'smooth'
-//});
-//
-//// Scroll certain amounts from current position
-//window.scrollBy({
-  //top: 100, // could be negative value
-  //left: 0,
-  //behavior: 'smooth'
-//});
-//
-//// Scroll to a certain element
-//document.querySelector('.hello').scrollIntoView({
-  //behavior: 'smooth'
-//});
-//
-//// Select all links with hashes
-//$('a[href*="#"]')
-  //// Remove links that don't actually link to anything
-  //.not('[href="#"]')
-  //.not('[href="#0"]')
-  //.click(function(event) {
-    //// On-page links
-    //if (
-      //location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
-      //&&
-      //location.hostname == this.hostname
-    //) {
-      //// Figure out element to scroll to
-      //var target = $(this.hash);
-      //target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-      //// Does a scroll target exist?
-      //if (target.length) {
-        //// Only prevent default if animation is actually gonna happen
-        //event.preventDefault();
-        //$('html, body').animate({
-          //scrollTop: target.offset().top
-        //}, 1000, function() {
-          //// Callback after animation
-          //// Must change focus!
-          //var $target = $(target);
-          //$target.focus();
-          //if ($target.is(":focus")) { // Checking if the target was focused
-            //return false;
-          //} else {
-            //$target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-            //$target.focus(); // Set focus again
-          //};
-        //});
-      //}
-    //}
-  //});
-
-//end scroll
 
 
 }
