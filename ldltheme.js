@@ -76,6 +76,75 @@ window.FontAwesomeCdnConfig = {
 
       window.sr = ScrollReveal();
 
+//begin file
+function testFunction(){
+  console.log('hello this is test function');
+}
+
+function actionToggles(){ //begin toggle functions
+   $('.infoToggle').click(function(){
+         var infoToggle = $('.infoToggle');
+         $(infoToggle).toggleClass('menuActive');
+         $('#region-sidebar-first').toggleClass('infoOpened');
+         $('body').toggleClass('metaOpened');
+         $(".nano").nanoScroller({ alwaysVisible: false });
+   });
+   $("<div id='shareToggle' class='userSelect'><div class='iconSelect'></div><div class='textSelect'>share</div></div>").insertAfter(".infoToggle");
+   $("<div id='share'/>").insertAfter("#shareToggle");
+   $("#share").jsSocials({
+     url: urlhref,
+     text: title,
+     showLabel: false,
+     showCount: "inside",
+     shares: ["twitter", "facebook"]
+   });
+   $('#shareToggle').click(function(){
+     var shareToggle = $('#shareToggle');
+     $(shareToggle).toggleClass('activeMenu');
+     $('#share').toggleClass('shareActive');
+   });
+   downloadHeight = $('.downloadList_container').height();
+   $('.downloadSelect').click(function(){
+     $('.downloadList').toggleClass('extendList');
+     $('.downloadSelect').toggleClass('menuActive');
+
+   });
+     $('.downloadSelect').toggle(
+       function(){$('.newspaper_header').css({"padding-bottom": "70px"});},
+       function(){$('.newspaper_header').css({"padding-bottom": "inherit"});}
+     );
+    console.log('info toggle made');
+} //end toggle funtions
+
+
+
+
+function moveMetadata(){  //begin metadata move
+  $('table').each(function (){
+      $(this).replaceWith( $(this).html()
+          .replace(/<tbody/gi, "<div class='metadataContainer'")
+          .replace(/<tr/gi, "<div class='metadataRow'")
+          .replace(/<\/tr>/gi, "</div>")
+          .replace(/<td/gi, "<span")
+          .replace(/<\/td>/gi, "</span>")
+          .replace(/<\/tbody/gi, "<\/div")
+      );
+  });
+  $('.region-sidebar-first-inner').wrapAll('<div class="metadataSidebar"/>');
+  $(".islandora-book-metadata > .metadataContainer").appendTo(".region-sidebar-first-inner");
+  $("#region-sidebar-first").addClass('nano');
+  $(".nano > .region-inner").appendTo('#side');
+  $('#sideMods, .nano > .region-inner').wrapAll('<div class="metadataSidebar"/>');
+  $(".metadataSidebar").addClass('nano-content'); //adds nanobar
+  $(".metadataRow span:first-child").addClass("metadataTitle");//adds styles to metadata divs
+  $(".metadataRow span:nth-child(2n)").addClass("metadataValue");//adds styles to metadata divs
+  $(".metadataContainer div:first-child").remove();  //removes weird h3 MODS titles
+}   //end metadata move
+
+
+
+
+
 
 
 $(window).on("load", function() {
@@ -704,6 +773,9 @@ if ( ($('.islandora-newspaper-object').length) && ( !$('body').hasClass('audioPD
   // end newspaper container
 
 
+
+testFunction();
+
   //begin metadata move
     $('table').each(function (){
         $(this).replaceWith( $(this).html()
@@ -729,37 +801,7 @@ if ( ($('.islandora-newspaper-object').length) && ( !$('body').hasClass('audioPD
   //end metadata move
 
 
-  //begin toggle functions
-    $('.infoToggle').click(function(){
-          $(this).toggleClass('menuActive');
-          $('#region-sidebar-first').toggleClass('infoOpened');
-          $('body').toggleClass('metaOpened');
-          $(".nano").nanoScroller({ alwaysVisible: false });
-    });
-    $("<div id='shareToggle' class='userSelect'><div class='iconSelect'></div><div class='textSelect'>share</div></div>").insertAfter(".infoToggle");
-    $("<div id='share'/>").insertAfter("#shareToggle");
-    $("#share").jsSocials({
-      url: urlhref,
-      text: title,
-      showLabel: false,
-      showCount: "inside",
-      shares: ["twitter", "facebook"]
-    });
-    $('#shareToggle').click(function(){
-      $(this).toggleClass('activeMenu');
-      $('#share').toggleClass('shareActive');
-    });
-    downloadHeight = $('.downloadList_container').height();
-    $('.downloadSelect').click(function(){
-      $('.downloadList').toggleClass('extendList');
-      $('.downloadSelect').toggleClass('menuActive');
-
-    });
-      $('.downloadSelect').toggle(
-        function(){$('.newspaper_header').css({"padding-bottom": "70px"});},
-        function(){$('.newspaper_header').css({"padding-bottom": "inherit"});}
-      );
-  //end toggle funtions
+   actionToggles();// insert toggle function
 
 
     $(".metadataSidebar .modsDesc").clone().appendTo(".newspaper-thumbnailData");
