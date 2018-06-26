@@ -120,25 +120,27 @@ function actionToggles(){ //begin toggle functions
 
 
 function moveMetadata(){  //begin metadata move
-  $('table').each(function (){
-      $(this).replaceWith( $(this).html()
-          .replace(/<tbody/gi, "<div class='metadataContainer'")
-          .replace(/<tr/gi, "<div class='metadataRow'")
-          .replace(/<\/tr>/gi, "</div>")
-          .replace(/<td/gi, "<span")
-          .replace(/<\/td>/gi, "</span>")
-          .replace(/<\/tbody/gi, "<\/div")
-      );
-  });
-  $('.region-sidebar-first-inner').wrapAll('<div class="metadataSidebar"/>');
-  $(".islandora-book-metadata > .metadataContainer").appendTo(".region-sidebar-first-inner");
-  $("#region-sidebar-first").addClass('nano');
-  $(".nano > .region-inner").appendTo('#side');
-  $('#sideMods, .nano > .region-inner').wrapAll('<div class="metadataSidebar"/>');
-  $(".metadataSidebar").addClass('nano-content'); //adds nanobar
-  $(".metadataRow span:first-child").addClass("metadataTitle");//adds styles to metadata divs
-  $(".metadataRow span:nth-child(2n)").addClass("metadataValue");//adds styles to metadata divs
-  $(".metadataContainer div:first-child").remove();  //removes weird h3 MODS titles
+    $('table').each(function (){
+        var table = $('table');
+        $(table).replaceWith( $(table).html()
+            .replace(/<tbody/gi, "<div class='metadataContainer'")
+            .replace(/<tr/gi, "<div class='metadataRow'")
+            .replace(/<\/tr>/gi, "</div>")
+            .replace(/<td/gi, "<span")
+            .replace(/<\/td>/gi, "</span>")
+            .replace(/<\/tbody/gi, "<\/div")
+        );
+    });
+    $(".islandora-newspaper-metadata > .metadataContainer").appendTo(".region-sidebar-first-inner");
+    $("#region-sidebar-first").addClass('nano');
+    $(".nano > .region-inner").appendTo('#side');
+    $('#sideMods, .nano > .region-inner').wrapAll('<div class="metadataSidebar"/>');
+    $(".metadataSidebar").addClass('nano-content'); //adds nanobar
+    $(".metadataRow span:first-child").addClass("metadataTitle");//adds styles to metadata divs
+    $(".metadataRow span:nth-child(2n)").addClass("metadataValue");//adds styles to metadata divs
+    $(".metadataContainer div:first-child").remove();  //removes weird h3 MODS titles
+    $("#sideMods").appendTo(".region-sidebar-first-inner");
+    $("#sideMods").addClass("metadataContainer");
 }   //end metadata move
 
 
@@ -777,29 +779,11 @@ if ( ($('.islandora-newspaper-object').length) && ( !$('body').hasClass('audioPD
 testFunction();
 
   //begin metadata move
-    $('table').each(function (){
-        $(this).replaceWith( $(this).html()
-            .replace(/<tbody/gi, "<div class='metadataContainer'")
-            .replace(/<tr/gi, "<div class='metadataRow'")
-            .replace(/<\/tr>/gi, "</div>")
-            .replace(/<td/gi, "<span")
-            .replace(/<\/td>/gi, "</span>")
-            .replace(/<\/tbody/gi, "<\/div")
-        );
-    });
-    $(".islandora-newspaper-metadata > .metadataContainer").appendTo(".region-sidebar-first-inner");
-    $("#region-sidebar-first").addClass('nano');
-    $(".nano > .region-inner").appendTo('#side');
-    $('#sideMods, .nano > .region-inner').wrapAll('<div class="metadataSidebar"/>');
-    $(".metadataSidebar").addClass('nano-content'); //adds nanobar
-    $(".metadataRow span:first-child").addClass("metadataTitle");//adds styles to metadata divs
-    $(".metadataRow span:nth-child(2n)").addClass("metadataValue");//adds styles to metadata divs
-    $(".metadataContainer div:first-child").remove();  //removes weird h3 MODS titles
-    $("#sideMods").appendTo(".region-sidebar-first-inner");
-    $("#sideMods").addClass("metadataContainer");
-    $(".islandora-newspaper-metadata").remove();
+
   //end metadata move
 
+   moveMetadata();
+       $(".islandora-newspaper-metadata").remove();
 
    actionToggles();// insert toggle function
 
