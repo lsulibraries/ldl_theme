@@ -68,7 +68,7 @@ $(window).on("load", function() {
 switch (true) { //detect page type or content type
   case (($('.image-thumbnail').length) && (!$('body').hasClass('audioPDF'))) :{
     $('body').addClass('largeImage');
-    itemTitle = $(".modsTitle").html(); // finds full title for book
+    itemTitle = $(".modsTitle").html(); // finds full title without truncation
     thumbnailURL = $(".image-thumbnail img").prop('src');
     itemHeader();
     typeClass('image');
@@ -77,6 +77,18 @@ switch (true) { //detect page type or content type
     actionToggles();
     itemFooter();
     imageModal();
+  }
+  case (($('#book-viewer').length) && (!$('body').hasClass('audioPDF')) && (!$('.islandora-newspaper-issue').length)) :{
+    $('body').addClass('bookViewer');
+    itemTitle = $(".modsTitle").html(); // finds full title without truncation
+    thumbnailURL = $(".book-thumbnail img").prop('src');
+    bookStarter();
+    itemHeader();
+    typeClass('book');
+    moveMetadata();
+    bookContainer();
+    actionToggles();
+    bookFooter();
   }
 } //end page detection
 
@@ -94,6 +106,7 @@ function testFunction(){
 
 function itemHeader(){
   $("<div class='item_header'/>").insertBefore(".islandora-large-image-object"); //creates header for image items
+  $("<div class='item_header'/>").insertBefore(".bookContainer"); //creates header for book items
   $("<div class='backgroundDiv'/>").appendTo(".item_header"); //creates header for book items
   $('.backgroundDiv').css('background-image', 'url(' + thumbnailURL + ')');
   $("<div class='item_headerMenu'/>").appendTo(".item_header"); //creates header for book items
@@ -138,6 +151,75 @@ function itemFooter(){
   $("<i class='fa fa-photo' aria-hidden='true'></i>").appendTo(".imageLabel");
 }
 
+function bookContainer(){
+
+  $('.itemTitle').attr("id", "bookTitle");
+  $("<div class='labelContainer descContainer'/>").insertAfter(".bookContainer"); //adds label break
+  $("<div class='contentLabel bookLabel'>Book Object</div>").appendTo(".labelContainer"); //adds label break
+
+  $("<div class='contentLabel bookDesc'>tags</div>").appendTo(".descContainer"); //adds label break
+  $("<div class='descriptionText'/>").insertAfter(".bookDesc"); //adds label break
+  $("#book-viewer div div ul li a").clone().prop({class:"backContainer"}).insertAfter(".descContainer").html("<div class='backCollection'>Back to Collection</div>");
+  $("<div class='bookPreviewContainer'/>").insertAfter(".itemLabel"); //adds label break
+  $("<div class='bookPreview'/>").appendTo(".bookPreviewContainer"); //adds label break
+  $(".book-thumbnail").appendTo(".bookPreview");
+  $("<div class='book-thumbnailData'/>").appendTo(".bookPreviewContainer");
+  //$("#bookTitle").clone().attr("id", "bookTitle2").appendTo(".book-thumbnailData"); // undoes default title truncation
+  $("#pageCount").attr("id", "pageCount2").appendTo(".book-thumbnailData"); // undoes default title truncation
+  //$("<div class='pageImages'>Browse Pages as Images</div>").appendTo("#pageCount2"); // undoes default title truncation
+  $(".metadataSidebar .modsDesc").clone().appendTo(".book-thumbnailData");
+  $('a[href*="pages"]').each(function() {
+  $(this).addClass("pageImages").text("Browse Pages as Images").appendTo("#pageCount2");
+  });
+  $("div.bookContainer").insertBefore("div.mobileMenu");
+  $(".islandora-book-metadata").remove();
+  $("<div class='bookMenu'/>").appendTo(".bookPreview"); //adds label break
+  //$("#bookTitle").clone().attr("id", "bookmenuTitle").appendTo(".bookMenu"); // undoes default title truncation
+  $("<div class='chooseMenu'/>").appendTo(".bookMenu"); //adds label break
+  $("<div class='chooseBook chooseViewer'><div class='chooseIcon'><i class='fas fa-book'></i></div><div class='chooseText'>Open Book Viewer</div></div>").appendTo(".chooseMenu"); //adds label break
+}
+
+function bookFooter(){
+  $(".metadataSidebar .modsSubject a").clone().appendTo(".descContainer .descriptionText").addClass("modsSubject").wrapAll('<div class="tagsGlance"/>');
+  $(".metadataSidebar").clone().prop({ class: "metadataVertical"}).appendTo('.content .descContainer .descriptionText');
+  $("button .BRicon").css("background-image", "url(https://i.imgur.com/cQTyYRT.png)");
+  $("button.BRicon.full_text.cboxElement").html("<i class='fa fa-align-left'></i> VIEW TEXT ONLY");
+  $("<div class='booksearchToggle'/>").insertBefore("#textSrch");
+  $("form#booksearch .booksearchToggle").html("<i class='fa fa-search'></i>Search");
+  $("form#booksearch button").html("GO");
+  $("<div class='viewerTitle'/>").insertBefore("#BRtoolbar");
+  $(".viewerTitle").text(bookTitle);
+      $("<span class='bookDetails'><i class='fa fa-toggle-off'></i>Toggle Details</span>").insertAfter("#btnSrch");
+  $(".booksearchToggle").click(function(){
+              $('#textSrch').toggleClass('active');
+              $('#btnSrch').toggleClass('active');
+              $('.bookDetails').toggleClass('active');
+  });
+      $("<div class='bookSidebar'><div class='bookMetaContainer'></div></div>").appendTo("#BookReader"); //sets double-bagged container
+      $("#region-sidebar-first > .metadataSidebar > .region-inner >  .metadataContainer ").clone().prop({id:"bookMeta"}).appendTo(".bookMetaContainer"); //fills container
+          $(".bookMetaContainer").addClass("nano-content");
+      $(".bookSidebar").addClass("nano");
+      //begins book in-viwer metadata toggle function
+      $('.bookDetails').toggle(function() {
+          $('.bookDetails').html('<i class="fa fa-toggle-on"></i>Toggle Details');
+      }, function() {
+          $('.bookDetails').html('<i class="fa fa-toggle-off"></i>Toggle Details');
+      });
+      $('.bookDetails').click(function(){
+                $('.bookMetaContainer').toggleClass('active');
+                              $(".nano").nanoScroller({ alwaysVisible: false });
+                $('.detailsContainer').toggleClass('detailsContainerActive');
+      });
+      if ($(window).width() < 900) {
+            $('.onepg').trigger('click').once();
+            $('.booksearchToggle').trigger('click').once();
+            $('#textSrch').attr("placeholder", "Search" );
+              $('#btnSrch').toggleClass('active');
+              $('.bookDetails').toggleClass('active');
+              $('.bookDetails').toggleClass('active');
+            }
+}
+
 function moveMetadata(){  //begin metadata move
   var table = $('table');
   $(table).each(function (){
@@ -163,6 +245,21 @@ function moveMetadata(){  //begin metadata move
   $("#sideMods").appendTo(".region-sidebar-first-inner");
   $("#sideMods").addClass("metadataContainer");
 }   //end metadata move
+
+function bookStarter(){
+      $("body").addClass('bookViewer');
+      $("<span class='modalExit4'><i class='fa fa-times'></i> Exit</span>").insertBefore("body.bookViewer #BookReader");
+      bookTitle = $(".modsTitle").html(); // finds full title for book
+      $("#BRreturn a").text(bookTitle); // undoes default title truncation
+      $("#book-viewer").wrapAll("<div class='bookContainer'/>"); // adds container to bookViewer
+      if (navigator.userAgent.indexOf('MSIE') !== -1 || navigator.appVersion.indexOf('Trident/') > 0) {
+      var resizeEvent = window.document.createEvent('UIEvents');
+      resizeEvent .initUIEvent('resize', true, false, window, 0);
+      window.dispatchEvent(resizeEvent);
+      } else {
+         window.dispatchEvent(new Event('resize'));
+      }// triggers resize for #book-viewer to adjust to new container size Even Internet explorer 11 does not support resize event. Therefore, I have resolved this by using following solution.
+}
 
 function actionToggles(){ // begin toggle functions
   var shareToggle = $('#shareToggle');
@@ -509,134 +606,7 @@ if ($('body').hasClass('compoundChild')){
     $( ".breadcrumbDivider" ).insertAfter( ".institutionSmall" );
   }
   //end compoundChild
-// Begin book viewer
-   if ( ($('#book-viewer').length) && ( !$('body').hasClass('audioPDF') ) && ( !$('.islandora-newspaper-issue').length ) ){
-    $("body").addClass('bookViewer');
-    $("<span class='modalExit4'><i class='fa fa-times'></i> Exit</span>").insertBefore("body.bookViewer #BookReader");
-    bookTitle = $(".modsTitle").html(); // finds full title for book
-    $("#BRreturn a").text(bookTitle); // undoes default title truncation
-    $("#book-viewer").wrapAll("<div class='bookContainer'/>"); // adds container to bookViewer
-if (navigator.userAgent.indexOf('MSIE') !== -1 || navigator.appVersion.indexOf('Trident/') > 0) {
-var resizeEvent = window.document.createEvent('UIEvents');
-resizeEvent .initUIEvent('resize', true, false, window, 0);
-window.dispatchEvent(resizeEvent);
-    } else {
-       window.dispatchEvent(new Event('resize'));
-    }// triggers resize for #book-viewer to adjust to new container size Even Internet explorer 11 does not support resize event. Therefore, I have resolved this by using following solution.
-    $("<div class='book_header'/>").insertBefore(".bookContainer"); //creates header for book items
-    $("<div class='backgroundDiv'/>").appendTo(".book_header"); //creates header for book items
-    thumbnailURL = $(".book-thumbnail img").prop('src');
-    $('.backgroundDiv').css('background-image', 'url(' + thumbnailURL + ')');
-    $("<div class='book_headerMenu'/>").appendTo(".book_header"); //creates header for book items
-    $("#BRreturn a").clone().attr("id", "bookTitle").appendTo(".book_headerMenu"); // undoes default title truncation
-    $("#BRreturn a").remove(); // undoes default title truncation
-    $("<div class='labelContainer'/>").insertBefore(".bookContainer"); //adds label break
-    $("<div class='contentLabel bookLabel'>Book Object</div>").appendTo(".labelContainer"); //adds label break
-    $("#pageCount").appendTo(".bookLabel"); // moves count
-    $("<div class='headerBreadcrumb'/>").appendTo(".book_headerMenu"); //temporarily moves count
-    var institutionText = $(".depth-2 > a").clone(); //creates href path from breadcrumb depth-2
-    var institutionHome = $(".depth-2 > a").attr('href'); //creates href path from breadcrumb depth-2
-    var collectionText = $(".depth-3 > a").clone(); //creates href path from breadcrumb depth-2
-    var collectionHome = $(".depth-3 > a").attr('href'); //creates href path from breadcrumb depth-2
-    $(institutionText).addClass("institutionSmall").appendTo(".headerBreadcrumb"); //creates institution breadcrumb
-    $( " <span class='breadcrumbDivider'>/</span>" ).insertAfter( ".institutionSmall" ); //needs to be separated from the a href
-    $(collectionText).addClass("institutionSmall").insertAfter(".breadcrumbDivider"); //creates collection breadcrumb
-    $("<div class='userMenu'/>").appendTo(".book_headerMenu"); //temporarily moves count
-    $("<div class='infoToggle userSelect'><div class='iconSelect'></div><div class='textSelect'>details</div></div>").appendTo(".userMenu"); //adds toggle for parent metadata
-    $("#block-system-main > div.tabs > ul.tabs").appendTo(".userMenu").wrapAll('<div class="manageMenu"/>'); //moves the view/ip embargo/manage menu
-    $("#block-system-main > .tabs").remove(); // temporarily removes tabs until menu is set
-    moveMetadata();
-    $("<div class='labelContainer descContainer'/>").insertAfter(".bookContainer"); //adds label break
-    $("<div class='contentLabel bookDesc'>tags</div>").appendTo(".descContainer"); //adds label break
-    $("<div class='descriptionText'/>").insertAfter(".bookDesc"); //adds label break
-    $("#book-viewer div div ul li a").clone().prop({class:"backContainer"}).insertAfter(".descContainer").html("<div class='backCollection'>Back to Collection</div>");
-    $("<div class='bookPreviewContainer'/>").insertAfter(".bookLabel"); //adds label break
-    $("<div class='bookPreview'/>").appendTo(".bookPreviewContainer"); //adds label break
-    $(".book-thumbnail").appendTo(".bookPreview");
-    $("<div class='book-thumbnailData'/>").appendTo(".bookPreviewContainer");
-    //$("#bookTitle").clone().attr("id", "bookTitle2").appendTo(".book-thumbnailData"); // undoes default title truncation
-    $("#pageCount").attr("id", "pageCount2").appendTo(".book-thumbnailData"); // undoes default title truncation
-    //$("<div class='pageImages'>Browse Pages as Images</div>").appendTo("#pageCount2"); // undoes default title truncation
-    $(".metadataSidebar .modsDesc").clone().appendTo(".book-thumbnailData");
-$('a[href*="pages"]').each(function() {
-    $(this).addClass("pageImages").text("Browse Pages as Images").appendTo("#pageCount2");
-});
-    //use bookbox
-    $("div.bookContainer").insertBefore("div.mobileMenu");
-    $(".islandora-book-metadata").remove();
-    //end bookbox
-    $("<div class='bookMenu'/>").appendTo(".bookPreview"); //adds label break
-    //$("#bookTitle").clone().attr("id", "bookmenuTitle").appendTo(".bookMenu"); // undoes default title truncation
-    $("<div class='chooseMenu'/>").appendTo(".bookMenu"); //adds label break
-    $("<div class='chooseBook chooseViewer'><div class='chooseIcon'><i class='fas fa-book'></i></div><div class='chooseText'>Open Book Viewer</div></div>").appendTo(".chooseMenu"); //adds label break
-    $('.infoToggle').click(function(){
-          $(this).toggleClass('menuActive');
-          $('#region-sidebar-first').toggleClass('infoOpened');
-          $('body').toggleClass('metaOpened');
-          $(".nano").nanoScroller({ alwaysVisible: false });
-    });
-        $("<div id='shareToggle' class='userSelect'><div class='iconSelect'></div><div class='textSelect'>share</div></div>").insertAfter(".infoToggle");
-        $("<div id='share'/>").insertAfter("#shareToggle");
-        $("#share").jsSocials({
-          url: urlhref,
-          text: title,
-          showLabel: false,
-          showCount: "inside",
-          shares: ["twitter", "facebook"]
-        });
-        $('#shareToggle').click(function(){
-          $(this).toggleClass('activeMenu');
-          $('#share').toggleClass('shareActive');
-        });
-$(".metadataSidebar .modsSubject a").clone().appendTo(".descContainer .descriptionText").addClass("modsSubject").wrapAll('<div class="tagsGlance"/>');
-$(".metadataSidebar").clone().prop({ class: "metadataVertical"}).appendTo('.content .descContainer .descriptionText');
-$("button .BRicon").css("background-image", "url(https://i.imgur.com/cQTyYRT.png)");
-$("button.BRicon.full_text.cboxElement").html("<i class='fa fa-align-left'></i> VIEW TEXT ONLY");
-$("<div class='booksearchToggle'/>").insertBefore("#textSrch");
-$("form#booksearch .booksearchToggle").html("<i class='fa fa-search'></i>Search");
-$("form#booksearch button").html("GO");
-$("<div class='viewerTitle'/>").insertBefore("#BRtoolbar");
-$(".viewerTitle").text(bookTitle);
-    $("<span class='bookDetails'><i class='fa fa-toggle-off'></i>Toggle Details</span>").insertAfter("#btnSrch");
-$(".booksearchToggle").click(function(){
-            $('#textSrch').toggleClass('active');
-            $('#btnSrch').toggleClass('active');
-            $('.bookDetails').toggleClass('active');
-});
-    $("<div class='bookSidebar'><div class='bookMetaContainer'></div></div>").appendTo("#BookReader"); //sets double-bagged container
-    $("#region-sidebar-first > .metadataSidebar > .region-inner >  .metadataContainer ").clone().prop({id:"bookMeta"}).appendTo(".bookMetaContainer"); //fills container
-        $(".bookMetaContainer").addClass("nano-content");
-    $(".bookSidebar").addClass("nano");
-    //begins book in-viwer metadata toggle function
-    $('.bookDetails').toggle(function() {
-        $('.bookDetails').html('<i class="fa fa-toggle-on"></i>Toggle Details');
-    }, function() {
-        $('.bookDetails').html('<i class="fa fa-toggle-off"></i>Toggle Details');
-    });
-    $('.bookDetails').click(function(){
-              $('.bookMetaContainer').toggleClass('active');
-                            $(".nano").nanoScroller({ alwaysVisible: false });
-              $('.detailsContainer').toggleClass('detailsContainerActive');
-    });
-    if ($(window).width() < 900) {
-          $('.onepg').trigger('click').once();
-          $('.booksearchToggle').trigger('click').once();
-          $('#textSrch').attr("placeholder", "Search" );
-            $('#btnSrch').toggleClass('active');
-            $('.bookDetails').toggleClass('active');
-            $('.bookDetails').toggleClass('active');
-          }
-    //ends book in-viwer metadata toggle function
-//begin OCR detection - does not work, timeout is not dependable
- // $(".full_text").trigger( "click" );
-//setTimeout(function() {
- // if ( ($('div.textLeft').html() == '') && ( $('div.textRight').html() == '' ) ){
- // $('body').addClass('noOCR');
-  //$(".floatShut").trigger( "click" );
- // }
-//}, 1);
-//end OCR detection
-} // end book viewer
+
 // begin newspaper 2.0
 if ( ($('.islandora-newspaper-object').length) && ( !$('body').hasClass('audioPDF') ) ){
   $('body').addClass('newspaperSet'); // newspaper body class
