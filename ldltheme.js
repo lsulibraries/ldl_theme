@@ -77,6 +77,7 @@ switch (true) { //detect page type or content type
     actionToggles();
     itemFooter();
     imageModal();
+    break;
   }
   case (($('#book-viewer').length) && (!$('body').hasClass('audioPDF')) && (!$('.islandora-newspaper-issue').length)) :{
     $('body').addClass('bookViewer');
@@ -89,6 +90,8 @@ switch (true) { //detect page type or content type
     bookContainer();
     actionToggles();
     bookFooter();
+    break;
+
   }
 } //end page detection
 
@@ -152,7 +155,6 @@ function itemFooter(){
 }
 
 function bookContainer(){
-
   $('.itemTitle').attr("id", "bookTitle");
   $("<div class='labelContainer descContainer'/>").insertAfter(".bookContainer"); //adds label break
   $("<div class='contentLabel itemLabel bookLabel'>Book Object</div>").appendTo(".labelContainer"); //adds label break
@@ -189,35 +191,35 @@ function bookFooter(){
   $("form#booksearch button").html("GO");
   $("<div class='viewerTitle'/>").insertBefore("#BRtoolbar");
   $(".viewerTitle").text(bookTitle);
-      $("<span class='bookDetails'><i class='fa fa-toggle-off'></i>Toggle Details</span>").insertAfter("#btnSrch");
+  $("<span class='bookDetails'><i class='fa fa-toggle-off'></i>Toggle Details</span>").insertAfter("#btnSrch");
   $(".booksearchToggle").click(function(){
-              $('#textSrch').toggleClass('active');
-              $('#btnSrch').toggleClass('active');
-              $('.bookDetails').toggleClass('active');
+    $('#textSrch').toggleClass('active');
+    $('#btnSrch').toggleClass('active');
+    $('.bookDetails').toggleClass('active');
   });
-      $("<div class='bookSidebar'><div class='bookMetaContainer'></div></div>").appendTo("#BookReader"); //sets double-bagged container
-      $("#region-sidebar-first > .metadataSidebar > .region-inner >  .metadataContainer ").clone().prop({id:"bookMeta"}).appendTo(".bookMetaContainer"); //fills container
-          $(".bookMetaContainer").addClass("nano-content");
-      $(".bookSidebar").addClass("nano");
-      //begins book in-viwer metadata toggle function
-      $('.bookDetails').toggle(function() {
-          $('.bookDetails').html('<i class="fa fa-toggle-on"></i>Toggle Details');
-      }, function() {
-          $('.bookDetails').html('<i class="fa fa-toggle-off"></i>Toggle Details');
-      });
-      $('.bookDetails').click(function(){
-                $('.bookMetaContainer').toggleClass('active');
-                              $(".nano").nanoScroller({ alwaysVisible: false });
-                $('.detailsContainer').toggleClass('detailsContainerActive');
-      });
-      if ($(window).width() < 900) {
-            $('.onepg').trigger('click').once();
-            $('.booksearchToggle').trigger('click').once();
-            $('#textSrch').attr("placeholder", "Search" );
-              $('#btnSrch').toggleClass('active');
-              $('.bookDetails').toggleClass('active');
-              $('.bookDetails').toggleClass('active');
-            }
+  $("<div class='bookSidebar'><div class='bookMetaContainer'></div></div>").appendTo("#BookReader"); //sets double-bagged container
+  $("#region-sidebar-first > .metadataSidebar > .region-inner >  .metadataContainer ").clone().prop({id:"bookMeta"}).appendTo(".bookMetaContainer"); //fills container
+    $(".bookMetaContainer").addClass("nano-content");
+  $(".bookSidebar").addClass("nano");
+  //begins book in-viwer metadata toggle function
+  $('.bookDetails').toggle(function() {
+    $('.bookDetails').html('<i class="fa fa-toggle-on"></i>Toggle Details');
+  }, function() {
+    $('.bookDetails').html('<i class="fa fa-toggle-off"></i>Toggle Details');
+  });
+  $('.bookDetails').click(function(){
+    $('.bookMetaContainer').toggleClass('active');
+      $(".nano").nanoScroller({ alwaysVisible: false });
+    $('.detailsContainer').toggleClass('detailsContainerActive');
+  });
+  if ($(window).width() < 900) {
+    $('.onepg').trigger('click').once();
+    $('.booksearchToggle').trigger('click').once();
+    $('#textSrch').attr("placeholder", "Search" );
+      $('#btnSrch').toggleClass('active');
+      $('.bookDetails').toggleClass('active');
+      $('.bookDetails').toggleClass('active');
+  }
 }
 
 function moveMetadata(){  //begin metadata move
