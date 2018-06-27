@@ -155,7 +155,7 @@ function bookContainer(){
 
   $('.itemTitle').attr("id", "bookTitle");
   $("<div class='labelContainer descContainer'/>").insertAfter(".bookContainer"); //adds label break
-  $("<div class='contentLabel bookLabel'>Book Object</div>").appendTo(".labelContainer"); //adds label break
+  $("<div class='contentLabel itemLabel bookLabel'>Book Object</div>").appendTo(".labelContainer"); //adds label break
 
   $("<div class='contentLabel bookDesc'>tags</div>").appendTo(".descContainer"); //adds label break
   $("<div class='descriptionText'/>").insertAfter(".bookDesc"); //adds label break
