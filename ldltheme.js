@@ -81,6 +81,32 @@ function itemHeader(){
     $("#block-system-main > .tabs").remove(); // temporarily removes tabs until menu is set
 }
 
+function itemContainer(){
+  $(".islandora-large-image-object").addClass("imageContainer"); //adds label break
+  $("<div class='labelContainer'/>").insertBefore(".imageContainer"); //adds label break
+  $("<div class='contentLabel imageLabel'>Image Object</div>").appendTo(".labelContainer"); //adds label break
+  $("<div class='imagePreview'/>").appendTo(".imageContainer"); //adds label break
+  $(".image-thumbnail").appendTo(".imagePreview");
+  $("<div class='image-thumbnailData'/>").insertAfter(".imagePreview");
+  $("<div class='imageMenu'/>").appendTo(".imagePreview"); //adds label break
+  //$("#bookTitle").clone().attr("id", "bookmenuTitle").appendTo(".bookMenu"); // undoes default title truncation
+  $("<div class='chooseMenu'/>").appendTo(".imageMenu"); //adds label break
+  $("<div class='chooseImage chooseViewer'><div class='chooseIcon'><i class='fa fa-photo'></i></div><div class='chooseText'>Open Image Viewer</div></div>").appendTo(".chooseMenu"); //adds label break
+  $(".downloadList").insertAfter(".image_headerMenu");
+}
+
+function itemFooter(){
+  $(".metadataSidebar .modsDesc").clone().appendTo(".image-thumbnailData");
+  $("<div class='labelContainer descContainer'/>").insertAfter(".imageContainer"); //adds label break
+  $("<div class='contentLabel bookDesc'>tags</div>").appendTo(".descContainer"); //adds label break
+  $("a.institutionSmall:last-child").clone().prop({class:"backContainer"}).insertAfter(".descContainer").html("<div class='backCollection'>Back to Collection</div>");
+  $("<div class='descriptionText'/>").insertAfter(".bookDesc"); //adds label break
+  $(".metadataSidebar .modsSubject a").clone().appendTo(".descContainer .descriptionText").addClass("modsSubject").wrapAll('<div class="tagsGlance"/>');
+  $(".metadataSidebar").clone().prop({ class: "metadataVertical"}).appendTo('.content .descContainer .descriptionText');
+  $(".downloadSelect").insertAfter(".infoToggle");
+  $("<i class='fa fa-photo' aria-hidden='true'></i>").appendTo(".imageLabel");
+}
+
 function moveMetadata(){  //begin metadata move
     var table = $('table');
     $(table).each(function (){
@@ -835,31 +861,12 @@ $.getScript('https://designmodo.com/demo/calendarjquerycss3/js/jquery-ui-datepic
 if ( ($('.image-thumbnail').length) && ( !$('body').hasClass('audioPDF') ) ){
       imageTitle = $(".modsTitle").html(); // finds full title for book
       thumbnailURL = $(".image-thumbnail img").prop('src');
-  itemHeader();
-  $(".islandora-large-image-object").addClass("imageContainer"); //adds label break
-  $("<div class='labelContainer'/>").insertBefore(".imageContainer"); //adds label break
-  $("<div class='contentLabel imageLabel'>Image Object</div>").appendTo(".labelContainer"); //adds label break
-    $("<div class='imagePreview'/>").appendTo(".imageContainer"); //adds label break
-    $(".image-thumbnail").appendTo(".imagePreview");
-    $("<div class='image-thumbnailData'/>").insertAfter(".imagePreview");
-    $("<div class='imageMenu'/>").appendTo(".imagePreview"); //adds label break
-    //$("#bookTitle").clone().attr("id", "bookmenuTitle").appendTo(".bookMenu"); // undoes default title truncation
-    $("<div class='chooseMenu'/>").appendTo(".imageMenu"); //adds label break
-    $("<div class='chooseImage chooseViewer'><div class='chooseIcon'><i class='fa fa-photo'></i></div><div class='chooseText'>Open Image Viewer</div></div>").appendTo(".chooseMenu"); //adds label break
-    $(".downloadList").insertAfter(".image_headerMenu");
-    //begin metadata move
-    moveMetadata();
-    actionToggles();
+      itemHeader();
+      itemContainer();
+      moveMetadata();
+      actionToggles();
+      itemFooter();
 
-    $(".metadataSidebar .modsDesc").clone().appendTo(".image-thumbnailData");
-    $("<div class='labelContainer descContainer'/>").insertAfter(".imageContainer"); //adds label break
-    $("<div class='contentLabel bookDesc'>tags</div>").appendTo(".descContainer"); //adds label break
-    $("a.institutionSmall:last-child").clone().prop({class:"backContainer"}).insertAfter(".descContainer").html("<div class='backCollection'>Back to Collection</div>");
-    $("<div class='descriptionText'/>").insertAfter(".bookDesc"); //adds label break
-$(".metadataSidebar .modsSubject a").clone().appendTo(".descContainer .descriptionText").addClass("modsSubject").wrapAll('<div class="tagsGlance"/>');
-$(".metadataSidebar").clone().prop({ class: "metadataVertical"}).appendTo('.content .descContainer .descriptionText');
-$(".downloadSelect").insertAfter(".infoToggle");
-     $("<i class='fa fa-photo' aria-hidden='true'></i>").appendTo(".imageLabel");
     //setup for modal
     $("#islandora-openseadragon > .openseadragon-container").addClass("dragonContainer");
     $("<span class='modalExit5'><i class='fa fa-times'></i> Exit</span>").insertBefore(".dragonContainer");
@@ -883,6 +890,10 @@ $(".downloadSelect").insertAfter(".infoToggle");
     //end modalSetup
 }
 //end largeImage 2.0
+
+
+
+
 if ( ($('body').hasClass('compoundObject')) || ($('body').hasClass('bookViewer')) || ($('body').hasClass('largeImage')) || ($('body').hasClass('newspaperSet'))){
 $('body').addClass('headerversiontwo');
 $('.manageMenu').insertBefore('#shareToggle');
