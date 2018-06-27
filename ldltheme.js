@@ -3,7 +3,9 @@
     attach: function (context, settings) {
       if ($('.mobileMenu').length){
     } else{
+      console.log('jquery fired once');
       $("<div class='mobileMenu'/>").insertBefore("div#page");
+
       switch (true) { //detect page type or content type
         case (($('.image-thumbnail').length) && (!$('body').hasClass('audioPDF'))) :{
           $('body').addClass('largeImage');
@@ -41,11 +43,8 @@
         $('.itemLabel').addClass( type + 'Label');
       }
 
-      function testFunction(){
-        console.log('hello this is test function');
-      }
-
       function itemHeader(){
+        $("#region-content div.tabs.clearfix").prependTo("#block-system-main");
         $("<div class='item_header'/>").insertBefore(".islandora-large-image-object"); //creates header for image items
         $("<div class='item_header'/>").insertBefore(".bookContainer"); //creates header for book items
         $("<div class='backgroundDiv'/>").appendTo(".item_header"); //creates header for book items
@@ -62,7 +61,7 @@
         $(collectionText).addClass("institutionSmall").insertAfter(".breadcrumbDivider"); //creates collection breadcrumb
         $("<div class='userMenu'/>").appendTo(".item_headerMenu"); //temporarily moves count
         $("<div class='infoToggle userSelect'><div class='iconSelect'></div><div class='textSelect'>details</div></div>").appendTo(".userMenu"); //adds toggle for parent metadata
-        $("#block-system-main > div.tabs > ul.tabs").appendTo(".userMenu").wrapAll('<div class="manageMenu"/>'); //moves the view/ip embargo/manage menu
+        $("div#block-system-main > div.tabs > ul.tabs").appendTo(".userMenu").wrapAll('<div class="manageMenu"/>'); //moves the view/ip embargo/manage menu
         $("div#block-system-main > div.tabs").remove(); // temporarily removes tabs until menu is set
       }
 
@@ -96,7 +95,6 @@
         $('.itemTitle').attr("id", "bookTitle");
         $("<div class='labelContainer descContainer'/>").insertAfter(".bookContainer"); //adds label break
         $("<div class='contentLabel itemLabel bookLabel'>Book Object</div>").appendTo(".labelContainer"); //adds label break
-
         $("<div class='contentLabel bookDesc'>tags</div>").appendTo(".descContainer"); //adds label break
         $("<div class='descriptionText'/>").insertAfter(".bookDesc"); //adds label break
         $("#book-viewer div div ul li a").clone().prop({class:"backContainer"}).insertAfter(".descContainer").html("<div class='backCollection'>Back to Collection</div>");
@@ -187,18 +185,20 @@
       }   //end metadata move
 
       function bookStarter(){
-            $("body").addClass('bookViewer');
-            $("<span class='modalExit4'><i class='fa fa-times'></i> Exit</span>").insertBefore("body.bookViewer #BookReader");
-            bookTitle = $(".modsTitle").html(); // finds full title for book
-            $("#BRreturn a").text(bookTitle); // undoes default title truncation
-            $("#book-viewer").wrapAll("<div class='bookContainer'/>"); // adds container to bookViewer
-            if (navigator.userAgent.indexOf('MSIE') !== -1 || navigator.appVersion.indexOf('Trident/') > 0) {
-            var resizeEvent = window.document.createEvent('UIEvents');
-            resizeEvent .initUIEvent('resize', true, false, window, 0);
-            window.dispatchEvent(resizeEvent);
-            } else {
-               window.dispatchEvent(new Event('resize'));
-            }// triggers resize for #book-viewer to adjust to new container size Even Internet explorer 11 does not support resize event. Therefore, I have resolved this by using following solution.
+        $("body").addClass('bookViewer');
+        $("<span class='modalExit4'><i class='fa fa-times'></i> Exit</span>").insertBefore("body.bookViewer #BookReader");
+        bookTitle = $(".modsTitle").html(); // finds full title for book
+        $("#BRreturn a").text(bookTitle); // undoes default title truncation
+        $("#book-viewer").wrapAll("<div class='bookContainer'/>"); // adds container to bookViewer
+        if (navigator.userAgent.indexOf('MSIE') !== -1 || navigator.appVersion.indexOf('Trident/') > 0) {
+        var resizeEvent = window.document.createEvent('UIEvents');
+        resizeEvent .initUIEvent('resize', true, false, window, 0);
+        window.dispatchEvent(resizeEvent);
+        } else {
+           window.dispatchEvent(new Event('resize'));
+        }// triggers resize for #book-viewer to adjust to new container size Even Internet explorer 11 does not support resize event. Therefore, I have resolved this by using following solution.
+
+                $("#BRreturn a").remove(); // undoes default title truncation
       }
 
       function actionToggles(){ // begin toggle functions
@@ -238,7 +238,6 @@
         );
         console.log('info toggle made');
       } // end toggle functions
-
 
       function imageModal(){
         $("#islandora-openseadragon > .openseadragon-container").addClass("dragonContainer");
@@ -350,7 +349,6 @@
             $(".islandora-pdf-metadata").appendTo(".islandora-pdf-content");
             $(".islandora-large-image-metadata").appendTo(".islandora-large-image-content");
             $("#islandora-solr-result-count").prop({ id: "header-result-count"}).appendTo("#breadcrumb");
-            $("#region-content div.tabs.clearfix").prependTo("#block-system-main");
             $(".bookmark").prependTo("#breadcrumb");
             if ($('#largeSearch').length){
             } else{
