@@ -33,6 +33,7 @@
           bookFooter();
           break;
         }
+
       } //end page detection
 
       //begin functions
@@ -197,8 +198,7 @@
         } else {
            window.dispatchEvent(new Event('resize'));
         }// triggers resize for #book-viewer to adjust to new container size Even Internet explorer 11 does not support resize event. Therefore, I have resolved this by using following solution.
-
-                $("#BRreturn a").remove(); // undoes default title truncation
+        ("#BRreturn a").remove(); // undoes default title truncation
       }
 
       function actionToggles(){ // begin toggle functions
@@ -275,10 +275,7 @@
           $(this).colourBrightness();//
         });
       });
-
       // end functions
-
-
 
       // begin namespace
       var title = document.getElementsByTagName("title")[0].innerHTML;
@@ -315,9 +312,6 @@
         }
       }
       //end namespace
-      $("#switchTheme").click(function() {
-        $("html").toggleClass("Dark");
-      });
       if ($(".video-js").length && $("#islandora-pdfjs").length) {
         $("body").addClass("audioPDF");
       } //detection for oral history
@@ -325,11 +319,12 @@
         $("body").addClass("collectionPageTest");
         $("body").addClass("collectionPage");
       } //allows collection Page styles
-          $("h1#page-title").clone().prop({ id: "oh-title", class: "ohtitle"}).prependTo(".islandora-audio-content");
-          $(".modsContributor a").clone().prop({ class: "ohcreator"}).insertAfter(".ohtitle");
-          $('a.ohcreator').wrapAll('<div class="creatorLinks"/>'); //wraps collectionPage title
-          $('<span> items</span>').appendTo('.institution-collection-list-item-count, .child-institution-count-items');
-          $('<span> collections</span>').appendTo('.child-institution-count-collections');
+
+            $("h1#page-title").clone().prop({ id: "oh-title", class: "ohtitle"}).prependTo(".islandora-audio-content");
+            $(".modsContributor a").clone().prop({ class: "ohcreator"}).insertAfter(".ohtitle");
+            $('a.ohcreator').wrapAll('<div class="creatorLinks"/>'); //wraps collectionPage title
+            $('<span> items</span>').appendTo('.institution-collection-list-item-count, .child-institution-count-items');
+            $('<span> collections</span>').appendTo('.child-institution-count-collections');
             $('.institution-collection-list-li').each(function() {
               $(this).children('.institution-collection-list-item-label').clone().prop({class: "title-description"}).prependTo($(this).children('.institution-collection-description'));
             });
@@ -390,10 +385,11 @@
             }//this length check avoids this from firing multiple times from using the + button on the advanced search
           if ($("body").hasClass("audioPDF")){
            $("#block-islandora-compound-object-compound-jail-display").appendTo("#sideMods");
-       }
+          }
           if ($("body").attr('class').indexOf('datastream') > -1) {
               $("body").addClass('datastreamPage');
           }
+
       //begin compoundObject
          if ( ($('.block-islandora-compound-object').length) && ( !$('body').hasClass('audioPDF') ) && ( !$('body').hasClass('datastreamPage') ) ) {
           $("#sideMods").remove();
@@ -562,7 +558,9 @@
         }
         //end compoundChild
 
-      // begin newspaper 2.0
+
+
+  // begin newspaper 2.0
       if ( ($('.islandora-newspaper-object').length) && ( !$('body').hasClass('audioPDF') ) ){
         $('body').addClass('newspaperSet'); // newspaper body class
         $("<div class='newspaper_header'/>").insertBefore(".islandora-newspaper-object"); //creates header for newspaper items
@@ -819,7 +817,6 @@
       //end datepicker
       }
       // end newspaper 2.0
-      // begin largeImage 2.0
 
       if ( ($('body').hasClass('compoundObject')) || ($('body').hasClass('bookViewer')) || ($('body').hasClass('largeImage')) || ($('body').hasClass('newspaperSet'))){
       $('body').addClass('headerversiontwo');
