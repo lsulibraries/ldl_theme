@@ -198,7 +198,7 @@
         } else {
            window.dispatchEvent(new Event('resize'));
         }// triggers resize for #book-viewer to adjust to new container size Even Internet explorer 11 does not support resize event. Therefore, I have resolved this by using following solution.
-        ("#BRreturn a").remove(); // undoes default title truncation
+        ("#BRreturn a").remove; // undoes default title truncation
       }
 
       function actionToggles(){ // begin toggle functions
@@ -320,14 +320,21 @@
         $("body").addClass("collectionPage");
       } //allows collection Page styles
 
+
+//oral history stuff
             $("h1#page-title").clone().prop({ id: "oh-title", class: "ohtitle"}).prependTo(".islandora-audio-content");
             $(".modsContributor a").clone().prop({ class: "ohcreator"}).insertAfter(".ohtitle");
             $('a.ohcreator').wrapAll('<div class="creatorLinks"/>'); //wraps collectionPage title
+//end oral history
+
+            //collection page numbers and description
             $('<span> items</span>').appendTo('.institution-collection-list-item-count, .child-institution-count-items');
             $('<span> collections</span>').appendTo('.child-institution-count-collections');
             $('.institution-collection-list-li').each(function() {
               $(this).children('.institution-collection-list-item-label').clone().prop({class: "title-description"}).prependTo($(this).children('.institution-collection-description'));
             });
+            //end colleciton page numbers and description
+
             $("div.institution-title").prependTo(".institution-about > p:first-child");
             $(".child-institution-collections").insertAfter(".institution-search");
             if($('.institution-collection-list-a').length < 4){
@@ -344,14 +351,15 @@
             $(".islandora-pdf-metadata").appendTo(".islandora-pdf-content");
             $(".islandora-large-image-metadata").appendTo(".islandora-large-image-content");
             $("#islandora-solr-result-count").prop({ id: "header-result-count"}).appendTo("#breadcrumb");
-            $(".bookmark").prependTo("#breadcrumb");
+
             if ($('#largeSearch').length){
             } else{
             $("#region-header-first #block-islandora-solr-simple").clone().prop({ id: "largeSearch", value:"Search LDL.."}).appendTo( $("#block-block-12 > .block-inner > div.content")).on;
             }//this length check avoids this from firing multiple times from using the + button on the advanced search
             //$("#block-block-1").clone().prop({ id: "landingAdvanced"}).appendTo("#largeSearch");
             $("#largeSearch #edit-simple--2").prop({ id: "largeSearch_form"});
-            $(".underHero").appendTo("#landingHero");
+                        $("#largeSearch #edit-simple--2 > .form-item > input").prop({ id: "largeSearch_form_input"});
+
             $(".footerImg").clone().prop({ id: "logoMobile"}).prependTo("#zone-header");
             $(".landingMessage").clone().prop({id: "landingMobile", class: "landingMessageMobile"}).appendTo("#zone-header");
             $("#sideMods tr:nth-child(0n+12) td:nth-child(0n+2)").clone().prop({ id: "abstract-temporary", class: "temp"}).appendTo(".islandora-pdf-content, .islandora-large-image-content");
