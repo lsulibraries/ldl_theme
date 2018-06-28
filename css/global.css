@@ -4598,6 +4598,8 @@ body.bookViewer #book-viewer #BRtoolbar {
   margin: 0px; }
   body.bookViewer #book-viewer #BRtoolbar .logo {
     display: none; }
+  body.bookViewer #book-viewer #BRtoolbar #BRreturn {
+    display: none; }
   body.bookViewer #book-viewer #BRtoolbar #BRreturn a {
     text-decoration: none;
     margin-left: 30px; }

@@ -31,6 +31,8 @@
           bookContainer();
           actionToggles();
           bookFooter();
+
+
           break;
         }
 
@@ -198,7 +200,6 @@
         } else {
            window.dispatchEvent(new Event('resize'));
         }// triggers resize for #book-viewer to adjust to new container size Even Internet explorer 11 does not support resize event. Therefore, I have resolved this by using following solution.
-        ("#BRreturn a").remove; // undoes default title truncation
       }
 
       function actionToggles(){ // begin toggle functions
@@ -873,6 +874,19 @@
           $('section#block-islandora-solr-advanced').css('padding-bottom',  paddingHeight);
           $('#block-block-14').css('padding-bottom',  paddingHeight2);
           $('#block-views-meeting-minutes-block-1').css('padding-bottom',  paddingHeight3);
+
+      function pageBlur(){
+          $(".page").addClass('blurFilter');
+          $(".parallax-slider").addClass('darkFilter');
+          $("#zone-content-wrapper").addClass('noClick');
+      }
+
+      function pageNoBlur(){
+          $(".page").removeClass('blurFilter');
+          $(".parallax-slider").removeClass('darkFilter');
+          $("#zone-content-wrapper").removeClass('noClick');
+      }
+
       // When the user clicks on the button, open the modal
       btn.onclick = function() {
               $.fn.menuisActive();
@@ -880,10 +894,8 @@
       // When the user clicks on <span> (x), close the modal
       span.onclick = function() {
           modal.style.display = "none";
-          $(".page").removeClass('blurFilter');
-          $(".parallax-slider").removeClass('darkFilter');
+          pageNoBlur();
           $("button").removeClass('is-active');
-          $("#zone-content-wrapper").removeClass('noClick');
             var uri = window.location.toString();
               if (uri.indexOf("#") > 0) {
                   var clean_uri = uri.substring(0, uri.indexOf("#"));
@@ -894,10 +906,8 @@
       window.onclick = function(event) {
           if (event.target == modal || event.target == page){
               modal.style.display = "none";
-              $(".page").removeClass('blurFilter');
-              $(".parallax-slider").removeClass('darkFilter');
+              pageNoBlur();
               $("button").removeClass('is-active');
-              $("#zone-content-wrapper").removeClass('noClick');
         var uri = window.location.toString();
         if (uri.indexOf("#") > 0) {
             var clean_uri = uri.substring(0, uri.indexOf("#"));
@@ -906,9 +916,7 @@
           }
           if (event.target == modal2 || event.target == page) {
               modal2.style.display = "none";
-              $(".page").removeClass('blurFilter');
-              $(".parallax-slider").removeClass('darkFilter');
-              $("#zone-content-wrapper").removeClass('noClick');
+                  pageNoBlur();
                   var uri = window.location.toString();
                   if (uri.indexOf("#") > 0) {
                       var clean_uri = uri.substring(0, uri.indexOf("#"));
@@ -917,9 +925,7 @@
           }
           if (event.target == modal3 || event.target == page) {
               modal3.style.display = "none";
-              $(".page").removeClass('blurFilter');
-              $(".parallax-slider").removeClass('darkFilter');
-              $("#zone-content-wrapper").removeClass('noClick');
+                  pageNoBlur();
                   var uri = window.location.toString();
                   if (uri.indexOf("#") > 0) {
                       var clean_uri = uri.substring(0, uri.indexOf("#"));
@@ -929,12 +935,11 @@
           if (event.target == modal4 || event.target == page) {
               modal4.style.display = "none";
               $(".page").removeClass('blurFilter');
-              $("#zone-content-wrapper").removeClass('noClick');
+              pageNoBlur();
           }
           if (event.target == modal5 || event.target == page) {
               modal5.style.display = "none";
-              $(".page").removeClass('blurFilter');
-              $("#zone-content-wrapper").removeClass('noClick');
+              pageNoBlur();
           }
       }
             $('div.form-type-checkbox input').click(function(){
@@ -951,20 +956,19 @@
       var span2 = document.getElementsByClassName("modalExit2")[0];
       var page = document.getElementById('page');
       // When the user clicks on the button, open the modal
+
+
+
       btn2.onclick = function() {
           modal2.style.display = "flex";
-          $(".page").addClass('blurFilter');
-          $(".parallax-slider").addClass('darkFilter');
+          pageBlur();
           $("html").removeClass('mobileMenuActive');
-          $("#zone-content-wrapper").addClass('noClick');
       }
       // When the user clicks on <span> (x), close the modal
       span2.onclick = function() {
           modal2.style.display = "none";
-          $(".page").removeClass('blurFilter');
-          $(".parallax-slider").removeClass('darkFilter');
+          pageNoBlur();
           $("button").removeClass('is-active');
-          $("#zone-content-wrapper").removeClass('noClick');
         var uri = window.location.toString();
         if (uri.indexOf("#") > 0) {
             var clean_uri = uri.substring(0, uri.indexOf("#"));
