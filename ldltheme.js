@@ -525,6 +525,8 @@
         $(".compoundParent #islandora-compound-next-link").remove();
         $(".manageMenu ul li:first-child").remove();
         $("#clip").remove();
+        $("div#region-sidebar-first div.tabs").remove(); // temporarily removes tabs until menu is set
+
       } //end compoundObject
 
       //begin compoundChild

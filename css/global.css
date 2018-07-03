@@ -3228,6 +3228,8 @@ div.islandora-pdf-object, div.islandora-large-image-object {
   transition-duration: 1s;
   transition-delay: 0.4s; }
 
+.compoundObject #region-content div.tabs.clearfix {
+  margin-top: 0px; }
 .compoundObject div.islandora-pdf-object, .compoundObject div.islandora-large-image-object {
   margin-left: 0px;
   margin-right: 0px; }
