@@ -30,6 +30,7 @@
   </div>  <!--needs a conditional to avoid compoundObject children -->
 <?php endif; ?>
 
+<?php if (count($downloads) > 0): ?>
 <div class="downloadSelect userSelect">
 <div class="downloadList">
   <div class="downloadList_container">
@@ -44,6 +45,7 @@
 </div>
 <div class="iconSelect"></div><div class="textSelect">Download</div>
 </div>
+<?php endif; ?>
 
 
 
