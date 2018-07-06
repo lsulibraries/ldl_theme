@@ -31,10 +31,19 @@
           bookContainer();
           actionToggles();
           bookFooter();
-
-
           break;
         }
+
+
+        case ( ($('.islandora-newspaper-object').length) && ( !$('body').hasClass('audioPDF') ) ) :{
+          $('body').addClass('newspaperSet');
+          itemTitle = $(".modsTitle").html(); // finds full title without truncation
+          thumbnailURL = 'http://louisianadigitallibrary.org/islandora/object/hnoc-clf:8432/datastream/TN/view';
+          itemHeader();
+          typeClass('newspaper');
+          break;
+        }
+
 
       } //end page detection
 
@@ -48,8 +57,7 @@
 
       function itemHeader(){
         $("#region-content div.tabs.clearfix").prependTo("#block-system-main");
-        $("<div class='item_header'/>").insertBefore(".islandora-large-image-object"); //creates header for image items
-        $("<div class='item_header'/>").insertBefore(".bookContainer"); //creates header for book items
+        $("<div class='item_header'/>").insertBefore(".islandora-large-image-object, .bookContainer, .islandora-newspaper-object"); //creates header for image items
         $("<div class='backgroundDiv'/>").appendTo(".item_header"); //creates header for book items
         $('.backgroundDiv').css('background-image', 'url(' + thumbnailURL + ')');
         $("<div class='item_headerMenu'/>").appendTo(".item_header"); //creates header for book items
@@ -568,27 +576,6 @@
 
       // begin newspaper 2.0
       if ( ($('.islandora-newspaper-object').length) && ( !$('body').hasClass('audioPDF') ) ){
-        $('body').addClass('newspaperSet'); // newspaper body class
-        $("<div class='newspaper_header'/>").insertBefore(".islandora-newspaper-object"); //creates header for newspaper items
-        $("<div class='backgroundDiv'/>").appendTo(".newspaper_header"); //creates header background for newspaper items
-        $('.backgroundDiv').css('background-image', 'url(http://louisianadigitallibrary.org/islandora/object/hnoc-clf:8432/datastream/TN/view)'); //temporary static image
-        imageTitle = $(".modsTitle").html(); // finds full title for book
-        $("<div class='newspaper_headerMenu'/>").appendTo(".newspaper_header"); //creates header for book items
-        $("<div class='newspaperTitle'/>").text(imageTitle).appendTo(".newspaper_headerMenu"); // undoes default title truncation
-        //$("<div class='contentLabel newspaperLabel'>Newspaper Summary</div>").appendTo(".labelContainer"); //adds label break
-        $("<div class='headerBreadcrumb'/>").appendTo(".newspaper_headerMenu"); //temporarily moves count
-        // begin header links
-            var institutionText = $(".depth-2 > a").clone(); //creates href path from breadcrumb depth-2
-            var institutionHome = $(".depth-2 > a").attr('href'); //creates href path from breadcrumb depth-2
-            var collectionText = $(".depth-3 > a").clone(); //creates href path from breadcrumb depth-3
-            var collectionHome = $(".depth-3 > a").attr('href'); //creates href path from breadcrumb depth-3
-            $(institutionText).addClass("institutionSmall").appendTo(".headerBreadcrumb"); //creates institution breadcrumb
-            $( " <span class='breadcrumbDivider'>/</span>" ).insertAfter( ".institutionSmall" ); //needs to be separated from the a href
-            $(collectionText).addClass("institutionSmall").insertAfter(".breadcrumbDivider"); //creates collection breadcrumb
-            $("<div class='userMenu'/>").appendTo(".newspaper_headerMenu"); //temporarily moves count
-            $("<div class='infoToggle userSelect'><div class='iconSelect'></div><div class='textSelect'>details</div></div>").appendTo(".userMenu"); //adds toggle for parent metadata
-            $("#block-system-main > div.tabs > ul.tabs").appendTo(".userMenu").wrapAll('<div class="manageMenu"/>'); //moves the view/ip embargo/manage menu
-            $("#block-system-main > .tabs").remove(); // temporarily removes tabs until menu is set
             $(".islandora-newspaper-object").addClass("newspaperContainer"); //adds label break
         // end header links
         // begin newspaper container
