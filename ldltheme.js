@@ -41,6 +41,9 @@
           thumbnailURL = 'http://louisianadigitallibrary.org/islandora/object/hnoc-clf:8432/datastream/TN/view';
           itemHeader();
           typeClass('newspaper');
+          newspaperContainer();
+          moveMetadata();
+          actionToggles();
           break;
         }
 
@@ -128,6 +131,16 @@
         $("<div class='chooseBook chooseViewer'><div class='chooseIcon'><i class='fas fa-book'></i></div><div class='chooseText'>Open Book Viewer</div></div>").appendTo(".chooseMenu"); //adds label break
       }
 
+      function newspaperContainer(){
+        $(".islandora-newspaper-object").addClass("newspaperContainer"); //adds label break
+        $("<div class='labelContainer'/>").insertBefore(".newspaperContainer"); //adds label break
+        $("<div class='contentLabel newspaperLabel'>newspaper summary</div>").appendTo(".labelContainer"); //adds label break
+        $("<div class='newspaperPreview'/>").appendTo(".newspaperContainer"); //adds label break
+        $(".newspaper-thumbnail").appendTo(".newspaperPreview");
+        $("<div class='newspaper-thumbnailData'/>").insertAfter(".total-issue-count");
+        $(".downloadList").insertAfter(".newspaper_headerMenu");
+      }
+
       function bookFooter(){
         $(".metadataSidebar .modsSubject a").clone().appendTo(".descContainer .descriptionText").addClass("modsSubject").wrapAll('<div class="tagsGlance"/>');
         $(".metadataSidebar").clone().prop({ class: "metadataVertical"}).appendTo('.content .descContainer .descriptionText');
@@ -193,6 +206,7 @@
         $(".metadataContainer div:first-child").remove();  //removes weird h3 MODS titles
         $("#sideMods").appendTo(".region-sidebar-first-inner");
         $("#sideMods").addClass("metadataContainer");
+
       }   //end metadata move
 
       function bookStarter(){
@@ -576,19 +590,6 @@
 
       // begin newspaper 2.0
       if ( ($('.islandora-newspaper-object').length) && ( !$('body').hasClass('audioPDF') ) ){
-            $(".islandora-newspaper-object").addClass("newspaperContainer"); //adds label break
-        // end header links
-        // begin newspaper container
-          $("<div class='labelContainer'/>").insertBefore(".newspaperContainer"); //adds label break
-          $("<div class='contentLabel newspaperLabel'>newspaper summary</div>").appendTo(".labelContainer"); //adds label break
-          $("<div class='newspaperPreview'/>").appendTo(".newspaperContainer"); //adds label break
-          $(".newspaper-thumbnail").appendTo(".newspaperPreview");
-          $("<div class='newspaper-thumbnailData'/>").insertAfter(".total-issue-count");
-          $(".downloadList").insertAfter(".newspaper_headerMenu");
-        // end newspaper container
-         moveMetadata();  //begin metadata move
-         $(".islandora-newspaper-metadata").remove();  //end metadata move
-         actionToggles();// insert toggle function
           $(".metadataSidebar .modsDesc").clone().appendTo(".newspaper-thumbnailData");
           $("<div class='labelContainer descContainer'/>").insertAfter(".newspaperContainer"); //adds label break
           $("<div class='contentLabel bookDesc'>tags</div>").appendTo(".descContainer"); //adds label break
