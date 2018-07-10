@@ -686,7 +686,7 @@
         $( "#calendar" ).datepicker( "setDate", somestr2 );
         $( "#calendar" ).datepicker( "option", "numberOfMonths", 1 );
         var tdnum =  1; //script for counting days in month and adding classes
-        $("div.month-container-label td:not('.ui-state-disabled')").each(function(){ //script for counting days in month and adding classes
+        $("div.activeMonth td:not('.ui-state-disabled')").each(function(){ //script for counting days in month and adding classes
             $(this).addClass("dayNumber_" + tdnum); //script for counting days in month and adding classes
             tdnum++; //script for counting days in month and adding classes
         }); //script for counting days in month and adding classes
@@ -719,11 +719,11 @@
               }
             );
         });
-              if (!($(".dayContainer").length)){
+
         $('[class*="dayNumber_"]').each(function (){
-           $(this).children().wrapAll("<div class='dayContainer'/>");
+           $(this).not('.styled').addClass('styled').children().wrapAll("<div class='dayContainer'/>");
         }); //currently making new nest per click
-}
+
       });
       //back to month
       $(".monthSelect, .monthBack").click(function(){
