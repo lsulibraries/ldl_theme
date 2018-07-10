@@ -5,7 +5,6 @@
     } else{
       console.log('jquery fired once');
       $("<div class='mobileMenu'/>").insertBefore("div#page");
-
       switch (true) { //detect page type or content type
         case (($('.image-thumbnail').length) && (!$('body').hasClass('audioPDF'))) :{
           $('body').addClass('largeImage');
@@ -33,8 +32,6 @@
           bookFooter();
           break;
         }
-
-
         case ( ($('.islandora-newspaper-object').length) && ( !$('body').hasClass('audioPDF') ) ) :{
           $('body').addClass('newspaperSet');
           itemTitle = $(".modsTitle").html(); // finds full title without truncation
@@ -46,8 +43,6 @@
           actionToggles();
           break;
         }
-
-
       } //end page detection
 
       //begin functions
@@ -206,7 +201,6 @@
         $(".metadataContainer div:first-child").remove();  //removes weird h3 MODS titles
         $("#sideMods").appendTo(".region-sidebar-first-inner");
         $("#sideMods").addClass("metadataContainer");
-
       }   //end metadata move
 
       function bookStarter(){
@@ -707,11 +701,9 @@
                 id: "eachDay",
               });
           });
-      if (!($(".dayContainer").length)){
-        $('.ui-datepicker-calendar td').each(function (){
-           $(this).children().wrapAll("<div class='dayContainer'/>");
-        }); //currently making new nest per click
-      }
+
+
+
         $('.ui-datepicker-calendar tbody tr').each(function (){
           if (!($(this).find("a.ui-state-default").length)){
             $(this).remove();
@@ -727,6 +719,11 @@
               }
             );
         });
+
+        $('[class*="dayNumber_"]').each(function (){
+           $(this).children().wrapAll("<div class='dayContainer'/>");
+        }); //currently making new nest per click
+
       });
       //back to month
       $(".monthSelect, .monthBack").click(function(){
