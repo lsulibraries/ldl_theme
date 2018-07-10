@@ -5814,6 +5814,30 @@ span.breadcrumbDivider {
 .headerBreadcrumb a:hover {
   text-decoration: underline; }
 
+body.multipleDaily .multipleNotice {
+  text-align: center;
+  background: #cecece; }
+body.multipleDaily .month-issues-container {
+  display: flex;
+  border: 1px solid #cecece;
+  padding: 20px;
+  color: #676767; }
+body.multipleDaily .months-container {
+  border: 0px !important; }
+body.multipleDaily .issuePreview {
+  display: none !important; }
+body.multipleDaily .ui-datepicker-group {
+  display: none !important; }
+body.multipleDaily .islandora-newspaper-grid .publication-year-container.activeYear .month-container-label {
+  flex-direction: column; }
+body.multipleDaily .issueLevel .issue-container {
+  display: block !important;
+  background: none; }
+  body.multipleDaily .issueLevel .issue-container a {
+    color: #676767; }
+  body.multipleDaily .issueLevel .issue-container img {
+    display: none !important; }
+
 @media screen and (min-width: 2000px) {
   .page-browse-collections tr {
     width: calc(12.5% - 11px); }
