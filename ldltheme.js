@@ -201,6 +201,8 @@
         $(".metadataContainer div:first-child").remove();  //removes weird h3 MODS titles
         $("#sideMods").appendTo(".region-sidebar-first-inner");
         $("#sideMods").addClass("metadataContainer");
+        $(".islandora-newspaper-metadata").remove();  //removes empty old div
+
       }   //end metadata move
 
       function bookStarter(){
@@ -723,8 +725,15 @@
         $('[class*="dayNumber_"]').each(function (){
            $(this).not('.styled').addClass('styled').children().wrapAll("<div class='dayContainer'/>");
         }); //currently making new nest per click
+        if ($('.dayContainer img').length > 1){
+          var multipleDaily = true;
+          console.log('multiple issues on one day');
+        }
+
+
 
       });
+
       //back to month
       $(".monthSelect, .monthBack").click(function(){
         $(".monthTempLabel").remove();
@@ -795,6 +804,12 @@
                           event = issueLinks[i];
                       }
                       i++;
+                  }
+                  if (event) {
+                    window.open(
+                        issueLinks[i - 1].link,
+                        '_blank' // <- This is what makes it open in a new window.
+                      );
                   }
                   if (event) {
                     window.open(
