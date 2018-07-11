@@ -44,6 +44,9 @@ function alpha_preprocess_islandora_newspaper(array &$variables) {
       }
       $mounthIssues = count($nest[$year]['months'][$month]['issues']);
       $nest[$year]['months'][$month]['count'] = $mounthIssues;
+      if (count($issues) > 1) {
+          $nest[$year]['months'][$month]['multi'] = TRUE;
+      }
       $nest[$year]['issue-count'] += $mounthIssues;
       $issueTotal += $mounthIssues;
     }
