@@ -648,7 +648,7 @@
           var somestr =  "01/01/" + yearChosen + ""; //determine what year was chosen
           $( "#calendar" ).datepicker( "setDate", somestr ); // initialize year
           $( "#calendar" ).datepicker( "option", "numberOfMonths", 12 ); // initialize months
-          $( "#calendar" ).datepicker( "option", "monthNames", [ "Jan", "Feb", "Mar", "Apr", "Mar", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ] ); // initialize months
+          $( "#calendar" ).datepicker( "option", "monthNames", [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ] ); // initialize months
           console.log(somestr);
           // move calendars into the links
           $("div#calendar > div.ui-datepicker-inline > div.ui-datepicker-group").each(function(){
