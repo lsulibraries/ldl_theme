@@ -21,7 +21,7 @@
 
 <div class="islandora-newspaper-object islandora">
   <div class="islandora-newspaper-content-wrapper clearfix">
-    <?php if ($issues): ?>
+    <?php if (isset($issues)): ?>
               <div class='total-issue-count'>This newspaper contains <?php print $totalIssueCount; ?> issues across <?php print $totalYearCount; ?> years.</div>
       <div class="islandora-newspaper-navigation">
         <div class="newsSelect yearSelect activeSelect">
