@@ -755,7 +755,7 @@
         var somestr =  "01/01/" + yearChosen + "";
         $( "#calendar" ).datepicker( "setDate", somestr );
         $( "#calendar" ).datepicker( "option", "numberOfMonths", 12 );
-        $('td.highlight').each(function (){
+        $('[class*="dayNumber_"]').each(function (){
            $(this).find("img.dayIssue").remove();
          });
       });
