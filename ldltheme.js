@@ -673,11 +673,6 @@
       var monthButton = $('div.month-container-label');
       monthButton.click(function(){
         var thisMonth = $(this);
-        if ($(thisMonth).hasClass('hasMultipleDaily')){
-            $('body').addClass('multipleDaily');
-            $('<div class="multipleNotice">This month contains days with multiple issues</div>').insertBefore('.activeMonth span.month-container-label-month');
-            console.log('multiple issues on one day');
-        }
         $(this).addClass('activeMonth');
         $(".month-container-label").not(".activeMonth").addClass("inactiveYear");
         $(".islandora-newspaper-navigation").addClass('thirdStage');
@@ -734,7 +729,11 @@
         }); //currently making new nest per click
 
 
-
+        if ($(thisMonth).hasClass('hasMultipleDaily')){
+            $('body').addClass('multipleDaily');
+            $('<div class="multipleNotice">This month contains days with multiple issues</div>').insertBefore('.activeMonth span.month-container-label-month');
+            console.log('multiple issues on one day');
+        }
 
 
 
