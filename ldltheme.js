@@ -694,7 +694,7 @@
             $(this).addClass("dayNumber_" + tdnum); //script for counting days in month and adding classes
             tdnum++; //script for counting days in month and adding classes
         }); //script for counting days in month and adding classes
-      if (!($(".filler-border").length)){
+      if (!($(thisMonth).find(".filler-border").length)){
           $("<span class='filler-border'/>").insertBefore(".ui-datepicker-month");
       }
           $('div.activeMonth .issue-container').each(function (){
@@ -712,7 +712,7 @@
           if (!($(this).find("a.ui-state-default").length)){
             $(this).remove();
           }
-        }); //currently making new nest per click
+        });
       $("td.ui-datepicker-unselectable.ui-state-disabled").html().remove;
         $( ".dayContainer" ).promise().done(function() {
              $("td.highlight").hover(
@@ -726,7 +726,7 @@
 
         $('[class*="dayNumber_"]').each(function (){
            $(this).not('.styled').addClass('styled').children().wrapAll("<div class='dayContainer'/>");
-        }); //currently making new nest per click
+        });
 
 
         if ($(thisMonth).hasClass('hasMultipleDaily')){
