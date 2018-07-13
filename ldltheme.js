@@ -729,7 +729,7 @@
         });
 
 
-        if ($(thisMonth).hasClass('hasMultipleDaily')){
+        if (($(thisMonth).hasClass('hasMultipleDaily')) && (!($('body').hasClass('multipleDaily')))){
             $('body').addClass('multipleDaily');
             $('<div class="multipleNotice">This month contains days with multiple issues</div>').insertBefore('.activeMonth span.month-container-label-month');
             console.log('multiple issues on one day');
@@ -785,7 +785,7 @@
           var monthsQuantity = $(".activeYear .months-container .month-container").length;
           var issueLinks = [];
           $( ".issue-container" ).each(function( index ) { // get links for each day
-              var date = new Date($(this).find("a").html());
+              var date = new Date($(this).find("div.issue-date").html());
               issueLinks.push({link: $(this).find("a").attr("href"), Date: date}); // matches link and day in array
           });
           console.log(issueLinks);
