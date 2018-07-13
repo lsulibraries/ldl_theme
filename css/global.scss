@@ -8115,6 +8115,17 @@ span.breadcrumbDivider {
 
 body.multipleDaily{
 
+.month-issues-container {
+    display: flex;
+    flex-direction: column;
+.issue-date {
+    font-size: 13px;
+}
+.issue-container{
+  margin-bottom:20px;
+}
+}
+
   .multipleNotice {
 
     text-align: center;

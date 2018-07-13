@@ -5817,6 +5817,13 @@ span.breadcrumbDivider {
 .headerBreadcrumb a:hover {
   text-decoration: underline; }
 
+body.multipleDaily .month-issues-container {
+  display: flex;
+  flex-direction: column; }
+  body.multipleDaily .month-issues-container .issue-date {
+    font-size: 13px; }
+  body.multipleDaily .month-issues-container .issue-container {
+    margin-bottom: 20px; }
 body.multipleDaily .multipleNotice {
   text-align: center;
   background: #676767;
