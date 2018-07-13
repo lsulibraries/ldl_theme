@@ -634,7 +634,6 @@
            $("div.issuePreview").find( ".firstMonthCover:last" ).fadeOut("slow", function() { $(this).remove(); });;
           }
           );
-         var monthButton = $('.month-container-label');
         $('.publication-year-container-label').click(function(){
           // choose year, change indicators, change options for datepicker
           $(this).parent().addClass('activeYear'); // choose year
@@ -670,7 +669,15 @@
              });
           });
         });
+
+      var monthButton = $('div.month-container-label');
       monthButton.click(function(){
+        var thisMonth = $(this);
+        if ($(thisMonth).hasClass('hasMultipleDaily')){
+            $('body').addClass('multipleDaily');
+            $('<div class="multipleNotice">This month contains days with multiple issues</div>').insertBefore('.activeMonth span.month-container-label-month');
+            console.log('multiple issues on one day');
+        }
         $(this).addClass('activeMonth');
         $(".month-container-label").not(".activeMonth").addClass("inactiveYear");
         $(".islandora-newspaper-navigation").addClass('thirdStage');
@@ -726,12 +733,10 @@
            $(this).not('.styled').addClass('styled').children().wrapAll("<div class='dayContainer'/>");
         }); //currently making new nest per click
 
-        if ($('.dayContainer img').length > 1){
-          var multipleDaily = true;
-          console.log('multiple issues on one day');
-          $('body').addClass('multipleDaily');
-          $('<div class="multipleNotice">This month contains days with multiple issues</div>').insertBefore('.activeMonth span.month-container-label-month');
-        }
+
+
+
+
 
       });
 
