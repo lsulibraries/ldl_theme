@@ -30,6 +30,7 @@ function alpha_preprocess_islandora_newspaper(array &$variables) {
       }
       else {
         $days = [];
+        $issues = [];
       }
       foreach ($days as $day => $issues) {
         foreach ($issues as $issue) {
