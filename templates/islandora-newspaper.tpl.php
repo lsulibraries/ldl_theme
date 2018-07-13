@@ -75,6 +75,7 @@
                     <div class='month-issues-container'>
                       <?php foreach ($data['issues'] as $issue): ?>
                         <div class='issue-container'>
+                            <div class='issue-label'><?php print $issue['label']?></div>
                           <a href="/islandora/object/<?php print $issue['pid']; ?>"><?php print $issue['formatted-date']; ?></a>
                           <img data-src="/islandora/object/<?php print $issue['cover-pid']; ?>/datastream/JPG/view" src="#" class="lazy"></a>
                         </div>
