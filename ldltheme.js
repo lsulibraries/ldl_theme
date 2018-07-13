@@ -19,19 +19,23 @@
           imageModal();
           break;
         }
-        case (($('#book-viewer').length) && (!$('body').hasClass('audioPDF')) && (!$('.islandora-newspaper-issue').length)) :{
+        case ((($('#book-viewer').length) || ($('.islandora-newspaper-issue-navigator').length))  && (!$('body').hasClass('audioPDF'))) :{
           $('body').addClass('bookViewer');
           itemTitle = $(".modsTitle").html(); // finds full title without truncation
           thumbnailURL = $(".book-thumbnail img").prop('src');
           bookStarter();
           itemHeader();
           typeClass('book');
+          typeClass('newspaper');
           moveMetadata();
           bookContainer();
           actionToggles();
           bookFooter();
           break;
         }
+
+
+
         case ( ($('.islandora-newspaper-object').length) && ( !$('body').hasClass('audioPDF') ) ) :{
           $('body').addClass('newspaperSet');
           itemTitle = $(".modsTitle").html(); // finds full title without truncation
@@ -190,6 +194,8 @@
           );
         });
         $(".islandora-newspaper-metadata > .metadataContainer").appendTo(".region-sidebar-first-inner");
+        $(".islandora-newspaper-issue-metadata > .metadataContainer").appendTo(".region-sidebar-first-inner");
+
         $(".islandora-book-metadata > .metadataContainer").appendTo(".region-sidebar-first-inner");
         $(".islandora-large-image-metadata > .metadataContainer").appendTo(".region-sidebar-first-inner");
         $("#region-sidebar-first").addClass('nano');
