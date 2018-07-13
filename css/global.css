@@ -5172,6 +5172,9 @@ body.largeImage, body.newspaperSet {
     body.largeImage .islandora-newspaper-grid .publication-year-container.activeYear .month-container, body.newspaperSet .islandora-newspaper-grid .publication-year-container.activeYear .month-container {
       position: relative;
       cursor: pointer; }
+    body.largeImage .islandora-newspaper-grid .publication-year-container.activeYear .filler-calendar, body.newspaperSet .islandora-newspaper-grid .publication-year-container.activeYear .filler-calendar {
+      pointer-events: none;
+      cursor: default; }
     body.largeImage .islandora-newspaper-grid .publication-year-container.activeYear .month-container-label, body.newspaperSet .islandora-newspaper-grid .publication-year-container.activeYear .month-container-label {
       display: flex;
       flex-wrap: wrap;
