@@ -17,11 +17,11 @@ function alpha_preprocess_islandora_newspaper(array &$variables) {
   );
   $issueTotal = 0;
   $yearTotal = 0;
+  $month_enum = ['01','02','03','04','05','06','07','08','09','10','11','12'];
   foreach($grouped_issues as $year => $months) {
     $yearTotal++;
     $nest[$year]['months'] = [];
     $nest[$year]['issue-count'] = 0;
-    $month_enum = ['01','02','03','04','05','06','07','08','09','10','11','12'];
     foreach($month_enum as $num) {
       $month = date("M", mktime(0, 0, 0, $num, 1, 2000));
       $nest[$year]['months'][$month]['issues'] = [];
