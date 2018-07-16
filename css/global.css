@@ -3945,6 +3945,8 @@ body.logged-in.headerversiontwo .metadataContainer {
 body.headerversiontwo {
   background: black;
   margin: 0px; }
+  body.headerversiontwo .issueMenu {
+    display: flex; }
   body.headerversiontwo .imageTitle, body.headerversiontwo .newspaperTitle {
     font-size: 40px;
     color: white;

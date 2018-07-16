@@ -22,17 +22,15 @@
         case ((($('#book-viewer').length) || ($('.islandora-newspaper-issue-navigator').length))  && (!$('body').hasClass('audioPDF'))) :{
           $('body').addClass('bookViewer');
           itemTitle = $(".modsTitle").html(); // finds full title without truncation
-
-          if ($(".book-thumbnail img").length) {
           thumbnailURL = $(".book-thumbnail img").prop('src');
-          }
-          else{
-          thumbnailURL = 'http://louisianadigitallibrary.org/islandora/object/hnoc-clf:8432/datastream/TN/view';
-                    }
           bookStarter();
           itemHeader();
           typeClass('book');
-          typeClass('newspaper');
+          if ($(".islandora-newspaper-issue").length) {
+            newspaperIssue();
+                      typeClass('newspaper');
+
+          }
           moveMetadata();
           bookContainer();
           actionToggles();
@@ -63,6 +61,19 @@
         $('.itemLabel').addClass( type + 'Label');
       }
 
+      function newspaperIssue(){
+        var newspaperText = $(".depth-4 > a").clone(); //creates href path from breadcrumb depth-2
+        var newspaperHome = $(".depth-4 > a").attr('href'); //creates href path from breadcrumb depth-2
+        $( " <span class='breadcrumbDivider'>/</span>" ).insertAfter( ".institutionSmall:last" ); //needs to be separated from the a href
+        $(newspaperText).addClass("institutionSmall").appendTo(".headerBreadcrumb"); //creates institution breadcrumb
+          $( ".islandora-newspaper-issue-navigator > ul > li > a" ).each(function() { // get links for each day
+            $(this).prependTo('.userMenu').addClass('textSelect').wrap('<div class="issueNav userSelect"/>');
+          });
+          $('.issueNav').wrapAll('<div class="issueMenu"/>').addClass('');
+
+        $('span.islandora-newspaper-issue-navigator').remove();
+      }
+
       function itemHeader(){
         $("#region-content div.tabs.clearfix").prependTo("#block-system-main");
         $("<div class='item_header'/>").insertBefore(".islandora-large-image-object, .bookContainer, .islandora-newspaper-object"); //creates header for image items
@@ -72,7 +83,7 @@
         $("<div class='itemTitle'/>").text(itemTitle).appendTo(".item_headerMenu"); // undoes default title truncation
         $("<div class='headerBreadcrumb'/>").appendTo(".item_headerMenu"); //temporarily moves count
         var institutionText = $(".depth-2 > a").clone(); //creates href path from breadcrumb depth-2
-        var institutionHome = $(".depth-2 > a").attr('href'); //creates href path from breadcrumb depth-2
+        //var institutionHome = $(".depth-2 > a").attr('href'); //creates href path from breadcrumb depth-2
         var collectionText = $(".depth-3 > a").clone(); //creates href path from breadcrumb depth-2
         var collectionHome = $(".depth-3 > a").attr('href'); //creates href path from breadcrumb depth-2
         $(institutionText).addClass("institutionSmall").appendTo(".headerBreadcrumb"); //creates institution breadcrumb
