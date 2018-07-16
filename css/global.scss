@@ -5253,6 +5253,21 @@ margin: 0px;
 
 .issueMenu{
   display: flex;
+  .navPrev{
+    border-radius: 3px 0px 0px 3px !important;
+  }
+  .navNext{
+    border-radius: 0px 3px 3px 0px !important;
+        margin-left: 1px;
+
+  }
+
+  .navIssues{
+    border-radius: 0px !important;
+        margin-left: 1px;
+
+  }
+
 }
 
 .imageTitle, .newspaperTitle{
@@ -5801,7 +5816,7 @@ div.userSelect.menuActive, div#shareToggle.activeMenu{
     -webkit-transform: skew(-20deg) translateX(0px);
     -moz-transform: skew(-20deg) translateX(0px);
     -o-transform: skew(-20deg) translateX(0px);
-margin-left: 15px;
+margin-left: 20px;
 transition-duration: 0s;
 
 

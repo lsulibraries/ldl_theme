@@ -3947,6 +3947,14 @@ body.headerversiontwo {
   margin: 0px; }
   body.headerversiontwo .issueMenu {
     display: flex; }
+    body.headerversiontwo .issueMenu .navPrev {
+      border-radius: 3px 0px 0px 3px !important; }
+    body.headerversiontwo .issueMenu .navNext {
+      border-radius: 0px 3px 3px 0px !important;
+      margin-left: 1px; }
+    body.headerversiontwo .issueMenu .navIssues {
+      border-radius: 0px !important;
+      margin-left: 1px; }
   body.headerversiontwo .imageTitle, body.headerversiontwo .newspaperTitle {
     font-size: 40px;
     color: white;
@@ -4328,7 +4336,7 @@ body.headerversiontwo {
     -webkit-transform: skew(-20deg) translateX(0px);
     -moz-transform: skew(-20deg) translateX(0px);
     -o-transform: skew(-20deg) translateX(0px);
-    margin-left: 15px;
+    margin-left: 20px;
     transition-duration: 0s; }
     body.headerversiontwo div.userSelect.menuActive .iconSelect, body.headerversiontwo div#shareToggle.activeMenu .iconSelect {
       display: block;

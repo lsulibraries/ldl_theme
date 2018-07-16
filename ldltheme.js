@@ -66,10 +66,14 @@
         var newspaperHome = $(".depth-4 > a").attr('href'); //creates href path from breadcrumb depth-2
         $( " <span class='breadcrumbDivider'>/</span>" ).insertAfter( ".institutionSmall:last" ); //needs to be separated from the a href
         $(newspaperText).addClass("institutionSmall").appendTo(".headerBreadcrumb"); //creates institution breadcrumb
-          $( ".islandora-newspaper-issue-navigator > ul > li > a" ).each(function() { // get links for each day
-            $(this).prependTo('.userMenu').addClass('textSelect').wrap('<div class="issueNav userSelect"/>');
-          });
-          $('.issueNav').wrapAll('<div class="issueMenu"/>').addClass('');
+        $( ".islandora-newspaper-issue-navigator > ul > li > a" ).each(function() { // get links for each day
+          $(this).prependTo('.userMenu').addClass('textSelect').wrap('<div class="issueNav userSelect"/>');
+        });
+        $('.issueNav').wrapAll('<div class="issueMenu"/>').addClass('');
+        //$('.issueNav:contains(Next)').addClass('navNext');
+        //$('.issueNav:contains(All Issues)').addClass('navIssues');
+        //$('.issueNav:contains(Prev)').insertBefore('.navIssues').addClass('navPrev');
+        $('.issueNav:contains(Next), .issueNav:contains(Prev)').remove();
 
         $('span.islandora-newspaper-issue-navigator').remove();
       }
