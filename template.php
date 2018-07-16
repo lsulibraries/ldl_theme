@@ -1,6 +1,18 @@
 <?php
 
 /**
+ * Theme a newspaper pages controls.
+ */
+function alpha_preprocess_islandora_newspaper_page_controls(array &$variables) {
+  $to_remove = ['clip', 'jp2_download', 'tiff_download', 'page_pager'];
+  foreach($variables['controls'] as $key => $value) {
+    if (in_array($key, $to_remove)) {
+      unset($variables['controls'][$key]);
+    }
+  }
+}
+
+/**
  * Prepares variables for islandora_newspaper templates.
  *
  * Default template: islandora-newspaper.tpl.php.
