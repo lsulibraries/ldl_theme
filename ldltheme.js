@@ -27,8 +27,8 @@
           itemHeader();
           typeClass('book');
           if ($(".islandora-newspaper-issue").length) {
-            newspaperIssue();
-                      typeClass('newspaper');
+          newspaperIssue();
+          typeClass('newspaper');
 
           }
           moveMetadata();
@@ -74,7 +74,7 @@
         //$('.issueNav:contains(All Issues)').addClass('navIssues');
         //$('.issueNav:contains(Prev)').insertBefore('.navIssues').addClass('navPrev');
         $('.issueNav:contains(Next), .issueNav:contains(Prev)').remove();
-
+        $('.issueNav:contains(All Issues)').hide();
         $('span.islandora-newspaper-issue-navigator').remove();
       }
 
@@ -128,7 +128,13 @@
       function bookContainer(){
         $('.itemTitle').attr("id", "bookTitle");
         $("<div class='labelContainer descContainer'/>").insertAfter(".bookContainer"); //adds label break
-        $("<div class='contentLabel itemLabel bookLabel'>Book Object</div>").appendTo(".labelContainer"); //adds label break
+        if ($(".islandora-newspaper-issue").length) {
+          $("<div class='contentLabel itemLabel bookLabel'>Newspaper Issue</div>").appendTo(".labelContainer");
+          $(".issueNav a").clone().prop({class:"backContainer"}).insertAfter(".descContainer").html("<div class='backCollection'>View All Issues</div>");
+        }
+        else{
+          $("<div class='contentLabel itemLabel bookLabel'>Book Object</div>").appendTo(".labelContainer");
+        }
         $("<div class='contentLabel bookDesc'>tags</div>").appendTo(".descContainer"); //adds label break
         $("<div class='descriptionText'/>").insertAfter(".bookDesc"); //adds label break
         $("#book-viewer div div ul li a").clone().prop({class:"backContainer"}).insertAfter(".descContainer").html("<div class='backCollection'>Back to Collection</div>");
@@ -192,7 +198,7 @@
             $(".nano").nanoScroller({ alwaysVisible: false });
           $('.detailsContainer').toggleClass('detailsContainerActive');
         });
-        if ($(window).width() < 900) {
+        if ($(window).width() < 900) {R
           $('.onepg').trigger('click').once();
           $('.booksearchToggle').trigger('click').once();
           $('#textSrch').attr("placeholder", "Search" );
