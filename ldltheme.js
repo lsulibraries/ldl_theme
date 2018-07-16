@@ -22,7 +22,13 @@
         case ((($('#book-viewer').length) || ($('.islandora-newspaper-issue-navigator').length))  && (!$('body').hasClass('audioPDF'))) :{
           $('body').addClass('bookViewer');
           itemTitle = $(".modsTitle").html(); // finds full title without truncation
+
+          if ($(".book-thumbnail img").length) {
           thumbnailURL = $(".book-thumbnail img").prop('src');
+          }
+          else{
+          thumbnailURL = 'http://louisianadigitallibrary.org/islandora/object/hnoc-clf:8432/datastream/TN/view';
+                    }
           bookStarter();
           itemHeader();
           typeClass('book');
@@ -195,7 +201,6 @@
         });
         $(".islandora-newspaper-metadata > .metadataContainer").appendTo(".region-sidebar-first-inner");
         $(".islandora-newspaper-issue-metadata > .metadataContainer").appendTo(".region-sidebar-first-inner");
-
         $(".islandora-book-metadata > .metadataContainer").appendTo(".region-sidebar-first-inner");
         $(".islandora-large-image-metadata > .metadataContainer").appendTo(".region-sidebar-first-inner");
         $("#region-sidebar-first").addClass('nano');
