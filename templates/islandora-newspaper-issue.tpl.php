@@ -4,6 +4,10 @@
  * @file
  */
 ?>
+
+<div id="pageCount">
+<?php print count($viewer_params['pages']); ?> pages
+</div>
 <div class="islandora-newspaper-issue clearfix">
   <span class="islandora-newspaper-issue-navigator">
     <?php print theme('islandora_newspaper_issue_navigator', array('object' => $object)); ?>

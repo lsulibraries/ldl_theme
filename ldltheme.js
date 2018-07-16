@@ -227,7 +227,7 @@
         $(".metadataContainer div:first-child").remove();  //removes weird h3 MODS titles
         $("#sideMods").appendTo(".region-sidebar-first-inner");
         $("#sideMods").addClass("metadataContainer");
-        $(".islandora-newspaper-metadata").remove();  //removes empty old div
+        $(".islandora-newspaper-metadata, .islandora-newspaper-issue-metadata").remove();  //removes empty old div
 
       }   //end metadata move
 
