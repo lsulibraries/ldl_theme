@@ -23,7 +23,9 @@
 ?>
 <div class='item_header'>
   <div class='backgroundDiv'/>
-  <div class='item_headerMenu'/>
+  <div class='item_headerMenu'>
+    <div class='headerBreadcrumb'/>
+  </div>
 </div>
 <div class="labelContainer">
   <div class="contentLabel imageLabel">Image Object</div>

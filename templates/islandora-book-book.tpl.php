@@ -10,7 +10,9 @@
 <?php if(isset($viewer)): ?>
 <div class='item_header'>
   <div class='backgroundDiv'/>
-  <div class='item_headerMenu'/>
+  <div class='item_headerMenu'>
+    <div class='headerBreadcrumb'/>
+  </div>
 </div>
 <div class='bookContainer'>
   <div id="book-viewer">

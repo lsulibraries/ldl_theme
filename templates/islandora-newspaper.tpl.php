@@ -20,7 +20,9 @@
 
 <div class='item_header'>
   <div class='backgroundDiv'/>
-  <div class='item_headerMenu'/>
+  <div class='item_headerMenu'>
+    <div class='headerBreadcrumb'/>
+  </div>
 </div>
 <div class="islandora-newspaper-object islandora">
   <div class="islandora-newspaper-content-wrapper clearfix">
