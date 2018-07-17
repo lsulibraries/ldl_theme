@@ -11,7 +11,9 @@ function alpha_preprocess_islandora_newspaper_page_controls(array &$variables) {
       unset($variables['controls'][$key]);
     }
   }
-  $variables['controls']['page_select'] = str_replace(t('Image'), t('Page'), $variables['controls']['page_select']);
+  $variables['controls']['page_select'] = str_replace(t('Image:'), t('Page '), $variables['controls']['page_select']);
+  $variables['controls']['text_view'] = str_replace("<strong>" . t('View:') . " </strong>", '', $variables['controls']['text_view']);
+  $variables['controls']['text_view'] = str_replace('>Text<', t('>View Text<'), $variables['controls']['text_view']);
 }
 
 /**
