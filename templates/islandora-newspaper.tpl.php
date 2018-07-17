@@ -25,6 +25,7 @@
     <div class='userMenu'>
       <div class='infoToggle userSelect'><div class='iconSelect'></div><div class='textSelect'>details</div></div>
     </div>
+    <div class='itemTitle'/><?php print $islandora_object->label ?></div>
   </div>
 </div>
 <div class="islandora-newspaper-object islandora">
