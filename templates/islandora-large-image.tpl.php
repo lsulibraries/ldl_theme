@@ -29,9 +29,11 @@
     <div class="image-thumbnail">  <!--needs a conditional to avoid compoundObject children -->
       <img src="<?php print "/islandora/object/{$islandora_object}/datastream/TN/view" ?>"></img>  <!--needs a conditional to avoid compoundObject children -->
     </div>  <!--needs a conditional to avoid compoundObject children -->
-  <div class='imageMenu'/>
+    <div class="imageMenu">
+      <div class="chooseMenu"/>
+    </div>
   </div>
-  <div class='image-thumbnailData'/>
+  <div class="image-thumbnailData"/>
   <div class="islandora-large-image-content-wrapper clearfix">
 
 <?php if ($parent_collections): ?>
