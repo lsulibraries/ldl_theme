@@ -6,7 +6,22 @@
       console.log('jquery fired once');
       $("<div class='mobileMenu'/>").insertBefore("div#page");
       switch (true) { //detect page type or content type
-        case ((($('.image-thumbnail').length) || ($('.pageText').length)) && (!$('body').hasClass('audioPDF'))) :{
+        //case for individual pages of newspaper as images
+        case ((($('.pageText').length)) && (!$('body').hasClass('audioPDF'))) :{
+          $('body').addClass('pageImage largeImage');
+          itemTitle = $(".modsTitle").html(); // finds full title without truncation
+          thumbnailURL = $(".image-thumbnail img").prop('src');
+          itemHeader();
+          typeClass('image');
+          imageContainer();
+          moveMetadata();
+          actionToggles();
+          itemFooter();
+          imageModal();
+          break;
+        }
+        //case for large images
+        case ((($('.image-thumbnail').length)) && (!$('body').hasClass('audioPDF'))) :{
           $('body').addClass('largeImage');
           itemTitle = $(".modsTitle").html(); // finds full title without truncation
           thumbnailURL = $(".image-thumbnail img").prop('src');
@@ -36,7 +51,6 @@
           bookFooter();
           break;
         }
-
         case ( ($('.total-issue-count').length) && ( !$('body').hasClass('audioPDF') ) ) :{
           $('body').addClass('newspaperSet');
           itemTitle = $(".modsTitle").html(); // finds full title without truncation
@@ -615,7 +629,8 @@
 
 
       // begin newspaper 2.0
-      if ( ($('.islandora-newspaper-object').length) && ( !$('body').hasClass('audioPDF') ) ){
+      if ( ($('.total-issue-count').length) && ( !$('body').hasClass('audioPDF') ) ){
+          $('body').addClass('newspaperStuff');
           $(".metadataSidebar .modsDesc").clone().appendTo(".newspaper-thumbnailData");
           $("<div class='labelContainer descContainer'/>").insertAfter(".newspaperContainer"); //adds label break
           $("<div class='contentLabel bookDesc'>tags</div>").appendTo(".descContainer"); //adds label break
