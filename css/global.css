@@ -4789,6 +4789,8 @@ body.bookViewer div#bookMeta {
 
 body.pageImage .pageControls {
   display: flex; }
+body.pageImage .pageNext {
+  display: none; }
 
 body.largeImage, body.newspaperSet {
   background: black; }

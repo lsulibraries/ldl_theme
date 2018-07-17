@@ -6514,6 +6514,10 @@ body.pageImage{
   .pageControls {
       display: flex;
   }
+  .pageNext{
+    display: none; //hidden because sequence bug
+  }
+
 }
 
 //begin largeImage 2.0
