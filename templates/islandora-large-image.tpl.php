@@ -21,7 +21,7 @@
  * @see theme_islandora_large_image()
  */
 ?>
-<div class="islandora-large-image-object islandora" vocab="http://schema.org/" prefix="dcterms: http://purl.org/dc/terms/" typeof="ImageObject">
+<div class="islandora-large-image-object itemContainer imageContainer islandora" vocab="http://schema.org/" prefix="dcterms: http://purl.org/dc/terms/" typeof="ImageObject">
   <div class="islandora-large-image-content-wrapper clearfix">
 
 <?php if ($parent_collections): ?>

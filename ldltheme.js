@@ -97,7 +97,7 @@
       }
 
       function imageContainer(){
-        $(".islandora-large-image-object").addClass("itemContainer imageContainer"); //adds label break
+        //$(".islandora-large-image-object").addClass("itemContainer imageContainer"); //adds label break
         $("<div class='labelContainer'/>").insertBefore(".imageContainer"); //adds label break
         $("<div class='contentLabel imageLabel'>Image Object</div>").appendTo(".labelContainer"); //adds label break
         $("<div class='imagePreview'/>").appendTo(".imageContainer"); //adds label break
