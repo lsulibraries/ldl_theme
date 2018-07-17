@@ -22,7 +22,9 @@
   <div class='backgroundDiv'/>
   <div class='item_headerMenu'>
     <div class='headerBreadcrumb'/>
-    <div class='userMenu'/>
+    <div class='userMenu'>
+      <div class='infoToggle userSelect'><div class='iconSelect'></div><div class='textSelect'>details</div></div>
+    </div>
   </div>
 </div>
 <div class="islandora-newspaper-object islandora">
