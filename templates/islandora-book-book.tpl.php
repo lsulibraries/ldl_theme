@@ -8,6 +8,7 @@
 <?php print count($viewer_params['pages']); ?> pages
 </div>
 <?php if(isset($viewer)): ?>
+<div class='item_header'/>
 <div class='bookContainer'>
   <div id="book-viewer">
     <?php print $viewer; ?>
