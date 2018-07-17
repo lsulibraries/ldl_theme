@@ -6,7 +6,7 @@
       console.log('jquery fired once');
       $("<div class='mobileMenu'/>").insertBefore("div#page");
       switch (true) { //detect page type or content type
-        case (($('.image-thumbnail').length) && (!$('body').hasClass('audioPDF'))) :{
+        case ((($('.image-thumbnail').length) || ($('.pageText').length)) && (!$('body').hasClass('audioPDF'))) :{
           $('body').addClass('largeImage');
           itemTitle = $(".modsTitle").html(); // finds full title without truncation
           thumbnailURL = $(".image-thumbnail img").prop('src');
@@ -97,7 +97,7 @@
       }
 
       function imageContainer(){
-        $(".islandora-large-image-object").addClass("itemContainer imageContainer"); //adds label break
+        $(".islandora-large-image-object, .islandora-newspaper-object").addClass("itemContainer imageContainer"); //adds label break
         $("<div class='labelContainer'/>").insertBefore(".imageContainer"); //adds label break
         $("<div class='contentLabel imageLabel'>Image Object</div>").appendTo(".labelContainer"); //adds label break
         $("<div class='imagePreview'/>").appendTo(".imageContainer"); //adds label break
@@ -285,6 +285,7 @@
           function(){$('.image_header').css({"padding-bottom": "inherit"});}
         );
         console.log('info toggle made');
+        $('li:empty').remove();
       } // end toggle functions
 
       function imageModal(){

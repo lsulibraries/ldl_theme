@@ -5,5 +5,13 @@
  */
 ?>
 <div class="islandora-newspaper-controls">
-  <?php print theme('item_list', array('items' => $controls, 'attributes' => array('class' => array('items', 'inline')))); ?>
+   <div class='pageNumber'>
+    <?php print $controls['page_select']; ?>
+   </div>
+   <div class='pageNext'>
+    <?php print $controls['issue_pager']; ?>
+   </div>
+   <div class='pageText'>
+    <?php print $controls['text_view']; ?>
+   </div>
 </div>
