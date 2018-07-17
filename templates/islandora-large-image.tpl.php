@@ -25,6 +25,7 @@
   <div class='contentLabel imageLabel'>Image Object</div>
 </div>
 <div class="islandora-large-image-object itemContainer imageContainer islandora" vocab="http://schema.org/" prefix="dcterms: http://purl.org/dc/terms/" typeof="ImageObject">
+  <div class='imagePreview'/>
   <div class="islandora-large-image-content-wrapper clearfix">
 
 <?php if ($parent_collections): ?>
