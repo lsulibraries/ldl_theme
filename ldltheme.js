@@ -239,7 +239,7 @@
         $("<span class='modalExit4'><i class='fa fa-times'></i> Exit</span>").insertBefore("body.bookViewer #BookReader");
         bookTitle = $(".modsTitle").html(); // finds full title for book
         $("#BRreturn a").text(bookTitle); // undoes default title truncation
-        $("#book-viewer").wrapAll("<div class='bookContainer'/>"); // adds container to bookViewer
+        //$("#book-viewer").wrapAll("<div class='bookContainer'/>"); // adds container to bookViewer
         if (navigator.userAgent.indexOf('MSIE') !== -1 || navigator.appVersion.indexOf('Trident/') > 0) {
         var resizeEvent = window.document.createEvent('UIEvents');
         resizeEvent .initUIEvent('resize', true, false, window, 0);
