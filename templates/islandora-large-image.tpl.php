@@ -21,17 +21,18 @@
  * @see theme_islandora_large_image()
  */
 ?>
-<div class='labelContainer'>
-  <div class='contentLabel imageLabel'>Image Object</div>
+<div class="labelContainer">
+  <div class="contentLabel imageLabel">Image Object</div>
 </div>
 <div class="islandora-large-image-object itemContainer imageContainer islandora" vocab="http://schema.org/" prefix="dcterms: http://purl.org/dc/terms/" typeof="ImageObject">
-  <div class='imagePreview'/>
+  <div class="imagePreview">
+    <div class="image-thumbnail">  <!--needs a conditional to avoid compoundObject children -->
+      <img src="<?php print "/islandora/object/{$islandora_object}/datastream/TN/view" ?>"></img>  <!--needs a conditional to avoid compoundObject children -->
+    </div>  <!--needs a conditional to avoid compoundObject children -->
+  </div>
   <div class="islandora-large-image-content-wrapper clearfix">
 
 <?php if ($parent_collections): ?>
-  <div class="image-thumbnail">  <!--needs a conditional to avoid compoundObject children -->
-    <img src="<?php print "/islandora/object/{$islandora_object}/datastream/TN/view" ?>"></img>  <!--needs a conditional to avoid compoundObject children -->
-  </div>  <!--needs a conditional to avoid compoundObject children -->
 <?php endif; ?>
 
 <?php if (count($downloads) > 0): ?>

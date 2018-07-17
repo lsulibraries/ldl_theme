@@ -101,7 +101,7 @@
         //$("<div class='labelContainer'/>").insertBefore(".imageContainer"); //adds label break
         //$("<div class='contentLabel imageLabel'>Image Object</div>").appendTo(".labelContainer"); //adds label break
         //$("<div class='imagePreview'/>").appendTo(".imageContainer"); //adds label break
-        $(".image-thumbnail").appendTo(".imagePreview");
+        //$(".image-thumbnail").appendTo(".imagePreview");
         $("<div class='image-thumbnailData'/>").insertAfter(".imagePreview");
         $("<div class='imageMenu'/>").appendTo(".imagePreview"); //adds label break
         //$("#bookTitle").clone().attr("id", "bookmenuTitle").appendTo(".bookMenu"); // undoes default title truncation
