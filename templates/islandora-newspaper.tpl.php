@@ -22,6 +22,7 @@
   <div class='backgroundDiv'/>
   <div class='item_headerMenu'>
     <div class='headerBreadcrumb'/>
+    <div class='userMenu'/>
   </div>
 </div>
 <div class="islandora-newspaper-object islandora">

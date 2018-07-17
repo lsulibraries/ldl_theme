@@ -12,6 +12,7 @@
   <div class='backgroundDiv'/>
   <div class='item_headerMenu'>
     <div class='headerBreadcrumb'/>
+    <div class='userMenu'/>
   </div>
 </div>
 <div class='bookContainer'>
