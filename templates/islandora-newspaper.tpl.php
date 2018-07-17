@@ -19,9 +19,9 @@
 </script>
 
 <div class='item_header'>
-  <div class='backgroundDiv'/>
+  <div class='backgroundDiv'></div>
   <div class='item_headerMenu'>
-    <div class='headerBreadcrumb'/>
+    <div class='headerBreadcrumb'></div>
     <div class='userMenu'>
       <div class='infoToggle userSelect'><div class='iconSelect'></div><div class='textSelect'>details</div></div>
     </div>
