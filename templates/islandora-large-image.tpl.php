@@ -30,7 +30,12 @@
       <img src="<?php print "/islandora/object/{$islandora_object}/datastream/TN/view" ?>"></img>  <!--needs a conditional to avoid compoundObject children -->
     </div>  <!--needs a conditional to avoid compoundObject children -->
     <div class="imageMenu">
-      <div class="chooseMenu"/>
+      <div class="chooseMenu">
+        <div class='chooseImage chooseViewer'>
+          <div class='chooseIcon'><i class='fa fa-photo'></i></div>
+          <div class='chooseText'>Open Image Viewer</div>
+        </div>
+      </div>
     </div>
   </div>
   <div class="image-thumbnailData"/>

@@ -106,7 +106,7 @@
         //$("<div class='imageMenu'/>").appendTo(".imagePreview"); //adds label break
         //$("#bookTitle").clone().attr("id", "bookmenuTitle").appendTo(".bookMenu"); // undoes default title truncation
         //$("<div class='chooseMenu'/>").appendTo(".imageMenu"); //adds label break
-        $("<div class='chooseImage chooseViewer'><div class='chooseIcon'><i class='fa fa-photo'></i></div><div class='chooseText'>Open Image Viewer</div></div>").appendTo(".chooseMenu"); //adds label break
+        //$("<div class='chooseImage chooseViewer'><div class='chooseIcon'><i class='fa fa-photo'></i></div><div class='chooseText'>Open Image Viewer</div></div>").appendTo(".chooseMenu"); //adds label break
         $(".downloadList").insertAfter(".image_headerMenu");
       }
 
