@@ -21,6 +21,7 @@
  * @see theme_islandora_large_image()
  */
 ?>
+<div class='item_header'/>
 <div class="labelContainer">
   <div class="contentLabel imageLabel">Image Object</div>
 </div>
