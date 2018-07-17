@@ -21,6 +21,7 @@
  * @see theme_islandora_large_image()
  */
 ?>
+<div class='labelContainer'/>
 <div class="islandora-large-image-object itemContainer imageContainer islandora" vocab="http://schema.org/" prefix="dcterms: http://purl.org/dc/terms/" typeof="ImageObject">
   <div class="islandora-large-image-content-wrapper clearfix">
 
