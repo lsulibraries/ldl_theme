@@ -30,6 +30,7 @@
       <img src="<?php print "/islandora/object/{$islandora_object}/datastream/TN/view" ?>"></img>  <!--needs a conditional to avoid compoundObject children -->
     </div>  <!--needs a conditional to avoid compoundObject children -->
   </div>
+  <div class='image-thumbnailData'/>
   <div class="islandora-large-image-content-wrapper clearfix">
 
 <?php if ($parent_collections): ?>

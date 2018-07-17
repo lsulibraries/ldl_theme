@@ -102,7 +102,7 @@
         //$("<div class='contentLabel imageLabel'>Image Object</div>").appendTo(".labelContainer"); //adds label break
         //$("<div class='imagePreview'/>").appendTo(".imageContainer"); //adds label break
         //$(".image-thumbnail").appendTo(".imagePreview");
-        $("<div class='image-thumbnailData'/>").insertAfter(".imagePreview");
+        //$("<div class='image-thumbnailData'/>").insertAfter(".imagePreview");
         $("<div class='imageMenu'/>").appendTo(".imagePreview"); //adds label break
         //$("#bookTitle").clone().attr("id", "bookmenuTitle").appendTo(".bookMenu"); // undoes default title truncation
         $("<div class='chooseMenu'/>").appendTo(".imageMenu"); //adds label break
