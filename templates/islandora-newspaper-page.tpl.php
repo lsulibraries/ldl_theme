@@ -19,7 +19,7 @@
  */
 ?>
 
-
+<div class='item_header'/>
 <div class="islandora-newspaper-object">
   <div class="islandora-newspaper-controls">
     <?php print theme('islandora_newspaper_page_controls', array('object' => $object)); ?>
