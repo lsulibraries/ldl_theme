@@ -6509,6 +6509,13 @@ div#bookMeta {
     font-size: 19px;
   }
 
+
+body.pageImage{
+  .pageControls {
+      display: flex;
+  }
+}
+
 //begin largeImage 2.0
 body.largeImage, body.newspaperSet{
 

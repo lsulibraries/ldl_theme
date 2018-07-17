@@ -4787,6 +4787,9 @@ body.bookViewer div#bookMeta {
 .newsSelect {
   font-size: 19px; }
 
+body.pageImage .pageControls {
+  display: flex; }
+
 body.largeImage, body.newspaperSet {
   background: black; }
   body.largeImage .firstMonthCover:not(.firstYearCover), body.newspaperSet .firstMonthCover:not(.firstYearCover) {

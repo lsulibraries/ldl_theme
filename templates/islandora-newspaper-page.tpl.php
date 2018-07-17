@@ -22,7 +22,7 @@
 <script src="/sites/all/libraries/JAIL/src/jail.js"></script>
 
   <div class="image-thumbnail">
-    <img src="<?php print "/islandora/object/{$object->id}/datastream/TN/view" ?>"></img>
+    <img src="<?php print "/islandora/object/{$object->id}/datastream/JPG/view" ?>"></img>
   </div>
 
 <div class="islandora-newspaper-object">
