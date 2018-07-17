@@ -1,5 +1,6 @@
 <?php
 
+
 /**
  * Theme a newspaper pages controls.
  */
@@ -10,6 +11,7 @@ function alpha_preprocess_islandora_newspaper_page_controls(array &$variables) {
       unset($variables['controls'][$key]);
     }
   }
+  $variables['controls']['page_select'] = str_replace(t('Image'), t('Page'), $variables['controls']['page_select']);
 }
 
 /**
