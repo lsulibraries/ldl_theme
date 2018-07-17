@@ -80,7 +80,7 @@
         //$("<div class='item_header'/>").insertBefore(".islandora-large-image-object .bookContainer, .islandora-newspaper-object"); //creates header for image items
         //$("<div class='backgroundDiv'/>").appendTo(".item_header"); //creates header for book items
         $('.backgroundDiv').css('background-image', 'url(' + thumbnailURL + ')');
-        $("<div class='item_headerMenu'/>").appendTo(".item_header"); //creates header for book items
+        //$("<div class='item_headerMenu'/>").appendTo(".item_header"); //creates header for book items
         $("<div class='itemTitle'/>").text(itemTitle).appendTo(".item_headerMenu"); // undoes default title truncation
         $("<div class='headerBreadcrumb'/>").appendTo(".item_headerMenu"); //temporarily moves count
         var institutionText = $(".depth-2 > a").clone(); //creates href path from breadcrumb depth-2

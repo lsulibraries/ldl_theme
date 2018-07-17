@@ -21,6 +21,7 @@
 
 <div class='item_header'>
   <div class='backgroundDiv'/>
+  <div class='item_headerMenu'/>
 </div>
 <div class="islandora-newspaper-object">
   <div class="islandora-newspaper-controls">
