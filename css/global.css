@@ -5491,6 +5491,8 @@ body.mobileNewspaper .publication-year, body.mobileNewspaper .issues-year-total 
   position: static !important; }
 body.mobileNewspaper .infoToggle {
   display: none !important; }
+body.mobileNewspaper .issue-container {
+  margin: 10px; }
 
 div#colorbox {
   top: 0px !important;
