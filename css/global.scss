@@ -7570,7 +7570,7 @@ body.mobileNewspaper{
 width: 100% !important;
     margin-left: 20px;
     padding: 20px;
-    padding-top: 70px;
+padding-top: 90px;
 }
 
 .month-container::first-child, .monthSelect, .issueSelect, .month-container-label, .ui-datepicker-group, .monthLevel .publication-year-container-label, .islandora-newspaper-grid .publication-year-container .publication-year-container-label, .filler-calendar, .islandora-newspaper-grid .viewYears .month-container-label {
@@ -7582,9 +7582,25 @@ width: 100% !important;
 }
 
 .islandora-newspaper-grid .publication-year-container-label {
-display: block !important;
-height: auto !important;
+    display: block !important;
+    height: auto !important;
     top: 0px;
+    width: 100vw;
+    left: 0px;
+    padding-left: 20px;
+    padding-top: 10px;
+    border-bottom: 1px solid #cecece;
+    padding-bottom: 10px;
+.publication-year{
+  display: block !important;
+}
+
+.issues-year-total{
+  display: block !important;
+}
+
+
+
 }
 
 .islandora-newspaper-grid .viewYears .issue-container:first-child {
@@ -7600,6 +7616,10 @@ height: auto !important;
 
 .publication-year, .issues-year-total{
   position: static !important;
+}
+
+.infoToggle{
+  display: none !important;
 }
 
 }
