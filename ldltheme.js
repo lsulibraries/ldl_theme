@@ -881,13 +881,7 @@
                   if (event) {
                     window.open(
                         issueLinks[i - 1].link,
-                        '_blank' // <- This is what makes it open in a new window.
-                      );
-                  }
-                  if (event) {
-                    window.open(
-                        issueLinks[i - 1].link,
-                        '_blank' // <- This is what makes it open in a new window.
+                        '_self' // <- This is what makes it open in current window.
                       );
                   }
               }
