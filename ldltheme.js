@@ -84,7 +84,7 @@
         //$("<div class='itemTitle'/>").text(itemTitle).appendTo(".item_headerMenu"); // undoes default title truncation
         //$("<div class='headerBreadcrumb'/>").appendTo(".item_headerMenu"); //temporarily moves count
         var institutionText = $(".depth-2 > a").clone(); //creates href path from breadcrumb depth-2
-        //var institutionHome = $(".depth-2 > a").attr('href'); //creates href path from breadcrumb depth-2
+        var institutionHome = $(".depth-2 > a").attr('href'); //creates href path from breadcrumb depth-2
         var collectionText = $(".depth-3 > a").clone(); //creates href path from breadcrumb depth-2
         var collectionHome = $(".depth-3 > a").attr('href'); //creates href path from breadcrumb depth-2
         $(institutionText).addClass("institutionSmall").appendTo(".headerBreadcrumb"); //creates institution breadcrumb

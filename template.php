@@ -111,7 +111,7 @@ EOQ;
 }
 
 function alpha_preprocess_islandora_large_image(&$variables) {
-
+  
   $pid = $variables['islandora_object']->id;
   $variables['downloads'] = array();
   module_load_include('inc', 'islandora', 'includes/datastream');
