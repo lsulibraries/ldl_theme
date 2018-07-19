@@ -3122,7 +3122,7 @@ div.islandora-pdf-object, div.islandora-large-image-object {
   margin-top: 10px; }
 
 .compoundChild .compoundLabel {
-  background-image: url("../images/jaWlCjM.png") !important; }
+  background-image: url("https://i.imgur.com/jaWlCjM.png") !important; }
 
 #share .jssocials-share {
   display: inline-block;
@@ -4787,6 +4787,8 @@ body.bookViewer div#bookMeta {
 .newsSelect {
   font-size: 19px; }
 
+body.pageImage .image-thumbnail img {
+  width: 100%; }
 body.pageImage select {
   padding-right: 20px;
   padding-left: 10px;
