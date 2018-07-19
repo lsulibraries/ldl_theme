@@ -76,7 +76,7 @@
       function pageImage(){
         $('.islandora-newspaper-content-wrapper').remove();
         $('.islandora-newspaper-controls').insertBefore('.infoToggle')
-   
+
       }
 
       function newspaperIssue(){
@@ -216,7 +216,7 @@
             $(".nano").nanoScroller({ alwaysVisible: false });
           $('.detailsContainer').toggleClass('detailsContainerActive');
         });
-        if ($(window).width() < 900) {R
+        if ($(window).width() < 900) {
           $('.onepg').trigger('click').once();
           $('.booksearchToggle').trigger('click').once();
           $('#textSrch').attr("placeholder", "Search" );
@@ -648,6 +648,20 @@
           $(".downloadSelect").insertAfter(".infoToggle");
           $("<i class='fa fa-photo' aria-hidden='true'></i>").appendTo(".newspaperLabel");
           $(".total-issue-count").insertAfter(".newspaper-thumbnailData > span");
+
+          if ($(window).width() < 900) {
+              $('body').addClass('mobileNewspaper');
+              var issueLinks = [];
+              $( ".issue-container" ).each(function( index ) { // get links for each day
+                var date = new Date($(this).find("div.issue-date").html());
+                issueLinks.push({link: $(this).find("a").attr("href"), Date: date}); // matches link and day in array
+              });
+              console.log(issueLinks);
+
+          }     else{
+
+
+
       //begin newspaper selection
            //Finds first cover of the year and labels loaded months
           $(' .months-container').each(function (){
@@ -879,6 +893,7 @@
               }
           });
       });
+    }
       //end datepicker
       }
       // end newspaper 2.0
@@ -1156,8 +1171,8 @@
           $("#zone-content-wrapper").addClass("noClick"); //somehow not working
           window.scrollTo(0,0); //scrolls to top
           if ($(window).width() < 900) {
-          $('html').addClass('fixed');
-      }
+            $('html').addClass('fixed');
+          }
       }
       // When the user clicks on <span> (x), close the modal
       span5.onclick = function() {
