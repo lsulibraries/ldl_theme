@@ -30,9 +30,25 @@
   </div>  <!--needs a conditional to avoid compoundObject children -->
 <?php endif; ?>
 
+<?php if (count($downloads) > 0): ?>
+<div class="downloadSelect userSelect">
+<div class="downloadList">
+  <div class="downloadList_container">
+
+<?php foreach ($downloads as $key => $values): ?>
+   <?php print l(sprintf(
+     '<div class="datastream-download-details"><div class="datastream-download-label">%s</div>
+  <div class="datastream-download-size">%s</div></div>', $values['label'], $values['size']), $values['href'],  array('attributes' => array('class' => "downloadLink $key", ), 'html' => TRUE,)); ?>
+<?php endforeach; ?>
+  </div>
+
+</div>
+<div class="iconSelect"></div><div class="textSelect">Download</div>
+</div>
+<?php endif; ?>
 
 
-       <?php print l('<div class="downloadSelect userSelect"><div class="iconSelect"></div><div class="textSelect">Download</div></div>', "islandora/object/{$islandora_object}/datastream/JPG/download",  array('attributes' => array('class' => 'downloadLink', ), 'html' => TRUE,)); ?>
+
        <?php if ($parent_collections): ?>
       <div class="parent-collections">
         <h2><?php print t('Found in collection(s):'); ?></h2>

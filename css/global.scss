@@ -2940,7 +2940,9 @@ body.logged-in.front div#zone-header {
 }
 
 .not-logged-in{
-  .manageMenu ul{
+
+
+  .manageMenu {
     display: none;
   }
 }
@@ -4042,6 +4044,23 @@ margin-top: 10px;
   display: none;
 }
 
+.compoundSelect.embargoed::after{
+
+      content: 'restricted';
+    position: absolute;
+    background: #FF5370;
+    color: white;
+    opacity: 0.75;
+    top: calc(50% - 20px);
+    font-size: 14px;
+    border-radius: 2px;
+    padding: 0px 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transform: rotate(20deg);
+    right: 10px;
+}
+
 .compoundArrows{
   cursor: default;
 
@@ -4088,6 +4107,13 @@ color: #676767;
     margin-top:20px;
  }
 
+.contentLabel.newspaperLabel2 {
+    width: 100%;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+
  .labelContainer {
     margin: 0px 20px;
     margin-bottom: 20px;
@@ -4113,40 +4139,6 @@ color: #676767;
   left: -11px;
 }
 
-.manageMenu {
-
-    .tabs {
-    margin: 0px;
-    padding: 0px;
-    border: 0px;
-
-    li{
-      margin-right: 10px;
-    }
-    }
-
-    li a {
-    max-width: none !important;
-    padding: 2px 10px!important;
-    padding-top: 3px !important;
-    text-transform: uppercase;
-    color: white;
-    background: none !important;
-    border: 1px solid rgba(255, 255, 255, 0.20) !important;
-    height: 25px !important;
-    box-sizing: border-box;
-    margin: 0px !important;
-    }
-
-    li a:hover{
-      border: 1px solid white !important;
-    }
-
-    li a.active {
-    font-weight: normal !important;
-    background: rgba(255, 255, 255, 0.20) !important;
-    }
-}
 
 #region-content{
   transition-duration: 0.5s;
@@ -4163,7 +4155,9 @@ color: #676767;
 
   .compoundObject {
 
-
+#region-content div.tabs.clearfix{
+  margin-top: 0px;
+}
 
 
 div.islandora-pdf-object, div.islandora-large-image-object {
@@ -4440,6 +4434,7 @@ span#islandora-compound-sequence-position {
 }
 
       .compoundGallery_header {
+        padding-bottom: 20px;
           a {
             max-width: none!important;
             line-height: inherit!important;
@@ -4454,7 +4449,6 @@ span#islandora-compound-sequence-position {
             border: 0px !important;
             max-width: 1200px;
             margin: 0px 20px;
-            margin-bottom: 20px;
             transition-duration: 1s;
             width: 100%;
           }
@@ -4561,18 +4555,14 @@ overflow: hidden;
         }
         a.compoundSelect-title {
             display: flex!important;
-            justify-content: center;
             align-items: center;
             max-width: none!important;
-            font-size: 20px;
+            font-size: 17px;
             flex-grow: 2;
             padding: 10px;
             color: #686868;
-
-            position: absolute;
-            left: 0px;
-            width: 130px;
-            background: white;
+            padding-left: 20px;
+            background: transparent;
             height: 130px;
 
         }
@@ -4729,6 +4719,70 @@ body.not-logged-in.compoundChild{
 
 
 .compoundChild{
+
+
+&.objectHidden{
+  .islandora-large-image-content-wrapper, .compoundArrows, .downloadLink, .headerBreadcrumb{
+    display: none !important;
+}
+
+.compoundGallery_header{
+    height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+}
+
+&.activeEmbargo{
+
+
+.ip-embargo-details {
+    background: #e9e9e9;
+    padding: 30px 50px;
+}
+
+.alertBox_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.alertBox {
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 50px 0px;
+    background: whitesmoke;
+    width: 740px;
+.mods-access-condition-contact {
+    color: #333;
+    overflow: hidden;
+    margin: 20px 0px;
+    font-style: italic;
+    margin-bottom: 0px;
+}
+
+span.alertIcon {
+    background-image: url(https://i.imgur.com/R1bk60c.png);
+    width: 240px;
+    background-size: 50px auto;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+}
+
+background: white;
+
+ .compoundGallery_header {
+    position: relative;
+    padding: 30px 80px;
+}
+
+}
 
 span.breadcrumbDivider {
     color: #676767;
@@ -5016,20 +5070,7 @@ a#clip {
 
 
 
-.backgroundDiv {
-    position: absolute;
-    width: calc(100% + 140px);
-    height: calc(100% + 140px);
-  -webkit-filter: blur(50px) brightness(0.8) contrast(0.6);
-  -moz-filter: blur(50px) brightness(0.8) contrast(0.6);
-  -ms-filter: blur(50px) brightness(0.8) contrast(0.6);
-  -o-filter: blur(50px) brightness(0.8) contrast(0.6);
-    filter: blur(50px) brightness(0.8) contrast(0.6);
-    background-repeat: no-repeat;
-    background-size: cover;
-    left: -20px;
-    top: -20px;
-}
+
 
 
 
@@ -5174,7 +5215,7 @@ body:not(.compoundChildImage) {
 
     #shareToggle{
     height: 23px;
-    margin-left: 10px;
+    margin-left: 5px;
       .iconSelect{
         background-size: 15px;
         width: 35px;
@@ -5183,6 +5224,13 @@ body:not(.compoundChildImage) {
 }
 //new floating header
 body.logged-in.headerversiontwo{
+div#shareToggle.activeMenu{
+      margin-left: 0px;
+}
+#shareToggle{
+  margin-left: 0px;
+}
+
 #toolbar{
       z-index: 9999 !important;
 }
@@ -5196,8 +5244,71 @@ body.logged-in.headerversiontwo{
 
 }
 
+//begin shared item 2.0 Styles
+
 body.headerversiontwo{
 background: black;
+
+margin: 0px;
+
+.issueMenu{
+  display: flex;
+  .navPrev{
+    border-radius: 3px 0px 0px 3px !important;
+  }
+  .navNext{
+    border-radius: 0px 3px 3px 0px !important;
+        margin-left: 1px;
+
+  }
+
+  .navIssues{
+    border-radius: 0px !important;
+        margin-left: 1px;
+
+  }
+
+}
+
+.imageTitle, .newspaperTitle{
+font-size: 40px;
+color: white;
+line-height: 37px;
+}
+
+.image_headerMenu, .newspaper_headerMenu{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+flex-wrap: wrap;
+position: relative;
+border: 0px !important;
+max-width: 1200px;
+margin: 0px 20px;
+margin-bottom: 20px;
+transition-duration: 1s;
+width: 100%;
+
+
+}
+
+#share .jssocials-share {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0.3em 0.6em 0.3em 0;
+    overflow: hidden;
+    height: 23px;
+    transform: skew(-20deg);
+    border-radius: 3px;
+    margin-right: 4px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.userMenu{
+
+}
+
 
 .metadataVertical{
   .metadataTitle{
@@ -5307,13 +5418,6 @@ background-color: transparent !important;
   color: black !important;
 }
 
-.downloadSelect{
-  margin-left: 10px !important;
-}
-
-.downloadLink .iconSelect{
-  height: 23px !important;
-}
 
 .bookDesc {
     background-image: url(https://i.imgur.com/SVHgxtg.png);
@@ -5431,13 +5535,50 @@ width: 100%;
 #block-system-main{
   background: white;
 }
-.manageMenu .tabs {
+
+//begin logged-in actionBar
+.manageMenu {
+
+  .tabs{
     margin: 0px;
     padding: 0px;
     border: 0px;
-    padding-left: 10px;
-    padding-top: 4px;
+    padding-left: 5px;
+    transform: skew(-20deg);
+    display: flex;
+    height: 23px;
+        li.active{
+          display: none;
+        }
+        li{
+        margin-right: 5px;
+        background: white;
+        border-radius: 3px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 0px;
+        }
+        a{
+        transform: skew(20deg);
+        color: #676767 !important;
+        padding: 0px 12px;
+        font-size: 13px;
+        line-height: 1px !important;
+        border: 0px !important;
+        background-color: transparent;
+        margin-right: 0px !important;
+        }
+
+    }
+
+
+
 }
+
+//end logged-in actionBar
 
 .headerBreadcrumb {
     display: flex;
@@ -5517,28 +5658,208 @@ a.jssocials-share-link{
   line-height: inherit;
 }
 
+//begin actionBar
+a.downloadLink:hover {
+    transition-duration: 0s;
+    background: rgba(255, 255, 255, 0.10980392156862745);
+}
+
+
+.downloadList {
+  display: flex;
+  background: rgba(255, 255, 255, 0.07);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: inherit;
+  height: auto;
+  transition-duration: 1s;
+  transition: opacity 3s;
+    min-height: 70px;
+opacity: 0;
+    width: 100%;
+    bottom: 0px;
+    margin-bottom: 0px;
+    position: absolute;
+    top: 325px;
+    z-index: 1;
+    height: fit-content;
+pointer-events: none;
+    a.downloadLink{
+    color: white;
+    }
+    .datastream-download-details{
+
+        opacity: 1;
+        transition-duration: 0s;
+    display: flex;
+    width: 200px;
+    justify-content: space-between;
+    background: #ffffff1f;
+    padding: 2px 10px;
+    margin: 1px;
+    }
+
+
+}
+
+.downloadList_container{
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px 20px;
+
+}
+
+.extendList{
+  pointer-events: inherit;
+  opacity: 1;
+
+};
+
+.userSelect::after{
+content: ' ';
+    width: 30%;
+    height: 1px;
+    background: white;
+    border: 1px solid white;
+    position: absolute;
+    bottom: -8px;
+    left: 1%;
+    opacity: 0;
+    transition-duration: 0.2s;
+}
+
 .userSelect {
     padding: 0px 0px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: $offWhite;
     text-transform: uppercase;
+    border: 0px;
     display: flex;
     cursor: pointer;
     margin-right: 10px;
     align-items: center;
     margin: 0px;
+    background: white;
+    -webkit-transform: skew(-20deg);
+    -moz-transform: skew(-20deg);
+    -o-transform: skew(-20deg);
+    border-radius: 3px;
+    display: flex;
+    margin-left: 5px;
+    color: #676767;
+    height: 23px;
+    .iconSelect{
+    background: $Yellow;
+    box-shadow: inset -2px 0px 6px rgba(0, 0, 0, 0.19);
+    display: none;
+    background-image: none !important;
+    width: 16px !important;
+    position: absolute;
+    left: -14px;
+    }
+    .textSelect{
+      padding-left: 10px;
+      color: #676767;
+padding-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-transform: skew(20deg);
+    -moz-transform: skew(20deg);
+    -o-transform: skew(20deg);
+
+    }
 }
+
+.downloadSelect{
+  margin-left: 5px !important;
+}
+
+.downloadLink .iconSelect{
+  height: 23px !important;
+}
+
+
+.userSelect:hover:after{
+  content: ' ';
+  width: 96%;
+  background: white;
+  opacity: 0.9;
+  transition-duration: 0.5s;
+}
+
+
+.userSelect.activeMenu:hover:after, .userSelect.menuActive:hover:after{
+      padding-left: 15px;
+    left: -14px;
+}
+
+
+.downloadSelect.userSelect.menuActive {
+    margin-left: 19px !important;
+    transition-duration: 0s;
+
+
+
+}
+
+div.userSelect.menuActive, div#shareToggle.activeMenu{
+
+
+
+.iconSelect{
+  display: block;
+  height: 23px;
+}
+
+  transform: skew(-20deg) translateX(0px);
+    -webkit-transform: skew(-20deg) translateX(0px);
+    -moz-transform: skew(-20deg) translateX(0px);
+    -o-transform: skew(-20deg) translateX(0px);
+margin-left: 20px;
+transition-duration: 0s;
+
+
+
+}
+div#shareToggle.activeMenu{
+      margin-left: 20px;
+
+  transition:
+    /* step 1 */
+    left      1s,
+
+    padding-left   0s,
+    /* step 2 */
+    background 0.5s 1s;
+
+}
+
+
+.infoToggle .iconSelect {
+    background-image: url(https://i.imgur.com/zK6anrR.png);
+    width: 36px;
+    background-size: 15px;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 23px;
+
+}
+
+.infoToggle .textSelect {
+    padding-right: 12px;
+    font-size: 13px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 .userSelect:hover {
-color:white;
-border: 1px solid white;
+
 
 }
-
-.infoToggle:hover{
-  border: 1px solid white;
-}
-
 
 .infoToggle .iconSelect{
       background-image: url($infoLegend);
@@ -5555,30 +5876,35 @@ border: 1px solid white;
 
 }
 
-.textSelect {
-padding-right: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 
 div#share {
-    display: none;
     justify-content: flex-end;
     align-items: center;
     padding-right: 10px;
+    padding-left: 3px;
+    transform: translateX(50px);
+    transition-duration: 0.5s;
+    opacity: 0;
+    display: flex;
+    pointer-events: none;
+}
+
+div#share.shareActive {
+    display: flex !important;
+    transform: translateX(0px);
+    transition-duration: 0.5s;
+    opacity: 1;
+    pointer-events: inherit;
+    margin-left: 2px;
+}
+
+.downloadLink{
+      transition-duration: 0.2s;
 }
 
 
-.activeMenu {
-background: $darkTransparent;
-color: white;
-}
-
-.shareActive {
-    display: flex!important;
-}
-
+//ends actionBar
 .nano > .nano-pane > .nano-slider {
     background: #a5a5a5;
   }
@@ -5648,25 +5974,7 @@ div#block-block-1 a {
     color: white;
 }
 
-.infoToggle .iconSelect {
-    background-image: url(https://i.imgur.com/zK6anrR.png);
-    width: 36px;
-    background-size: 15px;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 23px;
 
-}
-
-.infoToggle .textSelect {
-    padding-right: 12px;
-    font-size: 13px;
-    text-align: center;
-    color: rgba(255, 255, 255, 0.85);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 
 #block-islandora-solr-simple{
@@ -5916,10 +6224,9 @@ display: flex;
     border: 0px !important;
     max-width: 1200px;
     margin: 0px 20px;
-    margin-bottom: 20px;
     transition-duration: 1s;
     width: 100%;
-
+padding-bottom: 20px;
     #bookTitle{
     font-size: 40px;
     color: white;
@@ -5955,6 +6262,11 @@ background-color: transparent;
     .logo{
     display: none; //hides logo
     }
+
+   #BRreturn  {
+display: none;
+   }
+
     #BRreturn a {
     text-decoration: none; //book title above the viewer
     margin-left: 30px; //book title above the viewer
@@ -6125,8 +6437,8 @@ font-size: 13px;
 }
 i{
     margin-right: 10px;
-    color: #676767;
-    font-size: 15px;
+
+
 }
 
 
@@ -6193,19 +6505,967 @@ div#bookMeta {
 
 }
 //End bookViewer
+.newsSelect {
+    font-size: 19px;
+  }
 
+
+body.pageImage{
+  .pageControls {
+      display: flex;
+  }
+}
 
 //begin largeImage 2.0
-body.largeImage{
+body.largeImage, body.newspaperSet{
 
   background: black;
 
-#islandora-openseadragon{
+.firstMonthCover:not(.firstYearCover){
   display: none;
+}
+
+.islandora-newspaper-object.islandora.newspaperContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.newsSelect {
+    font-size: 12px;
+    text-transform: uppercase;
+    opacity: 1;
+    color: #676767;
+    transition-duration: 0.5s;
+    letter-spacing: 2px;
+     padding: 0px 30px;
+
+}
+
+
+.newsIndicator {
+    position: absolute;
+    border-bottom: 1px solid #cecece;
+    bottom: 0px;
+    width: 100%;
+    transform: skew(-20deg);
+    height: 10px;
+    background: #cecece;
+}
+
+.activeIndicator {
+    width: 100%;
+    height: 10px;
+    background: #676767;
+    transform: scale3d(0.3, 1, 1);
+        transform-origin: left;
+    transition-duration: 1s;
+}
+
+.activeSelect{
+    opacity: 1 !important;
+}
+
+#calendar{
+  display: none;
+}
+
+td.highlight {
+    .circleDay{
+    background: #a3a3a3;
+}
+}
+
+.islandora-newspaper-navigation{
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 0px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    background: white;
+    position: relative;
+    max-width: 1200px;
+    margin: 0px 20px;
+    margin-bottom: 0px;
+    width: 100%;
+    justify-content: space-around;
+    position: relative;
+}
+
+
+.month-container{
+  //display: none;
+}
+
+.month-container::first-child{
+  display: block;
+      pointer-events: none;
+}
+
+.total-issue-count {
+    font-style: italic;
+    padding-top: 20px;
+}
+
+.newspaper-thumbnailData {
+    flex-direction: column;
+    max-width: 1200px;
+    color: #676767;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0px 20px;
+    margin-bottom: 20px;
+}
+
+.islandora-newspaper-content-wrapper {
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
 
+.islandora-newspaper-grid{
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 0px;
+    margin-bottom: 1px;
+    padding-bottom: 10px;
+    background: white;
+    position: relative;
+    max-width: 1200px;
+    margin: 0px 20px;
+    width: 100%;
+    margin-top:40px;
+
+    .publication-year-container{
+    height: 80px;
+    margin-right: 20px;
+    margin-bottom: 40px;
+    box-shadow: -3px 4px 20px #e8e8e8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    width: calc(20% - 16px);
+    position: relative;
+    overflow: hidden;
+    color: #676767;
+      transition-duration: 0.5s;
+          border-bottom: 2px solid transparent;
+
+    }
+.viewYears{
+    height: 420px;
+    flex-direction: column-reverse;
+    transition-duration: 0.2s !important;
+
+.ui-datepicker-group{
+  display: none;
+}
+
+    .months-container{
+    width: 100%;
+    max-height: 500px;
+    flex-grow: 2;
+    }
+    .date-year, .date-month, .date-day, .issue-container > a, .month-container-label-month, .month-container-label-count{
+    display: none;
+    }
+    img.lazy {
+      width: 100%;
+    height: 100%;
+    max-width: none;
+    }
+    .month-container-label{
+    pointer-events: none;
+    }
+   .month-container.loadedMonth {
+   display: block;
+   }
+   .month-container{
+   display: none;
+   }
+
+    .issue-container{
+    display: none;
+    }
+    .issue-container:first-child {
+    display: flex;
+    justify-content: center;
+    height: auto;
+    overflow: hidden;
+    }
+}
+
+  .firstYearCover,  .publication-year-container-label span{
+    transition-duration: 0.2s;
+  }
+
+
+
+.publication-year-container:hover{
+
+  .firstYearCover{
+    transform: scale3d(1.1, 1.1, 1.1);
+    transition-duration: 0.2s;
+  }
+
+
+}
+
+.publication-year-container-label {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-start;
+    cursor: pointer;
+    height: 80px;
+    flex-direction: column;
+    position: absolute;
+    height: 420px !important;
+    span.publication-year {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+}
+span.issues-year-total {
+    position: absolute;
+    bottom: 15px;
+    left: 30px;
+}
+}
+
+
+
+span.issues-year-total {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 5px;
+    padding-bottom: 10px;
+}
+
+span.publication-year {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    letter-spacing: 2px;
+}
+
+.publication-year-container:nth-child(5n) {
+    margin-right: 0px !important;
+}
+
+}
+
+.inactiveYear{
+  display: none !important;
+}
+
+.selectBack {
+    position: absolute;
+    top: 2px;
+    right: 3px;
+    display: none;
+    justify-content: center;
+    align-items: flex-start;
+    cursor: pointer;
+    transition-duration: 0.5s;
+
+
+    span.backText {
+    text-transform: uppercase;
+    font-size: 11px;
+    position: relative;
+    top: -1px;
+    right: 7px;
+    letter-spacing: 1px;
+    }
+
+span.backShape {
+    width: 40px;
+    height: 12px !important;
+    background: #676767;
+    transform: skew(-20deg);
+}
+
+}
+
+.selectBack:hover{
+  transform: translateX(-5px);
+  transition-duration: 0.5s;
+}
+
+span.filler-border {
+display: none;
+}
+
+
+
+
+.monthLevel .publication-year-container-label {
+    pointer-events: none;
+}
+
+.issuePreview, .grid-loading-notice, .monthPrompt, .dayPrompt{
+  display: none;
+}
+
+.dayContainer > .dayIssue, .highlight > .dayIssue{
+  display: none !important;
+}
+
+.monthLevel{
+
+
+
+.publication-year-container:hover{
+
+  .firstYearCover{
+    transform: scale3d(1, 1, 1);
+    transition-duration: 0.2s;
+  }
+
+}
+
+.grid-loading-notice {
+    position: absolute;
+    top: 60px;
+    right: 0px;
+    z-index: 99;
+}
+
+.issuePreview{
+    height: 700px;
+    overflow: hidden;
+    width: 50%;
+    margin: 0px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-top: 50px;
+    img.lazy {
+    position: absolute;
+    width: 580px;
+    transition-duration: inherit !important;
+        border: 1px solid #cecece;
+
+    }
+
+    .monthPrompt {
+    border: 1px solid #cecece;
+    height: 410px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+}
+
+
+
+}
+
+
+.firstMonthCover{
+  display: block;
+}
+
+.islandora-newspaper-grid{
+  margin-top: 0px;
+}
+
+
+.monthSelect {
+    opacity: 1;
+}
+
+#calendar{
+  display: none;
+}
+
+.publication-year-container{
+  box-shadow: none;
+}
+
+.publication-year-container.activeYear .month-container:not(.filler-calendar) .month-container-label:hover{
+      box-shadow: -3px 4px 20px #e8e8e8;
+      transition-duration: 0s;
+}
+
+.filler-calendar{
+.ui-datepicker-title{
+  opacity: 0.6;
+}
+
+}
+
+.ui-datepicker-calendar{
+  border: 0px;
+    min-width: 126px;
+  margin-bottom: 10px;
+}
+
+.ui-datepicker-title {
+    letter-spacing: 2px;
+    font-size: 16px;
+}
+
+span.ui-datepicker-month {
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.ui-datepicker-calendar thead {
+    display: none;
+}
+
+
+.ui-datepicker-calendar td {
+    padding: 0px 7px!important;
+}
+.ui-datepicker-calendar td:not(.ui-state-disabled) {
+    position: relative;
+    height: 18px;
+    width: 18px;
+  a{
+    display: none;
+  }
+  .circleDay {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 3px;
+    left: 0px;
+    border-radius: 100%;
+    border: 1px solid #cecece;
+}
+}
+
+.month-container-label{
+  & > span, a.ui-corner-all {
+    display: none;
+  }
+  div.month-issues-container:not(img){
+    opacity: 0;
+    position: absolute;
+  }
+}
+
+
+
+.publication-year-container-label{
+  display: none;
+}
+#calendar{
+    flex-wrap: wrap;
+    border-bottom: 0px;
+    margin-bottom: 1px;
+    padding-bottom: 10px;
+    background: white;
+    position: relative;
+    max-width: 1200px;
+    margin: 0px 20px;
+    width: 100%;
+    .ui-datepicker-multi .ui-datepicker-group table {
+        width: 95%;
+        margin: 0 auto .4em;
+        border: 0px;
+    }
+
+.ui-datepicker td {
+    border: 1px solid #cecece !important;
+      a{
+            display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+      }
+}
+.ui-datepicker td.ui-state-disabled {
+    border: 0px !important;
+}
+
+}
+
+.ui-datepicker-inline{
+  display: flex !important;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100% !important;
+
+.ui-datepicker-group {
+    width: 33%;
+    pointer-events: none;
+    table{
+      width: auto;
+    }
+    thead{
+      display: none;
+    }
+}
+
+
+
+}
+
+.month-container{
+  width: 25%;
+}
+
+.publication-year-container.activeYear {
+    width: 100%;
+    height: fit-content;
+    flex-direction: row !important;
+    margin-right: 0px;
+    height: -moz-fit-content;
+}
+
+  .publication-year-container-label {
+    width: auto !important;
+    flex-direction: column;
+        height: 180px;
+justify-content: center;
+  }
+
+span.issues-year-total {
+    flex-grow: 0 !important;
+}
+
+      .yearSelect:hover{
+        border-bottom: 1px solid #cecece;
+      transition-duration: 0.5s;
+      cursor: pointer;
+     }
+
+.publication-year-container, .publication-year-container:hover{
+  transform: translateY(0px);
+  transition-duration: 0s;
+  border-bottom: 0px;
+}
+
+}
+
+.monthSelect, .issueSelect{
+    pointer-events: none;
+    opacity: 0;
+}
+
+.issueLevel .monthSelect{
+    pointer-events: inherit !important;
+        opacity: 1 !important;
+
+}
+
+//begin activeYear
+.islandora-newspaper-grid .publication-year-container.activeYear{
+    width: 100%;
+    height: fit-content;
+    flex-direction: row;
+    margin-right: 0px;
+.yearBack{
+  display: flex;
+}
+
+span.publication-year {
+    width: auto;
+    display: block;
+    border: 0px;
+    height: auto;
+    font-size: 32px;
+    position: relative;
+    right: 1px;
+}
+
+span.issues-year-total{
+  width: auto;
+  height: auto;
+  display: block;
+  font-size: inherit;
+}
+
+
+
+.activeMonth{
+  width:auto !important;
+}
+
+.activeMonth .month-issues-container{
+  display: flex;
+}
+
+.publication-year-container-label {
+    width: 400px !important;
+     flex-direction: column;
+
+}
+.months-container{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 0px;
+    padding-bottom: 60px;
+    padding-right: 20px;
+    justify-content: center;
+    width: 100%;
+    padding-top: 60px;
+    border-left: 1px solid #cecece;
+    margin-left: 70px;
+    padding-left: 40px;
+    margin-top: 40px;
+}
+
+.publication-year-container:hover{
+  border-bottom: 0px !important;
+}
+
+.month-container {
+    position: relative;
+        cursor: pointer;
+
+}
+
+.filler-calendar{
+  pointer-events: none;
+  cursor: default;
+}
+
+.month-container-label {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px !important;
+    margin: 10px !important;
+    position: relative;
+    margin-bottom: 0px !important;
+    border-radius: 3px;
+    margin-top: 0px;
+    padding-bottom: 0px !important;
+    border: 0px;
+    transition-duration: 0.5s;
+}
+
+span.month-container-label-month {
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+span.month-container-label-count {
+    position: absolute;
+    bottom: -20px;
+    background: #327bb3;
+    width: 100%;
+    left: -1px;
+    text-align: center;
+    text-transform: uppercase;
+    border: 1px solid #327bb3;
+    color: white;
+    box-sizing: content-box;
+    border-radius: 0px 0px 3px 3px;
+}
+}
+
+//end activeYear
+
+
+//begin issueLevel styleSheets
+
+.issueLevel{
+
+.issuePreview{
+    height: 700px;
+    overflow: hidden;
+    width: 50%;
+    margin: 0px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-top: 50px;
+    img.lazy {
+    position: absolute;
+    width: 580px;
+    transition-duration: inherit !important;
+        border: 1px solid #cecece;
+
+    }
+
+
+
+    .dayPrompt {
+    border: 1px solid #cecece;
+    height: 410px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+}
+
+
+
+}
+
+.ui-datepicker-title {
+    font-size: 24px;
+    letter-spacing: 2px;
+    padding-left: 15px;
+    padding-bottom: 20px;
+    span.ui-datepicker-month {
+    text-transform: uppercase;
+    font-weight: 700;
+}
+}
+
+
+span.filler-border {
+    display: block;
+    width: calc(100% - 220px);
+    height: 20px;
+    border-bottom: 1px solid #cecece;
+    position: absolute;
+    right: 32px;
+}
+
+thead {
+    font-size: 11px;
+}
+
+.month-container{
+  cursor: auto;
+}
+.dayContainer a, .dayContainer, td {
+    cursor: default;
+}
+
+.highlight .dayContainer a, td.highlight, .highlight .dayContainer {
+    color: white;
+    cursor: pointer !important;
+}
+
+.highlight .dayContainer {
+    background: #676767;
+    border: 1px solid #676767;
+}
+
+#calendar, .issue-container, .publication-year-container-label, .dayContainer > .dayIssue, a.ui-datepicker-prev, a.ui-datepicker-next{
+  display: none !important;
+}
+
+td.ui-datepicker-other-month.ui-datepicker-unselectable.ui-state-disabled {
+    opacity: 0;
+    height: 0px;
+    padding: 0px;
+}
+
+
+table.ui-datepicker-calendar{
+  border: 0px;
+}
+
+th {
+    text-align: center;
+    background: transparent;
+    border: 0px;
+      color: #898989;
+      font-weight: 700;
+}
+
+.dayContainer {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    padding: 0px;
+    margin: 4px 2px;
+    border: 1px solid #cecece;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2px;
+}
+
+.dayContainer a{
+      font-size: 20px;
+      color: #898989;
+}
+
+.issuePreviewDay{
+    height: 700px;
+    overflow: hidden;
+    width: 50%;
+    margin: 0px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-top: 50px;
+    img.lazy {
+    position: absolute;
+    width: 580px;
+    transition-duration: inherit !important;
+        border: 1px solid #cecece;
+
+    }
+
+    .dayPrompt {
+    border: 1px solid #cecece;
+    height: 410px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+}
+
+
+
+}
+
+
+.month-issues-container > div:not(.issue-container) {
+    display: none;
+}
+.publication-year-container:hover{
+
+  .firstYearCover{
+    transform: scale3d(1, 1, 1);
+    transition-duration: 0.2s;
+  }
+
+
+}
+
+.islandora-newspaper-grid {
+    margin-top: 0px;
+}
+
+.publication-year-container{
+      box-shadow: none;
+    width: 100%;
+    height: fit-content;
+    flex-direction: row !important;
+    margin-right: 0px;
+    height: -moz-fit-content;
+}
+
+#calendar{
+
+.ui-datepicker td a {
+    text-align: center;
+  }
+
+
+
+}
+
+.islandora-newspaper-grid .publication-year-container .publication-year-container-label{
+pointer-events: none !important;
+    height: 180px;
+    justify-content: center;
+flex-direction: row-reverse;
+}
+
+.islandora-newspaper-grid .publication-year-container{
+  flex-direction: column;
+}
+
+.publication-year-container:hover{
+  transform: translateY(0px);
+  transition-duration: 0s;
+}
+
+.monthBack{
+  display: flex !important;
+}
+
+  .yearBack, .issues-year-total{
+    display: none !important;
+  }
+
+.issue-container {
+    padding: 0px 20px;
+    font-size: 20px;
+    background: #327bb3;
+    margin-right: 10px;
+    border-radius: 3px;
+    letter-spacing: 2px;
+    padding-bottom: 2px;
+
+}
+
+.issue-container a{
+  color: white;
+}
+
+    .yearSelect, .monthSelect{
+      cursor: pointer;
+    }
+
+    .yearSelect:hover, .monthSelect:hover{
+opacity: 0.8;
+    transition-duration: 0.5s;
+
+   }
+
+
+  .months-container{
+    flex-grow: 2;
+  }
+
+.activeMonth{
+  border:0px !important;
+  margin-bottom: 0px !important;
+}
+
+.activeMonth > span{
+  display: none;
+}
+
+  span.month-container-label-month.monthTempLabel {
+    font-size: 32px !important;
+}
+
+  span.publication-year{
+margin-left:  10px;
+  }
+}
+
+//end issueLevel style
+
+//begin navigation stages
+
+.secondStage{
+  .activeIndicator {
+    transform: scale3d(0.66, 1, 1);
+    }
+}
+
+
+.thirdStage{
+  .activeIndicator {
+    transform: scale3d(1, 1, 1);
+    }
+}
+
+//end navigation stages
+#islandora-openseadragon{
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   position: absolute;
   z-index: 2;
   height: 100vh;
@@ -6234,7 +7494,7 @@ div.islandora-large-image-content{
   display: none;
 }
 
-.image_header{
+.image_header, .newspaper_header{
   display: flex;
   justify-content: center;
   background: $darkTransparent;
@@ -6242,27 +7502,10 @@ div.islandora-large-image-content{
   position: relative;
   overflow: hidden;
   padding-top: 200px;
+      transition-duration: 1s;
 }
 
-.image_headerMenu{
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-flex-wrap: wrap;
-position: relative;
-border: 0px !important;
-max-width: 1200px;
-margin: 0px 20px;
-margin-bottom: 20px;
-transition-duration: 1s;
-width: 100%;
 
-.imageTitle{
-font-size: 40px;
-color: white;
-line-height: 37px;
-}
-}
 
 .imageToolbar {
     flex-direction: row-reverse;
@@ -6895,6 +8138,65 @@ span.breadcrumbDivider {
   text-decoration: underline;
 }
 
+
+body.multipleDaily{
+
+.month-issues-container {
+    display: flex;
+    flex-direction: column;
+.issue-date {
+    font-size: 13px;
+}
+.issue-container{
+  margin-bottom:20px;
+}
+}
+
+  .multipleNotice {
+
+    text-align: center;
+    background: #676767;
+    color: white;
+    padding: 20px;
+    border-radius: 4px 4px 0px 0px;
+  }
+
+  .month-issues-container {
+    display: flex;
+    border: 1px solid #cecece;
+    padding: 20px;
+    color: #676767;
+    border-top: 0px;
+  }
+
+  .months-container{
+    border: 0px !important;
+  }
+
+  .issuePreview{
+    display: none !important;
+  }
+
+  .ui-datepicker-group{
+    display: none !important;
+  }
+
+ .islandora-newspaper-grid .publication-year-container.activeYear .month-container-label{
+   flex-direction: column;
+ }
+
+ .issueLevel .issue-container {
+    display: block !important;
+    background: none;
+    a{
+    color: #676767;
+    }
+    img {
+      display: none !important;
+    }
+ }
+}
+
 //End item 2.0
 
 @media screen and (min-width: 2000px) {
@@ -7280,6 +8582,24 @@ margin-bottom: 20px;
   }
   @media screen and (max-width: 900px) {
 
+body.headerversiontwo{
+  .downloadList{
+    top:248px;
+    .datastream-download-details{
+      width: auto;
+    }
+  }
+
+  .downloadLink{
+    width: 250px;
+  }
+
+div#shareToggle.activeMenu {
+    margin-left: 15px !important;
+}
+
+}
+
 body.compoundChildImage {
       background: white !important;
       .metadataSidebar.nano-content {
@@ -7504,7 +8824,7 @@ body.largeImage{
 
 .downloadSelect{
   margin-left: 0px !important;
-  margin-right: 10px !important;
+  margin-right: 5px !important;
 }
 
   .tagsGlance, .bookDesc, .infoToggle{
@@ -8581,6 +9901,8 @@ body.IEuser {
   }
 }
 
+
+
 //jssocials CSS
 
 //.jssocials-shares {
@@ -8592,14 +9914,14 @@ body.IEuser {
 .jssocials-share {
   display: inline-block;
   vertical-align: top;
-  margin: 0.3em 0.6em 0.3em 0; }
+  margin: 0.3em 0.6em 0.3em 0;  }
 
 .jssocials-share:last-child {
   margin-right: 0; }
 
 .jssocials-share-logo {
   width: 1em;
-  vertical-align: middle;
+  vertical-align: top;
   font-size: 1.5em; }
 
 img.jssocials-share-logo {
@@ -8612,7 +9934,7 @@ img.jssocials-share-logo {
   text-decoration: none;
   line-height: 1; }
   .jssocials-share-link.jssocials-share-link-count {
-    padding-top: .2em; }
+    padding-top: .2em ; }
     .jssocials-share-link.jssocials-share-link-count .jssocials-share-count {
       display: block;
       font-size: .6em;
@@ -8782,7 +10104,7 @@ img.jssocials-share-logo {
   right      : 0;
   top        : 0;
   bottom     : 0;
-  visibility : hidden\9; /* Target only IE7 and IE8 with this hack */
+  visibility : hidden\9; /* Target only IE7 and IE8 with this hsack */
   opacity    : .01;
   -webkit-transition    : .2s;
   -moz-transition       : .2s;
