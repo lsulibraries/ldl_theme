@@ -97,6 +97,7 @@
         $('.issueNav:contains(Next), .issueNav:contains(Prev)').remove();
         $('.issueNav:contains(All Issues)').hide();
         $('span.islandora-newspaper-issue-navigator').remove();
+
       }
 
       function itemHeader(){
@@ -244,6 +245,10 @@
             $('#btnSrch').toggleClass('active');
             $('.bookDetails').toggleClass('active');
             $('.bookDetails').toggleClass('active');
+        }
+        if ($(".islandora-newspaper-issue").length) {
+          $('.chooseIcon').html('<i class="fas fa-newspaper"></i>');          
+          $('.chooseText').html('View');
         }
       }
 
