@@ -6539,6 +6539,9 @@ color: #676767;
 
 }
 
+
+
+
 //begin largeImage 2.0
 body.largeImage, body.newspaperSet{
 
@@ -7555,6 +7558,15 @@ div.islandora-large-image-content{
 }
 
 //end largeImage 2.0
+body.newspaperSet.newspaperList.mobileNewspaper{
+  .publication-year-container.viewYears {
+    margin: 0px 0px 20px 0px !important;
+  }
+  img.lazy{
+    display: none !important;
+  }
+}
+
 
 body.mobileNewspaper{
 .issuePreview, .month-container, .islandora-newspaper-grid .viewYears .issue-container > a{

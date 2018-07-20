@@ -183,6 +183,24 @@
         $(".newspaper-thumbnail").appendTo(".newspaperPreview");
         $("<div class='newspaper-thumbnailData'/>").insertAfter(".total-issue-count");
         $(".downloadList").insertAfter(".newspaper_headerMenu");
+        $("<div class='newspaper-listToggle'>List View</div>").insertAfter(".newspaper-thumbnailData");
+      }
+
+      function yearBack(){
+        $("body").removeClass('multipleDaily');
+        $(".monthTempLabel, .multipleNotice").remove();
+        $(".newsSelect").removeClass('activeSelect');
+        $(".yearSelect").addClass('activeSelect');
+        $(".publication-year-container").removeClass("inactiveYear");
+        $(".publication-year-container").removeClass("activeYear");
+        $(".publication-year-container").addClass("viewYears");
+        $(".islandora-newspaper-navigation").removeClass('secondStage');
+        $(".islandora-newspaper-navigation").removeClass('thirdStage');
+        $(".newspaperContainer").removeClass("monthLevel");
+        $(".newspaperContainer").removeClass("issueLevel");
+        $(".month-container-label").removeClass("inactiveYear");
+        $(".month-container-label").removeClass("activeMonth");
+        $(".circleDay").remove();
       }
 
       function bookFooter(){
@@ -827,21 +845,15 @@
       });
       //back to year
       $(".yearSelect, .yearBack").click(function(){
-        $("body").removeClass('multipleDaily');
-        $(".monthTempLabel, .multipleNotice").remove();
-        $(".newsSelect").removeClass('activeSelect');
-        $(".yearSelect").addClass('activeSelect');
-        $(".publication-year-container").removeClass("inactiveYear");
-        $(".publication-year-container").removeClass("activeYear");
-        $(".publication-year-container").addClass("viewYears");
-        $(".islandora-newspaper-navigation").removeClass('secondStage');
-        $(".islandora-newspaper-navigation").removeClass('thirdStage');
-        $(".newspaperContainer").removeClass("monthLevel");
-        $(".newspaperContainer").removeClass("issueLevel");
-        $(".month-container-label").removeClass("inactiveYear");
-        $(".month-container-label").removeClass("activeMonth");
-        $(".circleDay").remove();
-        //$(".filler-calendar").remove();
+        yearBack();
+      });
+
+
+      $(".newspaper-listToggle").click(function(){
+        yearBack();
+        $("body").toggleClass('mobileNewspaper newspaperList');
+
+
       });
       //$("<div class='contentLabel newspaperLabel2'>Newspaper Selection</div>").insertAfter(".newspaper-thumbnailData");
       //end newspaper selection logic

@@ -5449,6 +5449,11 @@ body.largeImage, body.newspaperSet {
     font-size: 13px;
     letter-spacing: 1px; }
 
+body.newspaperSet.newspaperList.mobileNewspaper .publication-year-container.viewYears {
+  margin: 0px 0px 20px 0px !important; }
+body.newspaperSet.newspaperList.mobileNewspaper img.lazy {
+  display: none !important; }
+
 body.mobileNewspaper .issuePreview, body.mobileNewspaper .month-container, body.mobileNewspaper .islandora-newspaper-grid .viewYears .issue-container > a {
   display: flex !important;
   flex-direction: column; }
