@@ -76,7 +76,10 @@
       function pageImage(){
         $('.islandora-newspaper-content-wrapper').remove();
         $('.islandora-newspaper-controls').insertBefore('.infoToggle')
-
+        var newspaperText = $(".depth-4 > a").clone(); //creates href path from breadcrumb depth-2
+        var newspaperHome = $(".depth-4 > a").attr('href'); //creates href path from breadcrumb depth-2
+        $( " <span class='breadcrumbDivider'>/</span>" ).insertAfter( ".institutionSmall:last" ); //needs to be separated from the a href
+        $(newspaperText).addClass("institutionSmall").appendTo(".headerBreadcrumb"); //creates institution breadcrumb
       }
 
       function newspaperIssue(){
