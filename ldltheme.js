@@ -273,6 +273,11 @@
         $("#sideMods").appendTo(".region-sidebar-first-inner");
         $("#sideMods").addClass("metadataContainer");
         $(".islandora-newspaper-metadata, .islandora-newspaper-issue-metadata, .islandora-newspaper-page-metadata").remove();  //removes empty old div
+        $(".metadataSidebar .sidebarLabel").remove(); //removes refine results text which bleeds over from search results
+        if (!$(".metadataContainer .metadataRow").length){ //hide details toggle if metadata is empty
+            $(".infoToggle").hide();
+        }
+
 
       }   //end metadata move
 
