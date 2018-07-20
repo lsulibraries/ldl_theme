@@ -695,7 +695,7 @@
           $('.firstYearCover').jail({
            effect: 'fadeIn',
            event: 'load',
-           placeholder: 'http://creativeme.guru/app/img/loader.gif',
+           placeholder: 'http://gifimage.net/wp-content/uploads/2017/02/Loading-GIF-Image-7.gif',
            id: "firstYear",
           });
           //hover for showing first month covers
@@ -849,9 +849,14 @@
       });
 
 
+
       $(".newspaper-listToggle").click(function(){
-        yearBack();
-        $("body").toggleClass('mobileNewspaper newspaperList');
+        $(".islandora-newspaper-grid").fadeOut("normal", function() {
+                yearBack();
+                $("body").toggleClass('mobileNewspaper newspaperList');
+        $(".islandora-newspaper-grid").fadeIn("normal");
+    });
+
 
 
       });

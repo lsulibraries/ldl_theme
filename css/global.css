@@ -5453,6 +5453,8 @@ body.newspaperSet.newspaperList.mobileNewspaper .publication-year-container.view
   margin: 0px 0px 20px 0px !important; }
 body.newspaperSet.newspaperList.mobileNewspaper img.lazy {
   display: none !important; }
+body.newspaperSet.newspaperList.mobileNewspaper .infoToggle {
+  display: flex !important; }
 
 body.mobileNewspaper .issuePreview, body.mobileNewspaper .month-container, body.mobileNewspaper .islandora-newspaper-grid .viewYears .issue-container > a {
   display: flex !important;
