@@ -872,7 +872,8 @@ function monthClick(){
         yearBack();
       });
 
-
+       yearClick();
+       monthClick();
 
       $(".newspaper-listToggle").toggle(function(){
         $('.publication-year-container-label, .month-container-label').off("click");//disabled buttons
