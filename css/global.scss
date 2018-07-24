@@ -4104,6 +4104,10 @@ color: #676767;
     margin: 0px auto;
     box-sizing: border-box;
     margin-top:20px;
+
+
+
+
  }
 
 .contentLabel.newspaperLabel2 {
@@ -4322,9 +4326,9 @@ form#islandora-ip-embargo-object-embargo-form {
 
       .imageLabel{
       background-image: url($imageLegend);
-margin-right: 24px;
-padding-left: 48px;
-    padding-right: 25px;
+      margin-right: 24px;
+      padding-left: 48px;
+      padding-right: 25px;
       }
 
 .imageLabel::before {
@@ -5249,6 +5253,16 @@ body.headerversiontwo{
 background: black;
 
 margin: 0px;
+
+.contentLabel{
+  .fa-newspaper, .fa-image {
+      position: absolute;
+      left: 2px;
+      bottom: 4px;
+      font-size: 14px;
+  }
+}
+
 
 .issueMenu{
   display: flex;

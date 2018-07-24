@@ -131,7 +131,7 @@
         $("<div class='imageMenu'/>").appendTo(".imagePreview"); //adds label break
         //$("#bookTitle").clone().attr("id", "bookmenuTitle").appendTo(".bookMenu"); // undoes default title truncation
         $("<div class='chooseMenu'/>").appendTo(".imageMenu"); //adds label break
-        $("<div class='chooseImage chooseViewer'><div class='chooseIcon'><i class='fa fa-photo'></i></div><div class='chooseText'>Open Image Viewer</div></div>").appendTo(".chooseMenu"); //adds label break
+        $("<div class='chooseImage chooseViewer'><div class='chooseIcon'><i class='fa fa-image'></i></div><div class='chooseText'>Open Image Viewer</div></div>").appendTo(".chooseMenu"); //adds label break
         $(".downloadList").insertAfter(".image_headerMenu");
       }
 
@@ -144,7 +144,7 @@
         $(".metadataSidebar .modsSubject a").clone().appendTo(".descContainer .descriptionText").addClass("modsSubject").wrapAll('<div class="tagsGlance"/>');
         $(".metadataSidebar").clone().prop({ class: "metadataVertical"}).appendTo('.content .descContainer .descriptionText');
         $(".downloadSelect").insertAfter(".infoToggle");
-        $("<i class='fa fa-photo' aria-hidden='true'></i>").appendTo(".imageLabel");
+        $("<i class='fa fa-image' aria-hidden='true'></i>").appendTo(".imageLabel");
       }
 
       function bookContainer(){
@@ -247,7 +247,7 @@
             $('.bookDetails').toggleClass('active');
         }
         if ($(".islandora-newspaper-issue").length) {
-          $('.chooseIcon').html('<i class="fas fa-newspaper"></i>');          
+          $('.chooseIcon').html('<i class="fas fa-newspaper"></i>');
           $('.chooseText').html('View');
         }
       }
@@ -677,7 +677,7 @@
           $(".metadataSidebar .modsSubject a").clone().appendTo(".descContainer .descriptionText").addClass("modsSubject").wrapAll('<div class="tagsGlance"/>');
           $(".metadataSidebar").clone().prop({ class: "metadataVertical"}).appendTo('.content .descContainer .descriptionText');
           $(".downloadSelect").insertAfter(".infoToggle");
-          $("<i class='fa fa-photo' aria-hidden='true'></i>").appendTo(".newspaperLabel");
+          $("<i class='fa fa-newspaper' aria-hidden='true'></i>").appendTo(".newspaperLabel");
           $(".total-issue-count").insertAfter(".newspaper-thumbnailData > span");
 
           if ($(window).width() < 900) {
