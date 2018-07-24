@@ -5254,6 +5254,62 @@ background: black;
 
 margin: 0px;
 
+.newspaper-listToggle {
+    position: absolute;
+    bottom: -25px;
+    z-index: 99;
+    border-left: 12px solid white;
+    border-right: 12px solid white;
+    align-self: center;
+}
+
+.toggleContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+    border-radius: 5px;
+    background: #f0f0f0;
+    -moz-box-shadow: inset 0 0 150px #898989;
+    -webkit-box-shadow: inset 0 0 150px #898989;
+    box-shadow: inset 0 0 150px #898989;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    .select {
+    padding: 20px;
+    height: 10px;
+    box-sizing: content-box;
+    display: flex;
+    align-items: center;
+    z-index: 99;
+    font-size: 12px;
+    width: 100px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #676767;
+    letter-spacing: 1px;
+    justify-content: center;
+    }
+    .toggleSlider {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        height: 50px;
+        width: 50%;
+        background: white;
+        display: block;
+        margin: 2px;
+        border-radius: 3px;
+        transform: translateX(0px);
+        transition-duration: 0.2s;
+    }
+    .toggleSlider.active{
+      transform: translateX(138px);
+      transition-duration: 0.2s;
+    }
+}
+
 .contentLabel{
   .fa-newspaper, .fa-image {
       position: absolute;
@@ -6621,7 +6677,6 @@ td.highlight {
     display: flex;
     flex-wrap: wrap;
     border-bottom: 0px;
-    padding-top: 10px;
     padding-bottom: 20px;
     background: white;
     position: relative;
@@ -6657,6 +6712,9 @@ td.highlight {
     align-items: flex-start;
     margin: 0px 20px;
     margin-bottom: 20px;
+    border-bottom: 1px solid #cecece;
+    padding-bottom: 60px;
+    position: relative;
 }
 
 .islandora-newspaper-content-wrapper {
@@ -6664,6 +6722,7 @@ td.highlight {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    position: relative;
 }
 
 .islandora-newspaper-grid{
