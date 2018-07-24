@@ -4908,7 +4908,8 @@ body.largeImage, body.newspaperSet {
     margin-bottom: 0px;
     width: 100%;
     justify-content: space-around;
-    position: relative; }
+    position: relative;
+    margin-top: 20px; }
   body.largeImage .month-container::first-child, body.newspaperSet .month-container::first-child {
     display: block;
     pointer-events: none; }
@@ -4926,13 +4927,15 @@ body.largeImage, body.newspaperSet {
     margin-bottom: 20px;
     border-bottom: 1px solid #cecece;
     padding-bottom: 60px;
-    position: relative; }
+    position: relative;
+    width: 100%; }
   body.largeImage .islandora-newspaper-content-wrapper, body.newspaperSet .islandora-newspaper-content-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    position: relative; }
+    position: relative;
+    width: 100%; }
   body.largeImage .islandora-newspaper-grid, body.newspaperSet .islandora-newspaper-grid {
     display: flex;
     flex-wrap: wrap;
