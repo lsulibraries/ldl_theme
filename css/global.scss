@@ -7817,6 +7817,96 @@ body.compoundChildImage {
 
 /*BEGIN test area*/
 
+//begin content stats
+body.context-data{
+    .content.clearfix {
+        max-width: 1200px;
+        display: flex;
+        margin: 0 auto;
+    }
+
+    .tableStats {
+        display: flex;
+        background: white;
+        legend {
+            height: 110px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        fieldset {
+          padding: 0px 20px;
+          width: 50%;
+        }
+        .ics_table_collapse{
+          max-height: 1000px;
+          overflow: auto;
+        }
+    }
+    legend {
+        width: 100%;
+        text-align: center;
+        background: white;
+        border-bottom: 1px solid #cecece;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    fieldset {
+        background: white;
+        height: auto !important;
+    }
+    .global_totals {
+        background: white;
+        padding: 40px;
+    }
+    .instGroup {
+        display: flex;
+        flex-wrap: wrap;
+        background: #f0f0f0;
+        .inst_wrapper {
+            background: white;
+            margin: 1px;
+            width: calc( 20% - 2px);
+            height: auto;
+            display: flex;
+            align-items: flex-start;
+            position: relative;
+            flex-direction: column;
+            padding-left: 20px;
+            box-sizing: border-box;
+            padding-top: 90px;
+            padding-bottom: 30px;
+        }
+        .inst {
+            display: none;
+        }
+        .cmodel_wrapper_inst:first-child .inst {
+            display: block;
+            position: absolute;
+            top: 0px;
+            align-self: center;
+            width: 100%;
+            left: 0px;
+            text-align: center;
+            padding: 20px 0px;
+            border-bottom: 1px solid #cecece;
+        }
+        .cmodel_wrapper_inst {
+            display: flex;
+            .cmodel{
+                font-weight: 700;
+            }
+            .total {
+                margin-left: 5px;
+            }
+        }
+        .inst_wrapper:nth-child(5n) {
+            margin-right: 0px;
+        }
+    }
+}
+
+
 section#block-islandora-solr-sort .item-list {
   border: 0px;
   margin: 0px;

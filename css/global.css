@@ -5621,6 +5621,75 @@ body.compoundChildImage {
   background: white !important; }
 
 /*BEGIN test area*/
+body.context-data .content.clearfix {
+  max-width: 1200px;
+  display: flex;
+  margin: 0 auto; }
+body.context-data .tableStats {
+  display: flex;
+  background: white; }
+  body.context-data .tableStats legend {
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  body.context-data .tableStats fieldset {
+    padding: 0px 20px;
+    width: 50%; }
+  body.context-data .tableStats .ics_table_collapse {
+    max-height: 1000px;
+    overflow: auto; }
+body.context-data legend {
+  width: 100%;
+  text-align: center;
+  background: white;
+  border-bottom: 1px solid #cecece;
+  padding: 20px;
+  box-sizing: border-box; }
+body.context-data fieldset {
+  background: white;
+  height: auto !important; }
+body.context-data .global_totals {
+  background: white;
+  padding: 40px; }
+body.context-data .instGroup {
+  display: flex;
+  flex-wrap: wrap;
+  background: #f0f0f0; }
+  body.context-data .instGroup .inst_wrapper {
+    background: white;
+    margin: 1px;
+    width: calc( 20% - 2px);
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    flex-direction: column;
+    padding-left: 20px;
+    box-sizing: border-box;
+    padding-top: 90px;
+    padding-bottom: 30px; }
+  body.context-data .instGroup .inst {
+    display: none; }
+  body.context-data .instGroup .cmodel_wrapper_inst:first-child .inst {
+    display: block;
+    position: absolute;
+    top: 0px;
+    align-self: center;
+    width: 100%;
+    left: 0px;
+    text-align: center;
+    padding: 20px 0px;
+    border-bottom: 1px solid #cecece; }
+  body.context-data .instGroup .cmodel_wrapper_inst {
+    display: flex; }
+    body.context-data .instGroup .cmodel_wrapper_inst .cmodel {
+      font-weight: 700; }
+    body.context-data .instGroup .cmodel_wrapper_inst .total {
+      margin-left: 5px; }
+  body.context-data .instGroup .inst_wrapper:nth-child(5n) {
+    margin-right: 0px; }
+
 section#block-islandora-solr-sort .item-list {
   border: 0px;
   margin: 0px; }
