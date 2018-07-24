@@ -7824,7 +7824,9 @@ body.context-data{
         display: flex;
         margin: 0 auto;
     }
-
+    #islandora-content-stats-form {
+        margin: 20px 0px;
+    }
     .tableStats {
         display: flex;
         background: white;
@@ -7836,7 +7838,6 @@ body.context-data{
         }
         fieldset {
           padding: 0px 20px;
-          width: 50%;
         }
         .ics_table_collapse{
           max-height: 1000px;

@@ -5634,8 +5634,7 @@ body.context-data .tableStats {
     align-items: center;
     justify-content: center; }
   body.context-data .tableStats fieldset {
-    padding: 0px 20px;
-    width: 50%; }
+    padding: 0px 20px; }
   body.context-data .tableStats .ics_table_collapse {
     max-height: 1000px;
     overflow: auto; }
