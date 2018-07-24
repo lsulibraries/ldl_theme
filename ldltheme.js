@@ -195,7 +195,7 @@
         $(".newspaper-thumbnail").appendTo(".newspaperPreview");
         $("<div class='newspaper-thumbnailData'/>").insertAfter(".total-issue-count");
         $(".downloadList").insertAfter(".newspaper_headerMenu");
-        $("<div class='newspaper-listToggle'>List View</div>").insertAfter(".newspaper-thumbnailData");
+        $("<div class='newspaper-listToggle'><div class='toggleContainer'><div class='select selectThumbnails'>Grid View</div><div class='select selectList'>List View</div><div class='toggleSlider'></div></div></div>").appendTo(".newspaper-thumbnailData");
       }
 
       function yearBack(){
@@ -878,11 +878,14 @@ function monthClick(){
       $(".newspaper-listToggle").toggle(function(){
         $('.publication-year-container-label, .month-container-label').off("click");//disabled buttons
         fadeList();
+        $('.toggleSlider').toggleClass('active');
       }, function(){
         $('.publication-year-container-label, .month-container-label').on("click");//disabled buttons
         fadeList();
         yearClick();
         monthClick();
+        $('.toggleSlider').toggleClass('active');
+
       });
       //$("<div class='contentLabel newspaperLabel2'>Newspaper Selection</div>").insertAfter(".newspaper-thumbnailData");
       //end newspaper selection logic
