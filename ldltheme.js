@@ -82,6 +82,14 @@
         $(newspaperText).addClass("institutionSmall").appendTo(".headerBreadcrumb"); //creates institution breadcrumb
       }
 
+      function fadeList(){
+        $(".islandora-newspaper-grid").fadeOut("normal", function() {
+          yearBack();
+          $("body").toggleClass('mobileNewspaper newspaperList');
+          $(".islandora-newspaper-grid").fadeIn("normal");
+        });
+      }
+
       function newspaperIssue(){
         var newspaperText = $(".depth-4 > a").clone(); //creates href path from breadcrumb depth-2
         var newspaperHome = $(".depth-4 > a").attr('href'); //creates href path from breadcrumb depth-2
@@ -97,7 +105,7 @@
         $('.issueNav:contains(Next), .issueNav:contains(Prev)').remove();
         $('.issueNav:contains(All Issues)').hide();
         $('span.islandora-newspaper-issue-navigator').remove();
-
+        $('.bookLabel').css('background-image, none');
       }
 
       function itemHeader(){
@@ -731,6 +739,8 @@
            $("div.issuePreview").find( ".firstMonthCover:last" ).fadeOut("slow", function() { $(this).remove(); });;
           }
           );
+
+function yearClick(){
         $('.publication-year-container-label').click(function(){
           // choose year, change indicators, change options for datepicker
           $(this).parent().addClass('activeYear'); // choose year
@@ -766,8 +776,10 @@
              });
           });
         });
-
+}
       var monthButton = $('div.month-container-label');
+
+function monthClick(){
       monthButton.click(function(){
         var thisMonth = $(this);
         $(this).addClass('activeMonth');
@@ -833,11 +845,8 @@
             $('<div class="multipleNotice">This month contains days with multiple issues</div>').insertBefore('.activeMonth span.month-container-label-month');
             console.log('multiple issues on one day');
         }
-
-
-
       });
-
+}
       //back to month
       $(".monthSelect, .monthBack").click(function(){
         $("body").removeClass('multipleDaily');
@@ -865,12 +874,14 @@
 
 
 
-      $(".newspaper-listToggle").click(function(){
-        $(".islandora-newspaper-grid").fadeOut("normal", function() {
-          yearBack();
-          $("body").toggleClass('mobileNewspaper newspaperList');
-          $(".islandora-newspaper-grid").fadeIn("normal");
-        });
+      $(".newspaper-listToggle").toggle(function(){
+        $('.publication-year-container-label, .month-container-label').off("click");//disabled buttons
+        fadeList();
+      }, function(){
+        $('.publication-year-container-label, .month-container-label').on("click");//disabled buttons
+        fadeList();
+        yearClick();
+        monthClick();
       });
       //$("<div class='contentLabel newspaperLabel2'>Newspaper Selection</div>").insertAfter(".newspaper-thumbnailData");
       //end newspaper selection logic
