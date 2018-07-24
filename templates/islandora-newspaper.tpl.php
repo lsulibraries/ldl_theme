@@ -80,7 +80,7 @@
                             <div class='issue-label'><?php print $issue['label']?></div>
                             <div class='issue-date'><?php print $issue['formatted-date']; ?></div>
                           </a>
-                          <img data-src="/islandora/object/<?php print $issue['cover-pid']; ?>/datastream/JPG/view" src="#" class="lazy"></a>
+                          <img data-src="<?php print $issue['cover-tn-path']; ?>" src="#" class="lazy"></a>
                         </div>
                         <div class='date-year'><?php print $issue['formatted-date-year']; ?></div>
                         <div class='date-month'><?php print $issue['formatted-date-month']; ?></div>

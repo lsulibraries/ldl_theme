@@ -55,7 +55,8 @@ function alpha_preprocess_islandora_newspaper(array &$variables) {
           $issue['formatted-date-year'] = $issue['issued']->format('Y');
           $issue['formatted-date-month'] = $issue['issued']->format('m');
           $issue['formatted-date-day'] = $issue['issued']->format('d');
-          $issue['cover-pid'] = newspaper_issue_first_page_pid($issue['pid']);
+
+          $issue['cover-tn-path'] = newspaper_issue_first_page_tn_path($issue['pid']);
           $nest[$year]['months'][$month]['issues'][] = $issue;
 
         }
@@ -78,7 +79,7 @@ function alpha_preprocess_islandora_newspaper(array &$variables) {
   $variables['totalYearCount'] = $yearTotal;
 }
 
-function newspaper_issue_first_page_pid($pid) {
+function newspaper_issue_first_page_tn_path($pid) {
   $query = <<<EOQ
   PREFIX islandora-rels-ext: <http://islandora.ca/ontology/relsext#>
     SELECT ?pid
@@ -111,7 +112,9 @@ EOQ;
     return $o['pid'];
   };
   $pids = array_map($get_pid, $pages);
-  return $pids[0];
+  $first_pid = array_shift($pids);
+  
+  return $first_pid ? "/islandora/object/$first_pid/datastream/JPG/view" : "";
 }
 
 function alpha_preprocess_islandora_large_image(&$variables) {
