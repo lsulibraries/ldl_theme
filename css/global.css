@@ -5631,6 +5631,8 @@ body.compoundChildImage {
   background: white !important; }
 
 /*BEGIN test area*/
+body.context-data .fieldset-wrapper {
+  width: 100%; }
 body.context-data .global {
   display: flex; }
   body.context-data .global .cmodel {
