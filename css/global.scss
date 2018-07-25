@@ -7843,6 +7843,16 @@ body.compoundChildImage {
 
 //begin content stats
 body.context-data{
+
+.global{
+  display: flex;
+
+  .cmodel {
+    font-weight: 700;
+    margin-right: 5px;
+}
+}
+
     .content.clearfix {
         max-width: 1200px;
         display: flex;

@@ -5631,6 +5631,11 @@ body.compoundChildImage {
   background: white !important; }
 
 /*BEGIN test area*/
+body.context-data .global {
+  display: flex; }
+  body.context-data .global .cmodel {
+    font-weight: 700;
+    margin-right: 5px; }
 body.context-data .content.clearfix {
   max-width: 1200px;
   display: flex;
