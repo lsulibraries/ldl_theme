@@ -4623,6 +4623,8 @@ body.bookViewer #book-viewer {
   max-width: 1600px;
   position: relative;
   margin: 0 auto; }
+  body.bookViewer #book-viewer .svg-inline--fa {
+    margin-right: 10px; }
 body.bookViewer #BookReader {
   position: relative;
   background-color: transparent;
@@ -5625,6 +5627,8 @@ body.context-data .content.clearfix {
   max-width: 1200px;
   display: flex;
   margin: 0 auto; }
+body.context-data #islandora-content-stats-form {
+  margin: 20px 0px; }
 body.context-data .tableStats {
   display: flex;
   background: white; }
