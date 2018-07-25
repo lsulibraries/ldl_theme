@@ -700,7 +700,7 @@
           $(".total-issue-count").insertAfter(".newspaper-thumbnailData > span");
 
           if ($(window).width() < 900) {
-              $('body').addClass('mobileNewspaper');
+              $('body').addClass('mobileNewspaper mobileDeviceNewspaper');
               var issueLinks = [];
               $( ".issue-container" ).each(function( index ) { // get links for each day
                 var date = new Date($(this).find("div.issue-date").html());

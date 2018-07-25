@@ -7639,6 +7639,10 @@ div.islandora-large-image-content{
 
 //end largeImage 2.0
 body.newspaperSet.newspaperList.mobileNewspaper{
+
+
+
+
   .publication-year-container.viewYears {
     margin: 0px 0px 20px 0px !important;
   }
@@ -7651,8 +7655,24 @@ body.newspaperSet.newspaperList.mobileNewspaper{
 }
 }
 
+body.mobileDeviceNewspaper{
+  .newspaper-thumbnailData{
+        border-bottom: 0px;
+      padding-bottom: 0px;
+      position: relative;
+      width: calc(100% - 40px);
+  }
+
+  .newspaper-listToggle{
+    display: none !important;
+  }
+}
+
 
 body.mobileNewspaper{
+
+
+
 .issuePreview, .month-container, .islandora-newspaper-grid .viewYears .issue-container > a{
     display: flex !important;
     flex-direction: column;

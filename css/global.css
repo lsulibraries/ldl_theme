@@ -5518,6 +5518,14 @@ body.newspaperSet.newspaperList.mobileNewspaper img.lazy {
 body.newspaperSet.newspaperList.mobileNewspaper .infoToggle {
   display: flex !important; }
 
+body.mobileDeviceNewspaper .newspaper-thumbnailData {
+  border-bottom: 0px;
+  padding-bottom: 0px;
+  position: relative;
+  width: calc(100% - 40px); }
+body.mobileDeviceNewspaper .newspaper-listToggle {
+  display: none !important; }
+
 body.mobileNewspaper .issuePreview, body.mobileNewspaper .month-container, body.mobileNewspaper .islandora-newspaper-grid .viewYears .issue-container > a {
   display: flex !important;
   flex-direction: column; }
