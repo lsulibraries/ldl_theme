@@ -81,40 +81,27 @@ function alpha_preprocess_islandora_newspaper(array &$variables) {
 
 function newspaper_issue_first_page_tn_path($pid) {
   $query = <<<EOQ
-  PREFIX islandora-rels-ext: <http://islandora.ca/ontology/relsext#>
-    SELECT ?pid
+    PREFIX islandora-rels-ext: <http://islandora.ca/ontology/relsext#>                                                                                                                                 
+    SELECT ?pid ?seq
     FROM <#ri>
-    WHERE {
-      ?pid <fedora-rels-ext:isMemberOf> <info:fedora/$pid> ;
-           islandora-rels-ext:isSequenceNumber '1' ;
-           <fedora-model:state> <fedora-model:Active> .
-
+      WHERE {
+      ?pid <fedora-rels-ext:isMemberOf> <info:fedora/$pid> .
+      ?pid islandora-rels-ext:isSequenceNumber ?seq .
+      ?pid <fedora-model:state> <fedora-model:Active> .
     }
+    ORDER BY ?seq
+    LIMIT 1
 EOQ;
   $connection = islandora_get_tuque_connection();
 
   $results = $connection->repository->ri->sparqlQuery($query);
 
-  // Get rid of the "extra" info...
-  $map = function($o) {
-    foreach ($o as $key => &$info) {
-      $info = $info['value'];
-    }
+  if (1 !== count($results)) {
+    return '';
+  }
+  $first_pid =  $results[0]['pid']['value'];
 
-    $o = array_filter($o);
-
-    return $o;
-  };
-  $pages = array_map($map, $results);
-
-  // Grab the PIDs...
-  $get_pid = function($o) {
-    return $o['pid'];
-  };
-  $pids = array_map($get_pid, $pages);
-  $first_pid = array_shift($pids);
-  
-  return $first_pid ? "/islandora/object/$first_pid/datastream/JPG/view" : "";
+  return "/islandora/object/$first_pid/datastream/JPG/view";
 }
 
 function alpha_preprocess_islandora_large_image(&$variables) {
