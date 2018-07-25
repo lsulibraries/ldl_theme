@@ -5631,6 +5631,13 @@ body.compoundChildImage {
   background: white !important; }
 
 /*BEGIN test area*/
+body.context-data .page_description {
+  background: white;
+  padding: 20px; }
+body.context-data .last_run {
+  padding: 20px;
+  background: white;
+  margin-bottom: 20px; }
 body.context-data .fieldset-wrapper {
   width: 100%; }
 body.context-data .global {
