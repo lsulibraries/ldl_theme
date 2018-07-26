@@ -534,15 +534,15 @@
         $("<div class='backgroundDiv'/>").insertBefore(".compoundGallery_header .form-item"); // adds div for item background
         var commentedURL = $('div.widest').find('noscript').addClass('widestIMG').text().split(" ");
         var srcclean = commentedURL[2].match(/"(.*?)"/);
-        $('.compoundSelect noscript').each(function() {    //begin embargo detection
-          str = $(this).html();
-          if (str.indexOf("embargo") >= 0){
-            $(this).parent().parent().addClass("embargoed");
-            $("body").addClass("containsEmbargo");
-            $(".ip-embargo-details").insertBefore(".content > div.islandora").wrapAll("<div class='alertBox_container'/>").wrapAll("<div class='alertBox'/>");
-            $("<span class='alertIcon'/>").insertBefore(".ip-embargo-details");
-          }
-        });
+        // $('.compoundSelect noscript').each(function() {    //begin embargo detection
+        //   str = $(this).html();
+        //   if (str.indexOf("embargo") >= 0){
+        //     $(this).parent().parent().addClass("embargoed");
+        //     $("body").addClass("containsEmbargo");
+        //     $(".ip-embargo-details").insertBefore(".content > div.islandora").wrapAll("<div class='alertBox_container'/>").wrapAll("<div class='alertBox'/>");
+        //     $("<span class='alertIcon'/>").insertBefore(".ip-embargo-details");
+        //   }
+        // });
         if ($('.ip-embargo-details').length){
           $('body').addClass('activeEmbargo');
         }
@@ -585,6 +585,7 @@
         }
         if ($('.compoundChild #islandora-openseadragon').length){
           $("body").addClass('compoundChildImage');
+
         }
         $('.compoundChild #block-system-main .block-inner .content > div').insertAfter('.itemMenu');
         $('#window-title').insertAfter('.itemMenu');
