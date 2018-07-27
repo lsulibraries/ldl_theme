@@ -7776,6 +7776,10 @@ body.compoundChildImage {
 
 body.compoundChild{
 
+.metadataSidebar.nano-content {
+    padding-top: 40px;
+}
+
 div#shareToggle.activeMenu {
     margin-left: 12px !important;
 }
@@ -9710,8 +9714,37 @@ border: 1px solid rgba(255, 255, 255, 0.33);
   @media screen and (max-width: 740px) {
 
 //begin compoundChild mobile
-.compoundChild{
+body.compoundChild{
 
+
+.userMenu{
+      margin-top: 20px;
+}
+.compoundArrows{
+    -webkit-transform: skew(0deg) !important;
+    -moz-transform: skew(0deg) !important;
+    -o-transform: skew(0deg) !important;
+    left: -25px !important;
+    border-radius: 0px !important;
+}
+
+.infoToggle.userSelect.menuActive{
+  margin-left: 0px;
+}
+
+#shareToggle {
+    margin-left: 5px !important;
+}
+    .iconSelect{
+      display: none !important;
+    }
+
+.headerBreadcrumb {
+    padding-top: 0px;
+    margin-top: 0px;
+    position: relative;
+    top: 0px;
+}
 
 #region-content {
     margin-left: 0px !important;

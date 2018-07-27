@@ -5578,6 +5578,8 @@ body.compoundChildImage {
   background: white !important; }
 
 /*BEGIN test area*/
+body.compoundChild .metadataSidebar.nano-content {
+  padding-top: 40px; }
 body.compoundChild div#shareToggle.activeMenu {
   margin-left: 12px !important; }
 body.compoundChild #shareToggle.userSelect {
@@ -6967,9 +6969,28 @@ body.multipleDaily .issueLevel .issue-container {
   .institution-collection-list-item-label {
     padding: 0px 30px; } }
 @media screen and (max-width: 1260px) and (max-width: 740px) {
-  .compoundChild #region-content {
+  body.compoundChild .userMenu {
+    margin-top: 20px; }
+  body.compoundChild .compoundArrows {
+    -webkit-transform: skew(0deg) !important;
+    -moz-transform: skew(0deg) !important;
+    -o-transform: skew(0deg) !important;
+    left: -25px !important;
+    border-radius: 0px !important; }
+  body.compoundChild .infoToggle.userSelect.menuActive {
+    margin-left: 0px; }
+  body.compoundChild #shareToggle {
+    margin-left: 5px !important; }
+  body.compoundChild .iconSelect {
+    display: none !important; }
+  body.compoundChild .headerBreadcrumb {
+    padding-top: 0px;
+    margin-top: 0px;
+    position: relative;
+    top: 0px; }
+  body.compoundChild #region-content {
     margin-left: 0px !important; }
-  .compoundChild #region-sidebar-first {
+  body.compoundChild #region-sidebar-first {
     height: calc(100vh - 160px) !important;
     width: 100vw !important;
     transform: translate(-100vw);
@@ -6977,15 +6998,15 @@ body.multipleDaily .issueLevel .issue-container {
     -o-transition-duration: 0.5s;
     -webkit-transition-duration: 0.5s;
     transition-duration: 0.5s; }
-  .compoundChild #region-sidebar-first.infoOpened {
+  body.compoundChild #region-sidebar-first.infoOpened {
     transform: translate(0vw);
     -moz-transition-duration: 0.5s;
     -o-transition-duration: 0.5s;
     -webkit-transition-duration: 0.5s;
     transition-duration: 0.5s; }
-  .compoundChild a.institutionSmall {
+  body.compoundChild a.institutionSmall {
     margin-left: 0px !important; }
-  .compoundChild .compoundArrows.userSelect {
+  body.compoundChild .compoundArrows.userSelect {
     position: absolute;
     top: -20px;
     width: 100vw !important;
@@ -6993,13 +7014,13 @@ body.multipleDaily .issueLevel .issue-container {
     justify-content: center;
     align-items: center;
     left: -20px; }
-  .compoundChild #islandora-compound-sequence-position, .compoundChild a#islandora-compound-previous-link, .compoundChild a#islandora-compound-next-link, .compoundChild .compoundObject a#islandora-compound-previous-link, .compoundObject .compoundChild a#islandora-compound-previous-link {
+  body.compoundChild #islandora-compound-sequence-position, body.compoundChild a#islandora-compound-previous-link, body.compoundChild a#islandora-compound-next-link, body.compoundChild .compoundObject a#islandora-compound-previous-link, .compoundObject body.compoundChild a#islandora-compound-previous-link {
     color: white !important; }
-  .compoundChild .compoundArrows:hover {
+  body.compoundChild .compoundArrows:hover {
     background: black !important; }
-  .compoundChild .metadataSidebar {
+  body.compoundChild .metadataSidebar {
     position: relative; }
-  .compoundChild .sidebarToggle {
+  body.compoundChild .sidebarToggle {
     position: fixed;
     cursor: pointer;
     display: block;
@@ -7014,41 +7035,41 @@ body.multipleDaily .issueLevel .issue-container {
     height: 60px;
     border: 20px solid #1a1a1a;
     box-sizing: content-box; }
-    .compoundChild .sidebarToggle .textSelect {
+    body.compoundChild .sidebarToggle .textSelect {
       display: block;
       opacity: 1;
       width: 100%; }
-    .compoundChild .sidebarToggle .iconSelect {
+    body.compoundChild .sidebarToggle .iconSelect {
       display: none; }
-  .compoundChild .islandora-openseadragon {
+  body.compoundChild .islandora-openseadragon {
     display: block;
     width: 100%;
     height: calc(100vh - 340px); }
-  .compoundChild .iconSelect {
+  body.compoundChild .iconSelect {
     height: auto; }
-  .compoundChild .childHeader {
+  body.compoundChild .childHeader {
     flex-direction: row;
     padding-top: 20px;
     height: fit-content; }
-  .compoundChild .compoundGallery_header {
+  body.compoundChild .compoundGallery_header {
     padding: 20px 20px;
     height: calc(100vh - 148px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     box-sizing: border-box; }
-    .compoundChild .compoundGallery_header a.institutionSmall {
+    body.compoundChild .compoundGallery_header a.institutionSmall {
       font-size: 11px; }
-    .compoundChild .compoundGallery_header .userMenu .infoToggle {
+    body.compoundChild .compoundGallery_header .userMenu .infoToggle {
       display: block; }
-    .compoundChild .compoundGallery_header .compoundParent {
+    body.compoundChild .compoundGallery_header .compoundParent {
       padding: 10px 30px;
       z-index: 22; }
-  .compoundChild h1#window-title {
+  body.compoundChild h1#window-title {
     font-size: 20px;
     line-height: 20px;
     width: 100%; }
-  .compoundChild .sidebarToggle .textSelect {
+  body.compoundChild .sidebarToggle .textSelect {
     position: inherit; }
 
   body.compoundParent .compoundGallery_header .compoundParent {

@@ -683,7 +683,7 @@
           $(".infoToggle").addClass('menuActive');
           $(".infoToggle .iconSelect").html('');
           $(".infoToggle .textSelect").html('Details');
-
+          $(".region-header-first").remove();
         }
         //end compoundChild
 
