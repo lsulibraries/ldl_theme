@@ -543,7 +543,7 @@
         //     $("<span class='alertIcon'/>").insertBefore(".ip-embargo-details");
         //   }
         // });
-        if ($('.ip-embargo-details').length){
+        if ($('.ip-embargo-details > div').length){
           $('body').addClass('activeEmbargo');
         }
         if (($('.ip-embargo-details').length) && (!$('.object-title').length)){
