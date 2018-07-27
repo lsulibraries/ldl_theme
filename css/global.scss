@@ -4807,14 +4807,12 @@ span.breadcrumbDivider {
     border: 1px solid #bababa;
     padding: 1px 10px;
     padding-top: 2px;
-    letter-spacing: 1px;
     height: 25px;
     box-sizing: border-box;
 }
 
 .manageMenu {
     display: flex;
-    padding-bottom: 20px;
 li a{
   color: #474747;
   border: 1px solid #bababa !important;
@@ -5053,10 +5051,7 @@ a#clip {
 
     }
 
-.userMenu{
-  align-items: center;
-  padding-bottom: 0px;
-}
+
 
 .navigator{
   border: 0px!important;
@@ -7791,15 +7786,34 @@ body.compoundChildImage {
 
 body.compoundChild{
 
+#shareToggle.userSelect{
+    border: 1px solid #cecece;
+    background: transparent;
+    box-sizing: border-box;  
+}
+
+.userMenu{
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+a.downloadLink.userSelect {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+
   .downloadLink.userSelect, .infoToggle{
     border: 1px solid #cecece;
     background: transparent;
+    box-sizing: border-box;
   }
 
   .infoToggle .userSelect{
           -webkit-transform: skew(0deg);
     -moz-transform: skew(0deg);
     -o-transform: skew(0deg);
+    background: transparent;
   }
 
   #block-islandora-compound-object-compound-jail-display > div{
