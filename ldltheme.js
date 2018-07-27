@@ -585,7 +585,6 @@
         }
         if ($('.compoundChild #islandora-openseadragon').length){
           $("body").addClass('compoundChildImage');
-
         }
         $('.compoundChild #block-system-main .block-inner .content > div').insertAfter('.itemMenu');
         $('#window-title').insertAfter('.itemMenu');
@@ -659,9 +658,6 @@
           $(".infoToggle:last-child").remove();
           $(".infoToggle").insertBefore(".downloadLink");
           $(".infoToggle").html("<div class='userSelect'><div class='iconSelect'><i class='fas fa-align-left'></i></div><div class='textSelect'>Toggle Info</div></div>");
-          $(".downloadSelect .iconSelect").html("<i class='fas fa-download'></i>");
-          $("#shareToggle .iconSelect").html("<i class='far fa-share-alt'></i>");
-          $("#clip.userSelect").html("<div class='iconSelect'><i class='fas fa-crop'></i></div><div class='textSelect'>Clip Image</div>");
           $(".compoundArrows").appendTo(".childHeader");
           $("#share").insertAfter("#shareToggle");
           $(".parentLink").wrapAll("<div class='headerBreadcrumb'/>");
@@ -676,9 +672,16 @@
                     $('body').toggleClass('metaOpened');
                     $(".nano").nanoScroller({ alwaysVisible: false });
               });
-              $(".manageMenu").appendTo(".childHeader");
-              $(".manageParent").insertAfter(".manageMenu .tabs");
+          $(".manageMenu").appendTo(".childHeader");
+          $(".manageParent").insertAfter(".manageMenu .tabs");
           $( ".breadcrumbDivider" ).insertAfter( ".institutionSmall" );
+          $(".userMenu").insertAfter('.childHeader');
+          //undo the download select drawer
+          $(".downloadSelect").remove();
+          $(".datastream-download-details").addClass("textSelect").html("Download");
+          $(".downloadLink").addClass("userSelect");
+
+
         }
         //end compoundChild
 

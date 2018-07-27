@@ -4886,16 +4886,6 @@ li a{
 width: auto;
 }
 
-.userMenu .userSelect {
-@extend .compoundParent;
-position: relative;
-height: 43px !important;
-width: 43px !important;
-box-sizing: border-box;
-padding: 0px !important;
-margin-right: 10px;
-}
-
 #shareToggle{
   margin-right: 0px;
 z-index: 2;
@@ -4910,55 +4900,7 @@ z-index: 2;
     font-size: 21px;
   }
 
-  .textSelect{
-position: absolute;
-    margin: 0px;
-    padding: 0px;
-    opacity: 0;
-    @include transition-duration(0s);
-width: auto;
- }
 
-  .downloadSelect .textSelect{
-min-width: 96px; //needed for IE
- }
-
-  #shareToggle .textSelect{
-min-width: 65px !important; //needed for IE
- }
-
-
-.userSelect:hover {
-  color: $LDLBlue;
-  border: 1px solid #bababa;
-    @include transition-duration(.2s);
-
-  .textSelect{
-    width: auto;
-    opacity: 1;
-    @include transition-duration(.5s);
-background: $LDLBlue;
-    color: white;
-    position: absolute;
-    top: -30px;
-    left: 0px;
-    padding: 0px 10px;
-    border-radius: 20px;
-  }
-}
-
-.infoToggle .textSelect {
-    padding-right: 0px;
-    font-size: 13px;
-    text-align: center;
-    color: #676767;
-          width: 100px !important;
-    position: absolute;
-}
-
-.infoToggle:hover .textSelect{
-
-}
 
 .navigator{
   background: none !important;
@@ -7848,6 +7790,26 @@ body.compoundChildImage {
 //begin compoundChild post-actionBar
 
 body.compoundChild{
+
+  .downloadLink.userSelect, .infoToggle{
+    border: 1px solid #cecece;
+    background: transparent;
+  }
+
+  .infoToggle .userSelect{
+          -webkit-transform: skew(0deg);
+    -moz-transform: skew(0deg);
+    -o-transform: skew(0deg);
+  }
+
+  #block-islandora-compound-object-compound-jail-display > div{
+    overflow: hidden;
+  }
+
+  .footerContainer{
+    display: none;
+  }
+
     .manageMenu li {
     border: 1px solid #cecece;
     }
