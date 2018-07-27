@@ -3618,7 +3618,7 @@ body.compoundParent .tagsGlance {
 body.logged-in.compoundChild .islandora-openseadragon {
   display: block;
   width: 100%;
-  height: calc(100vh - 430px); }
+  height: calc(100vh - 310px); }
 
 body.not-logged-in.compoundChild .manageMenu {
   display: none;
@@ -3795,8 +3795,6 @@ body.not-logged-in.compoundChild .manageMenu {
     padding-bottom: 3px; }
   .compoundChild .menuActive .iconSelect {
     background-color: transparent; }
-  .compoundChild .menuActive .textSelect {
-    background: rgba(0, 0, 0, 0.06); }
   .compoundChild .childNotice {
     height: 50px;
     color: #FF5370;
@@ -5580,6 +5578,8 @@ body.compoundChildImage {
   background: white !important; }
 
 /*BEGIN test area*/
+body.compoundChild div#shareToggle.activeMenu {
+  margin-left: 12px !important; }
 body.compoundChild #shareToggle.userSelect {
   border: 1px solid #cecece;
   background: transparent;
@@ -5611,8 +5611,10 @@ body.compoundChild .manageParent {
   margin: 0px;
   padding: 0px;
   border: 0px;
-  padding-left: 5px;
   transform: skew(-20deg);
+  -webkit-transform: skew(-20deg);
+  -moz-transform: skew(-20deg);
+  -o-transform: skew(-20deg);
   display: flex;
   height: 23px;
   margin-right: 5px;

@@ -680,7 +680,9 @@
           $(".downloadSelect").remove();
           $(".datastream-download-details").addClass("textSelect").html("Download");
           $(".downloadLink").addClass("userSelect");
-
+          $(".infoToggle").addClass('menuActive');
+          $(".infoToggle .iconSelect").html('');
+          $(".infoToggle .textSelect").html('Details');
 
         }
         //end compoundChild
