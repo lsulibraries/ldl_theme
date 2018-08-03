@@ -5638,6 +5638,10 @@ body.compoundChild .manageParent > div > a {
   height: auto;
   margin-right: 0px !important; }
 
+body.context-data .tableStats {
+  margin-top: 20px; }
+body.context-data .ics_table_explain {
+  padding: 50px 50px 0px 50px; }
 body.context-data .table {
   display: flex;
   width: 100%;
