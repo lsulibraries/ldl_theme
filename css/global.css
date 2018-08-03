@@ -5638,6 +5638,16 @@ body.compoundChild .manageParent > div > a {
   height: auto;
   margin-right: 0px !important; }
 
+body.context-data .table {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 50px;
+  box-sizing: border-box; }
+  body.context-data .table .header {
+    font-weight: 700; }
+body.context-data .cmodel {
+  font-weight: 700; }
 body.context-data .page_description {
   background: white;
   padding: 20px; }

@@ -7864,6 +7864,21 @@ a.downloadLink.userSelect {
 //begin content stats
 body.context-data{
 
+.table {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 50px;
+    box-sizing: border-box;
+    .header{
+      font-weight: 700;
+    }
+}
+
+.cmodel {
+    font-weight: 700;
+}
+
 .page_description {
     background: white;
     padding: 20px;
