@@ -68,7 +68,8 @@
           $('.inst_wrapper').wrapAll('<div class="instGroup"/>');
           console.log('hi its content stats');
           $('.ics_filters').removeClass('collapsed');
-          $('.ics_filters , .ics_table_collapse').wrapAll('<div class="tableStats"/>')
+          $('.ics_filters , .ics_table_collapse').wrapAll('<div class="tableStats"/>');
+          $('#block-block-9').appendTo('#region-content .region-content-inner');
           break;
         }
 
