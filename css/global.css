@@ -5646,6 +5646,10 @@ body.context-data .table {
   box-sizing: border-box; }
   body.context-data .table .header {
     font-weight: 700; }
+  body.context-data .table .column {
+    flex-grow: 1; }
+  body.context-data .table .row:nth-child(odd) {
+    background: #f1f1f1; }
 body.context-data .cmodel {
   font-weight: 700; }
 body.context-data .page_description {
