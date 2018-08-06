@@ -9752,6 +9752,8 @@ border: 1px solid rgba(255, 255, 255, 0.33);
 body.compoundChild{
 
 
+
+
 .userMenu{
       margin-top: 20px;
 }
@@ -9796,7 +9798,7 @@ body.compoundChild{
 #region-sidebar-first.infoOpened{
     transform: translate(0vw);
     @include transition-duration(.5s);
-
+    height: 100vh !important;
 
 }
 a.institutionSmall{
@@ -9821,9 +9823,6 @@ a.institutionSmall{
     background: black !important;
 }
 
-.metadataSidebar{
-  position: relative;
-}
 
 .sidebarToggle {
     position: fixed;

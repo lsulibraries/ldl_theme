@@ -7026,7 +7026,8 @@ body.multipleDaily .issueLevel .issue-container {
     -moz-transition-duration: 0.5s;
     -o-transition-duration: 0.5s;
     -webkit-transition-duration: 0.5s;
-    transition-duration: 0.5s; }
+    transition-duration: 0.5s;
+    height: 100vh !important; }
   body.compoundChild a.institutionSmall {
     margin-left: 0px !important; }
   body.compoundChild .compoundArrows.userSelect {
@@ -7041,8 +7042,6 @@ body.multipleDaily .issueLevel .issue-container {
     color: white !important; }
   body.compoundChild .compoundArrows:hover {
     background: black !important; }
-  body.compoundChild .metadataSidebar {
-    position: relative; }
   body.compoundChild .sidebarToggle {
     position: fixed;
     cursor: pointer;
