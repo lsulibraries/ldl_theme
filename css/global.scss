@@ -7866,6 +7866,7 @@ body.context-data{
 
 .tableStats{
   margin-top:20px;
+    flex-direction: column;
 }
 
 .ics_table_explain {
@@ -7954,14 +7955,19 @@ body.context-data{
         background: white;
         height: auto !important;
     }
+    .glanceStats{
+      display: flex;
+    }
     .global_totals {
         background: white;
         padding: 40px;
+            width: 250px;
     }
     .instGroup {
         display: flex;
         flex-wrap: wrap;
         background: #f0f0f0;
+        flex-grow: 1;
         .inst_wrapper {
             background: white;
             margin: 1px;

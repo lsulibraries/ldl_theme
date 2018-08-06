@@ -5639,7 +5639,8 @@ body.compoundChild .manageParent > div > a {
   margin-right: 0px !important; }
 
 body.context-data .tableStats {
-  margin-top: 20px; }
+  margin-top: 20px;
+  flex-direction: column; }
 body.context-data .ics_table_explain {
   padding: 50px 50px 0px 50px; }
 body.context-data .table {
@@ -5699,13 +5700,17 @@ body.context-data legend {
 body.context-data fieldset {
   background: white;
   height: auto !important; }
+body.context-data .glanceStats {
+  display: flex; }
 body.context-data .global_totals {
   background: white;
-  padding: 40px; }
+  padding: 40px;
+  width: 250px; }
 body.context-data .instGroup {
   display: flex;
   flex-wrap: wrap;
-  background: #f0f0f0; }
+  background: #f0f0f0;
+  flex-grow: 1; }
   body.context-data .instGroup .inst_wrapper {
     background: white;
     margin: 1px;
