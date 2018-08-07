@@ -516,12 +516,16 @@
         $("body").addClass('datastreamPage');
       }
 
-
+  if ($("body").attr('class').indexOf('regenerate') > -1) {
+    $("body").addClass('regeneratePage');
+  }
 
       // ===== above chunk needs cleanup, some legacy code within =====
 
+
+
       //begin compoundObject
-      if ( ($('.block-islandora-compound-object').length) && ( !$('body').hasClass('audioPDF') ) && ( !$('body').hasClass('datastreamPage') ) ) {
+      if ( ($('.block-islandora-compound-object').length) && ( !$('body').is('.audioPDF, .regeneratePage, .datastreamPage')  )) {
         $("#sideMods").remove();
         $("body").addClass('compoundObject');  //find widest image
         var widest = null;  // remember the width of the "widest" element - probably faster than calling .width() - currently disabled - move addclasswidest to second if to
