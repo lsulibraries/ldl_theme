@@ -2941,9 +2941,7 @@ body.logged-in.front div#zone-header {
 .not-logged-in{
 
 
-  .manageMenu {
-    display: none;
-  }
+
 }
 
 .front {
@@ -5185,6 +5183,10 @@ background: black;
 
 margin: 0px;
 
+.fa-w-18, .fa-w-11 {
+    margin-right: 5px;
+}
+
 .newspaper-listToggle {
     position: absolute;
     bottom: -25px;
@@ -5678,7 +5680,6 @@ a.downloadLink:hover {
     min-height: 70px;
 opacity: 0;
     width: 100%;
-    bottom: 0px;
     margin-bottom: 0px;
     position: absolute;
     top: 325px;

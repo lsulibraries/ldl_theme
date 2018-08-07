@@ -2201,9 +2201,6 @@ body.logged-in.front div#zone-header {
   position: absolute;
   width: calc(100% - 40px); }
 
-.not-logged-in .manageMenu {
-  display: none; }
-
 .front .scrollPrompt {
   position: absolute;
   bottom: 50px;
@@ -3892,6 +3889,8 @@ body.logged-in.headerversiontwo .metadataContainer {
 body.headerversiontwo {
   background: black;
   margin: 0px; }
+  body.headerversiontwo .fa-w-18, body.headerversiontwo .fa-w-11 {
+    margin-right: 5px; }
   body.headerversiontwo .newspaper-listToggle {
     position: absolute;
     bottom: -25px;
@@ -4243,7 +4242,6 @@ body.headerversiontwo {
     min-height: 70px;
     opacity: 0;
     width: 100%;
-    bottom: 0px;
     margin-bottom: 0px;
     position: absolute;
     top: 325px;
