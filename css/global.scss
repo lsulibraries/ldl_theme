@@ -1672,7 +1672,8 @@ dd.islandora-basic-collection-caption a {
     &#edit-submit--2.form-submit,
     &#edit-submit--3.form-submit,
     &#edit-submit--4.form-submit,
-    &#edit-submit--5.form-submit  {
+    &#edit-submit--5.form-submit,
+    &#edit-submit--6.form-submit,      {
       -webkit-appearance: none;
       -moz-border-radius: 11px;
       -webkit-border-radius: 11px;
@@ -7885,6 +7886,7 @@ body.context-data{
 
 .dataPage{
   padding-top:200px;
+  color: #666;
 }
 
 #section-header{

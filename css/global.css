@@ -1109,7 +1109,7 @@ dd.islandora-basic-collection-caption a {
   border-bottom-width: 0px;
   border: 0px;
   padding-left: 10px; }
-#zone-header input#edit-submit.form-submit, #zone-header input#edit-submit--2.form-submit, #zone-header input#edit-submit--3.form-submit, #zone-header input#edit-submit--4.form-submit, #zone-header input#edit-submit--5.form-submit, #region-header-first input#edit-submit.form-submit, #region-header-first input#edit-submit--2.form-submit, #region-header-first input#edit-submit--3.form-submit, #region-header-first input#edit-submit--4.form-submit, #region-header-first input#edit-submit--5.form-submit {
+#zone-header input#edit-submit.form-submit, #zone-header input#edit-submit--2.form-submit, #zone-header input#edit-submit--3.form-submit, #zone-header input#edit-submit--4.form-submit, #zone-header input#edit-submit--5.form-submit, #zone-header input#edit-submit--6.form-submit, #region-header-first input#edit-submit.form-submit, #region-header-first input#edit-submit--2.form-submit, #region-header-first input#edit-submit--3.form-submit, #region-header-first input#edit-submit--4.form-submit, #region-header-first input#edit-submit--5.form-submit, #region-header-first input#edit-submit--6.form-submit {
   -webkit-appearance: none;
   -moz-border-radius: 11px;
   -webkit-border-radius: 11px;
@@ -5648,7 +5648,8 @@ body.context-data .headerDescription {
   font-weight: normal;
   font-size: 16px; }
 body.context-data .dataPage {
-  padding-top: 200px; }
+  padding-top: 200px;
+  color: #666; }
 body.context-data #section-header {
   position: absolute;
   top: 0px;
