@@ -5728,14 +5728,22 @@ body.context-data .glanceStats {
   display: flex; }
 body.context-data .global_totals {
   background: white;
-  padding: 40px;
-  width: 250px;
-  height: calc(100% - 115px); }
+  width: 332px;
+  padding-bottom: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
 body.context-data .instContainer {
   width: 100%;
   margin-left: 20px; }
 body.context-data canvas#globalChart {
-  margin-bottom: 40px; }
+  padding-top: 50px;
+  padding-bottom: 50px; }
+body.context-data .globalContainer {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column; }
 body.context-data .collections {
   display: flex;
   justify-content: space-between;
@@ -5751,7 +5759,8 @@ body.context-data .statHeader {
   padding-bottom: 3px; }
 body.context-data .globalStat {
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  margin: 0px 20px; }
 body.context-data .instGroup {
   display: flex;
   flex-wrap: wrap;

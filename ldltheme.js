@@ -109,10 +109,20 @@
                    }]
                },
                options:{
+                 layout:{
+                   padding:{
+                     left: 10,
+                     right: 10,
+                     top: 0,
+                     bottom: 0
+                   }
+                 },
                  legend:{
+                   fontSize: 11,
                    position: 'bottom',
                    labels:{
                      boxWidth: 10,
+                     padding: 15,
                    }
                  }
                }
