@@ -385,7 +385,6 @@
       }
 
       $('.instStats').masonry({
-        columnWidth: 200,
         itemSelector: '.inst_wrapper'
       });
 

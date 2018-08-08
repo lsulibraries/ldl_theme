@@ -7961,6 +7961,8 @@ body.context-data{
         max-width: 1200px;
         display: flex;
         margin: 0 auto;
+        padding-left: 20px;
+        padding-right: 20px;
     }
     #islandora-content-stats-form {
         margin: 20px 0px;
@@ -8001,6 +8003,7 @@ body.context-data{
         background: white;
         padding: 40px;
             width: 250px;
+    height: calc(100% - 115px);
     }
     .instContainer{
       width: 100%;
@@ -8018,7 +8021,10 @@ body.context-data{
     padding-bottom: 3px;
 }
 
-
+.globalStat {
+    display: flex;
+    justify-content: space-between;
+}
 
     .instGroup {
         display: flex;
@@ -8027,7 +8033,7 @@ body.context-data{
         .inst_wrapper {
             background: white;
             margin: 1px;
-            width: calc( 20% - 2px);
+            width: 210px;
             height: auto;
             display: flex;
             align-items: flex-start;
@@ -8053,7 +8059,9 @@ body.context-data{
             border-bottom: 1px solid #cecece;
         }
         .cmodel_wrapper_inst {
-            display: flex;
+    display: flex;
+    width: calc(100% - 20px);
+    justify-content: space-between;
             .cmodel{
                 font-weight: 700;
             }

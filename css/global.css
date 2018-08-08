@@ -5695,7 +5695,9 @@ body.context-data .global {
 body.context-data #block-system-main .content.clearfix {
   max-width: 1200px;
   display: flex;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px; }
 body.context-data #islandora-content-stats-form {
   margin: 20px 0px; }
 body.context-data .tableStats {
@@ -5726,7 +5728,8 @@ body.context-data .glanceStats {
 body.context-data .global_totals {
   background: white;
   padding: 40px;
-  width: 250px; }
+  width: 250px;
+  height: calc(100% - 115px); }
 body.context-data .instContainer {
   width: 100%;
   margin-left: 20px; }
@@ -5739,6 +5742,9 @@ body.context-data .statHeader {
   margin-bottom: 15px;
   border-bottom: 1px solid #ffffff8c;
   padding-bottom: 3px; }
+body.context-data .globalStat {
+  display: flex;
+  justify-content: space-between; }
 body.context-data .instGroup {
   display: flex;
   flex-wrap: wrap;
@@ -5746,7 +5752,7 @@ body.context-data .instGroup {
   body.context-data .instGroup .inst_wrapper {
     background: white;
     margin: 1px;
-    width: calc( 20% - 2px);
+    width: 210px;
     height: auto;
     display: flex;
     align-items: flex-start;
@@ -5769,7 +5775,9 @@ body.context-data .instGroup {
     padding: 20px 0px;
     border-bottom: 1px solid #cecece; }
   body.context-data .instGroup .cmodel_wrapper_inst {
-    display: flex; }
+    display: flex;
+    width: calc(100% - 20px);
+    justify-content: space-between; }
     body.context-data .instGroup .cmodel_wrapper_inst .cmodel {
       font-weight: 700; }
     body.context-data .instGroup .cmodel_wrapper_inst .total {
