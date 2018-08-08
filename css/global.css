@@ -5651,7 +5651,7 @@ body.context-data .headerDescription {
   font-weight: normal;
   font-size: 16px; }
 body.context-data .dataPage {
-  padding-top: 200px;
+  padding-top: 150px;
   color: #666; }
 body.context-data #section-header {
   position: absolute;
@@ -5780,8 +5780,7 @@ body.context-data #edit-table-results > legend {
 body.context-data .description {
   display: none; }
 body.context-data .glanceStats {
-  display: flex;
-  margin-top: 50px; }
+  display: flex; }
 body.context-data .global_totals {
   background: white;
   width: 332px;
