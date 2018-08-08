@@ -68,6 +68,56 @@
           console.log('hi its content stats');
           $('.ics_filters').removeClass('collapsed');
           $('#block-block-9').appendTo('#region-content .region-content-inner');
+           var globalLabels = [];
+           iLabel = 0;
+           $('.globalStat > .cmodel').each(function()
+           {
+
+                   globalLabels[iLabel++] = $(this).text();
+                   //I should store id in an array
+           });
+
+           console.log(globalLabels);
+
+           var globalNumbers = [];
+           iNumber = 0;
+           $('.globalStat > .total').each(function()
+           {
+
+                   globalNumbers[iNumber++] = $(this).text();
+                   //I should store id in an array
+           });
+           console.log(globalNumbers);
+           var ctx = document.getElementById("globalChart");
+           var myChart = new Chart(ctx, {
+               type: 'doughnut',
+               data: {
+                   labels: globalLabels,
+                   datasets: [{
+                       data: globalNumbers,
+                       backgroundColor: [
+                           '#FF5370',
+                           '#FFCB6B',
+                           '#82AAFF',
+                           '#F78C6C',
+                           '#bb80b3',
+                           '#89DDFF',
+                           '#B2CCD6',
+                           '#C3E88D',
+                           '#f07178',
+                       ],
+                   }]
+               },
+               options:{
+                 legend:{
+                   position: 'bottom',
+                   labels:{
+                     boxWidth: 10,
+                   }
+                 }
+               }
+           });
+
           break;
         }
 
@@ -362,6 +412,10 @@
         $('li:empty').remove();
       } // end toggle functions
 
+
+
+
+
       function imageModal(){
         $("#islandora-openseadragon > .openseadragon-container").addClass("dragonContainer");
         $("<span class='modalExit5'><i class='fa fa-times'></i> Exit</span>").insertBefore(".dragonContainer");
@@ -388,10 +442,11 @@
         itemSelector: '.inst_wrapper'
       });
 
+
       window.sr = ScrollReveal();
       $(window).on("load", function() {
         sr.reveal('.page-islandora-search .region-sidebar-first-inner', { duration: 200, delay: 100, opacity: 1, easing: 'linear', scale: 1, viewFactor: 0.01, }, 50);
-        sr.reveal('.islandora-solr-search-result, .landingMobile, .inst_wrapper', { duration: 200, delay: 100,  easing: 'linear', scale: 1, viewFactor: 0.01,}, 20); //landingMessage normally here; conflicts with mobile landingMessage
+        sr.reveal('.islandora-solr-search-result, .landingMobile, .globalStats, .inst_wrapper', { duration: 200, delay: 100,  easing: 'linear', scale: 1, viewFactor: 0.01,}, 20); //landingMessage normally here; conflicts with mobile landingMessage
         sr.reveal('.landingHero', { duration: 200, delay: 0,  easing: 'linear', scale: 1, viewFactor: 0.01,}, 20);
         sr.reveal('.solr-fields, .islandora-solr-sort li, .page-browse-collections tr, .islandora-pdf-content', { duration: 200, delay: 350,  easing: 'linear', scale: 1, viewFactor: 0.01, }, 20);
         sr.reveal('.solr-thumb img', { duration: 200, delay: 850,  easing: 'linear', scale: 1, viewFactor: 0.01, }, 20);

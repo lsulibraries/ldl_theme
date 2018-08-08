@@ -5734,6 +5734,12 @@ body.context-data .global_totals {
 body.context-data .instContainer {
   width: 100%;
   margin-left: 20px; }
+body.context-data canvas#globalChart {
+  margin-bottom: 40px; }
+body.context-data .collections {
+  display: flex;
+  justify-content: space-between;
+  width: 100%; }
 body.context-data .statHeader {
   text-transform: uppercase;
   color: white;
@@ -5770,11 +5776,12 @@ body.context-data .instGroup {
     position: absolute;
     top: 0px;
     align-self: center;
-    width: 100%;
+    width: 80%;
     left: 0px;
     text-align: center;
     padding: 20px 0px;
-    border-bottom: 1px solid #cecece; }
+    border-bottom: 1px dotted #ffffff4a;
+    margin: 0px 20px; }
   body.context-data .instGroup .cmodel_wrapper_inst {
     display: flex;
     width: calc(100% - 20px);

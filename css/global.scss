@@ -49,6 +49,7 @@ $infoLegend2:'https://i.imgur.com/OnZTeYf.png';
 $descriptionLegend:'https://i.imgur.com/SVHgxtg.png';
 
 $darkTransparent: rgba(0, 0, 0, .06);
+$darkTransparent2: rgba(0, 0, 0, .19);
 $lightTransparent: rgba(255, 255, 255, .16);
 $lightTransparent2: rgba(255, 255, 255, 0.48);
 
@@ -8011,6 +8012,16 @@ body.context-data{
     margin-left: 20px;
     }
 
+canvas#globalChart {
+    margin-bottom: 40px;
+}
+
+.collections {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
 .statHeader {
     text-transform: uppercase;
     color: white;
@@ -8053,11 +8064,12 @@ body.context-data{
             position: absolute;
             top: 0px;
             align-self: center;
-            width: 100%;
+            width: 80%;
             left: 0px;
             text-align: center;
             padding: 20px 0px;
-            border-bottom: 1px solid #cecece;
+            border-bottom: 1px dotted #ffffff4a;
+            margin: 0px 20px;
         }
         .cmodel_wrapper_inst {
     display: flex;
