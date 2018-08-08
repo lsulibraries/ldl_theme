@@ -7975,17 +7975,12 @@ body.context-data{
         background: white;
         margin-bottom: 20px;
         legend {
-            height: 110px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+
         }
         fieldset {
           padding: 0px 20px;
         }
         .ics_table_collapse{
-          max-height: 1000px;
-          overflow: auto;
         }
     }
     legend {
