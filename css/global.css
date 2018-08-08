@@ -5636,6 +5636,29 @@ body.compoundChild .manageParent > div > a {
   height: auto;
   margin-right: 0px !important; }
 
+body.context-data .dataHeader {
+  margin-bottom: 20px; }
+body.context-data .headerTitle {
+  font-size: 40px;
+  color: white;
+  line-height: 37px; }
+body.context-data .headerDescription {
+  color: rgba(255, 255, 255, 0.85);
+  padding: 0px;
+  font-weight: normal;
+  font-size: 16px; }
+body.context-data .dataPage {
+  padding-top: 200px; }
+body.context-data #section-header {
+  position: absolute;
+  top: 0px;
+  z-index: 888;
+  width: 100%; }
+body.context-data #block-system-main {
+  background: none !important; }
+body.context-data .backgroundDiv {
+  z-index: -1;
+  background-image: url(https://i.imgur.com/yUbfVN7.jpg); }
 body.context-data .tableStats {
   margin-top: 20px;
   flex-direction: column; }
@@ -5704,10 +5727,21 @@ body.context-data .global_totals {
   background: white;
   padding: 40px;
   width: 250px; }
+body.context-data .instContainer {
+  width: 100%;
+  margin-left: 20px; }
+body.context-data .statHeader {
+  text-transform: uppercase;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 11px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ffffff8c;
+  padding-bottom: 3px; }
 body.context-data .instGroup {
   display: flex;
   flex-wrap: wrap;
-  background: #f0f0f0;
   flex-grow: 1; }
   body.context-data .instGroup .inst_wrapper {
     background: white;

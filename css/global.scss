@@ -7865,6 +7865,44 @@ a.downloadLink.userSelect {
 //begin content stats
 body.context-data{
 
+.dataHeader{
+  margin-bottom: 20px;
+}
+
+.headerTitle{
+    font-size: 40px;
+    color: white;
+    line-height: 37px;
+}
+
+.headerDescription {
+    color: rgba(255, 255, 255, 0.85);
+    padding: 0px;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+.dataPage{
+  padding-top:200px;
+}
+
+#section-header{
+    position: absolute;
+    top: 0px;
+    z-index: 888;
+    width: 100%;
+}
+
+#block-system-main {
+    background: none !important;
+}
+
+.backgroundDiv{
+  z-index: -1;
+    background-image: url(https://i.imgur.com/yUbfVN7.jpg);
+
+}
+
 .tableStats{
   margin-top:20px;
     flex-direction: column;
@@ -7964,11 +8002,28 @@ body.context-data{
         padding: 40px;
             width: 250px;
     }
+    .instContainer{
+      width: 100%;
+    margin-left: 20px;
+    }
+
+.statHeader {
+    text-transform: uppercase;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 11px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ffffff8c;
+    padding-bottom: 3px;
+}
+
+
+
     .instGroup {
         display: flex;
         flex-wrap: wrap;
-        background: #f0f0f0;
-        flex-grow: 1;
+         flex-grow: 1;
         .inst_wrapper {
             background: white;
             margin: 1px;
