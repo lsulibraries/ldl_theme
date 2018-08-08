@@ -185,6 +185,10 @@ $vvilleLogo_long: '../images/wqpOeRQ.png';
 
 /* global styles */
 
+html.sr .load-hidden {
+    visibility: hidden;
+}
+
 html, body {
   height: 100%;
   padding: 0;
@@ -7912,10 +7916,20 @@ body.context-data{
 }
 
 .ics_table_explain {
-    padding: 50px 50px 0px 50px;
+    color: white;
+    padding-bottom: 20px;
+}
+
+.fieldset-wrapper > div {
+    background: white;
+    margin-right: 1px;
+    flex-grow: 1;
+    margin-top: 1px;
+    padding: 20px;
 }
 
 .table {
+    background: white;
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -7948,8 +7962,28 @@ body.context-data{
 }
 
 .fieldset-wrapper{
-  width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
 }
+
+.ics_filter_submit{
+border-radius: 0px;
+    flex-grow: 1;
+    margin-top: 1px;
+    border: 0px;
+    background: #FF5370;
+    color: white;
+    text-shadow: none;
+    padding: 0px;
+    overflow: hidden;
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
 
 .global{
   display: flex;
@@ -7971,32 +8005,82 @@ body.context-data{
         margin: 20px 0px;
     }
     .tableStats {
+      margin-top: 100px;
         display: flex;
-        background: white;
         margin-bottom: 20px;
         legend {
 
         }
         fieldset {
-          padding: 0px 20px;
+
         }
         .ics_table_collapse{
         }
     }
-    legend {
-        width: 100%;
-        text-align: center;
-        background: white;
-        border-bottom: 1px solid #cecece;
-        padding: 20px;
-        box-sizing: border-box;
+
+#edit-filter {
+  margin-bottom: 1px;
+}
+
+#edit-filtertitle{
+  display: none;
+}
+
+
+.dl_txt {
+    padding: 20px;
+    background: white;
+    margin-top: 1px;
+}
+
+input.ics_download_button {
+position: relative;
+    top: -40px;
+    background: none;
+    left: calc(100% - 220px);
+    border: 1px solid #ccc;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #666;
+    font-weight: 700;
+    font-family: Roboto;
+    border-radius: 0px;
+    width: 200px;
+    text-align: center;
+}
+
+#edit-filter > legend {
+    background: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px 0px;
+    display: none;
+}
+
+    #edit-table-results > legend {
+    width: 100%;
+    color: white;
+    border-bottom: 1px solid #cecece;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 11px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid $offWhite;
+    padding-bottom: 3px;
     }
-    fieldset {
-        background: white;
-        height: auto !important;
-    }
+
+.description {
+display: none;
+}
     .glanceStats{
       display: flex;
+      margin-top: 50px;
     }
     .global_totals {
         background: white;

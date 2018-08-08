@@ -18,6 +18,9 @@ i {
 /*Institutional Colors*/
 /* mixins */
 /* global styles */
+html.sr .load-hidden {
+  visibility: hidden; }
+
 html, body {
   height: 100%;
   padding: 0;
@@ -5664,8 +5667,16 @@ body.context-data .tableStats {
   margin-top: 20px;
   flex-direction: column; }
 body.context-data .ics_table_explain {
-  padding: 50px 50px 0px 50px; }
+  color: white;
+  padding-bottom: 20px; }
+body.context-data .fieldset-wrapper > div {
+  background: white;
+  margin-right: 1px;
+  flex-grow: 1;
+  margin-top: 1px;
+  padding: 20px; }
 body.context-data .table {
+  background: white;
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -5687,7 +5698,24 @@ body.context-data .last_run {
   background: white;
   margin-bottom: 20px; }
 body.context-data .fieldset-wrapper {
+  display: flex;
+  flex-wrap: wrap;
   width: 100%; }
+body.context-data .ics_filter_submit {
+  border-radius: 0px;
+  flex-grow: 1;
+  margin-top: 1px;
+  border: 0px;
+  background: #FF5370;
+  color: white;
+  text-shadow: none;
+  padding: 0px;
+  overflow: hidden;
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px; }
 body.context-data .global {
   display: flex; }
   body.context-data .global .cmodel {
@@ -5702,23 +5730,58 @@ body.context-data #block-system-main .content.clearfix {
 body.context-data #islandora-content-stats-form {
   margin: 20px 0px; }
 body.context-data .tableStats {
+  margin-top: 100px;
   display: flex;
-  background: white;
   margin-bottom: 20px; }
-  body.context-data .tableStats fieldset {
-    padding: 0px 20px; }
-body.context-data legend {
-  width: 100%;
-  text-align: center;
-  background: white;
-  border-bottom: 1px solid #cecece;
+body.context-data #edit-filter {
+  margin-bottom: 1px; }
+body.context-data #edit-filtertitle {
+  display: none; }
+body.context-data .dl_txt {
   padding: 20px;
-  box-sizing: border-box; }
-body.context-data fieldset {
   background: white;
-  height: auto !important; }
+  margin-top: 1px; }
+body.context-data input.ics_download_button {
+  position: relative;
+  top: -40px;
+  background: none;
+  left: calc(100% - 220px);
+  border: 1px solid #ccc;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #666;
+  font-weight: 700;
+  font-family: Roboto;
+  border-radius: 0px;
+  width: 200px;
+  text-align: center; }
+body.context-data #edit-filter > legend {
+  background: white;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px 0px;
+  display: none; }
+body.context-data #edit-table-results > legend {
+  width: 100%;
+  color: white;
+  border-bottom: 1px solid #cecece;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 11px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.85);
+  padding-bottom: 3px; }
+body.context-data .description {
+  display: none; }
 body.context-data .glanceStats {
-  display: flex; }
+  display: flex;
+  margin-top: 50px; }
 body.context-data .global_totals {
   background: white;
   width: 332px;

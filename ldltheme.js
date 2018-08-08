@@ -138,7 +138,8 @@
                  }
                }
            });
-
+           $('.table').insertBefore('.dl_txt');
+           $('#edit-filter').parent().addClass('dataContainer');
           break;
         }
 
@@ -467,7 +468,8 @@
       window.sr = ScrollReveal();
       $(window).on("load", function() {
         sr.reveal('.page-islandora-search .region-sidebar-first-inner', { duration: 200, delay: 100, opacity: 1, easing: 'linear', scale: 1, viewFactor: 0.01, }, 50);
-        sr.reveal('.islandora-solr-search-result, .landingMobile, .globalStats, .inst_wrapper', { duration: 200, delay: 100,  easing: 'linear', scale: 1, viewFactor: 0.01,}, 20); //landingMessage normally here; conflicts with mobile landingMessage
+        sr.reveal('.islandora-solr-search-result, .landingMobile, .globalStats, .inst_wrapper', { duration: 200, delay: 100,  easing: 'linear', scale: 1, }, 20); //landingMessage normally here; conflicts with mobile landingMessage
+        sr.reveal('.inst_wrapper', { duration: 200, delay: 100, opacity: 0, easing: 'linear', scale: 1, viewFactor: 1, }); //landingMessage normally here; conflicts with mobile landingMessage
         sr.reveal('.landingHero', { duration: 200, delay: 0,  easing: 'linear', scale: 1, viewFactor: 0.01,}, 20);
         sr.reveal('.solr-fields, .islandora-solr-sort li, .page-browse-collections tr, .islandora-pdf-content', { duration: 200, delay: 350,  easing: 'linear', scale: 1, viewFactor: 0.01, }, 20);
         sr.reveal('.solr-thumb img', { duration: 200, delay: 850,  easing: 'linear', scale: 1, viewFactor: 0.01, }, 20);
