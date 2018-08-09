@@ -18,6 +18,10 @@
 <script src="/sites/all/libraries/JAIL/src/jail.js">
 </script>
 
+<script>
+document.body.className += ' ' + 'newspaperSet';
+
+</script>
 
 <div class="islandora-newspaper-object islandora">
   <div class="islandora-newspaper-content-wrapper clearfix">

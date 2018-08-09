@@ -478,7 +478,6 @@
         $("a > .institutionLink_meta").each(function() {
           $(this).colourBrightness();//
         });
-
         $("body.newspaperSet #page").fadeIn(200);
                 $('.firstYearCover').jail({
                  effect: 'fadeIn',

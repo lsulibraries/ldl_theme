@@ -6565,6 +6565,7 @@ body.newspaperSet{
   background-image: url('http://gifimage.net/wp-content/uploads/2017/02/Loading-GIF-Image-7.gif');
   background-position: center;
   background-repeat: no-repeat;
+
 }
 
 body.newspaperSet #page{
@@ -6573,8 +6574,7 @@ body.newspaperSet #page{
 
 //begin largeImage 2.0
 body.largeImage{
-
-  background: black;
+  background: #000000;
 }
 
 body.largeImage, body.newspaperSet{
@@ -7807,6 +7807,7 @@ body.compoundChildImage {
 
 body.newspaperSet{
   background-color: white;
+
 }
 
 body.compoundParent{

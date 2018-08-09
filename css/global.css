@@ -4823,7 +4823,7 @@ body.newspaperSet #page {
   display: none; }
 
 body.largeImage {
-  background: black; }
+  background: #000000; }
 
 body.largeImage .firstMonthCover:not(.firstYearCover), body.newspaperSet .firstMonthCover:not(.firstYearCover) {
   display: none; }
