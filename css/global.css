@@ -1440,7 +1440,10 @@ div.region-inner.region-header-first-inner {
   margin: 0px;
   background-color: white;
   width: 25%;
-  z-index: 2; }
+  z-index: 2;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.34);
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.34);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.34); }
 
 #block-islandora-solr-simple {
   float: left; }
@@ -1788,9 +1791,9 @@ list-style-image {
   text-align: center;
   letter-spacing: 2px;
   background-color: white;
-  margin-top: 0px;
   border-bottom: 0px;
-  margin: 4px 0px; }
+  margin: 4px 0px;
+  margin-top: 0px; }
   #block-islandora-solr-sort li .last {
     pointer: cursor; }
 
@@ -5579,6 +5582,27 @@ body.compoundChildImage {
   background: white !important; }
 
 /*BEGIN test area*/
+ul#secondary-display-profiles {
+  width: 100%; }
+
+a.downloadSearchContainer {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  color: #327BB3 !important;
+  margin-top: 20px; }
+  a.downloadSearchContainer img {
+    display: none; }
+
+a.toggle-date-range-filter {
+  color: #327BB3 !important; }
+
+.islandora-solr-date-filter {
+  margin-left: 12px;
+  margin-top: 20px; }
+
 body.compoundChild .metadataSidebar.nano-content {
   padding-top: 40px; }
 body.compoundChild div#shareToggle.activeMenu {

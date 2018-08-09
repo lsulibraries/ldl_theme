@@ -2046,6 +2046,10 @@ div.region-inner.region-header-first-inner {
   background-color: white;
   width: 25%;
   z-index: 2;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.34);
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.34);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.34);
+
 }
 
 #block-islandora-solr-simple {
@@ -2459,9 +2463,10 @@ list-style-image {
   text-align: center;
   letter-spacing: 2px;
   background-color: white;
-  margin-top: 0px;
+
   border-bottom: 0px;
   margin: 4px 0px;
+  margin-top: 0px;
   //display: none; //temp disabled
 
 li .last{
@@ -7778,6 +7783,33 @@ body.compoundChildImage {
 //end error messages
 
 /*BEGIN test area*/
+
+ul#secondary-display-profiles {
+    width: 100%;
+}
+
+a.downloadSearchContainer {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    color: $LDLBlue !important;
+    margin-top: 20px;
+    img{
+      display: none;
+    }
+}
+
+a.toggle-date-range-filter{
+      color: $LDLBlue !important;
+
+}
+
+.islandora-solr-date-filter{
+  margin-left: 12px;
+  margin-top: 20px;
+}
 
 //begin compoundChild post-actionBar
 

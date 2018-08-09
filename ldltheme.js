@@ -602,6 +602,9 @@
     $("body").addClass('regeneratePage');
   }
 
+      $('#secondary-display-profiles').appendTo('.islandora-solr-date-filter');
+      $('<div class="downloadSearch">Download Results as CSV</div>').appendTo('#secondary-display-profiles a');
+      $('.downloadSearch').parent().addClass('downloadSearchContainer');
       // ===== above chunk needs cleanup, some legacy code within =====
 
 
