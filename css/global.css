@@ -4811,6 +4811,9 @@ body.pageImage .textSelect strong {
 body.pageImage .textSelect a {
   color: #676767; }
 
+body.newspaperSet#page {
+  display: none; }
+
 body.largeImage, body.newspaperSet {
   background: black; }
   body.largeImage .firstMonthCover:not(.firstYearCover), body.newspaperSet .firstMonthCover:not(.firstYearCover) {
@@ -5462,6 +5465,10 @@ body.largeImage, body.newspaperSet {
     font-size: 13px;
     letter-spacing: 1px; }
 
+body.newspaperSet.newspaperList.mobileNewspaper .months-container {
+  max-height: none; }
+body.newspaperSet.newspaperList.mobileNewspaper .issue-container {
+  display: flex !important; }
 body.newspaperSet.newspaperList.mobileNewspaper .publication-year-container.viewYears {
   margin: 0px 0px 20px 0px !important; }
 body.newspaperSet.newspaperList.mobileNewspaper img.lazy {
@@ -5582,6 +5589,9 @@ body.compoundChildImage {
   background: white !important; }
 
 /*BEGIN test area*/
+body.compoundParent #region-content .region-content-inner {
+  justify-content: flex-start; }
+
 ul#secondary-display-profiles {
   width: 100%; }
 

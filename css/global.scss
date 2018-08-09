@@ -6558,6 +6558,10 @@ color: #676767;
 
 
 
+body.newspaperSet#page{
+
+  display: none;
+}
 
 //begin largeImage 2.0
 body.largeImage, body.newspaperSet{
@@ -7583,8 +7587,13 @@ div.islandora-large-image-content{
 //end largeImage 2.0
 body.newspaperSet.newspaperList.mobileNewspaper{
 
+.months-container{
+  max-height: none;
+}
 
-
+.issue-container {
+    display: flex !important;
+}
 
   .publication-year-container.viewYears {
     margin: 0px 0px 20px 0px !important;
@@ -7783,6 +7792,12 @@ body.compoundChildImage {
 //end error messages
 
 /*BEGIN test area*/
+
+body.compoundParent{
+  #region-content .region-content-inner{
+    justify-content: flex-start;      
+  }
+}
 
 ul#secondary-display-profiles {
     width: 100%;

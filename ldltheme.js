@@ -435,7 +435,10 @@
       } // end toggle functions
 
 
-
+$(window).load(function() {
+  // When the page has loaded
+  $("#page").fadeIn(2000);
+});
 
 
       function imageModal(){
