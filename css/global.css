@@ -18,6 +18,9 @@ i {
 /*Institutional Colors*/
 /* mixins */
 /* global styles */
+.collectionHeader {
+  background: #232323; }
+
 html.sr .load-hidden {
   visibility: hidden; }
 
