@@ -437,21 +437,6 @@
       } // end toggle functions
 
 
-$(window).load(function() {
-  // When the page has loaded
-  $("body.newspaperSet").fadeIn(2000);
-          $('.firstYearCover').jail({
-           effect: 'fadeIn',
-           event: 'load',
-           offset : 300,
-           placeholder: 'http://gifimage.net/wp-content/uploads/2017/02/Loading-GIF-Image-7.gif',
-           id: "firstYear",
-          });  
-});
-
-
-
-
       function imageModal(){
         $("#islandora-openseadragon > .openseadragon-container").addClass("dragonContainer");
         $("<span class='modalExit5'><i class='fa fa-times'></i> Exit</span>").insertBefore(".dragonContainer");
@@ -493,6 +478,15 @@ $(window).load(function() {
         $("a > .institutionLink_meta").each(function() {
           $(this).colourBrightness();//
         });
+
+        $("body.newspaperSet").fadeIn(2000);
+                $('.firstYearCover').jail({
+                 effect: 'fadeIn',
+                 event: 'load',
+                 offset : 300,
+                 placeholder: 'http://gifimage.net/wp-content/uploads/2017/02/Loading-GIF-Image-7.gif',
+                 id: "firstYear",
+                });
       });
       // end functions
 
