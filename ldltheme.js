@@ -140,6 +140,8 @@
            });
            $('.table').insertBefore('.dl_txt');
            $('#edit-filter').parent().addClass('dataContainer');
+           $('#block-system-main').parallax({imageSrc: 'https://i.imgur.com/yUbfVN7.jpg'});
+
           break;
         }
 
@@ -437,8 +439,17 @@
 
 $(window).load(function() {
   // When the page has loaded
-  $("#page").fadeIn(2000);
+  $("body.newspaperSet").fadeIn(2000);
+          $('.firstYearCover').jail({
+           effect: 'fadeIn',
+           event: 'load',
+           offset : 300,
+           placeholder: 'http://gifimage.net/wp-content/uploads/2017/02/Loading-GIF-Image-7.gif',
+           id: "firstYear",
+          });  
 });
+
+
 
 
       function imageModal(){
@@ -830,6 +841,7 @@ $(window).load(function() {
           $('.firstYearCover').jail({
            effect: 'fadeIn',
            event: 'load',
+           offset : 300,
            placeholder: 'http://gifimage.net/wp-content/uploads/2017/02/Loading-GIF-Image-7.gif',
            id: "firstYear",
           });
