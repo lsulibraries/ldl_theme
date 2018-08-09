@@ -55,7 +55,7 @@
         case ( ($('.total-issue-count').length) && ( !$('body').hasClass('audioPDF') ) ) :{
           $('body').addClass('newspaperSet');
           itemTitle = $(".modsTitle").html(); // finds full title without truncation
-          thumbnailURL = 'http://louisianadigitallibrary.org/islandora/object/hnoc-clf:8432/datastream/TN/view';
+          thumbnailURL = '/sites/all/themes/ldl/images/newspaperTN.jpeg';
           itemHeader();
           typeClass('newspaper');
           newspaperContainer();
