@@ -479,7 +479,7 @@
           $(this).colourBrightness();//
         });
 
-        $("body.newspaperSet").fadeIn(2000);
+        $("body.newspaperSet #page").fadeIn(200);
                 $('.firstYearCover').jail({
                  effect: 'fadeIn',
                  event: 'load',

@@ -6561,16 +6561,24 @@ color: #676767;
 
 }
 
-
-
 body.newspaperSet{
+  background-image: url('http://gifimage.net/wp-content/uploads/2017/02/Loading-GIF-Image-7.gif');
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+body.newspaperSet #page{
   display: none;
 }
 
 //begin largeImage 2.0
-body.largeImage, body.newspaperSet{
+body.largeImage{
 
   background: black;
+}
+
+body.largeImage, body.newspaperSet{
+
 
 .firstMonthCover:not(.firstYearCover){
   display: none;
@@ -7798,7 +7806,7 @@ body.compoundChildImage {
 /*BEGIN test area*/
 
 body.newspaperSet{
-  background: white;
+  background-color: white;
 }
 
 body.compoundParent{
@@ -7899,7 +7907,7 @@ a.downloadLink.userSelect {
     display: flex;
     height: 23px;
     margin-right: 5px;
-    background: white;
+    background-color: #ffffff;
     border-radius: 3px;
     display: flex;
     justify-content: center;
