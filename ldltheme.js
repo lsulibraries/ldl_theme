@@ -483,11 +483,14 @@
             $(' .months-container').each(function (){
                 $(this).find("img.lazy").first().addClass('firstYearCover');
             });
+          $(' .month-container').each(function (){
+              $(this).find("img.lazy").first().addClass('firstMonthCover');
+          });
             $('.firstYearCover').jail({
             effect: 'fadeIn',
             event: 'load',
             offset : 300,
-            placeholder: 'http://gifimage.net/wp-content/uploads/2017/02/Loading-GIF-Image-7.gif',
+            placeholder: '/sites/all/themes/ldl/images/loading.gif',
             id: "firstYear",
             });
           }
@@ -799,7 +802,6 @@
 
       // begin newspaper 2.0
       if ( ($('.total-issue-count').length) && ( !$('body').hasClass('audioPDF') ) ){
-          $('body').addClass('newspaperStuff');
           $(".metadataSidebar .modsDesc").clone().appendTo(".newspaper-thumbnailData");
           $("<div class='labelContainer descContainer'/>").insertAfter(".newspaperContainer"); //adds label break
           $("<div class='contentLabel bookDesc'>tags</div>").appendTo(".descContainer"); //adds label break
@@ -826,17 +828,8 @@
 
       //begin newspaper selection
            // Finds cover for first day of each month
-          $(' .month-container').each(function (){
-              $(this).find("img.lazy").first().addClass('firstMonthCover');
-          });
+
           //initializes JAIL for first year covers
-          $('.firstYearCover').jail({
-           effect: 'fadeIn',
-           event: 'load',
-           offset : 300,
-           placeholder: 'http://gifimage.net/wp-content/uploads/2017/02/Loading-GIF-Image-7.gif',
-           id: "firstYear",
-          });
           //hover for showing first month covers
           $(".month-container").hover(
             function() {
@@ -857,9 +850,12 @@
            $("div.issuePreview").find( ".firstMonthCover:last" ).fadeOut("slow", function() { $(this).remove(); });;
           }
           );
+      var monthButton = $('div.month-container-label');
+      var yearButton = $('.publication-year-container-label');
+
 
 function yearClick(){
-        $('.publication-year-container-label').click(function(){
+        yearButton.click(function(){
           // choose year, change indicators, change options for datepicker
           $(this).parent().addClass('activeYear'); // choose year
           $(".viewYears").not(".activeYear").addClass("inactiveYear"); // unchoose other years
@@ -895,7 +891,6 @@ function yearClick(){
           });
         });
 }
-      var monthButton = $('div.month-container-label');
 
 function monthClick(){
       monthButton.click(function(){
@@ -1009,7 +1004,7 @@ function monthClick(){
       //end newspaper selection logic
       //begin datepicker
       $("<div id='calendar'/>").insertAfter(".islandora-newspaper-grid"); //create container for calendars
-      $.getScript('https://designmodo.com/demo/calendarjquerycss3/js/jquery-ui-datepicker.min.js', function() {
+      $.getScript('/sites/all/themes/ldl/calendar.min.js', function() {
           var monthsQuantity = $(".activeYear .months-container .month-container").length;
           var issueLinks = [];
           $( ".issue-container" ).each(function( index ) { // get links for each day
@@ -1378,19 +1373,19 @@ function monthClick(){
       }else{
       //rotate 1
       $("<a href='http://louisianadigitallibrary.org/islandora/object/lsu-clt%3A10'><div class='featuredLink'><span class='featuredLabel'>Featured</span><div class='featuredText'><span class='featuredName'>Cargo ship at dock., from Charles L. Thompson Photographs</span><span class='featuredDescription'>Manuscript note on verso: Giant steamships and busy workmen at the wharves.</span></div></div></a>").insertAfter(".rotate1 #block-block-12 .homepageText");
-      $('body.rotate1.front #block-block-12').parallax({imageSrc: 'https://i.imgur.com/5SxHTs3.jpg'});
+      $('body.rotate1.front #block-block-12').parallax({imageSrc: '/sites/all/themes/ldl/images/rotate1.jpg'});
       //rotate 2
       $("<a href='http://louisianadigitallibrary.org/islandora/object/lsu-p16313coll56:196'><div class='featuredLink'><span class='featuredLabel'>Featured</span><div class='featuredText'><span class='featuredName'>Alligator juvenile, Col. Joseph S. Tate Photograph Album</span><span class='featuredDescription'>The photograph album (unbound) contains 103 black and white prints mounted on paper. The images show scenes from several locations in Louisiana during the 1920s. Photographer unknown.</span></div></div></a>").insertAfter(".rotate2 #block-block-12 .homepageText");
-      $('body.rotate2.front #block-block-12').parallax({imageSrc: 'https://i.imgur.com/3VuY8Fc.jpg'});
+      $('body.rotate2.front #block-block-12').parallax({imageSrc: '/sites/all/themes/ldl/images/rotate2.jpg'});
       //rotate 3
       $("<a href='http://louisianadigitallibrary.org/islandora/object/hnoc-clf:10656'><div class='featuredLink'><span class='featuredLabel'>Featured</span><div class='featuredText'><span class='featuredName'>Mardi Gras truck float, Charles L. Franck and Franck-Bertacci</span><span class='featuredDescription'>View of a truck float sponsored by Hayes Dairy Products. The riders are costumed in dairy costumes.</span></div></div></a>").insertAfter(".rotate3 #block-block-12 .homepageText");
-      $('body.rotate3.front #block-block-12').parallax({imageSrc: 'https://i.imgur.com/JyLgmsS.jpg'});
+      $('body.rotate3.front #block-block-12').parallax({imageSrc: '/sites/all/themes/ldl/images/rotate3.jpg'});
       //rotate 4
       $("<a href='http://louisianadigitallibrary.org/islandora/object/lsu-p16313coll56:169'><div class='featuredLink'><span class='featuredLabel'>Featured</span><div class='featuredText'><span class='featuredName'>Boiling schrimp [sic], Col. Joseph S. Tate Photograph Album</span><span class='featuredDescription'>The photograph album (unbound) contains 103 black and white prints mounted on paper. The images show scenes from several locations in Louisiana during the 1920s. Photographer unknown.</span></div></div></a>").insertAfter(".rotate4 #block-block-12 .homepageText");
-      $('body.rotate4.front #block-block-12').parallax({imageSrc: 'https://i.imgur.com/erf0QHD.jpg'});
+      $('body.rotate4.front #block-block-12').parallax({imageSrc: '/sites/all/themes/ldl/images/rotate4.jpg'});
       //rotate 5
       $("<a href='http://louisianadigitallibrary.org/islandora/object/uno-omsa:283'><div class='featuredLink'><span class='featuredLabel'>Featured</span><div class='featuredText'><span class='featuredName'>Mamou Mardi Gras, Ogden Museum of Southern Art</span><span class='featuredDescription'>Under dark clouds, a horseman wearing a cape makes his Mardi Gras ride along side a field. B/W photograph.</span></div></div></a>").insertAfter(".rotate6 #block-block-12 .homepageText");
-      $('body.rotate6.front #block-block-12').parallax({imageSrc: 'https://i.imgur.com/mGNQ2Ia.jpg'});
+      $('body.rotate6.front #block-block-12').parallax({imageSrc: '/sites/all/themes/ldl/images/rotate5.jpg'});
       }
       //end rotator
             $("#block-block-13").remove();

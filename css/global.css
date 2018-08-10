@@ -4815,7 +4815,7 @@ body.pageImage .textSelect a {
   color: #676767; }
 
 body.newspaperSet {
-  background-image: url("http://gifimage.net/wp-content/uploads/2017/02/Loading-GIF-Image-7.gif");
+  background-image: url("../images/loading.gif");
   background-position: center;
   background-repeat: no-repeat; }
 
