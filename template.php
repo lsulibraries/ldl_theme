@@ -1,5 +1,17 @@
 <?php
 
+/**
+ * Prepares variables for islandora_newspaper_issue templates.
+ *
+ * Default template: islandora-newspaper-issue.tpl.php.
+ *
+ * @param array $variables
+ *   An associative array containing:
+ *   - object: An AbstractObject for which to generate the display.
+ */
+function alpha_preprocess_islandora_newspaper_issue(array &$variables) {
+  $variables['thumbnail_path'] = newspaper_issue_first_page_tn_path($variables['object']->id, 'TN');
+}
 
 /**
  * Theme a newspaper pages controls.
@@ -56,7 +68,7 @@ function alpha_preprocess_islandora_newspaper(array &$variables) {
           $issue['formatted-date-month'] = $issue['issued']->format('m');
           $issue['formatted-date-day'] = $issue['issued']->format('d');
 
-          $issue['cover-tn-path'] = newspaper_issue_first_page_tn_path($issue['pid']);
+          $issue['cover-tn-path'] = newspaper_issue_first_page_tn_path($issue['pid'], 'JPG');
           $nest[$year]['months'][$month]['issues'][] = $issue;
 
         }
@@ -79,9 +91,15 @@ function alpha_preprocess_islandora_newspaper(array &$variables) {
   $variables['totalYearCount'] = $yearTotal;
 }
 
-function newspaper_issue_first_page_tn_path($pid) {
+function newspaper_issue_first_page_tn_path($pid, $dsid = 'TN') {
+  $allowed_dsids = ['TN', 'JPG', 'JP2'];
+  if (!in_array($dsid, $allowed_dsids)) {
+    $allowedstr = implode(',', $allowed_dsids);
+    throw new Exception("DSID $dsid is not valid here; must be one of $allowedstr");
+  }
+
   $object = islandora_object_load($pid);
-  if ($object && $object['TN']) {
+  if ($object && $object[$dsid]) {
     $pid_with_tn = $pid;
   }
   else {
@@ -106,8 +124,7 @@ EOQ;
     }
     $pid_with_tn =  $results[0]['pid']['value'];
   }
-
-  return "/islandora/object/$pid_with_tn/datastream/JPG/view";
+  return "/islandora/object/$pid_with_tn/datastream/$dsid/view";
 }
 
 function alpha_preprocess_islandora_large_image(&$variables) {

@@ -13,7 +13,7 @@
     <?php print theme('islandora_newspaper_issue_navigator', array('object' => $object)); ?>
   </span>
 <div class="book-thumbnail">
-  <img src="<?php print "/islandora/object/{$object->id}/datastream/TN/view" ?>"></img>
+  <img src="<?php print $thumbnail_path; ?>"></img>
 </div>
 
   <?php if (isset($viewer_id) && $viewer_id != "none"): ?>
