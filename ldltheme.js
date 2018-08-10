@@ -478,14 +478,19 @@
         $("a > .institutionLink_meta").each(function() {
           $(this).colourBrightness();//
         });
-        $("body.newspaperSet #page").fadeIn(200);
-                $('.firstYearCover').jail({
-                 effect: 'fadeIn',
-                 event: 'load',
-                 offset : 300,
-                 placeholder: 'http://gifimage.net/wp-content/uploads/2017/02/Loading-GIF-Image-7.gif',
-                 id: "firstYear",
-                });
+        if ($('body').hasClass('newspaperSet')){
+            $("body.newspaperSet #page").fadeIn(200);
+            $(' .months-container').each(function (){
+                $(this).find("img.lazy").first().addClass('firstYearCover');
+            });
+            $('.firstYearCover').jail({
+            effect: 'fadeIn',
+            event: 'load',
+            offset : 300,
+            placeholder: 'http://gifimage.net/wp-content/uploads/2017/02/Loading-GIF-Image-7.gif',
+            id: "firstYear",
+            });
+          }
       });
       // end functions
 
@@ -820,12 +825,6 @@
 
 
       //begin newspaper selection
-           //Finds first cover of the year and labels loaded months
-          $(' .months-container').each(function (){
-            if($(this).find("img.lazy").length){
-              $(this).find("img.lazy").first().addClass('firstYearCover');
-            }
-          });
            // Finds cover for first day of each month
           $(' .month-container').each(function (){
               $(this).find("img.lazy").first().addClass('firstMonthCover');
