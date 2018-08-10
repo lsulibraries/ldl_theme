@@ -68,7 +68,7 @@ document.body.className += ' ' + 'newspaperSet';
             </div>
             <div class="months-container">
               <?php foreach ($data['months'] as $month => $data): ?>
-                <div class="month-container no-calendar">
+                <div class="month-container no-calendar <?php if (array_key_exists('issues', $data)): ?>loadedMonth<?php endif; ?>">
                   <div class='month-container-label <?php if (array_key_exists('multi', $data)): ?>hasMultipleDaily <?php endif; ?>'>
                     <span class='month-container-label-month'>
                       <?php print $month; ?>

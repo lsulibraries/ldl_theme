@@ -823,7 +823,7 @@
            //Finds first cover of the year and labels loaded months
           $(' .months-container').each(function (){
             if($(this).find("img.lazy").length){
-              $(this).find("img.lazy").first().addClass('firstYearCover').parent().parent().parent().parent().addClass('loadedMonth');
+              $(this).find("img.lazy").first().addClass('firstYearCover');
             }
           });
            // Finds cover for first day of each month
