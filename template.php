@@ -40,9 +40,19 @@ function alpha_preprocess_islandora_newspaper_page_controls(array &$variables) {
 function alpha_preprocess_islandora_newspaper(array &$variables) {
 
   $issues = [];
-  $grouped_issues = islandora_newspaper_group_issues(
-    islandora_newspaper_get_issues($variables['object'])
-  );
+  $grouped_issues = &drupal_static(__FUNCTION__);
+  if (!isset($grouped_issues)) {
+    if ($cache = cache_get('ldl_theme_grouped_issues')) {
+      $grouped_issues = $cache->data;
+    }
+    else {
+      $grouped_issues = islandora_newspaper_group_issues(
+        islandora_newspaper_get_issues($variables['object'])
+      );
+      cache_set('ldl_theme_grouped_issues', $grouped_issues, 'cache');
+    }
+  }
+
   $issueTotal = 0;
   $yearTotal = 0;
   $month_enum = ['01','02','03','04','05','06','07','08','09','10','11','12'];
