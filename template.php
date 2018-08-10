@@ -80,28 +80,34 @@ function alpha_preprocess_islandora_newspaper(array &$variables) {
 }
 
 function newspaper_issue_first_page_tn_path($pid) {
-  $query = <<<EOQ
-    PREFIX islandora-rels-ext: <http://islandora.ca/ontology/relsext#>                                                                                                                                 
-    SELECT ?pid ?seq
-    FROM <#ri>
-      WHERE {
-      ?pid <fedora-rels-ext:isMemberOf> <info:fedora/$pid> .
-      ?pid islandora-rels-ext:isSequenceNumber ?seq .
-      ?pid <fedora-model:state> <fedora-model:Active> .
-    }
-    ORDER BY ?seq
-    LIMIT 1
-EOQ;
-  $connection = islandora_get_tuque_connection();
-
-  $results = $connection->repository->ri->sparqlQuery($query);
-
-  if (1 !== count($results)) {
-    return '';
+  $object = islandora_object_load($pid);
+  if ($object && $object['TN']) {
+    $pid_with_tn = $pid;
   }
-  $first_pid =  $results[0]['pid']['value'];
+  else {
+    $query = <<<EOQ
+      PREFIX islandora-rels-ext: <http://islandora.ca/ontology/relsext#>
+      SELECT ?pid ?seq
+      FROM <#ri>
+        WHERE {
+        ?pid <fedora-rels-ext:isMemberOf> <info:fedora/$pid> .
+        ?pid islandora-rels-ext:isSequenceNumber ?seq .
+        ?pid <fedora-model:state> <fedora-model:Active> .
+      }
+      ORDER BY ?seq
+      LIMIT 1
+EOQ;
+    $connection = islandora_get_tuque_connection();
 
-  return "/islandora/object/$first_pid/datastream/JPG/view";
+    $results = $connection->repository->ri->sparqlQuery($query);
+
+    if (1 !== count($results)) {
+      return '';
+    }
+    $pid_with_tn =  $results[0]['pid']['value'];
+  }
+
+  return "/islandora/object/$pid_with_tn/datastream/JPG/view";
 }
 
 function alpha_preprocess_islandora_large_image(&$variables) {
