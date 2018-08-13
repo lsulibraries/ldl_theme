@@ -915,7 +915,8 @@ function yearClick(){
 }
 
 function monthClick(){
-      monthButton.click(function(){
+    monthButton.click(function(){
+      if (($('body').find('.monthLevel')).length > 0) {
         var thisMonth = $(this);
         $(this).addClass('activeMonth');
         $(".month-container-label").not(".activeMonth").addClass("inactiveYear");
@@ -980,7 +981,9 @@ function monthClick(){
             $('<div class="multipleNotice">This month contains days with multiple issues</div>').insertBefore('.activeMonth span.month-container-label-month');
             console.log('multiple issues on one day');
         }
-      });
+      }
+    });
+
 }
       //back to month
       $(".monthSelect, .monthBack").click(function(){
