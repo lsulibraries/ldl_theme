@@ -6,6 +6,11 @@
       console.log('jquery fired once');
       $("<div class='mobileMenu'/>").insertBefore("div#page");
       switch (true) { //detect page type or content type
+
+        case ($('body').hasClass('front')) :{
+          break;
+        }
+
         //case for individual pages of newspaper as images
         case ((($('.pageText').length)) && (!$('body').hasClass('audioPDF'))) :{
           $('body').addClass('pageImage largeImage');

@@ -233,6 +233,20 @@ a.institution-about-edit {
 .dccTheme .institutionLabel {
   background-image: url("../images/logo-white.png"); }
 
+.lascTheme .institution-header, .lascTheme .collectionHeader, .lascTheme .institution-search::before, .lascTheme .child-institution-collections::before {
+  background: #16325a; }
+.lascTheme .collectionLogo {
+  background-image: url("../images/lasc.jpg");
+  cursor: pointer; }
+.lascTheme form#islandora-collection-search-form {
+  border: 2px solid #16325a; }
+.lascTheme .institution-search input[type="text"] {
+  border: 2px solid #16325a; }
+.lascTheme .institutionLabel::before {
+  background: #16325a; }
+.lascTheme .institutionLabel {
+  background-image: url("../images/lasc.jpg"); }
+
 .lsmTheme .institution-header, .lsmTheme .collectionHeader, .lsmTheme .institution-search::before, .lsmTheme .child-institution-collections::before {
   background: #5d0e8b; }
 .lsmTheme .collectionLogo {
@@ -2210,6 +2224,8 @@ body.logged-in.front div#zone-header {
   position: absolute;
   width: calc(100% - 40px); }
 
+.front .dataPromotion {
+  height: 300px; }
 .front .scrollPrompt {
   position: absolute;
   bottom: 50px;
