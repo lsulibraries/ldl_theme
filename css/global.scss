@@ -9221,6 +9221,10 @@ margin-bottom: 20px;
 
 body.context-data{
 
+.instGroup .cmodel_wrapper_inst:first-child .inst {
+    width: calc(100% - 40px);
+}
+
 .dataPage{
   width: 100%;
 }

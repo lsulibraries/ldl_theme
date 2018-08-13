@@ -6605,6 +6605,8 @@ body.multipleDaily .issueLevel .issue-container {
   .islandora-pdf-metadata, .islandora-large-image-metadata {
     display: block; } }
 @media screen and (max-width: 1260px) and (max-width: 900px) {
+  body.context-data .instGroup .cmodel_wrapper_inst:first-child .inst {
+    width: calc(100% - 40px); }
   body.context-data .dataPage {
     width: 100%; }
   body.context-data .global_totals {
