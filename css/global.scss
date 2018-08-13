@@ -6581,7 +6581,7 @@ body.largeImage, body.newspaperSet{
 
 
 .firstMonthCover:not(.firstYearCover){
-  display: none;
+  display: none !important;
 }
 
 .islandora-newspaper-object.islandora.newspaperContainer {
@@ -6886,9 +6886,12 @@ display: none;
   display: none !important;
 }
 
+
 .monthLevel{
 
-
+.firstMonthCover:not(.firstYearCover){
+  display: block !important;
+}
 
 .publication-year-container:hover{
 
@@ -7245,6 +7248,10 @@ span.month-container-label-count {
 //begin issueLevel styleSheets
 
 .issueLevel{
+
+.firstMonthCover:not(.firstYearCover){
+  display: block !important;
+}
 
 .issuePreview{
     height: 700px;

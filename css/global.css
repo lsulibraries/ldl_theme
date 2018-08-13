@@ -4826,7 +4826,7 @@ body.largeImage {
   background: #000000; }
 
 body.largeImage .firstMonthCover:not(.firstYearCover), body.newspaperSet .firstMonthCover:not(.firstYearCover) {
-  display: none; }
+  display: none !important; }
 body.largeImage .islandora-newspaper-object.islandora.newspaperContainer, body.newspaperSet .islandora-newspaper-object.islandora.newspaperContainer {
   display: flex;
   flex-direction: column;
@@ -5031,6 +5031,8 @@ body.largeImage .issuePreview, body.largeImage .grid-loading-notice, body.largeI
   display: none; }
 body.largeImage .dayContainer > .dayIssue, body.largeImage .highlight > .dayIssue, body.newspaperSet .dayContainer > .dayIssue, body.newspaperSet .highlight > .dayIssue {
   display: none !important; }
+body.largeImage .monthLevel .firstMonthCover:not(.firstYearCover), body.newspaperSet .monthLevel .firstMonthCover:not(.firstYearCover) {
+  display: block !important; }
 body.largeImage .monthLevel .publication-year-container:hover .firstYearCover, body.newspaperSet .monthLevel .publication-year-container:hover .firstYearCover {
   transform: scale3d(1, 1, 1);
   transition-duration: 0.2s; }
@@ -5255,6 +5257,8 @@ body.largeImage .islandora-newspaper-grid .publication-year-container.activeYear
     color: white;
     box-sizing: content-box;
     border-radius: 0px 0px 3px 3px; }
+body.largeImage .issueLevel .firstMonthCover:not(.firstYearCover), body.newspaperSet .issueLevel .firstMonthCover:not(.firstYearCover) {
+  display: block !important; }
 body.largeImage .issueLevel .issuePreview, body.newspaperSet .issueLevel .issuePreview {
   height: 700px;
   overflow: hidden;
