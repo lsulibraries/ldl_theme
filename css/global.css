@@ -5820,7 +5820,7 @@ body.context-data #edit-table-results > legend {
   font-weight: 700;
   letter-spacing: 1px;
   font-size: 11px;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.85);
   padding-bottom: 3px; }
 body.context-data .description {
@@ -5855,9 +5855,14 @@ body.context-data .statHeader {
   font-weight: 700;
   letter-spacing: 1px;
   font-size: 11px;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
   border-bottom: 1px solid #ffffff8c;
   padding-bottom: 3px; }
+body.context-data .statDescription {
+  color: white;
+  margin-bottom: 15px; }
+body.context-data #edit-filterdesc {
+  display: none; }
 body.context-data .globalStat {
   display: flex;
   justify-content: space-between;
@@ -6600,6 +6605,62 @@ body.multipleDaily .issueLevel .issue-container {
   .islandora-pdf-metadata, .islandora-large-image-metadata {
     display: block; } }
 @media screen and (max-width: 1260px) and (max-width: 900px) {
+  body.context-data .dataPage {
+    width: 100%; }
+  body.context-data .global_totals {
+    background: white;
+    width: 100%;
+    padding-bottom: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+  body.context-data .globalStat {
+    width: calc(100% - 42px); }
+  body.context-data canvas#globalChart {
+    max-width: 500px; }
+  body.context-data .globalContainer {
+    width: 100%; }
+  body.context-data .dl_txt {
+    padding-bottom: 60px; }
+  body.context-data .table .header {
+    font-weight: 700;
+    text-align: center;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  body.context-data .table .row {
+    justify-content: flex-start;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+    padding-left: 20px; }
+  body.context-data .ics_download_button {
+    width: auto !important;
+    left: 20px !important; }
+  body.context-data .ics_filter_submit#edit-submit {
+    height: 40px;
+    width: 100%; }
+  body.context-data .instGroup .inst_wrapper {
+    width: 100%; }
+  body.context-data .instContainer {
+    width: 100%;
+    margin-left: 0px;
+    margin-top: 40px; }
+  body.context-data .table {
+    padding: 20px 10px; }
+  body.context-data #block-system-main .content.clearfix {
+    padding-left: 20px;
+    padding-right: 20px; }
+  body.context-data .glanceStats {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+
   body.headerversiontwo .downloadList {
     top: 248px; }
     body.headerversiontwo .downloadList .datastream-download-details {

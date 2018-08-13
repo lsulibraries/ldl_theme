@@ -8135,7 +8135,7 @@ position: relative;
     font-weight: 700;
     letter-spacing: 1px;
     font-size: 11px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     border-bottom: 1px solid $offWhite;
     padding-bottom: 3px;
     }
@@ -8185,9 +8185,18 @@ padding-bottom: 50px;
     font-weight: 700;
     letter-spacing: 1px;
     font-size: 11px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     border-bottom: 1px solid #ffffff8c;
     padding-bottom: 3px;
+}
+
+.statDescription {
+    color: white;
+    margin-bottom: 15px;
+}
+
+#edit-filterdesc{
+  display: none;
 }
 
 .globalStat {
@@ -8913,6 +8922,9 @@ body.multipleDaily{
 
 @media screen and (max-width: 1260px) {
 
+
+
+
 body.bookViewer {
   .bookPreviewContainer{
     flex-direction: column;
@@ -9196,7 +9208,111 @@ margin-bottom: 20px;
   .islandora-pdf-metadata, .islandora-large-image-metadata {
     display: block;
   }
+
+
+
+@media screen and (max-width: 1040px){
+  body.context-data{
+
+  }
+}
+
   @media screen and (max-width: 900px) {
+
+body.context-data{
+
+.dataPage{
+  width: 100%;
+}
+
+.global_totals {
+    background: white;
+    width: 100%;
+    padding-bottom: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.globalStat {
+
+    width: calc(100% - 42px);
+}
+
+canvas#globalChart {
+    max-width: 500px;
+}
+
+.globalContainer{
+  width: 100%;
+}
+
+#globalChart{
+}
+
+.dl_txt{
+      padding-bottom: 60px;
+}
+
+.table .header {
+    font-weight: 700;
+    text-align: center;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.table .row {
+    justify-content: flex-start;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+    padding-left: 20px;}
+
+.ics_download_button{
+  width: auto !important;
+    left: 20px !important;
+}
+
+.ics_filter_submit#edit-submit{
+      height: 40px;
+      width: 100%;
+}
+
+.instGroup .inst_wrapper {
+    width: 100%;
+}
+
+.instContainer {
+    width: 100%;
+    margin-left: 0px;
+    margin-top: 40px;
+}
+
+.table {
+    padding: 20px 10px;
+}
+
+
+ #block-system-main .content.clearfix {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+    .glanceStats {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+}
 
 body.headerversiontwo{
   .downloadList{
@@ -9983,6 +10099,7 @@ border: 1px solid rgba(255, 255, 255, 0.33);
   @media screen and (max-width: 740px) {
 
 //begin compoundChild mobile
+
 body.compoundChild{
 
 
