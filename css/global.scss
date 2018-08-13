@@ -8150,7 +8150,6 @@ display: none;
         background: white;
             width: 332px;
     padding-bottom: 20px;
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -8161,8 +8160,14 @@ display: none;
     }
 
 canvas#globalChart {
-padding-top: 50px;
 padding-bottom: 50px;
+}
+
+.globalLabel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
 }
 
 .globalContainer {
@@ -9300,6 +9305,10 @@ canvas#globalChart {
 
 .table {
     padding: 20px 10px;
+}
+
+.tableStats{
+  margin-left: 0px;
 }
 
 

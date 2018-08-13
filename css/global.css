@@ -5831,7 +5831,6 @@ body.context-data .global_totals {
   background: white;
   width: 332px;
   padding-bottom: 20px;
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center; }
@@ -5839,8 +5838,12 @@ body.context-data .instContainer {
   width: 100%;
   margin-left: 20px; }
 body.context-data canvas#globalChart {
-  padding-top: 50px;
   padding-bottom: 50px; }
+body.context-data .globalLabel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px; }
 body.context-data .globalContainer {
   flex-grow: 1;
   display: flex;
@@ -6654,6 +6657,8 @@ body.multipleDaily .issueLevel .issue-container {
     margin-top: 40px; }
   body.context-data .table {
     padding: 20px 10px; }
+  body.context-data .tableStats {
+    margin-left: 0px; }
   body.context-data #block-system-main .content.clearfix {
     padding-left: 20px;
     padding-right: 20px; }
