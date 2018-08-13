@@ -141,30 +141,7 @@
            $('.table').insertBefore('.dl_txt');
            $('#edit-filter').parent().addClass('dataContainer');
            $('#block-system-main').parallax({imageSrc: 'https://i.imgur.com/yUbfVN7.jpg'});
-          if ($(window).width() > 901) {
-            var element = $('.global_totals');
-            var originalY = element.offset().top;
-
-            // Space between element and top of screen (when scrolling)
-            var topMargin = 40;
-
-            // Should probably be set in CSS; but here just for emphasis
-            element.css('position', 'relative');
-
-            $(window).on('scroll', function(event) {
-            var finaldestination = $('.instContainer').height() - originalY - topMargin - 93;
-            console.log(finaldestination);
-                var firstScroll = $(window).scrollTop();
-                var scrollTop = Math.min(firstScroll, finaldestination);
-
-                element.stop(false, false).animate({
-                    top: scrollTop < originalY
-                            ? 0
-                            : scrollTop - originalY + topMargin
-                }, 700);
-            });
-
-          }
+          scrollFollow();
           break;
         }
 
@@ -193,6 +170,28 @@
           $("body").toggleClass('mobileNewspaper newspaperList');
           $(".islandora-newspaper-grid").fadeIn("normal");
         });
+      }
+
+      function scrollFollow() {
+        if ($(window).width() > 901) {
+          var element = $('.global_totals');
+          var originalY = element.offset().top;
+          var elementHeight = element.height();
+          // Space between element and top of screen (when scrolling)
+          var topMargin = 40;
+          // Should probably be set in CSS; but here just for emphasis
+          element.css('position', 'relative');
+          $(window).on('scroll', function(event) {
+            var finaldestination = $('.instGroup').height() - elementHeight + originalY - topMargin - 20;
+            var firstScroll = $(window).scrollTop();
+            var scrollTop = Math.min(firstScroll, finaldestination);
+            element.stop(false, false).animate({
+                top: scrollTop < originalY
+                        ? 0
+                        : scrollTop - originalY + topMargin
+            }, 700);
+          });
+        }
       }
 
       function newspaperIssue(){
