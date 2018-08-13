@@ -152,7 +152,7 @@
             element.css('position', 'relative');
 
             $(window).on('scroll', function(event) {
-            var finaldestination = $('.instContainer').height() - originalY - topMargin - 50;
+            var finaldestination = $('.instContainer').height() - originalY - topMargin - 93;
             console.log(finaldestination);
                 var firstScroll = $(window).scrollTop();
                 var scrollTop = Math.min(firstScroll, finaldestination);
