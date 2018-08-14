@@ -549,7 +549,8 @@
         "dcc",
         "vville",
         "tahil",
-        "fpoc"
+        "fpoc",
+        "lasc"
       ];
       for (namespace in namespaces) {
         ns = namespaces[namespace];
