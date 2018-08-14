@@ -1383,6 +1383,7 @@ opacity: 1;
   a.institutionLink.lascLink {
     background-color: $lascColor;
     background-image: url($lascLogo);
+    background-size: 130px auto;
   }
 
   a.institutionLink.dccLink {
