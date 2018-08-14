@@ -11,6 +11,9 @@
 document.body.className += ' ' + 'pdf';
 </script>
 
+  <div class="pdf-thumbnail">
+    <img src="<?php print "/islandora/object/{$islandora_object}/datastream/TN/view" ?>"></img>
+  </div>
 
 <div class="islandora-pdf-object islandora" vocab="http://schema.org/" prefix="dcterms: http://purl.org/dc/terms/" typeof="Article">
   <div class="islandora-pdf-content-wrapper clearfix">

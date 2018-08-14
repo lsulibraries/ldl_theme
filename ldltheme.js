@@ -40,6 +40,18 @@
           imageModal();
           break;
         }
+
+        case ($('body').hasClass('pdf')) :{
+          itemTitle = $(".modsTitle").html(); // finds full title without truncation
+          thumbnailURL = $(".pdf-thumbnail img").prop('src');
+          itemHeader();
+          typeClass('pdf');
+          moveMetadata();
+          actionToggles();
+          itemFooter();
+          imageModal();
+          break;
+        }
         case ((($('#book-viewer').length) || ($('.islandora-newspaper-issue-navigator').length))  && (!$('body').hasClass('audioPDF'))) :{
           $('body').addClass('bookViewer');
           itemTitle = $(".modsTitle").html(); // finds full title without truncation
