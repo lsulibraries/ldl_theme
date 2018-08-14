@@ -644,7 +644,7 @@
     $("body").addClass('regeneratePage');
   }
 
-      $('#secondary-display-profiles').appendTo('.islandora-solr-date-filter');
+      $('#secondary-display-profiles').insertAfter('.islandora-solr-facet-wrapper:last');
       $('<div class="downloadSearch">Download Results as CSV</div>').appendTo('#secondary-display-profiles a');
       $('.downloadSearch').parent().addClass('downloadSearchContainer');
       // ===== above chunk needs cleanup, some legacy code within =====
@@ -757,7 +757,24 @@
           $('#share').toggleClass('shareActive');
           $('.compoundChild .compoundParent').toggleClass('hideme');
         });
-        moveMetadata();
+        $('table').each(function (){
+            $(this).replaceWith( $(this).html()
+                .replace(/<tbody/gi, "<div class='metadataContainer'")
+                .replace(/<tr/gi, "<div class='metadataRow'")
+                .replace(/<\/tr>/gi, "</div>")
+                .replace(/<td/gi, "<span")
+                .replace(/<\/td>/gi, "</span>")
+                .replace(/<\/tbody/gi, "<\/div")
+            );
+        });
+
+        $("#region-sidebar-first").addClass('nano');
+        $(".nano > .region-inner").appendTo('#side');
+        $('#sideMods, .nano > .region-inner').wrapAll('<div class="metadataSidebar"/>');
+        $(".metadataSidebar").addClass('nano-content');
+        $(".metadataRow span:first-child").addClass("metadataTitle");
+        $(".metadataRow span:nth-child(2n)").addClass("metadataValue");
+        $(".metadataContainer div:first-child").remove();  //removes weird h3 titles
         $(".metadataSidebar > .region-inner > .alpha-debug-block").remove();
         $(".metadataSidebar > .region-inner > .metadataContainer:nth-child(2n + 0)").addClass("itemMetadata");
         $(".metadataSidebar > .region-inner > .metadataContainer:nth-child(2n + 1)").addClass("compoundMetadata");

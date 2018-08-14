@@ -4990,8 +4990,15 @@ body.largeImage .islandora-newspaper-grid, body.newspaperSet .islandora-newspape
     height: 420px !important; }
     body.largeImage .islandora-newspaper-grid .publication-year-container-label span.publication-year, body.newspaperSet .islandora-newspaper-grid .publication-year-container-label span.publication-year {
       position: absolute;
-      bottom: 30px;
-      left: 30px; }
+      bottom: 50px;
+      left: 0px;
+      width: 100%;
+      background: white;
+      height: 30px;
+      justify-content: flex-start;
+      padding-left: 30px;
+      padding-top: 20px;
+      z-index: 8; }
     body.largeImage .islandora-newspaper-grid .publication-year-container-label span.issues-year-total, body.newspaperSet .islandora-newspaper-grid .publication-year-container-label span.issues-year-total {
       position: absolute;
       bottom: 15px;
@@ -5047,6 +5054,9 @@ body.largeImage .issuePreview, body.largeImage .grid-loading-notice, body.largeI
   display: none; }
 body.largeImage .dayContainer > .dayIssue, body.largeImage .highlight > .dayIssue, body.newspaperSet .dayContainer > .dayIssue, body.newspaperSet .highlight > .dayIssue {
   display: none !important; }
+body.largeImage .monthLevel .activeYear .month-container, body.newspaperSet .monthLevel .activeYear .month-container {
+  overflow: hidden;
+  height: 190px; }
 body.largeImage .monthLevel .firstMonthCover:not(.firstYearCover), body.newspaperSet .monthLevel .firstMonthCover:not(.firstYearCover) {
   display: block !important; }
 body.largeImage .monthLevel .publication-year-container:hover .firstYearCover, body.newspaperSet .monthLevel .publication-year-container:hover .firstYearCover {
@@ -5513,6 +5523,16 @@ body.mobileDeviceNewspaper .newspaper-thumbnailData {
 body.mobileDeviceNewspaper .newspaper-listToggle {
   display: none !important; }
 
+body.mobileNewspaper .islandora-newspaper-grid .publication-year-container-label span.publication-year {
+  bottom: 50px;
+  left: 0px;
+  width: auto;
+  background: white;
+  height: auto;
+  justify-content: flex-start;
+  padding-left: 0px;
+  padding-top: 20px;
+  z-index: 8; }
 body.mobileNewspaper .issuePreview, body.mobileNewspaper .month-container, body.mobileNewspaper .islandora-newspaper-grid .viewYears .issue-container > a {
   display: flex !important;
   flex-direction: column; }
@@ -5626,6 +5646,8 @@ body.compoundParent #region-content .region-content-inner {
 
 ul#secondary-display-profiles {
   width: 100%; }
+  ul#secondary-display-profiles a.downloadSearchContainer {
+    padding-left: 12px; }
 
 a.downloadSearchContainer {
   display: flex;
