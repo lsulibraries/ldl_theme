@@ -1380,6 +1380,11 @@ opacity: 1;
     align-items: flex-end;
   }
 
+  a.institutionLink.lascLink {
+    background-color: $lascColor;
+    background-image: url($lascLogo);
+  }
+
   a.institutionLink.dccLink {
     background-color: $dccColor;
     background-image: url($dccLogo);

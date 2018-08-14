@@ -884,6 +884,9 @@ li.child-institution-collection-list-item {
     display: -webkit-flex;
     display: flex;
     align-items: flex-end; }
+  #block-block-11 a.institutionLink.lascLink {
+    background-color: #16325a;
+    background-image: url("../images/lasc.jpg"); }
   #block-block-11 a.institutionLink.dccLink {
     background-color: #083a07;
     background-image: url("../images/logo-white.png");
