@@ -7,6 +7,10 @@
  * @TODO: Add documentation about this file and the available variables
  */
 ?>
+<script>
+document.body.className += ' ' + 'pdf';
+</script>
+
 
 <div class="islandora-pdf-object islandora" vocab="http://schema.org/" prefix="dcterms: http://purl.org/dc/terms/" typeof="Article">
   <div class="islandora-pdf-content-wrapper clearfix">
