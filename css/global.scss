@@ -6165,7 +6165,22 @@ body.compoundBook{
   .backContainer{
   margin-top:20px;
   }
+#book-viewer > .metadataContainer {
+    display: none;
+}
 
+div#bookMeta2Inner {
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.bookMetaContainer > .metadataContainer{
+    margin: 40px;
+    padding: 20px 0px 0px 0px !important;
+    margin-top: 60px;
+
+    
+}
 }
 
 body.bookViewer{
@@ -6191,6 +6206,8 @@ body.bookViewer{
   background-repeat: no-repeat;
   content:'compound information';
   position: absolute;
+  color:white;
+
 }
 
 .itemMetadata::before{

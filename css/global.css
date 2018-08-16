@@ -4546,6 +4546,15 @@ body.compoundBook .currentPart {
   width: fit-content; }
 body.compoundBook .backContainer {
   margin-top: 20px; }
+body.compoundBook #book-viewer > .metadataContainer {
+  display: none; }
+body.compoundBook div#bookMeta2Inner {
+  padding: 40px;
+  box-sizing: border-box; }
+body.compoundBook .bookMetaContainer > .metadataContainer {
+  margin: 40px;
+  padding: 20px 0px 0px 0px !important;
+  margin-top: 60px; }
 
 body.bookViewer .compoundMetadata, body.bookViewer .itemMetadata {
   border-top: 1px solid rgba(255, 255, 255, 0.16);
@@ -4563,7 +4572,8 @@ body.bookViewer .compoundMetadata::before, body.bookViewer .itemMetadata::before
   background-size: 20px;
   background-repeat: no-repeat;
   content: 'compound information';
-  position: absolute; }
+  position: absolute;
+  color: white; }
 body.bookViewer .itemMetadata::before {
   content: 'piece information'; }
 body.bookViewer a.pageImages {

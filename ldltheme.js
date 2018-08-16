@@ -85,6 +85,8 @@
                       $('.contentLabel.bookDesc').css('display','none');
                     }                    
                     $(".content > .backContainer").remove();
+                    $("#bookMeta2").clone().prop({id:"bookMeta2Inner"}).insertAfter("#bookMeta");
+                    $("#bookMeta").addClass('itemMetadata');
           }
           break;
         }
