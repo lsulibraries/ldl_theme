@@ -80,11 +80,11 @@
                     $( " <span class='breadcrumbDivider'>/</span>" ).insertAfter( ".institutionSmall:last" ); //needs to be separated from the a href
                     $(parentText).addClass("institutionSmall").appendTo(".headerBreadcrumb"); //creates institution breadcrumb
                     $('<div class="currentPart"></div>').html(sequenceText).appendTo('.headerBreadcrumb');             
-                    $(".depth-4 > a").clone().prop({class:"backContainer"}).insertAfter(".bookDesc").html("<div class='backCollection'>Back to Parent</div>");
+                    $(".depth-4 > a").clone().prop({class:"backContainer"}).insertAfter(".bookDesc").html("<div class='backCollection backParent'>Back to Parent</div>");
                     if (!$(".tagsGlance").length){
                       $('.contentLabel.bookDesc').css('display','none');
                     }                    
-
+                    $(".content > .backContainer").remove();
           }
           break;
         }
