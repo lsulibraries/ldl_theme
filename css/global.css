@@ -33,6 +33,8 @@ body.logged-in {
   padding-top: 59px !important; }
   body.logged-in .grid-3 .metadataSidebar.nano-content {
     padding-top: 90px; }
+  body.logged-in .manageMenu .tabs > li:last-child {
+    margin-right: 5px !important; }
 
 .fixed {
   position: fixed !important; }
@@ -4529,6 +4531,10 @@ div#BRpage {
   position: relative !important;
   right: 3px !important; }
 
+body.compoundBook .tabs > li:nth-child(0n + 2) {
+  margin-left: 0px !important; }
+body.compoundBook .tabs > li:last-child {
+  margin-right: 0px !important; }
 body.compoundBook .metadataSidebar.nano-content {
   padding-top: 40px; }
 body.compoundBook .currentPart {

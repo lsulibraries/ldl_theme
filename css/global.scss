@@ -207,6 +207,11 @@ body.logged-in{
 .grid-3 .metadataSidebar.nano-content {
     padding-top: 90px;
 }  
+
+  .manageMenu .tabs > li:last-child{
+      margin-right: 5px !important;
+  }
+
 }
 
 .fixed{
@@ -6143,6 +6148,17 @@ div#BRpage {
 
 
 body.compoundBook{
+
+  .tabs > li:nth-child(0n + 2){
+      margin-left: 0px !important;
+  }
+
+  .tabs > li:last-child{
+      margin-right: 0px !important;
+  }
+
+
+
   .metadataSidebar.nano-content {
   padding-top: 40px;
   }
