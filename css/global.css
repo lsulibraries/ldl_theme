@@ -31,6 +31,8 @@ html, body {
 
 body.logged-in {
   padding-top: 59px !important; }
+  body.logged-in .grid-3 .metadataSidebar.nano-content {
+    padding-top: 90px; }
 
 .fixed {
   position: fixed !important; }
@@ -4542,6 +4544,8 @@ body.compoundBook .currentPart {
   border-radius: 3px;
   text-transform: uppercase;
   width: fit-content; }
+body.compoundBook .backContainer {
+  margin-top: 20px; }
 
 body.bookViewer .compoundMetadata, body.bookViewer .itemMetadata {
   border-top: 1px solid rgba(255, 255, 255, 0.16);

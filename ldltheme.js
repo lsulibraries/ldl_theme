@@ -6,7 +6,7 @@
       console.log('jquery fired once');
       $("<div class='mobileMenu'/>").insertBefore("div#page");
 
-      if ( ($('.block-islandora-compound-object').length) && ($('#block-system-main .block-inner .content > div').length) && ( !$('body').is('.audioPDF, .regeneratePage, .datastreamPage, .book'))){
+      if ( ($('.block-islandora-compound-object').length) && ($('#block-system-main .block-inner .content > div').length) && (!($("body").attr('class').indexOf('-pages') > -1)) && ( !$('body').is('.audioPDF, .regeneratePage, .datastreamPage, .book, .pagesView'))){
         $("body").addClass('compoundChild');
       }
 
@@ -74,8 +74,17 @@
                     $(".metadataSidebar > .region-inner > .metadataContainer").first().addClass("itemMetadata");
                     $("body").addClass('compoundBook');
                     var sequenceText = $('span#islandora-compound-sequence-position').text();
+                    $('span#islandora-compound-sequence-position').remove();   
+                    var parentText = $(".depth-4 > a").clone(); //creates href path from breadcrumb depth-2
+                    var parentHome = $(".depth-4 > a").attr('href'); //creates href path from breadcrumb depth-2
+                    $( " <span class='breadcrumbDivider'>/</span>" ).insertAfter( ".institutionSmall:last" ); //needs to be separated from the a href
+                    $(parentText).addClass("institutionSmall").appendTo(".headerBreadcrumb"); //creates institution breadcrumb
                     $('<div class="currentPart"></div>').html(sequenceText).appendTo('.headerBreadcrumb');             
-                    $('span#islandora-compound-sequence-position').remove();                           
+                    $(".depth-4 > a").clone().prop({class:"backContainer"}).insertAfter(".bookDesc").html("<div class='backCollection'>Back to Parent</div>");
+                    if (!$(".tagsGlance").length){
+                      $('.contentLabel.bookDesc').css('display','none');
+                    }                    
+
           }
           break;
         }
@@ -399,6 +408,8 @@
           $('.chooseIcon').html('<i class="fas fa-newspaper"></i>');
           $('.chooseText').html('View');
         }
+
+
       }
 
       function moveMetadata(){  //begin metadata move
@@ -430,7 +441,6 @@
         if (!$(".metadataContainer .metadataRow").length){ //hide details toggle if metadata is empty
             $(".infoToggle").hide();
         }
-
 
       }   //end metadata move
 
@@ -665,6 +675,11 @@
       if ($("body").attr('class').indexOf('datastream') > -1) {
         $("body").addClass('datastreamPage');
       }
+      if ($("body").attr('class').indexOf('-pages') > -1) {
+        $("body").addClass('pagesView');
+        $("#block-islandora-compound-object-compound-jail-display, .islandora-objects-display-switch").remove();
+      }
+
 
   if ($("body").attr('class').indexOf('regenerate') > -1) {
     $("body").addClass('regeneratePage');
@@ -678,7 +693,7 @@
 
 
       //begin compoundObject
-      if ( ($('.block-islandora-compound-object').length) && ( !$('body').is('.audioPDF, .regeneratePage, .datastreamPage, .book')  )) {
+      if ( ($('.block-islandora-compound-object').length) && ( !$('body').is('.audioPDF, .regeneratePage, .datastreamPage, .book, .pagesView')  )) {
         $("#sideMods").remove();
         $("body").addClass('compoundObject');  //find widest image
         var widest = null;  // remember the width of the "widest" element - probably faster than calling .width() - currently disabled - move addclasswidest to second if to

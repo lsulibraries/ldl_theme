@@ -204,6 +204,9 @@ html, body {
 
 body.logged-in{
   padding-top: 59px !important;
+.grid-3 .metadataSidebar.nano-content {
+    padding-top: 90px;
+}  
 }
 
 .fixed{
@@ -6141,23 +6144,27 @@ div#BRpage {
 
 body.compoundBook{
   .metadataSidebar.nano-content {
-    padding-top: 40px;
-}
+  padding-top: 40px;
+  }
 
-.currentPart {
-    color: rgba(255, 255, 255, 0.85);
-    padding: 0px 10px;
-    font-weight: normal;
-    font-size: 11px;
-    margin-bottom: 5px;
-    margin-top: 8px;
-    vertical-align: baseline !important;
-    border: 1px solid white;
-    margin-left: 10px;
-    border-radius: 3px;
-    text-transform: uppercase;
-    width: fit-content;
-}
+  .currentPart {
+  color: rgba(255, 255, 255, 0.85);
+  padding: 0px 10px;
+  font-weight: normal;
+  font-size: 11px;
+  margin-bottom: 5px;
+  margin-top: 8px;
+  vertical-align: baseline !important;
+  border: 1px solid white;
+  margin-left: 10px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  width: fit-content;
+  }
+
+  .backContainer{
+  margin-top:20px;
+  }
 
 }
 
