@@ -7793,6 +7793,16 @@ body.IEuser .backgroundDiv {
     transform: translateY(0px); }
   50% {
     transform: translateY(5px); } }
+svg.svg-inline--fa.fa-twitter.fa-w-16.jssocials-share-logo {
+  width: 20px;
+  position: relative;
+  top: -5px; }
+
+svg.svg-inline--fa.fa-facebook-f.fa-w-9.jssocials-share-logo {
+  position: relative;
+  top: -5px;
+  width: 10px; }
+
 .jssocials-shares * {
   box-sizing: border-box; }
 
