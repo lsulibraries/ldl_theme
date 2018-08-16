@@ -1539,7 +1539,10 @@ div.breadcrumb a:nth-last-of-type(1) {
   margin-bottom: 50px;
   flex-grow: 2;
   margin: 0 auto;
-  width: 100%; }
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
 
 .page-browse-collections #block-system-main {
   width: 100%;
@@ -3791,7 +3794,7 @@ body.not-logged-in.compoundChild .manageMenu {
     border-top: 1px solid rgba(255, 255, 255, 0.16);
     padding-top: 20px;
     padding-bottom: 80px; }
-  .compoundChild .compoundMetadata::before, .compoundChild .itemMetadata::before {
+  .compoundChild .compoundMetadata::before, .compoundChild .itemMetadata::before, .compoundChild body.bookViewer .itemMetadata::before, body.bookViewer .compoundChild .itemMetadata::before {
     position: absolute;
     left: 0px;
     top: -20px;
@@ -4524,6 +4527,41 @@ div#BRpage {
   position: relative !important;
   right: 3px !important; }
 
+body.compoundBook .metadataSidebar.nano-content {
+  padding-top: 40px; }
+body.compoundBook .currentPart {
+  color: rgba(255, 255, 255, 0.85);
+  padding: 0px 10px;
+  font-weight: normal;
+  font-size: 11px;
+  margin-bottom: 5px;
+  margin-top: 8px;
+  vertical-align: baseline !important;
+  border: 1px solid white;
+  margin-left: 10px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  width: fit-content; }
+
+body.bookViewer .compoundMetadata, body.bookViewer .itemMetadata {
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+  padding-top: 20px;
+  padding-bottom: 80px; }
+body.bookViewer .compoundMetadata::before, body.bookViewer .itemMetadata::before {
+  position: absolute;
+  left: 0px;
+  top: -20px;
+  text-transform: uppercase;
+  font-size: 11px;
+  background-image: url("https://i.imgur.com/OnZTeYf.png");
+  padding-left: 25px;
+  background-position: 0px -2px;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  content: 'compound information';
+  position: absolute; }
+body.bookViewer .itemMetadata::before {
+  content: 'piece information'; }
 body.bookViewer a.pageImages {
   display: inline;
   border: 1px solid grey;
@@ -7264,6 +7302,9 @@ body.multipleDaily .issueLevel .issue-container {
   .institution-collection-list-item-label {
     padding: 0px 30px; } }
 @media screen and (max-width: 1260px) and (max-width: 740px) {
+  .currentPart {
+    margin-left: 0px !important; }
+
   body.compoundChild .userMenu {
     margin-top: 20px; }
   body.compoundChild .compoundArrows {

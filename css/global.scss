@@ -2181,6 +2181,10 @@ div.breadcrumb a {
   flex-grow: 2;
   margin: 0 auto;
   width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;  
 }
 
 .page-browse-collections #block-system-main {
@@ -6133,7 +6137,59 @@ div#BRpage {
     right: 3px !important;
 }
 //Begin bookViewer
+
+
+body.compoundBook{
+  .metadataSidebar.nano-content {
+    padding-top: 40px;
+}
+
+.currentPart {
+    color: rgba(255, 255, 255, 0.85);
+    padding: 0px 10px;
+    font-weight: normal;
+    font-size: 11px;
+    margin-bottom: 5px;
+    margin-top: 8px;
+    vertical-align: baseline !important;
+    border: 1px solid white;
+    margin-left: 10px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    width: fit-content;
+}
+
+}
+
 body.bookViewer{
+
+
+
+.compoundMetadata, .itemMetadata {
+    border-top: 1px solid rgba(255, 255, 255, 0.16);
+    padding-top: 20px;
+    padding-bottom: 80px;
+}
+
+.compoundMetadata::before{
+  position: absolute;
+  left:0px;
+  top:-20px;
+  text-transform: uppercase;
+  font-size: 11px;
+  background-image: url($infoLegend2);
+  padding-left: 25px;
+  background-position: 0px -2px;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  content:'compound information';
+  position: absolute;
+}
+
+.itemMetadata::before{
+@extend .compoundMetadata::before;
+content:'piece information';
+}
 
 
 
@@ -10183,6 +10239,11 @@ border: 1px solid rgba(255, 255, 255, 0.33);
   @media screen and (max-width: 740px) {
 
 //begin compoundChild mobile
+
+.currentPart {
+    margin-left: 0px !important;
+
+}
 
 body.compoundChild{
 
