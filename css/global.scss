@@ -5235,9 +5235,6 @@ div#shareToggle.activeMenu{
   #section-header{
     top: 60px!important;
   }
-.metadataContainer {
-    padding-top: 30px !important;
-}
 
 }
 
@@ -8375,6 +8372,12 @@ padding-bottom: 50px;
     display: flex;
     justify-content: space-between;
     margin: 0px 20px;
+}
+
+.globalStat > .global {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
 }
     .instGroup {
         display: flex;

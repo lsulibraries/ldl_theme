@@ -3919,8 +3919,6 @@ body.logged-in.headerversiontwo #toolbar {
   z-index: 9999 !important; }
 body.logged-in.headerversiontwo #section-header {
   top: 60px !important; }
-body.logged-in.headerversiontwo .metadataContainer {
-  padding-top: 30px !important; }
 
 body.headerversiontwo {
   background: black;
@@ -5974,6 +5972,10 @@ body.context-data .globalStat {
   display: flex;
   justify-content: space-between;
   margin: 0px 20px; }
+body.context-data .globalStat > .global {
+  width: 100%;
+  display: flex;
+  justify-content: space-around; }
 body.context-data .instGroup {
   display: flex;
   flex-wrap: wrap;

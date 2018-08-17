@@ -120,7 +120,7 @@
 
            var globalNumbers = [];
            iNumber = 0;
-           $('.globalStat > .total').each(function()
+           $('.globalStat .total').each(function()
            {
 
                    globalNumbers[iNumber++] = $(this).text();
