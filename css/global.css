@@ -5975,7 +5975,7 @@ body.context-data .globalStat {
 body.context-data .globalStat > .global {
   width: 100%;
   display: flex;
-  justify-content: space-around; }
+  justify-content: space-between; }
 body.context-data .instGroup {
   display: flex;
   flex-wrap: wrap;
