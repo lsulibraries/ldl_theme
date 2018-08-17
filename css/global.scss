@@ -2495,7 +2495,7 @@ list-style-image {
   margin-top: 53px;
 }
 
-.count {
+.count:not(.column) {
   color: #bebebe;
   font-size: 10px;
   padding-left: 10px;
