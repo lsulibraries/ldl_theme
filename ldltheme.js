@@ -271,11 +271,14 @@
         $("<div class='infoToggle userSelect'><div class='iconSelect'></div><div class='textSelect'>details</div></div>").appendTo(".userMenu"); //adds toggle for parent metadata
         $("div#block-system-main > div.tabs > ul.tabs").appendTo(".userMenu").wrapAll('<div class="manageMenu"/>'); //moves the view/ip embargo/manage menu
         $("div#block-system-main > div.tabs").remove(); // temporarily removes tabs until menu is set
+         if(itemTitle.length > 20) {
+             $(".itemTitle").css('font-size','34px');
+         }
+          $('.compoundParent, .itemTitle, .headerBreadcrumb > div').each(function() {
+              $(this).html($(this).text());            ///encodes special characters
+          });         
 
 
-             if(itemTitle.length > 20) {
-                 $(".itemTitle").css('font-size','34px');
-             }
 
       }
 
