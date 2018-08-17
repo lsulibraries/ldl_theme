@@ -8175,7 +8175,7 @@ opacity: 0.7;
     }
 }
 
-.cmodel {
+.cmodel:not(.column) {
     font-weight: 700;
 }
 

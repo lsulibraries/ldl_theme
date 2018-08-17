@@ -5836,7 +5836,7 @@ body.context-data .table {
     flex-grow: 1; }
   body.context-data .table .row:nth-child(odd) {
     background: #f1f1f1; }
-body.context-data .cmodel {
+body.context-data .cmodel:not(.column) {
   font-weight: 700; }
 body.context-data .page_description {
   background: white;
