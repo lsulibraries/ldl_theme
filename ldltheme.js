@@ -1542,13 +1542,14 @@ function monthClick(){
           var compound_moretext = "Show more";
           var compound_lesstext = "Show less";
           $('.compoundSelect-title, .innerimageTitle').each(function() {
-              var compound_content = $(this).html();
+              var compound_content = $(this).html($(this).text());
               if(compound_content.length > compound_showChar) {
                   var c2 = compound_content.substr(0, compound_showChar);
                   var h2 = compound_content.substr(compound_showChar, compound_content.length - compound_showChar);
                   var html2 = c2 + compound_ellipsestext;
-                  $(this).html(html2);
+                  $(this).text(html2);
               }
+             
           });
           $('.metadataVertical #block-user-login').remove();
           //begin show more script
@@ -1562,7 +1563,7 @@ function monthClick(){
                   var c = content.substr(0, showChar);
                   var h = content.substr(showChar, content.length - showChar);
                   var html = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
-                  $(this).html(html);
+                  $(this).text(html);
               }
           });
           $(".morelink").click(function(){
