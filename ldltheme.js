@@ -16,7 +16,7 @@
           $('<div class="currentPart"></div>').html(sequenceText).appendTo('.headerBreadcrumb');
          $('#islandora-compound-previous-link').attr('id', '').wrapAll('<li class="sequencePrev"/>');
          $('#islandora-compound-next-link').attr('id', '').wrapAll('<li class="sequenceNext"/>');
-
+         $('.sequencePrev').insertBefore('.sequenceNext');
           console.log(sequenceText);
         }
 
@@ -80,7 +80,7 @@
                     $( " <span class='breadcrumbDivider'>/</span>" ).insertAfter( ".institutionSmall:last" ); //needs to be separated from the a href
                     $(parentText).addClass("institutionSmall").appendTo(".headerBreadcrumb"); //creates institution breadcrumb
                     $('<div class="currentPart"></div>').html(sequenceText).appendTo('.headerBreadcrumb');             
-                    $(".depth-4 > a").clone().prop({class:"backContainer"}).insertAfter(".bookDesc").html("<div class='backCollection backParent'>Back to Parent</div>");
+                    $(".depth-4 > a").clone().prop({class:"backContainer"}).insertAfter(".bookDesc").html("<div class='backCollection backParent'>Back</div>");
                     if (!$(".tagsGlance").length){
                       $('.contentLabel.bookDesc').css('display','none');
                     }                    
