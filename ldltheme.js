@@ -109,7 +109,7 @@
           $('#block-block-9').appendTo('#region-content .region-content-inner');
            var globalLabels = [];
            iLabel = 0;
-           $('.globalStat > .cmodel').each(function()
+           $('.globalStat .cmodel').each(function()
            {
 
                    globalLabels[iLabel++] = $(this).text();
