@@ -70,16 +70,10 @@
           bookContainer();
           actionToggles();
           bookFooter();
-          if (($('.book-thumbnail').length) && ($('.compoundMetadata').length)) {
+          if (($('.book-thumbnail').length) && ($('span#islandora-compound-sequence-position').length)) {
                     $(".metadataSidebar > .region-inner > .metadataContainer").first().addClass("itemMetadata");
                     $("body").addClass('compoundBook');
-                    var sequenceText = $('span#islandora-compound-sequence-position').text();
-                    $('span#islandora-compound-sequence-position').remove();   
-                    var parentText = $(".depth-4 > a").clone(); //creates href path from breadcrumb depth-2
-                    var parentHome = $(".depth-4 > a").attr('href'); //creates href path from breadcrumb depth-2
-                    $( " <span class='breadcrumbDivider'>/</span>" ).insertAfter( ".institutionSmall:last" ); //needs to be separated from the a href
-                    $(parentText).addClass("institutionSmall").appendTo(".headerBreadcrumb"); //creates institution breadcrumb
-                    $('<div class="currentPart"></div>').html(sequenceText).appendTo('.headerBreadcrumb');             
+                    childBreadcrumb();
                     $(".depth-4 > a").clone().prop({class:"backContainer"}).insertAfter(".bookDesc").html("<div class='backCollection backParent'>Back</div>");
                     if (!$(".tagsGlance").length){
                       $('.contentLabel.bookDesc').css('display','none');
@@ -210,6 +204,16 @@
           $("body").toggleClass('mobileNewspaper newspaperList');
           $(".islandora-newspaper-grid").fadeIn("normal");
         });
+      }
+
+      function childBreadcrumb(){
+        var sequenceText = $('span#islandora-compound-sequence-position').text();
+        $('span#islandora-compound-sequence-position').remove();   
+        var parentText = $(".depth-4 > a").clone(); //creates href path from breadcrumb depth-2
+        var parentHome = $(".depth-4 > a").attr('href'); //creates href path from breadcrumb depth-2
+        $( " <span class='breadcrumbDivider'>/</span>" ).insertAfter( ".institutionSmall:last" ); //needs to be separated from the a href
+        $(parentText).addClass("institutionSmall").appendTo(".headerBreadcrumb"); //creates institution breadcrumb
+        $('<div class="currentPart"></div>').html(sequenceText).appendTo('.headerBreadcrumb');         
       }
 
       function scrollFollow() {
