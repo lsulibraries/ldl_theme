@@ -74,9 +74,9 @@
                     $(".metadataSidebar > .region-inner > .metadataContainer").first().addClass("itemMetadata");
                     $("body").addClass('compoundBook');
                     childBreadcrumb();
-                    $(".depth-4 > a").clone().prop({class:"backContainer"}).insertAfter(".bookDesc").html("<div class='backCollection backParent'>Back</div>");
+                    $(".depth-4 > a").clone().prop({class:"backContainer"}).insertAfter(".descriptionText").html("<div class='backCollection backParent'>Back</div>");
                     if (!$(".tagsGlance").length){
-                      $('.contentLabel.bookDesc').css('display','none');
+                      $('.contentLabel.itemDesc').css('display','none');
                     }                    
                     $(".content > .backContainer").remove();
                     $("#bookMeta2").clone().prop({id:"bookMeta2Inner"}).insertAfter("#bookMeta");
@@ -303,9 +303,9 @@
       function itemFooter(){
         $(".metadataSidebar .modsDesc").clone().appendTo(".image-thumbnailData");
         $("<div class='labelContainer descContainer'/>").insertAfter(".imageContainer"); //adds label break
-        $("<div class='contentLabel bookDesc'>tags</div>").appendTo(".descContainer"); //adds label break
+        $("<div class='contentLabel itemDesc'>tags</div>").appendTo(".descContainer"); //adds label break
         $("a.institutionSmall:last-child").clone().prop({class:"backContainer"}).insertAfter(".descContainer").html("<div class='backCollection'>Back to Collection</div>");
-        $("<div class='descriptionText'/>").insertAfter(".bookDesc"); //adds label break
+        $("<div class='descriptionText'/>").insertAfter(".itemDesc"); //adds label break
         $(".metadataSidebar .modsSubject a").clone().appendTo(".descContainer .descriptionText").addClass("modsSubject").wrapAll('<div class="tagsGlance"/>');
         $(".metadataSidebar").clone().prop({ class: "metadataVertical"}).appendTo('.content .descContainer .descriptionText');
         $(".downloadSelect").insertAfter(".infoToggle");
@@ -322,8 +322,8 @@
         else{
           $("<div class='contentLabel itemLabel bookLabel'>Book Object</div>").appendTo(".labelContainer");
         }
-        $("<div class='contentLabel bookDesc'>tags</div>").appendTo(".descContainer"); //adds label break
-        $("<div class='descriptionText'/>").insertAfter(".bookDesc"); //adds label break
+        $("<div class='contentLabel bookDesc itemDesc'>tags</div>").appendTo(".descContainer"); //adds label break
+        $("<div class='descriptionText'/>").insertAfter(".itemDesc"); //adds label break
         $("#book-viewer div div ul li a").clone().prop({class:"backContainer"}).insertAfter(".descContainer").html("<div class='backCollection'>Back to Collection</div>");
         $("<div class='bookPreviewContainer'/>").insertAfter(".itemLabel"); //adds label break
         $("<div class='bookPreview'/>").appendTo(".bookPreviewContainer"); //adds label break
@@ -388,7 +388,7 @@
           $('#btnSrch').toggleClass('active');
           $('.bookDetails').toggleClass('active');
         });
-        $("<div class='bookSidebar'><div class='bookMetaContainer'></div></div>").appendTo("#BookReader"); //sets double-bagged container
+        $("<div class='bookSidebar'><div class='bookMetaContainer'></div></div>").appendTo("#BookReader"); //444444444444444444444444444444444444444444444444444444444444444444444444444444444444sets double-bagged container
         $("#region-sidebar-first > .metadataSidebar > .region-inner >  .metadataContainer ").clone().prop({id:"bookMeta"}).appendTo(".bookMetaContainer"); 
         $("#book-viewer > .metadataContainer ").clone().prop({id:"bookMeta2", class:"metadataContainer compoundMetadata"}).appendTo(".region-sidebar-first-inner"); //fills container
         //fills container
@@ -852,46 +852,46 @@
       } //end compoundObject
 
       //begin compoundChild
-      if ($('body').hasClass('compoundChild')){
-          $(".compoundChild .compoundLabel").html("Compound <br> Child"); //text within compoundLabel
-          $("<div class='compoundArrows userSelect'/>, .infoToggle, #shareToggle").appendTo(".userMenu");
-          $(".infoToggle, #shareToggle").appendTo(".userMenu");
-          $('#islandora-compound-sequence-position, #islandora-compound-previous-link, #islandora-compound-next-link').appendTo('.compoundArrows');
-          $(".parentLink").insertAfter("#window-title");
-          $(".backContainer").remove();
-          $(".compoundParent").html("Back");
-          $(".infoToggle:last-child").remove();
-          $(".infoToggle").insertBefore(".downloadLink");
-          $(".infoToggle").html("<div class='userSelect'><div class='iconSelect'><i class='fas fa-align-left'></i></div><div class='textSelect'>Toggle Info</div></div>");
-          $(".compoundArrows").appendTo(".childHeader");
-          $("#share").insertAfter("#shareToggle");
-          $(".parentLink").wrapAll("<div class='headerBreadcrumb'/>");
-          $(".childImage").remove();
-          $(".institutionSmall").insertBefore(".parentLink")
-          $(".infoToggle").clone().attr("class", "sidebarToggle").appendTo(".metadataSidebar");
-          $(".sidebarToggle .textSelect").html("Close");
-          $(".sidebarToggle > div").removeClass("userSelect");
-              $('.sidebarToggle').click(function(){
-                    $(this).toggleClass('menuActive');
-                    $('#region-sidebar-first').toggleClass('infoOpened');
-                    $('body').toggleClass('metaOpened');
-                    $(".nano").nanoScroller({ alwaysVisible: false });
-              });
-          $(".manageMenu").appendTo(".childHeader");
-          $(".manageParent").insertAfter(".manageMenu .tabs");
-          $( ".breadcrumbDivider" ).insertAfter( ".institutionSmall" );
-          $(".userMenu").insertAfter('.childHeader');
-          //undo the download select drawer
-          $(".downloadSelect").remove();
-          $(".datastream-download-details").addClass("textSelect").html("Download");
-          $(".downloadLink").addClass("userSelect");
-          $(".infoToggle").addClass('menuActive');
-          $(".infoToggle .iconSelect").html('');
-          $(".infoToggle .textSelect").html('Details');
-          $(".region-header-first").remove();
+      // if ($('body').hasClass('compoundChild')){
+      //     $(".compoundChild .compoundLabel").html("Compound <br> Child"); //text within compoundLabel
+      //     $("<div class='compoundArrows userSelect'/>, .infoToggle, #shareToggle").appendTo(".userMenu");
+      //     $(".infoToggle, #shareToggle").appendTo(".userMenu");
+      //     $('#islandora-compound-sequence-position, #islandora-compound-previous-link, #islandora-compound-next-link').appendTo('.compoundArrows');
+      //     $(".parentLink").insertAfter("#window-title");
+      //     $(".backContainer").remove();
+      //     $(".compoundParent").html("Back");
+      //     $(".infoToggle:last-child").remove();
+      //     $(".infoToggle").insertBefore(".downloadLink");
+      //     $(".infoToggle").html("<div class='userSelect'><div class='iconSelect'><i class='fas fa-align-left'></i></div><div class='textSelect'>Toggle Info</div></div>");
+      //     $(".compoundArrows").appendTo(".childHeader");
+      //     $("#share").insertAfter("#shareToggle");
+      //     $(".parentLink").wrapAll("<div class='headerBreadcrumb'/>");
+      //     $(".childImage").remove();
+      //     $(".institutionSmall").insertBefore(".parentLink")
+      //     $(".infoToggle").clone().attr("class", "sidebarToggle").appendTo(".metadataSidebar");
+      //     $(".sidebarToggle .textSelect").html("Close");
+      //     $(".sidebarToggle > div").removeClass("userSelect");
+      //         $('.sidebarToggle').click(function(){
+      //               $(this).toggleClass('menuActive');
+      //               $('#region-sidebar-first').toggleClass('infoOpened');
+      //               $('body').toggleClass('metaOpened');
+      //               $(".nano").nanoScroller({ alwaysVisible: false });
+      //         });
+      //     $(".manageMenu").appendTo(".childHeader");
+      //     $(".manageParent").insertAfter(".manageMenu .tabs");
+      //     $( ".breadcrumbDivider" ).insertAfter( ".institutionSmall" );
+      //     $(".userMenu").insertAfter('.childHeader');
+      //     //undo the download select drawer
+      //     $(".downloadSelect").remove();
+      //     $(".datastream-download-details").addClass("textSelect").html("Download");
+      //     $(".downloadLink").addClass("userSelect");
+      //     $(".infoToggle").addClass('menuActive');
+      //     $(".infoToggle .iconSelect").html('');
+      //     $(".infoToggle .textSelect").html('Details');
+      //     $(".region-header-first").remove();
 
 
-        }
+      //   }
         //end compoundChild
 
 
@@ -900,9 +900,9 @@
       if ( ($('.total-issue-count').length) && ( !$('body').hasClass('audioPDF') ) ){
           $(".metadataSidebar .modsDesc").clone().appendTo(".newspaper-thumbnailData");
           $("<div class='labelContainer descContainer'/>").insertAfter(".newspaperContainer"); //adds label break
-          $("<div class='contentLabel bookDesc'>tags</div>").appendTo(".descContainer"); //adds label break
+          $("<div class='contentLabel bookDesc itemDesc'>tags</div>").appendTo(".descContainer"); //adds label break
           $("a.institutionSmall:last-child").clone().prop({class:"backContainer"}).insertAfter(".descContainer").html("<div class='backCollection'>Back to Collection</div>");
-          $("<div class='descriptionText'/>").insertAfter(".bookDesc"); //adds label break
+          $("<div class='descriptionText'/>").insertAfter(".itemDesc"); //adds label break
           $(".metadataSidebar .modsSubject a").clone().appendTo(".descContainer .descriptionText").addClass("modsSubject").wrapAll('<div class="tagsGlance"/>');
           $(".metadataSidebar").clone().prop({ class: "metadataVertical"}).appendTo('.content .descContainer .descriptionText');
           $(".downloadSelect").insertAfter(".infoToggle");
