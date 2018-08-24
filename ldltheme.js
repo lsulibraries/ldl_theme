@@ -204,8 +204,10 @@
         if (!$('body').hasClass('compoundObject')){
           $("#region-content div.tabs.clearfix").prependTo("#block-system-main");
           $("<div class='item_header'/>").insertBefore(".itemContainer, .islandora-large-image-object, .bookContainer, .islandora-newspaper-object"); //creates header for image items
+          thumbnailURL = $(".image-thumbnail img").prop('src');
+
         }
-       if ($('body').hasClass('compoundParent')){
+       else if ($('body').hasClass('compoundParent')){
             var widest = null;  // remember the width of the "widest" element - probably faster than calling .width() - currently disabled - move addclasswidest to second if to
             var widestWidth = 0;
             $(".compoundSelect").each(function() {
@@ -220,7 +222,6 @@
                 widestWidth = $(this).width();
               }
             });   //done finding widest image
-            $("<div class='backgroundDiv'/>").insertBefore(".compoundGallery_header .form-item"); // adds div for item background
             var commentedURL = $('div.widest').find('noscript').addClass('widestIMG').text().split(" ");
             var srcclean = commentedURL[2].match(/"(.*?)"/);
             $('.compoundSelect noscript').each(function() {    //begin embargo detection
@@ -238,8 +239,24 @@
             if (($('.ip-embargo-details').length) && (!$('.object-title').length)){
               $('body').addClass('objectHidden');
             }    //end embargo detection
-            var thumbnailURL =  srcclean[1];   
+        $(".parentLink").wrapAll("<div class='headerBreadcrumb'/>");
+        var institutionText = $(".depth-2 > a").clone(); //creates href path from breadcrumb depth-2
+        var institutionHome = $(".depth-2 > a").attr('href'); //creates href path from breadcrumb depth-2
+        $(institutionText).addClass("institutionSmall").insertBefore("a.parentLink"); //adds institutionLabel div to show content type
+        $( " <span class='breadcrumbDivider'>/</span>" ).insertAfter( ".institutionSmall" ); // adds a / character and needs to be separated from the a href
+        $(".compoundObject .contentLabel").addClass("compoundLabel"); //detects contentType and assign new class to contentLabel
+        $(".compoundLabel").html("Compound Object"); //text within compoundLabel
+        $(".manageParent, ul.tabs").appendTo(".itemMenu").wrapAll('<div class="manageMenu"/>'); //moves the view/ip embargo/manage menu
+        $(".downloadLink").appendTo(".userMenu");
+        $(".compoundLabels").insertBefore(".backgroundDiv");
+        $("#islandora-ip-embargo-object-embargo-form").insertBefore(".compoundGallery"); // moves ipembargo
+        $("<div class='embargoTitle'>Set IP embargo settings</div>").insertBefore(".compoundObject #islandora-ip-embargo-policy-source")//adds title for ip embargo on compounds            
+                  var thumbnailURL =  srcclean[1];
+  $(".manageParent, ul.tabs").appendTo(".itemMenu").wrapAll('<div class="manageMenu"/>'); //moves the view/ip embargo/manage menu
+
         }
+
+
         $("<div class='backgroundDiv'/>").appendTo(".item_header"); //creates header for book items
         $('.backgroundDiv').css('background-image', 'url(' + thumbnailURL + ')');
         $("<div class='item_headerMenu'/>").appendTo(".item_header"); //creates header for book items
@@ -279,7 +296,7 @@
         $(".metadataSidebar .modsDesc").clone().appendTo(".image-thumbnailData, .item-thumbnailData");
         $("<div class='labelContainer descContainer'/>").insertAfter(".imageContainer, .itemContainer"); //adds label break
         $("<div class='contentLabel itemDesc'>tags</div>").appendTo(".descContainer"); //adds label break
-        $("a.institutionSmall:last-child").clone().prop({class:"backContainer"}).insertAfter(".descContainer").html("<div class='backCollection'>Back to Collection</div>");
+        $("a.institutionSmall:last-child").clone().prop({class:"backContainer"}).insertAfter(".descContainer").html("<div class='backCollection'>Back to Collections</div>");
         $("<div class='descriptionText'/>").insertAfter(".itemDesc"); //adds label break
         $(".metadataSidebar .modsSubject a").clone().appendTo(".descContainer .descriptionText").addClass("modsSubject").wrapAll('<div class="tagsGlance"/>');
         $(".metadataSidebar").clone().prop({ class: "metadataVertical"}).appendTo('.content .descContainer .descriptionText');
@@ -553,6 +570,8 @@
         );
         console.log('info toggle made');
         $('li:empty').remove();
+      $('.manageMenu').insertBefore('#shareToggle');
+
       } // end toggle functions
 
 
@@ -1155,7 +1174,6 @@ function monthClick(){
 
       if ( ($('body').hasClass('compoundObject')) || ($('body').hasClass('bookViewer')) || ($('body').hasClass('context-data')) || ($('body').hasClass('largeImage')) || ($('body').hasClass('newspaperSet'))){
       $('body').addClass('headerversiontwo');
-      $('.manageMenu').insertBefore('#shareToggle');
       }
       if (navigator.appName == 'Microsoft Internet Explorer' ||  !!(navigator.userAgent.match(/Trident/) || navigator.userAgent.match(/rv:11/)) || (typeof $.browser !== "undefined" && $.browser.msie == 1))
       {

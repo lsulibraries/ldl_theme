@@ -5334,13 +5334,13 @@ margin: 0px;
 
 }
 
-.imageTitle, .newspaperTitle{
+.imageTitle, .newspaperTitle, .itemTitle {
 font-size: 40px;
 color: white;
 line-height: 37px;
 }
 
-.image_headerMenu, .newspaper_headerMenu{
+.image_headerMenu, .newspaper_headerMenu, .item_headerMenu{
 display: flex;
 flex-direction: column;
 align-items: flex-start;

@@ -3989,11 +3989,11 @@ body.headerversiontwo {
     body.headerversiontwo .issueMenu .navIssues {
       border-radius: 0px !important;
       margin-left: 1px; }
-  body.headerversiontwo .imageTitle, body.headerversiontwo .newspaperTitle {
+  body.headerversiontwo .imageTitle, body.headerversiontwo .newspaperTitle, body.headerversiontwo .itemTitle {
     font-size: 40px;
     color: white;
     line-height: 37px; }
-  body.headerversiontwo .image_headerMenu, body.headerversiontwo .newspaper_headerMenu {
+  body.headerversiontwo .image_headerMenu, body.headerversiontwo .newspaper_headerMenu, body.headerversiontwo .item_headerMenu {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
