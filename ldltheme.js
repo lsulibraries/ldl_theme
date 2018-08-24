@@ -100,7 +100,6 @@
         case ( ($('.block-islandora-compound-object').length) && (!$('.currentImage').length) && ( !$('body').is('.audioPDF, .regeneratePage, .datastreamPage, .book, .pagesView')  )) :{
           $("body").addClass('compoundObject compoundParent'); 
           itemTitle = $(".modsTitle").html(); // finds full title without truncation
-          thumbnailURL = $(".islandora-compound-object-jail:first").prop('src');
           compoundStarter();
           itemHeader();    
           moveMetadata();
@@ -204,7 +203,42 @@
       function itemHeader(){
         if (!$('body').hasClass('compoundObject')){
           $("#region-content div.tabs.clearfix").prependTo("#block-system-main");
-          $("<div class='item_header'/>").insertBefore(".itemContainer .islandora-large-image-object, .bookContainer, .islandora-newspaper-object"); //creates header for image items
+          $("<div class='item_header'/>").insertBefore(".itemContainer, .islandora-large-image-object, .bookContainer, .islandora-newspaper-object"); //creates header for image items
+        }
+       if ($('body').hasClass('compoundParent')){
+            var widest = null;  // remember the width of the "widest" element - probably faster than calling .width() - currently disabled - move addclasswidest to second if to
+            var widestWidth = 0;
+            $(".compoundSelect").each(function() {
+              if (widest == null)
+              {
+                widest = $(this).addClass('widest');;
+                widestWidth = $(this).width();
+              }
+              else
+              if ($(this).width() > widestWidth) {
+                widest = $(this)
+                widestWidth = $(this).width();
+              }
+            });   //done finding widest image
+            $("<div class='backgroundDiv'/>").insertBefore(".compoundGallery_header .form-item"); // adds div for item background
+            var commentedURL = $('div.widest').find('noscript').addClass('widestIMG').text().split(" ");
+            var srcclean = commentedURL[2].match(/"(.*?)"/);
+            $('.compoundSelect noscript').each(function() {    //begin embargo detection
+              str = $(this).html();
+              if (str.indexOf("embargo") >= 0){
+                $(this).parent().parent().addClass("embargoed");
+                $("body").addClass("containsEmbargo");
+                $(".ip-embargo-details").insertBefore(".content > div.islandora").wrapAll("<div class='alertBox_container'/>").wrapAll("<div class='alertBox'/>");
+                $("<span class='alertIcon'/>").insertBefore(".ip-embargo-details");
+              }
+            });
+            if ($('.ip-embargo-details > div').length){
+              $('body').addClass('activeEmbargo');
+            }
+            if (($('.ip-embargo-details').length) && (!$('.object-title').length)){
+              $('body').addClass('objectHidden');
+            }    //end embargo detection
+            var thumbnailURL =  srcclean[1];   
         }
         $("<div class='backgroundDiv'/>").appendTo(".item_header"); //creates header for book items
         $('.backgroundDiv').css('background-image', 'url(' + thumbnailURL + ')');
@@ -225,11 +259,7 @@
          if(itemTitle.length > 20) {
              $(".itemTitle").css('font-size','34px');
          }
-   
-
-
-
-      }
+     }
 
       function imageContainer(){
         $(".islandora-large-image-object, .islandora-newspaper-object").addClass("itemContainer imageContainer"); //adds label break
@@ -246,8 +276,8 @@
       }
 
       function itemFooter(){
-        $(".metadataSidebar .modsDesc").clone().appendTo(".image-thumbnailData");
-        $("<div class='labelContainer descContainer'/>").insertAfter(".imageContainer"); //adds label break
+        $(".metadataSidebar .modsDesc").clone().appendTo(".image-thumbnailData, .item-thumbnailData");
+        $("<div class='labelContainer descContainer'/>").insertAfter(".imageContainer, .itemContainer"); //adds label break
         $("<div class='contentLabel itemDesc'>tags</div>").appendTo(".descContainer"); //adds label break
         $("a.institutionSmall:last-child").clone().prop({class:"backContainer"}).insertAfter(".descContainer").html("<div class='backCollection'>Back to Collection</div>");
         $("<div class='descriptionText'/>").insertAfter(".itemDesc"); //adds label break
@@ -526,7 +556,7 @@
       } // end toggle functions
 
 
-      function compoundStarter(){
+      function compoundStarter(){    
          $(".compoundObject #block-system-main table").prop({class:"modsTable"}).appendTo(".region-sidebar-first-inner");
          $('.compoundSelect').wrapAll('<div class="itemContainer compoundGallery "/>'); //wraps collectionPage title
          $("<div class='itemMenu'/>").insertBefore(".backgroundDiv");
@@ -763,10 +793,10 @@
         // if (($('.ip-embargo-details').length) && (!$('.object-title').length)){
         //   $('body').addClass('objectHidden');
         // }    //end embargo detection
-        //assign background image
+        // assign background image
 
 
-      //   $('.backgroundDiv').css('background-image', 'url(' + srcclean[1] + ')');
+        // $('.backgroundDiv').css('background-image', 'url(' + srcclean[1] + ')');
 
     
  //adds contentLabel div to show content type
