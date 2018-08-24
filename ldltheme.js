@@ -7,7 +7,7 @@
       $("<div class='mobileMenu'/>").insertBefore("div#page");
 
       if ( ($('.block-islandora-compound-object').length) && ($('#block-system-main .block-inner .content > div').length) && (!($("body").attr('class').indexOf('-pages') > -1)) && ( !$('body').is('.audioPDF, .regeneratePage, .datastreamPage, .book, .pagesView'))){
-        $("body").addClass('compoundChild');
+        //$("body").addClass('compoundChild');
       }
 
         if (($('.book-thumbnail').length) && ($('.block-islandora-compound-object').length)) {
@@ -42,7 +42,7 @@
           break;
         }
         //case for large images
-        case ((($('.image-thumbnail').length)) && (!$('body').hasClass('compoundChild')) && (!$('body').hasClass('audioPDF'))) :{
+        case ((($('.image-thumbnail').length)) && (!$('body').hasClass('audioPDF'))) :{
           $('body').addClass('largeImage');
           itemTitle = $(".modsTitle").html(); // finds full title without truncation
           thumbnailURL = $(".image-thumbnail img").prop('src');
@@ -97,80 +97,25 @@
           break;
         }
 
+        case ( ($('.block-islandora-compound-object').length) && (!$('.currentImage').length) && ( !$('body').is('.audioPDF, .regeneratePage, .datastreamPage, .book, .pagesView')  )) :{
+          $("body").addClass('compoundObject compoundParent'); 
+          itemTitle = $(".modsTitle").html(); // finds full title without truncation
+          thumbnailURL = $(".islandora-compound-object-jail:first").prop('src');
+          compoundStarter();
+          itemHeader();    
+          moveMetadata();
+          actionToggles();
+          itemFooter();
+          break;
+        }
+
+        case ( ($('.block-islandora-compound-object').length) && ($('.currentImage').length) && ( !$('body').is('.audioPDF, .regeneratePage, .datastreamPage, .book, .pagesView')  )) :{
+          $("body").addClass('compoundObject compoundItem');  
+          break;
+        }
+
         case ($('body').hasClass('context-data')):{
-          console.log('hi its content stats');
-          $('.ics_filters').removeClass('collapsed');
-          $('#block-block-9').appendTo('#region-content .region-content-inner');
-           var globalLabels = [];
-           iLabel = 0;
-           $('.globalStat .cmodel').each(function()
-           {
-
-                   globalLabels[iLabel++] = $(this).text();
-                   //I should store id in an array
-           });
-
-           console.log(globalLabels);
-
-           var globalNumbers = [];
-           iNumber = 0;
-           $('.globalStat .total').each(function()
-           {
-
-                   globalNumbers[iNumber++] = $(this).text();
-                   //I should store id in an array
-           });
-           console.log(globalNumbers);
-           var ctx = document.getElementById("globalChart");
-           var myChart = new Chart(ctx, {
-               type: 'doughnut',
-               data: {
-                   labels: globalLabels,
-                   datasets: [{
-                       data: globalNumbers,
-                       backgroundColor: [
-                           '#FF5370',
-                           '#FFCB6B',
-                           '#82AAFF',
-                           '#F78C6C',
-                           '#bb80b3',
-                           '#89DDFF',
-                           '#B2CCD6',
-                           '#C3E88D',
-                           '#f07178',
-                           '#C792EA',
-                           '#f07178',
-                           '#6182B8',
-                           '#7C4DFF',
-                           '#E53935',
-                           '#FF5370',
-                           '#F76D47',
-                           '#FFB62C',
-                           '#91B859',
-                           '#8796B0',
-                           '#39ADB5',
-                       ],
-                   }]
-               },
-               options:{
-                 layout:{
-                   padding:{
-                     left: 10,
-                     right: 10,
-                     top: 0,
-                     bottom: 0
-                   }
-                 },
-                 legend:{
-                   fontSize: 11,
-                   position: 'bottom',
-                   labels:{
-                     boxWidth: 10,
-                     padding: 15,
-                   }
-                 }
-               }
-           });
+          dataStarter();
            $('.table').insertBefore('.dl_txt');
            $('#edit-filter').parent().addClass('dataContainer');
            $('#block-system-main').parallax({imageSrc: 'https://i.imgur.com/yUbfVN7.jpg'});
@@ -257,8 +202,10 @@
       }
 
       function itemHeader(){
-        $("#region-content div.tabs.clearfix").prependTo("#block-system-main");
-        $("<div class='item_header'/>").insertBefore(".islandora-large-image-object, .bookContainer, .islandora-newspaper-object"); //creates header for image items
+        if (!$('body').hasClass('compoundObject')){
+          $("#region-content div.tabs.clearfix").prependTo("#block-system-main");
+          $("<div class='item_header'/>").insertBefore(".itemContainer .islandora-large-image-object, .bookContainer, .islandora-newspaper-object"); //creates header for image items
+        }
         $("<div class='backgroundDiv'/>").appendTo(".item_header"); //creates header for book items
         $('.backgroundDiv').css('background-image', 'url(' + thumbnailURL + ')');
         $("<div class='item_headerMenu'/>").appendTo(".item_header"); //creates header for book items
@@ -278,9 +225,7 @@
          if(itemTitle.length > 20) {
              $(".itemTitle").css('font-size','34px');
          }
-          $('.compoundParent, .itemTitle, .headerBreadcrumb > div').each(function() {
-              $(this).html($(this).text());            ///encodes special characters
-          });         
+   
 
 
 
@@ -453,6 +398,79 @@
 
       }   //end metadata move
 
+
+      function dataStarter(){
+          $('.ics_filters').removeClass('collapsed');
+          $('#block-block-9').appendTo('#region-content .region-content-inner');
+           var globalLabels = [];
+           iLabel = 0;
+           $('.globalStat .cmodel').each(function()
+           {
+
+                   globalLabels[iLabel++] = $(this).text();
+                   //I should store id in an array
+           });
+
+           var globalNumbers = [];
+           iNumber = 0;
+           $('.globalStat .total').each(function()
+           {
+
+                   globalNumbers[iNumber++] = $(this).text();
+                   //I should store id in an array
+           });
+           console.log(globalNumbers);
+           var ctx = document.getElementById("globalChart");
+           var myChart = new Chart(ctx, {
+               type: 'doughnut',
+               data: {
+                   labels: globalLabels,
+                   datasets: [{
+                       data: globalNumbers,
+                       backgroundColor: [
+                           '#FF5370',
+                           '#FFCB6B',
+                           '#82AAFF',
+                           '#F78C6C',
+                           '#bb80b3',
+                           '#89DDFF',
+                           '#B2CCD6',
+                           '#C3E88D',
+                           '#f07178',
+                           '#C792EA',
+                           '#f07178',
+                           '#6182B8',
+                           '#7C4DFF',
+                           '#E53935',
+                           '#FF5370',
+                           '#F76D47',
+                           '#FFB62C',
+                           '#91B859',
+                           '#8796B0',
+                           '#39ADB5',
+                       ],
+                   }]
+               },
+               options:{
+                 layout:{
+                   padding:{
+                     left: 10,
+                     right: 10,
+                     top: 0,
+                     bottom: 0
+                   }
+                 },
+                 legend:{
+                   fontSize: 11,
+                   position: 'bottom',
+                   labels:{
+                     boxWidth: 10,
+                     padding: 15,
+                   }
+                 }
+               }
+           });
+      }
       function bookStarter(){
         $("body").addClass('bookViewer');
         $("<span class='modalExit4'><i class='fa fa-times'></i> Exit</span>").insertBefore("body.bookViewer #BookReader");
@@ -507,6 +525,14 @@
         $('li:empty').remove();
       } // end toggle functions
 
+
+      function compoundStarter(){
+         $(".compoundObject #block-system-main table").prop({class:"modsTable"}).appendTo(".region-sidebar-first-inner");
+         $('.compoundSelect').wrapAll('<div class="itemContainer compoundGallery "/>'); //wraps collectionPage title
+         $("<div class='itemMenu'/>").insertBefore(".backgroundDiv");
+         $("<div class='contentLabel'/>").insertBefore(".compoundGallery"); //adds contentLabel div to show content type
+        $("<div class='contentIcon'/>").insertBefore(".compoundGallery_header > .form-item > a:first-child");
+      }  
 
       function imageModal(){
         $("#islandora-openseadragon > .openseadragon-container").addClass("dragonContainer");
@@ -704,24 +730,24 @@
       //begin compoundObject
       if ( ($('.block-islandora-compound-object').length) && ( !$('body').is('.audioPDF, .regeneratePage, .datastreamPage, .book, .pagesView')  )) {
         $("#sideMods").remove();
-        $("body").addClass('compoundObject');  //find widest image
-        var widest = null;  // remember the width of the "widest" element - probably faster than calling .width() - currently disabled - move addclasswidest to second if to
-        var widestWidth = 0;
-        $(".compoundSelect").each(function() {
-          if (widest == null)
-          {
-            widest = $(this).addClass('widest');;
-            widestWidth = $(this).width();
-          }
-          else
-          if ($(this).width() > widestWidth) {
-            widest = $(this)
-            widestWidth = $(this).width();
-          }
-        });   //done finding widest image
-        $("<div class='backgroundDiv'/>").insertBefore(".compoundGallery_header .form-item"); // adds div for item background
-        var commentedURL = $('div.widest').find('noscript').addClass('widestIMG').text().split(" ");
-        var srcclean = commentedURL[2].match(/"(.*?)"/);
+        $("body").addClass('compoundObject oldCompound');  //find widest image
+        // var widest = null;  // remember the width of the "widest" element - probably faster than calling .width() - currently disabled - move addclasswidest to second if to
+        // var widestWidth = 0;
+        // $(".compoundSelect").each(function() {
+        //   if (widest == null)
+        //   {
+        //     widest = $(this).addClass('widest');;
+        //     widestWidth = $(this).width();
+        //   }
+        //   else
+        //   if ($(this).width() > widestWidth) {
+        //     widest = $(this)
+        //     widestWidth = $(this).width();
+        //   }
+        // });   //done finding widest image
+        // $("<div class='backgroundDiv'/>").insertBefore(".compoundGallery_header .form-item"); // adds div for item background
+        // var commentedURL = $('div.widest').find('noscript').addClass('widestIMG').text().split(" ");
+        // var srcclean = commentedURL[2].match(/"(.*?)"/);
         // $('.compoundSelect noscript').each(function() {    //begin embargo detection
         //   str = $(this).html();
         //   if (str.indexOf("embargo") >= 0){
@@ -731,169 +757,118 @@
         //     $("<span class='alertIcon'/>").insertBefore(".ip-embargo-details");
         //   }
         // });
-        if ($('.ip-embargo-details > div').length){
-          $('body').addClass('activeEmbargo');
-        }
-        if (($('.ip-embargo-details').length) && (!$('.object-title').length)){
-          $('body').addClass('objectHidden');
-        }    //end embargo detection
+        // if ($('.ip-embargo-details > div').length){
+        //   $('body').addClass('activeEmbargo');
+        // }
+        // if (($('.ip-embargo-details').length) && (!$('.object-title').length)){
+        //   $('body').addClass('objectHidden');
+        // }    //end embargo detection
         //assign background image
-        $('.backgroundDiv').css('background-image', 'url(' + srcclean[1] + ')');
-        $(".compoundObject #block-system-main table").prop({class:"modsTable"}).appendTo(".region-sidebar-first-inner");
-        $('.compoundSelect').wrapAll('<div class="compoundGallery"/>'); //wraps collectionPage title
-        $("<div class='itemMenu'/>").insertBefore(".backgroundDiv");
-        $("<div class='contentLabel'/>").insertBefore(".compoundGallery"); //adds contentLabel div to show content type
-        //$("<div class='contentIcon'/>").insertBefore(".compoundGallery_header > .form-item > a:first-child"); //adds contentLabel div to show content type
-        $(".parentLink").wrapAll("<div class='headerBreadcrumb'/>");
-        var institutionText = $(".depth-2 > a").clone(); //creates href path from breadcrumb depth-2
-        var institutionHome = $(".depth-2 > a").attr('href'); //creates href path from breadcrumb depth-2
-        $(institutionText).addClass("institutionSmall").insertBefore("a.parentLink"); //adds institutionLabel div to show content type
-        $( " <span class='breadcrumbDivider'>/</span>" ).insertAfter( ".institutionSmall" ); // adds a / character and needs to be separated from the a href
-        $(".compoundObject .contentLabel").addClass("compoundLabel"); //detects contentType and assign new class to contentLabel
-        $(".compoundLabel").html("Compound Object"); //text within compoundLabel
-        $(".manageParent, ul.tabs").appendTo(".itemMenu").wrapAll('<div class="manageMenu"/>'); //moves the view/ip embargo/manage menu
-        $("<div class='userMenu'/>").insertAfter(".manageMenu");  //inserts compoundGlance
-        $("<div class='infoToggle userSelect'><div class='iconSelect'></div><div class='textSelect'>details</div></div>").appendTo(".userMenu"); //adds toggle for parent metadata
-        $(".downloadLink").appendTo(".userMenu");
-        $("#clip").appendTo(".userMenu");
-        $(".compoundLabels").insertBefore(".backgroundDiv");
-        $("#islandora-ip-embargo-object-embargo-form").insertBefore(".compoundGallery"); // moves ipembargo
-        $("<div class='embargoTitle'>Set IP embargo settings</div>").insertBefore(".compoundObject #islandora-ip-embargo-policy-source")//adds title for ip embargo on compounds
-        $('.infoToggle').click(function(){
-          $(this).toggleClass('menuActive');
-          $('#region-sidebar-first').toggleClass('infoOpened');
-          $('body').toggleClass('metaOpened');
-          $(".nano").nanoScroller({ alwaysVisible: false });
-        });
-        if ($('.compoundObject #block-system-main .block-inner .content > div').length){
-          $("body").addClass('compoundChild');
-        }
-        else {
-          $("body").addClass('compoundParent');
-        }
-        if ($('.compoundChild #islandora-openseadragon').length){
-          $("body").addClass('compoundChildImage');
-        }
-        $('.compoundChild #block-system-main .block-inner .content > div').insertAfter('.itemMenu');
-        $('#window-title').insertAfter('.itemMenu');
-        $("<div class='childIcon childImage'/>").insertBefore(".compoundChildImage #window-title");
-        $("<div class='contentLabel imageLabel'>Large<br>Image</div>").insertBefore(".compoundChildImage .compoundLabel");
-        $(".childIcon, #window-title").wrapAll("<div class='childHeader'/>");
-        $('#block-system-main').remove();
-        $('<div class="childNotice">Part of</div>').insertBefore('.compoundChild .compoundGallery_header .contentIcon');
-        $('.userMenu').insertAfter('#window-title');
-        $('<div class="textSelect">clip image</div>').appendTo("#clip");
-        $('#clip').addClass('userSelect');
-        $("<div id='shareToggle' class='userSelect'><div class='iconSelect'></div><div class='textSelect'>share</div></div>").insertAfter("#clip");
-        $("<div id='shareToggle' class='userSelect'><div class='iconSelect'></div><div class='textSelect'>share</div></div>").insertAfter(".compoundParent .compoundCount");
-        $(".compoundCount").appendTo(".compoundGallery");
-        $("#islandora-compound-next-link").insertAfter("#islandora-compound-sequence-position");
-        $("<i class='fa fa-arrow-right' aria-hidden='true'></i>").appendTo("#islandora-compound-next-link");
-        $("<i class='fa fa-arrow-left' aria-hidden='true'></i>").appendTo("#islandora-compound-previous-link");
-        $(".userMenu").insertAfter(".headerBreadcrumb");
-        $("#shareToggle").insertAfter(".infoToggle");
-        $("<div id='share'/>").insertAfter("#shareToggle");
-        $(".parentLink").clone().prop({class:"backContainer"}).insertAfter(".compoundGallery").html("<div class='backCollection'>Back to Collection</div>");
-        $(".contentLabel").wrapAll("<div class='labelContainer'/>");
-        $("#share").jsSocials({
-          url: urlhref,
-          text: title,
-          showLabel: false,
-          showCount: "inside",
-          shares: ["twitter", "facebook"]
-        });
-        $('#shareToggle').click(function(){
-          $(this).toggleClass('activeMenu');
-          $('#share').toggleClass('shareActive');
-          $('.compoundChild .compoundParent').toggleClass('hideme');
-        });
-        $('table').each(function (){
-            $(this).replaceWith( $(this).html()
-                .replace(/<tbody/gi, "<div class='metadataContainer'")
-                .replace(/<tr/gi, "<div class='metadataRow'")
-                .replace(/<\/tr>/gi, "</div>")
-                .replace(/<td/gi, "<span")
-                .replace(/<\/td>/gi, "</span>")
-                .replace(/<\/tbody/gi, "<\/div")
-            );
-        });
-
-        $("#region-sidebar-first").addClass('nano');
-        $(".nano > .region-inner").appendTo('#side');
-        $('#sideMods, .nano > .region-inner').wrapAll('<div class="metadataSidebar"/>');
-        $(".metadataSidebar").addClass('nano-content');
-        $(".metadataRow span:first-child").addClass("metadataTitle");
-        $(".metadataRow span:nth-child(2n)").addClass("metadataValue");
-        $(".metadataContainer div:first-child").remove();  //removes weird h3 titles
-        $(".metadataSidebar > .region-inner > .alpha-debug-block").remove();
-        $(".metadataSidebar > .region-inner > .metadataContainer:nth-child(2n + 0)").addClass("itemMetadata");
-        $(".metadataSidebar > .region-inner > .metadataContainer:nth-child(2n + 1)").addClass("compoundMetadata");
-        $(".mobileMetaToggle .textSelect").replaceWith("<div class='textSelect'>Back to item view</div>");
-        $(".mobileMetaToggle .iconSelect").remove();
-        $(".metadataSidebar").clone().prop({ class: "metadataVertical"}).appendTo('.compoundGallery');
-        $("<div class='compoundGlance'/>").insertBefore(".metadataVertical");  //inserts compoundGlance
-        $(".metadataSidebar .modsDesc").clone().appendTo(".compoundGlance");
-        $(".metadataSidebar .modsSubject a").clone().appendTo(".compoundGlance").addClass("modsSubject").wrapAll('<div class="tagsGlance"/>');
-        $(".tagsGlance > .modsSubject br").remove();
-        $('.mobileMetaToggle').click(function(){
-          $(this).toggleClass('menuActive');
-          $('#region-sidebar-first').toggleClass('infoOpened');
-          $('body').toggleClass('metaOpened');
-          $(".nano").nanoScroller({ alwaysVisible: false });
-        });
-        $(".manageMenu").appendTo(".userMenu");
-        $(".compoundParent #islandora-compound-sequence-position").remove();
-        $(".compoundParent .manageParent").remove();
-        $(".compoundParent #islandora-compound-next-link").remove();
-        $(".manageMenu ul li:first-child").remove();
-        $("#clip").remove();
-        $("div#region-sidebar-first div.tabs").remove(); // temporarily removes tabs until menu is set
-
-      } //end compoundObject
-
-      //begin compoundChild
-      // if ($('body').hasClass('compoundChild')){
-      //     $(".compoundChild .compoundLabel").html("Compound <br> Child"); //text within compoundLabel
-      //     $("<div class='compoundArrows userSelect'/>, .infoToggle, #shareToggle").appendTo(".userMenu");
-      //     $(".infoToggle, #shareToggle").appendTo(".userMenu");
-      //     $('#islandora-compound-sequence-position, #islandora-compound-previous-link, #islandora-compound-next-link').appendTo('.compoundArrows');
-      //     $(".parentLink").insertAfter("#window-title");
-      //     $(".backContainer").remove();
-      //     $(".compoundParent").html("Back");
-      //     $(".infoToggle:last-child").remove();
-      //     $(".infoToggle").insertBefore(".downloadLink");
-      //     $(".infoToggle").html("<div class='userSelect'><div class='iconSelect'><i class='fas fa-align-left'></i></div><div class='textSelect'>Toggle Info</div></div>");
-      //     $(".compoundArrows").appendTo(".childHeader");
-      //     $("#share").insertAfter("#shareToggle");
-      //     $(".parentLink").wrapAll("<div class='headerBreadcrumb'/>");
-      //     $(".childImage").remove();
-      //     $(".institutionSmall").insertBefore(".parentLink")
-      //     $(".infoToggle").clone().attr("class", "sidebarToggle").appendTo(".metadataSidebar");
-      //     $(".sidebarToggle .textSelect").html("Close");
-      //     $(".sidebarToggle > div").removeClass("userSelect");
-      //         $('.sidebarToggle').click(function(){
-      //               $(this).toggleClass('menuActive');
-      //               $('#region-sidebar-first').toggleClass('infoOpened');
-      //               $('body').toggleClass('metaOpened');
-      //               $(".nano").nanoScroller({ alwaysVisible: false });
-      //         });
-      //     $(".manageMenu").appendTo(".childHeader");
-      //     $(".manageParent").insertAfter(".manageMenu .tabs");
-      //     $( ".breadcrumbDivider" ).insertAfter( ".institutionSmall" );
-      //     $(".userMenu").insertAfter('.childHeader');
-      //     //undo the download select drawer
-      //     $(".downloadSelect").remove();
-      //     $(".datastream-download-details").addClass("textSelect").html("Download");
-      //     $(".downloadLink").addClass("userSelect");
-      //     $(".infoToggle").addClass('menuActive');
-      //     $(".infoToggle .iconSelect").html('');
-      //     $(".infoToggle .textSelect").html('Details');
-      //     $(".region-header-first").remove();
 
 
-      //   }
-        //end compoundChild
+      //   $('.backgroundDiv').css('background-image', 'url(' + srcclean[1] + ')');
 
+    
+ //adds contentLabel div to show content type
+      //   $(".parentLink").wrapAll("<div class='headerBreadcrumb'/>");
+      //   var institutionText = $(".depth-2 > a").clone(); //creates href path from breadcrumb depth-2
+      //   var institutionHome = $(".depth-2 > a").attr('href'); //creates href path from breadcrumb depth-2
+      //   $(institutionText).addClass("institutionSmall").insertBefore("a.parentLink"); //adds institutionLabel div to show content type
+      //   $( " <span class='breadcrumbDivider'>/</span>" ).insertAfter( ".institutionSmall" ); // adds a / character and needs to be separated from the a href
+      //   $(".compoundObject .contentLabel").addClass("compoundLabel"); //detects contentType and assign new class to contentLabel
+      //   $(".compoundLabel").html("Compound Object"); //text within compoundLabel
+      //   $(".manageParent, ul.tabs").appendTo(".itemMenu").wrapAll('<div class="manageMenu"/>'); //moves the view/ip embargo/manage menu
+      //   $("<div class='userMenu'/>").insertAfter(".manageMenu");  //inserts compoundGlance
+      //   $("<div class='infoToggle userSelect'><div class='iconSelect'></div><div class='textSelect'>details</div></div>").appendTo(".userMenu"); //adds toggle for parent metadata
+      //   $(".downloadLink").appendTo(".userMenu");
+      //   $("#clip").appendTo(".userMenu");
+      //   $(".compoundLabels").insertBefore(".backgroundDiv");
+      //   $("#islandora-ip-embargo-object-embargo-form").insertBefore(".compoundGallery"); // moves ipembargo
+      //   $("<div class='embargoTitle'>Set IP embargo settings</div>").insertBefore(".compoundObject #islandora-ip-embargo-policy-source")//adds title for ip embargo on compounds
+      //   $('.infoToggle').click(function(){
+      //     $(this).toggleClass('menuActive');
+      //     $('#region-sidebar-first').toggleClass('infoOpened');
+      //     $('body').toggleClass('metaOpened');
+      //     $(".nano").nanoScroller({ alwaysVisible: false });
+      //   });
+
+      //   $('#window-title').insertAfter('.itemMenu');
+      //   $("<div class='childIcon childImage'/>").insertBefore(".compoundChildImage #window-title");
+      //   $("<div class='contentLabel imageLabel'>Large<br>Image</div>").insertBefore(".compoundChildImage .compoundLabel");
+      //   $(".childIcon, #window-title").wrapAll("<div class='childHeader'/>");
+      //   $('#block-system-main').remove();
+      //   $('<div class="childNotice">Part of</div>').insertBefore('.compoundChild .compoundGallery_header .contentIcon');
+      //   $('.userMenu').insertAfter('#window-title');
+      //   $('<div class="textSelect">clip image</div>').appendTo("#clip");
+      //   $('#clip').addClass('userSelect');
+      //   $("<div id='shareToggle' class='userSelect'><div class='iconSelect'></div><div class='textSelect'>share</div></div>").insertAfter("#clip");
+      //   $("<div id='shareToggle' class='userSelect'><div class='iconSelect'></div><div class='textSelect'>share</div></div>").insertAfter(".compoundParent .compoundCount");
+      //   $(".compoundCount").appendTo(".compoundGallery");
+      //   $("#islandora-compound-next-link").insertAfter("#islandora-compound-sequence-position");
+      //   $("<i class='fa fa-arrow-right' aria-hidden='true'></i>").appendTo("#islandora-compound-next-link");
+      //   $("<i class='fa fa-arrow-left' aria-hidden='true'></i>").appendTo("#islandora-compound-previous-link");
+      //   $(".userMenu").insertAfter(".headerBreadcrumb");
+      //   $("#shareToggle").insertAfter(".infoToggle");
+      //   $("<div id='share'/>").insertAfter("#shareToggle");
+      //   $(".parentLink").clone().prop({class:"backContainer"}).insertAfter(".compoundGallery").html("<div class='backCollection'>Back to Collection</div>");
+      //   $(".contentLabel").wrapAll("<div class='labelContainer'/>");
+      //   $("#share").jsSocials({
+      //     url: urlhref,
+      //     text: title,
+      //     showLabel: false,
+      //     showCount: "inside",
+      //     shares: ["twitter", "facebook"]
+      //   });
+      //   $('#shareToggle').click(function(){
+      //     $(this).toggleClass('activeMenu');
+      //     $('#share').toggleClass('shareActive');
+      //     $('.compoundChild .compoundParent').toggleClass('hideme');
+      //   });
+      //   $('table').each(function (){
+      //       $(this).replaceWith( $(this).html()
+      //           .replace(/<tbody/gi, "<div class='metadataContainer'")
+      //           .replace(/<tr/gi, "<div class='metadataRow'")
+      //           .replace(/<\/tr>/gi, "</div>")
+      //           .replace(/<td/gi, "<span")
+      //           .replace(/<\/td>/gi, "</span>")
+      //           .replace(/<\/tbody/gi, "<\/div")
+      //       );
+      //   });
+
+      //   $("#region-sidebar-first").addClass('nano');
+      //   $(".nano > .region-inner").appendTo('#side');
+      //   $('#sideMods, .nano > .region-inner').wrapAll('<div class="metadataSidebar"/>');
+      //   $(".metadataSidebar").addClass('nano-content');
+      //   $(".metadataRow span:first-child").addClass("metadataTitle");
+      //   $(".metadataRow span:nth-child(2n)").addClass("metadataValue");
+      //   $(".metadataContainer div:first-child").remove();  //removes weird h3 titles
+      //   $(".metadataSidebar > .region-inner > .alpha-debug-block").remove();
+      //   $(".metadataSidebar > .region-inner > .metadataContainer:nth-child(2n + 0)").addClass("itemMetadata");
+      //   $(".metadataSidebar > .region-inner > .metadataContainer:nth-child(2n + 1)").addClass("compoundMetadata");
+      //   $(".mobileMetaToggle .textSelect").replaceWith("<div class='textSelect'>Back to item view</div>");
+      //   $(".mobileMetaToggle .iconSelect").remove();
+      //   $(".metadataSidebar").clone().prop({ class: "metadataVertical"}).appendTo('.compoundGallery');
+      //   $("<div class='compoundGlance'/>").insertBefore(".metadataVertical");  //inserts compoundGlance
+      //   $(".metadataSidebar .modsDesc").clone().appendTo(".compoundGlance");
+      //   $(".metadataSidebar .modsSubject a").clone().appendTo(".compoundGlance").addClass("modsSubject").wrapAll('<div class="tagsGlance"/>');
+      //   $(".tagsGlance > .modsSubject br").remove();
+      //   $('.mobileMetaToggle').click(function(){
+      //     $(this).toggleClass('menuActive');
+      //     $('#region-sidebar-first').toggleClass('infoOpened');
+      //     $('body').toggleClass('metaOpened');
+      //     $(".nano").nanoScroller({ alwaysVisible: false });
+      //   });
+      //   $(".manageMenu").appendTo(".userMenu");
+      //   $(".compoundParent #islandora-compound-sequence-position").remove();
+      //   $(".compoundParent .manageParent").remove();
+      //   $(".compoundParent #islandora-compound-next-link").remove();
+      //   $(".manageMenu ul li:first-child").remove();
+      //   $("#clip").remove();
+      //   $("div#region-sidebar-first div.tabs").remove(); // temporarily removes tabs until menu is set
+
+       } //end compoundObject
+
+      
 
 
       // begin newspaper 2.0
@@ -1168,17 +1143,6 @@ function monthClick(){
             $(this).appendTo(".mobileMenu");
         });
       }
-      if ($('body').hasClass('compoundChild')){
-        if ($(window).width() > 700) {
-        $('body').toggleClass("metaOpened")
-        $('#region-sidebar-first').toggleClass("infoOpened")
-        $('.mobileMetaToggle').toggleClass('menuActive');
-        $(".nano").nanoScroller({ alwaysVisible: false });
-        }
-      }
-      //above - this enables meta to be open by default on larger screens
-      //modal advsearch
-      // Get the modal
       var modal = document.getElementById('block-islandora-solr-advanced');
       var page = document.getElementById('page');
       // Get the button that opens the modal
