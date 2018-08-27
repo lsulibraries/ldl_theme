@@ -5787,6 +5787,9 @@ body.compoundChild .manageParent > div > a {
   height: auto;
   margin-right: 0px !important; }
 
+body.context-data .ics_download_title {
+  color: white;
+  padding-top: 5px; }
 body.context-data .dataHeader {
   margin-bottom: 20px; }
 body.context-data .headerTitle {
@@ -5890,20 +5893,18 @@ body.context-data .dl_txt {
   background: white;
   margin-top: 1px; }
 body.context-data input.ics_download_button {
-  position: relative;
-  top: -40px;
   background: none;
-  left: calc(100% - 220px);
-  border: 1px solid #ccc;
+  border: 1px solid #fff;
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: #666;
-  font-weight: 700;
+  color: #fff;
   font-family: Roboto;
   border-radius: 0px;
   width: 200px;
-  text-align: center; }
+  text-align: center;
+  text-shadow: none !important;
+  font-weight: 500; }
 body.context-data #edit-filter > legend {
   background: white;
   width: 100%;
