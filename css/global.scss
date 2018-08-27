@@ -2999,8 +2999,10 @@ body.logged-in.front div#zone-header {
     width: calc(100% - 40px);
 }
 
-.not-logged-in{
-
+.not-logged-in.compoundParent{
+.manageMenu{
+  display: none;
+}
 
 
 }

@@ -2235,6 +2235,9 @@ body.logged-in.front div#zone-header {
   position: absolute;
   width: calc(100% - 40px); }
 
+.not-logged-in.compoundParent .manageMenu {
+  display: none; }
+
 .front .dataPromotion {
   height: 300px; }
 .front .scrollPrompt {

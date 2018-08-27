@@ -205,6 +205,12 @@
           $("#region-content div.tabs.clearfix").prependTo("#block-system-main");
           $("<div class='item_header'/>").insertBefore(".itemContainer, .islandora-large-image-object, .bookContainer, .islandora-newspaper-object"); //creates header for image items
           thumbnailURL = $(".image-thumbnail img").prop('src');
+          var sequenceText = $('span#islandora-compound-sequence-position').text();
+          $('<div class="currentPart"></div>').html(sequenceText).appendTo('.headerBreadcrumb');
+         $('#islandora-compound-previous-link').attr('id', '').wrapAll('<li class="sequencePrev"/>');
+         $('#islandora-compound-next-link').attr('id', '').wrapAll('<li class="sequenceNext"/>');
+         $('.sequencePrev').insertBefore('.sequenceNext');
+          console.log(sequenceText);          
 
         }
        else if ($('body').hasClass('compoundParent')){
@@ -239,21 +245,22 @@
             if (($('.ip-embargo-details').length) && (!$('.object-title').length)){
               $('body').addClass('objectHidden');
             }    //end embargo detection
-        $(".parentLink").wrapAll("<div class='headerBreadcrumb'/>");
-        var institutionText = $(".depth-2 > a").clone(); //creates href path from breadcrumb depth-2
-        var institutionHome = $(".depth-2 > a").attr('href'); //creates href path from breadcrumb depth-2
-        $(institutionText).addClass("institutionSmall").insertBefore("a.parentLink"); //adds institutionLabel div to show content type
-        $( " <span class='breadcrumbDivider'>/</span>" ).insertAfter( ".institutionSmall" ); // adds a / character and needs to be separated from the a href
-        $(".compoundObject .contentLabel").addClass("compoundLabel"); //detects contentType and assign new class to contentLabel
-        $(".compoundLabel").html("Compound Object"); //text within compoundLabel
-        $(".manageParent, ul.tabs").appendTo(".itemMenu").wrapAll('<div class="manageMenu"/>'); //moves the view/ip embargo/manage menu
-        $(".downloadLink").appendTo(".userMenu");
-        $(".compoundLabels").insertBefore(".backgroundDiv");
-        $("#islandora-ip-embargo-object-embargo-form").insertBefore(".compoundGallery"); // moves ipembargo
-        $("<div class='embargoTitle'>Set IP embargo settings</div>").insertBefore(".compoundObject #islandora-ip-embargo-policy-source")//adds title for ip embargo on compounds            
-                  var thumbnailURL =  srcclean[1];
-  $(".manageParent, ul.tabs").appendTo(".itemMenu").wrapAll('<div class="manageMenu"/>'); //moves the view/ip embargo/manage menu
-
+            $(".parentLink").wrapAll("<div class='headerBreadcrumb'/>");
+            var institutionText = $(".depth-2 > a").clone(); //creates href path from breadcrumb depth-2
+            var institutionHome = $(".depth-2 > a").attr('href'); //creates href path from breadcrumb depth-2
+            $(institutionText).addClass("institutionSmall").insertBefore("a.parentLink"); //adds institutionLabel div to show content type
+            $( " <span class='breadcrumbDivider'>/</span>" ).insertAfter( ".institutionSmall" ); // adds a / character and needs to be separated from the a href
+            $(".compoundObject .contentLabel").addClass("compoundLabel"); //detects contentType and assign new class to contentLabel
+            $(".compoundLabel").html("Compound Object"); //text within compoundLabel
+            $(".manageParent, ul.tabs").appendTo(".itemMenu").wrapAll('<div class="manageMenu"/>'); //moves the view/ip embargo/manage menu
+            $(".downloadLink").appendTo(".userMenu");
+            $(".compoundLabels").insertBefore(".backgroundDiv");
+            $("#islandora-ip-embargo-object-embargo-form").insertBefore(".compoundGallery"); // moves ipembargo
+            $("<div class='embargoTitle'>Set IP embargo settings</div>").insertBefore(".compoundObject #islandora-ip-embargo-policy-source")//adds title for ip embargo on compounds            
+                      var thumbnailURL =  srcclean[1];
+            //$(".manageParent, ul.tabs").appendTo(".itemMenu").wrapAll('<div class="manageMenu"/>'); //moves the view/ip embargo/manage menu
+            $("div#region-content > div.region-content-inner > div.tabs > ul.tabs").wrapAll('<div class="manageMenu"/>'); //moves the view/ip embargo/manage menu
+            $(".compoundCount").appendTo(".itemContainer");
         }
 
 
