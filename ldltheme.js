@@ -98,7 +98,7 @@
         }
 
         case ( ($('.block-islandora-compound-object').length) && (!$('.currentImage').length) && ( !$('body').is('.audioPDF, .regeneratePage, .datastreamPage, .book, .pagesView')  )) :{
-          $("body").addClass('compoundObject compoundParent'); 
+          $("body").addClass('compoundObject compoundParent');          
           itemTitle = $(".modsTitle").html(); // finds full title without truncation
           compoundStarter();
           itemHeader();    
@@ -261,28 +261,32 @@
             //$(".manageParent, ul.tabs").appendTo(".itemMenu").wrapAll('<div class="manageMenu"/>'); //moves the view/ip embargo/manage menu
             $("div#region-content > div.region-content-inner > div.tabs > ul.tabs").wrapAll('<div class="manageMenu"/>'); //moves the view/ip embargo/manage menu
             $(".compoundCount").appendTo(".itemContainer");
+            $(".item_header > .form-item").addClass('item_headerMenu').appendTo(".item_header");
+            $("<div class='backgroundDiv'/>").insertBefore(".item_headerMenu"); //creates header for book items
+            $('.backgroundDiv').css('background-image', 'url(' + thumbnailURL + ')');    
+            $('.parentLink').addClass('institutionSmall');
         }
-
-
-        $("<div class='backgroundDiv'/>").appendTo(".item_header"); //creates header for book items
-        $('.backgroundDiv').css('background-image', 'url(' + thumbnailURL + ')');
-        $("<div class='item_headerMenu'/>").appendTo(".item_header"); //creates header for book items
-        $("<div class='itemTitle'/>").text(itemTitle).appendTo(".item_headerMenu"); // undoes default title truncation
-        $("<div class='headerBreadcrumb'/>").appendTo(".item_headerMenu"); //temporarily moves count
-        var institutionText = $(".depth-2 > a").clone(); //creates href path from breadcrumb depth-2
-        //var institutionHome = $(".depth-2 > a").attr('href'); //creates href path from breadcrumb depth-2
-        var collectionText = $(".depth-3 > a").clone(); //creates href path from breadcrumb depth-2
-        var collectionHome = $(".depth-3 > a").attr('href'); //creates href path from breadcrumb depth-2
-        $(institutionText).addClass("institutionSmall").appendTo(".headerBreadcrumb"); //creates institution breadcrumb
-        $( " <span class='breadcrumbDivider'>/</span>" ).insertAfter( ".institutionSmall" ); //needs to be separated from the a href
-        $(collectionText).addClass("institutionSmall").insertAfter(".breadcrumbDivider"); //creates collection breadcrumb
+       else if (!$('body').hasClass('compoundParent')){
+            $("<div class='item_headerMenu'/>").appendTo(".item_header"); //creates header for book items
+            $("<div class='backgroundDiv'/>").appendTo(".item_header"); //creates header for book items
+            $('.backgroundDiv').css('background-image', 'url(' + thumbnailURL + ')');
+            $("<div class='itemTitle'/>").text(itemTitle).appendTo(".item_headerMenu"); // undoes default title truncation
+            $("<div class='headerBreadcrumb'/>").appendTo(".item_headerMenu"); //temporarily moves count              
+            var institutionText = $(".depth-2 > a").clone(); //creates href path from breadcrumb depth-2
+            //var institutionHome = $(".depth-2 > a").attr('href'); //creates href path from breadcrumb depth-2
+            var collectionText = $(".depth-3 > a").clone(); //creates href path from breadcrumb depth-3
+            var collectionHome = $(".depth-3 > a").attr('href'); //creates href path from breadcrumb depth-3
+            $(institutionText).addClass("institutionSmall").appendTo(".headerBreadcrumb"); //creates institution breadcrumb
+            $("<span class='breadcrumbDivider'>/</span>").insertAfter(".institutionSmall"); //needs to be separated from the a href
+            $(collectionText).addClass("institutionSmall").insertAfter(".breadcrumbDivider"); //creates collection breadcrumb
+        }
         $("<div class='userMenu'/>").appendTo(".item_headerMenu"); //temporarily moves count
         $("<div class='infoToggle userSelect'><div class='iconSelect'></div><div class='textSelect'>details</div></div>").appendTo(".userMenu"); //adds toggle for parent metadata
         $("div#block-system-main > div.tabs > ul.tabs").appendTo(".userMenu").wrapAll('<div class="manageMenu"/>'); //moves the view/ip embargo/manage menu
         $("div#block-system-main > div.tabs").remove(); // temporarily removes tabs until menu is set
-         if(itemTitle.length > 20) {
-             $(".itemTitle").css('font-size','34px');
-         }
+        if(itemTitle.length > 20) {
+        $(".itemTitle").css('font-size','34px');
+        }
      }
 
       function imageContainer(){
@@ -303,7 +307,7 @@
         $(".metadataSidebar .modsDesc").clone().appendTo(".image-thumbnailData, .item-thumbnailData");
         $("<div class='labelContainer descContainer'/>").insertAfter(".imageContainer, .itemContainer"); //adds label break
         $("<div class='contentLabel itemDesc'>tags</div>").appendTo(".descContainer"); //adds label break
-        $("a.institutionSmall:last-child").clone().prop({class:"backContainer"}).insertAfter(".descContainer").html("<div class='backCollection'>Back to Collections</div>");
+        $("a.institutionSmall:last-child").clone().prop({class:"backContainer"}).insertAfter(".descContainer").html("<div class='backCollection'>Back to Collection</div>");
         $("<div class='descriptionText'/>").insertAfter(".itemDesc"); //adds label break
         $(".metadataSidebar .modsSubject a").clone().appendTo(".descContainer .descriptionText").addClass("modsSubject").wrapAll('<div class="tagsGlance"/>');
         $(".metadataSidebar").clone().prop({ class: "metadataVertical"}).appendTo('.content .descContainer .descriptionText');
@@ -587,7 +591,6 @@
          $('.compoundSelect').wrapAll('<div class="itemContainer compoundGallery "/>'); //wraps collectionPage title
          $("<div class='itemMenu'/>").insertBefore(".backgroundDiv");
          $("<div class='contentLabel'/>").insertBefore(".compoundGallery"); //adds contentLabel div to show content type
-        $("<div class='contentIcon'/>").insertBefore(".compoundGallery_header > .form-item > a:first-child");
       }  
 
       function imageModal(){
