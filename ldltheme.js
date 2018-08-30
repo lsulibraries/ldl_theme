@@ -305,8 +305,7 @@
          if ($('body').hasClass('compoundChild')){   
           var commentedURL = $('div.currentImage').find('noscript').addClass('widestIMG').text().split(" ");
           var srcclean = commentedURL[2].match(/"(.*?)"/);
-          thumbnailURL = srcclean[1];
-        console.log(thumbnailURL);                     
+          thumbnailURL = srcclean[1];                   
           $("<div class='item_headerMenu'/>").appendTo(".item_header"); //creates header for book items
           $("<div class='backgroundDiv'/>").insertBefore(".item_headerMenu"); //creates header for book items
           $('.backgroundDiv').css('background-image', 'url(' + thumbnailURL + ')');
@@ -355,6 +354,12 @@
         $("<div class='chooseMenu'/>").appendTo(".imageMenu"); //adds label break
         $("<div class='chooseImage chooseViewer'><div class='chooseIcon'><i class='fa fa-image'></i></div><div class='chooseText'>Open Image Viewer</div></div>").appendTo(".chooseMenu"); //adds label break
         $(".downloadList").insertAfter(".image_headerMenu");
+        if ($('body').hasClass('compoundChild')){
+          var commentedURL = $('div.currentImage').find('noscript').addClass('widestIMG').text().split(" ");
+          var srcclean = commentedURL[2].match(/"(.*?)"/);
+          thumbnailURL = srcclean[1];
+          $('.imagePreview img').prop('src', thumbnailURL);
+        }
       }
 
       function itemFooter(){
