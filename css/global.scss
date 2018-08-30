@@ -6139,20 +6139,7 @@ body.compoundBook{
   padding-top: 40px;
   }
 
-  .currentPart {
-  color: rgba(255, 255, 255, 0.85);
-  padding: 0px 10px;
-  font-weight: normal;
-  font-size: 11px;
-  margin-bottom: 5px;
-  margin-top: 8px;
-  vertical-align: baseline !important;
-  border: 1px solid white;
-  margin-left: 10px;
-  border-radius: 3px;
-  text-transform: uppercase;
-  width: fit-content;
-  }
+
 
   .backContainer{
   margin-top:20px;
@@ -7944,6 +7931,21 @@ body.compoundChildImage {
 //end error messages
 
 /*BEGIN test area*/
+
+  .currentPart {
+  color: rgba(255, 255, 255, 0.85);
+  padding: 0px 10px;
+  font-weight: normal;
+  font-size: 11px;
+  margin-bottom: 5px;
+  margin-top: 8px;
+  vertical-align: baseline !important;
+  border: 1px solid white;
+  margin-left: 10px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  width: fit-content;
+  }
 
 .metadataSidebar{
   padding-top: 20px;

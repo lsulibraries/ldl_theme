@@ -4285,19 +4285,6 @@ body.compoundBook .tabs > li:last-child {
   margin-right: 0px !important; }
 body.compoundBook .metadataSidebar.nano-content {
   padding-top: 40px; }
-body.compoundBook .currentPart {
-  color: rgba(255, 255, 255, 0.85);
-  padding: 0px 10px;
-  font-weight: normal;
-  font-size: 11px;
-  margin-bottom: 5px;
-  margin-top: 8px;
-  vertical-align: baseline !important;
-  border: 1px solid white;
-  margin-left: 10px;
-  border-radius: 3px;
-  text-transform: uppercase;
-  width: fit-content; }
 body.compoundBook .backContainer {
   margin-top: 20px; }
 body.compoundBook #book-viewer > .metadataContainer {
@@ -5448,6 +5435,20 @@ body.compoundChildImage {
   background: white !important; }
 
 /*BEGIN test area*/
+.currentPart {
+  color: rgba(255, 255, 255, 0.85);
+  padding: 0px 10px;
+  font-weight: normal;
+  font-size: 11px;
+  margin-bottom: 5px;
+  margin-top: 8px;
+  vertical-align: baseline !important;
+  border: 1px solid white;
+  margin-left: 10px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  width: fit-content; }
+
 .metadataSidebar {
   padding-top: 20px; }
 

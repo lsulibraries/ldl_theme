@@ -161,7 +161,7 @@
       }
 
       function childBreadcrumb(){
-        var sequenceText = $('span#islandora-compound-sequence-position').text();
+        var sequenceText = $('span#islandora-compound-sequence-position:first').text();
         $('span#islandora-compound-sequence-position').remove();
         var parentText = $(".depth-4 > a").clone(); //creates href path from breadcrumb depth-2
         var parentHome = $(".depth-4 > a").attr('href'); //creates href path from breadcrumb depth-2
@@ -212,11 +212,7 @@
 
       function compoundChild_start(){
         $('body').addClass('compoundChild');
-        var sequenceText = $('span#islandora-compound-sequence-position').text();
-        $('<div class="currentPart"></div>').html(sequenceText).appendTo('.headerBreadcrumb');
-        $('#islandora-compound-previous-link').attr('id', '').wrapAll('<li class="sequencePrev"/>');
-        $('#islandora-compound-next-link').attr('id', '').wrapAll('<li class="sequenceNext"/>');
-        $('.sequencePrev').insertBefore('.sequenceNext');
+
 
       }
 
@@ -229,22 +225,20 @@
         $(".content > .backContainer").remove();
         $("#bookMeta2").clone().prop({id:"bookMeta2Inner"}).insertAfter("#bookMeta");
         $("#bookMeta").addClass('itemMetadata');
-        $('.block-compound-jail-display').remove();
+        $("<div class='headerBreadcrumb'/>").insertBefore(".userMenu");
         $('.content > .metadataContainer').addClass('compoundMetadata');
         $('#imageMeta').addClass('itemMetadata');
-                  $("<div class='headerBreadcrumb'/>").insertBefore(".userMenu"); //temporarily moves count
-
         $('.compoundMetadata').insertAfter('.itemMetadata, .metadataVertical > div > .metadataContainer');
-          var institutionText = $(".depth-2 > a").clone(); //creates href path from breadcrumb depth-2
-          //var institutionHome = $(".depth-2 > a").attr('href'); //creates href path from breadcrumb depth-2
-          var collectionText = $(".depth-3 > a").clone(); //creates href path from breadcrumb depth-3
-          var collectionHome = $(".depth-3 > a").attr('href'); //creates href path from breadcrumb depth-3
-          $(institutionText).addClass("institutionSmall").appendTo(".headerBreadcrumb"); //creates institution breadcrumb
-          $("<span class='breadcrumbDivider'>/</span>").insertAfter(".institutionSmall"); //needs to be separated from the a href
-          $(collectionText).addClass("institutionSmall").insertAfter(".breadcrumbDivider"); //creates collection breadcrumb
+        var institutionText = $(".depth-2 > a").clone(); //creates href path from breadcrumb depth-2
+        //var institutionHome = $(".depth-2 > a").attr('href'); //creates href path from breadcrumb depth-2
+        var collectionText = $(".depth-3 > a").clone(); //creates href path from breadcrumb depth-3
+        var collectionHome = $(".depth-3 > a").attr('href'); //creates href path from breadcrumb depth-3
+        $(institutionText).addClass("institutionSmall").appendTo(".headerBreadcrumb"); //creates institution breadcrumb
+        $("<span class='breadcrumbDivider'>/</span>").insertAfter(".institutionSmall"); //needs to be separated from the a href
+        $(collectionText).addClass("institutionSmall").insertAfter(".breadcrumbDivider"); //creates collection breadcrumb
         childBreadcrumb();
-         $('.compoundMetadata > .modsTitle').appendTo('.itemTitle');
-                  console.log('hi end')
+        $('.compoundMetadata > .modsTitle').appendTo('.itemTitle');
+        $('.block-compound-jail-display').remove();
 
       }
 
@@ -324,11 +318,7 @@
           $("<div class='itemTitle'/>").text(itemTitle).appendTo(".item_headerMenu"); // undoes default title truncation
           $("#region-content div.tabs.clearfix").prependTo("#block-system-main");
           console.log('hi its compound child');
-          var sequenceText = $('span#islandora-compound-sequence-position').text();
-          $('<div class="currentPart"></div>').html(sequenceText).appendTo('.headerBreadcrumb');
-          $('#islandora-compound-previous-link').attr('id', '').wrapAll('<li class="sequencePrev"/>');
-          $('#islandora-compound-next-link').attr('id', '').wrapAll('<li class="sequenceNext"/>');
-          $('.sequencePrev').insertBefore('.sequenceNext');
+
         }
         if ((!$('body').hasClass('compoundParent')) && (!$('body').hasClass('compoundChild'))) {
           $("<div class='item_headerMenu'/>").appendTo(".item_header"); //creates header for book items
