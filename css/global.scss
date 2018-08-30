@@ -206,7 +206,7 @@ body.logged-in{
   padding-top: 59px !important;
 .grid-3 .metadataSidebar.nano-content {
     padding-top: 90px;
-}  
+}
 
   .manageMenu .tabs > li:last-child{
       margin-right: 5px !important;
@@ -2192,7 +2192,7 @@ div.breadcrumb a {
 
     display: flex;
     flex-direction: column;
-    justify-content: space-between;  
+    justify-content: space-between;
 }
 
 .page-browse-collections #block-system-main {
@@ -6070,14 +6070,6 @@ body.headerversiontwo.metaOpened{
   }
 }
 
-body.headerversiontwo.metaOpened.compoundChild{
-  div#zone-header{
-display: none;
-}
-
-
-}
-
 
 
 //end new header
@@ -7952,6 +7944,10 @@ body.compoundChildImage {
 //end error messages
 
 /*BEGIN test area*/
+
+.metadataSidebar{
+  padding-top: 20px;
+}
 
 .compoundMetadata, .itemMetadata{
   border-top:1px solid $lightTransparent;

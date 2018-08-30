@@ -4241,9 +4241,6 @@ body.headerversiontwo.metaOpened div#zone-header {
   transition-duration: 1s;
   transition-delay: 0s; }
 
-body.headerversiontwo.metaOpened.compoundChild div#zone-header {
-  display: none; }
-
 #BRpager .ui-slider-handle {
   position: absolute;
   width: 28px;
@@ -5451,6 +5448,9 @@ body.compoundChildImage {
   background: white !important; }
 
 /*BEGIN test area*/
+.metadataSidebar {
+  padding-top: 20px; }
+
 .compoundMetadata, .itemMetadata {
   border-top: 1px solid rgba(255, 255, 255, 0.16);
   padding-top: 20px;
