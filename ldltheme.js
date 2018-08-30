@@ -21,6 +21,7 @@
           console.log('oldbookscript');
         }
 
+
       switch (true) { //detect page type or content type
 
         case ($('body').hasClass('front')) :{
@@ -47,7 +48,7 @@
           itemTitle = $(".modsTitle").html(); // finds full title without truncation
           thumbnailURL = $(".image-thumbnail img").prop('src');
           if ($('.block-islandora-compound-object').length){
-            compoundChild_start();
+            compoundChild_start();            
           }
           itemHeader();
           typeClass('image');
@@ -216,7 +217,6 @@
         $('#islandora-compound-previous-link').attr('id', '').wrapAll('<li class="sequencePrev"/>');
         $('#islandora-compound-next-link').attr('id', '').wrapAll('<li class="sequenceNext"/>');
         $('.sequencePrev').insertBefore('.sequenceNext');
-
       }
 
       function compoundChild_end(){
@@ -234,6 +234,7 @@
         $('#imageMeta').addClass('itemMetadata');
         $('.compoundMetadata').insertAfter('.itemMetadata, .metadataVertical > div > .metadataContainer');
         childBreadcrumb();
+   
       }
 
       function itemHeader(){
@@ -248,7 +249,7 @@
           $('.sequencePrev').insertBefore('.sequenceNext');
           //console.log(sequenceText);          
           }
-       else if ($('body').hasClass('compoundParent')){
+        if ($('body').hasClass('compoundParent')){
           var widest = null;  // remember the width of the "widest" element - probably faster than calling .width() - currently disabled - move addclasswidest to second if to
           var widestWidth = 0;
           $(".compoundSelect").each(function() {
@@ -301,14 +302,16 @@
           $('.parentLink').addClass('institutionSmall');
           console.log('hi its compound parent')
           }
-        else if ($('body').hasClass('compoundChild')){   
+         if ($('body').hasClass('compoundChild')){   
+          var commentedURL = $('div.currentImage').find('noscript').addClass('widestIMG').text().split(" ");
+          var srcclean = commentedURL[2].match(/"(.*?)"/);
+          thumbnailURL = srcclean[1];
+        console.log(thumbnailURL);                     
           $("<div class='item_headerMenu'/>").appendTo(".item_header"); //creates header for book items
-          $("<div class='backgroundDiv'/>").appendTo(".item_header"); //creates header for book items
+          $("<div class='backgroundDiv'/>").insertBefore(".item_headerMenu"); //creates header for book items
           $('.backgroundDiv').css('background-image', 'url(' + thumbnailURL + ')');
           $("<div class='itemTitle'/>").text(itemTitle).appendTo(".item_headerMenu"); // undoes default title truncation          
           $("#region-content div.tabs.clearfix").prependTo("#block-system-main");
-          $("<div class='item_header'/>").insertBefore(".itemContainer, .islandora-large-image-object, .bookContainer, .islandora-newspaper-object"); //creates header for image items
-          thumbnailURL = $(".image-thumbnail img").prop('data-src');
           console.log('hi its compound child');
           var sequenceText = $('span#islandora-compound-sequence-position').text();
           $('<div class="currentPart"></div>').html(sequenceText).appendTo('.headerBreadcrumb');
@@ -316,7 +319,7 @@
           $('#islandora-compound-next-link').attr('id', '').wrapAll('<li class="sequenceNext"/>');
           $('.sequencePrev').insertBefore('.sequenceNext');
         }       
-        else if ((!$('body').hasClass('compoundParent')) && (!$('body').hasClass('compoundChild'))) {
+        if ((!$('body').hasClass('compoundParent')) && (!$('body').hasClass('compoundChild'))) {
           $("<div class='item_headerMenu'/>").appendTo(".item_header"); //creates header for book items
           $("<div class='backgroundDiv'/>").appendTo(".item_header"); //creates header for book items
           $('.backgroundDiv').css('background-image', 'url(' + thumbnailURL + ')');
