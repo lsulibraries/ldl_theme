@@ -212,8 +212,6 @@
 
       function compoundChild_start(){
         $('body').addClass('compoundChild');
-
-
       }
 
       function compoundChild_end(){
@@ -230,7 +228,6 @@
         $('#imageMeta').addClass('itemMetadata');
         $('.compoundMetadata').insertAfter('.itemMetadata, .metadataVertical > div > .metadataContainer');
         var institutionText = $(".depth-2 > a").clone(); //creates href path from breadcrumb depth-2
-        //var institutionHome = $(".depth-2 > a").attr('href'); //creates href path from breadcrumb depth-2
         var collectionText = $(".depth-3 > a").clone(); //creates href path from breadcrumb depth-3
         var collectionHome = $(".depth-3 > a").attr('href'); //creates href path from breadcrumb depth-3
         $(institutionText).addClass("institutionSmall").appendTo(".headerBreadcrumb"); //creates institution breadcrumb
@@ -238,6 +235,7 @@
         $(collectionText).addClass("institutionSmall").insertAfter(".breadcrumbDivider"); //creates collection breadcrumb
         childBreadcrumb();
         $('.compoundMetadata > .modsTitle').appendTo('.itemTitle');
+        $('.manageMenu').appendTo('#block-system-main .item_headerMenu > .userMenu')
         $('.block-compound-jail-display').remove();
 
       }
@@ -308,7 +306,6 @@
           console.log('hi its compound parent')
           }
          if ($('body').hasClass('compoundChild')){
-
           var commentedURL = $('div.currentImage').find('noscript').addClass('widestIMG').text().split(" ");
           var srcclean = commentedURL[2].match(/"(.*?)"/);
           thumbnailURL = srcclean[1];
@@ -317,7 +314,7 @@
           $('.backgroundDiv').css('background-image', 'url(' + thumbnailURL + ')');
           $("<div class='itemTitle'/>").text(itemTitle).appendTo(".item_headerMenu"); // undoes default title truncation
           $("#region-content div.tabs.clearfix").prependTo("#block-system-main");
-          console.log('hi its compound child');
+
 
         }
         if ((!$('body').hasClass('compoundParent')) && (!$('body').hasClass('compoundChild'))) {
