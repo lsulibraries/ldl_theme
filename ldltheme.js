@@ -7,19 +7,8 @@
       $("<div class='mobileMenu'/>").insertBefore("div#page");
 
       if ( ($('.block-islandora-compound-object').length) && ($('#block-system-main .block-inner .content > div').length) && (!($("body").attr('class').indexOf('-pages') > -1)) && ( !$('body').is('.audioPDF, .regeneratePage, .datastreamPage, .book, .pagesView'))){
-        //$("body").addClass('compoundChild');
       }
 
-        if (($('.book-thumbnail').length) && ($('.block-islandora-compound-object').length)) {
-          $('.block-compound-jail-display').remove();
-          var sequenceText = $('span#islandora-compound-sequence-position').text();
-          $('<div class="currentPart"></div>').html(sequenceText).appendTo('.headerBreadcrumb');
-         $('#islandora-compound-previous-link').attr('id', '').wrapAll('<li class="sequencePrev"/>');
-         $('#islandora-compound-next-link').attr('id', '').wrapAll('<li class="sequenceNext"/>');
-         $('.sequencePrev').insertBefore('.sequenceNext');
-          console.log(sequenceText);
-          console.log('oldbookscript');
-        }
 
 
       switch (true) { //detect page type or content type
@@ -81,16 +70,17 @@
           actionToggles();
           bookFooter();
           if (($('.book-thumbnail').length) && ($('span#islandora-compound-sequence-position').length)) {
-            $(".metadataSidebar > .region-inner > .metadataContainer").first().addClass("itemMetadata");
-            $("body").addClass('compoundBook');
-            childBreadcrumb();
-            $(".depth-4 > a").clone().prop({class:"backContainer"}).insertAfter(".descriptionText").html("<div class='backCollection backParent'>Back</div>");
-            if (!$(".tagsGlance").length){
-              $('.contentLabel.itemDesc').css('display','none');
-            }
-            $(".content > .backContainer").remove();
-            $("#bookMeta2").clone().prop({id:"bookMeta2Inner"}).insertAfter("#bookMeta");
-            $("#bookMeta").addClass('itemMetadata');
+            compoundChild_end();
+             // $(".metadataSidebar > .region-inner > .metadataContainer").first().addClass("itemMetadata");
+            // $("body").addClass('compoundBook');
+            // childBreadcrumb();
+            // $(".depth-4 > a").clone().prop({class:"backContainer"}).insertAfter(".descriptionText").html("<div class='backCollection backParent'>Back</div>");
+            // if (!$(".tagsGlance").length){
+            //   $('.contentLabel.itemDesc').css('display','none');
+            // }
+            // $(".content > .backContainer").remove();
+            // $("#bookMeta2").clone().prop({id:"bookMeta2Inner"}).insertAfter("#bookMeta");
+            // $("#bookMeta").addClass('itemMetadata');
           }
           break;
         }
@@ -221,7 +211,7 @@
         $('.contentLabel.itemDesc').css('display','none');
         }
         $(".content > .backContainer").remove();
-        $("#bookMeta2").clone().prop({id:"bookMeta2Inner"}).insertAfter("#bookMeta");
+       // $("#bookMeta2").clone().prop({id:"bookMeta2Inner"}).insertAfter("#bookMeta");
         $("#bookMeta").addClass('itemMetadata');
         $("<div class='headerBreadcrumb'/>").insertBefore(".userMenu");
         $('.content > .metadataContainer').addClass('compoundMetadata');
@@ -314,8 +304,6 @@
           $('.backgroundDiv').css('background-image', 'url(' + thumbnailURL + ')');
           $("<div class='itemTitle'/>").text(itemTitle).appendTo(".item_headerMenu"); // undoes default title truncation
           $("#region-content div.tabs.clearfix").prependTo("#block-system-main");
-
-
         }
         if ((!$('body').hasClass('compoundParent')) && (!$('body').hasClass('compoundChild'))) {
           $("<div class='item_headerMenu'/>").appendTo(".item_header"); //creates header for book items
@@ -451,7 +439,7 @@
         });
         $("<div class='bookSidebar'><div class='bookMetaContainer'></div></div>").appendTo("#BookReader"); //444444444444444444444444444444444444444444444444444444444444444444444444444444444444sets double-bagged container
         $("#region-sidebar-first > .metadataSidebar > .region-inner >  .metadataContainer ").clone().prop({id:"bookMeta"}).appendTo(".bookMetaContainer");
-        $("#book-viewer > .metadataContainer ").clone().prop({id:"bookMeta2", class:"metadataContainer compoundMetadata"}).appendTo(".region-sidebar-first-inner"); //fills container
+        //$("#book-viewer > .metadataContainer ").clone().prop({id:"bookMeta2", class:"metadataContainer compoundMetadata"}).appendTo(".region-sidebar-first-inner"); //fills container
         //fills container
           $(".bookMetaContainer").addClass("nano-content");
         $(".bookSidebar").addClass("nano");
