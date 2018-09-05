@@ -74,16 +74,16 @@
                     $(".metadataSidebar > .region-inner > .metadataContainer").first().addClass("itemMetadata");
                     $("body").addClass('compoundBook');
                     var sequenceText = $('span#islandora-compound-sequence-position').text();
-                    $('span#islandora-compound-sequence-position').remove();   
+                    $('span#islandora-compound-sequence-position').remove();
                     var parentText = $(".depth-4 > a").clone(); //creates href path from breadcrumb depth-2
                     var parentHome = $(".depth-4 > a").attr('href'); //creates href path from breadcrumb depth-2
                     $( " <span class='breadcrumbDivider'>/</span>" ).insertAfter( ".institutionSmall:last" ); //needs to be separated from the a href
                     $(parentText).addClass("institutionSmall").appendTo(".headerBreadcrumb"); //creates institution breadcrumb
-                    $('<div class="currentPart"></div>').html(sequenceText).appendTo('.headerBreadcrumb');             
+                    $('<div class="currentPart"></div>').html(sequenceText).appendTo('.headerBreadcrumb');
                     $(".depth-4 > a").clone().prop({class:"backContainer"}).insertAfter(".bookDesc").html("<div class='backCollection backParent'>Back</div>");
                     if (!$(".tagsGlance").length){
                       $('.contentLabel.bookDesc').css('display','none');
-                    }                    
+                    }
                     $(".content > .backContainer").remove();
                     $("#bookMeta2").clone().prop({id:"bookMeta2Inner"}).insertAfter("#bookMeta");
                     $("#bookMeta").addClass('itemMetadata');
@@ -276,7 +276,7 @@
          }
           $('.compoundParent, .itemTitle, .headerBreadcrumb > div').each(function() {
               $(this).html($(this).text());            ///encodes special characters
-          });         
+          });
 
 
 
@@ -385,7 +385,7 @@
           $('.bookDetails').toggleClass('active');
         });
         $("<div class='bookSidebar'><div class='bookMetaContainer'></div></div>").appendTo("#BookReader"); //sets double-bagged container
-        $("#region-sidebar-first > .metadataSidebar > .region-inner >  .metadataContainer ").clone().prop({id:"bookMeta"}).appendTo(".bookMetaContainer"); 
+        $("#region-sidebar-first > .metadataSidebar > .region-inner >  .metadataContainer ").clone().prop({id:"bookMeta"}).appendTo(".bookMetaContainer");
         $("#book-viewer > .metadataContainer ").clone().prop({id:"bookMeta2", class:"metadataContainer compoundMetadata"}).appendTo(".region-sidebar-first-inner"); //fills container
         //fills container
           $(".bookMetaContainer").addClass("nano-content");
@@ -1550,9 +1550,9 @@ function monthClick(){
                   var c2 = compound_content.substr(0, compound_showChar);
                   var h2 = compound_content.substr(compound_showChar, compound_content.length - compound_showChar);
                   var html2 = c2 + compound_ellipsestext;
-                  $(this).text(html2);
+                  $(this).html(html2);
               }
-             
+
           });
           $('.metadataVertical #block-user-login').remove();
           //begin show more script
@@ -1565,8 +1565,8 @@ function monthClick(){
               if(content.length > showChar) {
                   var c = content.substr(0, showChar);
                   var h = content.substr(showChar, content.length - showChar);
-                  var html = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
-                  $(this).text(html);
+                  var html1 = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
+                  $(this).html(html1);
               }
           });
           $(".morelink").click(function(){
