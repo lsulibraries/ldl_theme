@@ -6,8 +6,8 @@
       console.log('jquery fired once');
       $("<div class='mobileMenu'/>").insertBefore("div#page");
 
-      if ( ($('.block-islandora-compound-object').length) && ($('#block-system-main .block-inner .content > div').length) && (!($("body").attr('class').indexOf('-pages') > -1)) && ( !$('body').is('.audioPDF, .regeneratePage, .datastreamPage, .book, .pagesView'))){
-      }
+      // if ( ($('.block-islandora-compound-object').length) && ($('#block-system-main .block-inner .content > div').length) && (!($("body").attr('class').indexOf('-pages') > -1)) && ( !$('body').is('.audioPDF, .regeneratePage, .datastreamPage, .book, .pagesView'))){
+      // }
 
 
 
@@ -306,9 +306,12 @@
           $("#region-content div.tabs.clearfix").prependTo("#block-system-main");
         }
         if ((!$('body').hasClass('compoundParent')) && (!$('body').hasClass('compoundChild'))) {
-          $("<div class='item_headerMenu'/>").appendTo(".item_header"); //creates header for book items
+          itemTitle = $(".modsTitle").html(); // finds full title without truncation
+          thumbnailURL = $(".image-thumbnail img").prop('src');
           $("<div class='backgroundDiv'/>").appendTo(".item_header"); //creates header for book items
           $('.backgroundDiv').css('background-image', 'url(' + thumbnailURL + ')');
+          $("<div class='item_headerMenu'/>").appendTo(".item_header"); //creates header for book items
+
           $("<div class='itemTitle'/>").text(itemTitle).appendTo(".item_headerMenu"); // undoes default title truncation
           $("<div class='headerBreadcrumb'/>").appendTo(".item_headerMenu"); //temporarily moves count
           var institutionText = $(".depth-2 > a").clone(); //creates href path from breadcrumb depth-2
@@ -437,7 +440,7 @@
           $('#btnSrch').toggleClass('active');
           $('.bookDetails').toggleClass('active');
         });
-        $("<div class='bookSidebar'><div class='bookMetaContainer'></div></div>").appendTo("#BookReader"); //444444444444444444444444444444444444444444444444444444444444444444444444444444444444sets double-bagged container
+        $("<div class='bookSidebar'><div class='bookMetaContainer'></div></div>").appendTo("#BookReader"); //sets double-bagged container
         $("#region-sidebar-first > .metadataSidebar > .region-inner >  .metadataContainer ").clone().prop({id:"bookMeta"}).appendTo(".bookMetaContainer");
         //$("#book-viewer > .metadataContainer ").clone().prop({id:"bookMeta2", class:"metadataContainer compoundMetadata"}).appendTo(".region-sidebar-first-inner"); //fills container
         //fills container
