@@ -3769,7 +3769,7 @@ body.headerversiontwo {
     margin-right: 4px;
     margin-top: 0px;
     margin-bottom: 0px; }
-  body.headerversiontwo .metadataVertical .metadataTitle {
+  body.headerversiontwo .metadataVertical .metadataLabel {
     color: #676767 !important; }
   body.headerversiontwo .blurFilter {
     -webkit-filter: blur(5px) brightness(0.2);
@@ -4186,12 +4186,12 @@ body.headerversiontwo {
       display: flex;
       flex-direction: column;
       margin-bottom: 20px; }
-    body.headerversiontwo .metadataContainer span.metadataTitle {
+    body.headerversiontwo .metadataContainer div.metadataLabel {
       font-weight: 700;
       color: white; }
-    body.headerversiontwo .metadataContainer span.metadataValue {
+    body.headerversiontwo .metadataContainer div.metadataValue {
       color: #a5a5a5; }
-      body.headerversiontwo .metadataContainer span.metadataValue a {
+      body.headerversiontwo .metadataContainer div.metadataValue a {
         word-break: break-all;
         word-wrap: break-word; }
   body.headerversiontwo #region-sidebar-first {
@@ -6722,7 +6722,7 @@ body.multipleDaily .issueLevel .issue-container {
     margin-top: 40px; }
     .metadataVertical .metadataContainer.compoundMetadata {
       padding-top: 20px; }
-    .metadataVertical .region-sidebar-first-inner .metadataContainer span.metadataValue {
+    .metadataVertical .region-sidebar-first-inner .metadataContainer div.metadataValue {
       color: #676767; }
 
   .institution-collection-list-item-count {

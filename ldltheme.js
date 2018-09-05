@@ -471,16 +471,16 @@
       }
 
       function moveMetadata(){  //begin metadata move
-        $('table').each(function (){
-            $(this).replaceWith( $(this).html()
-                .replace(/<tbody/gi, "<div class='metadataContainer'")
-                .replace(/<tr/gi, "<div class='metadataRow'")
-                .replace(/<\/tr>/gi, "</div>")
-                .replace(/<td/gi, "<span")
-                .replace(/<\/td>/gi, "</span>")
-                .replace(/<\/tbody/gi, "<\/div")
-            );
-        });
+        // $('table').each(function (){
+        //     $(this).replaceWith( $(this).html()
+        //         .replace(/<tbody/gi, "<div class='metadataContainer'")
+        //         .replace(/<tr/gi, "<div class='metadataRow'")
+        //         .replace(/<\/tr>/gi, "</div>")
+        //         .replace(/<td/gi, "<span")
+        //         .replace(/<\/td>/gi, "</span>")
+        //         .replace(/<\/tbody/gi, "<\/div")
+        //     );
+        // });
         $(".islandora-newspaper-metadata > .metadataContainer").appendTo(".region-sidebar-first-inner");
         $(".islandora-newspaper-issue-metadata > .metadataContainer").appendTo(".region-sidebar-first-inner");
         $(".islandora-book-metadata > .metadataContainer").appendTo(".region-sidebar-first-inner");
@@ -489,15 +489,15 @@
         $(".nano > .region-inner").appendTo('#side');
         $('#sideMods, .nano > .region-inner').wrapAll('<div class="metadataSidebar"/>');
         $(".metadataSidebar").addClass('nano-content'); //adds nanobar
-        $(".metadataRow span:first-child").addClass("metadataTitle");//adds styles to metadata divs
-        $(".metadataRow span:nth-child(2n)").addClass("metadataValue");//adds styles to metadata divs
-        $(".metadataContainer div:first-child").remove();  //removes weird h3 MODS titles
+        //$(".metadataRow div:first-child").addClass("metadataTitle");//adds styles to metadata divs
+        //$(".metadataRow div:nth-child(2n)").addClass("metadataValue");//adds styles to metadata divs
+        //$(".metadataContainer div:first-child").remove();  //removes weird h3 MODS titles
         $("#sideMods").appendTo(".region-sidebar-first-inner");
         $("#sideMods").addClass("metadataContainer");
         $(".islandora-newspaper-metadata, .islandora-newspaper-issue-metadata, .islandora-newspaper-page-metadata").remove();  //removes empty old div
         $(".metadataSidebar .sidebarLabel").remove(); //removes refine results text which bleeds over from search results
         if (!$(".metadataContainer .metadataRow").length){ //hide details toggle if metadata is empty
-            $(".infoToggle").hide();
+          // $(".infoToggle").hide();
         }
 
       }   //end metadata move

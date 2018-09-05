@@ -5362,7 +5362,7 @@ width: 100%;
 
 
 .metadataVertical{
-  .metadataTitle{
+  .metadataLabel{
     color: #676767 !important;
   }
 }
@@ -5977,12 +5977,12 @@ padding-top: 10px;
     margin-bottom: 20px;
     }
 
-    span.metadataTitle {
+    div.metadataLabel {
     font-weight: 700;
     color: white;
     }
 
-    span.metadataValue {
+    div.metadataValue {
     color: #a5a5a5;
     a {
         word-break: break-all;
@@ -9865,7 +9865,7 @@ margin-top: 40px;
     padding-top: 20px;
 }
 
- .region-sidebar-first-inner .metadataContainer span.metadataValue {
+ .region-sidebar-first-inner .metadataContainer div.metadataValue {
       color: #676767;
   }
 }
