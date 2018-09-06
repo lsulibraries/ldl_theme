@@ -636,7 +636,7 @@
 
 
       function compoundStarter(){
-         $(".compoundObject #block-system-main table").prop({class:"modsTable"}).appendTo(".region-sidebar-first-inner");
+         $(".metadataContainer").appendTo(".region-sidebar-first-inner");
          $('.compoundSelect').wrapAll('<div class="itemContainer compoundGallery "/>'); //wraps collectionPage title
          $("<div class='itemMenu'/>").insertBefore(".backgroundDiv");
          $("<div class='contentLabel'/>").insertBefore(".compoundGallery"); //adds contentLabel div to show content type
