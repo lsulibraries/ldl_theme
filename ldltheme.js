@@ -209,6 +209,7 @@
 
       function compoundChild_start(){
         $('body').addClass('compoundChild');
+
       }
 
       function compoundChild_end(){
@@ -221,6 +222,7 @@
        // $("#bookMeta2").clone().prop({id:"bookMeta2Inner"}).insertAfter("#bookMeta");
         $("#bookMeta").addClass('itemMetadata');
         $("<div class='headerBreadcrumb'/>").insertBefore(".userMenu");
+
         $('.content > .metadataContainer').addClass('compoundMetadata');
         $('#imageMeta').addClass('itemMetadata');
         $('.compoundMetadata').insertAfter('.itemMetadata, .metadataVertical > div > .metadataContainer');
@@ -232,14 +234,16 @@
         $(collectionText).addClass("institutionSmall").insertAfter(".breadcrumbDivider"); //creates collection breadcrumb
         childBreadcrumb();
         $('.compoundMetadata > .modsTitle').appendTo('.itemTitle');
-        $('.manageMenu').appendTo('#block-system-main .item_headerMenu > .userMenu')
-        $('.block-compound-jail-display').remove();
+
+        $('.manageMenu').appendTo('#block-system-main .item_headerMenu > .userMenu');
+       $('.block-compound-jail-display').remove();
 
       }
 
       function itemHeader(){
         if (!$('body').hasClass('compoundObject')){
-          $("#region-content div.tabs.clearfix").prependTo("#block-system-main");
+
+          $(".region-inner > div.tabs.clearfix").prependTo("#block-system-main");
           $("<div class='item_header'/>").insertBefore(".itemContainer, .islandora-large-image-object, .bookContainer, .islandora-newspaper-object"); //creates header for image items
           thumbnailURL = $(".image-thumbnail img").prop('data-src');
           var sequenceText = $('span#islandora-compound-sequence-position').text();
@@ -309,7 +313,7 @@
           $("<div class='backgroundDiv'/>").insertBefore(".item_headerMenu"); //creates header for book items
           $('.backgroundDiv').css('background-image', 'url(' + thumbnailURL + ')');
           $("<div class='itemTitle'/>").text(itemTitle).appendTo(".item_headerMenu"); // undoes default title truncation
-          $("#region-content div.tabs.clearfix").prependTo("#block-system-main");
+         // $("#region-content div.tabs.clearfix").prependTo("#block-system-main");
         }
         if ((!$('body').hasClass('compoundParent')) && (!$('body').hasClass('compoundChild'))) {
           itemTitle = $(".modsTitle").html(); // finds full title without truncation
@@ -331,8 +335,9 @@
           }
         $("<div class='userMenu'/>").appendTo(".item_headerMenu"); //temporarily moves count
         $("<div class='infoToggle userSelect'><div class='iconSelect'></div><div class='textSelect'>details</div></div>").appendTo(".userMenu"); //adds toggle for parent metadata
-        $("div#block-system-main > div.tabs > ul.tabs").appendTo(".userMenu").wrapAll('<div class="manageMenu"/>'); //moves the view/ip embargo/manage menu
-        $("div#block-system-main > div.tabs").remove(); // temporarily removes tabs until menu is set
+
+        $("ul.tabs").appendTo(".userMenu:first").wrapAll('<div class="manageMenu"/>'); //moves the view/ip embargo/manage menu
+        $("div#block-system-main > div.tabs").remove(); // removes top div which once contained the tabs
         if($(itemTitle).length > 20) {
           $(".itemTitle").css('font-size','34px');
         }
@@ -343,7 +348,7 @@
         $("<div class='labelContainer'/>").insertBefore(".imageContainer"); //adds label break
         $("<div class='contentLabel imageLabel'>Image Object</div>").appendTo(".labelContainer"); //adds label break
         $("<div class='imagePreview'/>").appendTo(".imageContainer"); //adds label break
-        $(".image-thumbnail").appendTo(".imagePreview");
+        $("div.image-thumbnail").appendTo(".imagePreview");
         $("<div class='image-thumbnailData'/>").insertAfter(".imagePreview");
         $("<div class='imageMenu'/>").appendTo(".imagePreview"); //adds label break
         //$("#bookTitle").clone().attr("id", "bookmenuTitle").appendTo(".bookMenu"); // undoes default title truncation
