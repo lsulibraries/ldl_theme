@@ -17,6 +17,11 @@
           break;
         }
 
+        case (($('#edit-dsid-fieldset').length) > 0) :{
+          $("body").addClass('datastreamPage');
+          break;
+        }
+
         //case for individual pages of newspaper as images
         case ((($('.pageText').length)) && (!$('body').hasClass('audioPDF'))) :{
           $('body').addClass('pageImage largeImage');
@@ -108,10 +113,12 @@
           break;
         }
 
-        case ( ($('.block-islandora-compound-object').length) && ($('.currentImage').length) && ( !$('body').is('.audioPDF, .regeneratePage, .datastreamPage, .book, .pagesView')  )) :{
+        case ( ($('.block-islandora-compound-object').length) && ($('.currentImage').length) && ( $('body').is('.audioPDF, .regeneratePage, .datastreamPage, .book, .pagesView')  )) :{
           //$("body").addClass('compoundObject compoundItem');
           break;
         }
+
+
 
         case ($('body').hasClass('context-data')):{
           dataStarter();
@@ -293,7 +300,6 @@
           $("<div class='backgroundDiv'/>").insertBefore(".item_headerMenu"); //creates header for book items
           $('.backgroundDiv').css('background-image', 'url(' + thumbnailURL + ')');
           $('.parentLink').addClass('institutionSmall');
-          console.log('hi its compound parent')
           }
          if ($('body').hasClass('compoundChild')){
           var commentedURL = $('div.currentImage').find('noscript').addClass('widestIMG').text().split(" ");
@@ -327,7 +333,7 @@
         $("<div class='infoToggle userSelect'><div class='iconSelect'></div><div class='textSelect'>details</div></div>").appendTo(".userMenu"); //adds toggle for parent metadata
         $("div#block-system-main > div.tabs > ul.tabs").appendTo(".userMenu").wrapAll('<div class="manageMenu"/>'); //moves the view/ip embargo/manage menu
         $("div#block-system-main > div.tabs").remove(); // temporarily removes tabs until menu is set
-        if(itemTitle.length > 20) {
+        if($(itemTitle).length > 20) {
           $(".itemTitle").css('font-size','34px');
         }
      }
