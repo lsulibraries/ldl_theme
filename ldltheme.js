@@ -204,11 +204,12 @@
 
       function compoundChild_end(){
 
-        $(".depth-4 > a").clone().prop({class:"backContainer"}).insertAfter(".descriptionText").html("<div class='backCollection backParent'>Back</div>");
         if (!$(".tagsGlance").length){
         $('.contentLabel.itemDesc').css('display','none');
         }
         $(".content > .backContainer").remove();
+        $(".depth-4 > a").clone().prop({class:"backContainer"}).insertAfter(".descContainer").html("<div class='backCollection backParent'>Back</div>");
+        
         $("<div class='headerBreadcrumb'/>").insertBefore(".userMenu");
         //$('.parentMetadata').insertAfter('.itemMetadata, .metadataVertical > div');
         var institutionText = $(".depth-2 > a").clone(); //creates href path from breadcrumb depth-2
@@ -357,6 +358,7 @@
         $(".metadataSidebar").clone().prop({ class: "metadataVertical"}).appendTo('.content .descContainer .descriptionText');
         $(".downloadSelect").insertAfter(".infoToggle");
         $("<i class='fa fa-image' aria-hidden='true'></i>").appendTo(".imageLabel");
+
       }
 
       function bookContainer(){
