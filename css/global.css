@@ -4297,11 +4297,11 @@ body.compoundBook .bookMetaContainer > .metadataContainer {
   padding: 20px 0px 0px 0px !important;
   margin-top: 60px; }
 
-body.bookViewer .compoundMetadata, body.bookViewer .itemMetadata {
+body.bookViewer .parentMetadata, body.bookViewer .itemMetadata {
   border-top: 1px solid rgba(255, 255, 255, 0.16);
   padding-top: 20px;
   padding-bottom: 80px; }
-body.bookViewer .compoundMetadata::before, body.bookViewer .itemMetadata::before {
+body.bookViewer .parentMetadata::before, body.bookViewer .itemMetadata::before {
   position: absolute;
   left: 0px;
   top: -20px;
@@ -5452,13 +5452,13 @@ body.compoundChildImage {
 .metadataSidebar {
   padding-top: 20px; }
 
-.compoundMetadata, .itemMetadata {
+.parentMetadata, .itemMetadata {
   border-top: 1px solid rgba(255, 255, 255, 0.16);
   padding-top: 20px;
   padding-bottom: 80px;
   color: white; }
 
-.compoundMetadata::before, body.bookViewer .itemMetadata::before, .itemMetadata::before {
+.parentMetadata::before, body.bookViewer .itemMetadata::before, .itemMetadata::before {
   position: absolute;
   left: 0px;
   top: -20px;

@@ -6166,13 +6166,13 @@ body.bookViewer{
 
 
 
-.compoundMetadata, .itemMetadata {
+.parentMetadata, .itemMetadata {
     border-top: 1px solid rgba(255, 255, 255, 0.16);
     padding-top: 20px;
     padding-bottom: 80px;
 }
 
-.compoundMetadata::before{
+.parentMetadata::before{
   position: absolute;
   left:0px;
   top:-20px;
@@ -6190,7 +6190,7 @@ body.bookViewer{
 }
 
 .itemMetadata::before{
-@extend .compoundMetadata::before;
+@extend .parentMetadata::before;
 content:'piece information';
 }
 
@@ -7951,7 +7951,7 @@ body.compoundChildImage {
   padding-top: 20px;
 }
 
-.compoundMetadata, .itemMetadata{
+.parentMetadata, .itemMetadata{
   border-top:1px solid $lightTransparent;
   padding-top: 20px;
   padding-bottom: 80px;
@@ -7959,7 +7959,7 @@ body.compoundChildImage {
 }
 
 
-.compoundMetadata::before{
+.parentMetadata::before{
   position: absolute;
   left:0px;
   top:-20px;
@@ -7975,7 +7975,7 @@ body.compoundChildImage {
 }
 
 .itemMetadata::before{
-@extend .compoundMetadata::before;
+@extend .parentMetadata::before;
 content:'piece information';
 }
 
