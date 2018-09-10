@@ -219,10 +219,8 @@
         $('.contentLabel.itemDesc').css('display','none');
         }
         $(".content > .backContainer").remove();
-       // $("#bookMeta2").clone().prop({id:"bookMeta2Inner"}).insertAfter("#bookMeta");
-        $("#bookMeta").addClass('itemMetadata');
+        //$(".parentMetadata").clone().prop({id:"bookMeta2Inner"}).insertAfter(".bookMetadataContainer");
         $("<div class='headerBreadcrumb'/>").insertBefore(".userMenu");
-
         $('.content > .metadataContainer').addClass('compoundMetadata');
         $('#imageMeta').addClass('itemMetadata');
         $('.compoundMetadata').insertAfter('.itemMetadata, .metadataVertical > div > .metadataContainer');
@@ -348,7 +346,7 @@
         $("<div class='labelContainer'/>").insertBefore(".imageContainer"); //adds label break
         $("<div class='contentLabel imageLabel'>Image Object</div>").appendTo(".labelContainer"); //adds label break
         $("<div class='imagePreview'/>").appendTo(".imageContainer"); //adds label break
-        $("div.image-thumbnail").appendTo(".imagePreview");
+        $(".image-thumbnail").appendTo(".imagePreview");
         $("<div class='image-thumbnailData'/>").insertAfter(".imagePreview");
         $("<div class='imageMenu'/>").appendTo(".imagePreview"); //adds label break
         //$("#bookTitle").clone().attr("id", "bookmenuTitle").appendTo(".bookMenu"); // undoes default title truncation
@@ -400,7 +398,7 @@
         $(this).addClass("pageImages").text("Browse Pages as Images").appendTo("#pageCount2");
         });
         $("div.bookContainer").insertBefore("div.mobileMenu");
-        $(".islandora-book-metadata").remove();
+        //$(".islandora-book-metadata").remove();
         $("<div class='bookMenu'/>").appendTo(".bookPreview"); //adds label break
         //$("#bookTitle").clone().attr("id", "bookmenuTitle").appendTo(".bookMenu"); // undoes default title truncation
         $("<div class='chooseMenu'/>").appendTo(".bookMenu"); //adds label break
@@ -452,7 +450,7 @@
           $('.bookDetails').toggleClass('active');
         });
         $("<div class='bookSidebar'><div class='bookMetaContainer'></div></div>").appendTo("#BookReader"); //sets double-bagged container
-        $("#region-sidebar-first > .metadataSidebar > .region-inner >  .metadataContainer ").clone().prop({id:"bookMeta"}).appendTo(".bookMetaContainer");
+        $("#region-sidebar-first > .metadataSidebar > .region-inner >  .metadataContainer ").clone().appendTo(".bookMetaContainer");
         //$("#book-viewer > .metadataContainer ").clone().prop({id:"bookMeta2", class:"metadataContainer compoundMetadata"}).appendTo(".region-sidebar-first-inner"); //fills container
         //fills container
           $(".bookMetaContainer").addClass("nano-content");
