@@ -210,7 +210,7 @@
         }
         $(".content > .backContainer").remove();
         $("<div class='headerBreadcrumb'/>").insertBefore(".userMenu");
-        $('.parentMetadata').insertAfter('.itemMetadata, .metadataVertical > div');
+        //$('.parentMetadata').insertAfter('.itemMetadata, .metadataVertical > div');
         var institutionText = $(".depth-2 > a").clone(); //creates href path from breadcrumb depth-2
         var collectionText = $(".depth-3 > a").clone(); //creates href path from breadcrumb depth-3
         var collectionHome = $(".depth-3 > a").attr('href'); //creates href path from breadcrumb depth-3
@@ -218,7 +218,7 @@
         $("<span class='breadcrumbDivider'>/</span>").insertAfter(".institutionSmall"); //needs to be separated from the a href
         $(collectionText).addClass("institutionSmall").insertAfter(".breadcrumbDivider"); //creates collection breadcrumb
         childBreadcrumb();
-        $('.compoundMetadata > .modsTitle').appendTo('.itemTitle');
+        //$('.compoundMetadata > .modsTitle').appendTo('.itemTitle'); adds compound title to item title
         $('.manageMenu').appendTo('#block-system-main .item_headerMenu > .userMenu');
        $('.block-compound-jail-display').remove();
 
@@ -379,7 +379,7 @@
         //$("#bookTitle").clone().attr("id", "bookTitle2").appendTo(".book-thumbnailData"); // undoes default title truncation
         $("#pageCount").attr("id", "pageCount2").appendTo(".book-thumbnailData"); // undoes default title truncation
         //$("<div class='pageImages'>Browse Pages as Images</div>").appendTo("#pageCount2"); // undoes default title truncation
-        $(".metadataSidebar .modsDesc").clone().appendTo(".book-thumbnailData");
+        $(".itemMetadata .modsDesc").clone().appendTo(".book-thumbnailData");
         $('a[href*="pages"]').each(function() {
         $(this).addClass("pageImages").text("Browse Pages as Images").appendTo("#pageCount2");
         });
@@ -436,8 +436,9 @@
           $('.bookDetails').toggleClass('active');
         });
         $("<div class='bookSidebar'><div class='bookMetaContainer'></div></div>").appendTo("#BookReader"); //sets double-bagged container
-        $(".parentMetadata").appendTo(".bookMetaContainer");
-        $(".itemMetadata").appendTo(".bookMetaContainer");
+
+        $(".metadataSidebar .metadataContainer").clone().appendTo(".bookMetaContainer");
+        //$(".itemMetadata").clone().appendTo(".bookMetaContainer");
 
         //$("#book-viewer > .metadataContainer ").clone().prop({id:"bookMeta2", class:"metadataContainer compoundMetadata"}).appendTo(".region-sidebar-first-inner"); //fills container
         //fills container
@@ -480,6 +481,8 @@
          }
         });
         $(".itemMetadata").appendTo(".region-sidebar-first-inner");
+        $('.parentMetadata').insertAfter('.itemMetadata');
+
         $("#region-sidebar-first").addClass('nano');
         $('.nano > .region-inner').wrapAll('<div class="metadataSidebar"/>');
         $(".metadataSidebar").addClass('nano-content'); //adds nanobar
@@ -566,6 +569,7 @@
       }
       function bookStarter(){
         $("body").addClass('bookViewer');
+        $("div.BRfloat .metadataContainer").remove(); //removes extra metadata produced by internet archive book reader
         $("<span class='modalExit4'><i class='fa fa-times'></i> Exit</span>").insertBefore("body.bookViewer #BookReader");
         bookTitle = $(".modsTitle").html(); // finds full title for book
         $("#BRreturn a").text(bookTitle); // undoes default title truncation
@@ -634,7 +638,7 @@
         $("#islandora-openseadragon").insertBefore(".mobileMenu");
         $("<div class='detailsContainer nano'/>").insertAfter(".dragonContainer > .openseadragon-canvas");
         $("<div class='imageDetails nano-content'/>").appendTo(".detailsContainer");
-        $(".itemMetadata").clone().appendTo(".imageDetails");
+        $(".metadataSidebar .metadataContainer").clone().appendTo(".imageDetails");
           $('.modalDetails').click(function(){
             $('.imageDetails').toggleClass('imageDetailsActive');
             $('.detailsContainer').toggleClass('detailsContainerActive');

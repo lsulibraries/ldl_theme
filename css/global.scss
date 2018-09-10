@@ -6172,6 +6172,12 @@ body.bookViewer{
     padding-bottom: 80px;
 }
 
+.bookMetaContainer > .metadataContainer{
+      margin: 40px;
+    padding: 20px 0px 0px 0px !important;
+    margin-top: 60px;
+}
+
 .parentMetadata::before{
   position: absolute;
   left:0px;
@@ -6189,9 +6195,9 @@ body.bookViewer{
 
 }
 
-.itemMetadata::before{
+.metadataContainer:not(.parentMetadata)::before{
 @extend .parentMetadata::before;
-content:'piece information';
+content:'item information' !important;
 }
 
 
@@ -7974,9 +7980,9 @@ body.compoundChildImage {
   position: absolute;
 }
 
-.itemMetadata::before{
+.metadataContainer:not(.parentMetadata)::before{
 @extend .parentMetadata::before;
-content:'piece information';
+content:'item information';
 }
 
 

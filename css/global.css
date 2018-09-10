@@ -4301,7 +4301,11 @@ body.bookViewer .parentMetadata, body.bookViewer .itemMetadata {
   border-top: 1px solid rgba(255, 255, 255, 0.16);
   padding-top: 20px;
   padding-bottom: 80px; }
-body.bookViewer .parentMetadata::before, body.bookViewer .itemMetadata::before {
+body.bookViewer .bookMetaContainer > .metadataContainer {
+  margin: 40px;
+  padding: 20px 0px 0px 0px !important;
+  margin-top: 60px; }
+body.bookViewer .parentMetadata::before, body.bookViewer .metadataContainer:not(.parentMetadata)::before {
   position: absolute;
   left: 0px;
   top: -20px;
@@ -4315,8 +4319,8 @@ body.bookViewer .parentMetadata::before, body.bookViewer .itemMetadata::before {
   content: 'compound information';
   position: absolute;
   color: white; }
-body.bookViewer .itemMetadata::before {
-  content: 'piece information'; }
+body.bookViewer .metadataContainer:not(.parentMetadata)::before {
+  content: 'item information' !important; }
 body.bookViewer a.pageImages {
   display: inline;
   border: 1px solid grey;
@@ -5458,7 +5462,7 @@ body.compoundChildImage {
   padding-bottom: 80px;
   color: white; }
 
-.parentMetadata::before, body.bookViewer .itemMetadata::before, .itemMetadata::before {
+.parentMetadata::before, body.bookViewer .metadataContainer:not(.parentMetadata)::before, .metadataContainer:not(.parentMetadata)::before {
   position: absolute;
   left: 0px;
   top: -20px;
@@ -5472,8 +5476,8 @@ body.compoundChildImage {
   content: 'compound information';
   position: absolute; }
 
-.itemMetadata::before {
-  content: 'piece information'; }
+.metadataContainer:not(.parentMetadata)::before {
+  content: 'item information'; }
 
 body.newspaperSet {
   background-color: white; }
