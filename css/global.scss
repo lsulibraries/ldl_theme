@@ -3007,6 +3007,7 @@ body.logged-in.front div#zone-header {
 
 }
 
+
 .front {
 
 .dataPromotion {
@@ -5199,7 +5200,7 @@ body:not(.compoundChildImage) {
 
     #shareToggle{
     height: 23px;
-    margin-left: 0px;
+    margin-left: 5px;
       .iconSelect{
         background-size: 15px;
         width: 35px;
@@ -8030,7 +8031,10 @@ a.toggle-date-range-filter{
 //begin compoundChild post-actionBar
 
 body.compoundChild{
-
+#shareToggle{
+  margin-left: 0px;
+}
+}
 // .metadataSidebar.nano-content {
 //     padding-top: 40px;
 // }
@@ -8111,7 +8115,7 @@ body.compoundChild{
 //     height: auto;
 //     margin-right: 0px !important;
 //     }
-}
+
 
 //end compoundChild post-actionBar
 

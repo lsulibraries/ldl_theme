@@ -326,7 +326,7 @@
         $("<div class='userMenu'/>").appendTo(".item_headerMenu"); //temporarily moves count
         $("<div class='infoToggle userSelect'><div class='iconSelect'></div><div class='textSelect'>details</div></div>").appendTo(".userMenu"); //adds toggle for parent metadata
 
-        $("ul.tabs").appendTo(".userMenu:first").wrapAll('<div class="manageMenu"/>'); //moves the view/ip embargo/manage menu
+        $("ul.tabs").appendTo(".userMenu:first").wrapAll('<div class="manageMenu"/>').insertBefore('#shareToggle'); //moves the view/ip embargo/manage menu
         $("div#block-system-main > div.tabs").remove(); // removes top div which once contained the tabs
         if($(itemTitle).length > 20) {
           $(".itemTitle").css('font-size','34px');
@@ -599,7 +599,12 @@
           $('body').toggleClass('metaOpened');
           $(".nano").nanoScroller({ alwaysVisible: false });
         });
-        $("<div id='shareToggle' class='userSelect'><div class='iconSelect'></div><div class='textSelect'>share</div></div>").insertAfter("#block-system-main .infoToggle");
+        if ($('body').hasClass('compoundParent')){
+          $("<div id='shareToggle' class='userSelect'><div class='iconSelect'></div><div class='textSelect'>share</div></div>").insertAfter(".infoToggle");
+        }
+        else {
+          $("<div id='shareToggle' class='userSelect'><div class='iconSelect'></div><div class='textSelect'>share</div></div>").insertAfter("#block-system-main .infoToggle");
+        }
         $("<div id='share'/>").insertAfter("#shareToggle");
         $("#share").jsSocials({
           url: urlhref,

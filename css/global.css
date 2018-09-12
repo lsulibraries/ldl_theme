@@ -3659,7 +3659,7 @@ body:not(.compoundChildImage) .iconSelect {
   background-position: center; }
 body:not(.compoundChildImage) #shareToggle {
   height: 23px;
-  margin-left: 0px; }
+  margin-left: 5px; }
   body:not(.compoundChildImage) #shareToggle .iconSelect {
     background-size: 15px;
     width: 35px; }
@@ -5507,6 +5507,9 @@ a.toggle-date-range-filter {
 .islandora-solr-date-filter {
   margin-left: 12px;
   margin-top: 20px; }
+
+body.compoundChild #shareToggle {
+  margin-left: 0px; }
 
 body.context-data .dataHeader {
   margin-bottom: 20px; }
