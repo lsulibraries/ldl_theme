@@ -217,13 +217,13 @@
         $(collectionText).addClass("institutionSmall").insertAfter(".breadcrumbDivider"); //creates collection breadcrumb
         childBreadcrumb();
         //$('.compoundMetadata > .modsTitle').appendTo('.itemTitle'); adds compound title to item title
-        $('.manageMenu').appendTo('#block-system-main .item_headerMenu > .userMenu');
+        $('.manageMenu').insertBefore('#shareToggle');
        $('.block-compound-jail-display').remove();
 
       }
 
       function itemHeader(){
-        if (!$('body').hasClass('compoundObject')){
+        if (!$('body').hasClass('compoundParent')){
           $(".region-inner > div.tabs.clearfix").prependTo("#block-system-main");
           $("<div class='item_header'/>").insertBefore(".itemContainer, .islandora-large-image-object, .bookContainer, .islandora-newspaper-object"); //creates header for image items
           thumbnailURL = $(".image-thumbnail img").prop('data-src');
@@ -599,7 +599,7 @@
           $('body').toggleClass('metaOpened');
           $(".nano").nanoScroller({ alwaysVisible: false });
         });
-        $("<div id='shareToggle' class='userSelect'><div class='iconSelect'></div><div class='textSelect'>share</div></div>").insertAfter(".infoToggle");
+        $("<div id='shareToggle' class='userSelect'><div class='iconSelect'></div><div class='textSelect'>share</div></div>").insertAfter("#block-system-main .infoToggle");
         $("<div id='share'/>").insertAfter("#shareToggle");
         $("#share").jsSocials({
           url: urlhref,

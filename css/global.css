@@ -3659,7 +3659,7 @@ body:not(.compoundChildImage) .iconSelect {
   background-position: center; }
 body:not(.compoundChildImage) #shareToggle {
   height: 23px;
-  margin-left: 5px; }
+  margin-left: 0px; }
   body:not(.compoundChildImage) #shareToggle .iconSelect {
     background-size: 15px;
     width: 35px; }
