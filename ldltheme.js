@@ -9,8 +9,6 @@
       // if ( ($('.block-islandora-compound-object').length) && ($('#block-system-main .block-inner .content > div').length) && (!($("body").attr('class').indexOf('-pages') > -1)) && ( !$('body').is('.audioPDF, .regeneratePage, .datastreamPage, .book, .pagesView'))){
       // }
 
-
-
       switch (true) { //detect page type or content type
 
         case ($('body').hasClass('front')) :{
@@ -209,7 +207,7 @@
         }
         $(".content > .backContainer").remove();
         $(".depth-4 > a").clone().prop({class:"backContainer"}).insertAfter(".descContainer").html("<div class='backCollection backParent'>Back</div>");
-        
+
         $("<div class='headerBreadcrumb'/>").insertBefore(".userMenu");
         //$('.parentMetadata').insertAfter('.itemMetadata, .metadataVertical > div');
         var institutionText = $(".depth-2 > a").clone(); //creates href path from breadcrumb depth-2
@@ -227,7 +225,6 @@
 
       function itemHeader(){
         if (!$('body').hasClass('compoundObject')){
-
           $(".region-inner > div.tabs.clearfix").prependTo("#block-system-main");
           $("<div class='item_header'/>").insertBefore(".itemContainer, .islandora-large-image-object, .bookContainer, .islandora-newspaper-object"); //creates header for image items
           thumbnailURL = $(".image-thumbnail img").prop('data-src');
@@ -386,7 +383,7 @@
         $(this).addClass("pageImages").text("Browse Pages as Images").appendTo("#pageCount2");
         });
         $("div.bookContainer").insertBefore("div.mobileMenu");
-        //$(".islandora-book-metadata").remove();
+        $(".islandora-book-metadata").remove();
         $("<div class='bookMenu'/>").appendTo(".bookPreview"); //adds label break
         //$("#bookTitle").clone().attr("id", "bookmenuTitle").appendTo(".bookMenu"); // undoes default title truncation
         $("<div class='chooseMenu'/>").appendTo(".bookMenu"); //adds label break
@@ -832,7 +829,7 @@
           $(".metadataSidebar").clone().prop({ class: "metadataVertical"}).appendTo('.content .descContainer .descriptionText');
           $(".downloadSelect").insertAfter(".infoToggle");
           $("<i class='fa fa-newspaper' aria-hidden='true'></i>").appendTo(".newspaperLabel");
-          $(".total-issue-count").insertAfter(".newspaper-thumbnailData > span");
+          $(".total-issue-count").insertAfter(".newspaper-thumbnailData > .metadataValue:last");
 
           if ($(window).width() < 900) {
               $('body').addClass('mobileNewspaper mobileDeviceNewspaper');
