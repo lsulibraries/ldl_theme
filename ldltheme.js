@@ -81,7 +81,6 @@
         case ( ($('.total-issue-count').length) && ( !$('body').hasClass('audioPDF') ) ) :{
           $('body').addClass('newspaperSet');
           itemTitle = $(".modsTitle").html(); // finds full title without truncation
-          thumbnailURL = '/sites/all/themes/ldl/images/newspaperTN.jpeg';
           itemHeader();
           typeClass('newspaper');
           newspaperContainer();
@@ -299,7 +298,16 @@
         }
         if ((!$('body').hasClass('compoundParent')) && (!$('body').hasClass('compoundChild'))) {
           itemTitle = $(".modsTitle").html(); // finds full title without truncation
-          thumbnailURL = $(".image-thumbnail img").prop('src');
+          if ($('body').hasClass('newspaperSet')){
+            var baseUrl = document.location.origin;
+            var thumbnailURL = baseUrl + ($(".issue-container:first > a").attr('href')) + '/datastream/TN/view';
+            $('.backgroundDiv').css('background-image', 'url(' + thumbnailURL + ')');
+            console.log(thumbnailURL);
+          }
+          else {
+                      thumbnailURL = $(".image-thumbnail img").prop('src');
+
+          }
           $("<div class='backgroundDiv'/>").appendTo(".item_header"); //creates header for book items
           $('.backgroundDiv').css('background-image', 'url(' + thumbnailURL + ')');
           $("<div class='item_headerMenu'/>").appendTo(".item_header"); //creates header for book items
