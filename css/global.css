@@ -295,7 +295,8 @@ a.institution-about-edit {
 
 .lsusTheme .collectionLogo {
   background-image: url("../images/LSUS%20Logo%2011102015.png");
-  cursor: pointer; }
+  cursor: pointer;
+  display: block; }
 .lsusTheme .institutionLabel {
   background-image: url("../images/LSUS%20Logo%2011102015.png"); }
 

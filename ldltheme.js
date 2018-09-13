@@ -605,6 +605,9 @@
         else {
           $("<div id='shareToggle' class='userSelect'><div class='iconSelect'></div><div class='textSelect'>share</div></div>").insertAfter("#block-system-main .infoToggle");
         }
+        if (($('.manageMenu > ul').length) = 1){
+          $(".manageMenu").css("display", "none"); //kills extra space if manageMenu is not being used
+        }
         $("<div id='share'/>").insertAfter("#shareToggle");
         $("#share").jsSocials({
           url: urlhref,
