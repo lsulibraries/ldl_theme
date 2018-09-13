@@ -3956,6 +3956,8 @@ body.headerversiontwo {
       border: 0px !important;
       background-color: transparent;
       margin-right: 0px !important; }
+    body.headerversiontwo .manageMenu .tabs li:last-child {
+      margin-right: 0px; }
   body.headerversiontwo .headerBreadcrumb {
     display: flex;
     justify-content: center;
