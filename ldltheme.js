@@ -237,6 +237,9 @@
         if ($('body').hasClass('compoundParent')){
           var widest = null;  // remember the width of the "widest" element - probably faster than calling .width() - currently disabled - move addclasswidest to second if to
           var widestWidth = 0;
+
+          $("#islandora-compound-sequence-position").parent().css("display","none");// hides sequence position for parentCompounds since we see all children at this page
+
           $(".compoundSelect").each(function() {
             if (widest == null)
             {
@@ -327,6 +330,8 @@
         $("<div class='infoToggle userSelect'><div class='iconSelect'></div><div class='textSelect'>details</div></div>").appendTo(".userMenu"); //adds toggle for parent metadata
 
         $("ul.tabs").appendTo(".userMenu:first").wrapAll('<div class="manageMenu"/>').insertBefore('#shareToggle'); //moves the view/ip embargo/manage menu
+          $("#islandora-compound-sequence-position").parent().parent().css("margin-left","5px");
+
         $("div#block-system-main > div.tabs").remove(); // removes top div which once contained the tabs
         if($(itemTitle).length > 20) {
           $(".itemTitle").css('font-size','34px');

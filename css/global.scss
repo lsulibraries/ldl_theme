@@ -204,12 +204,12 @@ html, body {
 
 body.logged-in{
   padding-top: 59px !important;
-.grid-3 .metadataSidebar.nano-content {
+  .grid-3 .metadataSidebar.nano-content {
     padding-top: 90px;
-}
+  }
 
   .manageMenu .tabs > li:last-child{
-      margin-right: 5px !important;
+    margin-right: 5px !important;
   }
 
 }
@@ -7531,6 +7531,10 @@ body.compoundChildImage {
 
 /*BEGIN test area*/
 
+  .manageParent{
+    display: none; //this is a legacy div from ./islandora_solution_pack_compound/includes/blocks.inc:          '#prefix' => '<div class="manageParent">',
+  }
+
   .currentPart {
   color: rgba(255, 255, 255, 0.85);
   padding: 0px 10px;
@@ -8560,6 +8564,7 @@ body.multipleDaily{
 
 #block-islandora-compound-object-compound-jail-display {
     height: auto !important;
+    display: none;
   }
 }
 

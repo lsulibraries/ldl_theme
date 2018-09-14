@@ -5441,6 +5441,9 @@ body.compoundChildImage {
   background: white !important; }
 
 /*BEGIN test area*/
+.manageParent {
+  display: none; }
+
 .currentPart {
   color: rgba(255, 255, 255, 0.85);
   padding: 0px 10px;
@@ -6131,7 +6134,8 @@ body.multipleDaily .issueLevel .issue-container {
     .view-display-id-minigrid tr:nth-child(89) {
       border-radius: 0px 0px 0px 10px; } }
 .datastreamPage #block-islandora-compound-object-compound-jail-display {
-  height: auto !important; }
+  height: auto !important;
+  display: none; }
 
 /* area*/
 @media screen and (max-width: 1770px) {
