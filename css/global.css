@@ -2235,6 +2235,9 @@ body.logged-in.front div#zone-header {
   position: absolute;
   width: calc(100% - 40px); }
 
+.not-logged-in.compoundParent .manageMenu {
+  display: none; }
+
 .front .dataPromotion {
   height: 300px; }
 .front .scrollPrompt {
@@ -3279,7 +3282,7 @@ div.islandora-pdf-object, div.islandora-large-image-object {
     display: none; }
 .compoundObject a#islandora-compound-next-link, .compoundObject a#islandora-compound-previous-link {
   height: 100%;
-  display: flex !important;
+  display: flex;
   justify-content: center;
   align-items: center;
   color: white;
@@ -3498,7 +3501,7 @@ div.islandora-pdf-object, div.islandora-large-image-object {
 .compoundObject .compoundCount {
   position: absolute;
   right: 20px;
-  top: -20px;
+  top: -38px;
   text-transform: uppercase;
   font-size: 11px;
   color: #676767; }
@@ -3560,7 +3563,7 @@ div.islandora-pdf-object, div.islandora-large-image-object {
   top: -20px;
   text-transform: uppercase;
   font-size: 11px;
-  background-image: url("https://i.imgur.com/SVHgxtg.png");
+  background-image: url("../images/info_dark.png");
   padding-left: 25px;
   background-position: 0px -2px;
   background-size: 20px;
@@ -3647,256 +3650,6 @@ body.compoundParent .compoundGlance {
   width: 100%; }
 body.compoundParent .tagsGlance {
   margin-top: 10px; }
-
-body.logged-in.compoundChild .islandora-openseadragon {
-  display: block;
-  width: 100%;
-  height: calc(100vh - 310px); }
-
-body.not-logged-in.compoundChild .manageMenu {
-  display: none;
-  padding: 0px; }
-
-.compoundChild {
-  background: white; }
-  .compoundChild.objectHidden .islandora-large-image-content-wrapper, .compoundChild.objectHidden .compoundArrows, .compoundChild.objectHidden .downloadLink, .compoundChild.objectHidden .headerBreadcrumb {
-    display: none !important; }
-  .compoundChild.objectHidden .compoundGallery_header {
-    height: calc(100vh - 100px);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; }
-  .compoundChild.activeEmbargo {
-    background: white; }
-    .compoundChild.activeEmbargo .ip-embargo-details {
-      background: #e9e9e9;
-      padding: 30px 50px; }
-    .compoundChild.activeEmbargo .alertBox_container {
-      display: flex;
-      justify-content: center;
-      align-items: center; }
-    .compoundChild.activeEmbargo .alertBox {
-      display: flex;
-      border-radius: 10px;
-      overflow: hidden;
-      margin: 50px 0px;
-      background: whitesmoke;
-      width: 740px; }
-      .compoundChild.activeEmbargo .alertBox .mods-access-condition-contact {
-        color: #333;
-        overflow: hidden;
-        margin: 20px 0px;
-        font-style: italic;
-        margin-bottom: 0px; }
-      .compoundChild.activeEmbargo .alertBox span.alertIcon {
-        background-image: url(https://i.imgur.com/R1bk60c.png);
-        width: 240px;
-        background-size: 50px auto;
-        background-position: center;
-        background-repeat: no-repeat; }
-    .compoundChild.activeEmbargo .compoundGallery_header {
-      position: relative;
-      padding: 30px 80px; }
-  .compoundChild span.breadcrumbDivider {
-    color: #676767; }
-  .compoundChild #clip {
-    display: block !important; }
-    .compoundChild #clip img {
-      display: block !important; }
-  .compoundChild .manageParent a {
-    color: #474747;
-    font-weight: normal;
-    text-transform: uppercase;
-    border: 1px solid #bababa;
-    padding: 1px 10px;
-    padding-top: 2px;
-    height: 25px;
-    box-sizing: border-box; }
-  .compoundChild .manageMenu {
-    display: flex; }
-    .compoundChild .manageMenu li a {
-      color: #474747;
-      border: 1px solid #bababa !important; }
-  .compoundChild .manageMenu > .manageParent > .form-item {
-    margin-top: 0px !important; }
-  .compoundChild .sidebarToggle {
-    display: none; }
-  .compoundChild .headerBreadcrumb {
-    justify-content: flex-start !important; }
-    .compoundChild .headerBreadcrumb a.institutionSmall {
-      color: #676767; }
-  .compoundChild span#islandora-compound-sequence-position {
-    cursor: default;
-    color: #676767; }
-  .compoundChild .compoundArrows.userSelect:hover, .compoundChild .compoundGallery_header .compoundParent:hover, .compoundChild a.institutionSmall:hover {
-    color: #676767 !important; }
-  .compoundChild .compoundArrows.userSelect {
-    position: absolute;
-    bottom: 7px;
-    right: 0px;
-    height: 20px !important;
-    width: auto !important;
-    padding: 0px !important;
-    margin-right: 0px;
-    border: 0px !important; }
-    .compoundChild .compoundArrows.userSelect a#islandora-compound-next-link, .compoundChild .compoundArrows.userSelect .compoundObject a#islandora-compound-previous-link, .compoundObject .compoundChild .compoundArrows.userSelect a#islandora-compound-previous-link, .compoundChild .compoundArrows.userSelect a#islandora-compound-previous-link {
-      color: #676767; }
-    .compoundChild .compoundArrows.userSelect a#islandora-compound-next-link, .compoundChild .compoundArrows.userSelect .compoundObject a#islandora-compound-previous-link, .compoundObject .compoundChild .compoundArrows.userSelect a#islandora-compound-previous-link {
-      padding-right: 0px; }
-  .compoundChild .iconSelect {
-    font-family: FontAwesome; }
-  .compoundChild #region-content .region-content-inner {
-    min-height: 0px; }
-  .compoundChild .compoundGallery_header .compoundParent {
-    font-size: 14px;
-    padding: 10px 40px;
-    color: #676767;
-    border: 1px solid #bababa;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50px;
-    width: auto; }
-  .compoundChild #shareToggle {
-    margin-right: 0px;
-    z-index: 2; }
-  .compoundChild .jssocials-shares {
-    margin-left: 10px; }
-  .compoundChild .iconSelect {
-    text-align: center;
-    font-size: 21px; }
-  .compoundChild .navigator {
-    background: none !important; }
-  .compoundChild .islandora-large-image-object {
-    border: 1px solid rgba(0, 0, 0, 0.06);
-    box-shadow: -3px 4px 20px #f1f1f1; }
-  .compoundChild .compoundGallery_header .form-item {
-    margin: 0px !important;
-    margin-top: 20px !important;
-    flex-direction: row;
-    justify-content: space-between; }
-  .compoundChild .islandora-openseadragon {
-    display: block;
-    width: 100%;
-    height: calc(100vh - 330px); }
-  .compoundChild #region-sidebar-first .region-sidebar-first-inner {
-    padding-top: 90px; }
-  .compoundChild .parentLink {
-    color: #676767 !important; }
-  .compoundChild .block-compound-jail-display .block-inner > .content {
-    width: 100%;
-    border-top: 0px;
-    max-width: 1200px; }
-  .compoundChild .parentTop {
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-  .compoundChild .contentLabel, .compoundChild #block-block-9, .compoundChild .islandora-large-image-metadata {
-    display: none; }
-  .compoundChild .compoundMetadata, .compoundChild .itemMetadata {
-    border-top: 1px solid rgba(255, 255, 255, 0.16);
-    padding-top: 20px;
-    padding-bottom: 80px; }
-  .compoundChild .compoundMetadata::before, .compoundChild .itemMetadata::before, .compoundChild body.bookViewer .itemMetadata::before, body.bookViewer .compoundChild .itemMetadata::before {
-    position: absolute;
-    left: 0px;
-    top: -20px;
-    text-transform: uppercase;
-    font-size: 11px;
-    background-image: url("https://i.imgur.com/OnZTeYf.png");
-    padding-left: 25px;
-    background-position: 0px -2px;
-    background-size: 20px;
-    background-repeat: no-repeat;
-    content: 'compound information';
-    position: absolute; }
-  .compoundChild .itemMetadata::before {
-    content: 'piece information'; }
-  .compoundChild .backgroundDiv {
-    display: none; }
-  .compoundChild a#clip {
-    display: flex !important;
-    justify-content: center;
-    align-items: center;
-    height: 30px;
-    margin-left: 0px;
-    z-index: 22; }
-  .compoundChild #clip img {
-    display: none; }
-  .compoundChild #clip .iconSelect {
-    padding-bottom: 3px; }
-  .compoundChild .menuActive .iconSelect {
-    background-color: transparent; }
-  .compoundChild .childNotice {
-    height: 50px;
-    color: #FF5370;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0px 20px;
-    text-transform: uppercase;
-    border-right: 1px solid rgba(255, 255, 255, 0.16); }
-    .compoundChild .childNotice i {
-      margin-left: 15px; }
-  .compoundChild .compoundObject .islandora-openseadragon .openseadragon-canvas canvas {
-    background-color: transparent !important; }
-  .compoundChild .iconSelect {
-    border: 0px;
-    width: 30px;
-    height: 30px; }
-  .compoundChild .navigator {
-    border: 0px !important; }
-  .compoundChild .childHeader {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    padding-top: 40px;
-    position: relative; }
-  .compoundChild .childIcon {
-    width: 55px;
-    height: 32px;
-    background-repeat: no-repeat;
-    background-size: 25px;
-    background-position: center;
-    margin-right: 10px; }
-  .compoundChild .childImage {
-    background-image: url(../images/4LmxSra.png); }
-  .compoundChild .islandora-large-image-content {
-    margin-top: 0px;
-    margin-bottom: 0px; }
-  .compoundChild h1#window-title {
-    margin: 0px;
-    display: flex;
-    font-size: 30px;
-    justify-content: center;
-    padding-right: 0px;
-    flex-grow: 2;
-    line-height: 30px; }
-  .compoundChild .compoundSelect .active {
-    cursor: default; }
-  .compoundChild div#block-system-main {
-    height: 0px !important; }
-  .compoundChild .contentIcon {
-    margin-left: 20px; }
-  .compoundChild .compoundGallery_header {
-    position: relative;
-    padding: 0px 80px; }
-  .compoundChild .compoundSelect {
-    height: 80px;
-    border: 1px solid rgba(255, 255, 255, 0.07); }
-    .compoundChild .compoundSelect a.compoundSelect-title {
-      padding: 40px 40px; }
-  .compoundChild .compoundGallery {
-    display: none; }
-  .compoundChild .compoundGlance {
-    padding-top: 0px !important;
-    background: rgba(0, 0, 0, 0.06);
-    color: white; }
-  .compoundChild td.modsDesc, .compoundChild .tagsGlance {
-    padding: 20px !important; }
-  .compoundChild td.modsDesc {
-    padding-bottom: 0px !important; }
 
 body:not(.compoundChildImage) .iconSelect {
   width: 36px;
@@ -3989,11 +3742,11 @@ body.headerversiontwo {
     body.headerversiontwo .issueMenu .navIssues {
       border-radius: 0px !important;
       margin-left: 1px; }
-  body.headerversiontwo .imageTitle, body.headerversiontwo .newspaperTitle {
+  body.headerversiontwo .imageTitle, body.headerversiontwo .newspaperTitle, body.headerversiontwo .itemTitle {
     font-size: 40px;
     color: white;
     line-height: 37px; }
-  body.headerversiontwo .image_headerMenu, body.headerversiontwo .newspaper_headerMenu {
+  body.headerversiontwo .image_headerMenu, body.headerversiontwo .newspaper_headerMenu, body.headerversiontwo .item_headerMenu {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -4016,7 +3769,7 @@ body.headerversiontwo {
     margin-right: 4px;
     margin-top: 0px;
     margin-bottom: 0px; }
-  body.headerversiontwo .metadataVertical .metadataTitle {
+  body.headerversiontwo .metadataVertical .metadataLabel {
     color: #676767 !important; }
   body.headerversiontwo .blurFilter {
     -webkit-filter: blur(5px) brightness(0.2);
@@ -4203,6 +3956,8 @@ body.headerversiontwo {
       border: 0px !important;
       background-color: transparent;
       margin-right: 0px !important; }
+    body.headerversiontwo .manageMenu .tabs li:last-child {
+      margin-right: 0px; }
   body.headerversiontwo .headerBreadcrumb {
     display: flex;
     justify-content: center;
@@ -4433,12 +4188,12 @@ body.headerversiontwo {
       display: flex;
       flex-direction: column;
       margin-bottom: 20px; }
-    body.headerversiontwo .metadataContainer span.metadataTitle {
+    body.headerversiontwo .metadataContainer div.metadataLabel {
       font-weight: 700;
       color: white; }
-    body.headerversiontwo .metadataContainer span.metadataValue {
+    body.headerversiontwo .metadataContainer div.metadataValue {
       color: #a5a5a5; }
-      body.headerversiontwo .metadataContainer span.metadataValue a {
+      body.headerversiontwo .metadataContainer div.metadataValue a {
         word-break: break-all;
         word-wrap: break-word; }
   body.headerversiontwo #region-sidebar-first {
@@ -4488,9 +4243,6 @@ body.headerversiontwo.metaOpened div#zone-header {
   transition-duration: 1s;
   transition-delay: 0s; }
 
-body.headerversiontwo.metaOpened.compoundChild div#zone-header {
-  display: none; }
-
 #BRpager .ui-slider-handle {
   position: absolute;
   width: 28px;
@@ -4535,19 +4287,6 @@ body.compoundBook .tabs > li:last-child {
   margin-right: 0px !important; }
 body.compoundBook .metadataSidebar.nano-content {
   padding-top: 40px; }
-body.compoundBook .currentPart {
-  color: rgba(255, 255, 255, 0.85);
-  padding: 0px 10px;
-  font-weight: normal;
-  font-size: 11px;
-  margin-bottom: 5px;
-  margin-top: 8px;
-  vertical-align: baseline !important;
-  border: 1px solid white;
-  margin-left: 10px;
-  border-radius: 3px;
-  text-transform: uppercase;
-  width: fit-content; }
 body.compoundBook .backContainer {
   margin-top: 20px; }
 body.compoundBook #book-viewer > .metadataContainer {
@@ -4560,17 +4299,21 @@ body.compoundBook .bookMetaContainer > .metadataContainer {
   padding: 20px 0px 0px 0px !important;
   margin-top: 60px; }
 
-body.bookViewer .compoundMetadata, body.bookViewer .itemMetadata {
+body.bookViewer .parentMetadata, body.bookViewer .itemMetadata {
   border-top: 1px solid rgba(255, 255, 255, 0.16);
   padding-top: 20px;
   padding-bottom: 80px; }
-body.bookViewer .compoundMetadata::before, body.bookViewer .itemMetadata::before {
+body.bookViewer .bookMetaContainer > .metadataContainer {
+  margin: 40px;
+  padding: 20px 0px 0px 0px !important;
+  margin-top: 60px; }
+body.bookViewer .parentMetadata::before, body.bookViewer .metadataContainer:not(.parentMetadata)::before {
   position: absolute;
   left: 0px;
   top: -20px;
   text-transform: uppercase;
   font-size: 11px;
-  background-image: url("https://i.imgur.com/OnZTeYf.png");
+  background-image: url("../images/info_light.png");
   padding-left: 25px;
   background-position: 0px -2px;
   background-size: 20px;
@@ -4578,8 +4321,8 @@ body.bookViewer .compoundMetadata::before, body.bookViewer .itemMetadata::before
   content: 'compound information';
   position: absolute;
   color: white; }
-body.bookViewer .itemMetadata::before {
-  content: 'piece information'; }
+body.bookViewer .metadataContainer:not(.parentMetadata)::before {
+  content: 'item information' !important; }
 body.bookViewer a.pageImages {
   display: inline;
   border: 1px solid grey;
@@ -5698,6 +5441,66 @@ body.compoundChildImage {
   background: white !important; }
 
 /*BEGIN test area*/
+.itemDesc::before {
+  position: absolute;
+  left: 3px;
+  top: 4px;
+  text-transform: uppercase;
+  font-size: 11px;
+  background-image: url(../images/tags_dark.png);
+  padding-left: 25px;
+  background-position: 0px -2px;
+  background-size: 15px;
+  background-repeat: no-repeat;
+  content: ' ';
+  height: 20px;
+  position: absolute;
+  width: 10px;
+  opacity: 0.7; }
+
+.manageParent {
+  display: none; }
+
+.currentPart {
+  color: rgba(255, 255, 255, 0.85);
+  padding: 0px 10px;
+  font-weight: normal;
+  font-size: 11px;
+  margin-bottom: 5px;
+  margin-top: 8px;
+  vertical-align: baseline !important;
+  border: 1px solid white;
+  margin-left: 10px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  width: fit-content; }
+
+.metadataSidebar {
+  padding-top: 20px; }
+
+.parentMetadata, .itemMetadata {
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+  padding-top: 20px;
+  padding-bottom: 80px;
+  color: white; }
+
+.parentMetadata::before, body.bookViewer .metadataContainer:not(.parentMetadata)::before, .metadataContainer:not(.parentMetadata)::before {
+  position: absolute;
+  left: 0px;
+  top: -20px;
+  text-transform: uppercase;
+  font-size: 11px;
+  background-image: url("../images/info_light.png");
+  padding-left: 25px;
+  background-position: 0px -2px;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  content: 'compound information';
+  position: absolute; }
+
+.metadataContainer:not(.parentMetadata)::before {
+  content: 'item information'; }
+
 body.newspaperSet {
   background-color: white; }
 
@@ -5726,66 +5529,6 @@ a.toggle-date-range-filter {
 .islandora-solr-date-filter {
   margin-left: 12px;
   margin-top: 20px; }
-
-body.compoundChild .metadataSidebar.nano-content {
-  padding-top: 40px; }
-body.compoundChild div#shareToggle.activeMenu {
-  margin-left: 12px !important; }
-body.compoundChild #shareToggle.userSelect {
-  border: 1px solid #cecece;
-  background: transparent;
-  box-sizing: border-box; }
-body.compoundChild .userMenu {
-  align-items: center;
-  padding-bottom: 20px; }
-body.compoundChild a.downloadLink.userSelect {
-  display: flex !important;
-  justify-content: center;
-  align-items: center; }
-body.compoundChild .downloadLink.userSelect, body.compoundChild .infoToggle {
-  border: 1px solid #cecece;
-  background: transparent;
-  box-sizing: border-box; }
-body.compoundChild .infoToggle .userSelect {
-  -webkit-transform: skew(0deg);
-  -moz-transform: skew(0deg);
-  -o-transform: skew(0deg);
-  background: transparent; }
-body.compoundChild #block-islandora-compound-object-compound-jail-display > div {
-  overflow: hidden; }
-body.compoundChild .footerContainer {
-  display: none; }
-body.compoundChild .manageMenu li {
-  border: 1px solid #cecece; }
-body.compoundChild .manageParent {
-  border: 1px solid #cecece !important;
-  margin: 0px;
-  padding: 0px;
-  border: 0px;
-  transform: skew(-20deg);
-  -webkit-transform: skew(-20deg);
-  -moz-transform: skew(-20deg);
-  -o-transform: skew(-20deg);
-  display: flex;
-  height: 23px;
-  margin-right: 5px;
-  background-color: #ffffff;
-  border-radius: 3px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 13px;
-  text-transform: uppercase;
-  letter-spacing: 0px;
-  box-sizing: border-box; }
-body.compoundChild .manageParent > div > a {
-  transform: skew(20deg);
-  color: #676767 !important;
-  padding: 0px 12px;
-  border: 0px !important;
-  background-color: transparent;
-  height: auto;
-  margin-right: 0px !important; }
 
 body.context-data .dataHeader {
   margin-bottom: 20px; }
@@ -6408,7 +6151,8 @@ body.multipleDaily .issueLevel .issue-container {
     .view-display-id-minigrid tr:nth-child(89) {
       border-radius: 0px 0px 0px 10px; } }
 .datastreamPage #block-islandora-compound-object-compound-jail-display {
-  height: auto !important; }
+  height: auto !important;
+  display: none; }
 
 /* area*/
 @media screen and (max-width: 1770px) {
@@ -6469,6 +6213,8 @@ body.multipleDaily .issueLevel .issue-container {
       margin-left: 0px;
       margin-top: 20px; }
 
+  .compoundChild span.breadcrumbDivider {
+    font-size: 11px !important; }
   .compoundChild .parentLink, .compoundChild .institutionSmall {
     font-size: 11px !important; }
   .compoundChild h1#window-title {
@@ -6982,30 +6728,23 @@ body.multipleDaily .issueLevel .issue-container {
   #shareToggle {
     margin-left: 0px !important; }
 
-  .metadataVertical::before {
-    content: 'Information';
-    position: absolute;
-    left: 0px;
-    top: -20px;
-    text-transform: uppercase;
-    font-size: 11px;
-    background-image: url("https://i.imgur.com/SVHgxtg.png");
-    padding-left: 25px;
-    background-position: 0px -2px;
-    background-size: 20px;
-    background-repeat: no-repeat; }
-
-  .metadataVertical > .region-inner {
-    border-top: 1px solid rgba(0, 0, 0, 0.26); }
+  .contentLabel.itemDesc, .tagsGlance {
+    display: none; }
 
   .metadataVertical {
     color: #676767;
     display: block;
     position: relative;
     margin-top: 40px; }
+    .metadataVertical .metadataContainer {
+      border-top: 1px solid rgba(0, 0, 0, 0.26); }
+    .metadataVertical .metadataContainer::before {
+      background-image: url("../images/info_dark.png") !important; }
+    .metadataVertical .metadataContainer::before {
+      color: #676767; }
     .metadataVertical .metadataContainer.compoundMetadata {
       padding-top: 20px; }
-    .metadataVertical .region-sidebar-first-inner .metadataContainer span.metadataValue {
+    .metadataVertical .region-sidebar-first-inner .metadataContainer div.metadataValue {
       color: #676767; }
 
   .institution-collection-list-item-count {
@@ -7346,6 +7085,10 @@ body.multipleDaily .issueLevel .issue-container {
     margin-top: 0px;
     position: relative;
     top: 0px; }
+    body.compoundChild .headerBreadcrumb span.breadcrumbDivider {
+      font-size: 11px !important;
+      margin-right: 6px;
+      margin-left: 4px; }
   body.compoundChild #region-content {
     margin-left: 0px !important; }
   body.compoundChild #region-sidebar-first {

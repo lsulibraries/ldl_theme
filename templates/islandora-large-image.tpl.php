@@ -21,6 +21,12 @@
  * @see theme_islandora_large_image()
  */
 ?>
+
+
+<script>
+document.body.className += ' ' + 'largeImage';
+</script>
+
 <div class="islandora-large-image-object islandora" vocab="http://schema.org/" prefix="dcterms: http://purl.org/dc/terms/" typeof="ImageObject">
   <div class="islandora-large-image-content-wrapper clearfix">
 
