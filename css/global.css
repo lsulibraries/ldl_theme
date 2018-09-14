@@ -3282,7 +3282,7 @@ div.islandora-pdf-object, div.islandora-large-image-object {
     display: none; }
 .compoundObject a#islandora-compound-next-link, .compoundObject a#islandora-compound-previous-link {
   height: 100%;
-  display: flex !important;
+  display: flex;
   justify-content: center;
   align-items: center;
   color: white;
@@ -3501,7 +3501,7 @@ div.islandora-pdf-object, div.islandora-large-image-object {
 .compoundObject .compoundCount {
   position: absolute;
   right: 20px;
-  top: -20px;
+  top: -38px;
   text-transform: uppercase;
   font-size: 11px;
   color: #676767; }
@@ -3563,7 +3563,7 @@ div.islandora-pdf-object, div.islandora-large-image-object {
   top: -20px;
   text-transform: uppercase;
   font-size: 11px;
-  background-image: url("https://i.imgur.com/SVHgxtg.png");
+  background-image: url("../images/info_dark.png");
   padding-left: 25px;
   background-position: 0px -2px;
   background-size: 20px;
@@ -4313,7 +4313,7 @@ body.bookViewer .parentMetadata::before, body.bookViewer .metadataContainer:not(
   top: -20px;
   text-transform: uppercase;
   font-size: 11px;
-  background-image: url("https://i.imgur.com/OnZTeYf.png");
+  background-image: url("../images/info_light.png");
   padding-left: 25px;
   background-position: 0px -2px;
   background-size: 20px;
@@ -5441,6 +5441,23 @@ body.compoundChildImage {
   background: white !important; }
 
 /*BEGIN test area*/
+.itemDesc::before {
+  position: absolute;
+  left: 3px;
+  top: 4px;
+  text-transform: uppercase;
+  font-size: 11px;
+  background-image: url(../images/tags_dark.png);
+  padding-left: 25px;
+  background-position: 0px -2px;
+  background-size: 15px;
+  background-repeat: no-repeat;
+  content: ' ';
+  height: 20px;
+  position: absolute;
+  width: 10px;
+  opacity: 0.7; }
+
 .manageParent {
   display: none; }
 
@@ -5473,7 +5490,7 @@ body.compoundChildImage {
   top: -20px;
   text-transform: uppercase;
   font-size: 11px;
-  background-image: url("https://i.imgur.com/OnZTeYf.png");
+  background-image: url("../images/info_light.png");
   padding-left: 25px;
   background-position: 0px -2px;
   background-size: 20px;
@@ -6196,6 +6213,8 @@ body.multipleDaily .issueLevel .issue-container {
       margin-left: 0px;
       margin-top: 20px; }
 
+  .compoundChild span.breadcrumbDivider {
+    font-size: 11px !important; }
   .compoundChild .parentLink, .compoundChild .institutionSmall {
     font-size: 11px !important; }
   .compoundChild h1#window-title {
@@ -6709,27 +6728,20 @@ body.multipleDaily .issueLevel .issue-container {
   #shareToggle {
     margin-left: 0px !important; }
 
-  .metadataVertical::before {
-    content: 'Information';
-    position: absolute;
-    left: 0px;
-    top: -20px;
-    text-transform: uppercase;
-    font-size: 11px;
-    background-image: url("https://i.imgur.com/SVHgxtg.png");
-    padding-left: 25px;
-    background-position: 0px -2px;
-    background-size: 20px;
-    background-repeat: no-repeat; }
-
-  .metadataVertical > .region-inner {
-    border-top: 1px solid rgba(0, 0, 0, 0.26); }
+  .contentLabel.itemDesc, .tagsGlance {
+    display: none; }
 
   .metadataVertical {
     color: #676767;
     display: block;
     position: relative;
     margin-top: 40px; }
+    .metadataVertical .metadataContainer {
+      border-top: 1px solid rgba(0, 0, 0, 0.26); }
+    .metadataVertical .metadataContainer::before {
+      background-image: url("../images/info_dark.png") !important; }
+    .metadataVertical .metadataContainer::before {
+      color: #676767; }
     .metadataVertical .metadataContainer.compoundMetadata {
       padding-top: 20px; }
     .metadataVertical .region-sidebar-first-inner .metadataContainer div.metadataValue {
@@ -7073,6 +7085,10 @@ body.multipleDaily .issueLevel .issue-container {
     margin-top: 0px;
     position: relative;
     top: 0px; }
+    body.compoundChild .headerBreadcrumb span.breadcrumbDivider {
+      font-size: 11px !important;
+      margin-right: 6px;
+      margin-left: 4px; }
   body.compoundChild #region-content {
     margin-left: 0px !important; }
   body.compoundChild #region-sidebar-first {
