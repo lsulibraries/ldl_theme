@@ -54,6 +54,27 @@
           }
           break;
         }
+
+        case ($('body').hasClass('pdf')) :{
+          itemTitle = $(".modsTitle").html(); // finds full title without truncation
+          thumbnailURL = $(".image-thumbnail img").prop('src');
+          $('body').addClass('largeImage');
+          if ($('.block-islandora-compound-object').length){
+            compoundChild_start();
+          }
+          itemHeader();
+          typeClass('image');
+          imageContainer();
+          moveMetadata();
+          actionToggles();
+          itemFooter();
+          imageModal();
+          if ($('.block-islandora-compound-object').length){
+            compoundChild_end();
+          }
+          break;
+        }
+
         case ((($('#book-viewer').length) || ($('.islandora-newspaper-issue-navigator').length)) && (!$('body').hasClass('audioPDF'))) :{
           $('body').addClass('bookViewer');
           if ($('.block-islandora-compound-object').length) {
@@ -104,8 +125,6 @@
           //$("body").addClass('compoundObject compoundItem');
           break;
         }
-
-
 
         case ($('body').hasClass('context-data')):{
           dataStarter();
@@ -225,7 +244,7 @@
       function itemHeader(){
         if (!$('body').hasClass('compoundParent')){
           $(".region-inner > div.tabs.clearfix").prependTo("#block-system-main");
-          $("<div class='item_header'/>").insertBefore(".itemContainer, .islandora-large-image-object, .bookContainer, .islandora-newspaper-object"); //creates header for image items
+          $("<div class='item_header'/>").insertBefore(".itemContainer, .islandora-pdf-object, .islandora-large-image-object, .bookContainer, .islandora-newspaper-object"); //creates header for image items
           thumbnailURL = $(".image-thumbnail img").prop('data-src');
           var sequenceText = $('span#islandora-compound-sequence-position').text();
           $('<div class="currentPart"></div>').html(sequenceText).appendTo('.headerBreadcrumb');
@@ -337,7 +356,7 @@
      }
 
       function imageContainer(){
-        $(".islandora-large-image-object, .islandora-newspaper-object").addClass("itemContainer imageContainer"); //adds label break
+        $(".islandora-large-image-object, .islandora-newspaper-object, .islandora-pdf-object").addClass("itemContainer imageContainer"); //adds label break
         $("<div class='labelContainer'/>").insertBefore(".imageContainer"); //adds label break
         $("<div class='contentLabel imageLabel'>Image Object</div>").appendTo(".labelContainer"); //adds label break
         $("<div class='imagePreview'/>").appendTo(".imageContainer"); //adds label break
@@ -609,8 +628,6 @@
           $("<div id='shareToggle' class='userSelect'><div class='iconSelect'></div><div class='textSelect'>share</div></div>").insertAfter("#block-system-main .infoToggle");
         }
         var testlength = ($('.manageMenu > ul > li').length)
-        console.log(testlength)
-
         if (($('.manageMenu > ul > li').length) < 2){
           $(".manageMenu").css("display", "none"); //kills extra space if manageMenu is not being used
         }
@@ -1090,7 +1107,7 @@ function monthClick(){
       }
       // end newspaper 2.0
 
-      if ( ($('body').hasClass('compoundObject')) || ($('body').hasClass('bookViewer')) || ($('body').hasClass('context-data')) || ($('body').hasClass('largeImage')) || ($('body').hasClass('newspaperSet'))){
+      if ( ($('body').hasClass('compoundObject')) || ($('body').hasClass('pdf')) || ($('body').hasClass('bookViewer')) || ($('body').hasClass('context-data')) || ($('body').hasClass('largeImage')) || ($('body').hasClass('newspaperSet'))){
       $('body').addClass('headerversiontwo');
       }
       if (navigator.appName == 'Microsoft Internet Explorer' ||  !!(navigator.userAgent.match(/Trident/) || navigator.userAgent.match(/rv:11/)) || (typeof $.browser !== "undefined" && $.browser.msie == 1))
