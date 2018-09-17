@@ -58,7 +58,6 @@
         case ($('body').hasClass('pdf')) :{
           itemTitle = $(".modsTitle").html(); // finds full title without truncation
           thumbnailURL = $(".image-thumbnail img").prop('src');
-          $('body').addClass('largeImage');
           if ($('.block-islandora-compound-object').length){
             compoundChild_start();
           }

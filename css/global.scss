@@ -6270,11 +6270,11 @@ body.newspaperSet #page{
 }
 
 //begin largeImage 2.0
-body.largeImage{
+body.largeImage, body.pdf{
   background: #000000;
 }
 
-body.largeImage, body.newspaperSet{
+body.largeImage, body.pdf, body.newspaperSet{
 
 
 .firstMonthCover:not(.firstYearCover){
@@ -9242,7 +9242,7 @@ button.BRicon.full_text.cboxElement{
   display: none !important;
 }
 
-body.largeImage{
+body.largeImage, body.pdf{
 
 .imageToolbar{
   width: 100vw;
