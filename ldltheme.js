@@ -1398,7 +1398,7 @@ if ($('body').hasClass('pdf')){
           $("#zone-content-wrapper").addClass("noClick"); //somehow not working
           window.scrollTo(0,0); //scrolls to top
           if ($(window).width() < 900) {
-            $('html').addClass('fixed');
+            //$('html').addClass('fixed');
           }
       }
       // When the user clicks on <span> (x), close the modal

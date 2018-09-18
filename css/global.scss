@@ -9352,11 +9352,12 @@ body.largeImage, body.pdf{
 
 }
 
-body.headerversiontwo  .dragonContainer{
+body.headerversiontwo  .dragonContainer, body.headerversiontwo .islandora-pdf-content{
 height: 100vh !important;
 border-radius: 0px;
 width: 100vw !important;
 }
+
 
 #bookTitle{
   font-size: 30px !important;
@@ -9463,7 +9464,14 @@ margin-top: 40px;
 
 iframe.pdf {
     width: 100%;
-    height: 60vh;
+    height: 100vh;
+}
+
+body.headerversiontwo .islandora-pdf-content-wrapper div#islandora-pdfjs {
+    overflow: hidden;
+    position: relative;
+    height: calc(100vh - 31px);
+    width: calc(100vw - 0px);
 }
 
 div.region-inner.region-header-first-inner, {
