@@ -65,7 +65,8 @@ ul {
   list-style: none; }
 
 iframe.pdf {
-  width: 100%; }
+  width: 100%;
+  height: 100%; }
 
 body {
   background-color: #f0f0f0;
@@ -2880,7 +2881,7 @@ p.about_collection::before {
 #views-exposed-form-islandora-collection-landing-pages-page .views-exposed-widgets {
   display: none; }
 
-.islandora-pdf-content, .islandora-large-image-content {
+.islandora-large-image-content {
   background-color: #FFF;
   background-image: url(../images/BJtKhwV.png);
   border: 1px solid #ccc;
@@ -3820,6 +3821,15 @@ body.headerversiontwo {
   body.headerversiontwo .imageDetailsActive {
     transform: translateX(0px);
     transition-duration: 1s; }
+  body.headerversiontwo .islandora-pdf-content {
+    padding: 0px;
+    width: 80vw !important;
+    margin: 0 auto !important;
+    height: 80vh !important;
+    border-radius: 20px;
+    background-color: transparent;
+    border: 1px solid #616161 !important;
+    overflow: hidden; }
   body.headerversiontwo .dragonContainer {
     width: 80vw !important;
     margin: 0 auto !important;
@@ -3827,6 +3837,13 @@ body.headerversiontwo {
     border: 1px solid #616161 !important;
     height: 80vh !important;
     border-radius: 0px 0px 20px 20px; }
+  body.headerversiontwo .islandora-pdf-content-wrapper {
+    width: 100%; }
+    body.headerversiontwo .islandora-pdf-content-wrapper div#islandora-pdfjs {
+      overflow: hidden;
+      position: relative;
+      height: calc(80vh - 31px);
+      width: calc(80vw + 1px); }
   body.headerversiontwo .detailsContainer {
     width: 283px;
     padding: 40px;
@@ -3835,6 +3852,9 @@ body.headerversiontwo {
     height: calc(80vh - 80px); }
     body.headerversiontwo .detailsContainer .nano-pane {
       z-index: 222; }
+  body.headerversiontwo #islandora-pdfjs > .detailsContainer {
+    position: absolute;
+    top: 0px; }
   body.headerversiontwo .detailsContainerActive {
     transform: translateX(0px);
     transition-duration: 1s; }
@@ -5441,6 +5461,9 @@ body.compoundChildImage {
   background: white !important; }
 
 /*BEGIN test area*/
+body.pdf #window-title {
+  display: none; }
+
 .itemDesc::before {
   position: absolute;
   left: 3px;
@@ -6650,7 +6673,7 @@ body.multipleDaily .issueLevel .issue-container {
   body.largeImage .imageTitle, body.pdf .imageTitle {
     font-size: 30px !important;
     line-height: 35px !important; }
-  body.largeImage .dragonContainer .detailsContainer, body.pdf .dragonContainer .detailsContainer {
+  body.largeImage .dragonContainer .detailsContainer, body.largeImage .islandora-pdf-content .detailsContainer, body.pdf .dragonContainer .detailsContainer, body.pdf .islandora-pdf-content .detailsContainer {
     display: none; }
   body.largeImage .modalDetails, body.pdf .modalDetails {
     left: 5px !important;

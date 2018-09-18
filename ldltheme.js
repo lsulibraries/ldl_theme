@@ -699,7 +699,7 @@
         $("<span class='modalExit5'><i class='fa fa-times'></i> Exit</span>").insertBefore("#islandora-pdfjs");
         $("<span class='modalDetails'><i class='fa fa-toggle-off'></i> Toggle Details</span>").insertAfter(".modalExit5");
         $(".islandora-pdf-content-wrapper").insertBefore(".mobileMenu");
-        $("<div class='detailsContainer nano'/>").insertAfter("#islandora-pdfjs");
+        $("<div class='detailsContainer nano'/>").insertAfter("iframe.pdf");
         $("<div class='imageDetails nano-content'/>").appendTo(".detailsContainer");
         $(".metadataSidebar .metadataContainer").clone().appendTo(".imageDetails");
           $('.modalDetails').click(function(){
@@ -712,7 +712,7 @@
           }, function() {
           $('.modalDetails').html('<i class="fa fa-toggle-off"></i>Toggle Details');
         });
-        $('#islandora-openseadragon > span').wrapAll('<div class="imageToolbar"/>'); // wraps collectionPage title
+        $('.islandora-pdf-content > span').wrapAll('<div class="imageToolbar"/>'); // wraps collectionPage title
         $("<div class='innerimageTitle'/>").text(itemTitle).insertAfter('span.modalExit5'); // undoes default title truncation
       }      
 
@@ -727,7 +727,7 @@
         sr.reveal('.islandora-solr-search-result, .landingMobile, .globalStats', { duration: 200, delay: 100,  easing: 'linear', scale: 1, }, 20); //landingMessage normally here; conflicts with mobile landingMessage
         sr.reveal('.inst_wrapper', { duration: 500, delay: 0, opacity: 0.1, easing: 'linear', scale: 0.9, viewFactor: 1, }); //landingMessage normally here; conflicts with mobile landingMessage
         sr.reveal('.landingHero', { duration: 200, delay: 0,  easing: 'linear', scale: 1, viewFactor: 0.01,}, 20);
-        sr.reveal('.solr-fields, .islandora-solr-sort li, .page-browse-collections tr, .islandora-pdf-content', { duration: 200, delay: 350,  easing: 'linear', scale: 1, viewFactor: 1, }, 20);
+        sr.reveal('.solr-fields, .islandora-solr-sort li, .page-browse-collections tr', { duration: 200, delay: 350,  easing: 'linear', scale: 1, viewFactor: 1, }, 20);
         sr.reveal('.solr-thumb img', { duration: 200, delay: 850,  easing: 'linear', scale: 1, viewFactor: 0.01, }, 20);
         sr.reveal('.islandora-basic-collection-grid dl', { duration: 100, delay: 200,  easing: 'ease-in', }, 20);
         sr.reveal('.alertBox_container', { duration: 100, delay: 0,  easing: 'ease-in', opacity: 1 }, 20);
@@ -1368,7 +1368,7 @@ function monthClick(){
       //escape key closes modals
       $(document).keyup(function(e) {
            if (e.keyCode == 27) { // escape key maps to keycode `27`
-          $(".bookContainer, #block-islandora-solr-advanced, #block-views-meeting-minutes-block-1, #block-block-14, body:not(.compoundChildImage) #islandora-openseadragon").css("display","none");
+          $(".bookContainer, #block-islandora-solr-advanced, #block-views-meeting-minutes-block-1, #block-block-14, body:not(.compoundChildImage) #islandora-openseadragon, .islandora-pdf-content-wrapper").css("display","none");
           $(".page").removeClass('blurFilter');
           $(".parallax-slider").removeClass('darkFilter');
           $("button").removeClass('is-active');
