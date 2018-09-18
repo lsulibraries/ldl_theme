@@ -5253,7 +5253,7 @@ body.largeImage .secondStage .activeIndicator, body.pdf .secondStage .activeIndi
   transform: scale3d(0.66, 1, 1); }
 body.largeImage .thirdStage .activeIndicator, body.pdf .thirdStage .activeIndicator, body.newspaperSet .thirdStage .activeIndicator {
   transform: scale3d(1, 1, 1); }
-body.largeImage #islandora-openseadragon, body.pdf #islandora-openseadragon, body.newspaperSet #islandora-openseadragon {
+body.largeImage #islandora-openseadragon, body.largeImage .islandora-pdf-content-wrapper, body.pdf #islandora-openseadragon, body.pdf .islandora-pdf-content-wrapper, body.newspaperSet #islandora-openseadragon, body.newspaperSet .islandora-pdf-content-wrapper {
   display: none;
   justify-content: center;
   align-items: center;
