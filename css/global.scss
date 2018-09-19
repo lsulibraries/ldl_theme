@@ -4137,6 +4137,7 @@ background:none!important;
 }
 
 
+
 .backgroundDiv {
     position: absolute;
     width: 120%;
@@ -4153,6 +4154,8 @@ background:none!important;
     top: -10px;
     background-color: black;
 }
+
+
 
 .contentLabel{
 color: #676767;
@@ -6300,11 +6303,11 @@ body.newspaperSet #page{
 }
 
 //begin largeImage 2.0
-body.largeImage, body.pdf{
+body.largeImage, body.pdf, body.video{
   background: #000000;
 }
 
-body.largeImage, body.pdf, body.newspaperSet{
+body.largeImage, body.pdf, body.video, body.newspaperSet{
 
 
 .firstMonthCover:not(.firstYearCover){
@@ -7562,6 +7565,43 @@ body.compoundChildImage {
 //end error messages
 
 /*BEGIN test area*/
+
+body.video{
+  .islandora-video-object.islandora.itemContainer.imageContainer {
+    flex-direction: column;
+  }
+
+  .backgroundDiv{
+    background-position: -5vw 60%;
+  }
+
+.image-thumbnailData {
+    padding-top: 20px;
+    max-width: none;
+    border-left: 0px;
+    margin-left: 0px;    
+    padding-left: 0px;    
+}
+
+  .imagePreview{
+    display: none;
+  } 
+
+.islandora-video-content {
+    width: 100%;
+    max-width: none !important;
+    margin: 0 auto;
+}
+
+.islandora_videojs-dimensions {
+    width: 100%;
+    height: 500px;
+}
+
+.islandora-video-content-wrapper.clearfix {
+    width: 100%;
+}
+}
 
 body.pdf{
   #window-title{
