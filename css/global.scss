@@ -6303,11 +6303,11 @@ body.newspaperSet #page{
 }
 
 //begin largeImage 2.0
-body.largeImage, body.pdf, body.video{
+body.largeImage, body.pdf, body.video, body.audio{
   background: #000000;
 }
 
-body.largeImage, body.pdf, body.video, body.newspaperSet{
+body.largeImage, body.pdf, body.video, body.newspaperSet, body.audio{
 
 
 .firstMonthCover:not(.firstYearCover){
@@ -7566,8 +7566,8 @@ body.compoundChildImage {
 
 /*BEGIN test area*/
 
-body.video{
-  .islandora-video-object.islandora.itemContainer.imageContainer {
+body.video, body.audio{
+  .islandora-video-object.islandora.itemContainer.imageContainer, .islandora-audio-object.islandora.itemContainer.imageContainer {
     flex-direction: column;
   }
 
@@ -7587,7 +7587,7 @@ body.video{
     display: none;
   } 
 
-.islandora-video-content {
+.islandora-video-content, .islandora-audio-content {
     width: 100%;
     max-width: none !important;
     margin: 0 auto;
@@ -7598,10 +7598,24 @@ body.video{
     height: 500px;
 }
 
-.islandora-video-content-wrapper.clearfix {
+
+.islandora-audio-content-wrapper.clearfix, .islandora-video-content-wrapper.clearfix {
     width: 100%;
 }
 }
+
+body.audio {
+  .islandora_videojs-dimensions {
+    width: 100%;
+    height: 30px;
+}
+
+#window-title{
+  display: none;
+}
+
+}
+
 
 body.pdf{
   #window-title{
@@ -8062,7 +8076,7 @@ section#block-islandora-solr-sort .item-list {
 }
 
 //Begin oral history styles
-.audioPDF{
+.audioPDF, .audio{
 
 div#block-islandora-compound-object-compound-jail-display {
     height: auto;
@@ -8141,7 +8155,8 @@ table {
       padding: 0px;
       border: 0px;
     background: #242021;
-            border-radius: 0px;
+    border-radius: 8px;
+    overflow: hidden;
     }
 
     div#islandora-pdfjs {
@@ -8783,7 +8798,7 @@ margin-bottom: 20px;
 }
 
 
-.audioPDF{
+.audioPDF, .audio{
   #block-system-main{
     table{
       border: 0px;
@@ -9583,7 +9598,7 @@ html.mobileMenuActive, body.mobileMenuActive{
   }
 
 
-.audioPDF{
+.audioPDF, .audio{
 #block-system-main{
   table{
     border-color: white;
