@@ -76,7 +76,7 @@
 
         case ($('body').hasClass('audio')) :{
           itemTitle = $(".modsTitle").html(); // finds full title without truncation
-          thumbnailURL = $(".image-thumbnail img").prop('src');
+          var thumbnailURL = 'https://i.imgur.com/Sjj2rdj.jpg'
           if ($('.block-islandora-compound-object').length){
             compoundChild_start();
           }
@@ -90,6 +90,16 @@
           if ($('.block-islandora-compound-object').length){
             compoundChild_end();
           }
+
+          $('.backgroundDiv').vide('https://www.lib.lsu.edu/sites/all/files/oralhistory/presentations/oralhistory/loop/homeH264.mp4',{
+              volume: 0,
+              playbackRate: 1,
+              muted: true,
+              loop: true,
+              autoplay: true,
+
+          });
+
           break;
         }        
 
@@ -399,7 +409,7 @@
         if ($('body').hasClass('pdf')){
           $("<div class='contentLabel imageLabel'>PDF Object</div>").appendTo(".labelContainer"); //adds label break
         }
-        if ($('body').hasClass('audio')){
+        else if ($('body').hasClass('audio')){
           $("<div class='contentLabel imageLabel'>Audio Object</div>").appendTo(".labelContainer"); //adds label break
         }        
         else{
@@ -561,7 +571,7 @@
         $("#region-sidebar-first").addClass('nano');
         $('.nano > .region-inner').wrapAll('<div class="metadataSidebar"/>');
         $(".metadataSidebar").addClass('nano-content'); //adds nanobar
-        $(".islandora-newspaper-metadata, .islandora-newspaper-issue-metadata, .islandora-newspaper-page-metadata").remove();  //removes empty old div
+        $(".islandora-newspaper-metadata, .islandora-newspaper-issue-metadata, .islandora-newspaper-page-metadata, .islandora-audio-metadata").remove();  //removes empty old div
         $(".metadataSidebar .sidebarLabel").remove(); //removes refine results text which bleeds over from search results
         if (!$(".metadataContainer .metadataRow").length){ //hide details toggle if metadata is empty
           $(".infoToggle").hide();

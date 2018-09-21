@@ -4008,19 +4008,27 @@ body.headerversiontwo {
     color: #676767;
     max-width: none !important; }
   body.headerversiontwo .backCollection {
-    color: white; }
-  body.headerversiontwo .backContainer {
+    color: white;
     display: flex !important;
     justify-content: center;
     align-items: center;
     background: #327BB3;
-    height: 80px;
-    margin-top: 0px;
-    box-sizing: border-box;
-    border-top: 0px;
+    height: 60px;
+    width: calc(100% + 20px);
     max-width: 1200px !important;
+    border-top: 0px;
+    box-sizing: content-box;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 0px;
+    border-radius: 8px; }
+  body.headerversiontwo .backContainer {
+    display: flex !important;
+    justify-content: center;
+    align-items: flex-start;
+    height: 80px;
     margin: 0px auto;
-    border: 20px solid white;
+    margin-top: 0px;
     border-top: 0px;
     box-sizing: content-box; }
     body.headerversiontwo .backContainer a {
@@ -5483,11 +5491,35 @@ body.video .islandora_videojs-dimensions, body.audio .islandora_videojs-dimensio
 body.video .islandora-audio-content-wrapper.clearfix, body.video .islandora-video-content-wrapper.clearfix, body.audio .islandora-audio-content-wrapper.clearfix, body.audio .islandora-video-content-wrapper.clearfix {
   width: 100%; }
 
+body.audio .footerContainer {
+  border-top: 1px solid #343435; }
+body.audio .metadataVertical div.metadataValue, body.audio div.metadataLabel {
+  color: #ABABAB !important; }
+body.audio .descriptionText {
+  color: #ABABAB;
+  background-color: transparent; }
+body.audio .tagsGlance .modsSubject {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.16); }
+body.audio .tagsGlance a.modsSubject {
+  color: #ABABAB; }
+body.audio .image-thumbnailData {
+  color: #ABABAB; }
+body.audio .backgroundDiv {
+  filter: blur(0px) brightness(0.7) contrast(1); }
 body.audio .islandora_videojs-dimensions {
   width: 100%;
   height: 30px; }
 body.audio #window-title {
   display: none; }
+body.audio #block-system-main {
+  background: #242021; }
+body.audio .contentLabel {
+  background: #242021;
+  color: white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16); }
+body.audio .itemDesc::before {
+  background-image: url(../images/tags_light.png); }
 
 body.pdf #window-title {
   display: none; }
@@ -5862,7 +5894,6 @@ section#block-islandora-solr-sort .item-list {
     display: flex;
     background-color: transparent;
     bottom: 40%;
-    padding: 0px 137px;
     opacity: 1 !important; }
   .audioPDF .islandora-audio-object .video-js .vjs-big-play-button, .audioPDF .islandora-audio-object .video-js #islandora_videojs_html5_api, .audioPDF .islandora-audio-object .video-js .vjs-poster, .audio .islandora-audio-object .video-js .vjs-big-play-button, .audio .islandora-audio-object .video-js #islandora_videojs_html5_api, .audio .islandora-audio-object .video-js .vjs-poster {
     display: none; }
@@ -6688,44 +6719,44 @@ body.multipleDaily .issueLevel .issue-container {
   button.BRicon.full_text.cboxElement {
     display: none !important; }
 
-  body.largeImage .imageToolbar, body.pdf .imageToolbar {
+  body.largeImage .imageToolbar, body.pdf .imageToolbar, body.audio .imageToolbar {
     width: 100vw;
     border-radius: 0px; }
-    body.largeImage .imageToolbar span, body.pdf .imageToolbar span {
+    body.largeImage .imageToolbar span, body.pdf .imageToolbar span, body.audio .imageToolbar span {
       border-radius: 0px; }
-  body.largeImage .innerimageTitle, body.pdf .innerimageTitle {
+  body.largeImage .innerimageTitle, body.pdf .innerimageTitle, body.audio .innerimageTitle {
     font-size: 11px;
     line-height: 11px;
     display: none; }
-  body.largeImage .modalExit5, body.pdf .modalExit5 {
+  body.largeImage .modalExit5, body.pdf .modalExit5, body.audio .modalExit5 {
     width: 100%; }
-  body.largeImage .imageTitle, body.pdf .imageTitle {
+  body.largeImage .imageTitle, body.pdf .imageTitle, body.audio .imageTitle {
     font-size: 30px !important;
     line-height: 35px !important; }
-  body.largeImage .dragonContainer .detailsContainer, body.largeImage .islandora-pdf-content .detailsContainer, body.pdf .dragonContainer .detailsContainer, body.pdf .islandora-pdf-content .detailsContainer {
+  body.largeImage .dragonContainer .detailsContainer, body.largeImage .islandora-pdf-content .detailsContainer, body.pdf .dragonContainer .detailsContainer, body.pdf .islandora-pdf-content .detailsContainer, body.audio .dragonContainer .detailsContainer, body.audio .islandora-pdf-content .detailsContainer {
     display: none; }
-  body.largeImage .modalDetails, body.pdf .modalDetails {
+  body.largeImage .modalDetails, body.pdf .modalDetails, body.audio .modalDetails {
     left: 5px !important;
     top: 5px !important;
     display: none !important; }
-  body.largeImage .detailsContainer, body.pdf .detailsContainer {
+  body.largeImage .detailsContainer, body.pdf .detailsContainer, body.audio .detailsContainer {
     z-index: 9999; }
-  body.largeImage .detailsContainer, body.largeImage .imageDetails, body.pdf .detailsContainer, body.pdf .imageDetails {
+  body.largeImage .detailsContainer, body.largeImage .imageDetails, body.pdf .detailsContainer, body.pdf .imageDetails, body.audio .detailsContainer, body.audio .imageDetails {
     width: auto !important;
     background: black;
     top: 40px;
     height: calc(100vh - 40px);
     box-sizing: border-box; }
-  body.largeImage .imageDetails, body.pdf .imageDetails {
+  body.largeImage .imageDetails, body.pdf .imageDetails, body.audio .imageDetails {
     padding: 20px; }
-  body.largeImage .downloadSelect, body.pdf .downloadSelect {
+  body.largeImage .downloadSelect, body.pdf .downloadSelect, body.audio .downloadSelect {
     margin-left: 0px !important;
     margin-right: 5px !important; }
-  body.largeImage .tagsGlance, body.largeImage .bookDesc, body.largeImage .infoToggle, body.pdf .tagsGlance, body.pdf .bookDesc, body.pdf .infoToggle {
+  body.largeImage .tagsGlance, body.largeImage .bookDesc, body.largeImage .infoToggle, body.pdf .tagsGlance, body.pdf .bookDesc, body.pdf .infoToggle, body.audio .tagsGlance, body.audio .bookDesc, body.audio .infoToggle {
     display: none; }
-  body.largeImage .islandora-large-image-object.islandora.imageContainer, body.pdf .islandora-large-image-object.islandora.imageContainer {
+  body.largeImage .islandora-large-image-object.islandora.imageContainer, body.pdf .islandora-large-image-object.islandora.imageContainer, body.audio .islandora-large-image-object.islandora.imageContainer {
     flex-direction: column; }
-  body.largeImage .image-thumbnailData, body.pdf .image-thumbnailData {
+  body.largeImage .image-thumbnailData, body.pdf .image-thumbnailData, body.audio .image-thumbnailData {
     margin-left: 0px;
     margin-top: 10px;
     border-left: 0px;
@@ -7092,6 +7123,15 @@ body.multipleDaily .issueLevel .issue-container {
     justify-content: center;
     padding: 10px;
     margin-bottom: 0px; }
+
+  body.audio .metadataVertical div.metadataValue, body.audio .metadataVertical div.metadataLabel {
+    color: #ABABAB !important; }
+  body.audio .metadataVertical .metadataContainer::before {
+    color: #ABABAB; }
+  body.audio .metadataVertical .metadataContainer {
+    border-top: 1px solid rgba(255, 255, 255, 0.16); }
+  body.audio .metadataVertical .metadataContainer::before {
+    background-image: url(../images/info_light.png) !important; }
 
   .compoundObject .islandora-large-image-metadata {
     display: none; }

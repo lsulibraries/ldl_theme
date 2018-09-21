@@ -4964,6 +4964,8 @@ width: 100%;
   }
 }
 
+
+
 .blurFilter {
   -webkit-filter: blur(5px) brightness(0.2);
   -moz-filter: blur(5px) brightness(0.2);
@@ -5302,21 +5304,29 @@ width: 100%;
 
 .backCollection {
     color: white;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    background: #327BB3;
+    height: 60px;
+    width: calc(100% + 20px);
+    max-width: 1200px !important;
+    border-top: 0px;
+    box-sizing: content-box;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 0px;    
+    border-radius: 8px;
 }
 
 .backContainer {
     display: flex !important;
     justify-content: center;
-    align-items: center;
-    background: $LDLBlue;
+    align-items: flex-start;
     height: 80px;
-    margin-top: 0px;
-    box-sizing: border-box;
-    border-top: 0px;
-    max-width: 1200px !important;
     margin: 0px auto;
-    border: 20px solid white;
-    border-top:0px;
+    margin-top: 0px;    
+    border-top: 0px;
     box-sizing: content-box;
     a{
       color: white;
@@ -7605,16 +7615,62 @@ body.video, body.audio{
 }
 
 body.audio {
+
+.footerContainer{
+      border-top: 1px solid #343435;
+}
+
+.metadataVertical div.metadataValue, div.metadataLabel {
+    color: #ABABAB !important;
+}
+
+.descriptionText {
+    color: #ABABAB;
+    background-color: transparent;
+}
+
+.tagsGlance .modsSubject {
+    background-color: transparent;
+    border: 1px solid $lightTransparent;
+}
+
+.tagsGlance a.modsSubject {
+  color: #ABABAB;    
+}
+
+.image-thumbnailData{
+  color: #ABABAB;
+}
+
+.backgroundDiv{
+      filter: blur(0px) brightness(0.7) contrast(1);
+}  
   .islandora_videojs-dimensions {
     width: 100%;
     height: 30px;
+  }
+
+  #window-title{
+    display: none;
+  }
+
+#block-system-main {
+    background: #242021;
 }
 
-#window-title{
-  display: none;
+
+.contentLabel {
+    background: #242021;
+    color: white;
+    border-bottom: 1px solid $lightTransparent;
 }
 
+.itemDesc::before {
+    background-image: url(../images/tags_light.png);
+  }
 }
+
+
 
 
 body.pdf{
@@ -8142,7 +8198,7 @@ table {
         @include flexbox;
         background-color: transparent;
         bottom: 40%;
-        padding: 0px 137px;
+        //padding: 0px 137px;
       opacity: 1 !important;
       }
       .vjs-big-play-button, #islandora_videojs_html5_api, .vjs-poster {
@@ -9333,7 +9389,7 @@ button.BRicon.full_text.cboxElement{
   display: none !important;
 }
 
-body.largeImage, body.pdf{
+body.largeImage, body.pdf, body.audio{
 
 .imageToolbar{
   width: 100vw;
@@ -9882,6 +9938,26 @@ border: 1px solid rgba(255, 255, 255, 0.33);
       margin-bottom: 0px;
     }
 //compound styles mobile
+
+body.audio {
+  .metadataVertical div.metadataValue, .metadataVertical div.metadataLabel {
+      color: #ABABAB !important;
+  }
+
+.metadataVertical .metadataContainer::before {
+    color: #ABABAB;
+}
+
+.metadataVertical .metadataContainer {
+    border-top: 1px solid $lightTransparent;
+}
+
+.metadataVertical .metadataContainer::before {
+    background-image: url(../images/info_light.png) !important;
+}
+
+}
+
 .compoundObject {
 
 .islandora-large-image-metadata{
