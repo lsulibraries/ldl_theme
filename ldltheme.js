@@ -76,7 +76,7 @@
 
         case ($('body').hasClass('audio')) :{
           itemTitle = $(".modsTitle").html(); // finds full title without truncation
-          var thumbnailURL = 'https://i.imgur.com/Sjj2rdj.jpg'
+          thumbnailURL = $(".image-thumbnail img").prop('src');
           if ($('.block-islandora-compound-object').length){
             compoundChild_start();
           }
@@ -91,14 +91,7 @@
             compoundChild_end();
           }
 
-          $('.backgroundDiv').vide('https://www.lib.lsu.edu/sites/all/files/oralhistory/presentations/oralhistory/loop/homeH264.mp4',{
-              volume: 0,
-              playbackRate: 1,
-              muted: true,
-              loop: true,
-              autoplay: true,
 
-          });
 
           break;
         }        
