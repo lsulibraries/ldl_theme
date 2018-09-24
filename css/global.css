@@ -5470,6 +5470,32 @@ body.compoundChildImage {
   background: white !important; }
 
 /*BEGIN test area*/
+.pdfLabel::before {
+  background-image: url(../images/document_dark.png);
+  background-repeat: no-repeat;
+  content: '';
+  background-size: 15px;
+  background-position: center;
+  width: 20px;
+  height: 15px;
+  position: absolute;
+  left: 0px;
+  bottom: 4px;
+  opacity: 0.7; }
+
+.audioLabel::before {
+  background-image: url("../images/volume_light.png");
+  background-repeat: no-repeat;
+  content: '';
+  background-size: 15px;
+  background-position: center;
+  width: 20px;
+  height: 10px;
+  position: absolute;
+  left: 0px;
+  bottom: 5px;
+  opacity: 0.7; }
+
 body.video .islandora-video-object.islandora.itemContainer.imageContainer, body.video .islandora-audio-object.islandora.itemContainer.imageContainer, body.audio .islandora-video-object.islandora.itemContainer.imageContainer, body.audio .islandora-audio-object.islandora.itemContainer.imageContainer {
   flex-direction: column; }
 body.video .backgroundDiv, body.audio .backgroundDiv {

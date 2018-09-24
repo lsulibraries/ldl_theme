@@ -400,10 +400,10 @@
         $(".islandora-large-image-object, .islandora-newspaper-object, .islandora-audio-object, .islandora-pdf-object, .islandora-video-object").addClass("itemContainer imageContainer"); //adds label break
         $("<div class='labelContainer'/>").insertBefore(".imageContainer"); //adds label break
         if ($('body').hasClass('pdf')){
-          $("<div class='contentLabel imageLabel'>PDF Object</div>").appendTo(".labelContainer"); //adds label break
+          $("<div class='contentLabel pdfLabel'>PDF Object</div>").appendTo(".labelContainer"); //adds label break
         }
         else if ($('body').hasClass('audio')){
-          $("<div class='contentLabel imageLabel'>Audio Object</div>").appendTo(".labelContainer"); //adds label break
+          $("<div class='contentLabel audioLabel'>Audio Object</div>").appendTo(".labelContainer"); //adds label break
         }        
         else{
           $("<div class='contentLabel imageLabel'>Image Object</div>").appendTo(".labelContainer"); //adds label break        
