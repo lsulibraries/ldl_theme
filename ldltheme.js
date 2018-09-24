@@ -94,7 +94,7 @@
 
 
           break;
-        }        
+        }
 
 
         case ($('body').hasClass('video')) :{
@@ -114,7 +114,7 @@
             compoundChild_end();
           }
           break;
-        }        
+        }
 
         case ((($('#book-viewer').length) || ($('.islandora-newspaper-issue-navigator').length)) && (!$('body').hasClass('audioPDF'))) :{
           $('body').addClass('bookViewer');
@@ -134,6 +134,7 @@
           bookContainer();
           actionToggles();
           bookFooter();
+
           if (($('.book-thumbnail').length) && ($('span#islandora-compound-sequence-position').length)) {
             compoundChild_end();
           }
@@ -279,7 +280,6 @@
         //$('.compoundMetadata > .modsTitle').appendTo('.itemTitle'); adds compound title to item title
         $('.manageMenu').insertBefore('#shareToggle');
        $('.block-compound-jail-display').remove();
-
       }
 
       function itemHeader(){
@@ -404,13 +404,13 @@
         }
         else if ($('body').hasClass('audio')){
           $("<div class='contentLabel audioLabel'>Audio Object</div>").appendTo(".labelContainer"); //adds label break
-        }    
+        }
         else if ($('body').hasClass('video')){
           $("<div class='contentLabel videoLabel'>Video Object</div>").appendTo(".labelContainer"); //adds label break
-        }  
+        }
         else{
-          $("<div class='contentLabel imageLabel'>Image Object</div>").appendTo(".labelContainer"); //adds label break        
-        }        
+          $("<div class='contentLabel imageLabel'>Image Object</div>").appendTo(".labelContainer"); //adds label break
+        }
         $("<div class='imagePreview'/>").appendTo(".imageContainer"); //adds label break
         $(".image-thumbnail").appendTo(".imagePreview");
         $("<div class='image-thumbnailData'/>").insertAfter(".imagePreview");
@@ -517,11 +517,8 @@
           $('.bookDetails').toggleClass('active');
         });
         $("<div class='bookSidebar'><div class='bookMetaContainer'></div></div>").appendTo("#BookReader"); //sets double-bagged container
-
         $(".metadataSidebar .metadataContainer").clone().appendTo(".bookMetaContainer");
-        //$(".itemMetadata").clone().appendTo(".bookMetaContainer");
 
-        //$("#book-viewer > .metadataContainer ").clone().prop({id:"bookMeta2", class:"metadataContainer compoundMetadata"}).appendTo(".region-sidebar-first-inner"); //fills container
         //fills container
           $(".bookMetaContainer").addClass("nano-content");
         $(".bookSidebar").addClass("nano");
@@ -762,7 +759,7 @@
         });
         $('.islandora-pdf-content > span').wrapAll('<div class="imageToolbar"/>'); // wraps collectionPage title
         $("<div class='innerimageTitle'/>").text(itemTitle).insertAfter('span.modalExit5'); // undoes default title truncation
-      }      
+      }
 
       $('.instStats').masonry({
         itemSelector: '.inst_wrapper'
@@ -1432,7 +1429,7 @@ if ($('body').hasClass('pdf')){
       }
       else{
               var modal5 = document.getElementById('islandora-openseadragon');
-            }  
+            }
       // Get the button that opens the modal
       var btn5 = document.getElementsByClassName("imagePreview")[0];
       // Get the <span> element that closes the modal
@@ -1579,7 +1576,7 @@ if ($('body').hasClass('pdf')){
                   var c2 = compound_content.substr(0, compound_showChar);
                   var h2 = compound_content.substr(compound_showChar, compound_content.length - compound_showChar);
                   var html2 = c2 + compound_ellipsestext;
-                  $(this).text(html2);
+                  $(this).html(html2);
               }
 
           });
@@ -1594,8 +1591,8 @@ if ($('body').hasClass('pdf')){
               if(content.length > showChar) {
                   var c = content.substr(0, showChar);
                   var h = content.substr(showChar, content.length - showChar);
-                  var html = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
-                  $(this).text(html);
+                  var html1 = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
+                  $(this).html(html1);
               }
           });
           $(".morelink").click(function(){

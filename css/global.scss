@@ -5037,7 +5037,7 @@ transition-duration: 1s;
     width: 80vw !important;
     margin: 0 auto !important;
     height: 80vh !important;
-    border-radius: 20px;  
+    border-radius: 20px;
 background-color: transparent;
     border: 1px solid #616161 !important;
     overflow: hidden;
@@ -5057,8 +5057,8 @@ background-color: transparent;
     div#islandora-pdfjs {
         overflow: hidden;
         position: relative;
-    height: calc(80vh - 31px);     
-    width: calc(80vw + 1px);       
+    height: calc(80vh - 31px);
+    width: calc(80vw + 1px);
     }
 
 }
@@ -5300,7 +5300,7 @@ width: 100%;
     line-height: normal;
     border: 1px solid rgba(0,0,0,0.26);
     letter-spacing: 1px;
-    border-radius: 3px;    
+    border-radius: 3px;
   }
 
 .tagsGlance a.modsSubject {
@@ -5322,7 +5322,7 @@ width: 100%;
     box-sizing: content-box;
     margin-left: 20px;
     margin-right: 20px;
-    margin-top: 0px;    
+    margin-top: 0px;
     border-radius: 8px;
 }
 
@@ -5332,7 +5332,7 @@ width: 100%;
     align-items: flex-start;
     height: 80px;
     margin: 0px auto;
-    margin-top: 0px;    
+    margin-top: 0px;
     border-top: 0px;
     box-sizing: content-box;
     a{
@@ -7595,7 +7595,7 @@ body.compoundChildImage {
     left: 0px;
     bottom: 4px;
     opacity: 0.7;
-      }   
+      }
 
       .videoLabel::before{
       background-image: url($videoLegend);
@@ -7608,8 +7608,8 @@ body.compoundChildImage {
     position: absolute;
     left: 0px;
     bottom: 5px;
- opacity: 0.7;    
-      }      
+ opacity: 0.7;
+      }
 
       .audioLabel::before{
       background-image: url($audioLegend);
@@ -7622,8 +7622,8 @@ body.compoundChildImage {
     position: absolute;
     left: 0px;
     bottom: 5px;
- opacity: 0.7;    
-      }      
+ opacity: 0.7;
+      }
 
 body.video, body.audio{
   .islandora-video-object.islandora.itemContainer.imageContainer, .islandora-audio-object.islandora.itemContainer.imageContainer {
@@ -7638,13 +7638,13 @@ body.video, body.audio{
     padding-top: 20px;
     max-width: none;
     border-left: 0px;
-    margin-left: 0px;    
-    padding-left: 0px;    
+    margin-left: 0px;
+    padding-left: 0px;
 }
 
   .imagePreview{
     display: none;
-  } 
+  }
 
 .islandora-video-content, .islandora-audio-content {
     width: 100%;
@@ -7684,7 +7684,7 @@ body.audio {
 }
 
 .tagsGlance a.modsSubject {
-  color: #ABABAB;    
+  color: #ABABAB;
 }
 
 .image-thumbnailData{
@@ -7693,7 +7693,7 @@ body.audio {
 
 .backgroundDiv{
       filter: blur(0px) brightness(0.7) contrast(1);
-}  
+}
   .islandora_videojs-dimensions {
     width: 100%;
     height: 30px;
@@ -7843,6 +7843,10 @@ a.toggle-date-range-filter{
 //begin content stats
 body.context-data{
 
+.ics_download_title{
+  color: white;
+  padding-top: 5px;
+}
 
 .dataHeader{
   margin-bottom: 20px;
@@ -8008,20 +8012,18 @@ border-radius: 0px;
 }
 
 input.ics_download_button {
-position: relative;
-    top: -40px;
     background: none;
-    left: calc(100% - 220px);
-    border: 1px solid #ccc;
+    border: 1px solid #fff;
     font-size: 11px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: #666;
-    font-weight: 700;
+    color: #fff;
     font-family: Roboto;
     border-radius: 0px;
     width: 200px;
     text-align: center;
+    text-shadow: none !important;
+    font-weight: 500;
 }
 
 #edit-filter > legend {
@@ -10105,7 +10107,7 @@ body.compoundChild{
     font-size: 11px !important;
     margin-right: 6px;
     margin-left: 4px;
-  }    
+  }
 }
 
 #region-content {
