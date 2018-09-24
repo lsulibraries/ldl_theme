@@ -404,7 +404,10 @@
         }
         else if ($('body').hasClass('audio')){
           $("<div class='contentLabel audioLabel'>Audio Object</div>").appendTo(".labelContainer"); //adds label break
-        }        
+        }    
+        else if ($('body').hasClass('video')){
+          $("<div class='contentLabel videoLabel'>Video Object</div>").appendTo(".labelContainer"); //adds label break
+        }  
         else{
           $("<div class='contentLabel imageLabel'>Image Object</div>").appendTo(".labelContainer"); //adds label break        
         }        
