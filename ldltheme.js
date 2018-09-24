@@ -54,6 +54,68 @@
           }
           break;
         }
+
+        case ($('body').hasClass('pdf')) :{
+          itemTitle = $(".modsTitle").html(); // finds full title without truncation
+          thumbnailURL = $(".image-thumbnail img").prop('src');
+          if ($('.block-islandora-compound-object').length){
+            compoundChild_start();
+          }
+          itemHeader();
+          typeClass('image');
+          imageContainer();
+          moveMetadata();
+          actionToggles();
+          itemFooter();
+          pdfModal();
+          if ($('.block-islandora-compound-object').length){
+            compoundChild_end();
+          }
+          break;
+        }
+
+        case ($('body').hasClass('audio')) :{
+          itemTitle = $(".modsTitle").html(); // finds full title without truncation
+          thumbnailURL = $(".image-thumbnail img").prop('src');
+          if ($('.block-islandora-compound-object').length){
+            compoundChild_start();
+          }
+          itemHeader();
+          typeClass('image');
+          imageContainer();
+          moveMetadata();
+          actionToggles();
+          itemFooter();
+          //pdfModal();
+          if ($('.block-islandora-compound-object').length){
+            compoundChild_end();
+          }
+
+
+
+          break;
+        }        
+
+
+        case ($('body').hasClass('video')) :{
+          itemTitle = $(".modsTitle").html(); // finds full title without truncation
+          thumbnailURL = $(".image-thumbnail img").prop('src');
+          if ($('.block-islandora-compound-object').length){
+            compoundChild_start();
+          }
+          itemHeader();
+          typeClass('image');
+          imageContainer();
+          moveMetadata();
+          actionToggles();
+          itemFooter();
+          //pdfModal();
+          if ($('.block-islandora-compound-object').length){
+            compoundChild_end();
+          }
+          break;
+        }        
+
         case ((($('#book-viewer').length) || ($('.islandora-newspaper-issue-navigator').length)) && (!$('body').hasClass('audioPDF'))) :{
           $('body').addClass('bookViewer');
           if ($('.block-islandora-compound-object').length) {
@@ -104,8 +166,6 @@
           //$("body").addClass('compoundObject compoundItem');
           break;
         }
-
-
 
         case ($('body').hasClass('context-data')):{
           dataStarter();
@@ -225,7 +285,7 @@
       function itemHeader(){
         if (!$('body').hasClass('compoundParent')){
           $(".region-inner > div.tabs.clearfix").prependTo("#block-system-main");
-          $("<div class='item_header'/>").insertBefore(".itemContainer, .islandora-large-image-object, .bookContainer, .islandora-newspaper-object"); //creates header for image items
+          $("<div class='item_header'/>").insertBefore(".itemContainer, .islandora-video-object, .islandora-audio-object, .islandora-pdf-object, .islandora-large-image-object, .bookContainer, .islandora-newspaper-object"); //creates header for image items
           thumbnailURL = $(".image-thumbnail img").prop('data-src');
           var sequenceText = $('span#islandora-compound-sequence-position').text();
           $('<div class="currentPart"></div>').html(sequenceText).appendTo('.headerBreadcrumb');
@@ -337,9 +397,20 @@
      }
 
       function imageContainer(){
-        $(".islandora-large-image-object, .islandora-newspaper-object").addClass("itemContainer imageContainer"); //adds label break
+        $(".islandora-large-image-object, .islandora-newspaper-object, .islandora-audio-object, .islandora-pdf-object, .islandora-video-object").addClass("itemContainer imageContainer"); //adds label break
         $("<div class='labelContainer'/>").insertBefore(".imageContainer"); //adds label break
-        $("<div class='contentLabel imageLabel'>Image Object</div>").appendTo(".labelContainer"); //adds label break
+        if ($('body').hasClass('pdf')){
+          $("<div class='contentLabel pdfLabel'>PDF Object</div>").appendTo(".labelContainer"); //adds label break
+        }
+        else if ($('body').hasClass('audio')){
+          $("<div class='contentLabel audioLabel'>Audio Object</div>").appendTo(".labelContainer"); //adds label break
+        }    
+        else if ($('body').hasClass('video')){
+          $("<div class='contentLabel videoLabel'>Video Object</div>").appendTo(".labelContainer"); //adds label break
+        }  
+        else{
+          $("<div class='contentLabel imageLabel'>Image Object</div>").appendTo(".labelContainer"); //adds label break        
+        }        
         $("<div class='imagePreview'/>").appendTo(".imageContainer"); //adds label break
         $(".image-thumbnail").appendTo(".imagePreview");
         $("<div class='image-thumbnailData'/>").insertAfter(".imagePreview");
@@ -496,7 +567,7 @@
         $("#region-sidebar-first").addClass('nano');
         $('.nano > .region-inner').wrapAll('<div class="metadataSidebar"/>');
         $(".metadataSidebar").addClass('nano-content'); //adds nanobar
-        $(".islandora-newspaper-metadata, .islandora-newspaper-issue-metadata, .islandora-newspaper-page-metadata").remove();  //removes empty old div
+        $(".islandora-newspaper-metadata, .islandora-newspaper-issue-metadata, .islandora-newspaper-page-metadata, .islandora-audio-metadata").remove();  //removes empty old div
         $(".metadataSidebar .sidebarLabel").remove(); //removes refine results text which bleeds over from search results
         if (!$(".metadataContainer .metadataRow").length){ //hide details toggle if metadata is empty
           $(".infoToggle").hide();
@@ -609,8 +680,6 @@
           $("<div id='shareToggle' class='userSelect'><div class='iconSelect'></div><div class='textSelect'>share</div></div>").insertAfter("#block-system-main .infoToggle");
         }
         var testlength = ($('.manageMenu > ul > li').length)
-        console.log(testlength)
-
         if (($('.manageMenu > ul > li').length) < 2){
           $(".manageMenu").css("display", "none"); //kills extra space if manageMenu is not being used
         }
@@ -674,6 +743,27 @@
         $("<div class='innerimageTitle'/>").text(itemTitle).insertAfter('span.modalExit5'); // undoes default title truncation
       }
 
+      function pdfModal(){
+        $("<span class='modalExit5'><i class='fa fa-times'></i> Exit</span>").insertBefore("#islandora-pdfjs");
+        $("<span class='modalDetails'><i class='fa fa-toggle-off'></i> Toggle Details</span>").insertAfter(".modalExit5");
+        $(".islandora-pdf-content-wrapper").insertBefore(".mobileMenu");
+        $("<div class='detailsContainer nano'/>").insertAfter("iframe.pdf");
+        $("<div class='imageDetails nano-content'/>").appendTo(".detailsContainer");
+        $(".metadataSidebar .metadataContainer").clone().appendTo(".imageDetails");
+          $('.modalDetails').click(function(){
+            $('.imageDetails').toggleClass('imageDetailsActive');
+            $('.detailsContainer').toggleClass('detailsContainerActive');
+            $(".nano").nanoScroller({ alwaysVisible: false });
+          });
+        $('.modalDetails').toggle(function() {
+          $('.modalDetails').html('<i class="fa fa-toggle-on"></i>Toggle Details');
+          }, function() {
+          $('.modalDetails').html('<i class="fa fa-toggle-off"></i>Toggle Details');
+        });
+        $('.islandora-pdf-content > span').wrapAll('<div class="imageToolbar"/>'); // wraps collectionPage title
+        $("<div class='innerimageTitle'/>").text(itemTitle).insertAfter('span.modalExit5'); // undoes default title truncation
+      }      
+
       $('.instStats').masonry({
         itemSelector: '.inst_wrapper'
       });
@@ -685,7 +775,7 @@
         sr.reveal('.islandora-solr-search-result, .landingMobile, .globalStats', { duration: 200, delay: 100,  easing: 'linear', scale: 1, }, 20); //landingMessage normally here; conflicts with mobile landingMessage
         sr.reveal('.inst_wrapper', { duration: 500, delay: 0, opacity: 0.1, easing: 'linear', scale: 0.9, viewFactor: 1, }); //landingMessage normally here; conflicts with mobile landingMessage
         sr.reveal('.landingHero', { duration: 200, delay: 0,  easing: 'linear', scale: 1, viewFactor: 0.01,}, 20);
-        sr.reveal('.solr-fields, .islandora-solr-sort li, .page-browse-collections tr, .islandora-pdf-content', { duration: 200, delay: 350,  easing: 'linear', scale: 1, viewFactor: 0.01, }, 20);
+        sr.reveal('.solr-fields, .islandora-solr-sort li, .page-browse-collections tr', { duration: 200, delay: 350,  easing: 'linear', scale: 1, viewFactor: 1, }, 20);
         sr.reveal('.solr-thumb img', { duration: 200, delay: 850,  easing: 'linear', scale: 1, viewFactor: 0.01, }, 20);
         sr.reveal('.islandora-basic-collection-grid dl', { duration: 100, delay: 200,  easing: 'ease-in', }, 20);
         sr.reveal('.alertBox_container', { duration: 100, delay: 0,  easing: 'ease-in', opacity: 1 }, 20);
@@ -758,7 +848,7 @@
 
 
       //oral history stuff
-      $("h1#page-title").clone().prop({ id: "oh-title", class: "ohtitle"}).prependTo(".islandora-audio-content");
+      //$("h1#page-title").clone().prop({ id: "oh-title", class: "ohtitle"}).prependTo(".islandora-audio-content");
       $(".modsContributor a").clone().prop({ class: "ohcreator"}).insertAfter(".ohtitle");
       $('a.ohcreator').wrapAll('<div class="creatorLinks"/>'); //wraps collectionPage title
       //end oral history
@@ -778,7 +868,7 @@
 
       // ===== following chunk needs cleanup, some legacy code within =====
 
-      $("#page-title").clone().prop({ id: "window-title", class: "object-title"}).prependTo("div.islandora-pdf-content, div.islandora-large-image-content"); // old pdf title
+      $("#page-title").clone().prop({ id: "window-title", class: "object-title"}).prependTo("div.islandora-audio-object, div.islandora-pdf-content, div.islandora-large-image-content"); // old pdf title
       $("a.islandora-pdf-link").appendTo(".islandora-pdf-content");
       $(".islandora-pdf-metadata").appendTo(".islandora-pdf-content");
       $("#islandora-solr-result-count").prop({ id: "header-result-count"}).appendTo("#breadcrumb"); //search results total
@@ -1090,7 +1180,7 @@ function monthClick(){
       }
       // end newspaper 2.0
 
-      if ( ($('body').hasClass('compoundObject')) || ($('body').hasClass('bookViewer')) || ($('body').hasClass('context-data')) || ($('body').hasClass('largeImage')) || ($('body').hasClass('newspaperSet'))){
+      if ( ($('body').hasClass('compoundObject')) || ($('body').hasClass('audio')) || ($('body').hasClass('video')) || ($('body').hasClass('pdf')) || ($('body').hasClass('bookViewer')) || ($('body').hasClass('context-data')) || ($('body').hasClass('largeImage')) || ($('body').hasClass('newspaperSet'))){
       $('body').addClass('headerversiontwo');
       }
       if (navigator.appName == 'Microsoft Internet Explorer' ||  !!(navigator.userAgent.match(/Trident/) || navigator.userAgent.match(/rv:11/)) || (typeof $.browser !== "undefined" && $.browser.msie == 1))
@@ -1326,7 +1416,7 @@ function monthClick(){
       //escape key closes modals
       $(document).keyup(function(e) {
            if (e.keyCode == 27) { // escape key maps to keycode `27`
-          $(".bookContainer, #block-islandora-solr-advanced, #block-views-meeting-minutes-block-1, #block-block-14, body:not(.compoundChildImage) #islandora-openseadragon").css("display","none");
+          $(".bookContainer, #block-islandora-solr-advanced, #block-views-meeting-minutes-block-1, #block-block-14, body:not(.compoundChildImage) #islandora-openseadragon, .islandora-pdf-content-wrapper").css("display","none");
           $(".page").removeClass('blurFilter');
           $(".parallax-slider").removeClass('darkFilter');
           $("button").removeClass('is-active');
@@ -1335,9 +1425,14 @@ function monthClick(){
       });
       //end modal bookviewer
       //modal imageViewer
-         if ( ($('#islandora-openseadragon').length) && ( !$('body').hasClass('audioPDF') ) ){
+         if ( (($('#islandora-openseadragon').length) || ($('.islandora-pdf-content-wrapper').length))&& ( !$('body').hasClass('audioPDF') ) ){
       // Get the modal
-      var modal5 = document.getElementById('islandora-openseadragon');
+if ($('body').hasClass('pdf')){
+        var modal5 = document.getElementsByClassName('islandora-pdf-content-wrapper')[0];
+      }
+      else{
+              var modal5 = document.getElementById('islandora-openseadragon');
+            }  
       // Get the button that opens the modal
       var btn5 = document.getElementsByClassName("imagePreview")[0];
       // Get the <span> element that closes the modal
@@ -1351,7 +1446,7 @@ function monthClick(){
           $("#zone-content-wrapper").addClass("noClick"); //somehow not working
           window.scrollTo(0,0); //scrolls to top
           if ($(window).width() < 900) {
-            $('html').addClass('fixed');
+            //$('html').addClass('fixed');
           }
       }
       // When the user clicks on <span> (x), close the modal

@@ -19,10 +19,14 @@
  */
 ?>
 
+<script>
+document.body.className += ' ' + 'video';
+</script>
+
 <div class="islandora-video-object islandora" vocab="http://schema.org/" prefix="dcterms: http://purl.org/dc/terms/" typeof="VideoObject">
   <div class="islandora-video-content-wrapper clearfix">
   
-       <?php if ($parent_collections): ?>
+<!--        <?php if ($parent_collections): ?>
       <div class="parent-collections">
         <h2><?php print t('Found in collection(s):'); ?></h2>
         
@@ -31,7 +35,7 @@
           <?php endforeach; ?></p>
     </div>      
 
-    <?php endif; ?>
+    <?php endif; ?> -->
       
     <?php if ($islandora_content): ?>
       <div class="islandora-video-content">

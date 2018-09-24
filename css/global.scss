@@ -40,6 +40,9 @@ $compoundLegendDark: 'https://i.imgur.com/IUHIf6A.png';
 $childLegend: 'https://i.imgur.com/jaWlCjM.png';
 $imageLegend: 'https://i.imgur.com/4LmxSra.png';
 $shareLegend: 'https://i.imgur.com/bKhM20h.png';
+$audioLegend: '../images/volume_light.png';
+$pdfLegend: '../images/document_dark.png';
+$videoLegend: '../images/video_dark.png';
 
 $viewLegend: 'https://i.imgur.com/rqTlrT3.png';
 $manageLegend: 'https://i.imgur.com/3fcNTbJ.png';
@@ -252,6 +255,7 @@ ul {
 
 iframe.pdf {
     width: 100%;
+    height: 100%;
 }
 
 body {
@@ -3741,7 +3745,7 @@ p {
   display: none;
 }
 
-.islandora-pdf-content, .islandora-large-image-content {
+.islandora-large-image-content {
   background-color: #FFF;
   background-image: url(../images/BJtKhwV.png);
   border: 1px solid #ccc;
@@ -4136,6 +4140,7 @@ background:none!important;
 }
 
 
+
 .backgroundDiv {
     position: absolute;
     width: 120%;
@@ -4152,6 +4157,8 @@ background:none!important;
     top: -10px;
     background-color: black;
 }
+
+
 
 .contentLabel{
 color: #676767;
@@ -4396,6 +4403,8 @@ form#islandora-ip-embargo-object-embargo-form {
       padding-left: 48px;
       padding-right: 25px;
       }
+
+
 
 .imageLabel::before {
     background: $Blue;
@@ -4960,6 +4969,8 @@ width: 100%;
   }
 }
 
+
+
 .blurFilter {
   -webkit-filter: blur(5px) brightness(0.2);
   -moz-filter: blur(5px) brightness(0.2);
@@ -5021,6 +5032,17 @@ transform: translateX(0px);
 transition-duration: 1s;
 }
 
+.islandora-pdf-content{
+  padding: 0px;
+    width: 80vw !important;
+    margin: 0 auto !important;
+    height: 80vh !important;
+    border-radius: 20px;  
+background-color: transparent;
+    border: 1px solid #616161 !important;
+    overflow: hidden;
+}
+
 .dragonContainer {
     width: 80vw !important;
     margin: 0 auto !important;
@@ -5028,6 +5050,17 @@ transition-duration: 1s;
     border: 1px solid #616161 !important;
     height: 80vh !important;
     border-radius: 0px 0px 20px 20px;
+}
+
+.islandora-pdf-content-wrapper{
+    width: 100%;
+    div#islandora-pdfjs {
+        overflow: hidden;
+        position: relative;
+    height: calc(80vh - 31px);     
+    width: calc(80vw + 1px);       
+    }
+
 }
 
 .detailsContainer {
@@ -5039,6 +5072,13 @@ height: calc(80vh - 80px);
 .nano-pane{
   z-index: 222;
 }
+}
+
+#islandora-pdfjs > .detailsContainer {
+
+    position: absolute;
+    top: 0px;
+
 }
 
 .detailsContainerActive{
@@ -5260,30 +5300,40 @@ width: 100%;
     line-height: normal;
     border: 1px solid rgba(0,0,0,0.26);
     letter-spacing: 1px;
+    border-radius: 3px;    
   }
 
 .tagsGlance a.modsSubject {
     color: #676767;
     max-width: none !important;
+
 }
 
 .backCollection {
     color: white;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    background: #327BB3;
+    height: 60px;
+    width: calc(100% + 20px);
+    max-width: 1200px !important;
+    border-top: 0px;
+    box-sizing: content-box;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 0px;    
+    border-radius: 8px;
 }
 
 .backContainer {
     display: flex !important;
     justify-content: center;
-    align-items: center;
-    background: $LDLBlue;
+    align-items: flex-start;
     height: 80px;
-    margin-top: 0px;
-    box-sizing: border-box;
-    border-top: 0px;
-    max-width: 1200px !important;
     margin: 0px auto;
-    border: 20px solid white;
-    border-top:0px;
+    margin-top: 0px;    
+    border-top: 0px;
     box-sizing: content-box;
     a{
       color: white;
@@ -6270,11 +6320,11 @@ body.newspaperSet #page{
 }
 
 //begin largeImage 2.0
-body.largeImage{
+body.largeImage, body.pdf, body.video, body.audio{
   background: #000000;
 }
 
-body.largeImage, body.newspaperSet{
+body.largeImage, body.pdf, body.video, body.newspaperSet, body.audio{
 
 
 .firstMonthCover:not(.firstYearCover){
@@ -7238,7 +7288,7 @@ margin-left:  10px;
 }
 
 //end navigation stages
-#islandora-openseadragon{
+#islandora-openseadragon, .islandora-pdf-content-wrapper{
   display: none;
   justify-content: center;
   align-items: center;
@@ -7532,6 +7582,151 @@ body.compoundChildImage {
 //end error messages
 
 /*BEGIN test area*/
+
+      .pdfLabel::before{
+    background-image: url(../images/document_dark.png);
+    background-repeat: no-repeat;
+    content: '';
+    background-size: 15px;
+    background-position: center;
+    width: 20px;
+    height: 15px;
+    position: absolute;
+    left: 0px;
+    bottom: 4px;
+    opacity: 0.7;
+      }   
+
+      .videoLabel::before{
+      background-image: url($videoLegend);
+    background-repeat: no-repeat;
+    content: '';
+    background-size: 15px;
+    background-position: center;
+    width: 20px;
+    height: 10px;
+    position: absolute;
+    left: 0px;
+    bottom: 5px;
+ opacity: 0.7;    
+      }      
+
+      .audioLabel::before{
+      background-image: url($audioLegend);
+    background-repeat: no-repeat;
+    content: '';
+    background-size: 15px;
+    background-position: center;
+    width: 20px;
+    height: 10px;
+    position: absolute;
+    left: 0px;
+    bottom: 5px;
+ opacity: 0.7;    
+      }      
+
+body.video, body.audio{
+  .islandora-video-object.islandora.itemContainer.imageContainer, .islandora-audio-object.islandora.itemContainer.imageContainer {
+    flex-direction: column;
+  }
+
+  .backgroundDiv{
+    background-position: -5vw 60%;
+  }
+
+.image-thumbnailData {
+    padding-top: 20px;
+    max-width: none;
+    border-left: 0px;
+    margin-left: 0px;    
+    padding-left: 0px;    
+}
+
+  .imagePreview{
+    display: none;
+  } 
+
+.islandora-video-content, .islandora-audio-content {
+    width: 100%;
+    max-width: none !important;
+    margin: 0 auto;
+}
+
+.islandora_videojs-dimensions {
+    width: 100%;
+    height: 500px;
+}
+
+
+.islandora-audio-content-wrapper.clearfix, .islandora-video-content-wrapper.clearfix {
+    width: 100%;
+}
+}
+
+body.audio {
+
+.footerContainer{
+      border-top: 1px solid #343435;
+}
+
+.metadataVertical div.metadataValue, div.metadataLabel {
+    color: #ABABAB !important;
+}
+
+.descriptionText {
+    color: #ABABAB;
+    background-color: transparent;
+}
+
+.tagsGlance .modsSubject {
+    background-color: transparent;
+    border: 1px solid $lightTransparent;
+}
+
+.tagsGlance a.modsSubject {
+  color: #ABABAB;    
+}
+
+.image-thumbnailData{
+  color: #ABABAB;
+}
+
+.backgroundDiv{
+      filter: blur(0px) brightness(0.7) contrast(1);
+}  
+  .islandora_videojs-dimensions {
+    width: 100%;
+    height: 30px;
+  }
+
+  #window-title{
+    display: none;
+  }
+
+#block-system-main {
+    background: #242021;
+}
+
+
+.contentLabel {
+    background: #242021;
+    color: white;
+    border-bottom: 1px solid $lightTransparent;
+}
+
+.itemDesc::before {
+    background-image: url(../images/tags_light.png);
+  }
+}
+
+
+
+
+body.pdf{
+  #window-title{
+    display: none;
+  }
+}
 
   .itemDesc::before{
     position: absolute;
@@ -7986,7 +8181,7 @@ section#block-islandora-solr-sort .item-list {
 }
 
 //Begin oral history styles
-.audioPDF{
+.audioPDF, .audio{
 
 div#block-islandora-compound-object-compound-jail-display {
     height: auto;
@@ -8052,7 +8247,7 @@ table {
         @include flexbox;
         background-color: transparent;
         bottom: 40%;
-        padding: 0px 137px;
+        //padding: 0px 137px;
       opacity: 1 !important;
       }
       .vjs-big-play-button, #islandora_videojs_html5_api, .vjs-poster {
@@ -8065,7 +8260,8 @@ table {
       padding: 0px;
       border: 0px;
     background: #242021;
-            border-radius: 0px;
+    border-radius: 8px;
+    overflow: hidden;
     }
 
     div#islandora-pdfjs {
@@ -8707,7 +8903,7 @@ margin-bottom: 20px;
 }
 
 
-.audioPDF{
+.audioPDF, .audio{
   #block-system-main{
     table{
       border: 0px;
@@ -9242,7 +9438,7 @@ button.BRicon.full_text.cboxElement{
   display: none !important;
 }
 
-body.largeImage{
+body.largeImage, body.pdf, body.audio{
 
 .imageToolbar{
   width: 100vw;
@@ -9267,7 +9463,7 @@ body.largeImage{
     line-height: 35px !important;
 }
 
-.dragonContainer .detailsContainer{
+.dragonContainer .detailsContainer, .islandora-pdf-content .detailsContainer{
   display: none;
 }
 
@@ -9316,11 +9512,12 @@ body.largeImage{
 
 }
 
-body.headerversiontwo  .dragonContainer{
+body.headerversiontwo  .dragonContainer, body.headerversiontwo .islandora-pdf-content{
 height: 100vh !important;
 border-radius: 0px;
 width: 100vw !important;
 }
+
 
 #bookTitle{
   font-size: 30px !important;
@@ -9427,7 +9624,14 @@ margin-top: 40px;
 
 iframe.pdf {
     width: 100%;
-    height: 60vh;
+    height: 100vh;
+}
+
+body.headerversiontwo .islandora-pdf-content-wrapper div#islandora-pdfjs {
+    overflow: hidden;
+    position: relative;
+    height: calc(100vh - 31px);
+    width: calc(100vw - 0px);
 }
 
 div.region-inner.region-header-first-inner, {
@@ -9499,7 +9703,7 @@ html.mobileMenuActive, body.mobileMenuActive{
   }
 
 
-.audioPDF{
+.audioPDF, .audio{
 #block-system-main{
   table{
     border-color: white;
@@ -9783,6 +9987,26 @@ border: 1px solid rgba(255, 255, 255, 0.33);
       margin-bottom: 0px;
     }
 //compound styles mobile
+
+body.audio {
+  .metadataVertical div.metadataValue, .metadataVertical div.metadataLabel {
+      color: #ABABAB !important;
+  }
+
+.metadataVertical .metadataContainer::before {
+    color: #ABABAB;
+}
+
+.metadataVertical .metadataContainer {
+    border-top: 1px solid $lightTransparent;
+}
+
+.metadataVertical .metadataContainer::before {
+    background-image: url(../images/info_light.png) !important;
+}
+
+}
+
 .compoundObject {
 
 .islandora-large-image-metadata{
