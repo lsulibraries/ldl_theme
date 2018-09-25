@@ -367,6 +367,11 @@
             $('.backgroundDiv').css('background-image', 'url(' + thumbnailURL + ')');
             console.log(thumbnailURL);
           }
+
+          else if ($('body').hasClass('video')){
+          thumbnailURL = $('meta[name="twitter:image"]').attr("content");
+          }
+          
           else {
                       thumbnailURL = $(".image-thumbnail img").prop('src');
 
