@@ -11,6 +11,10 @@
 document.body.className += ' ' + 'oralHistory';
 </script>
 
+  <div class="oralhistory-banner"> 
+    <img src="/sites/all/themes/ldl/images/audiobanner.jpeg"></img>  
+  </div>  
+
 <div class="islandora-audio-object islandora-oh islandora" vocab="http://schema.org/" prefix="dcterms: http://purl.org/dc/terms/" typeof="AudioObject">
   <div class="islandora-audio-content-wrapper clearfix">
     <?php if (isset($index_url)): ?>
@@ -25,19 +29,6 @@ document.body.className += ' ' + 'oralHistory';
       </div>
     <?php endif; ?>
   </div>
-  <!-- note: this metadata div class is just a hack to catch the css -->
-  <div class="islandora-pdf-metadata">
-    <?php print $description; ?>
-    <?php if ($parent_collections): ?>
-      <div>
-        <h2><?php print t('In collections'); ?></h2>
-        <ul>
-          <?php foreach ($parent_collections as $collection): ?>
-            <li><?php print l($collection->label, "islandora/object/{$collection->id}"); ?></li>
-          <?php endforeach; ?>
-        </ul>
-      </div>
-    <?php endif; ?>
     <?php print $metadata; ?>
   </div>
 </div>

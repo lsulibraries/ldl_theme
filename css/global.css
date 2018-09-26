@@ -4670,17 +4670,17 @@ body.newspaperSet {
 body.newspaperSet #page {
   display: none; }
 
-body.largeImage, body.pdf, body.video, body.audio {
+body.largeImage, body.pdf, body.video, body.audio, body.oralHistory {
   background: #000000; }
 
-body.largeImage .firstMonthCover:not(.firstYearCover), body.pdf .firstMonthCover:not(.firstYearCover), body.video .firstMonthCover:not(.firstYearCover), body.newspaperSet .firstMonthCover:not(.firstYearCover), body.audio .firstMonthCover:not(.firstYearCover) {
+body.largeImage .firstMonthCover:not(.firstYearCover), body.pdf .firstMonthCover:not(.firstYearCover), body.video .firstMonthCover:not(.firstYearCover), body.newspaperSet .firstMonthCover:not(.firstYearCover), body.audio .firstMonthCover:not(.firstYearCover), body.oralHistory .firstMonthCover:not(.firstYearCover) {
   display: none !important; }
-body.largeImage .islandora-newspaper-object.islandora.newspaperContainer, body.pdf .islandora-newspaper-object.islandora.newspaperContainer, body.video .islandora-newspaper-object.islandora.newspaperContainer, body.newspaperSet .islandora-newspaper-object.islandora.newspaperContainer, body.audio .islandora-newspaper-object.islandora.newspaperContainer {
+body.largeImage .islandora-newspaper-object.islandora.newspaperContainer, body.pdf .islandora-newspaper-object.islandora.newspaperContainer, body.video .islandora-newspaper-object.islandora.newspaperContainer, body.newspaperSet .islandora-newspaper-object.islandora.newspaperContainer, body.audio .islandora-newspaper-object.islandora.newspaperContainer, body.oralHistory .islandora-newspaper-object.islandora.newspaperContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center; }
-body.largeImage .newsSelect, body.pdf .newsSelect, body.video .newsSelect, body.newspaperSet .newsSelect, body.audio .newsSelect {
+body.largeImage .newsSelect, body.pdf .newsSelect, body.video .newsSelect, body.newspaperSet .newsSelect, body.audio .newsSelect, body.oralHistory .newsSelect {
   font-size: 12px;
   text-transform: uppercase;
   opacity: 1;
@@ -4688,7 +4688,7 @@ body.largeImage .newsSelect, body.pdf .newsSelect, body.video .newsSelect, body.
   transition-duration: 0.5s;
   letter-spacing: 2px;
   padding: 0px 30px; }
-body.largeImage .newsIndicator, body.pdf .newsIndicator, body.video .newsIndicator, body.newspaperSet .newsIndicator, body.audio .newsIndicator {
+body.largeImage .newsIndicator, body.pdf .newsIndicator, body.video .newsIndicator, body.newspaperSet .newsIndicator, body.audio .newsIndicator, body.oralHistory .newsIndicator {
   position: absolute;
   border-bottom: 1px solid #cecece;
   bottom: 0px;
@@ -4696,20 +4696,20 @@ body.largeImage .newsIndicator, body.pdf .newsIndicator, body.video .newsIndicat
   transform: skew(-20deg);
   height: 10px;
   background: #cecece; }
-body.largeImage .activeIndicator, body.pdf .activeIndicator, body.video .activeIndicator, body.newspaperSet .activeIndicator, body.audio .activeIndicator {
+body.largeImage .activeIndicator, body.pdf .activeIndicator, body.video .activeIndicator, body.newspaperSet .activeIndicator, body.audio .activeIndicator, body.oralHistory .activeIndicator {
   width: 100%;
   height: 10px;
   background: #676767;
   transform: scale3d(0.3, 1, 1);
   transform-origin: left;
   transition-duration: 1s; }
-body.largeImage .activeSelect, body.pdf .activeSelect, body.video .activeSelect, body.newspaperSet .activeSelect, body.audio .activeSelect {
+body.largeImage .activeSelect, body.pdf .activeSelect, body.video .activeSelect, body.newspaperSet .activeSelect, body.audio .activeSelect, body.oralHistory .activeSelect {
   opacity: 1 !important; }
-body.largeImage #calendar, body.pdf #calendar, body.video #calendar, body.newspaperSet #calendar, body.audio #calendar {
+body.largeImage #calendar, body.pdf #calendar, body.video #calendar, body.newspaperSet #calendar, body.audio #calendar, body.oralHistory #calendar {
   display: none; }
-body.largeImage td.highlight .circleDay, body.pdf td.highlight .circleDay, body.video td.highlight .circleDay, body.newspaperSet td.highlight .circleDay, body.audio td.highlight .circleDay {
+body.largeImage td.highlight .circleDay, body.pdf td.highlight .circleDay, body.video td.highlight .circleDay, body.newspaperSet td.highlight .circleDay, body.audio td.highlight .circleDay, body.oralHistory td.highlight .circleDay {
   background: #a3a3a3; }
-body.largeImage .islandora-newspaper-navigation, body.pdf .islandora-newspaper-navigation, body.video .islandora-newspaper-navigation, body.newspaperSet .islandora-newspaper-navigation, body.audio .islandora-newspaper-navigation {
+body.largeImage .islandora-newspaper-navigation, body.pdf .islandora-newspaper-navigation, body.video .islandora-newspaper-navigation, body.newspaperSet .islandora-newspaper-navigation, body.audio .islandora-newspaper-navigation, body.oralHistory .islandora-newspaper-navigation {
   display: flex;
   flex-wrap: wrap;
   border-bottom: 0px;
@@ -4723,13 +4723,13 @@ body.largeImage .islandora-newspaper-navigation, body.pdf .islandora-newspaper-n
   justify-content: space-around;
   position: relative;
   margin-top: 20px; }
-body.largeImage .month-container::first-child, body.pdf .month-container::first-child, body.video .month-container::first-child, body.newspaperSet .month-container::first-child, body.audio .month-container::first-child {
+body.largeImage .month-container::first-child, body.pdf .month-container::first-child, body.video .month-container::first-child, body.newspaperSet .month-container::first-child, body.audio .month-container::first-child, body.oralHistory .month-container::first-child {
   display: block;
   pointer-events: none; }
-body.largeImage .total-issue-count, body.pdf .total-issue-count, body.video .total-issue-count, body.newspaperSet .total-issue-count, body.audio .total-issue-count {
+body.largeImage .total-issue-count, body.pdf .total-issue-count, body.video .total-issue-count, body.newspaperSet .total-issue-count, body.audio .total-issue-count, body.oralHistory .total-issue-count {
   font-style: italic;
   padding-top: 20px; }
-body.largeImage .newspaper-thumbnailData, body.pdf .newspaper-thumbnailData, body.video .newspaper-thumbnailData, body.newspaperSet .newspaper-thumbnailData, body.audio .newspaper-thumbnailData {
+body.largeImage .newspaper-thumbnailData, body.pdf .newspaper-thumbnailData, body.video .newspaper-thumbnailData, body.newspaperSet .newspaper-thumbnailData, body.audio .newspaper-thumbnailData, body.oralHistory .newspaper-thumbnailData {
   flex-direction: column;
   max-width: 1200px;
   color: #676767;
@@ -4742,14 +4742,14 @@ body.largeImage .newspaper-thumbnailData, body.pdf .newspaper-thumbnailData, bod
   padding-bottom: 60px;
   position: relative;
   width: 100%; }
-body.largeImage .islandora-newspaper-content-wrapper, body.pdf .islandora-newspaper-content-wrapper, body.video .islandora-newspaper-content-wrapper, body.newspaperSet .islandora-newspaper-content-wrapper, body.audio .islandora-newspaper-content-wrapper {
+body.largeImage .islandora-newspaper-content-wrapper, body.pdf .islandora-newspaper-content-wrapper, body.video .islandora-newspaper-content-wrapper, body.newspaperSet .islandora-newspaper-content-wrapper, body.audio .islandora-newspaper-content-wrapper, body.oralHistory .islandora-newspaper-content-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   position: relative;
   width: 100%; }
-body.largeImage .islandora-newspaper-grid, body.pdf .islandora-newspaper-grid, body.video .islandora-newspaper-grid, body.newspaperSet .islandora-newspaper-grid, body.audio .islandora-newspaper-grid {
+body.largeImage .islandora-newspaper-grid, body.pdf .islandora-newspaper-grid, body.video .islandora-newspaper-grid, body.newspaperSet .islandora-newspaper-grid, body.audio .islandora-newspaper-grid, body.oralHistory .islandora-newspaper-grid {
   display: flex;
   flex-wrap: wrap;
   border-bottom: 0px;
@@ -4761,7 +4761,7 @@ body.largeImage .islandora-newspaper-grid, body.pdf .islandora-newspaper-grid, b
   margin: 0px 20px;
   width: 100%;
   margin-top: 40px; }
-  body.largeImage .islandora-newspaper-grid .publication-year-container, body.pdf .islandora-newspaper-grid .publication-year-container, body.video .islandora-newspaper-grid .publication-year-container, body.newspaperSet .islandora-newspaper-grid .publication-year-container, body.audio .islandora-newspaper-grid .publication-year-container {
+  body.largeImage .islandora-newspaper-grid .publication-year-container, body.pdf .islandora-newspaper-grid .publication-year-container, body.video .islandora-newspaper-grid .publication-year-container, body.newspaperSet .islandora-newspaper-grid .publication-year-container, body.audio .islandora-newspaper-grid .publication-year-container, body.oralHistory .islandora-newspaper-grid .publication-year-container {
     height: 80px;
     margin-right: 20px;
     margin-bottom: 40px;
@@ -4776,41 +4776,41 @@ body.largeImage .islandora-newspaper-grid, body.pdf .islandora-newspaper-grid, b
     color: #676767;
     transition-duration: 0.5s;
     border-bottom: 2px solid transparent; }
-  body.largeImage .islandora-newspaper-grid .viewYears, body.pdf .islandora-newspaper-grid .viewYears, body.video .islandora-newspaper-grid .viewYears, body.newspaperSet .islandora-newspaper-grid .viewYears, body.audio .islandora-newspaper-grid .viewYears {
+  body.largeImage .islandora-newspaper-grid .viewYears, body.pdf .islandora-newspaper-grid .viewYears, body.video .islandora-newspaper-grid .viewYears, body.newspaperSet .islandora-newspaper-grid .viewYears, body.audio .islandora-newspaper-grid .viewYears, body.oralHistory .islandora-newspaper-grid .viewYears {
     height: 420px;
     flex-direction: column-reverse;
     transition-duration: 0.2s !important; }
-    body.largeImage .islandora-newspaper-grid .viewYears .ui-datepicker-group, body.pdf .islandora-newspaper-grid .viewYears .ui-datepicker-group, body.video .islandora-newspaper-grid .viewYears .ui-datepicker-group, body.newspaperSet .islandora-newspaper-grid .viewYears .ui-datepicker-group, body.audio .islandora-newspaper-grid .viewYears .ui-datepicker-group {
+    body.largeImage .islandora-newspaper-grid .viewYears .ui-datepicker-group, body.pdf .islandora-newspaper-grid .viewYears .ui-datepicker-group, body.video .islandora-newspaper-grid .viewYears .ui-datepicker-group, body.newspaperSet .islandora-newspaper-grid .viewYears .ui-datepicker-group, body.audio .islandora-newspaper-grid .viewYears .ui-datepicker-group, body.oralHistory .islandora-newspaper-grid .viewYears .ui-datepicker-group {
       display: none; }
-    body.largeImage .islandora-newspaper-grid .viewYears .months-container, body.pdf .islandora-newspaper-grid .viewYears .months-container, body.video .islandora-newspaper-grid .viewYears .months-container, body.newspaperSet .islandora-newspaper-grid .viewYears .months-container, body.audio .islandora-newspaper-grid .viewYears .months-container {
+    body.largeImage .islandora-newspaper-grid .viewYears .months-container, body.pdf .islandora-newspaper-grid .viewYears .months-container, body.video .islandora-newspaper-grid .viewYears .months-container, body.newspaperSet .islandora-newspaper-grid .viewYears .months-container, body.audio .islandora-newspaper-grid .viewYears .months-container, body.oralHistory .islandora-newspaper-grid .viewYears .months-container {
       width: 100%;
       max-height: 500px;
       flex-grow: 2; }
-    body.largeImage .islandora-newspaper-grid .viewYears .date-year, body.largeImage .islandora-newspaper-grid .viewYears .date-month, body.largeImage .islandora-newspaper-grid .viewYears .date-day, body.largeImage .islandora-newspaper-grid .viewYears .issue-container > a, body.largeImage .islandora-newspaper-grid .viewYears .month-container-label-month, body.largeImage .islandora-newspaper-grid .viewYears .month-container-label-count, body.pdf .islandora-newspaper-grid .viewYears .date-year, body.pdf .islandora-newspaper-grid .viewYears .date-month, body.pdf .islandora-newspaper-grid .viewYears .date-day, body.pdf .islandora-newspaper-grid .viewYears .issue-container > a, body.pdf .islandora-newspaper-grid .viewYears .month-container-label-month, body.pdf .islandora-newspaper-grid .viewYears .month-container-label-count, body.video .islandora-newspaper-grid .viewYears .date-year, body.video .islandora-newspaper-grid .viewYears .date-month, body.video .islandora-newspaper-grid .viewYears .date-day, body.video .islandora-newspaper-grid .viewYears .issue-container > a, body.video .islandora-newspaper-grid .viewYears .month-container-label-month, body.video .islandora-newspaper-grid .viewYears .month-container-label-count, body.newspaperSet .islandora-newspaper-grid .viewYears .date-year, body.newspaperSet .islandora-newspaper-grid .viewYears .date-month, body.newspaperSet .islandora-newspaper-grid .viewYears .date-day, body.newspaperSet .islandora-newspaper-grid .viewYears .issue-container > a, body.newspaperSet .islandora-newspaper-grid .viewYears .month-container-label-month, body.newspaperSet .islandora-newspaper-grid .viewYears .month-container-label-count, body.audio .islandora-newspaper-grid .viewYears .date-year, body.audio .islandora-newspaper-grid .viewYears .date-month, body.audio .islandora-newspaper-grid .viewYears .date-day, body.audio .islandora-newspaper-grid .viewYears .issue-container > a, body.audio .islandora-newspaper-grid .viewYears .month-container-label-month, body.audio .islandora-newspaper-grid .viewYears .month-container-label-count {
+    body.largeImage .islandora-newspaper-grid .viewYears .date-year, body.largeImage .islandora-newspaper-grid .viewYears .date-month, body.largeImage .islandora-newspaper-grid .viewYears .date-day, body.largeImage .islandora-newspaper-grid .viewYears .issue-container > a, body.largeImage .islandora-newspaper-grid .viewYears .month-container-label-month, body.largeImage .islandora-newspaper-grid .viewYears .month-container-label-count, body.pdf .islandora-newspaper-grid .viewYears .date-year, body.pdf .islandora-newspaper-grid .viewYears .date-month, body.pdf .islandora-newspaper-grid .viewYears .date-day, body.pdf .islandora-newspaper-grid .viewYears .issue-container > a, body.pdf .islandora-newspaper-grid .viewYears .month-container-label-month, body.pdf .islandora-newspaper-grid .viewYears .month-container-label-count, body.video .islandora-newspaper-grid .viewYears .date-year, body.video .islandora-newspaper-grid .viewYears .date-month, body.video .islandora-newspaper-grid .viewYears .date-day, body.video .islandora-newspaper-grid .viewYears .issue-container > a, body.video .islandora-newspaper-grid .viewYears .month-container-label-month, body.video .islandora-newspaper-grid .viewYears .month-container-label-count, body.newspaperSet .islandora-newspaper-grid .viewYears .date-year, body.newspaperSet .islandora-newspaper-grid .viewYears .date-month, body.newspaperSet .islandora-newspaper-grid .viewYears .date-day, body.newspaperSet .islandora-newspaper-grid .viewYears .issue-container > a, body.newspaperSet .islandora-newspaper-grid .viewYears .month-container-label-month, body.newspaperSet .islandora-newspaper-grid .viewYears .month-container-label-count, body.audio .islandora-newspaper-grid .viewYears .date-year, body.audio .islandora-newspaper-grid .viewYears .date-month, body.audio .islandora-newspaper-grid .viewYears .date-day, body.audio .islandora-newspaper-grid .viewYears .issue-container > a, body.audio .islandora-newspaper-grid .viewYears .month-container-label-month, body.audio .islandora-newspaper-grid .viewYears .month-container-label-count, body.oralHistory .islandora-newspaper-grid .viewYears .date-year, body.oralHistory .islandora-newspaper-grid .viewYears .date-month, body.oralHistory .islandora-newspaper-grid .viewYears .date-day, body.oralHistory .islandora-newspaper-grid .viewYears .issue-container > a, body.oralHistory .islandora-newspaper-grid .viewYears .month-container-label-month, body.oralHistory .islandora-newspaper-grid .viewYears .month-container-label-count {
       display: none; }
-    body.largeImage .islandora-newspaper-grid .viewYears img.lazy, body.pdf .islandora-newspaper-grid .viewYears img.lazy, body.video .islandora-newspaper-grid .viewYears img.lazy, body.newspaperSet .islandora-newspaper-grid .viewYears img.lazy, body.audio .islandora-newspaper-grid .viewYears img.lazy {
+    body.largeImage .islandora-newspaper-grid .viewYears img.lazy, body.pdf .islandora-newspaper-grid .viewYears img.lazy, body.video .islandora-newspaper-grid .viewYears img.lazy, body.newspaperSet .islandora-newspaper-grid .viewYears img.lazy, body.audio .islandora-newspaper-grid .viewYears img.lazy, body.oralHistory .islandora-newspaper-grid .viewYears img.lazy {
       width: 100%;
       height: 100%;
       max-width: none; }
-    body.largeImage .islandora-newspaper-grid .viewYears .month-container-label, body.pdf .islandora-newspaper-grid .viewYears .month-container-label, body.video .islandora-newspaper-grid .viewYears .month-container-label, body.newspaperSet .islandora-newspaper-grid .viewYears .month-container-label, body.audio .islandora-newspaper-grid .viewYears .month-container-label {
+    body.largeImage .islandora-newspaper-grid .viewYears .month-container-label, body.pdf .islandora-newspaper-grid .viewYears .month-container-label, body.video .islandora-newspaper-grid .viewYears .month-container-label, body.newspaperSet .islandora-newspaper-grid .viewYears .month-container-label, body.audio .islandora-newspaper-grid .viewYears .month-container-label, body.oralHistory .islandora-newspaper-grid .viewYears .month-container-label {
       pointer-events: none; }
-    body.largeImage .islandora-newspaper-grid .viewYears .month-container.loadedMonth, body.pdf .islandora-newspaper-grid .viewYears .month-container.loadedMonth, body.video .islandora-newspaper-grid .viewYears .month-container.loadedMonth, body.newspaperSet .islandora-newspaper-grid .viewYears .month-container.loadedMonth, body.audio .islandora-newspaper-grid .viewYears .month-container.loadedMonth {
+    body.largeImage .islandora-newspaper-grid .viewYears .month-container.loadedMonth, body.pdf .islandora-newspaper-grid .viewYears .month-container.loadedMonth, body.video .islandora-newspaper-grid .viewYears .month-container.loadedMonth, body.newspaperSet .islandora-newspaper-grid .viewYears .month-container.loadedMonth, body.audio .islandora-newspaper-grid .viewYears .month-container.loadedMonth, body.oralHistory .islandora-newspaper-grid .viewYears .month-container.loadedMonth {
       display: block; }
-    body.largeImage .islandora-newspaper-grid .viewYears .month-container, body.pdf .islandora-newspaper-grid .viewYears .month-container, body.video .islandora-newspaper-grid .viewYears .month-container, body.newspaperSet .islandora-newspaper-grid .viewYears .month-container, body.audio .islandora-newspaper-grid .viewYears .month-container {
+    body.largeImage .islandora-newspaper-grid .viewYears .month-container, body.pdf .islandora-newspaper-grid .viewYears .month-container, body.video .islandora-newspaper-grid .viewYears .month-container, body.newspaperSet .islandora-newspaper-grid .viewYears .month-container, body.audio .islandora-newspaper-grid .viewYears .month-container, body.oralHistory .islandora-newspaper-grid .viewYears .month-container {
       display: none; }
-    body.largeImage .islandora-newspaper-grid .viewYears .issue-container, body.pdf .islandora-newspaper-grid .viewYears .issue-container, body.video .islandora-newspaper-grid .viewYears .issue-container, body.newspaperSet .islandora-newspaper-grid .viewYears .issue-container, body.audio .islandora-newspaper-grid .viewYears .issue-container {
+    body.largeImage .islandora-newspaper-grid .viewYears .issue-container, body.pdf .islandora-newspaper-grid .viewYears .issue-container, body.video .islandora-newspaper-grid .viewYears .issue-container, body.newspaperSet .islandora-newspaper-grid .viewYears .issue-container, body.audio .islandora-newspaper-grid .viewYears .issue-container, body.oralHistory .islandora-newspaper-grid .viewYears .issue-container {
       display: none; }
-    body.largeImage .islandora-newspaper-grid .viewYears .issue-container:first-child, body.pdf .islandora-newspaper-grid .viewYears .issue-container:first-child, body.video .islandora-newspaper-grid .viewYears .issue-container:first-child, body.newspaperSet .islandora-newspaper-grid .viewYears .issue-container:first-child, body.audio .islandora-newspaper-grid .viewYears .issue-container:first-child {
+    body.largeImage .islandora-newspaper-grid .viewYears .issue-container:first-child, body.pdf .islandora-newspaper-grid .viewYears .issue-container:first-child, body.video .islandora-newspaper-grid .viewYears .issue-container:first-child, body.newspaperSet .islandora-newspaper-grid .viewYears .issue-container:first-child, body.audio .islandora-newspaper-grid .viewYears .issue-container:first-child, body.oralHistory .islandora-newspaper-grid .viewYears .issue-container:first-child {
       display: flex;
       justify-content: center;
       height: auto;
       overflow: hidden; }
-  body.largeImage .islandora-newspaper-grid .firstYearCover, body.largeImage .islandora-newspaper-grid .publication-year-container-label span, body.pdf .islandora-newspaper-grid .firstYearCover, body.pdf .islandora-newspaper-grid .publication-year-container-label span, body.video .islandora-newspaper-grid .firstYearCover, body.video .islandora-newspaper-grid .publication-year-container-label span, body.newspaperSet .islandora-newspaper-grid .firstYearCover, body.newspaperSet .islandora-newspaper-grid .publication-year-container-label span, body.audio .islandora-newspaper-grid .firstYearCover, body.audio .islandora-newspaper-grid .publication-year-container-label span {
+  body.largeImage .islandora-newspaper-grid .firstYearCover, body.largeImage .islandora-newspaper-grid .publication-year-container-label span, body.pdf .islandora-newspaper-grid .firstYearCover, body.pdf .islandora-newspaper-grid .publication-year-container-label span, body.video .islandora-newspaper-grid .firstYearCover, body.video .islandora-newspaper-grid .publication-year-container-label span, body.newspaperSet .islandora-newspaper-grid .firstYearCover, body.newspaperSet .islandora-newspaper-grid .publication-year-container-label span, body.audio .islandora-newspaper-grid .firstYearCover, body.audio .islandora-newspaper-grid .publication-year-container-label span, body.oralHistory .islandora-newspaper-grid .firstYearCover, body.oralHistory .islandora-newspaper-grid .publication-year-container-label span {
     transition-duration: 0.2s; }
-  body.largeImage .islandora-newspaper-grid .publication-year-container:hover .firstYearCover, body.pdf .islandora-newspaper-grid .publication-year-container:hover .firstYearCover, body.video .islandora-newspaper-grid .publication-year-container:hover .firstYearCover, body.newspaperSet .islandora-newspaper-grid .publication-year-container:hover .firstYearCover, body.audio .islandora-newspaper-grid .publication-year-container:hover .firstYearCover {
+  body.largeImage .islandora-newspaper-grid .publication-year-container:hover .firstYearCover, body.pdf .islandora-newspaper-grid .publication-year-container:hover .firstYearCover, body.video .islandora-newspaper-grid .publication-year-container:hover .firstYearCover, body.newspaperSet .islandora-newspaper-grid .publication-year-container:hover .firstYearCover, body.audio .islandora-newspaper-grid .publication-year-container:hover .firstYearCover, body.oralHistory .islandora-newspaper-grid .publication-year-container:hover .firstYearCover {
     transform: scale3d(1.1, 1.1, 1.1);
     transition-duration: 0.2s; }
-  body.largeImage .islandora-newspaper-grid .publication-year-container-label, body.pdf .islandora-newspaper-grid .publication-year-container-label, body.video .islandora-newspaper-grid .publication-year-container-label, body.newspaperSet .islandora-newspaper-grid .publication-year-container-label, body.audio .islandora-newspaper-grid .publication-year-container-label {
+  body.largeImage .islandora-newspaper-grid .publication-year-container-label, body.pdf .islandora-newspaper-grid .publication-year-container-label, body.video .islandora-newspaper-grid .publication-year-container-label, body.newspaperSet .islandora-newspaper-grid .publication-year-container-label, body.audio .islandora-newspaper-grid .publication-year-container-label, body.oralHistory .islandora-newspaper-grid .publication-year-container-label {
     display: flex;
     width: 100%;
     justify-content: center;
@@ -4820,7 +4820,7 @@ body.largeImage .islandora-newspaper-grid, body.pdf .islandora-newspaper-grid, b
     flex-direction: column;
     position: absolute;
     height: 420px !important; }
-    body.largeImage .islandora-newspaper-grid .publication-year-container-label span.publication-year, body.pdf .islandora-newspaper-grid .publication-year-container-label span.publication-year, body.video .islandora-newspaper-grid .publication-year-container-label span.publication-year, body.newspaperSet .islandora-newspaper-grid .publication-year-container-label span.publication-year, body.audio .islandora-newspaper-grid .publication-year-container-label span.publication-year {
+    body.largeImage .islandora-newspaper-grid .publication-year-container-label span.publication-year, body.pdf .islandora-newspaper-grid .publication-year-container-label span.publication-year, body.video .islandora-newspaper-grid .publication-year-container-label span.publication-year, body.newspaperSet .islandora-newspaper-grid .publication-year-container-label span.publication-year, body.audio .islandora-newspaper-grid .publication-year-container-label span.publication-year, body.oralHistory .islandora-newspaper-grid .publication-year-container-label span.publication-year {
       position: absolute;
       bottom: 50px;
       left: 0px;
@@ -4831,11 +4831,11 @@ body.largeImage .islandora-newspaper-grid, body.pdf .islandora-newspaper-grid, b
       padding-left: 30px;
       padding-top: 20px;
       z-index: 8; }
-    body.largeImage .islandora-newspaper-grid .publication-year-container-label span.issues-year-total, body.pdf .islandora-newspaper-grid .publication-year-container-label span.issues-year-total, body.video .islandora-newspaper-grid .publication-year-container-label span.issues-year-total, body.newspaperSet .islandora-newspaper-grid .publication-year-container-label span.issues-year-total, body.audio .islandora-newspaper-grid .publication-year-container-label span.issues-year-total {
+    body.largeImage .islandora-newspaper-grid .publication-year-container-label span.issues-year-total, body.pdf .islandora-newspaper-grid .publication-year-container-label span.issues-year-total, body.video .islandora-newspaper-grid .publication-year-container-label span.issues-year-total, body.newspaperSet .islandora-newspaper-grid .publication-year-container-label span.issues-year-total, body.audio .islandora-newspaper-grid .publication-year-container-label span.issues-year-total, body.oralHistory .islandora-newspaper-grid .publication-year-container-label span.issues-year-total {
       position: absolute;
       bottom: 15px;
       left: 30px; }
-  body.largeImage .islandora-newspaper-grid span.issues-year-total, body.pdf .islandora-newspaper-grid span.issues-year-total, body.video .islandora-newspaper-grid span.issues-year-total, body.newspaperSet .islandora-newspaper-grid span.issues-year-total, body.audio .islandora-newspaper-grid span.issues-year-total {
+  body.largeImage .islandora-newspaper-grid span.issues-year-total, body.pdf .islandora-newspaper-grid span.issues-year-total, body.video .islandora-newspaper-grid span.issues-year-total, body.newspaperSet .islandora-newspaper-grid span.issues-year-total, body.audio .islandora-newspaper-grid span.issues-year-total, body.oralHistory .islandora-newspaper-grid span.issues-year-total {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -4844,17 +4844,17 @@ body.largeImage .islandora-newspaper-grid, body.pdf .islandora-newspaper-grid, b
     letter-spacing: 1px;
     line-height: 5px;
     padding-bottom: 10px; }
-  body.largeImage .islandora-newspaper-grid span.publication-year, body.pdf .islandora-newspaper-grid span.publication-year, body.video .islandora-newspaper-grid span.publication-year, body.newspaperSet .islandora-newspaper-grid span.publication-year, body.audio .islandora-newspaper-grid span.publication-year {
+  body.largeImage .islandora-newspaper-grid span.publication-year, body.pdf .islandora-newspaper-grid span.publication-year, body.video .islandora-newspaper-grid span.publication-year, body.newspaperSet .islandora-newspaper-grid span.publication-year, body.audio .islandora-newspaper-grid span.publication-year, body.oralHistory .islandora-newspaper-grid span.publication-year {
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 25px;
     letter-spacing: 2px; }
-  body.largeImage .islandora-newspaper-grid .publication-year-container:nth-child(5n), body.pdf .islandora-newspaper-grid .publication-year-container:nth-child(5n), body.video .islandora-newspaper-grid .publication-year-container:nth-child(5n), body.newspaperSet .islandora-newspaper-grid .publication-year-container:nth-child(5n), body.audio .islandora-newspaper-grid .publication-year-container:nth-child(5n) {
+  body.largeImage .islandora-newspaper-grid .publication-year-container:nth-child(5n), body.pdf .islandora-newspaper-grid .publication-year-container:nth-child(5n), body.video .islandora-newspaper-grid .publication-year-container:nth-child(5n), body.newspaperSet .islandora-newspaper-grid .publication-year-container:nth-child(5n), body.audio .islandora-newspaper-grid .publication-year-container:nth-child(5n), body.oralHistory .islandora-newspaper-grid .publication-year-container:nth-child(5n) {
     margin-right: 0px !important; }
-body.largeImage .inactiveYear, body.pdf .inactiveYear, body.video .inactiveYear, body.newspaperSet .inactiveYear, body.audio .inactiveYear {
+body.largeImage .inactiveYear, body.pdf .inactiveYear, body.video .inactiveYear, body.newspaperSet .inactiveYear, body.audio .inactiveYear, body.oralHistory .inactiveYear {
   display: none !important; }
-body.largeImage .selectBack, body.pdf .selectBack, body.video .selectBack, body.newspaperSet .selectBack, body.audio .selectBack {
+body.largeImage .selectBack, body.pdf .selectBack, body.video .selectBack, body.newspaperSet .selectBack, body.audio .selectBack, body.oralHistory .selectBack {
   position: absolute;
   top: 2px;
   right: 3px;
@@ -4863,43 +4863,43 @@ body.largeImage .selectBack, body.pdf .selectBack, body.video .selectBack, body.
   align-items: flex-start;
   cursor: pointer;
   transition-duration: 0.5s; }
-  body.largeImage .selectBack span.backText, body.pdf .selectBack span.backText, body.video .selectBack span.backText, body.newspaperSet .selectBack span.backText, body.audio .selectBack span.backText {
+  body.largeImage .selectBack span.backText, body.pdf .selectBack span.backText, body.video .selectBack span.backText, body.newspaperSet .selectBack span.backText, body.audio .selectBack span.backText, body.oralHistory .selectBack span.backText {
     text-transform: uppercase;
     font-size: 11px;
     position: relative;
     top: -1px;
     right: 7px;
     letter-spacing: 1px; }
-  body.largeImage .selectBack span.backShape, body.pdf .selectBack span.backShape, body.video .selectBack span.backShape, body.newspaperSet .selectBack span.backShape, body.audio .selectBack span.backShape {
+  body.largeImage .selectBack span.backShape, body.pdf .selectBack span.backShape, body.video .selectBack span.backShape, body.newspaperSet .selectBack span.backShape, body.audio .selectBack span.backShape, body.oralHistory .selectBack span.backShape {
     width: 40px;
     height: 12px !important;
     background: #676767;
     transform: skew(-20deg); }
-body.largeImage .selectBack:hover, body.pdf .selectBack:hover, body.video .selectBack:hover, body.newspaperSet .selectBack:hover, body.audio .selectBack:hover {
+body.largeImage .selectBack:hover, body.pdf .selectBack:hover, body.video .selectBack:hover, body.newspaperSet .selectBack:hover, body.audio .selectBack:hover, body.oralHistory .selectBack:hover {
   transform: translateX(-5px);
   transition-duration: 0.5s; }
-body.largeImage span.filler-border, body.pdf span.filler-border, body.video span.filler-border, body.newspaperSet span.filler-border, body.audio span.filler-border {
+body.largeImage span.filler-border, body.pdf span.filler-border, body.video span.filler-border, body.newspaperSet span.filler-border, body.audio span.filler-border, body.oralHistory span.filler-border {
   display: none; }
-body.largeImage .monthLevel .publication-year-container-label, body.pdf .monthLevel .publication-year-container-label, body.video .monthLevel .publication-year-container-label, body.newspaperSet .monthLevel .publication-year-container-label, body.audio .monthLevel .publication-year-container-label {
+body.largeImage .monthLevel .publication-year-container-label, body.pdf .monthLevel .publication-year-container-label, body.video .monthLevel .publication-year-container-label, body.newspaperSet .monthLevel .publication-year-container-label, body.audio .monthLevel .publication-year-container-label, body.oralHistory .monthLevel .publication-year-container-label {
   pointer-events: none; }
-body.largeImage .issuePreview, body.largeImage .grid-loading-notice, body.largeImage .monthPrompt, body.largeImage .dayPrompt, body.pdf .issuePreview, body.pdf .grid-loading-notice, body.pdf .monthPrompt, body.pdf .dayPrompt, body.video .issuePreview, body.video .grid-loading-notice, body.video .monthPrompt, body.video .dayPrompt, body.newspaperSet .issuePreview, body.newspaperSet .grid-loading-notice, body.newspaperSet .monthPrompt, body.newspaperSet .dayPrompt, body.audio .issuePreview, body.audio .grid-loading-notice, body.audio .monthPrompt, body.audio .dayPrompt {
+body.largeImage .issuePreview, body.largeImage .grid-loading-notice, body.largeImage .monthPrompt, body.largeImage .dayPrompt, body.pdf .issuePreview, body.pdf .grid-loading-notice, body.pdf .monthPrompt, body.pdf .dayPrompt, body.video .issuePreview, body.video .grid-loading-notice, body.video .monthPrompt, body.video .dayPrompt, body.newspaperSet .issuePreview, body.newspaperSet .grid-loading-notice, body.newspaperSet .monthPrompt, body.newspaperSet .dayPrompt, body.audio .issuePreview, body.audio .grid-loading-notice, body.audio .monthPrompt, body.audio .dayPrompt, body.oralHistory .issuePreview, body.oralHistory .grid-loading-notice, body.oralHistory .monthPrompt, body.oralHistory .dayPrompt {
   display: none; }
-body.largeImage .dayContainer > .dayIssue, body.largeImage .highlight > .dayIssue, body.pdf .dayContainer > .dayIssue, body.pdf .highlight > .dayIssue, body.video .dayContainer > .dayIssue, body.video .highlight > .dayIssue, body.newspaperSet .dayContainer > .dayIssue, body.newspaperSet .highlight > .dayIssue, body.audio .dayContainer > .dayIssue, body.audio .highlight > .dayIssue {
+body.largeImage .dayContainer > .dayIssue, body.largeImage .highlight > .dayIssue, body.pdf .dayContainer > .dayIssue, body.pdf .highlight > .dayIssue, body.video .dayContainer > .dayIssue, body.video .highlight > .dayIssue, body.newspaperSet .dayContainer > .dayIssue, body.newspaperSet .highlight > .dayIssue, body.audio .dayContainer > .dayIssue, body.audio .highlight > .dayIssue, body.oralHistory .dayContainer > .dayIssue, body.oralHistory .highlight > .dayIssue {
   display: none !important; }
-body.largeImage .monthLevel .activeYear .month-container, body.pdf .monthLevel .activeYear .month-container, body.video .monthLevel .activeYear .month-container, body.newspaperSet .monthLevel .activeYear .month-container, body.audio .monthLevel .activeYear .month-container {
+body.largeImage .monthLevel .activeYear .month-container, body.pdf .monthLevel .activeYear .month-container, body.video .monthLevel .activeYear .month-container, body.newspaperSet .monthLevel .activeYear .month-container, body.audio .monthLevel .activeYear .month-container, body.oralHistory .monthLevel .activeYear .month-container {
   overflow: hidden;
   height: 190px; }
-body.largeImage .monthLevel .firstMonthCover:not(.firstYearCover), body.pdf .monthLevel .firstMonthCover:not(.firstYearCover), body.video .monthLevel .firstMonthCover:not(.firstYearCover), body.newspaperSet .monthLevel .firstMonthCover:not(.firstYearCover), body.audio .monthLevel .firstMonthCover:not(.firstYearCover) {
+body.largeImage .monthLevel .firstMonthCover:not(.firstYearCover), body.pdf .monthLevel .firstMonthCover:not(.firstYearCover), body.video .monthLevel .firstMonthCover:not(.firstYearCover), body.newspaperSet .monthLevel .firstMonthCover:not(.firstYearCover), body.audio .monthLevel .firstMonthCover:not(.firstYearCover), body.oralHistory .monthLevel .firstMonthCover:not(.firstYearCover) {
   display: block !important; }
-body.largeImage .monthLevel .publication-year-container:hover .firstYearCover, body.pdf .monthLevel .publication-year-container:hover .firstYearCover, body.video .monthLevel .publication-year-container:hover .firstYearCover, body.newspaperSet .monthLevel .publication-year-container:hover .firstYearCover, body.audio .monthLevel .publication-year-container:hover .firstYearCover {
+body.largeImage .monthLevel .publication-year-container:hover .firstYearCover, body.pdf .monthLevel .publication-year-container:hover .firstYearCover, body.video .monthLevel .publication-year-container:hover .firstYearCover, body.newspaperSet .monthLevel .publication-year-container:hover .firstYearCover, body.audio .monthLevel .publication-year-container:hover .firstYearCover, body.oralHistory .monthLevel .publication-year-container:hover .firstYearCover {
   transform: scale3d(1, 1, 1);
   transition-duration: 0.2s; }
-body.largeImage .monthLevel .grid-loading-notice, body.pdf .monthLevel .grid-loading-notice, body.video .monthLevel .grid-loading-notice, body.newspaperSet .monthLevel .grid-loading-notice, body.audio .monthLevel .grid-loading-notice {
+body.largeImage .monthLevel .grid-loading-notice, body.pdf .monthLevel .grid-loading-notice, body.video .monthLevel .grid-loading-notice, body.newspaperSet .monthLevel .grid-loading-notice, body.audio .monthLevel .grid-loading-notice, body.oralHistory .monthLevel .grid-loading-notice {
   position: absolute;
   top: 60px;
   right: 0px;
   z-index: 99; }
-body.largeImage .monthLevel .issuePreview, body.pdf .monthLevel .issuePreview, body.video .monthLevel .issuePreview, body.newspaperSet .monthLevel .issuePreview, body.audio .monthLevel .issuePreview {
+body.largeImage .monthLevel .issuePreview, body.pdf .monthLevel .issuePreview, body.video .monthLevel .issuePreview, body.newspaperSet .monthLevel .issuePreview, body.audio .monthLevel .issuePreview, body.oralHistory .monthLevel .issuePreview {
   height: 700px;
   overflow: hidden;
   width: 50%;
@@ -4909,12 +4909,12 @@ body.largeImage .monthLevel .issuePreview, body.pdf .monthLevel .issuePreview, b
   display: flex;
   align-items: center;
   padding-top: 50px; }
-  body.largeImage .monthLevel .issuePreview img.lazy, body.pdf .monthLevel .issuePreview img.lazy, body.video .monthLevel .issuePreview img.lazy, body.newspaperSet .monthLevel .issuePreview img.lazy, body.audio .monthLevel .issuePreview img.lazy {
+  body.largeImage .monthLevel .issuePreview img.lazy, body.pdf .monthLevel .issuePreview img.lazy, body.video .monthLevel .issuePreview img.lazy, body.newspaperSet .monthLevel .issuePreview img.lazy, body.audio .monthLevel .issuePreview img.lazy, body.oralHistory .monthLevel .issuePreview img.lazy {
     position: absolute;
     width: 580px;
     transition-duration: inherit !important;
     border: 1px solid #cecece; }
-  body.largeImage .monthLevel .issuePreview .monthPrompt, body.pdf .monthLevel .issuePreview .monthPrompt, body.video .monthLevel .issuePreview .monthPrompt, body.newspaperSet .monthLevel .issuePreview .monthPrompt, body.audio .monthLevel .issuePreview .monthPrompt {
+  body.largeImage .monthLevel .issuePreview .monthPrompt, body.pdf .monthLevel .issuePreview .monthPrompt, body.video .monthLevel .issuePreview .monthPrompt, body.newspaperSet .monthLevel .issuePreview .monthPrompt, body.audio .monthLevel .issuePreview .monthPrompt, body.oralHistory .monthLevel .issuePreview .monthPrompt {
     border: 1px solid #cecece;
     height: 410px;
     width: 100%;
@@ -4924,42 +4924,42 @@ body.largeImage .monthLevel .issuePreview, body.pdf .monthLevel .issuePreview, b
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 12px; }
-body.largeImage .monthLevel .firstMonthCover, body.pdf .monthLevel .firstMonthCover, body.video .monthLevel .firstMonthCover, body.newspaperSet .monthLevel .firstMonthCover, body.audio .monthLevel .firstMonthCover {
+body.largeImage .monthLevel .firstMonthCover, body.pdf .monthLevel .firstMonthCover, body.video .monthLevel .firstMonthCover, body.newspaperSet .monthLevel .firstMonthCover, body.audio .monthLevel .firstMonthCover, body.oralHistory .monthLevel .firstMonthCover {
   display: block; }
-body.largeImage .monthLevel .islandora-newspaper-grid, body.pdf .monthLevel .islandora-newspaper-grid, body.video .monthLevel .islandora-newspaper-grid, body.newspaperSet .monthLevel .islandora-newspaper-grid, body.audio .monthLevel .islandora-newspaper-grid {
+body.largeImage .monthLevel .islandora-newspaper-grid, body.pdf .monthLevel .islandora-newspaper-grid, body.video .monthLevel .islandora-newspaper-grid, body.newspaperSet .monthLevel .islandora-newspaper-grid, body.audio .monthLevel .islandora-newspaper-grid, body.oralHistory .monthLevel .islandora-newspaper-grid {
   margin-top: 0px; }
-body.largeImage .monthLevel .monthSelect, body.pdf .monthLevel .monthSelect, body.video .monthLevel .monthSelect, body.newspaperSet .monthLevel .monthSelect, body.audio .monthLevel .monthSelect {
+body.largeImage .monthLevel .monthSelect, body.pdf .monthLevel .monthSelect, body.video .monthLevel .monthSelect, body.newspaperSet .monthLevel .monthSelect, body.audio .monthLevel .monthSelect, body.oralHistory .monthLevel .monthSelect {
   opacity: 1; }
-body.largeImage .monthLevel #calendar, body.pdf .monthLevel #calendar, body.video .monthLevel #calendar, body.newspaperSet .monthLevel #calendar, body.audio .monthLevel #calendar {
+body.largeImage .monthLevel #calendar, body.pdf .monthLevel #calendar, body.video .monthLevel #calendar, body.newspaperSet .monthLevel #calendar, body.audio .monthLevel #calendar, body.oralHistory .monthLevel #calendar {
   display: none; }
-body.largeImage .monthLevel .publication-year-container, body.pdf .monthLevel .publication-year-container, body.video .monthLevel .publication-year-container, body.newspaperSet .monthLevel .publication-year-container, body.audio .monthLevel .publication-year-container {
+body.largeImage .monthLevel .publication-year-container, body.pdf .monthLevel .publication-year-container, body.video .monthLevel .publication-year-container, body.newspaperSet .monthLevel .publication-year-container, body.audio .monthLevel .publication-year-container, body.oralHistory .monthLevel .publication-year-container {
   box-shadow: none; }
-body.largeImage .monthLevel .publication-year-container.activeYear .month-container:not(.filler-calendar) .month-container-label:hover, body.pdf .monthLevel .publication-year-container.activeYear .month-container:not(.filler-calendar) .month-container-label:hover, body.video .monthLevel .publication-year-container.activeYear .month-container:not(.filler-calendar) .month-container-label:hover, body.newspaperSet .monthLevel .publication-year-container.activeYear .month-container:not(.filler-calendar) .month-container-label:hover, body.audio .monthLevel .publication-year-container.activeYear .month-container:not(.filler-calendar) .month-container-label:hover {
+body.largeImage .monthLevel .publication-year-container.activeYear .month-container:not(.filler-calendar) .month-container-label:hover, body.pdf .monthLevel .publication-year-container.activeYear .month-container:not(.filler-calendar) .month-container-label:hover, body.video .monthLevel .publication-year-container.activeYear .month-container:not(.filler-calendar) .month-container-label:hover, body.newspaperSet .monthLevel .publication-year-container.activeYear .month-container:not(.filler-calendar) .month-container-label:hover, body.audio .monthLevel .publication-year-container.activeYear .month-container:not(.filler-calendar) .month-container-label:hover, body.oralHistory .monthLevel .publication-year-container.activeYear .month-container:not(.filler-calendar) .month-container-label:hover {
   box-shadow: -3px 4px 20px #e8e8e8;
   transition-duration: 0s; }
-body.largeImage .monthLevel .filler-calendar .ui-datepicker-title, body.pdf .monthLevel .filler-calendar .ui-datepicker-title, body.video .monthLevel .filler-calendar .ui-datepicker-title, body.newspaperSet .monthLevel .filler-calendar .ui-datepicker-title, body.audio .monthLevel .filler-calendar .ui-datepicker-title {
+body.largeImage .monthLevel .filler-calendar .ui-datepicker-title, body.pdf .monthLevel .filler-calendar .ui-datepicker-title, body.video .monthLevel .filler-calendar .ui-datepicker-title, body.newspaperSet .monthLevel .filler-calendar .ui-datepicker-title, body.audio .monthLevel .filler-calendar .ui-datepicker-title, body.oralHistory .monthLevel .filler-calendar .ui-datepicker-title {
   opacity: 0.6; }
-body.largeImage .monthLevel .ui-datepicker-calendar, body.pdf .monthLevel .ui-datepicker-calendar, body.video .monthLevel .ui-datepicker-calendar, body.newspaperSet .monthLevel .ui-datepicker-calendar, body.audio .monthLevel .ui-datepicker-calendar {
+body.largeImage .monthLevel .ui-datepicker-calendar, body.pdf .monthLevel .ui-datepicker-calendar, body.video .monthLevel .ui-datepicker-calendar, body.newspaperSet .monthLevel .ui-datepicker-calendar, body.audio .monthLevel .ui-datepicker-calendar, body.oralHistory .monthLevel .ui-datepicker-calendar {
   border: 0px;
   min-width: 126px;
   margin-bottom: 10px; }
-body.largeImage .monthLevel .ui-datepicker-title, body.pdf .monthLevel .ui-datepicker-title, body.video .monthLevel .ui-datepicker-title, body.newspaperSet .monthLevel .ui-datepicker-title, body.audio .monthLevel .ui-datepicker-title {
+body.largeImage .monthLevel .ui-datepicker-title, body.pdf .monthLevel .ui-datepicker-title, body.video .monthLevel .ui-datepicker-title, body.newspaperSet .monthLevel .ui-datepicker-title, body.audio .monthLevel .ui-datepicker-title, body.oralHistory .monthLevel .ui-datepicker-title {
   letter-spacing: 2px;
   font-size: 16px; }
-body.largeImage .monthLevel span.ui-datepicker-month, body.pdf .monthLevel span.ui-datepicker-month, body.video .monthLevel span.ui-datepicker-month, body.newspaperSet .monthLevel span.ui-datepicker-month, body.audio .monthLevel span.ui-datepicker-month {
+body.largeImage .monthLevel span.ui-datepicker-month, body.pdf .monthLevel span.ui-datepicker-month, body.video .monthLevel span.ui-datepicker-month, body.newspaperSet .monthLevel span.ui-datepicker-month, body.audio .monthLevel span.ui-datepicker-month, body.oralHistory .monthLevel span.ui-datepicker-month {
   text-transform: uppercase;
   font-weight: 700; }
-body.largeImage .monthLevel .ui-datepicker-calendar thead, body.pdf .monthLevel .ui-datepicker-calendar thead, body.video .monthLevel .ui-datepicker-calendar thead, body.newspaperSet .monthLevel .ui-datepicker-calendar thead, body.audio .monthLevel .ui-datepicker-calendar thead {
+body.largeImage .monthLevel .ui-datepicker-calendar thead, body.pdf .monthLevel .ui-datepicker-calendar thead, body.video .monthLevel .ui-datepicker-calendar thead, body.newspaperSet .monthLevel .ui-datepicker-calendar thead, body.audio .monthLevel .ui-datepicker-calendar thead, body.oralHistory .monthLevel .ui-datepicker-calendar thead {
   display: none; }
-body.largeImage .monthLevel .ui-datepicker-calendar td, body.pdf .monthLevel .ui-datepicker-calendar td, body.video .monthLevel .ui-datepicker-calendar td, body.newspaperSet .monthLevel .ui-datepicker-calendar td, body.audio .monthLevel .ui-datepicker-calendar td {
+body.largeImage .monthLevel .ui-datepicker-calendar td, body.pdf .monthLevel .ui-datepicker-calendar td, body.video .monthLevel .ui-datepicker-calendar td, body.newspaperSet .monthLevel .ui-datepicker-calendar td, body.audio .monthLevel .ui-datepicker-calendar td, body.oralHistory .monthLevel .ui-datepicker-calendar td {
   padding: 0px 7px !important; }
-body.largeImage .monthLevel .ui-datepicker-calendar td:not(.ui-state-disabled), body.pdf .monthLevel .ui-datepicker-calendar td:not(.ui-state-disabled), body.video .monthLevel .ui-datepicker-calendar td:not(.ui-state-disabled), body.newspaperSet .monthLevel .ui-datepicker-calendar td:not(.ui-state-disabled), body.audio .monthLevel .ui-datepicker-calendar td:not(.ui-state-disabled) {
+body.largeImage .monthLevel .ui-datepicker-calendar td:not(.ui-state-disabled), body.pdf .monthLevel .ui-datepicker-calendar td:not(.ui-state-disabled), body.video .monthLevel .ui-datepicker-calendar td:not(.ui-state-disabled), body.newspaperSet .monthLevel .ui-datepicker-calendar td:not(.ui-state-disabled), body.audio .monthLevel .ui-datepicker-calendar td:not(.ui-state-disabled), body.oralHistory .monthLevel .ui-datepicker-calendar td:not(.ui-state-disabled) {
   position: relative;
   height: 18px;
   width: 18px; }
-  body.largeImage .monthLevel .ui-datepicker-calendar td:not(.ui-state-disabled) a, body.pdf .monthLevel .ui-datepicker-calendar td:not(.ui-state-disabled) a, body.video .monthLevel .ui-datepicker-calendar td:not(.ui-state-disabled) a, body.newspaperSet .monthLevel .ui-datepicker-calendar td:not(.ui-state-disabled) a, body.audio .monthLevel .ui-datepicker-calendar td:not(.ui-state-disabled) a {
+  body.largeImage .monthLevel .ui-datepicker-calendar td:not(.ui-state-disabled) a, body.pdf .monthLevel .ui-datepicker-calendar td:not(.ui-state-disabled) a, body.video .monthLevel .ui-datepicker-calendar td:not(.ui-state-disabled) a, body.newspaperSet .monthLevel .ui-datepicker-calendar td:not(.ui-state-disabled) a, body.audio .monthLevel .ui-datepicker-calendar td:not(.ui-state-disabled) a, body.oralHistory .monthLevel .ui-datepicker-calendar td:not(.ui-state-disabled) a {
     display: none; }
-  body.largeImage .monthLevel .ui-datepicker-calendar td:not(.ui-state-disabled) .circleDay, body.pdf .monthLevel .ui-datepicker-calendar td:not(.ui-state-disabled) .circleDay, body.video .monthLevel .ui-datepicker-calendar td:not(.ui-state-disabled) .circleDay, body.newspaperSet .monthLevel .ui-datepicker-calendar td:not(.ui-state-disabled) .circleDay, body.audio .monthLevel .ui-datepicker-calendar td:not(.ui-state-disabled) .circleDay {
+  body.largeImage .monthLevel .ui-datepicker-calendar td:not(.ui-state-disabled) .circleDay, body.pdf .monthLevel .ui-datepicker-calendar td:not(.ui-state-disabled) .circleDay, body.video .monthLevel .ui-datepicker-calendar td:not(.ui-state-disabled) .circleDay, body.newspaperSet .monthLevel .ui-datepicker-calendar td:not(.ui-state-disabled) .circleDay, body.audio .monthLevel .ui-datepicker-calendar td:not(.ui-state-disabled) .circleDay, body.oralHistory .monthLevel .ui-datepicker-calendar td:not(.ui-state-disabled) .circleDay {
     width: 15px;
     height: 15px;
     position: absolute;
@@ -4967,14 +4967,14 @@ body.largeImage .monthLevel .ui-datepicker-calendar td:not(.ui-state-disabled), 
     left: 0px;
     border-radius: 100%;
     border: 1px solid #cecece; }
-body.largeImage .monthLevel .month-container-label > span, body.largeImage .monthLevel .month-container-label a.ui-corner-all, body.pdf .monthLevel .month-container-label > span, body.pdf .monthLevel .month-container-label a.ui-corner-all, body.video .monthLevel .month-container-label > span, body.video .monthLevel .month-container-label a.ui-corner-all, body.newspaperSet .monthLevel .month-container-label > span, body.newspaperSet .monthLevel .month-container-label a.ui-corner-all, body.audio .monthLevel .month-container-label > span, body.audio .monthLevel .month-container-label a.ui-corner-all {
+body.largeImage .monthLevel .month-container-label > span, body.largeImage .monthLevel .month-container-label a.ui-corner-all, body.pdf .monthLevel .month-container-label > span, body.pdf .monthLevel .month-container-label a.ui-corner-all, body.video .monthLevel .month-container-label > span, body.video .monthLevel .month-container-label a.ui-corner-all, body.newspaperSet .monthLevel .month-container-label > span, body.newspaperSet .monthLevel .month-container-label a.ui-corner-all, body.audio .monthLevel .month-container-label > span, body.audio .monthLevel .month-container-label a.ui-corner-all, body.oralHistory .monthLevel .month-container-label > span, body.oralHistory .monthLevel .month-container-label a.ui-corner-all {
   display: none; }
-body.largeImage .monthLevel .month-container-label div.month-issues-container:not(img), body.pdf .monthLevel .month-container-label div.month-issues-container:not(img), body.video .monthLevel .month-container-label div.month-issues-container:not(img), body.newspaperSet .monthLevel .month-container-label div.month-issues-container:not(img), body.audio .monthLevel .month-container-label div.month-issues-container:not(img) {
+body.largeImage .monthLevel .month-container-label div.month-issues-container:not(img), body.pdf .monthLevel .month-container-label div.month-issues-container:not(img), body.video .monthLevel .month-container-label div.month-issues-container:not(img), body.newspaperSet .monthLevel .month-container-label div.month-issues-container:not(img), body.audio .monthLevel .month-container-label div.month-issues-container:not(img), body.oralHistory .monthLevel .month-container-label div.month-issues-container:not(img) {
   opacity: 0;
   position: absolute; }
-body.largeImage .monthLevel .publication-year-container-label, body.pdf .monthLevel .publication-year-container-label, body.video .monthLevel .publication-year-container-label, body.newspaperSet .monthLevel .publication-year-container-label, body.audio .monthLevel .publication-year-container-label {
+body.largeImage .monthLevel .publication-year-container-label, body.pdf .monthLevel .publication-year-container-label, body.video .monthLevel .publication-year-container-label, body.newspaperSet .monthLevel .publication-year-container-label, body.audio .monthLevel .publication-year-container-label, body.oralHistory .monthLevel .publication-year-container-label {
   display: none; }
-body.largeImage .monthLevel #calendar, body.pdf .monthLevel #calendar, body.video .monthLevel #calendar, body.newspaperSet .monthLevel #calendar, body.audio .monthLevel #calendar {
+body.largeImage .monthLevel #calendar, body.pdf .monthLevel #calendar, body.video .monthLevel #calendar, body.newspaperSet .monthLevel #calendar, body.audio .monthLevel #calendar, body.oralHistory .monthLevel #calendar {
   flex-wrap: wrap;
   border-bottom: 0px;
   margin-bottom: 1px;
@@ -4984,69 +4984,69 @@ body.largeImage .monthLevel #calendar, body.pdf .monthLevel #calendar, body.vide
   max-width: 1200px;
   margin: 0px 20px;
   width: 100%; }
-  body.largeImage .monthLevel #calendar .ui-datepicker-multi .ui-datepicker-group table, body.pdf .monthLevel #calendar .ui-datepicker-multi .ui-datepicker-group table, body.video .monthLevel #calendar .ui-datepicker-multi .ui-datepicker-group table, body.newspaperSet .monthLevel #calendar .ui-datepicker-multi .ui-datepicker-group table, body.audio .monthLevel #calendar .ui-datepicker-multi .ui-datepicker-group table {
+  body.largeImage .monthLevel #calendar .ui-datepicker-multi .ui-datepicker-group table, body.pdf .monthLevel #calendar .ui-datepicker-multi .ui-datepicker-group table, body.video .monthLevel #calendar .ui-datepicker-multi .ui-datepicker-group table, body.newspaperSet .monthLevel #calendar .ui-datepicker-multi .ui-datepicker-group table, body.audio .monthLevel #calendar .ui-datepicker-multi .ui-datepicker-group table, body.oralHistory .monthLevel #calendar .ui-datepicker-multi .ui-datepicker-group table {
     width: 95%;
     margin: 0 auto .4em;
     border: 0px; }
-  body.largeImage .monthLevel #calendar .ui-datepicker td, body.pdf .monthLevel #calendar .ui-datepicker td, body.video .monthLevel #calendar .ui-datepicker td, body.newspaperSet .monthLevel #calendar .ui-datepicker td, body.audio .monthLevel #calendar .ui-datepicker td {
+  body.largeImage .monthLevel #calendar .ui-datepicker td, body.pdf .monthLevel #calendar .ui-datepicker td, body.video .monthLevel #calendar .ui-datepicker td, body.newspaperSet .monthLevel #calendar .ui-datepicker td, body.audio .monthLevel #calendar .ui-datepicker td, body.oralHistory .monthLevel #calendar .ui-datepicker td {
     border: 1px solid #cecece !important; }
-    body.largeImage .monthLevel #calendar .ui-datepicker td a, body.pdf .monthLevel #calendar .ui-datepicker td a, body.video .monthLevel #calendar .ui-datepicker td a, body.newspaperSet .monthLevel #calendar .ui-datepicker td a, body.audio .monthLevel #calendar .ui-datepicker td a {
+    body.largeImage .monthLevel #calendar .ui-datepicker td a, body.pdf .monthLevel #calendar .ui-datepicker td a, body.video .monthLevel #calendar .ui-datepicker td a, body.newspaperSet .monthLevel #calendar .ui-datepicker td a, body.audio .monthLevel #calendar .ui-datepicker td a, body.oralHistory .monthLevel #calendar .ui-datepicker td a {
       display: flex;
       justify-content: center;
       align-items: center;
       height: 40px; }
-  body.largeImage .monthLevel #calendar .ui-datepicker td.ui-state-disabled, body.pdf .monthLevel #calendar .ui-datepicker td.ui-state-disabled, body.video .monthLevel #calendar .ui-datepicker td.ui-state-disabled, body.newspaperSet .monthLevel #calendar .ui-datepicker td.ui-state-disabled, body.audio .monthLevel #calendar .ui-datepicker td.ui-state-disabled {
+  body.largeImage .monthLevel #calendar .ui-datepicker td.ui-state-disabled, body.pdf .monthLevel #calendar .ui-datepicker td.ui-state-disabled, body.video .monthLevel #calendar .ui-datepicker td.ui-state-disabled, body.newspaperSet .monthLevel #calendar .ui-datepicker td.ui-state-disabled, body.audio .monthLevel #calendar .ui-datepicker td.ui-state-disabled, body.oralHistory .monthLevel #calendar .ui-datepicker td.ui-state-disabled {
     border: 0px !important; }
-body.largeImage .monthLevel .ui-datepicker-inline, body.pdf .monthLevel .ui-datepicker-inline, body.video .monthLevel .ui-datepicker-inline, body.newspaperSet .monthLevel .ui-datepicker-inline, body.audio .monthLevel .ui-datepicker-inline {
+body.largeImage .monthLevel .ui-datepicker-inline, body.pdf .monthLevel .ui-datepicker-inline, body.video .monthLevel .ui-datepicker-inline, body.newspaperSet .monthLevel .ui-datepicker-inline, body.audio .monthLevel .ui-datepicker-inline, body.oralHistory .monthLevel .ui-datepicker-inline {
   display: flex !important;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   width: 100% !important; }
-  body.largeImage .monthLevel .ui-datepicker-inline .ui-datepicker-group, body.pdf .monthLevel .ui-datepicker-inline .ui-datepicker-group, body.video .monthLevel .ui-datepicker-inline .ui-datepicker-group, body.newspaperSet .monthLevel .ui-datepicker-inline .ui-datepicker-group, body.audio .monthLevel .ui-datepicker-inline .ui-datepicker-group {
+  body.largeImage .monthLevel .ui-datepicker-inline .ui-datepicker-group, body.pdf .monthLevel .ui-datepicker-inline .ui-datepicker-group, body.video .monthLevel .ui-datepicker-inline .ui-datepicker-group, body.newspaperSet .monthLevel .ui-datepicker-inline .ui-datepicker-group, body.audio .monthLevel .ui-datepicker-inline .ui-datepicker-group, body.oralHistory .monthLevel .ui-datepicker-inline .ui-datepicker-group {
     width: 33%;
     pointer-events: none; }
-    body.largeImage .monthLevel .ui-datepicker-inline .ui-datepicker-group table, body.pdf .monthLevel .ui-datepicker-inline .ui-datepicker-group table, body.video .monthLevel .ui-datepicker-inline .ui-datepicker-group table, body.newspaperSet .monthLevel .ui-datepicker-inline .ui-datepicker-group table, body.audio .monthLevel .ui-datepicker-inline .ui-datepicker-group table {
+    body.largeImage .monthLevel .ui-datepicker-inline .ui-datepicker-group table, body.pdf .monthLevel .ui-datepicker-inline .ui-datepicker-group table, body.video .monthLevel .ui-datepicker-inline .ui-datepicker-group table, body.newspaperSet .monthLevel .ui-datepicker-inline .ui-datepicker-group table, body.audio .monthLevel .ui-datepicker-inline .ui-datepicker-group table, body.oralHistory .monthLevel .ui-datepicker-inline .ui-datepicker-group table {
       width: auto; }
-    body.largeImage .monthLevel .ui-datepicker-inline .ui-datepicker-group thead, body.pdf .monthLevel .ui-datepicker-inline .ui-datepicker-group thead, body.video .monthLevel .ui-datepicker-inline .ui-datepicker-group thead, body.newspaperSet .monthLevel .ui-datepicker-inline .ui-datepicker-group thead, body.audio .monthLevel .ui-datepicker-inline .ui-datepicker-group thead {
+    body.largeImage .monthLevel .ui-datepicker-inline .ui-datepicker-group thead, body.pdf .monthLevel .ui-datepicker-inline .ui-datepicker-group thead, body.video .monthLevel .ui-datepicker-inline .ui-datepicker-group thead, body.newspaperSet .monthLevel .ui-datepicker-inline .ui-datepicker-group thead, body.audio .monthLevel .ui-datepicker-inline .ui-datepicker-group thead, body.oralHistory .monthLevel .ui-datepicker-inline .ui-datepicker-group thead {
       display: none; }
-body.largeImage .monthLevel .month-container, body.pdf .monthLevel .month-container, body.video .monthLevel .month-container, body.newspaperSet .monthLevel .month-container, body.audio .monthLevel .month-container {
+body.largeImage .monthLevel .month-container, body.pdf .monthLevel .month-container, body.video .monthLevel .month-container, body.newspaperSet .monthLevel .month-container, body.audio .monthLevel .month-container, body.oralHistory .monthLevel .month-container {
   width: 25%; }
-body.largeImage .monthLevel .publication-year-container.activeYear, body.pdf .monthLevel .publication-year-container.activeYear, body.video .monthLevel .publication-year-container.activeYear, body.newspaperSet .monthLevel .publication-year-container.activeYear, body.audio .monthLevel .publication-year-container.activeYear {
+body.largeImage .monthLevel .publication-year-container.activeYear, body.pdf .monthLevel .publication-year-container.activeYear, body.video .monthLevel .publication-year-container.activeYear, body.newspaperSet .monthLevel .publication-year-container.activeYear, body.audio .monthLevel .publication-year-container.activeYear, body.oralHistory .monthLevel .publication-year-container.activeYear {
   width: 100%;
   height: fit-content;
   flex-direction: row !important;
   margin-right: 0px;
   height: -moz-fit-content; }
-body.largeImage .monthLevel .publication-year-container-label, body.pdf .monthLevel .publication-year-container-label, body.video .monthLevel .publication-year-container-label, body.newspaperSet .monthLevel .publication-year-container-label, body.audio .monthLevel .publication-year-container-label {
+body.largeImage .monthLevel .publication-year-container-label, body.pdf .monthLevel .publication-year-container-label, body.video .monthLevel .publication-year-container-label, body.newspaperSet .monthLevel .publication-year-container-label, body.audio .monthLevel .publication-year-container-label, body.oralHistory .monthLevel .publication-year-container-label {
   width: auto !important;
   flex-direction: column;
   height: 180px;
   justify-content: center; }
-body.largeImage .monthLevel span.issues-year-total, body.pdf .monthLevel span.issues-year-total, body.video .monthLevel span.issues-year-total, body.newspaperSet .monthLevel span.issues-year-total, body.audio .monthLevel span.issues-year-total {
+body.largeImage .monthLevel span.issues-year-total, body.pdf .monthLevel span.issues-year-total, body.video .monthLevel span.issues-year-total, body.newspaperSet .monthLevel span.issues-year-total, body.audio .monthLevel span.issues-year-total, body.oralHistory .monthLevel span.issues-year-total {
   flex-grow: 0 !important; }
-body.largeImage .monthLevel .yearSelect:hover, body.pdf .monthLevel .yearSelect:hover, body.video .monthLevel .yearSelect:hover, body.newspaperSet .monthLevel .yearSelect:hover, body.audio .monthLevel .yearSelect:hover {
+body.largeImage .monthLevel .yearSelect:hover, body.pdf .monthLevel .yearSelect:hover, body.video .monthLevel .yearSelect:hover, body.newspaperSet .monthLevel .yearSelect:hover, body.audio .monthLevel .yearSelect:hover, body.oralHistory .monthLevel .yearSelect:hover {
   border-bottom: 1px solid #cecece;
   transition-duration: 0.5s;
   cursor: pointer; }
-body.largeImage .monthLevel .publication-year-container, body.largeImage .monthLevel .publication-year-container:hover, body.pdf .monthLevel .publication-year-container, body.pdf .monthLevel .publication-year-container:hover, body.video .monthLevel .publication-year-container, body.video .monthLevel .publication-year-container:hover, body.newspaperSet .monthLevel .publication-year-container, body.newspaperSet .monthLevel .publication-year-container:hover, body.audio .monthLevel .publication-year-container, body.audio .monthLevel .publication-year-container:hover {
+body.largeImage .monthLevel .publication-year-container, body.largeImage .monthLevel .publication-year-container:hover, body.pdf .monthLevel .publication-year-container, body.pdf .monthLevel .publication-year-container:hover, body.video .monthLevel .publication-year-container, body.video .monthLevel .publication-year-container:hover, body.newspaperSet .monthLevel .publication-year-container, body.newspaperSet .monthLevel .publication-year-container:hover, body.audio .monthLevel .publication-year-container, body.audio .monthLevel .publication-year-container:hover, body.oralHistory .monthLevel .publication-year-container, body.oralHistory .monthLevel .publication-year-container:hover {
   transform: translateY(0px);
   transition-duration: 0s;
   border-bottom: 0px; }
-body.largeImage .monthSelect, body.largeImage .issueSelect, body.pdf .monthSelect, body.pdf .issueSelect, body.video .monthSelect, body.video .issueSelect, body.newspaperSet .monthSelect, body.newspaperSet .issueSelect, body.audio .monthSelect, body.audio .issueSelect {
+body.largeImage .monthSelect, body.largeImage .issueSelect, body.pdf .monthSelect, body.pdf .issueSelect, body.video .monthSelect, body.video .issueSelect, body.newspaperSet .monthSelect, body.newspaperSet .issueSelect, body.audio .monthSelect, body.audio .issueSelect, body.oralHistory .monthSelect, body.oralHistory .issueSelect {
   pointer-events: none;
   opacity: 0; }
-body.largeImage .issueLevel .monthSelect, body.pdf .issueLevel .monthSelect, body.video .issueLevel .monthSelect, body.newspaperSet .issueLevel .monthSelect, body.audio .issueLevel .monthSelect {
+body.largeImage .issueLevel .monthSelect, body.pdf .issueLevel .monthSelect, body.video .issueLevel .monthSelect, body.newspaperSet .issueLevel .monthSelect, body.audio .issueLevel .monthSelect, body.oralHistory .issueLevel .monthSelect {
   pointer-events: inherit !important;
   opacity: 1 !important; }
-body.largeImage .islandora-newspaper-grid .publication-year-container.activeYear, body.pdf .islandora-newspaper-grid .publication-year-container.activeYear, body.video .islandora-newspaper-grid .publication-year-container.activeYear, body.newspaperSet .islandora-newspaper-grid .publication-year-container.activeYear, body.audio .islandora-newspaper-grid .publication-year-container.activeYear {
+body.largeImage .islandora-newspaper-grid .publication-year-container.activeYear, body.pdf .islandora-newspaper-grid .publication-year-container.activeYear, body.video .islandora-newspaper-grid .publication-year-container.activeYear, body.newspaperSet .islandora-newspaper-grid .publication-year-container.activeYear, body.audio .islandora-newspaper-grid .publication-year-container.activeYear, body.oralHistory .islandora-newspaper-grid .publication-year-container.activeYear {
   width: 100%;
   height: fit-content;
   flex-direction: row;
   margin-right: 0px; }
-  body.largeImage .islandora-newspaper-grid .publication-year-container.activeYear .yearBack, body.pdf .islandora-newspaper-grid .publication-year-container.activeYear .yearBack, body.video .islandora-newspaper-grid .publication-year-container.activeYear .yearBack, body.newspaperSet .islandora-newspaper-grid .publication-year-container.activeYear .yearBack, body.audio .islandora-newspaper-grid .publication-year-container.activeYear .yearBack {
+  body.largeImage .islandora-newspaper-grid .publication-year-container.activeYear .yearBack, body.pdf .islandora-newspaper-grid .publication-year-container.activeYear .yearBack, body.video .islandora-newspaper-grid .publication-year-container.activeYear .yearBack, body.newspaperSet .islandora-newspaper-grid .publication-year-container.activeYear .yearBack, body.audio .islandora-newspaper-grid .publication-year-container.activeYear .yearBack, body.oralHistory .islandora-newspaper-grid .publication-year-container.activeYear .yearBack {
     display: flex; }
-  body.largeImage .islandora-newspaper-grid .publication-year-container.activeYear span.publication-year, body.pdf .islandora-newspaper-grid .publication-year-container.activeYear span.publication-year, body.video .islandora-newspaper-grid .publication-year-container.activeYear span.publication-year, body.newspaperSet .islandora-newspaper-grid .publication-year-container.activeYear span.publication-year, body.audio .islandora-newspaper-grid .publication-year-container.activeYear span.publication-year {
+  body.largeImage .islandora-newspaper-grid .publication-year-container.activeYear span.publication-year, body.pdf .islandora-newspaper-grid .publication-year-container.activeYear span.publication-year, body.video .islandora-newspaper-grid .publication-year-container.activeYear span.publication-year, body.newspaperSet .islandora-newspaper-grid .publication-year-container.activeYear span.publication-year, body.audio .islandora-newspaper-grid .publication-year-container.activeYear span.publication-year, body.oralHistory .islandora-newspaper-grid .publication-year-container.activeYear span.publication-year {
     width: auto;
     display: block;
     border: 0px;
@@ -5054,19 +5054,19 @@ body.largeImage .islandora-newspaper-grid .publication-year-container.activeYear
     font-size: 32px;
     position: relative;
     right: 1px; }
-  body.largeImage .islandora-newspaper-grid .publication-year-container.activeYear span.issues-year-total, body.pdf .islandora-newspaper-grid .publication-year-container.activeYear span.issues-year-total, body.video .islandora-newspaper-grid .publication-year-container.activeYear span.issues-year-total, body.newspaperSet .islandora-newspaper-grid .publication-year-container.activeYear span.issues-year-total, body.audio .islandora-newspaper-grid .publication-year-container.activeYear span.issues-year-total {
+  body.largeImage .islandora-newspaper-grid .publication-year-container.activeYear span.issues-year-total, body.pdf .islandora-newspaper-grid .publication-year-container.activeYear span.issues-year-total, body.video .islandora-newspaper-grid .publication-year-container.activeYear span.issues-year-total, body.newspaperSet .islandora-newspaper-grid .publication-year-container.activeYear span.issues-year-total, body.audio .islandora-newspaper-grid .publication-year-container.activeYear span.issues-year-total, body.oralHistory .islandora-newspaper-grid .publication-year-container.activeYear span.issues-year-total {
     width: auto;
     height: auto;
     display: block;
     font-size: inherit; }
-  body.largeImage .islandora-newspaper-grid .publication-year-container.activeYear .activeMonth, body.pdf .islandora-newspaper-grid .publication-year-container.activeYear .activeMonth, body.video .islandora-newspaper-grid .publication-year-container.activeYear .activeMonth, body.newspaperSet .islandora-newspaper-grid .publication-year-container.activeYear .activeMonth, body.audio .islandora-newspaper-grid .publication-year-container.activeYear .activeMonth {
+  body.largeImage .islandora-newspaper-grid .publication-year-container.activeYear .activeMonth, body.pdf .islandora-newspaper-grid .publication-year-container.activeYear .activeMonth, body.video .islandora-newspaper-grid .publication-year-container.activeYear .activeMonth, body.newspaperSet .islandora-newspaper-grid .publication-year-container.activeYear .activeMonth, body.audio .islandora-newspaper-grid .publication-year-container.activeYear .activeMonth, body.oralHistory .islandora-newspaper-grid .publication-year-container.activeYear .activeMonth {
     width: auto !important; }
-  body.largeImage .islandora-newspaper-grid .publication-year-container.activeYear .activeMonth .month-issues-container, body.pdf .islandora-newspaper-grid .publication-year-container.activeYear .activeMonth .month-issues-container, body.video .islandora-newspaper-grid .publication-year-container.activeYear .activeMonth .month-issues-container, body.newspaperSet .islandora-newspaper-grid .publication-year-container.activeYear .activeMonth .month-issues-container, body.audio .islandora-newspaper-grid .publication-year-container.activeYear .activeMonth .month-issues-container {
+  body.largeImage .islandora-newspaper-grid .publication-year-container.activeYear .activeMonth .month-issues-container, body.pdf .islandora-newspaper-grid .publication-year-container.activeYear .activeMonth .month-issues-container, body.video .islandora-newspaper-grid .publication-year-container.activeYear .activeMonth .month-issues-container, body.newspaperSet .islandora-newspaper-grid .publication-year-container.activeYear .activeMonth .month-issues-container, body.audio .islandora-newspaper-grid .publication-year-container.activeYear .activeMonth .month-issues-container, body.oralHistory .islandora-newspaper-grid .publication-year-container.activeYear .activeMonth .month-issues-container {
     display: flex; }
-  body.largeImage .islandora-newspaper-grid .publication-year-container.activeYear .publication-year-container-label, body.pdf .islandora-newspaper-grid .publication-year-container.activeYear .publication-year-container-label, body.video .islandora-newspaper-grid .publication-year-container.activeYear .publication-year-container-label, body.newspaperSet .islandora-newspaper-grid .publication-year-container.activeYear .publication-year-container-label, body.audio .islandora-newspaper-grid .publication-year-container.activeYear .publication-year-container-label {
+  body.largeImage .islandora-newspaper-grid .publication-year-container.activeYear .publication-year-container-label, body.pdf .islandora-newspaper-grid .publication-year-container.activeYear .publication-year-container-label, body.video .islandora-newspaper-grid .publication-year-container.activeYear .publication-year-container-label, body.newspaperSet .islandora-newspaper-grid .publication-year-container.activeYear .publication-year-container-label, body.audio .islandora-newspaper-grid .publication-year-container.activeYear .publication-year-container-label, body.oralHistory .islandora-newspaper-grid .publication-year-container.activeYear .publication-year-container-label {
     width: 400px !important;
     flex-direction: column; }
-  body.largeImage .islandora-newspaper-grid .publication-year-container.activeYear .months-container, body.pdf .islandora-newspaper-grid .publication-year-container.activeYear .months-container, body.video .islandora-newspaper-grid .publication-year-container.activeYear .months-container, body.newspaperSet .islandora-newspaper-grid .publication-year-container.activeYear .months-container, body.audio .islandora-newspaper-grid .publication-year-container.activeYear .months-container {
+  body.largeImage .islandora-newspaper-grid .publication-year-container.activeYear .months-container, body.pdf .islandora-newspaper-grid .publication-year-container.activeYear .months-container, body.video .islandora-newspaper-grid .publication-year-container.activeYear .months-container, body.newspaperSet .islandora-newspaper-grid .publication-year-container.activeYear .months-container, body.audio .islandora-newspaper-grid .publication-year-container.activeYear .months-container, body.oralHistory .islandora-newspaper-grid .publication-year-container.activeYear .months-container {
     display: flex;
     flex-wrap: wrap;
     padding: 20px 0px;
@@ -5079,15 +5079,15 @@ body.largeImage .islandora-newspaper-grid .publication-year-container.activeYear
     margin-left: 70px;
     padding-left: 40px;
     margin-top: 40px; }
-  body.largeImage .islandora-newspaper-grid .publication-year-container.activeYear .publication-year-container:hover, body.pdf .islandora-newspaper-grid .publication-year-container.activeYear .publication-year-container:hover, body.video .islandora-newspaper-grid .publication-year-container.activeYear .publication-year-container:hover, body.newspaperSet .islandora-newspaper-grid .publication-year-container.activeYear .publication-year-container:hover, body.audio .islandora-newspaper-grid .publication-year-container.activeYear .publication-year-container:hover {
+  body.largeImage .islandora-newspaper-grid .publication-year-container.activeYear .publication-year-container:hover, body.pdf .islandora-newspaper-grid .publication-year-container.activeYear .publication-year-container:hover, body.video .islandora-newspaper-grid .publication-year-container.activeYear .publication-year-container:hover, body.newspaperSet .islandora-newspaper-grid .publication-year-container.activeYear .publication-year-container:hover, body.audio .islandora-newspaper-grid .publication-year-container.activeYear .publication-year-container:hover, body.oralHistory .islandora-newspaper-grid .publication-year-container.activeYear .publication-year-container:hover {
     border-bottom: 0px !important; }
-  body.largeImage .islandora-newspaper-grid .publication-year-container.activeYear .month-container, body.pdf .islandora-newspaper-grid .publication-year-container.activeYear .month-container, body.video .islandora-newspaper-grid .publication-year-container.activeYear .month-container, body.newspaperSet .islandora-newspaper-grid .publication-year-container.activeYear .month-container, body.audio .islandora-newspaper-grid .publication-year-container.activeYear .month-container {
+  body.largeImage .islandora-newspaper-grid .publication-year-container.activeYear .month-container, body.pdf .islandora-newspaper-grid .publication-year-container.activeYear .month-container, body.video .islandora-newspaper-grid .publication-year-container.activeYear .month-container, body.newspaperSet .islandora-newspaper-grid .publication-year-container.activeYear .month-container, body.audio .islandora-newspaper-grid .publication-year-container.activeYear .month-container, body.oralHistory .islandora-newspaper-grid .publication-year-container.activeYear .month-container {
     position: relative;
     cursor: pointer; }
-  body.largeImage .islandora-newspaper-grid .publication-year-container.activeYear .filler-calendar, body.pdf .islandora-newspaper-grid .publication-year-container.activeYear .filler-calendar, body.video .islandora-newspaper-grid .publication-year-container.activeYear .filler-calendar, body.newspaperSet .islandora-newspaper-grid .publication-year-container.activeYear .filler-calendar, body.audio .islandora-newspaper-grid .publication-year-container.activeYear .filler-calendar {
+  body.largeImage .islandora-newspaper-grid .publication-year-container.activeYear .filler-calendar, body.pdf .islandora-newspaper-grid .publication-year-container.activeYear .filler-calendar, body.video .islandora-newspaper-grid .publication-year-container.activeYear .filler-calendar, body.newspaperSet .islandora-newspaper-grid .publication-year-container.activeYear .filler-calendar, body.audio .islandora-newspaper-grid .publication-year-container.activeYear .filler-calendar, body.oralHistory .islandora-newspaper-grid .publication-year-container.activeYear .filler-calendar {
     pointer-events: none;
     cursor: default; }
-  body.largeImage .islandora-newspaper-grid .publication-year-container.activeYear .month-container-label, body.pdf .islandora-newspaper-grid .publication-year-container.activeYear .month-container-label, body.video .islandora-newspaper-grid .publication-year-container.activeYear .month-container-label, body.newspaperSet .islandora-newspaper-grid .publication-year-container.activeYear .month-container-label, body.audio .islandora-newspaper-grid .publication-year-container.activeYear .month-container-label {
+  body.largeImage .islandora-newspaper-grid .publication-year-container.activeYear .month-container-label, body.pdf .islandora-newspaper-grid .publication-year-container.activeYear .month-container-label, body.video .islandora-newspaper-grid .publication-year-container.activeYear .month-container-label, body.newspaperSet .islandora-newspaper-grid .publication-year-container.activeYear .month-container-label, body.audio .islandora-newspaper-grid .publication-year-container.activeYear .month-container-label, body.oralHistory .islandora-newspaper-grid .publication-year-container.activeYear .month-container-label {
     display: flex;
     flex-wrap: wrap;
     padding: 20px !important;
@@ -5099,11 +5099,11 @@ body.largeImage .islandora-newspaper-grid .publication-year-container.activeYear
     padding-bottom: 0px !important;
     border: 0px;
     transition-duration: 0.5s; }
-  body.largeImage .islandora-newspaper-grid .publication-year-container.activeYear span.month-container-label-month, body.pdf .islandora-newspaper-grid .publication-year-container.activeYear span.month-container-label-month, body.video .islandora-newspaper-grid .publication-year-container.activeYear span.month-container-label-month, body.newspaperSet .islandora-newspaper-grid .publication-year-container.activeYear span.month-container-label-month, body.audio .islandora-newspaper-grid .publication-year-container.activeYear span.month-container-label-month {
+  body.largeImage .islandora-newspaper-grid .publication-year-container.activeYear span.month-container-label-month, body.pdf .islandora-newspaper-grid .publication-year-container.activeYear span.month-container-label-month, body.video .islandora-newspaper-grid .publication-year-container.activeYear span.month-container-label-month, body.newspaperSet .islandora-newspaper-grid .publication-year-container.activeYear span.month-container-label-month, body.audio .islandora-newspaper-grid .publication-year-container.activeYear span.month-container-label-month, body.oralHistory .islandora-newspaper-grid .publication-year-container.activeYear span.month-container-label-month {
     font-size: 20px;
     text-transform: uppercase;
     text-align: center; }
-  body.largeImage .islandora-newspaper-grid .publication-year-container.activeYear span.month-container-label-count, body.pdf .islandora-newspaper-grid .publication-year-container.activeYear span.month-container-label-count, body.video .islandora-newspaper-grid .publication-year-container.activeYear span.month-container-label-count, body.newspaperSet .islandora-newspaper-grid .publication-year-container.activeYear span.month-container-label-count, body.audio .islandora-newspaper-grid .publication-year-container.activeYear span.month-container-label-count {
+  body.largeImage .islandora-newspaper-grid .publication-year-container.activeYear span.month-container-label-count, body.pdf .islandora-newspaper-grid .publication-year-container.activeYear span.month-container-label-count, body.video .islandora-newspaper-grid .publication-year-container.activeYear span.month-container-label-count, body.newspaperSet .islandora-newspaper-grid .publication-year-container.activeYear span.month-container-label-count, body.audio .islandora-newspaper-grid .publication-year-container.activeYear span.month-container-label-count, body.oralHistory .islandora-newspaper-grid .publication-year-container.activeYear span.month-container-label-count {
     position: absolute;
     bottom: -20px;
     background: #327bb3;
@@ -5115,9 +5115,9 @@ body.largeImage .islandora-newspaper-grid .publication-year-container.activeYear
     color: white;
     box-sizing: content-box;
     border-radius: 0px 0px 3px 3px; }
-body.largeImage .issueLevel .firstMonthCover:not(.firstYearCover), body.pdf .issueLevel .firstMonthCover:not(.firstYearCover), body.video .issueLevel .firstMonthCover:not(.firstYearCover), body.newspaperSet .issueLevel .firstMonthCover:not(.firstYearCover), body.audio .issueLevel .firstMonthCover:not(.firstYearCover) {
+body.largeImage .issueLevel .firstMonthCover:not(.firstYearCover), body.pdf .issueLevel .firstMonthCover:not(.firstYearCover), body.video .issueLevel .firstMonthCover:not(.firstYearCover), body.newspaperSet .issueLevel .firstMonthCover:not(.firstYearCover), body.audio .issueLevel .firstMonthCover:not(.firstYearCover), body.oralHistory .issueLevel .firstMonthCover:not(.firstYearCover) {
   display: block !important; }
-body.largeImage .issueLevel .issuePreview, body.pdf .issueLevel .issuePreview, body.video .issueLevel .issuePreview, body.newspaperSet .issueLevel .issuePreview, body.audio .issueLevel .issuePreview {
+body.largeImage .issueLevel .issuePreview, body.pdf .issueLevel .issuePreview, body.video .issueLevel .issuePreview, body.newspaperSet .issueLevel .issuePreview, body.audio .issueLevel .issuePreview, body.oralHistory .issueLevel .issuePreview {
   height: 700px;
   overflow: hidden;
   width: 50%;
@@ -5127,12 +5127,12 @@ body.largeImage .issueLevel .issuePreview, body.pdf .issueLevel .issuePreview, b
   display: flex;
   align-items: center;
   padding-top: 50px; }
-  body.largeImage .issueLevel .issuePreview img.lazy, body.pdf .issueLevel .issuePreview img.lazy, body.video .issueLevel .issuePreview img.lazy, body.newspaperSet .issueLevel .issuePreview img.lazy, body.audio .issueLevel .issuePreview img.lazy {
+  body.largeImage .issueLevel .issuePreview img.lazy, body.pdf .issueLevel .issuePreview img.lazy, body.video .issueLevel .issuePreview img.lazy, body.newspaperSet .issueLevel .issuePreview img.lazy, body.audio .issueLevel .issuePreview img.lazy, body.oralHistory .issueLevel .issuePreview img.lazy {
     position: absolute;
     width: 580px;
     transition-duration: inherit !important;
     border: 1px solid #cecece; }
-  body.largeImage .issueLevel .issuePreview .dayPrompt, body.pdf .issueLevel .issuePreview .dayPrompt, body.video .issueLevel .issuePreview .dayPrompt, body.newspaperSet .issueLevel .issuePreview .dayPrompt, body.audio .issueLevel .issuePreview .dayPrompt {
+  body.largeImage .issueLevel .issuePreview .dayPrompt, body.pdf .issueLevel .issuePreview .dayPrompt, body.video .issueLevel .issuePreview .dayPrompt, body.newspaperSet .issueLevel .issuePreview .dayPrompt, body.audio .issueLevel .issuePreview .dayPrompt, body.oralHistory .issueLevel .issuePreview .dayPrompt {
     border: 1px solid #cecece;
     height: 410px;
     width: 100%;
@@ -5142,48 +5142,48 @@ body.largeImage .issueLevel .issuePreview, body.pdf .issueLevel .issuePreview, b
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 12px; }
-body.largeImage .issueLevel .ui-datepicker-title, body.pdf .issueLevel .ui-datepicker-title, body.video .issueLevel .ui-datepicker-title, body.newspaperSet .issueLevel .ui-datepicker-title, body.audio .issueLevel .ui-datepicker-title {
+body.largeImage .issueLevel .ui-datepicker-title, body.pdf .issueLevel .ui-datepicker-title, body.video .issueLevel .ui-datepicker-title, body.newspaperSet .issueLevel .ui-datepicker-title, body.audio .issueLevel .ui-datepicker-title, body.oralHistory .issueLevel .ui-datepicker-title {
   font-size: 24px;
   letter-spacing: 2px;
   padding-left: 15px;
   padding-bottom: 20px; }
-  body.largeImage .issueLevel .ui-datepicker-title span.ui-datepicker-month, body.pdf .issueLevel .ui-datepicker-title span.ui-datepicker-month, body.video .issueLevel .ui-datepicker-title span.ui-datepicker-month, body.newspaperSet .issueLevel .ui-datepicker-title span.ui-datepicker-month, body.audio .issueLevel .ui-datepicker-title span.ui-datepicker-month {
+  body.largeImage .issueLevel .ui-datepicker-title span.ui-datepicker-month, body.pdf .issueLevel .ui-datepicker-title span.ui-datepicker-month, body.video .issueLevel .ui-datepicker-title span.ui-datepicker-month, body.newspaperSet .issueLevel .ui-datepicker-title span.ui-datepicker-month, body.audio .issueLevel .ui-datepicker-title span.ui-datepicker-month, body.oralHistory .issueLevel .ui-datepicker-title span.ui-datepicker-month {
     text-transform: uppercase;
     font-weight: 700; }
-body.largeImage .issueLevel span.filler-border, body.pdf .issueLevel span.filler-border, body.video .issueLevel span.filler-border, body.newspaperSet .issueLevel span.filler-border, body.audio .issueLevel span.filler-border {
+body.largeImage .issueLevel span.filler-border, body.pdf .issueLevel span.filler-border, body.video .issueLevel span.filler-border, body.newspaperSet .issueLevel span.filler-border, body.audio .issueLevel span.filler-border, body.oralHistory .issueLevel span.filler-border {
   display: block;
   width: calc(100% - 220px);
   height: 20px;
   border-bottom: 1px solid #cecece;
   position: absolute;
   right: 32px; }
-body.largeImage .issueLevel thead, body.pdf .issueLevel thead, body.video .issueLevel thead, body.newspaperSet .issueLevel thead, body.audio .issueLevel thead {
+body.largeImage .issueLevel thead, body.pdf .issueLevel thead, body.video .issueLevel thead, body.newspaperSet .issueLevel thead, body.audio .issueLevel thead, body.oralHistory .issueLevel thead {
   font-size: 11px; }
-body.largeImage .issueLevel .month-container, body.pdf .issueLevel .month-container, body.video .issueLevel .month-container, body.newspaperSet .issueLevel .month-container, body.audio .issueLevel .month-container {
+body.largeImage .issueLevel .month-container, body.pdf .issueLevel .month-container, body.video .issueLevel .month-container, body.newspaperSet .issueLevel .month-container, body.audio .issueLevel .month-container, body.oralHistory .issueLevel .month-container {
   cursor: auto; }
-body.largeImage .issueLevel .dayContainer a, body.largeImage .issueLevel .dayContainer, body.largeImage .issueLevel td, body.pdf .issueLevel .dayContainer a, body.pdf .issueLevel .dayContainer, body.pdf .issueLevel td, body.video .issueLevel .dayContainer a, body.video .issueLevel .dayContainer, body.video .issueLevel td, body.newspaperSet .issueLevel .dayContainer a, body.newspaperSet .issueLevel .dayContainer, body.newspaperSet .issueLevel td, body.audio .issueLevel .dayContainer a, body.audio .issueLevel .dayContainer, body.audio .issueLevel td {
+body.largeImage .issueLevel .dayContainer a, body.largeImage .issueLevel .dayContainer, body.largeImage .issueLevel td, body.pdf .issueLevel .dayContainer a, body.pdf .issueLevel .dayContainer, body.pdf .issueLevel td, body.video .issueLevel .dayContainer a, body.video .issueLevel .dayContainer, body.video .issueLevel td, body.newspaperSet .issueLevel .dayContainer a, body.newspaperSet .issueLevel .dayContainer, body.newspaperSet .issueLevel td, body.audio .issueLevel .dayContainer a, body.audio .issueLevel .dayContainer, body.audio .issueLevel td, body.oralHistory .issueLevel .dayContainer a, body.oralHistory .issueLevel .dayContainer, body.oralHistory .issueLevel td {
   cursor: default; }
-body.largeImage .issueLevel .highlight .dayContainer a, body.largeImage .issueLevel td.highlight, body.largeImage .issueLevel .highlight .dayContainer, body.pdf .issueLevel .highlight .dayContainer a, body.pdf .issueLevel td.highlight, body.pdf .issueLevel .highlight .dayContainer, body.video .issueLevel .highlight .dayContainer a, body.video .issueLevel td.highlight, body.video .issueLevel .highlight .dayContainer, body.newspaperSet .issueLevel .highlight .dayContainer a, body.newspaperSet .issueLevel td.highlight, body.newspaperSet .issueLevel .highlight .dayContainer, body.audio .issueLevel .highlight .dayContainer a, body.audio .issueLevel td.highlight, body.audio .issueLevel .highlight .dayContainer {
+body.largeImage .issueLevel .highlight .dayContainer a, body.largeImage .issueLevel td.highlight, body.largeImage .issueLevel .highlight .dayContainer, body.pdf .issueLevel .highlight .dayContainer a, body.pdf .issueLevel td.highlight, body.pdf .issueLevel .highlight .dayContainer, body.video .issueLevel .highlight .dayContainer a, body.video .issueLevel td.highlight, body.video .issueLevel .highlight .dayContainer, body.newspaperSet .issueLevel .highlight .dayContainer a, body.newspaperSet .issueLevel td.highlight, body.newspaperSet .issueLevel .highlight .dayContainer, body.audio .issueLevel .highlight .dayContainer a, body.audio .issueLevel td.highlight, body.audio .issueLevel .highlight .dayContainer, body.oralHistory .issueLevel .highlight .dayContainer a, body.oralHistory .issueLevel td.highlight, body.oralHistory .issueLevel .highlight .dayContainer {
   color: white;
   cursor: pointer !important; }
-body.largeImage .issueLevel .highlight .dayContainer, body.pdf .issueLevel .highlight .dayContainer, body.video .issueLevel .highlight .dayContainer, body.newspaperSet .issueLevel .highlight .dayContainer, body.audio .issueLevel .highlight .dayContainer {
+body.largeImage .issueLevel .highlight .dayContainer, body.pdf .issueLevel .highlight .dayContainer, body.video .issueLevel .highlight .dayContainer, body.newspaperSet .issueLevel .highlight .dayContainer, body.audio .issueLevel .highlight .dayContainer, body.oralHistory .issueLevel .highlight .dayContainer {
   background: #676767;
   border: 1px solid #676767; }
-body.largeImage .issueLevel #calendar, body.largeImage .issueLevel .issue-container, body.largeImage .issueLevel .publication-year-container-label, body.largeImage .issueLevel .dayContainer > .dayIssue, body.largeImage .issueLevel a.ui-datepicker-prev, body.largeImage .issueLevel a.ui-datepicker-next, body.pdf .issueLevel #calendar, body.pdf .issueLevel .issue-container, body.pdf .issueLevel .publication-year-container-label, body.pdf .issueLevel .dayContainer > .dayIssue, body.pdf .issueLevel a.ui-datepicker-prev, body.pdf .issueLevel a.ui-datepicker-next, body.video .issueLevel #calendar, body.video .issueLevel .issue-container, body.video .issueLevel .publication-year-container-label, body.video .issueLevel .dayContainer > .dayIssue, body.video .issueLevel a.ui-datepicker-prev, body.video .issueLevel a.ui-datepicker-next, body.newspaperSet .issueLevel #calendar, body.newspaperSet .issueLevel .issue-container, body.newspaperSet .issueLevel .publication-year-container-label, body.newspaperSet .issueLevel .dayContainer > .dayIssue, body.newspaperSet .issueLevel a.ui-datepicker-prev, body.newspaperSet .issueLevel a.ui-datepicker-next, body.audio .issueLevel #calendar, body.audio .issueLevel .issue-container, body.audio .issueLevel .publication-year-container-label, body.audio .issueLevel .dayContainer > .dayIssue, body.audio .issueLevel a.ui-datepicker-prev, body.audio .issueLevel a.ui-datepicker-next {
+body.largeImage .issueLevel #calendar, body.largeImage .issueLevel .issue-container, body.largeImage .issueLevel .publication-year-container-label, body.largeImage .issueLevel .dayContainer > .dayIssue, body.largeImage .issueLevel a.ui-datepicker-prev, body.largeImage .issueLevel a.ui-datepicker-next, body.pdf .issueLevel #calendar, body.pdf .issueLevel .issue-container, body.pdf .issueLevel .publication-year-container-label, body.pdf .issueLevel .dayContainer > .dayIssue, body.pdf .issueLevel a.ui-datepicker-prev, body.pdf .issueLevel a.ui-datepicker-next, body.video .issueLevel #calendar, body.video .issueLevel .issue-container, body.video .issueLevel .publication-year-container-label, body.video .issueLevel .dayContainer > .dayIssue, body.video .issueLevel a.ui-datepicker-prev, body.video .issueLevel a.ui-datepicker-next, body.newspaperSet .issueLevel #calendar, body.newspaperSet .issueLevel .issue-container, body.newspaperSet .issueLevel .publication-year-container-label, body.newspaperSet .issueLevel .dayContainer > .dayIssue, body.newspaperSet .issueLevel a.ui-datepicker-prev, body.newspaperSet .issueLevel a.ui-datepicker-next, body.audio .issueLevel #calendar, body.audio .issueLevel .issue-container, body.audio .issueLevel .publication-year-container-label, body.audio .issueLevel .dayContainer > .dayIssue, body.audio .issueLevel a.ui-datepicker-prev, body.audio .issueLevel a.ui-datepicker-next, body.oralHistory .issueLevel #calendar, body.oralHistory .issueLevel .issue-container, body.oralHistory .issueLevel .publication-year-container-label, body.oralHistory .issueLevel .dayContainer > .dayIssue, body.oralHistory .issueLevel a.ui-datepicker-prev, body.oralHistory .issueLevel a.ui-datepicker-next {
   display: none !important; }
-body.largeImage .issueLevel td.ui-datepicker-other-month.ui-datepicker-unselectable.ui-state-disabled, body.pdf .issueLevel td.ui-datepicker-other-month.ui-datepicker-unselectable.ui-state-disabled, body.video .issueLevel td.ui-datepicker-other-month.ui-datepicker-unselectable.ui-state-disabled, body.newspaperSet .issueLevel td.ui-datepicker-other-month.ui-datepicker-unselectable.ui-state-disabled, body.audio .issueLevel td.ui-datepicker-other-month.ui-datepicker-unselectable.ui-state-disabled {
+body.largeImage .issueLevel td.ui-datepicker-other-month.ui-datepicker-unselectable.ui-state-disabled, body.pdf .issueLevel td.ui-datepicker-other-month.ui-datepicker-unselectable.ui-state-disabled, body.video .issueLevel td.ui-datepicker-other-month.ui-datepicker-unselectable.ui-state-disabled, body.newspaperSet .issueLevel td.ui-datepicker-other-month.ui-datepicker-unselectable.ui-state-disabled, body.audio .issueLevel td.ui-datepicker-other-month.ui-datepicker-unselectable.ui-state-disabled, body.oralHistory .issueLevel td.ui-datepicker-other-month.ui-datepicker-unselectable.ui-state-disabled {
   opacity: 0;
   height: 0px;
   padding: 0px; }
-body.largeImage .issueLevel table.ui-datepicker-calendar, body.pdf .issueLevel table.ui-datepicker-calendar, body.video .issueLevel table.ui-datepicker-calendar, body.newspaperSet .issueLevel table.ui-datepicker-calendar, body.audio .issueLevel table.ui-datepicker-calendar {
+body.largeImage .issueLevel table.ui-datepicker-calendar, body.pdf .issueLevel table.ui-datepicker-calendar, body.video .issueLevel table.ui-datepicker-calendar, body.newspaperSet .issueLevel table.ui-datepicker-calendar, body.audio .issueLevel table.ui-datepicker-calendar, body.oralHistory .issueLevel table.ui-datepicker-calendar {
   border: 0px; }
-body.largeImage .issueLevel th, body.pdf .issueLevel th, body.video .issueLevel th, body.newspaperSet .issueLevel th, body.audio .issueLevel th {
+body.largeImage .issueLevel th, body.pdf .issueLevel th, body.video .issueLevel th, body.newspaperSet .issueLevel th, body.audio .issueLevel th, body.oralHistory .issueLevel th {
   text-align: center;
   background: transparent;
   border: 0px;
   color: #898989;
   font-weight: 700; }
-body.largeImage .issueLevel .dayContainer, body.pdf .issueLevel .dayContainer, body.video .issueLevel .dayContainer, body.newspaperSet .issueLevel .dayContainer, body.audio .issueLevel .dayContainer {
+body.largeImage .issueLevel .dayContainer, body.pdf .issueLevel .dayContainer, body.video .issueLevel .dayContainer, body.newspaperSet .issueLevel .dayContainer, body.audio .issueLevel .dayContainer, body.oralHistory .issueLevel .dayContainer {
   width: 50px;
   height: 50px;
   border-radius: 100%;
@@ -5194,10 +5194,10 @@ body.largeImage .issueLevel .dayContainer, body.pdf .issueLevel .dayContainer, b
   justify-content: center;
   align-items: center;
   padding-bottom: 2px; }
-body.largeImage .issueLevel .dayContainer a, body.pdf .issueLevel .dayContainer a, body.video .issueLevel .dayContainer a, body.newspaperSet .issueLevel .dayContainer a, body.audio .issueLevel .dayContainer a {
+body.largeImage .issueLevel .dayContainer a, body.pdf .issueLevel .dayContainer a, body.video .issueLevel .dayContainer a, body.newspaperSet .issueLevel .dayContainer a, body.audio .issueLevel .dayContainer a, body.oralHistory .issueLevel .dayContainer a {
   font-size: 20px;
   color: #898989; }
-body.largeImage .issueLevel .issuePreviewDay, body.pdf .issueLevel .issuePreviewDay, body.video .issueLevel .issuePreviewDay, body.newspaperSet .issueLevel .issuePreviewDay, body.audio .issueLevel .issuePreviewDay {
+body.largeImage .issueLevel .issuePreviewDay, body.pdf .issueLevel .issuePreviewDay, body.video .issueLevel .issuePreviewDay, body.newspaperSet .issueLevel .issuePreviewDay, body.audio .issueLevel .issuePreviewDay, body.oralHistory .issueLevel .issuePreviewDay {
   height: 700px;
   overflow: hidden;
   width: 50%;
@@ -5207,12 +5207,12 @@ body.largeImage .issueLevel .issuePreviewDay, body.pdf .issueLevel .issuePreview
   display: flex;
   align-items: center;
   padding-top: 50px; }
-  body.largeImage .issueLevel .issuePreviewDay img.lazy, body.pdf .issueLevel .issuePreviewDay img.lazy, body.video .issueLevel .issuePreviewDay img.lazy, body.newspaperSet .issueLevel .issuePreviewDay img.lazy, body.audio .issueLevel .issuePreviewDay img.lazy {
+  body.largeImage .issueLevel .issuePreviewDay img.lazy, body.pdf .issueLevel .issuePreviewDay img.lazy, body.video .issueLevel .issuePreviewDay img.lazy, body.newspaperSet .issueLevel .issuePreviewDay img.lazy, body.audio .issueLevel .issuePreviewDay img.lazy, body.oralHistory .issueLevel .issuePreviewDay img.lazy {
     position: absolute;
     width: 580px;
     transition-duration: inherit !important;
     border: 1px solid #cecece; }
-  body.largeImage .issueLevel .issuePreviewDay .dayPrompt, body.pdf .issueLevel .issuePreviewDay .dayPrompt, body.video .issueLevel .issuePreviewDay .dayPrompt, body.newspaperSet .issueLevel .issuePreviewDay .dayPrompt, body.audio .issueLevel .issuePreviewDay .dayPrompt {
+  body.largeImage .issueLevel .issuePreviewDay .dayPrompt, body.pdf .issueLevel .issuePreviewDay .dayPrompt, body.video .issueLevel .issuePreviewDay .dayPrompt, body.newspaperSet .issueLevel .issuePreviewDay .dayPrompt, body.audio .issueLevel .issuePreviewDay .dayPrompt, body.oralHistory .issueLevel .issuePreviewDay .dayPrompt {
     border: 1px solid #cecece;
     height: 410px;
     width: 100%;
@@ -5222,37 +5222,37 @@ body.largeImage .issueLevel .issuePreviewDay, body.pdf .issueLevel .issuePreview
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 12px; }
-body.largeImage .issueLevel .month-issues-container > div:not(.issue-container), body.pdf .issueLevel .month-issues-container > div:not(.issue-container), body.video .issueLevel .month-issues-container > div:not(.issue-container), body.newspaperSet .issueLevel .month-issues-container > div:not(.issue-container), body.audio .issueLevel .month-issues-container > div:not(.issue-container) {
+body.largeImage .issueLevel .month-issues-container > div:not(.issue-container), body.pdf .issueLevel .month-issues-container > div:not(.issue-container), body.video .issueLevel .month-issues-container > div:not(.issue-container), body.newspaperSet .issueLevel .month-issues-container > div:not(.issue-container), body.audio .issueLevel .month-issues-container > div:not(.issue-container), body.oralHistory .issueLevel .month-issues-container > div:not(.issue-container) {
   display: none; }
-body.largeImage .issueLevel .publication-year-container:hover .firstYearCover, body.pdf .issueLevel .publication-year-container:hover .firstYearCover, body.video .issueLevel .publication-year-container:hover .firstYearCover, body.newspaperSet .issueLevel .publication-year-container:hover .firstYearCover, body.audio .issueLevel .publication-year-container:hover .firstYearCover {
+body.largeImage .issueLevel .publication-year-container:hover .firstYearCover, body.pdf .issueLevel .publication-year-container:hover .firstYearCover, body.video .issueLevel .publication-year-container:hover .firstYearCover, body.newspaperSet .issueLevel .publication-year-container:hover .firstYearCover, body.audio .issueLevel .publication-year-container:hover .firstYearCover, body.oralHistory .issueLevel .publication-year-container:hover .firstYearCover {
   transform: scale3d(1, 1, 1);
   transition-duration: 0.2s; }
-body.largeImage .issueLevel .islandora-newspaper-grid, body.pdf .issueLevel .islandora-newspaper-grid, body.video .issueLevel .islandora-newspaper-grid, body.newspaperSet .issueLevel .islandora-newspaper-grid, body.audio .issueLevel .islandora-newspaper-grid {
+body.largeImage .issueLevel .islandora-newspaper-grid, body.pdf .issueLevel .islandora-newspaper-grid, body.video .issueLevel .islandora-newspaper-grid, body.newspaperSet .issueLevel .islandora-newspaper-grid, body.audio .issueLevel .islandora-newspaper-grid, body.oralHistory .issueLevel .islandora-newspaper-grid {
   margin-top: 0px; }
-body.largeImage .issueLevel .publication-year-container, body.pdf .issueLevel .publication-year-container, body.video .issueLevel .publication-year-container, body.newspaperSet .issueLevel .publication-year-container, body.audio .issueLevel .publication-year-container {
+body.largeImage .issueLevel .publication-year-container, body.pdf .issueLevel .publication-year-container, body.video .issueLevel .publication-year-container, body.newspaperSet .issueLevel .publication-year-container, body.audio .issueLevel .publication-year-container, body.oralHistory .issueLevel .publication-year-container {
   box-shadow: none;
   width: 100%;
   height: fit-content;
   flex-direction: row !important;
   margin-right: 0px;
   height: -moz-fit-content; }
-body.largeImage .issueLevel #calendar .ui-datepicker td a, body.pdf .issueLevel #calendar .ui-datepicker td a, body.video .issueLevel #calendar .ui-datepicker td a, body.newspaperSet .issueLevel #calendar .ui-datepicker td a, body.audio .issueLevel #calendar .ui-datepicker td a {
+body.largeImage .issueLevel #calendar .ui-datepicker td a, body.pdf .issueLevel #calendar .ui-datepicker td a, body.video .issueLevel #calendar .ui-datepicker td a, body.newspaperSet .issueLevel #calendar .ui-datepicker td a, body.audio .issueLevel #calendar .ui-datepicker td a, body.oralHistory .issueLevel #calendar .ui-datepicker td a {
   text-align: center; }
-body.largeImage .issueLevel .islandora-newspaper-grid .publication-year-container .publication-year-container-label, body.pdf .issueLevel .islandora-newspaper-grid .publication-year-container .publication-year-container-label, body.video .issueLevel .islandora-newspaper-grid .publication-year-container .publication-year-container-label, body.newspaperSet .issueLevel .islandora-newspaper-grid .publication-year-container .publication-year-container-label, body.audio .issueLevel .islandora-newspaper-grid .publication-year-container .publication-year-container-label {
+body.largeImage .issueLevel .islandora-newspaper-grid .publication-year-container .publication-year-container-label, body.pdf .issueLevel .islandora-newspaper-grid .publication-year-container .publication-year-container-label, body.video .issueLevel .islandora-newspaper-grid .publication-year-container .publication-year-container-label, body.newspaperSet .issueLevel .islandora-newspaper-grid .publication-year-container .publication-year-container-label, body.audio .issueLevel .islandora-newspaper-grid .publication-year-container .publication-year-container-label, body.oralHistory .issueLevel .islandora-newspaper-grid .publication-year-container .publication-year-container-label {
   pointer-events: none !important;
   height: 180px;
   justify-content: center;
   flex-direction: row-reverse; }
-body.largeImage .issueLevel .islandora-newspaper-grid .publication-year-container, body.pdf .issueLevel .islandora-newspaper-grid .publication-year-container, body.video .issueLevel .islandora-newspaper-grid .publication-year-container, body.newspaperSet .issueLevel .islandora-newspaper-grid .publication-year-container, body.audio .issueLevel .islandora-newspaper-grid .publication-year-container {
+body.largeImage .issueLevel .islandora-newspaper-grid .publication-year-container, body.pdf .issueLevel .islandora-newspaper-grid .publication-year-container, body.video .issueLevel .islandora-newspaper-grid .publication-year-container, body.newspaperSet .issueLevel .islandora-newspaper-grid .publication-year-container, body.audio .issueLevel .islandora-newspaper-grid .publication-year-container, body.oralHistory .issueLevel .islandora-newspaper-grid .publication-year-container {
   flex-direction: column; }
-body.largeImage .issueLevel .publication-year-container:hover, body.pdf .issueLevel .publication-year-container:hover, body.video .issueLevel .publication-year-container:hover, body.newspaperSet .issueLevel .publication-year-container:hover, body.audio .issueLevel .publication-year-container:hover {
+body.largeImage .issueLevel .publication-year-container:hover, body.pdf .issueLevel .publication-year-container:hover, body.video .issueLevel .publication-year-container:hover, body.newspaperSet .issueLevel .publication-year-container:hover, body.audio .issueLevel .publication-year-container:hover, body.oralHistory .issueLevel .publication-year-container:hover {
   transform: translateY(0px);
   transition-duration: 0s; }
-body.largeImage .issueLevel .monthBack, body.pdf .issueLevel .monthBack, body.video .issueLevel .monthBack, body.newspaperSet .issueLevel .monthBack, body.audio .issueLevel .monthBack {
+body.largeImage .issueLevel .monthBack, body.pdf .issueLevel .monthBack, body.video .issueLevel .monthBack, body.newspaperSet .issueLevel .monthBack, body.audio .issueLevel .monthBack, body.oralHistory .issueLevel .monthBack {
   display: flex !important; }
-body.largeImage .issueLevel .yearBack, body.largeImage .issueLevel .issues-year-total, body.pdf .issueLevel .yearBack, body.pdf .issueLevel .issues-year-total, body.video .issueLevel .yearBack, body.video .issueLevel .issues-year-total, body.newspaperSet .issueLevel .yearBack, body.newspaperSet .issueLevel .issues-year-total, body.audio .issueLevel .yearBack, body.audio .issueLevel .issues-year-total {
+body.largeImage .issueLevel .yearBack, body.largeImage .issueLevel .issues-year-total, body.pdf .issueLevel .yearBack, body.pdf .issueLevel .issues-year-total, body.video .issueLevel .yearBack, body.video .issueLevel .issues-year-total, body.newspaperSet .issueLevel .yearBack, body.newspaperSet .issueLevel .issues-year-total, body.audio .issueLevel .yearBack, body.audio .issueLevel .issues-year-total, body.oralHistory .issueLevel .yearBack, body.oralHistory .issueLevel .issues-year-total {
   display: none !important; }
-body.largeImage .issueLevel .issue-container, body.pdf .issueLevel .issue-container, body.video .issueLevel .issue-container, body.newspaperSet .issueLevel .issue-container, body.audio .issueLevel .issue-container {
+body.largeImage .issueLevel .issue-container, body.pdf .issueLevel .issue-container, body.video .issueLevel .issue-container, body.newspaperSet .issueLevel .issue-container, body.audio .issueLevel .issue-container, body.oralHistory .issueLevel .issue-container {
   padding: 0px 20px;
   font-size: 20px;
   background: #327bb3;
@@ -5260,29 +5260,29 @@ body.largeImage .issueLevel .issue-container, body.pdf .issueLevel .issue-contai
   border-radius: 3px;
   letter-spacing: 2px;
   padding-bottom: 2px; }
-body.largeImage .issueLevel .issue-container a, body.pdf .issueLevel .issue-container a, body.video .issueLevel .issue-container a, body.newspaperSet .issueLevel .issue-container a, body.audio .issueLevel .issue-container a {
+body.largeImage .issueLevel .issue-container a, body.pdf .issueLevel .issue-container a, body.video .issueLevel .issue-container a, body.newspaperSet .issueLevel .issue-container a, body.audio .issueLevel .issue-container a, body.oralHistory .issueLevel .issue-container a {
   color: white; }
-body.largeImage .issueLevel .yearSelect, body.largeImage .issueLevel .monthSelect, body.pdf .issueLevel .yearSelect, body.pdf .issueLevel .monthSelect, body.video .issueLevel .yearSelect, body.video .issueLevel .monthSelect, body.newspaperSet .issueLevel .yearSelect, body.newspaperSet .issueLevel .monthSelect, body.audio .issueLevel .yearSelect, body.audio .issueLevel .monthSelect {
+body.largeImage .issueLevel .yearSelect, body.largeImage .issueLevel .monthSelect, body.pdf .issueLevel .yearSelect, body.pdf .issueLevel .monthSelect, body.video .issueLevel .yearSelect, body.video .issueLevel .monthSelect, body.newspaperSet .issueLevel .yearSelect, body.newspaperSet .issueLevel .monthSelect, body.audio .issueLevel .yearSelect, body.audio .issueLevel .monthSelect, body.oralHistory .issueLevel .yearSelect, body.oralHistory .issueLevel .monthSelect {
   cursor: pointer; }
-body.largeImage .issueLevel .yearSelect:hover, body.largeImage .issueLevel .monthSelect:hover, body.pdf .issueLevel .yearSelect:hover, body.pdf .issueLevel .monthSelect:hover, body.video .issueLevel .yearSelect:hover, body.video .issueLevel .monthSelect:hover, body.newspaperSet .issueLevel .yearSelect:hover, body.newspaperSet .issueLevel .monthSelect:hover, body.audio .issueLevel .yearSelect:hover, body.audio .issueLevel .monthSelect:hover {
+body.largeImage .issueLevel .yearSelect:hover, body.largeImage .issueLevel .monthSelect:hover, body.pdf .issueLevel .yearSelect:hover, body.pdf .issueLevel .monthSelect:hover, body.video .issueLevel .yearSelect:hover, body.video .issueLevel .monthSelect:hover, body.newspaperSet .issueLevel .yearSelect:hover, body.newspaperSet .issueLevel .monthSelect:hover, body.audio .issueLevel .yearSelect:hover, body.audio .issueLevel .monthSelect:hover, body.oralHistory .issueLevel .yearSelect:hover, body.oralHistory .issueLevel .monthSelect:hover {
   opacity: 0.8;
   transition-duration: 0.5s; }
-body.largeImage .issueLevel .months-container, body.pdf .issueLevel .months-container, body.video .issueLevel .months-container, body.newspaperSet .issueLevel .months-container, body.audio .issueLevel .months-container {
+body.largeImage .issueLevel .months-container, body.pdf .issueLevel .months-container, body.video .issueLevel .months-container, body.newspaperSet .issueLevel .months-container, body.audio .issueLevel .months-container, body.oralHistory .issueLevel .months-container {
   flex-grow: 2; }
-body.largeImage .issueLevel .activeMonth, body.pdf .issueLevel .activeMonth, body.video .issueLevel .activeMonth, body.newspaperSet .issueLevel .activeMonth, body.audio .issueLevel .activeMonth {
+body.largeImage .issueLevel .activeMonth, body.pdf .issueLevel .activeMonth, body.video .issueLevel .activeMonth, body.newspaperSet .issueLevel .activeMonth, body.audio .issueLevel .activeMonth, body.oralHistory .issueLevel .activeMonth {
   border: 0px !important;
   margin-bottom: 0px !important; }
-body.largeImage .issueLevel .activeMonth > span, body.pdf .issueLevel .activeMonth > span, body.video .issueLevel .activeMonth > span, body.newspaperSet .issueLevel .activeMonth > span, body.audio .issueLevel .activeMonth > span {
+body.largeImage .issueLevel .activeMonth > span, body.pdf .issueLevel .activeMonth > span, body.video .issueLevel .activeMonth > span, body.newspaperSet .issueLevel .activeMonth > span, body.audio .issueLevel .activeMonth > span, body.oralHistory .issueLevel .activeMonth > span {
   display: none; }
-body.largeImage .issueLevel span.month-container-label-month.monthTempLabel, body.pdf .issueLevel span.month-container-label-month.monthTempLabel, body.video .issueLevel span.month-container-label-month.monthTempLabel, body.newspaperSet .issueLevel span.month-container-label-month.monthTempLabel, body.audio .issueLevel span.month-container-label-month.monthTempLabel {
+body.largeImage .issueLevel span.month-container-label-month.monthTempLabel, body.pdf .issueLevel span.month-container-label-month.monthTempLabel, body.video .issueLevel span.month-container-label-month.monthTempLabel, body.newspaperSet .issueLevel span.month-container-label-month.monthTempLabel, body.audio .issueLevel span.month-container-label-month.monthTempLabel, body.oralHistory .issueLevel span.month-container-label-month.monthTempLabel {
   font-size: 32px !important; }
-body.largeImage .issueLevel span.publication-year, body.pdf .issueLevel span.publication-year, body.video .issueLevel span.publication-year, body.newspaperSet .issueLevel span.publication-year, body.audio .issueLevel span.publication-year {
+body.largeImage .issueLevel span.publication-year, body.pdf .issueLevel span.publication-year, body.video .issueLevel span.publication-year, body.newspaperSet .issueLevel span.publication-year, body.audio .issueLevel span.publication-year, body.oralHistory .issueLevel span.publication-year {
   margin-left: 10px; }
-body.largeImage .secondStage .activeIndicator, body.pdf .secondStage .activeIndicator, body.video .secondStage .activeIndicator, body.newspaperSet .secondStage .activeIndicator, body.audio .secondStage .activeIndicator {
+body.largeImage .secondStage .activeIndicator, body.pdf .secondStage .activeIndicator, body.video .secondStage .activeIndicator, body.newspaperSet .secondStage .activeIndicator, body.audio .secondStage .activeIndicator, body.oralHistory .secondStage .activeIndicator {
   transform: scale3d(0.66, 1, 1); }
-body.largeImage .thirdStage .activeIndicator, body.pdf .thirdStage .activeIndicator, body.video .thirdStage .activeIndicator, body.newspaperSet .thirdStage .activeIndicator, body.audio .thirdStage .activeIndicator {
+body.largeImage .thirdStage .activeIndicator, body.pdf .thirdStage .activeIndicator, body.video .thirdStage .activeIndicator, body.newspaperSet .thirdStage .activeIndicator, body.audio .thirdStage .activeIndicator, body.oralHistory .thirdStage .activeIndicator {
   transform: scale3d(1, 1, 1); }
-body.largeImage #islandora-openseadragon, body.largeImage .islandora-pdf-content-wrapper, body.pdf #islandora-openseadragon, body.pdf .islandora-pdf-content-wrapper, body.video #islandora-openseadragon, body.video .islandora-pdf-content-wrapper, body.newspaperSet #islandora-openseadragon, body.newspaperSet .islandora-pdf-content-wrapper, body.audio #islandora-openseadragon, body.audio .islandora-pdf-content-wrapper {
+body.largeImage #islandora-openseadragon, body.largeImage .islandora-pdf-content-wrapper, body.pdf #islandora-openseadragon, body.pdf .islandora-pdf-content-wrapper, body.video #islandora-openseadragon, body.video .islandora-pdf-content-wrapper, body.newspaperSet #islandora-openseadragon, body.newspaperSet .islandora-pdf-content-wrapper, body.audio #islandora-openseadragon, body.audio .islandora-pdf-content-wrapper, body.oralHistory #islandora-openseadragon, body.oralHistory .islandora-pdf-content-wrapper {
   display: none;
   justify-content: center;
   align-items: center;
@@ -5290,21 +5290,21 @@ body.largeImage #islandora-openseadragon, body.largeImage .islandora-pdf-content
   position: absolute;
   z-index: 2;
   height: 100vh; }
-body.largeImage .labelContainer, body.pdf .labelContainer, body.video .labelContainer, body.newspaperSet .labelContainer, body.audio .labelContainer {
+body.largeImage .labelContainer, body.pdf .labelContainer, body.video .labelContainer, body.newspaperSet .labelContainer, body.audio .labelContainer, body.oralHistory .labelContainer {
   position: relative; }
-body.largeImage div.labelContainer > .contentLabel > i, body.pdf div.labelContainer > .contentLabel > i, body.video div.labelContainer > .contentLabel > i, body.newspaperSet div.labelContainer > .contentLabel > i, body.audio div.labelContainer > .contentLabel > i {
+body.largeImage div.labelContainer > .contentLabel > i, body.pdf div.labelContainer > .contentLabel > i, body.video div.labelContainer > .contentLabel > i, body.newspaperSet div.labelContainer > .contentLabel > i, body.audio div.labelContainer > .contentLabel > i, body.oralHistory div.labelContainer > .contentLabel > i {
   position: absolute;
   top: 5px;
   left: 0px;
   font-size: 15px; }
-body.largeImage header#section-header, body.pdf header#section-header, body.video header#section-header, body.newspaperSet header#section-header, body.audio header#section-header {
+body.largeImage header#section-header, body.pdf header#section-header, body.video header#section-header, body.newspaperSet header#section-header, body.audio header#section-header, body.oralHistory header#section-header {
   position: absolute;
   top: 0px;
   z-index: 888;
   width: 100%; }
-body.largeImage div.islandora-large-image-content, body.pdf div.islandora-large-image-content, body.video div.islandora-large-image-content, body.newspaperSet div.islandora-large-image-content, body.audio div.islandora-large-image-content {
+body.largeImage div.islandora-large-image-content, body.pdf div.islandora-large-image-content, body.video div.islandora-large-image-content, body.newspaperSet div.islandora-large-image-content, body.audio div.islandora-large-image-content, body.oralHistory div.islandora-large-image-content {
   display: none; }
-body.largeImage .image_header, body.largeImage .newspaper_header, body.pdf .image_header, body.pdf .newspaper_header, body.video .image_header, body.video .newspaper_header, body.newspaperSet .image_header, body.newspaperSet .newspaper_header, body.audio .image_header, body.audio .newspaper_header {
+body.largeImage .image_header, body.largeImage .newspaper_header, body.pdf .image_header, body.pdf .newspaper_header, body.video .image_header, body.video .newspaper_header, body.newspaperSet .image_header, body.newspaperSet .newspaper_header, body.audio .image_header, body.audio .newspaper_header, body.oralHistory .image_header, body.oralHistory .newspaper_header {
   display: flex;
   justify-content: center;
   background: rgba(0, 0, 0, 0.06);
@@ -5313,7 +5313,7 @@ body.largeImage .image_header, body.largeImage .newspaper_header, body.pdf .imag
   overflow: hidden;
   padding-top: 200px;
   transition-duration: 1s; }
-body.largeImage .imageToolbar, body.pdf .imageToolbar, body.video .imageToolbar, body.newspaperSet .imageToolbar, body.audio .imageToolbar {
+body.largeImage .imageToolbar, body.pdf .imageToolbar, body.video .imageToolbar, body.newspaperSet .imageToolbar, body.audio .imageToolbar, body.oralHistory .imageToolbar {
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
@@ -5325,7 +5325,7 @@ body.largeImage .imageToolbar, body.pdf .imageToolbar, body.video .imageToolbar,
   position: relative;
   border-radius: 20px 20px 0px 0px;
   overflow: hidden; }
-body.largeImage .innerimageTitle, body.pdf .innerimageTitle, body.video .innerimageTitle, body.newspaperSet .innerimageTitle, body.audio .innerimageTitle {
+body.largeImage .innerimageTitle, body.pdf .innerimageTitle, body.video .innerimageTitle, body.newspaperSet .innerimageTitle, body.audio .innerimageTitle, body.oralHistory .innerimageTitle {
   background: white;
   margin-left: 40px;
   margin-right: 40px;
@@ -5470,6 +5470,22 @@ body.compoundChildImage {
   background: white !important; }
 
 /*BEGIN test area*/
+body.oralHistory #window-title {
+  display: none; }
+body.oralHistory .imageContainer {
+  flex-direction: column-reverse !important; }
+body.oralHistory .islandora-audio-content-wrapper.clearfix {
+  width: 100%; }
+body.oralHistory iframe.pdf {
+  width: 100%;
+  height: 100vh; }
+body.oralHistory .image-thumbnailData {
+  margin-left: 0px;
+  margin-top: 10px;
+  border-left: 0px;
+  padding-left: 0px;
+  max-width: none; }
+
 .pdfLabel::before {
   background-image: url(../images/document_dark.png);
   background-repeat: no-repeat;
@@ -5509,56 +5525,56 @@ body.compoundChildImage {
   bottom: 5px;
   opacity: 0.7; }
 
-body.video .islandora-video-object.islandora.itemContainer.imageContainer, body.video .islandora-audio-object.islandora.itemContainer.imageContainer, body.audio .islandora-video-object.islandora.itemContainer.imageContainer, body.audio .islandora-audio-object.islandora.itemContainer.imageContainer {
+body.video .islandora-video-object.islandora.itemContainer.imageContainer, body.video .islandora-audio-object.islandora.itemContainer.imageContainer, body.audio:not(.compoundParent) .islandora-video-object.islandora.itemContainer.imageContainer, body.audio:not(.compoundParent) .islandora-audio-object.islandora.itemContainer.imageContainer {
   flex-direction: column; }
-body.video .backgroundDiv, body.audio .backgroundDiv {
+body.video .backgroundDiv, body.audio:not(.compoundParent) .backgroundDiv {
   background-position: -5vw 60%; }
-body.video .image-thumbnailData, body.audio .image-thumbnailData {
+body.video .image-thumbnailData, body.audio:not(.compoundParent) .image-thumbnailData {
   padding-top: 20px;
   max-width: none;
   border-left: 0px;
   margin-left: 0px;
   padding-left: 0px; }
-body.video .imagePreview, body.audio .imagePreview {
+body.video .imagePreview, body.audio:not(.compoundParent) .imagePreview {
   display: none; }
-body.video .islandora-video-content, body.video .islandora-audio-content, body.audio .islandora-video-content, body.audio .islandora-audio-content {
+body.video .islandora-video-content, body.video .islandora-audio-content, body.audio:not(.compoundParent) .islandora-video-content, body.audio:not(.compoundParent) .islandora-audio-content {
   width: 100%;
   max-width: none !important;
   margin: 0 auto; }
-body.video .islandora_videojs-dimensions, body.audio .islandora_videojs-dimensions {
+body.video .islandora_videojs-dimensions:not(body.audio, body.oralHistory), body.audio:not(.compoundParent) .islandora_videojs-dimensions:not(body.audio, body.oralHistory) {
   width: 100%;
   height: 500px; }
-body.video .islandora-audio-content-wrapper.clearfix, body.video .islandora-video-content-wrapper.clearfix, body.audio .islandora-audio-content-wrapper.clearfix, body.audio .islandora-video-content-wrapper.clearfix {
+body.video .islandora-audio-content-wrapper.clearfix, body.video .islandora-video-content-wrapper.clearfix, body.audio:not(.compoundParent) .islandora-audio-content-wrapper.clearfix, body.audio:not(.compoundParent) .islandora-video-content-wrapper.clearfix {
   width: 100%; }
 
-body.audio .footerContainer {
+body.audio .footerContainer, body.oralHistory:not(.compoundParent) .footerContainer {
   border-top: 1px solid #343435; }
-body.audio .metadataVertical div.metadataValue, body.audio div.metadataLabel {
+body.audio .metadataVertical div.metadataValue, body.audio div.metadataLabel, body.oralHistory:not(.compoundParent) .metadataVertical div.metadataValue, body.oralHistory:not(.compoundParent) div.metadataLabel {
   color: #ABABAB !important; }
-body.audio .descriptionText {
+body.audio .descriptionText, body.oralHistory:not(.compoundParent) .descriptionText {
   color: #ABABAB;
   background-color: transparent; }
-body.audio .tagsGlance .modsSubject {
+body.audio .tagsGlance .modsSubject, body.oralHistory:not(.compoundParent) .tagsGlance .modsSubject {
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.16); }
-body.audio .tagsGlance a.modsSubject {
+body.audio .tagsGlance a.modsSubject, body.oralHistory:not(.compoundParent) .tagsGlance a.modsSubject {
   color: #ABABAB; }
-body.audio .image-thumbnailData {
+body.audio .image-thumbnailData, body.oralHistory:not(.compoundParent) .image-thumbnailData {
   color: #ABABAB; }
-body.audio .backgroundDiv {
+body.audio .backgroundDiv, body.oralHistory:not(.compoundParent) .backgroundDiv {
   filter: blur(0px) brightness(0.7) contrast(1); }
-body.audio .islandora_videojs-dimensions {
+body.audio .islandora_videojs-dimensions:not(body.oralHistory), body.oralHistory:not(.compoundParent) .islandora_videojs-dimensions:not(body.oralHistory) {
   width: 100%;
   height: 30px; }
-body.audio #window-title {
+body.audio #window-title, body.oralHistory:not(.compoundParent) #window-title {
   display: none; }
-body.audio #block-system-main {
+body.audio #block-system-main, body.oralHistory:not(.compoundParent) #block-system-main {
   background: #242021; }
-body.audio .contentLabel {
+body.audio .contentLabel, body.oralHistory:not(.compoundParent) .contentLabel {
   background: #242021;
   color: white;
   border-bottom: 1px solid rgba(255, 255, 255, 0.16); }
-body.audio .itemDesc::before {
+body.audio .itemDesc::before, body.oralHistory:not(.compoundParent) .itemDesc::before {
   background-image: url(../images/tags_light.png); }
 
 body.pdf #window-title {
@@ -5653,6 +5669,9 @@ a.toggle-date-range-filter {
   margin-left: 12px;
   margin-top: 20px; }
 
+body.context-data .ics_download_title {
+  color: white;
+  padding-top: 5px; }
 body.context-data .dataHeader {
   margin-bottom: 20px; }
 body.context-data .headerTitle {
@@ -5885,41 +5904,6 @@ section#block-islandora-solr-sort .item-list {
   border: 0px;
   margin: 0px; }
 
-.audioPDF div#block-islandora-compound-object-compound-jail-display, .audio div#block-islandora-compound-object-compound-jail-display {
-  height: auto;
-  overflow: auto;
-  font-size: inherit; }
-.audioPDF .islandora-compound-thumbs, .audio .islandora-compound-thumbs {
-  border-top: 1px solid rgba(204, 204, 204, 0.09); }
-.audioPDF .islandora-compound-thumb, .audio .islandora-compound-thumb {
-  border-bottom: 1px solid rgba(204, 204, 204, 0.09); }
-.audioPDF .region-sidebar-first-inner .block-inner, .audio .region-sidebar-first-inner .block-inner {
-  background-color: #242021;
-  padding: 0px;
-  box-sizing: border-box;
-  color: #bdbdbd; }
-.audioPDF #block-system-main, .audio #block-system-main {
-  background: #242021;
-  color: white; }
-  .audioPDF #block-system-main table, .audio #block-system-main table {
-    background: #242021;
-    color: white;
-    border: 0px;
-    border-left: 300px solid #242021;
-    border-right: 300px solid #242021;
-    margin-top: 0px; }
-    .audioPDF #block-system-main table th, .audio #block-system-main table th {
-      display: none; }
-.audioPDF #region-sidebar-first, .audio #region-sidebar-first {
-  width: 33%;
-  background-color: #242021;
-  border-right: 1px solid #333333; }
-  .audioPDF #region-sidebar-first #sideMods, .audio #region-sidebar-first #sideMods {
-    color: #bdbdbd;
-    padding-top: 40px;
-    padding-left: 20PX; }
-    .audioPDF #region-sidebar-first #sideMods a, .audio #region-sidebar-first #sideMods a {
-      color: #96a0b0; }
 .audioPDF .islandora-audio-object .video-js, .audio .islandora-audio-object .video-js {
   height: 120px;
   width: 100%;
@@ -5944,39 +5928,7 @@ section#block-islandora-solr-sort .item-list {
   border-radius: 8px;
   overflow: hidden; }
 .audioPDF .islandora-audio-object div#islandora-pdfjs, .audio .islandora-audio-object div#islandora-pdfjs {
-  padding: 0px 150px 60px;
   background: #242021; }
-.audioPDF h1#oh-title, .audio h1#oh-title {
-  margin: 0px 150px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-  background: #242021;
-  padding-top: 90px;
-  z-index: 99;
-  color: #dedede;
-  font-size: 24px; }
-.audioPDF .creatorLinks, .audio .creatorLinks {
-  margin: 0px 150px;
-  margin-top: 6px; }
-.audioPDF a.ohcreator, .audio a.ohcreator {
-  margin-right: 5px;
-  display: inline-block;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  padding: 3px 10px;
-  border-radius: 2px;
-  margin-bottom: 5px;
-  color: #afafaf;
-  -moz-transition-duration: 0.5s;
-  -o-transition-duration: 0.5s;
-  -webkit-transition-duration: 0.5s;
-  transition-duration: 0.5s; }
-.audioPDF a.ohcreator:hover, .audio a.ohcreator:hover {
-  border: 1px solid rgba(255, 255, 255, 0.75);
-  -moz-transition-duration: 0s;
-  -o-transition-duration: 0s;
-  -webkit-transition-duration: 0s;
-  transition-duration: 0s; }
-.audioPDF #block-block-9, .audio #block-block-9 {
-  background-color: #242021; }
 
 .darkFilter {
   -webkit-filter: blur(5px) brightness(0.8);
@@ -7162,13 +7114,13 @@ body.multipleDaily .issueLevel .issue-container {
     padding: 10px;
     margin-bottom: 0px; }
 
-  body.audio .metadataVertical div.metadataValue, body.audio .metadataVertical div.metadataLabel {
+  body.audio .metadataVertical div.metadataValue, body.audio .metadataVertical div.metadataLabel, body.oralHistory .metadataVertical div.metadataValue, body.oralHistory .metadataVertical div.metadataLabel {
     color: #ABABAB !important; }
-  body.audio .metadataVertical .metadataContainer::before {
+  body.audio .metadataVertical .metadataContainer::before, body.oralHistory .metadataVertical .metadataContainer::before {
     color: #ABABAB; }
-  body.audio .metadataVertical .metadataContainer {
+  body.audio .metadataVertical .metadataContainer, body.oralHistory .metadataVertical .metadataContainer {
     border-top: 1px solid rgba(255, 255, 255, 0.16); }
-  body.audio .metadataVertical .metadataContainer::before {
+  body.audio .metadataVertical .metadataContainer::before, body.oralHistory .metadataVertical .metadataContainer::before {
     background-image: url(../images/info_light.png) !important; }
 
   .compoundObject .islandora-large-image-metadata {
