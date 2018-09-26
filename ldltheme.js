@@ -90,9 +90,6 @@
           if ($('.block-islandora-compound-object').length){
             compoundChild_end();
           }
-
-
-
           break;
         }
 
@@ -176,6 +173,26 @@
           scrollFollow();
           break;
         }
+
+
+        case (($('body').hasClass('oralHistory')) && (!$('body').hasClass('compoundParent')))  :{
+          itemTitle = $(".modsTitle").html(); // finds full title without truncation
+          thumbnailURL = $(".image-thumbnail img").prop('src');
+          // if ($('.block-islandora-compound-object').length){
+          //   compoundChild_start();
+          // }
+          itemHeader();
+          typeClass('image');
+          imageContainer();
+          moveMetadata();
+          actionToggles();
+          itemFooter();
+          //pdfModal();
+          if ($('.block-islandora-compound-object').length){
+            compoundChild_end();
+          }
+          break;
+        }        
 
       } //end page detection
 
@@ -348,6 +365,13 @@
           $("<div class='backgroundDiv'/>").insertBefore(".item_headerMenu"); //creates header for book items
           $('.backgroundDiv').css('background-image', 'url(' + thumbnailURL + ')');
           $('.parentLink').addClass('institutionSmall');
+
+             compoundTitles = ($('.compoundSelect-title').html());
+
+         if ((compoundTitles).length > 20) {
+           $('.compoundSelect-title').css('font-size','12px');
+         }
+          $(".islandora-audio-object").remove();
           }
          if ($('body').hasClass('compoundChild')){
           var commentedURL = $('div.currentImage').find('noscript').addClass('widestIMG').text().split(" ");
@@ -564,6 +588,13 @@
          }
         });
         $(".itemMetadata").appendTo(".region-sidebar-first-inner");
+
+         if ($('body').hasClass("compoundParent")){
+              $(".metadataContainer").removeClass('itemMetadata').addClass('parentMetadata');
+            $(".parentMetadata").appendTo(".region-sidebar-first-inner");
+         }
+
+
         $('.parentMetadata').insertAfter('.itemMetadata');
 
         $("#region-sidebar-first").addClass('nano');
