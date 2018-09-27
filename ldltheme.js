@@ -745,7 +745,8 @@
           $("<div id='shareToggle' class='userSelect'><div class='iconSelect'></div><div class='textSelect'>share</div></div>").insertAfter("#block-system-main .infoToggle");
         }
         var testlength = ($('.manageMenu > ul > li').length)
-        if (($('.manageMenu > ul > li').length) < 2){
+        console.log(testlength);
+        if (($('.manageMenu > ul > li').length) < 3){
           $(".manageMenu").css("display", "none"); //kills extra space if manageMenu is not being used
         }
         $("<div id='share'/>").insertAfter("#shareToggle");
