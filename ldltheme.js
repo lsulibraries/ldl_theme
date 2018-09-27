@@ -90,9 +90,6 @@
           if ($('.block-islandora-compound-object').length){
             compoundChild_end();
           }
-
-
-
           break;
         }
 
@@ -160,6 +157,11 @@
           moveMetadata();
           actionToggles();
           itemFooter();
+          if ($('body').hasClass('oralHistory')){
+              oralHistory_end();
+              $('div.backgroundDiv').css('background-image', 'url(/sites/all/themes/ldl/images/audiobanner.jpeg")');
+          }    
+
           break;
         }
 
@@ -177,6 +179,29 @@
           break;
         }
 
+
+        case (($('body').hasClass('oralHistory')) && (!$('body').hasClass('compoundParent')))  :{
+          itemTitle = $(".modsTitle").html(); // finds full title without truncation
+          thumbnailURL = $("div.oralhistory-banner img").prop('src');
+          if ($('.block-islandora-compound-object').length){
+            compoundChild_start();
+          }
+          itemHeader();
+          typeClass('image');
+          imageContainer();
+          moveMetadata();
+          actionToggles();
+          itemFooter();
+          if ($('.block-islandora-compound-object').length){
+            compoundChild_end();
+          }
+            oralHistory_end();
+          break;
+        }        
+
+
+
+
       } //end page detection
 
 
@@ -186,6 +211,11 @@
         $('.item_headerMenu').addClass( type + '_headerMenu');
         $('.itemTitle').addClass( type + 'Title');
         $('.itemLabel').addClass( type + 'Label');
+      }
+
+      function oralHistory_end(){
+        $('.oralhistory-banner, .imagePreview').remove();
+
       }
 
       function pageImage(){
@@ -341,13 +371,27 @@
           $(".compoundLabels").insertBefore(".backgroundDiv");
           $("#islandora-ip-embargo-object-embargo-form").insertBefore(".compoundGallery"); // moves ipembargo
           $("<div class='embargoTitle'>Set IP embargo settings</div>").insertBefore(".compoundObject #islandora-ip-embargo-policy-source")//adds title for ip embargo on compounds
-          var thumbnailURL =  srcclean[1];
+          
+          if ($('body').hasClass('oralHistory')){
+            var thumbnailURL = $("div.oralhistory-banner img").prop('src');
+
+          }
+          else{
+            var thumbnailURL =  srcclean[1];
+          }
           $("div#region-content > div.region-content-inner > div.tabs > ul.tabs").wrapAll('<div class="manageMenu"/>'); //moves the view/ip embargo/manage menu
           $(".compoundCount").appendTo(".itemContainer");
           $(".item_header > .form-item").addClass('item_headerMenu').appendTo(".item_header");
           $("<div class='backgroundDiv'/>").insertBefore(".item_headerMenu"); //creates header for book items
           $('.backgroundDiv').css('background-image', 'url(' + thumbnailURL + ')');
           $('.parentLink').addClass('institutionSmall');
+
+             compoundTitles = ($('.compoundSelect-title').html());
+
+         if ((compoundTitles).length > 25) {
+           $('.compoundSelect-title').css('font-size','12px');
+         }
+          $(".islandora-audio-object").remove();
           }
          if ($('body').hasClass('compoundChild')){
           var commentedURL = $('div.currentImage').find('noscript').addClass('widestIMG').text().split(" ");
@@ -413,6 +457,12 @@
         else if ($('body').hasClass('video')){
           $("<div class='contentLabel videoLabel'>Video Object</div>").appendTo(".labelContainer"); //adds label break
         }
+        else if ($('body').hasClass('oralHistory')){
+          $("<div class='contentLabel audioLabel'>Oral History</div>").appendTo(".labelContainer"); //adds label break
+          thumbnailURL = $("div.oralhistory-banner img").prop('src');
+            $('.backgroundDiv').css('background-image', 'url(' + thumbnailURL + ')');          
+        }
+
         else{
           $("<div class='contentLabel imageLabel'>Image Object</div>").appendTo(".labelContainer"); //adds label break
         }
@@ -430,6 +480,12 @@
           thumbnailURL = srcclean[1];
           $('.imagePreview img').prop('src', thumbnailURL);
         }
+        if (($('body').hasClass('compoundChild')) && ($('body').hasClass('oralHistory'))){
+          thumbnailURL = $("div.oralhistory-banner img").prop('src');
+            $('.backgroundDiv').css('background-image', 'url(' + thumbnailURL + ')');
+            console.log('hi kyles')
+        }
+
       }
 
       function itemFooter(){
@@ -564,6 +620,13 @@
          }
         });
         $(".itemMetadata").appendTo(".region-sidebar-first-inner");
+
+         if ($('body').hasClass("compoundParent")){
+              $(".metadataContainer").removeClass('itemMetadata').addClass('parentMetadata');
+            $(".parentMetadata").appendTo(".region-sidebar-first-inner");
+         }
+
+
         $('.parentMetadata').insertAfter('.itemMetadata');
 
         $("#region-sidebar-first").addClass('nano');
@@ -1182,7 +1245,7 @@ function monthClick(){
       }
       // end newspaper 2.0
 
-      if ( ($('body').hasClass('compoundObject')) || ($('body').hasClass('audio')) || ($('body').hasClass('video')) || ($('body').hasClass('pdf')) || ($('body').hasClass('bookViewer')) || ($('body').hasClass('context-data')) || ($('body').hasClass('largeImage')) || ($('body').hasClass('newspaperSet'))){
+      if ( ($('body').hasClass('compoundObject')) || ($('body').hasClass('oralHistory')) || ($('body').hasClass('audio')) || ($('body').hasClass('video')) || ($('body').hasClass('pdf')) || ($('body').hasClass('bookViewer')) || ($('body').hasClass('context-data')) || ($('body').hasClass('largeImage')) || ($('body').hasClass('newspaperSet'))){
       $('body').addClass('headerversiontwo');
       }
       if (navigator.appName == 'Microsoft Internet Explorer' ||  !!(navigator.userAgent.match(/Trident/) || navigator.userAgent.match(/rv:11/)) || (typeof $.browser !== "undefined" && $.browser.msie == 1))
