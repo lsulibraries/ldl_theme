@@ -7126,17 +7126,17 @@ body.multipleDaily .issueLevel .issue-container {
   body.oralHistory.iOSuser iframe.pdf {
     padding-top: 40px; }
 
-  body.audio .metadataVertical div.metadataValue, body.audio .metadataVertical div.metadataLabel, body.oralHistory .metadataVertical div.metadataValue, body.oralHistory .metadataVertical div.metadataLabel {
+  body.audio .metadataVertical div.metadataValue, body.audio .metadataVertical div.metadataLabel, body.oralHistory:not(.compoundParent) .metadataVertical div.metadataValue, body.oralHistory:not(.compoundParent) .metadataVertical div.metadataLabel {
     color: #ABABAB !important; }
-  body.audio div#islandora-pdfjs, body.oralHistory div#islandora-pdfjs {
+  body.audio div#islandora-pdfjs, body.oralHistory:not(.compoundParent) div#islandora-pdfjs {
     padding: 0px !important; }
-  body.audio .infoToggle, body.oralHistory .infoToggle {
+  body.audio .infoToggle, body.oralHistory:not(.compoundParent) .infoToggle {
     display: none; }
-  body.audio .metadataVertical .metadataContainer::before, body.oralHistory .metadataVertical .metadataContainer::before {
+  body.audio .metadataVertical .metadataContainer::before, body.oralHistory:not(.compoundParent) .metadataVertical .metadataContainer::before {
     color: #ABABAB; }
-  body.audio .metadataVertical .metadataContainer, body.oralHistory .metadataVertical .metadataContainer {
+  body.audio .metadataVertical .metadataContainer, body.oralHistory:not(.compoundParent) .metadataVertical .metadataContainer {
     border-top: 1px solid rgba(255, 255, 255, 0.16); }
-  body.audio .metadataVertical .metadataContainer::before, body.oralHistory .metadataVertical .metadataContainer::before {
+  body.audio .metadataVertical .metadataContainer::before, body.oralHistory:not(.compoundParent) .metadataVertical .metadataContainer::before {
     background-image: url(../images/info_light.png) !important; }
 
   .compoundObject .islandora-large-image-metadata {

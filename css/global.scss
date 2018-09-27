@@ -9963,7 +9963,7 @@ div#islandora-pdfjs, iframe.pdf {
 
 }
 
-body.audio, body.oralHistory {
+body.audio, body.oralHistory:not(.compoundParent) {
   .metadataVertical div.metadataValue, .metadataVertical div.metadataLabel {
       color: #ABABAB !important;
   }
