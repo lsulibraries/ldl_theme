@@ -9929,7 +9929,8 @@ border: 1px solid rgba(255, 255, 255, 0.33);
 
 body.oralHistory.iOSuser{
   .image-thumbnailData {
-
+word-break: break-word;
+font-size: 13px;
 }
 
 div#islandora-pdfjs, iframe.pdf {

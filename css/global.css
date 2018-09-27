@@ -7114,6 +7114,9 @@ body.multipleDaily .issueLevel .issue-container {
     padding: 10px;
     margin-bottom: 0px; }
 
+  body.oralHistory.iOSuser .image-thumbnailData {
+    word-break: break-word;
+    font-size: 13px; }
   body.oralHistory.iOSuser div#islandora-pdfjs, body.oralHistory.iOSuser iframe.pdf {
     height: 600px !important; }
   body.oralHistory.iOSuser .islandora-audio-content {
