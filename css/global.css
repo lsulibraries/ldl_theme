@@ -7114,8 +7114,21 @@ body.multipleDaily .issueLevel .issue-container {
     padding: 10px;
     margin-bottom: 0px; }
 
+  body.oralHistory.iOSuser div#islandora-pdfjs, body.oralHistory.iOSuser iframe.pdf {
+    height: 600px !important; }
+  body.oralHistory.iOSuser .islandora-audio-content {
+    height: 100%;
+    padding-top: 50px !important;
+    padding-bottom: 50px !important; }
+  body.oralHistory.iOSuser iframe.pdf {
+    padding-top: 40px; }
+
   body.audio .metadataVertical div.metadataValue, body.audio .metadataVertical div.metadataLabel, body.oralHistory .metadataVertical div.metadataValue, body.oralHistory .metadataVertical div.metadataLabel {
     color: #ABABAB !important; }
+  body.audio div#islandora-pdfjs, body.oralHistory div#islandora-pdfjs {
+    padding: 0px !important; }
+  body.audio .infoToggle, body.oralHistory .infoToggle {
+    display: none; }
   body.audio .metadataVertical .metadataContainer::before, body.oralHistory .metadataVertical .metadataContainer::before {
     color: #ABABAB; }
   body.audio .metadataVertical .metadataContainer, body.oralHistory .metadataVertical .metadataContainer {
@@ -7152,7 +7165,12 @@ body.multipleDaily .issueLevel .issue-container {
     padding: 0px 30px; } }
 @media screen and (max-width: 1260px) and (max-width: 740px) {
   .currentPart {
-    margin-left: 0px !important; }
+    margin-left: 0px !important;
+    display: table-cell; }
+
+  .itemTitle {
+    font-size: 20px !important;
+    line-height: 23px !important; }
 
   body.compoundChild .userMenu {
     margin-top: 20px; }

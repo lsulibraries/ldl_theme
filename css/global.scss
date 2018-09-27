@@ -9925,10 +9925,55 @@ border: 1px solid rgba(255, 255, 255, 0.33);
     }
 //compound styles mobile
 
+
+
+body.oralHistory.iOSuser{
+  .image-thumbnailData {
+
+}
+
+div#islandora-pdfjs, iframe.pdf {
+    height: 600px !important;
+}
+
+// .islandora-audio-content-wrapper.clearfix {
+//     width: 100%;
+//     display: block;
+//     height: 120px;
+//     z-index: 99;
+// }
+
+// .vjs-control-bar{
+//   height: 30px !important;
+// }
+
+.islandora-audio-content{
+  height: 100%;
+  padding-top: 50px !important;
+    padding-bottom: 50px !important;
+
+}
+
+ iframe.pdf{
+  padding-top: 40px;
+ }
+
+
+
+}
+
 body.audio, body.oralHistory {
   .metadataVertical div.metadataValue, .metadataVertical div.metadataLabel {
       color: #ABABAB !important;
   }
+
+div#islandora-pdfjs {
+    padding: 0px !important;
+}
+
+.infoToggle{
+  display: none;
+}
 
 .metadataVertical .metadataContainer::before {
     color: #ABABAB;
@@ -10003,8 +10048,14 @@ body.audio, body.oralHistory {
 
 .currentPart {
     margin-left: 0px !important;
-
+  display: table-cell;
 }
+
+.itemTitle{
+      font-size: 20px !important;
+    line-height: 23px !important;
+}
+
 
 body.compoundChild{
 
