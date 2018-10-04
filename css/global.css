@@ -3159,7 +3159,7 @@ div.islandora-pdf-object, div.islandora-large-image-object {
   margin-top: 10px; }
 
 .compoundChild .compoundLabel {
-  background-image: url("https://i.imgur.com/jaWlCjM.png") !important; }
+  background-image: url("../images/jaWlCjM.png") !important; }
 
 #share .jssocials-share {
   display: inline-block;
@@ -3370,9 +3370,9 @@ div.islandora-pdf-object, div.islandora-large-image-object {
 .compoundObject .form-item.form-type-checkboxes.form-item-public-datastreams {
   border-bottom: 1px solid rgba(0, 0, 0, 0.08); }
 .compoundObject .compoundLabel {
-  background-image: url("https://i.imgur.com/IUHIf6A.png"); }
+  background-image: url("../images/IUHIf6A.png"); }
 .compoundObject .imageLabel {
-  background-image: url("https://i.imgur.com/4LmxSra.png");
+  background-image: url("../images/4LmxSra.png");
   margin-right: 24px;
   padding-left: 48px;
   padding-right: 25px; }
@@ -4161,7 +4161,7 @@ body.headerversiontwo {
     margin-left: 20px;
     transition: left 1s, padding-left 0s, background 0.5s 1s; }
   body.headerversiontwo .infoToggle .iconSelect {
-    background-image: url(https://i.imgur.com/zK6anrR.png);
+    background-image: url(../images/zK6anrR.png);
     width: 36px;
     background-size: 15px;
     background-repeat: no-repeat;
@@ -4175,12 +4175,12 @@ body.headerversiontwo {
     justify-content: center;
     align-items: center; }
   body.headerversiontwo .infoToggle .iconSelect {
-    background-image: url("https://i.imgur.com/zK6anrR.png"); }
+    background-image: url("../images/zK6anrR.png"); }
   body.headerversiontwo .downloadSelect .iconSelect {
-    background-image: url("https://i.imgur.com/rthA4J4.png");
+    background-image: url("../images/rthA4J4.png");
     background-size: 20px; }
   body.headerversiontwo #shareToggle .iconSelect {
-    background-image: url("https://i.imgur.com/bKhM20h.png");
+    background-image: url("../images/bKhM20h.png");
     background-size: 20px; }
   body.headerversiontwo div#share {
     justify-content: flex-end;
@@ -4277,7 +4277,7 @@ body.headerversiontwo.metaOpened div#zone-header {
   height: 35px;
   top: -3px;
   margin-left: -19px;
-  background: url(https://i.imgur.com/uQgtRjj.png) !important;
+  background: url(../images/uQgtRjj.png) !important;
   border: 0px;
   z-index: 103; }
 
@@ -4303,7 +4303,7 @@ div#BRpage {
   display: none; }
 
 .BRicon {
-  background-image: url(https://i.imgur.com/IhxEDq2.png) !important; }
+  background-image: url(../images/IhxEDq2.png) !important; }
 
 .twopg {
   position: relative !important;
@@ -4393,7 +4393,7 @@ body.bookViewer .headerBreadcrumb {
   justify-content: center;
   align-items: flex-start; }
 body.bookViewer .bookLabel {
-  background-image: url(https://i.imgur.com/Dm9Wu42.png);
+  background-image: url(../images/Dm9Wu42.png);
   background-size: 25px;
   background-position: 0px 0px; }
 body.bookViewer #BRnav {

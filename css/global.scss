@@ -35,19 +35,19 @@ $Purple2: #7C4DFF;
 $Violet2: #945EB8;
 $LDLBlue: #327BB3;
 
-$compoundLegend: 'https://i.imgur.com/azpOWoN.png';
-$compoundLegendDark: 'https://i.imgur.com/IUHIf6A.png';
-$childLegend: 'https://i.imgur.com/jaWlCjM.png';
-$imageLegend: 'https://i.imgur.com/4LmxSra.png';
-$shareLegend: 'https://i.imgur.com/bKhM20h.png';
+$compoundLegend: '../images/azpOWoN.png';
+$compoundLegendDark: '../images/IUHIf6A.png';
+$childLegend: '../images/jaWlCjM.png';
+$imageLegend: '../images/4LmxSra.png';
+$shareLegend: '../images/bKhM20h.png';
 $audioLegend: '../images/volume_light.png';
 $pdfLegend: '../images/document_dark.png';
 $videoLegend: '../images/video_dark.png';
 
-$viewLegend: 'https://i.imgur.com/rqTlrT3.png';
-$manageLegend: 'https://i.imgur.com/3fcNTbJ.png';
-$infoLegend: 'https://i.imgur.com/zK6anrR.png';
-$downloadLegend: 'https://i.imgur.com/rthA4J4.png';
+$viewLegend: '../images/rqTlrT3.png';
+$manageLegend: '../images/3fcNTbJ.png';
+$infoLegend: '../images/zK6anrR.png';
+$downloadLegend: '../images/rthA4J4.png';
 $infoLegend2:'../images/info_light.png';
 $descriptionLegend:'../images/info_dark.png';
 
@@ -5531,7 +5531,7 @@ div#shareToggle.activeMenu{
 
 
 .infoToggle .iconSelect {
-    background-image: url(https://i.imgur.com/zK6anrR.png);
+    background-image: url(../images/zK6anrR.png);
     width: 36px;
     background-size: 15px;
     background-repeat: no-repeat;
@@ -5723,7 +5723,7 @@ body.headerversiontwo.metaOpened{
     height: 35px;
     top: -3px;
     margin-left: -19px;
-     background: url(https://i.imgur.com/uQgtRjj.png) !important;
+     background: url(../images/uQgtRjj.png) !important;
      border: 0px;
     z-index: 103;
 }
@@ -5756,7 +5756,7 @@ div#BRpage {
 }
 
 .BRicon{
-  background-image: url(https://i.imgur.com/IhxEDq2.png) !important;
+  background-image: url(../images/IhxEDq2.png) !important;
 
 }
 
@@ -5908,8 +5908,6 @@ div#BRnavpos {
   box-shadow: none;
 }
 
-
-
 .headerBreadcrumb {
     display: flex;
     justify-content: center;
@@ -5917,7 +5915,7 @@ div#BRnavpos {
 }
 
 .bookLabel {
-    background-image: url(https://i.imgur.com/Dm9Wu42.png);
+    background-image: url(../images/Dm9Wu42.png);
     background-size: 25px;
     background-position: 0px 0px;
 }
