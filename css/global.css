@@ -265,6 +265,20 @@ a.institution-about-edit {
 .lsmTheme .institutionLabel {
   background-image: url("../images/uimSOt2.png"); }
 
+.ebrplTheme .institution-header, .ebrplTheme .collectionHeader, .ebrplTheme .institution-search::before, .ebrplTheme .child-institution-collections::before {
+  background: #181B42; }
+.ebrplTheme .collectionLogo {
+  background-image: url("../images/ebrplLogo.jpg");
+  cursor: pointer; }
+.ebrplTheme form#islandora-collection-search-form {
+  border: 2px solid #181B42; }
+.ebrplTheme .institution-search input[type="text"] {
+  border: 2px solid #181B42; }
+.ebrplTheme .institutionLabel::before {
+  background: #181B42; }
+.ebrplTheme .institutionLabel {
+  background-image: url("../images/ebrplLogo.jpg"); }
+
 .lsuTheme .institution-header, .lsuTheme .collectionHeader, .lsuTheme .institution-search::before, .lsuTheme .child-institution-collections::before {
   background: #3C1053; }
 .lsuTheme .collectionLogo {
