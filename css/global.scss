@@ -1438,6 +1438,11 @@ opacity: 1;
     background-size: 70px auto;
   }
 
+  a.institutionLink.ebrplLink {
+    background-color: $ebrplColor;
+    background-image: url($ebrplLogo);
+  }
+
   a.institutionLink.lsusLink {
     background-color: $lsusColor;
     background-image: url($lsusLogo);

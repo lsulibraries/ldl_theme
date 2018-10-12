@@ -918,6 +918,9 @@ li.child-institution-collection-list-item {
     background-color: #3C1053;
     background-image: url("../images/LSU_Gold_CMYK.png");
     background-size: 70px auto; }
+  #block-block-11 a.institutionLink.ebrplLink {
+    background-color: #181B42;
+    background-image: url("../images/ebrplLogo.jpg"); }
   #block-block-11 a.institutionLink.lsusLink {
     background-color: #ffffff;
     background-image: url("../images/LSUS%20Logo%2011102015.png"); }
