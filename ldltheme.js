@@ -894,7 +894,8 @@
         "vville",
         "tahil",
         "fpoc",
-        "lasc"
+        "lasc",
+        "ebrpl"
       ];
       for (namespace in namespaces) {
         ns = namespaces[namespace];
