@@ -31,6 +31,8 @@ css[global.css][description] = 'This file holds all the globally active custom C
 css[global.css][options][weight] = '10'
 version = '1.x'
 scripts[] = 'ldltheme.js'
+scripts[] = 'preldltheme.js'
+
 stylesheets[all][sites/all/modules/system/system.menus.css] = 'system.menus.css'
 settings[toggle_logo] = '0'
 settings[toggle_name] = '0'

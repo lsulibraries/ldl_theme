@@ -1,6 +1,161 @@
 <?php
 
 /**
+ * Prepares variables for islandora_newspaper_issue templates.
+ *
+ * Default template: islandora-newspaper-issue.tpl.php.
+ *
+ * @param array $variables
+ *   An associative array containing:
+ *   - object: An AbstractObject for which to generate the display.
+ */
+function alpha_preprocess_islandora_newspaper_issue(array &$variables) {
+  $variables['thumbnail_path'] = newspaper_issue_first_page_tn_path($variables['object']->id, 'TN');
+}
+
+/**
+ * Theme a newspaper pages controls.
+ */
+function alpha_preprocess_islandora_newspaper_page_controls(array &$variables) {
+  $to_remove = ['clip', 'jp2_download', 'tiff_download', 'page_pager'];
+  foreach($variables['controls'] as $key => $value) {
+    if (in_array($key, $to_remove)) {
+      unset($variables['controls'][$key]);
+    }
+  }
+  $variables['controls']['page_select'] = str_replace(t('Image:'), t('Page '), $variables['controls']['page_select']);
+  $variables['controls']['text_view'] = str_replace("<strong>" . t('View:') . " </strong>", '', $variables['controls']['text_view']);
+  $variables['controls']['text_view'] = str_replace('>Text<', t('>View Text<'), $variables['controls']['text_view']);
+}
+
+/**
+ * Prepares variables for islandora_newspaper templates.
+ *
+ * Default template: islandora-newspaper.tpl.php.
+ *
+ * @param array $variables
+ *   An associative array containing:
+ *   - object: An AbstractObject for which to generate the display.
+ */
+function alpha_preprocess_islandora_newspaper(array &$variables) {
+
+  $issues = [];
+  $cache_key = 'ldl_theme_grouped_issues_' . $variables['object']->id;
+  $grouped_issues = &drupal_static(__FUNCTION__);
+  if (!isset($grouped_issues)) {
+    if ($cache = cache_get($cache_key)) {
+      $grouped_issues = $cache->data;
+    }
+    else {
+      $grouped_issues = islandora_newspaper_group_issues(
+        islandora_newspaper_get_issues($variables['object'])
+      );
+      cache_set($cache_key, $grouped_issues, 'cache');
+    }
+  }
+
+  $issueTotal = 0;
+  $yearTotal = 0;
+  $month_enum = ['01','02','03','04','05','06','07','08','09','10','11','12'];
+  foreach($grouped_issues as $year => $months) {
+    $yearTotal++;
+    $nest[$year]['months'] = [];
+    $nest[$year]['issue-count'] = 0;
+    foreach($month_enum as $num) {
+      $month = date("M", mktime(0, 0, 0, $num, 1, 2000));
+      $nest[$year]['months'][$month]['issues'] = [];
+      if(array_key_exists($num, $months)) {
+        $days = $months[$num];
+      }
+      else {
+        $days = [];
+        $issues = [];
+      }
+      foreach ($days as $day => $issues) {
+        foreach ($issues as $issue) {
+          $issue['label'] = $issue['label'];
+          $issue['formatted-date'] = $issue['issued']->format('m/d/Y');
+          $issue['formatted-date-year'] = $issue['issued']->format('Y');
+          $issue['formatted-date-month'] = $issue['issued']->format('m');
+          $issue['formatted-date-day'] = $issue['issued']->format('d');
+
+          $issue['cover-tn-path'] = newspaper_issue_first_page_tn_path($issue['pid'], 'JPG');
+          $nest[$year]['months'][$month]['issues'][] = $issue;
+
+        }
+      }
+      $mounthIssues = count($nest[$year]['months'][$month]['issues']);
+      $nest[$year]['months'][$month]['count'] = $mounthIssues;
+      if (count($issues) > 1) {
+          $nest[$year]['months'][$month]['multi'] = TRUE;
+      }
+      $nest[$year]['issue-count'] += $mounthIssues;
+      $issueTotal += $mounthIssues;
+    }
+    $variables['issues'] = $nest;
+
+  }
+  if(array_key_exists('issues', $variables)) {
+    ksort($variables['issues']);
+  }
+  $variables['totalIssueCount'] = $issueTotal;
+  $variables['totalYearCount'] = $yearTotal;
+}
+
+function newspaper_issue_first_page_tn_path($pid, $dsid = 'TN') {
+  $allowed_dsids = ['TN', 'JPG', 'JP2'];
+  if (!in_array($dsid, $allowed_dsids)) {
+    $allowedstr = implode(',', $allowed_dsids);
+    throw new Exception("DSID $dsid is not valid here; must be one of $allowedstr");
+  }
+
+  $object = islandora_object_load($pid);
+  if ($object && $object[$dsid]) {
+    $pid_with_tn = $pid;
+  }
+  else {
+    $query = <<<EOQ
+      PREFIX islandora-rels-ext: <http://islandora.ca/ontology/relsext#>
+      SELECT ?pid ?seq
+      FROM <#ri>
+        WHERE {
+        ?pid <fedora-rels-ext:isMemberOf> <info:fedora/$pid> .
+        ?pid islandora-rels-ext:isSequenceNumber ?seq .
+        ?pid <fedora-model:state> <fedora-model:Active> .
+      }
+      ORDER BY ?seq
+      LIMIT 1
+EOQ;
+    $connection = islandora_get_tuque_connection();
+
+    $results = $connection->repository->ri->sparqlQuery($query);
+
+    if (1 !== count($results)) {
+      return '';
+    }
+    $pid_with_tn =  $results[0]['pid']['value'];
+  }
+  return "/islandora/object/$pid_with_tn/datastream/$dsid/view";
+}
+
+function alpha_preprocess_islandora_large_image(&$variables) {
+
+  $pid = $variables['islandora_object']->id;
+  $variables['downloads'] = array();
+  module_load_include('inc', 'islandora', 'includes/datastream');
+  foreach($variables['islandora_object'] as $ds) {
+    if(in_array($ds->id, array('RELS-EXT', 'TN', 'MODS', 'DC', 'OBJ', 'JP2', 'TECHMD'))) {
+      continue;
+    }
+    $variables['downloads'][$ds->id] = array(
+      'href' => "/islandora/object/$pid/datastream/$ds->id/download",
+      'size' => islandora_datastream_get_human_readable_size($ds),
+      'label' => $ds->label,
+    );
+  }
+}
+
+/**
  * @file
  * This file is empty by default because the base theme chain (Alpha & Omega) provides
  * all the basic functionality. However, in case you wish to customize the output that Drupal
@@ -20,6 +175,7 @@ function alpha_preprocess_islandora_basic_collection_wrapper(&$variables) {
 
   $pidParts = explode(':', $islandora_object->id);
   $pid = $pidParts[0];
+
 
   $result = db_query("select u.alias, n.title "
       . "from field_revision_field_lp_pid f "

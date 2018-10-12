@@ -4,6 +4,11 @@
  * Template file to style output.
  */
 ?>
+
+<script>
+document.body.className += ' ' + 'book';
+</script>
+
 <div id="pageCount">
 <?php print count($viewer_params['pages']); ?> pages
 </div>
