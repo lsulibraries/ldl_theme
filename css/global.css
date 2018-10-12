@@ -268,7 +268,7 @@ a.institution-about-edit {
 .ebrplTheme .institution-header, .ebrplTheme .collectionHeader, .ebrplTheme .institution-search::before, .ebrplTheme .child-institution-collections::before {
   background: #181B42; }
 .ebrplTheme .collectionLogo {
-  background-image: url("../images/ebrplLogo.jpg");
+  background-image: url("../images/verticalebrpl.jpg");
   cursor: pointer; }
 .ebrplTheme form#islandora-collection-search-form {
   border: 2px solid #181B42; }
@@ -277,7 +277,7 @@ a.institution-about-edit {
 .ebrplTheme .institutionLabel::before {
   background: #181B42; }
 .ebrplTheme .institutionLabel {
-  background-image: url("../images/ebrplLogo.jpg"); }
+  background-image: url("../images/verticalebrpl.jpg"); }
 
 .lsuTheme .institution-header, .lsuTheme .collectionHeader, .lsuTheme .institution-search::before, .lsuTheme .child-institution-collections::before {
   background: #3C1053; }
@@ -920,7 +920,7 @@ li.child-institution-collection-list-item {
     background-size: 70px auto; }
   #block-block-11 a.institutionLink.ebrplLink {
     background-color: #181B42;
-    background-image: url("../images/ebrplLogo.jpg"); }
+    background-image: url("../images/verticalebrpl.jpg"); }
   #block-block-11 a.institutionLink.lsusLink {
     background-color: #ffffff;
     background-image: url("../images/LSUS%20Logo%2011102015.png"); }
