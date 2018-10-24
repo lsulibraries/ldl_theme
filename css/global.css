@@ -980,20 +980,12 @@ li.child-institution-collection-list-item {
     background-size: 120px auto; }
 
 .collectionPage .collectionLogo {
-  width: 200px;
-  height: 200px;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  margin: 20px; }
+  display: none !important; }
 .collectionPage #page-title {
-  padding: 20px;
   width: 100%;
-  align-items: center;
-  margin: 0px;
-  padding-left: 0px;
-  padding-bottom: 0px;
-  display: block; }
+  display: block;
+  max-width: 1200px;
+  margin: 0 auto; }
 .collectionPage span.islandora-basic-collection-item-count {
   font-size: 12px;
   display: inline-flex;
@@ -1009,9 +1001,11 @@ li.child-institution-collection-list-item {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   padding: 20px;
-  justify-content: center; }
+  justify-content: center;
+  background: transparent !important;
+  height: 200px; }
   .collectionPage .collectionHeader .collection-description-text {
     margin: 0px;
     border-left: 1px solid rgba(255, 255, 255, 0.21);
@@ -1020,13 +1014,14 @@ li.child-institution-collection-list-item {
     max-width: 800px;
     padding-right: 20px; }
 .collectionPage #block-islandora-collection-search-islandora-collection-search {
-  display: block;
-  background: gainsboro; }
+  display: block; }
 .collectionPage #region-sidebar-first {
   display: block;
   min-width: 480px; }
 .collectionPage .islandora-basic-collection-display-switch {
   position: absolute; }
+.collectionPage .region-content-inner {
+  background: #424242; }
 .collectionPage .islandora-basic-collection-grid {
   margin: 0px auto;
   max-width: 1200px; }
@@ -1057,16 +1052,15 @@ li.child-institution-collection-list-item {
 .collectionSearch .form-item.form-type-select.form-item-collection-select {
   display: none; }
 .collectionSearch form#islandora-collection-search-form {
-  position: relative;
-  top: -20px;
-  background: white;
-  border-radius: 5px;
+  border-radius: 30px;
   overflow: hidden;
-  padding: 5px; }
+  padding: 5px;
+  margin-top: 20px; }
 .collectionSearch input#edit-islandora-simple-search-query {
   font-size: 18px;
   border: 0px;
-  width: 50vw; }
+  width: 300px;
+  padding-left: 20px; }
 .collectionSearch input[type="submit"] {
   position: relative;
   width: 55px;

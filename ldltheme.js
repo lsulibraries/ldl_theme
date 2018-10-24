@@ -18,6 +18,9 @@
 
         case (($(".islandora-basic-collection-item-count").length) > 0) :{
           $("body").addClass("collectionPage");
+          $(".collectionPage <div class='collectionSearch'/>").appendTo("#region-sidebar-first");
+          $(".collectionPage #block-islandora-collection-search-islandora-collection-search").appendTo(".collectionSearch");
+          $(".collectionSearch input.form-submit").val(' ');
           break;
         }        
 
@@ -965,12 +968,9 @@
       $(".collectionPage <div class='collectionLogo'/>").prependTo(".collectionHeader");
       $("<div class='homepageLogo'/>").prependTo(".messageContainer");
       $( ".site-name a span" ).replaceWith( "<span><span class='boldSpan'>Louisiana</span> Digital Library</span>" );// $('.child-institution-collections a').wrapAll('<div class="childCollections"/>'); disables overflow fix for many child collections running off the page. this is a reversion because of <a> bug / diff in test vs production
-      $(".collectionPage <div class='collectionSearch'/>").insertAfter(".collectionHeader");
       $(".collectionPage #page-title").prependTo(".collectionHeader .collection-description-text");
-      $(".collectionPage #block-islandora-collection-search-islandora-collection-search").appendTo(".collectionSearch");
       $("#zone-header input.form-submit").val(' ');
       $(".institution-search input.form-submit").val(' ');
-      $(".collectionSearch input.form-submit").val(' ');
       $("#largeSearch input.form-submit").val(' ');
       $("#block-user-login").prependTo(".footerContainer");
       $("<button class='hamburger--elastic hamburger--collapse mobileMenuIcon' type='button'><span class='hamburger-box'><span class='hamburger-inner'></span></span></button>").insertBefore(".logo-img");

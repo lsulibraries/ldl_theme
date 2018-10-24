@@ -1540,22 +1540,14 @@ opacity: 1;
 
 .collectionPage {
   .collectionLogo {
-    width: 200px;
-    height: 200px;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    margin: 20px;
+    display: none !important;
   }
 
   #page-title {
-    padding: 20px;
     width: 100%;
-    align-items: center;
-    margin: 0px;
-    padding-left: 0px;
-    padding-bottom: 0px;
     display: block;
+    max-width: 1200px;
+    margin: 0 auto;
   }
 
   span.islandora-basic-collection-item-count {
@@ -1571,10 +1563,11 @@ opacity: 1;
 
   .collectionHeader {
     @include flexbox;
-    align-items: center;
+    align-items: flex-end;
     padding: 20px;
     justify-content: center;
-
+    background: transparent !important;
+    height: 200px;
     .collection-description-text {
       margin: 0px;
       border-left: 1px solid rgba(255, 255, 255, 0.21);
@@ -1587,7 +1580,6 @@ opacity: 1;
 
   #block-islandora-collection-search-islandora-collection-search {
     display: block;
-    background: gainsboro;
   }
 
   #region-sidebar-first{
@@ -1597,6 +1589,10 @@ opacity: 1;
 
 .islandora-basic-collection-display-switch{
   position: absolute;
+}
+
+.region-content-inner{
+  background: #424242;
 }
 
 //collection grid styles
@@ -1642,18 +1638,17 @@ opacity: 1;
   }
 
   form#islandora-collection-search-form {
-    position: relative;
-    top: -20px;
-    background: white;
-    border-radius: 5px;
+    border-radius: 30px;
     overflow: hidden;
     padding: 5px;
+    margin-top: 20px;
   }
 
   input#edit-islandora-simple-search-query {
     font-size: 18px;
     border: 0px;
-    width: 50vw;
+    width: 300px;
+    padding-left: 20px;    
   }
 
   input[type="submit"] {
