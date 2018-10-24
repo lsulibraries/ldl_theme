@@ -1003,8 +1003,6 @@ li.child-institution-collection-list-item {
   border-radius: 5px;
   position: relative;
   top: -2px; }
-.collectionPage .islandora-view-grid, .collectionPage .islandora-view-list {
-  display: none; }
 .collectionPage .collectionHeader {
   display: -webkit-box;
   display: -moz-box;
@@ -1073,9 +1071,6 @@ li.child-institution-collection-list-item {
   margin-top: 1px; }
 
 .islandora-basic-collection-wrapper hr {
-  display: none; }
-
-.islandora-basic-collection-display-switch {
   display: none; }
 
 h1.about-link {

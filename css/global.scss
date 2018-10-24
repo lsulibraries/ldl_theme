@@ -1569,10 +1569,6 @@ opacity: 1;
     top: -2px;
   }
 
-  .islandora-view-grid, .islandora-view-list {
-    display: none;
-  }
-
   .collectionHeader {
     @include flexbox;
     align-items: center;
@@ -1663,10 +1659,6 @@ opacity: 1;
   hr {
     display: none;
   }
-}
-
-.islandora-basic-collection-display-switch {
-  display: none;
 }
 
 h1.about-link {
