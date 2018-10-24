@@ -1592,7 +1592,35 @@ opacity: 1;
 
   #region-sidebar-first{
     display: block;
+    min-width: 480px;    
   }
+
+.islandora-basic-collection-display-switch{
+  position: absolute;
+}
+
+//collection grid styles
+.islandora-basic-collection-grid{
+    margin: 0px auto;
+    max-width: 1200px;
+    .islandora-basic-collection-caption {
+      padding: 10px;
+      background: white;
+      a {
+      color: #676767;
+      font-weight: 700;
+      }
+    }
+    .islandora-basic-collection-thumb img {
+      width: 100%;
+    }
+    .islandora-basic-collection-object{
+      margin: 10px;
+      width: 220px;
+      border-radius: 10px;
+      overflow: hidden;    
+    }
+}
 
 }
 

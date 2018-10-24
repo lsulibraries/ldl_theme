@@ -15,6 +15,12 @@
           break;
         }
 
+
+        case (($(".islandora-basic-collection-item-count").length) > 0) :{
+          $("body").addClass("collectionPage");
+          break;
+        }        
+
         case (($('#edit-dsid-fieldset').length) > 0) :{
           $("body").addClass('datastreamPage');
           break;
@@ -92,7 +98,6 @@
           }
           break;
         }
-
 
         case ($('body').hasClass('video')) :{
           itemTitle = $(".modsTitle").html(); // finds full title without truncation
@@ -782,7 +787,7 @@
 
 
       function compoundStarter(){
-         $('.compoundSelect').wrapAll('<div class="itemContainer compoundGallery "/>'); //wraps collectionPage title
+         $('.compoundSelect').wrapAll('<div class="itemContainer compoundGallery "/>');
          $("<div class='itemMenu'/>").insertBefore(".backgroundDiv");
          $("<div class='contentLabel'/>").insertBefore(".compoundGallery"); //adds contentLabel div to show content type
       }
@@ -805,7 +810,7 @@
           }, function() {
           $('.modalDetails').html('<i class="fa fa-toggle-off"></i>Toggle Details');
         });
-        $('#islandora-openseadragon > span').wrapAll('<div class="imageToolbar"/>'); // wraps collectionPage title
+        $('#islandora-openseadragon > span').wrapAll('<div class="imageToolbar"/>'); 
         $("<div class='innerimageTitle'/>").text(itemTitle).insertAfter('span.modalExit5'); // undoes default title truncation
       }
 
@@ -826,12 +831,19 @@
           }, function() {
           $('.modalDetails').html('<i class="fa fa-toggle-off"></i>Toggle Details');
         });
-        $('.islandora-pdf-content > span').wrapAll('<div class="imageToolbar"/>'); // wraps collectionPage title
+        $('.islandora-pdf-content > span').wrapAll('<div class="imageToolbar"/>');
         $("<div class='innerimageTitle'/>").text(itemTitle).insertAfter('span.modalExit5'); // undoes default title truncation
       }
 
       $('.instStats').masonry({
         itemSelector: '.inst_wrapper'
+      });
+
+
+      var grid = $('.islandora-basic-collection-grid').masonry({
+        itemSelector: '.islandora-basic-collection-object',
+        columnWidth: 80,
+        initLayout: false,
       });
 
 
@@ -846,6 +858,8 @@
         sr.reveal('.islandora-basic-collection-grid dl', { duration: 100, delay: 200,  easing: 'ease-in', }, 20);
         sr.reveal('.alertBox_container', { duration: 100, delay: 0,  easing: 'ease-in', opacity: 1 }, 20);
         sr.reveal('.bookmarkWelcome', { duration: 800, delay: 100,  easing: 'linear', scale: 1, viewFactor: 0.01, }, 50);
+        grid.masonry();
+
         $("a > .institutionLink_meta").each(function() {
           $(this).colourBrightness();//
         });
@@ -908,11 +922,6 @@
       if ($(".video-js").length && $("#islandora-pdfjs").length) {
         $("body").addClass("audioPDF");
       } //detection for oral history
-      if ($(".islandora-basic-collection-item-count").length) {
-        $("body").addClass("collectionPageTest");
-        $("body").addClass("collectionPage");
-      } //allows collection Page styles
-
 
       //oral history stuff
       //$("h1#page-title").clone().prop({ id: "oh-title", class: "ohtitle"}).prependTo(".islandora-audio-content");

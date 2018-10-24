@@ -1023,7 +1023,26 @@ li.child-institution-collection-list-item {
   display: block;
   background: gainsboro; }
 .collectionPage #region-sidebar-first {
-  display: block; }
+  display: block;
+  min-width: 480px; }
+.collectionPage .islandora-basic-collection-display-switch {
+  position: absolute; }
+.collectionPage .islandora-basic-collection-grid {
+  margin: 0px auto;
+  max-width: 1200px; }
+  .collectionPage .islandora-basic-collection-grid .islandora-basic-collection-caption {
+    padding: 10px;
+    background: white; }
+    .collectionPage .islandora-basic-collection-grid .islandora-basic-collection-caption a {
+      color: #676767;
+      font-weight: 700; }
+  .collectionPage .islandora-basic-collection-grid .islandora-basic-collection-thumb img {
+    width: 100%; }
+  .collectionPage .islandora-basic-collection-grid .islandora-basic-collection-object {
+    margin: 10px;
+    width: 220px;
+    border-radius: 10px;
+    overflow: hidden; }
 
 .collectionSearch h2.block-title {
   display: none; }
