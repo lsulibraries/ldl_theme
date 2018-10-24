@@ -1589,6 +1589,11 @@ opacity: 1;
     display: block;
     background: gainsboro;
   }
+
+  #region-sidebar-first{
+    display: block;
+  }
+
 }
 
 //collectionSearch styles
@@ -1680,42 +1685,6 @@ div.item-list:nth-child(2n - 1) {
   flex-wrap: wrap;
 }
 
-.islandora-basic-collection-grid dl {
-  width: calc(25% - 4px);
-  min-width: 100px;
-  min-height: 180px;
-  display: -moz-inline-stack;
-  display: inline-block;
-  vertical-align: top;
-  margin: 2px;
-  zoom: 1;
-  @include flexbox;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-end;
-  background: rgb(220, 220, 220);
-  visibility: hidden;
-}
-
-dt.islandora-basic-collection-thumb {
-  margin-top: 10px;
-}
-
-.islandora-basic-collection-object dd {
-  padding-top: 2px;
-  padding-bottom: 2px;
-  background: #474747;
-  width: 100%;
-  align-self: flex-end;
-  padding: 10px;
-  margin-top: 10px;
-  line-height: 18px;
-  font-size: 13px;
-}
-
-dd.islandora-basic-collection-caption a {
-  color: white;
-}
 
 /*Top Search Bar*/
 #zone-header, #region-header-first {

@@ -1022,6 +1022,8 @@ li.child-institution-collection-list-item {
 .collectionPage #block-islandora-collection-search-islandora-collection-search {
   display: block;
   background: gainsboro; }
+.collectionPage #region-sidebar-first {
+  display: block; }
 
 .collectionSearch h2.block-title {
   display: none; }
@@ -1088,43 +1090,6 @@ h1.about-link {
   display: -webkit-flex;
   display: flex;
   flex-wrap: wrap; }
-
-.islandora-basic-collection-grid dl {
-  width: calc(25% - 4px);
-  min-width: 100px;
-  min-height: 180px;
-  display: -moz-inline-stack;
-  display: inline-block;
-  vertical-align: top;
-  margin: 2px;
-  zoom: 1;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-end;
-  background: gainsboro;
-  visibility: hidden; }
-
-dt.islandora-basic-collection-thumb {
-  margin-top: 10px; }
-
-.islandora-basic-collection-object dd {
-  padding-top: 2px;
-  padding-bottom: 2px;
-  background: #474747;
-  width: 100%;
-  align-self: flex-end;
-  padding: 10px;
-  margin-top: 10px;
-  line-height: 18px;
-  font-size: 13px; }
-
-dd.islandora-basic-collection-caption a {
-  color: white; }
 
 /*Top Search Bar*/
 #zone-header input#edit-islandora-simple-search-query.form-text, #zone-header input#edit-islandora-simple-search-query--2, #region-header-first input#edit-islandora-simple-search-query.form-text, #region-header-first input#edit-islandora-simple-search-query--2 {
