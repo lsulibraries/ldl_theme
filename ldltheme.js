@@ -844,9 +844,11 @@
 
 
       var grid = $('.islandora-basic-collection-grid').masonry({
-        itemSelector: '.islandora-basic-collection-object',
-        columnWidth: 80,
+        itemSelector: '.masonryItem',
         initLayout: false,
+        isFitWidth: false,
+        percentPosition: true,
+        columnWidth: 80
       });
 
 
@@ -962,13 +964,13 @@
       $(".landingMessage").clone().prop({id: "landingMobile", class: "landingMessageMobile"}).appendTo("#zone-header");
       $(".parent-collections").appendTo(".islandora-large-image-content, .islandora-pdf-content");
       $(".collectionPage span.islandora-basic-collection-item-count").appendTo("#page-title");
-      $('.collectionPage #page-title').wrapAll('<div class="collectionHeader"/>'); //wraps collectionPage title
-      $(".collectionPage .islandora-basic-collection-wrapper > p").appendTo(".collectionHeader");
-      $("div.collection-description-text").appendTo(".collectionHeader");
-      $(".collectionPage <div class='collectionLogo'/>").prependTo(".collectionHeader");
+      // $('.collectionPage #page-title').wrapAll('<div class="collectionHeader"/>'); //wraps collectionPage title
+      // $(".collectionPage .islandora-basic-collection-wrapper > p").appendTo(".collectionHeader");
+      // $("div.collection-description-text").appendTo(".collectionHeader");
+      // $(".collectionPage <div class='collectionLogo'/>").prependTo(".collectionHeader");
       $("<div class='homepageLogo'/>").prependTo(".messageContainer");
       $( ".site-name a span" ).replaceWith( "<span><span class='boldSpan'>Louisiana</span> Digital Library</span>" );// $('.child-institution-collections a').wrapAll('<div class="childCollections"/>'); disables overflow fix for many child collections running off the page. this is a reversion because of <a> bug / diff in test vs production
-      $(".collectionPage #page-title").prependTo(".collectionHeader .collection-description-text");
+      // $(".collectionPage #page-title").prependTo(".collectionHeader .collection-description-text");
       $("#zone-header input.form-submit").val(' ');
       $(".institution-search input.form-submit").val(' ');
       $("#largeSearch input.form-submit").val(' ');

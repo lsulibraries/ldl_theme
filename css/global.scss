@@ -1539,6 +1539,11 @@ opacity: 1;
 //Begin collection page styles
 
 .collectionPage {
+ #page{
+    background: #424242;
+
+ }
+
   .collectionLogo {
     display: none !important;
   }
@@ -1564,10 +1569,14 @@ opacity: 1;
   .collectionHeader {
     @include flexbox;
     align-items: flex-end;
-    padding: 20px;
+    margin: 10px;
     justify-content: center;
     background: transparent !important;
-    height: 200px;
+    border-bottom: 1px solid white;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+      width: calc(100% - 20px) !important;
+      height: 200px !important;     
     .collection-description-text {
       margin: 0px;
       border-left: 1px solid rgba(255, 255, 255, 0.21);
@@ -1591,14 +1600,17 @@ opacity: 1;
   position: absolute;
 }
 
-.region-content-inner{
-  background: #424242;
-}
 
-//collection grid styles
-.islandora-basic-collection-grid{
-    margin: 0px auto;
+
+.islandora-basic-collection{
+      margin: 0px auto;
     max-width: 1200px;
+}
+//collection grid styles
+
+.islandora-basic-collection-grid{
+    margin: 0 auto;  
+
     .islandora-basic-collection-caption {
       padding: 10px;
       background: white;
@@ -9898,7 +9910,7 @@ border: 1px solid rgba(255, 255, 255, 0.33);
         padding: 0px;
         flex-direction: column;
         justify-content: center;
-
+        width
         .collection-description-text {
           padding-bottom: 30px;
           border: 0px;
