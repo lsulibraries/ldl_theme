@@ -839,11 +839,14 @@
       }
 
       function gridDetents(){
-                    var outerGrid = $('.islandora-basic-collection '); //this = window
+            var outerGrid = $('.islandora-basic-collection '); //this = window
             var grid = $('.islandora-basic-collection-grid '); //this = window
-            if (outerGrid.width() >= 1199) { grid.css("width","auto"); }
+            if (outerGrid.width() > 1199) { grid.css("width","auto"); }
             if (outerGrid.width() <= 1199) { grid.css("width","960px"); }
             if (outerGrid.width() <= 985) { grid.css("width","720px"); }
+            if (outerGrid.width() <= 789) { grid.css("width","480px"); }
+            if (outerGrid.width() <= 519) { grid.css("width","260px"); }
+
       }
 
       $('.instStats').masonry({
@@ -859,10 +862,12 @@
         columnWidth: 80
       });
 
-
+      if ($('body').hasClass('collectionPage')){
       $(window).on('resize', function(){
         gridDetents();
-      });
+      });        
+      }
+
 
       window.sr = ScrollReveal();
       $(window).on("load", function() {
