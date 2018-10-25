@@ -979,8 +979,6 @@ li.child-institution-collection-list-item {
     background-image: url("../images/wqpOeRQ.png");
     background-size: 120px auto; }
 
-.collectionPage #page {
-  background: #424242; }
 .collectionPage .collectionLogo {
   display: none !important; }
 .collectionPage #page-title {
@@ -1007,7 +1005,7 @@ li.child-institution-collection-list-item {
   margin: 10px;
   justify-content: center;
   background: transparent !important;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.48);
   padding-bottom: 20px;
   margin-bottom: 10px;
   width: calc(100% - 20px) !important;
@@ -1023,7 +1021,8 @@ li.child-institution-collection-list-item {
   display: block; }
 .collectionPage #region-sidebar-first {
   display: block;
-  min-width: 480px; }
+  min-width: 480px;
+  background-color: rgba(0, 0, 0, 0.67); }
 .collectionPage .islandora-basic-collection-display-switch {
   position: absolute; }
 .collectionPage .islandora-basic-collection {

@@ -1540,7 +1540,6 @@ opacity: 1;
 
 .collectionPage {
  #page{
-    background: #424242;
 
  }
 
@@ -1572,7 +1571,7 @@ opacity: 1;
     margin: 10px;
     justify-content: center;
     background: transparent !important;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid $lightTransparent2;
     padding-bottom: 20px;
     margin-bottom: 10px;
       width: calc(100% - 20px) !important;
@@ -1594,6 +1593,7 @@ opacity: 1;
   #region-sidebar-first{
     display: block;
     min-width: 480px;    
+    background-color: rgba(0, 0, 0, 0.67);    
   }
 
 .islandora-basic-collection-display-switch{

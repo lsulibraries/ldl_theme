@@ -21,6 +21,8 @@
           $(".collectionPage <div class='collectionSearch'/>").appendTo("#region-sidebar-first");
           $(".collectionPage #block-islandora-collection-search-islandora-collection-search").appendTo(".collectionSearch");
           $(".collectionSearch input.form-submit").val(' ');
+
+          collectionHeader();
           break;
         }        
 
@@ -318,6 +320,10 @@
         //$('.compoundMetadata > .modsTitle').appendTo('.itemTitle'); adds compound title to item title
         $('.manageMenu').insertBefore('#shareToggle');
        $('.block-compound-jail-display').remove();
+      }
+
+      function collectionHeader(){
+     $('#page').parallax({imageSrc: '/sites/all/themes/ldl/images/rotate1.jpg'})        
       }
 
       function itemHeader(){
@@ -858,8 +864,9 @@
         itemSelector: '.masonryItem',
         initLayout: false,
         isFitWidth: false,
-        percentPosition: true,
-        columnWidth: 80
+        percentPosition: true,      
+        columnWidth: 80,
+        transitionDuration: '0.2s'        
       });
 
       if ($('body').hasClass('collectionPage')){
