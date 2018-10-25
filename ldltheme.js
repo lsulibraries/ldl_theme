@@ -838,6 +838,14 @@
         $("<div class='innerimageTitle'/>").text(itemTitle).insertAfter('span.modalExit5'); // undoes default title truncation
       }
 
+      function gridDetents(){
+                    var outerGrid = $('.islandora-basic-collection '); //this = window
+            var grid = $('.islandora-basic-collection-grid '); //this = window
+            if (outerGrid.width() >= 1199) { grid.css("width","auto"); }
+            if (outerGrid.width() <= 1199) { grid.css("width","960px"); }
+            if (outerGrid.width() <= 985) { grid.css("width","720px"); }
+      }
+
       $('.instStats').masonry({
         itemSelector: '.inst_wrapper'
       });
@@ -852,6 +860,10 @@
       });
 
 
+      $(window).on('resize', function(){
+        gridDetents();
+      });
+
       window.sr = ScrollReveal();
       $(window).on("load", function() {
         sr.reveal('.page-islandora-search .region-sidebar-first-inner', { duration: 200, delay: 100, opacity: 1, easing: 'linear', scale: 1, viewFactor: 0.01, }, 50);
@@ -863,6 +875,7 @@
         sr.reveal('.islandora-basic-collection-grid dl', { duration: 100, delay: 200,  easing: 'ease-in', }, 20);
         sr.reveal('.alertBox_container', { duration: 100, delay: 0,  easing: 'ease-in', opacity: 1 }, 20);
         sr.reveal('.bookmarkWelcome', { duration: 800, delay: 100,  easing: 'linear', scale: 1, viewFactor: 0.01, }, 50);
+        gridDetents();               
         grid.masonry();
 
         $("a > .institutionLink_meta").each(function() {
