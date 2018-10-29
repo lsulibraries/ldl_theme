@@ -456,9 +456,6 @@ a.institution-about-edit {
     background-image: url($dccLogo_long);
     cursor: pointer;
   }
-  form#islandora-collection-search-form {
-    border: 2px solid $dccColor;
-  }
   .institution-search input[type="text"] {
     border: 2px solid $dccColor;
   }
@@ -480,9 +477,6 @@ a.institution-about-edit {
     background-image: url($lascLogo);
     cursor: pointer;
   }
-  form#islandora-collection-search-form {
-    border: 2px solid $lascColor;
-  }
   .institution-search input[type="text"] {
     border: 2px solid $lascColor;
   }
@@ -501,9 +495,6 @@ a.institution-about-edit {
   }
   .collectionLogo {
     background-image: url($lsmLogo);
-    cursor: pointer;
-  }
-  form#islandora-collection-search-form {
     border: 2px solid $lsmColor;
   }
   .institution-search input[type="text"] {
@@ -524,9 +515,6 @@ a.institution-about-edit {
   }
   .collectionLogo {
     background-image: url($ebrplLogo);
-    cursor: pointer;
-  }
-  form#islandora-collection-search-form {
     border: 2px solid $ebrplColor;
   }
   .institution-search input[type="text"] {
@@ -549,9 +537,6 @@ a.institution-about-edit {
   }
   .collectionLogo {
     background-image: url($lsuLogo);
-    cursor: pointer;
-  }
-  form#islandora-collection-search-form {
     border: 2px solid $lsuColor;
   }
   .institution-search input[type="text"] {
@@ -627,9 +612,6 @@ a.institution-about-edit {
   }
   .collectionLogo {
     background-image: url($latechLogo_long);
-    cursor: pointer;
-  }
-  form#islandora-collection-search-form {
     border: 2px solid $latechColor;
   }
   .institution-search input[type="text"] {
@@ -659,9 +641,6 @@ a.institution-about-edit {
   }
   .collectionLogo {
     background-image: url($loynoLogo_long);
-    cursor: pointer;
-  }
-  form#islandora-collection-search-form {
     border: 2px solid $loynoColor;
   }
   .institution-search input[type="text"] {
@@ -682,9 +661,6 @@ a.institution-about-edit {
   }
   .collectionLogo {
     background-image: url($mcneeseLogo_long);
-    cursor: pointer;
-  }
-  form#islandora-collection-search-form {
     border: 2px solid $mcneeseColor;
   }
   .institution-search input[type="text"] {
@@ -705,9 +681,6 @@ a.institution-about-edit {
   }
   .collectionLogo {
     background-image: url($nichollsLogo_long);
-    cursor: pointer;
-  }
-  form#islandora-collection-search-form {
     border: 2px solid $nichollsColor;
   }
   .institution-search input[type="text"] {
@@ -728,9 +701,6 @@ a.institution-about-edit {
   }
   .collectionLogo {
     background-image: url($nsuLogo_long);
-    cursor: pointer;
-  }
-  form#islandora-collection-search-form {
     border: 2px solid $nsuColor;
   }
   .institution-search input[type="text"] {
@@ -759,9 +729,6 @@ a.institution-about-edit {
   }
   .collectionLogo {
     background-image: url($subrLogo_long);
-    cursor: pointer;
-  }
-  form#islandora-collection-search-form {
     border: 2px solid $subrColor;
   }
   .institution-search input[type="text"] {
@@ -783,9 +750,6 @@ a.institution-about-edit {
 
   .collectionLogo {
     background-image: url($stateLogo);
-    cursor: pointer;
-  }
-  form#islandora-collection-search-form {
     border: 2px solid $stateColor;
   }
   .institution-search input[type="text"] {
@@ -806,9 +770,6 @@ a.institution-about-edit {
   }
   .collectionLogo {
     background-image: url($hnocLogo);
-    cursor: pointer;
-  }
-  form#islandora-collection-search-form {
     border: 2px solid $hnocColor;
   }
   .institution-search input[type="text"] {
@@ -829,9 +790,6 @@ a.institution-about-edit {
   }
   .collectionLogo {
     background-image: url($tulaneLogo);
-    cursor: pointer;
-  }
-  form#islandora-collection-search-form {
     border: 2px solid $tulaneColor;
   }
   .institution-search input[type="text"] {
@@ -863,9 +821,6 @@ a.institution-about-edit {
   }
   .collectionLogo {
     background-image: url($ullLogo);
-    cursor: pointer;
-  }
-  form#islandora-collection-search-form {
     border: 2px solid $ullColor;
   }
   .institution-search input[type="text"] {
@@ -886,9 +841,6 @@ a.institution-about-edit {
   }
   .collectionLogo {
     background-image: url($ulmLogo);
-    cursor: pointer;
-  }
-  form#islandora-collection-search-form {
     border: 2px solid $ulmColor;
   }
   .institution-search input[type="text"] {
@@ -909,9 +861,6 @@ a.institution-about-edit {
   }
   .collectionLogo {
     background-image: url($unoLogo_long);
-    cursor: pointer;
-  }
-  form#islandora-collection-search-form {
     border: 2px solid $unoColor;
   }
   .institution-search input[type="text"] {
@@ -936,9 +885,6 @@ a.institution-about-edit {
   }
   .collectionLogo {
     background-image: url($vvilleLogo);
-    cursor: pointer;
-  }
-  form#islandora-collection-search-form {
     border: 2px solid $vvilleColor;
   }
   .institution-search input[type="text"] {
@@ -1539,9 +1485,9 @@ opacity: 1;
 //Begin collection page styles
 
 .collectionPage {
- #page{
-
- }
+  .parallax-mirror {
+      filter: brightness(0.7);
+  }
 
   .collectionLogo {
     display: none !important;
@@ -1567,7 +1513,8 @@ opacity: 1;
 
   .collectionHeader {
     @include flexbox;
-    align-items: flex-end;
+    flex-direction: column;
+    align-items: flex-start;
     margin: 10px;
     justify-content: center;
     background: transparent !important;
@@ -1576,6 +1523,7 @@ opacity: 1;
     margin-bottom: 10px;
       width: calc(100% - 20px) !important;
       height: 200px !important;     
+
     .collection-description-text {
       margin: 0px;
       border-left: 1px solid rgba(255, 255, 255, 0.21);
@@ -1603,8 +1551,9 @@ opacity: 1;
 
 
 .islandora-basic-collection{
-      margin: 0px auto;
+    margin: 0px auto;
     max-width: 1200px;
+    padding-bottom: 200px;    
 }
 //collection grid styles
 
@@ -1635,6 +1584,7 @@ opacity: 1;
 //collectionSearch styles
 
 .collectionSearch {
+  width: 100%;
   h2.block-title {
     display: none;
   }
@@ -1650,29 +1600,34 @@ opacity: 1;
   }
 
   form#islandora-collection-search-form {
-    border-radius: 30px;
+    border-radius: 5px 0px 0px 5px;
     overflow: hidden;
-    padding: 5px;
     margin-top: 20px;
+    width: 100%;
   }
 
   input#edit-islandora-simple-search-query {
-    font-size: 18px;
+    font-size: 15px;
     border: 0px;
-    width: 300px;
-    padding-left: 20px;    
-  }
+    width: calc(100% - 50px);
+    padding: 0px;
+    padding-right: 0px;
+    padding-left: 20px;
+    height: 32px;    
+}
 
   input[type="submit"] {
-    position: relative;
+    position: absolute;
+    right: 0px;
+    height: 32px;
+    border-radius: 0px 3px 3px 0px;
     width: 55px;
-    height: 34px;
     background: none;
     border: none;
-    border-radius: 0px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 25px 25px;
+    background-color: white;
     background-image: url(../images/NpfYQT0.png);
   }
 }
@@ -5242,7 +5197,7 @@ width: 100%;
     padding: 0px 20px;
 }
 
-#block-system-main{
+#block-system-main:not(body.collectionPage){
   background: white;
 }
 

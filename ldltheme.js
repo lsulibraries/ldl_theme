@@ -18,11 +18,11 @@
 
         case (($(".islandora-basic-collection-item-count").length) > 0) :{
           $("body").addClass("collectionPage");
-          $(".collectionPage <div class='collectionSearch'/>").appendTo("#region-sidebar-first");
+          $(".collectionPage <div class='collectionSearch'/>").appendTo(".collectionHeader");
           $(".collectionPage #block-islandora-collection-search-islandora-collection-search").appendTo(".collectionSearch");
           $(".collectionSearch input.form-submit").val(' ');
-
           collectionHeader();
+          actionToggles();
           break;
         }        
 
@@ -301,7 +301,6 @@
       }
 
       function compoundChild_end(){
-
         if (!$(".tagsGlance").length){
         $('.contentLabel.itemDesc').css('display','none');
         }
@@ -323,7 +322,8 @@
       }
 
       function collectionHeader(){
-     $('#page').parallax({imageSrc: '/sites/all/themes/ldl/images/rotate1.jpg'})        
+          $('#page').parallax({imageSrc: '/sites/all/themes/ldl/images/rotate1.jpg'});
+
       }
 
       function itemHeader(){
@@ -755,7 +755,7 @@
         if ($('body').hasClass('compoundParent')){
           $("<div id='shareToggle' class='userSelect'><div class='iconSelect'></div><div class='textSelect'>share</div></div>").insertAfter(".infoToggle");
         }
-        else {
+        else if (!$('body').hasClass('collectionPage')){
           $("<div id='shareToggle' class='userSelect'><div class='iconSelect'></div><div class='textSelect'>share</div></div>").insertAfter("#block-system-main .infoToggle");
         }
         var testlength = ($('.manageMenu > ul > li').length)
@@ -988,14 +988,8 @@
       $(".footerImg").clone().prop({ id: "logoMobile"}).prependTo("#zone-header");
       $(".landingMessage").clone().prop({id: "landingMobile", class: "landingMessageMobile"}).appendTo("#zone-header");
       $(".parent-collections").appendTo(".islandora-large-image-content, .islandora-pdf-content");
-      $(".collectionPage span.islandora-basic-collection-item-count").appendTo("#page-title");
-      // $('.collectionPage #page-title').wrapAll('<div class="collectionHeader"/>'); //wraps collectionPage title
-      // $(".collectionPage .islandora-basic-collection-wrapper > p").appendTo(".collectionHeader");
-      // $("div.collection-description-text").appendTo(".collectionHeader");
-      // $(".collectionPage <div class='collectionLogo'/>").prependTo(".collectionHeader");
       $("<div class='homepageLogo'/>").prependTo(".messageContainer");
       $( ".site-name a span" ).replaceWith( "<span><span class='boldSpan'>Louisiana</span> Digital Library</span>" );// $('.child-institution-collections a').wrapAll('<div class="childCollections"/>'); disables overflow fix for many child collections running off the page. this is a reversion because of <a> bug / diff in test vs production
-      // $(".collectionPage #page-title").prependTo(".collectionHeader .collection-description-text");
       $("#zone-header input.form-submit").val(' ');
       $(".institution-search input.form-submit").val(' ');
       $("#largeSearch input.form-submit").val(' ');
@@ -1283,7 +1277,7 @@ function monthClick(){
       }
       // end newspaper 2.0
 
-      if ( ($('body').hasClass('compoundObject')) || ($('body').hasClass('oralHistory')) || ($('body').hasClass('audio')) || ($('body').hasClass('video')) || ($('body').hasClass('pdf')) || ($('body').hasClass('bookViewer')) || ($('body').hasClass('context-data')) || ($('body').hasClass('largeImage')) || ($('body').hasClass('newspaperSet'))){
+      if ( ($('body').hasClass('compoundObject')) || ($('body').hasClass('collectionPage')) || ($('body').hasClass('oralHistory')) || ($('body').hasClass('audio')) || ($('body').hasClass('video')) || ($('body').hasClass('pdf')) || ($('body').hasClass('bookViewer')) || ($('body').hasClass('context-data')) || ($('body').hasClass('largeImage')) || ($('body').hasClass('newspaperSet'))){
       $('body').addClass('headerversiontwo');
       }
       if (navigator.appName == 'Microsoft Internet Explorer' ||  !!(navigator.userAgent.match(/Trident/) || navigator.userAgent.match(/rv:11/)) || (typeof $.browser !== "undefined" && $.browser.msie == 1))
