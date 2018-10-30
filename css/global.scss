@@ -1149,7 +1149,7 @@ form#myform {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 25px 25px;
-    background-image: url(../images/NpfYQT0.png);
+    background-image: url(../images/zBCP7zk.png);
   }
 
   .form-item, .form-actions {
@@ -1516,7 +1516,7 @@ opacity: 1;
     flex-direction: column;
     align-items: flex-start;
     margin: 10px;
-    justify-content: center;
+    justify-content: flex-end;
     background: transparent !important;
     border-bottom: 1px solid $lightTransparent2;
     padding-bottom: 20px;
@@ -1589,6 +1589,10 @@ opacity: 1;
     display: none;
   }
 
+#edit-simple{
+  position: relative;
+}
+
   .content.clearfix {
     @include flexbox;
     justify-content: center;
@@ -1619,6 +1623,7 @@ opacity: 1;
   input[type="submit"] {
     position: absolute;
     right: 0px;
+    top: 0px;
     height: 32px;
     border-radius: 0px 3px 3px 0px;
     width: 55px;
