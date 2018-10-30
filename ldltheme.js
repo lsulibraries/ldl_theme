@@ -855,6 +855,24 @@
 
       }
 
+      function newspaperLoad(){
+        $("body.newspaperSet #page").fadeIn(200);
+        $(' .months-container').each(function (){
+            $(this).find("img.lazy").first().addClass('firstYearCover');
+        });
+        $(' .month-container').each(function (){
+            $(this).find("img.lazy").first().addClass('firstMonthCover');
+        });
+        $('.firstYearCover').jail({
+        effect: 'fadeIn',
+        event: 'load',
+        offset : 300,
+        placeholder: '/sites/all/themes/ldl/images/loading.gif',
+        id: "firstYear",
+        });
+      }
+
+
       $('.instStats').masonry({
         itemSelector: '.inst_wrapper'
       });
@@ -884,7 +902,6 @@
         sr.reveal('.landingHero', { duration: 200, delay: 0,  easing: 'linear', scale: 1, viewFactor: 0.01,}, 20);
         sr.reveal('.solr-fields, .islandora-solr-sort li, .page-browse-collections tr', { duration: 200, delay: 350,  easing: 'linear', scale: 1, viewFactor: 1, }, 20);
         sr.reveal('.solr-thumb img', { duration: 200, delay: 850,  easing: 'linear', scale: 1, viewFactor: 0.01, }, 20);
-        sr.reveal('.islandora-basic-collection-grid dl', { duration: 100, delay: 200,  easing: 'ease-in', }, 20);
         sr.reveal('.alertBox_container', { duration: 100, delay: 0,  easing: 'ease-in', opacity: 1 }, 20);
         sr.reveal('.bookmarkWelcome', { duration: 800, delay: 100,  easing: 'linear', scale: 1, viewFactor: 0.01, }, 50);
         gridDetents();               
@@ -894,21 +911,8 @@
           $(this).colourBrightness();//
         });
         if ($('body').hasClass('newspaperSet')){
-            $("body.newspaperSet #page").fadeIn(200);
-            $(' .months-container').each(function (){
-                $(this).find("img.lazy").first().addClass('firstYearCover');
-            });
-          $(' .month-container').each(function (){
-              $(this).find("img.lazy").first().addClass('firstMonthCover');
-          });
-            $('.firstYearCover').jail({
-            effect: 'fadeIn',
-            event: 'load',
-            offset : 300,
-            placeholder: '/sites/all/themes/ldl/images/loading.gif',
-            id: "firstYear",
-            });
-          }
+          newspaperLoad();
+        };
       });
       // end functions
 
