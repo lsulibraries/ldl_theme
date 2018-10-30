@@ -1582,19 +1582,21 @@ opacity: 1;
 //collectionList styles
 
 .islandora-basic-collection-list-item{
-    height: 160px;
     border-radius: 20px;
     overflow: hidden;
     background: rgba(255, 255, 255, 0.070);
     margin-bottom: 20px;
     border: 1px solid rgba(255, 255, 255, 0.058);
+    padding-bottom: 0px;
 
   .dc-description{
     color: white;
   }
-
+  .list-thumbnail{
+    align-self: flex-start;
+  }
   .list-thumbnail img{
-    height: 160px;
+    height: 140px;
     overflow: hidden;
     border-radius: 10px 0px 0px 10px;
     top: 0px;
@@ -1605,7 +1607,7 @@ opacity: 1;
     align-items: center;    
     .islandora-basic-object-abstract {
       color: white;
-      padding: 10px 0px;
+      padding: 6px 0px 10px 0px;
       font-size: 14px;
     }    
     .dc-title a{
@@ -1621,7 +1623,7 @@ opacity: 1;
         .list-subject {
             background: rgba(255, 255, 255, 0.12);
             padding: 4px 8px;
-            border-radius: 2px;
+            border-radius: 3px;
             margin-right: 3px;
             margin-bottom: 3px;
             a{
