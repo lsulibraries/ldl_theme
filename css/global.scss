@@ -1579,6 +1579,63 @@ opacity: 1;
     }
 }
 
+//collectionList styles
+
+.islandora-basic-collection-list-item{
+    height: 160px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.070);
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.058);
+
+  .dc-description{
+    color: white;
+  }
+
+  .list-thumbnail img{
+    height: 160px;
+    overflow: hidden;
+    border-radius: 10px 0px 0px 10px;
+    top: 0px;
+    max-width: none;
+  }
+.list-item-container {
+    @include flexbox;
+    align-items: center;    
+    .islandora-basic-object-abstract {
+      color: white;
+      padding: 10px 0px;
+      font-size: 14px;
+    }    
+    .dc-title a{
+      color: white;
+    }
+    .list-text{
+      @include flexbox;
+      flex-direction: column;   
+      margin: 20px;
+      .list-subjects{
+        display: flex;
+        flex-wrap: wrap;
+        .list-subject {
+            background: rgba(255, 255, 255, 0.12);
+            padding: 4px 8px;
+            border-radius: 2px;
+            margin-right: 3px;
+            margin-bottom: 3px;
+            a{
+              color: white;
+            }
+        }        
+      }  
+    }
+    .list-hover{
+      position: absolute;
+    }
+}
+}
+
 }
 
 //collectionSearch styles
@@ -1616,7 +1673,7 @@ opacity: 1;
     width: calc(100% - 50px);
     padding: 0px;
     padding-right: 0px;
-    padding-left: 20px;
+    padding-left: 10px;
     height: 32px;    
 }
 
