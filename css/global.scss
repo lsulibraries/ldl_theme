@@ -1594,6 +1594,12 @@ opacity: 1;
   }
   .list-thumbnail{
     align-self: flex-start;
+    position: relative;
+  }
+  .list-thumbnail:hover{
+    .list-hover{
+      display: flex;
+    }
   }
   .list-thumbnail img{
     height: 140px;
@@ -1612,6 +1618,7 @@ opacity: 1;
     }    
     .dc-title a{
       color: white;
+      font-weight: 700;      
     }
     .list-text{
       @include flexbox;
@@ -1630,10 +1637,19 @@ opacity: 1;
               color: white;
             }
         }        
-      }  
+      }
     }
     .list-hover{
       position: absolute;
+      top: 0px;
+      width: 100%;
+      background: #313131db;
+      height: 100%;
+      display: flex;
+      color: white;
+      justify-content: center;
+      align-items: center;
+      display: none;
     }
 }
 }

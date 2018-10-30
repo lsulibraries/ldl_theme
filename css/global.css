@@ -1021,7 +1021,10 @@ li.child-institution-collection-list-item {
   .collectionPage .islandora-basic-collection-list-item .dc-description {
     color: white; }
   .collectionPage .islandora-basic-collection-list-item .list-thumbnail {
-    align-self: flex-start; }
+    align-self: flex-start;
+    position: relative; }
+  .collectionPage .islandora-basic-collection-list-item .list-thumbnail:hover .list-hover {
+    display: flex; }
   .collectionPage .islandora-basic-collection-list-item .list-thumbnail img {
     height: 140px;
     overflow: hidden;
@@ -1040,7 +1043,8 @@ li.child-institution-collection-list-item {
       padding: 6px 0px 10px 0px;
       font-size: 14px; }
     .collectionPage .islandora-basic-collection-list-item .list-item-container .dc-title a {
-      color: white; }
+      color: white;
+      font-weight: 700; }
     .collectionPage .islandora-basic-collection-list-item .list-item-container .list-text {
       display: -webkit-box;
       display: -moz-box;
@@ -1061,7 +1065,16 @@ li.child-institution-collection-list-item {
           .collectionPage .islandora-basic-collection-list-item .list-item-container .list-text .list-subjects .list-subject a {
             color: white; }
     .collectionPage .islandora-basic-collection-list-item .list-item-container .list-hover {
-      position: absolute; }
+      position: absolute;
+      top: 0px;
+      width: 100%;
+      background: #313131db;
+      height: 100%;
+      display: flex;
+      color: white;
+      justify-content: center;
+      align-items: center;
+      display: none; }
 
 .collectionSearch {
   width: 100%; }
