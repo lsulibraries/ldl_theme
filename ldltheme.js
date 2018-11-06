@@ -440,7 +440,7 @@
 
         $("ul.tabs").appendTo(".userMenu:first").wrapAll('<div class="manageMenu"/>').insertBefore('#shareToggle'); //moves the view/ip embargo/manage menu
         $("div#block-system-main > div.tabs").remove(); // removes top div which once contained the tabs
-        if((itemTitle).length > 20) {
+        if (((itemTitle).length > 20) && ($(".modsTitle").length)) {
           $(".itemTitle").css('font-size','34px');
         }
      }
