@@ -22,9 +22,11 @@
 document.body.className += ' ' + 'newspaperSet';
 
 </script>
-
-<div class="islandora-newspaper-object islandora">
   <div class="islandora-newspaper-content-wrapper clearfix">
+    <div class="islandora-newspaper-object islandora">
+      <div class='search_wrapper'>
+        <?php print $variables['search_form_newspaper']; ?>
+      </div>
     <?php if (isset($issues)): ?>
               <div class='total-issue-count'>This newspaper contains <?php print $totalIssueCount; ?> issues across <?php print $totalYearCount; ?> years.</div>
       <div class="islandora-newspaper-navigation">
