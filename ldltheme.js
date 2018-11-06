@@ -789,6 +789,9 @@
           function(){$('.image_header').css({"padding-bottom": "inherit"});}
         );
         console.log('info toggle made');
+        if ($('body').hasClass('collectionPage')){
+          $(infoToggle).click();
+        }        
         $('li:empty').remove();
       $('.manageMenu').insertBefore('#shareToggle');
 
@@ -900,7 +903,7 @@
         sr.reveal('.islandora-solr-search-result, .landingMobile, .globalStats', { duration: 200, delay: 100,  easing: 'linear', scale: 1, }, 20); //landingMessage normally here; conflicts with mobile landingMessage
         sr.reveal('.inst_wrapper', { duration: 500, delay: 0, opacity: 0.1, easing: 'linear', scale: 0.9, viewFactor: 1, }); //landingMessage normally here; conflicts with mobile landingMessage
         sr.reveal('.landingHero', { duration: 200, delay: 0,  easing: 'linear', scale: 1, viewFactor: 0.01,}, 20);
-        sr.reveal('.solr-fields, .islandora-solr-sort li, .page-browse-collections tr', { duration: 200, delay: 350,  easing: 'linear', scale: 1, viewFactor: 1, }, 20);
+        sr.reveal('.solr-fields, .islandora-solr-sort li, .page-browse-collections tr, .islandora-basic-collection-list-item', { duration: 200, delay: 350,  easing: 'linear', scale: 1, viewFactor: 1, }, 20);
         sr.reveal('.solr-thumb img', { duration: 200, delay: 850,  easing: 'linear', scale: 1, viewFactor: 0.01, }, 20);
         sr.reveal('.alertBox_container', { duration: 100, delay: 0,  easing: 'ease-in', opacity: 1 }, 20);
         sr.reveal('.bookmarkWelcome', { duration: 800, delay: 100,  easing: 'linear', scale: 1, viewFactor: 0.01, }, 50);
@@ -1690,7 +1693,7 @@ if ($('body').hasClass('pdf')){
           var ellipsestext = "...";
           var moretext = "Show more";
           var lesstext = "Show less";
-          $('.short_desc p, .mods-abstract-mt').each(function() {
+          $('.short_desc p, .mods-abstract-mt, .list-abstract').each(function() {
               var content = $(this).html();
               if(content.length > showChar) {
                   var c = content.substr(0, showChar);
