@@ -364,7 +364,7 @@ a.institution-about-edit {
 .mcneeseTheme .institution-header, .mcneeseTheme .collectionHeader, .mcneeseTheme .institution-search::before, .mcneeseTheme .child-institution-collections::before {
   background: #00529b; }
 .mcneeseTheme .collectionLogo {
-  background-image: url("../images/logo.png");
+  background-image: url("../images/mcneese_long.png");
   cursor: pointer; }
 .mcneeseTheme form#islandora-collection-search-form {
   border: 2px solid #00529b; }
