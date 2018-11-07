@@ -55,7 +55,7 @@ document.body.className += ' ' + 'largeImage';
 
 
 
-       <?php if ($parent_collections): ?>
+       <?php /* if ($parent_collections): ?>
       <div class="parent-collections">
         <h2><?php print t('Found in collection(s):'); ?></h2>
 
@@ -64,7 +64,7 @@ document.body.className += ' ' + 'largeImage';
           <?php endforeach; ?></p>
     </div>
 
-    <?php endif; ?>
+    <?php endif; */ ?>
 
     <?php if ($islandora_content): ?>
       <?php if (isset($image_clip)): ?>
