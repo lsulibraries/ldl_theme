@@ -37,7 +37,7 @@
         }
         //case for large images
         case ((($('body').hasClass('largeImage'))) && (!$('body').hasClass('audioPDF'))) :{
-          itemTitle = $(".modsTitle").html(); // finds full title without truncation
+          itemTitle = $('meta[name="twitter:title"]').attr("content"); // finds full title without truncation
           thumbnailURL = $(".image-thumbnail img").prop('src');
           if ($('.block-islandora-compound-object').length){
             compoundChild_start();
@@ -404,7 +404,7 @@
          // $("#region-content div.tabs.clearfix").prependTo("#block-system-main");
         }
         if ((!$('body').hasClass('compoundParent')) && (!$('body').hasClass('compoundChild'))) {
-          itemTitle = $(".modsTitle").html(); // finds full title without truncation
+          itemTitle = $('meta[name="twitter:title"]').attr("content"); // finds full title without truncation
           if ($('body').hasClass('newspaperSet')){
             var baseUrl = document.location.origin;
             var thumbnailURL = baseUrl + ($(".issue-container:first > a").attr('href')) + '/datastream/TN/view';
@@ -435,13 +435,16 @@
           $(collectionText).addClass("institutionSmall").insertAfter(".breadcrumbDivider"); //creates collection breadcrumb
           console.log('hi its not a compound');
           }
+
         $("<div class='userMenu'/>").appendTo(".item_headerMenu"); //temporarily moves count
         $("<div class='infoToggle userSelect'><div class='iconSelect'></div><div class='textSelect'>details</div></div>").appendTo(".userMenu"); //adds toggle for parent metadata
 
         $("ul.tabs").appendTo(".userMenu:first").wrapAll('<div class="manageMenu"/>').insertBefore('#shareToggle'); //moves the view/ip embargo/manage menu
         $("div#block-system-main > div.tabs").remove(); // removes top div which once contained the tabs
-        if (((itemTitle).length > 20) && ($(".modsTitle").length)) {
-          $(".itemTitle").css('font-size','34px');
+        if (!itemTitle === 'undefined'){
+          if (((itemTitle).length > 20) && ($(".modsTitle").length)) {
+            $(".itemTitle").css('font-size','34px');
+          }
         }
      }
 
@@ -498,7 +501,10 @@
         $(".metadataSidebar").clone().prop({ class: "metadataVertical"}).appendTo('.content .descContainer .descriptionText');
         $(".downloadSelect").insertAfter(".infoToggle");
         $("<i class='fa fa-image' aria-hidden='true'></i>").appendTo(".imageLabel");
-
+        if ((($('.ip-embargo-details').text()).length) > 5){
+          $('.image-thumbnail').remove();
+          $('.ip-embargo-details').appendTo('.image-thumbnailData');
+        }
       }
 
       function bookContainer(){
