@@ -501,10 +501,23 @@
         $(".metadataSidebar").clone().prop({ class: "metadataVertical"}).appendTo('.content .descContainer .descriptionText');
         $(".downloadSelect").insertAfter(".infoToggle");
         $("<i class='fa fa-image' aria-hidden='true'></i>").appendTo(".imageLabel");
+        embargoStyles();
+      }
+
+      function embargoStyles(){
         if ((($('.ip-embargo-details').text()).length) > 5){
-          $('.image-thumbnail').remove();
+            //thumbnail present but JP2 is not
+            if (($('body').hasClass('largeImage')) && (!$('#islandora-openseadragon').length)){
+              $('.imageMenu').remove();
+              $('.image-thumbnail').css('cursor','not-allowed');
+            }
+            //thumbnail is hidden
+            if (($('.image-thumbnail img').width() < 17)){
+              $('.image-thumbnail').remove();
+              $('.image-thumbnailData').css('border-left','0px');
+            }            
+          }
           $('.ip-embargo-details').appendTo('.image-thumbnailData');
-        }
       }
 
       function bookContainer(){
