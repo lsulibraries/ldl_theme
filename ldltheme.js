@@ -501,7 +501,6 @@
         $(".metadataSidebar").clone().prop({ class: "metadataVertical"}).appendTo('.content .descContainer .descriptionText');
         $(".downloadSelect").insertAfter(".infoToggle");
         $("<i class='fa fa-image' aria-hidden='true'></i>").appendTo(".imageLabel");
-        embargoStyles();
       }
 
       function embargoStyles(){
@@ -884,6 +883,8 @@
             id: "firstYear",
             });
           }
+                  embargoStyles();
+
       });
       // end functions
 
