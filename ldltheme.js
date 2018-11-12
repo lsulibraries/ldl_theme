@@ -15,17 +15,6 @@
           break;
         }
 
-
-        case (($(".islandora-basic-collection-item-count").length) > 0) :{
-          $("body").addClass("collectionPage");
-          $(".collectionPage <div class='collectionSearch'/>").appendTo(".collectionHeader");
-          $(".collectionPage #block-islandora-collection-search-islandora-collection-search").appendTo(".collectionSearch");
-          $(".collectionSearch input.form-submit").val(' ');
-          collectionHeader();
-          actionToggles();
-          break;
-        }        
-
         case (($('#edit-dsid-fieldset').length) > 0) :{
           $("body").addClass('datastreamPage');
           break;
@@ -48,7 +37,7 @@
         }
         //case for large images
         case ((($('body').hasClass('largeImage'))) && (!$('body').hasClass('audioPDF'))) :{
-          itemTitle = $(".modsTitle").html(); // finds full title without truncation
+          itemTitle = $('meta[name="twitter:title"]').attr("content"); // finds full title without truncation
           thumbnailURL = $(".image-thumbnail img").prop('src');
           if ($('.block-islandora-compound-object').length){
             compoundChild_start();
@@ -103,6 +92,7 @@
           }
           break;
         }
+
 
         case ($('body').hasClass('video')) :{
           itemTitle = $(".modsTitle").html(); // finds full title without truncation
@@ -301,6 +291,7 @@
       }
 
       function compoundChild_end(){
+
         if (!$(".tagsGlance").length){
         $('.contentLabel.itemDesc').css('display','none');
         }
@@ -319,11 +310,6 @@
         //$('.compoundMetadata > .modsTitle').appendTo('.itemTitle'); adds compound title to item title
         $('.manageMenu').insertBefore('#shareToggle');
        $('.block-compound-jail-display').remove();
-      }
-
-      function collectionHeader(){
-          $('#page').parallax({imageSrc: '/sites/all/themes/ldl/images/rotate1.jpg'});
-
       }
 
       function itemHeader(){
@@ -417,7 +403,7 @@
          // $("#region-content div.tabs.clearfix").prependTo("#block-system-main");
         }
         if ((!$('body').hasClass('compoundParent')) && (!$('body').hasClass('compoundChild'))) {
-          itemTitle = $(".modsTitle").html(); // finds full title without truncation
+          itemTitle = $('meta[name="twitter:title"]').attr("content"); // finds full title without truncation
           if ($('body').hasClass('newspaperSet')){
             var baseUrl = document.location.origin;
             var thumbnailURL = baseUrl + ($(".issue-container:first > a").attr('href')) + '/datastream/TN/view';
@@ -448,13 +434,16 @@
           $(collectionText).addClass("institutionSmall").insertAfter(".breadcrumbDivider"); //creates collection breadcrumb
           console.log('hi its not a compound');
           }
+
         $("<div class='userMenu'/>").appendTo(".item_headerMenu"); //temporarily moves count
         $("<div class='infoToggle userSelect'><div class='iconSelect'></div><div class='textSelect'>details</div></div>").appendTo(".userMenu"); //adds toggle for parent metadata
 
         $("ul.tabs").appendTo(".userMenu:first").wrapAll('<div class="manageMenu"/>').insertBefore('#shareToggle'); //moves the view/ip embargo/manage menu
         $("div#block-system-main > div.tabs").remove(); // removes top div which once contained the tabs
-        if((itemTitle).length > 20) {
-          $(".itemTitle").css('font-size','34px');
+        if (!itemTitle === 'undefined'){
+          if (((itemTitle).length > 20) && ($(".modsTitle").length)) {
+            $(".itemTitle").css('font-size','34px');
+          }
         }
      }
 
@@ -510,7 +499,22 @@
         $(".metadataSidebar").clone().prop({ class: "metadataVertical"}).appendTo('.content .descContainer .descriptionText');
         $(".downloadSelect").insertAfter(".infoToggle");
         $("<i class='fa fa-image' aria-hidden='true'></i>").appendTo(".imageLabel");
+      }
 
+      function embargoStyles(){
+        if ((($('.ip-embargo-details').text()).length) > 5){
+            //thumbnail present but JP2 is not
+            if (($('body').hasClass('largeImage')) && (!$('#islandora-openseadragon').length)){
+              $('.imageMenu').remove();
+              $('.image-thumbnail').css('cursor','not-allowed');
+            }
+            //thumbnail is hidden
+            if (($('.image-thumbnail img').width() < 17)){
+              $('.image-thumbnail').remove();
+              $('.image-thumbnailData').css('border-left','0px');
+            }            
+          }
+          $('.ip-embargo-details').appendTo('.image-thumbnailData');
       }
 
       function bookContainer(){
@@ -753,7 +757,7 @@
         if ($('body').hasClass('compoundParent')){
           $("<div id='shareToggle' class='userSelect'><div class='iconSelect'></div><div class='textSelect'>share</div></div>").insertAfter(".infoToggle");
         }
-        else if (!$('body').hasClass('collectionPage')){
+        else {
           $("<div id='shareToggle' class='userSelect'><div class='iconSelect'></div><div class='textSelect'>share</div></div>").insertAfter("#block-system-main .infoToggle");
         }
         var testlength = ($('.manageMenu > ul > li').length)
@@ -787,9 +791,6 @@
           function(){$('.image_header').css({"padding-bottom": "inherit"});}
         );
         console.log('info toggle made');
-        if ($('body').hasClass('collectionPage')){
-          $(infoToggle).click();
-        }        
         $('li:empty').remove();
       $('.manageMenu').insertBefore('#shareToggle');
 
@@ -797,7 +798,7 @@
 
 
       function compoundStarter(){
-         $('.compoundSelect').wrapAll('<div class="itemContainer compoundGallery "/>');
+         $('.compoundSelect').wrapAll('<div class="itemContainer compoundGallery "/>'); //wraps collectionPage title
          $("<div class='itemMenu'/>").insertBefore(".backgroundDiv");
          $("<div class='contentLabel'/>").insertBefore(".compoundGallery"); //adds contentLabel div to show content type
       }
@@ -820,7 +821,7 @@
           }, function() {
           $('.modalDetails').html('<i class="fa fa-toggle-off"></i>Toggle Details');
         });
-        $('#islandora-openseadragon > span').wrapAll('<div class="imageToolbar"/>'); 
+        $('#islandora-openseadragon > span').wrapAll('<div class="imageToolbar"/>'); // wraps collectionPage title
         $("<div class='innerimageTitle'/>").text(itemTitle).insertAfter('span.modalExit5'); // undoes default title truncation
       }
 
@@ -841,58 +842,13 @@
           }, function() {
           $('.modalDetails').html('<i class="fa fa-toggle-off"></i>Toggle Details');
         });
-        $('.islandora-pdf-content > span').wrapAll('<div class="imageToolbar"/>');
+        $('.islandora-pdf-content > span').wrapAll('<div class="imageToolbar"/>'); // wraps collectionPage title
         $("<div class='innerimageTitle'/>").text(itemTitle).insertAfter('span.modalExit5'); // undoes default title truncation
       }
-
-      function gridDetents(){
-            var outerGrid = $('.islandora-basic-collection '); //this = window
-            var grid = $('.islandora-basic-collection-grid '); //this = window
-            if (outerGrid.width() > 1199) { grid.css("width","auto"); }
-            if (outerGrid.width() <= 1199) { grid.css("width","960px"); }
-            if (outerGrid.width() <= 985) { grid.css("width","720px"); }
-            if (outerGrid.width() <= 789) { grid.css("width","480px"); }
-            if (outerGrid.width() <= 519) { grid.css("width","260px"); }
-
-      }
-
-      function newspaperLoad(){
-        $("body.newspaperSet #page").fadeIn(200);
-        $(' .months-container').each(function (){
-            $(this).find("img.lazy").first().addClass('firstYearCover');
-        });
-        $(' .month-container').each(function (){
-            $(this).find("img.lazy").first().addClass('firstMonthCover');
-        });
-        $('.firstYearCover').jail({
-        effect: 'fadeIn',
-        event: 'load',
-        offset : 300,
-        placeholder: '/sites/all/themes/ldl/images/loading.gif',
-        id: "firstYear",
-        });
-      }
-
 
       $('.instStats').masonry({
         itemSelector: '.inst_wrapper'
       });
-
-
-      var grid = $('.islandora-basic-collection-grid').masonry({
-        itemSelector: '.masonryItem',
-        initLayout: false,
-        isFitWidth: false,
-        percentPosition: true,      
-        columnWidth: 80,
-        transitionDuration: '0.2s'        
-      });
-
-      if ($('body').hasClass('collectionPage')){
-      $(window).on('resize', function(){
-        gridDetents();
-      });        
-      }
 
 
       window.sr = ScrollReveal();
@@ -901,19 +857,32 @@
         sr.reveal('.islandora-solr-search-result, .landingMobile, .globalStats', { duration: 200, delay: 100,  easing: 'linear', scale: 1, }, 20); //landingMessage normally here; conflicts with mobile landingMessage
         sr.reveal('.inst_wrapper', { duration: 500, delay: 0, opacity: 0.1, easing: 'linear', scale: 0.9, viewFactor: 1, }); //landingMessage normally here; conflicts with mobile landingMessage
         sr.reveal('.landingHero', { duration: 200, delay: 0,  easing: 'linear', scale: 1, viewFactor: 0.01,}, 20);
-        sr.reveal('.solr-fields, .islandora-solr-sort li, .page-browse-collections tr, .islandora-basic-collection-list-item', { duration: 200, delay: 350,  easing: 'linear', scale: 1, viewFactor: 1, }, 20);
+        sr.reveal('.solr-fields, .islandora-solr-sort li, .page-browse-collections tr', { duration: 200, delay: 350,  easing: 'linear', scale: 1, viewFactor: 1, }, 20);
         sr.reveal('.solr-thumb img', { duration: 200, delay: 850,  easing: 'linear', scale: 1, viewFactor: 0.01, }, 20);
+        sr.reveal('.islandora-basic-collection-grid dl', { duration: 100, delay: 200,  easing: 'ease-in', }, 20);
         sr.reveal('.alertBox_container', { duration: 100, delay: 0,  easing: 'ease-in', opacity: 1 }, 20);
         sr.reveal('.bookmarkWelcome', { duration: 800, delay: 100,  easing: 'linear', scale: 1, viewFactor: 0.01, }, 50);
-        gridDetents();               
-        grid.masonry();
-
         $("a > .institutionLink_meta").each(function() {
           $(this).colourBrightness();//
         });
         if ($('body').hasClass('newspaperSet')){
-          newspaperLoad();
-        };
+            $("body.newspaperSet #page").fadeIn(200);
+            $(' .months-container').each(function (){
+                $(this).find("img.lazy").first().addClass('firstYearCover');
+            });
+          $(' .month-container').each(function (){
+              $(this).find("img.lazy").first().addClass('firstMonthCover');
+          });
+            $('.firstYearCover').jail({
+            effect: 'fadeIn',
+            event: 'load',
+            offset : 300,
+            placeholder: '/sites/all/themes/ldl/images/loading.gif',
+            id: "firstYear",
+            });
+          }
+                  embargoStyles();
+
       });
       // end functions
 
@@ -957,6 +926,11 @@
       if ($(".video-js").length && $("#islandora-pdfjs").length) {
         $("body").addClass("audioPDF");
       } //detection for oral history
+      if ($(".islandora-basic-collection-item-count").length) {
+        $("body").addClass("collectionPageTest");
+        $("body").addClass("collectionPage");
+      } //allows collection Page styles
+
 
       //oral history stuff
       //$("h1#page-title").clone().prop({ id: "oh-title", class: "ohtitle"}).prependTo(".islandora-audio-content");
@@ -993,10 +967,19 @@
       $(".footerImg").clone().prop({ id: "logoMobile"}).prependTo("#zone-header");
       $(".landingMessage").clone().prop({id: "landingMobile", class: "landingMessageMobile"}).appendTo("#zone-header");
       $(".parent-collections").appendTo(".islandora-large-image-content, .islandora-pdf-content");
+      $(".collectionPage span.islandora-basic-collection-item-count").appendTo("#page-title");
+      $('.collectionPage #page-title').wrapAll('<div class="collectionHeader"/>'); //wraps collectionPage title
+      $(".collectionPage .islandora-basic-collection-wrapper > p").appendTo(".collectionHeader");
+      $("div.collection-description-text").appendTo(".collectionHeader");
+      $(".collectionPage <div class='collectionLogo'/>").prependTo(".collectionHeader");
       $("<div class='homepageLogo'/>").prependTo(".messageContainer");
       $( ".site-name a span" ).replaceWith( "<span><span class='boldSpan'>Louisiana</span> Digital Library</span>" );// $('.child-institution-collections a').wrapAll('<div class="childCollections"/>'); disables overflow fix for many child collections running off the page. this is a reversion because of <a> bug / diff in test vs production
+      $(".collectionPage <div class='collectionSearch'/>").insertAfter(".collectionHeader");
+      $(".collectionPage #page-title").prependTo(".collectionHeader .collection-description-text");
+      $(".collectionPage #block-islandora-collection-search-islandora-collection-search").appendTo(".collectionSearch");
       $("#zone-header input.form-submit").val(' ');
       $(".institution-search input.form-submit").val(' ');
+      $(".collectionSearch input.form-submit").val(' ');
       $("#largeSearch input.form-submit").val(' ');
       $("#block-user-login").prependTo(".footerContainer");
       $("<button class='hamburger--elastic hamburger--collapse mobileMenuIcon' type='button'><span class='hamburger-box'><span class='hamburger-inner'></span></span></button>").insertBefore(".logo-img");
@@ -1282,7 +1265,7 @@ function monthClick(){
       }
       // end newspaper 2.0
 
-      if ( ($('body').hasClass('compoundObject')) || ($('body').hasClass('collectionPage')) || ($('body').hasClass('oralHistory')) || ($('body').hasClass('audio')) || ($('body').hasClass('video')) || ($('body').hasClass('pdf')) || ($('body').hasClass('bookViewer')) || ($('body').hasClass('context-data')) || ($('body').hasClass('largeImage')) || ($('body').hasClass('newspaperSet'))){
+      if ( ($('body').hasClass('compoundObject')) || ($('body').hasClass('oralHistory')) || ($('body').hasClass('audio')) || ($('body').hasClass('video')) || ($('body').hasClass('pdf')) || ($('body').hasClass('bookViewer')) || ($('body').hasClass('context-data')) || ($('body').hasClass('largeImage')) || ($('body').hasClass('newspaperSet'))){
       $('body').addClass('headerversiontwo');
       }
       if (navigator.appName == 'Microsoft Internet Explorer' ||  !!(navigator.userAgent.match(/Trident/) || navigator.userAgent.match(/rv:11/)) || (typeof $.browser !== "undefined" && $.browser.msie == 1))
@@ -1691,7 +1674,7 @@ if ($('body').hasClass('pdf')){
           var ellipsestext = "...";
           var moretext = "Show more";
           var lesstext = "Show less";
-          $('.short_desc p, .mods-abstract-mt, .list-abstract').each(function() {
+          $('.short_desc p, .mods-abstract-mt').each(function() {
               var content = $(this).html();
               if(content.length > showChar) {
                   var c = content.substr(0, showChar);
