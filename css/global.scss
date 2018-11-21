@@ -1559,6 +1559,9 @@ opacity: 1;
 
 .islandora-basic-collection-grid{
     margin: 0 auto;  
+    .islandora-basic-collection-meta {
+      display: none;
+    }
 
     .islandora-basic-collection-caption {
       padding: 10px;

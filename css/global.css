@@ -998,6 +998,8 @@ li.child-institution-collection-list-item {
   padding-bottom: 200px; }
 .collectionPage .islandora-basic-collection-grid {
   margin: 0 auto; }
+  .collectionPage .islandora-basic-collection-grid .islandora-basic-collection-meta {
+    display: none; }
   .collectionPage .islandora-basic-collection-grid .islandora-basic-collection-caption {
     padding: 10px;
     background: white; }
