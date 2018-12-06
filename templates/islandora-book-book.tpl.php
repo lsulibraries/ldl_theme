@@ -16,7 +16,7 @@ document.body.className += ' ' + 'book';
   <div id="book-viewer">
     <?php print $viewer; ?>
 <?php endif; ?>
-<div class="book-thumbnail">
+<div class="book-thumbnail image-thumbnail">
   <img src="<?php print "/islandora/object/{$object->id}/datastream/TN/view" ?>"></img>
 </div>
 

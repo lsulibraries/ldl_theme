@@ -12,7 +12,7 @@
   <span class="islandora-newspaper-issue-navigator">
     <?php print theme('islandora_newspaper_issue_navigator', array('object' => $object)); ?>
   </span>
-<div class="book-thumbnail">
+<div class="book-thumbnail image-thumbnail">
   <img src="<?php print $thumbnail_path; ?>"></img>
 </div>
 
