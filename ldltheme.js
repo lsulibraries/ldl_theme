@@ -22,6 +22,7 @@
           $(".collectionPage #block-islandora-collection-search-islandora-collection-search").appendTo(".collectionSearch");
           $(".collectionSearch input.form-submit").val(' ');
           collectionHeader();
+          collectionSidebar();
           actionToggles();
           break;
         }        
@@ -325,8 +326,19 @@
           $('#page').parallax({imageSrc: '/sites/all/themes/ldl/images/rotate1.jpg'});
           $('.islandora-basic-collection-item-count').appendTo('#block-islandora-collection-search-islandora-collection-search');
           $('h1#page-title').contents().appendTo('.collectionHeader #page-title');
+      }
+
+      function collectionSidebar(){
+          var collTitle = $(".collectionHeader #page-title").html(); // finds full title without truncation
+          var count = $("span.islandora-basic-collection-item-count").html();
+          var total = count.split(" ").pop();
           $('<div class="collectionSidebar"/>').appendTo('#block-block-10 .content');
-          $('.collection-description-text').appendTo('.collectionSidebar');
+          $('.collection-description-text').appendTo('.collectionSidebar').wrapAll('<div class="collectionSidebarDesc"/>');
+          $('<div class="collectionTitle"/>').insertBefore('.collection-description-text');
+          $('.collectionTitle').html(collTitle);
+          $('<div class="collectionTotal"/>').insertAfter('.collectionTitle');
+          $('.collectionTotal').html(total + ' items');
+
       }
 
       function itemHeader(){
