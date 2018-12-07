@@ -323,6 +323,7 @@
 
       function collectionHeader(){
           $('#page').parallax({imageSrc: '/sites/all/themes/ldl/images/rotate1.jpg'});
+          $('.islandora-basic-collection-item-count').appendTo('#block-islandora-collection-search-islandora-collection-search');
       }
 
       function itemHeader(){
@@ -792,6 +793,9 @@
           $('.islandora-view-list, .islandora-view-grid').not('.active').addClass('listGrid userSelect');
           $('.listGrid').contents().wrapAll('<div class="textSelect"/>');
           $('.listGrid').insertAfter('.infoToggle');
+          $('.islandora-view-list.active, .islandora-view-grid.active').remove();
+          $("ul.tabs").appendTo(".userMenu").wrapAll('<div class="manageMenu"/>'); //moves the view/ip embargo/manage menu
+
         }        
         $('li:empty').remove();
       $('.manageMenu').insertBefore('#shareToggle');

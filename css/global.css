@@ -943,8 +943,6 @@ li.child-institution-collection-list-item {
     background-image: url("../images/wqpOeRQ.png");
     background-size: 120px auto; }
 
-.collectionPage .listGrid.userSelect {
-  margin-right: 5px !important; }
 .collectionPage .parallax-mirror {
   filter: brightness(0.7); }
 .collectionPage .collectionLogo {
@@ -955,14 +953,12 @@ li.child-institution-collection-list-item {
   max-width: 1200px;
   margin: 0 auto; }
 .collectionPage span.islandora-basic-collection-item-count {
-  font-size: 12px;
-  display: inline-flex;
-  padding: 1px 8px;
-  margin-left: 7px;
-  border: 1px solid grey;
-  border-radius: 5px;
-  position: relative;
-  top: -2px; }
+  font-size: 11px;
+  position: absolute;
+  top: -13px;
+  right: 0px;
+  text-transform: uppercase;
+  letter-spacing: 1px; }
 .collectionPage .collectionHeader {
   display: -webkit-box;
   display: -moz-box;
