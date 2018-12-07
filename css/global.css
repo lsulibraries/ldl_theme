@@ -943,6 +943,8 @@ li.child-institution-collection-list-item {
     background-image: url("../images/wqpOeRQ.png");
     background-size: 120px auto; }
 
+.collectionPage .listGrid.userSelect {
+  margin-right: 5px !important; }
 .collectionPage .parallax-mirror {
   filter: brightness(0.7); }
 .collectionPage .collectionLogo {

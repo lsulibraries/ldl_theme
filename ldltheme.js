@@ -323,7 +323,6 @@
 
       function collectionHeader(){
           $('#page').parallax({imageSrc: '/sites/all/themes/ldl/images/rotate1.jpg'});
-
       }
 
       function itemHeader(){
@@ -772,7 +771,6 @@
           shares: ["twitter", "facebook"]
         });
         $('#shareToggle').click(function(){
-          $(shareToggle).toggleClass('activeMenu');
           $('#share').toggleClass('shareActive');
         });
         downloadHeight = $('.downloadList_container').height();
@@ -791,9 +789,13 @@
         console.log('info toggle made');
         if ($('body').hasClass('collectionPage')){
           $(infoToggle).click();
+          $('.islandora-view-list, .islandora-view-grid').not('.active').addClass('listGrid userSelect');
+          $('.listGrid').contents().wrapAll('<div class="textSelect"/>');
+          $('.listGrid').insertAfter('.infoToggle');
         }        
         $('li:empty').remove();
       $('.manageMenu').insertBefore('#shareToggle');
+
 
       } // end toggle functions
 

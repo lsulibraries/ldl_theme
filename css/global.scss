@@ -1485,6 +1485,11 @@ opacity: 1;
 //Begin collection page styles
 
 .collectionPage {
+
+  .listGrid.userSelect {
+      margin-right: 5px !important;
+  }
+  
   .parallax-mirror {
       filter: brightness(0.7);
   }
