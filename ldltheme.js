@@ -324,6 +324,9 @@
       function collectionHeader(){
           $('#page').parallax({imageSrc: '/sites/all/themes/ldl/images/rotate1.jpg'});
           $('.islandora-basic-collection-item-count').appendTo('#block-islandora-collection-search-islandora-collection-search');
+          $('h1#page-title').contents().appendTo('.collectionHeader #page-title');
+          $('<div class="collectionSidebar"/>').appendTo('#block-block-10 .content');
+          $('.collection-description-text').appendTo('.collectionSidebar');
       }
 
       function itemHeader(){

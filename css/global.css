@@ -943,6 +943,12 @@ li.child-institution-collection-list-item {
     background-image: url("../images/wqpOeRQ.png");
     background-size: 120px auto; }
 
+.collectionPage .collectionSidebar .collection-description-text {
+  background: #1a1a1a;
+  position: relative; }
+.collectionPage .headerBreadcrumb {
+  margin-top: 14px;
+  margin-bottom: 10px; }
 .collectionPage .parallax-mirror {
   filter: brightness(0.7); }
 .collectionPage .collectionLogo {
@@ -4372,7 +4378,7 @@ body.bookViewer .bookMetaContainer > .metadataContainer {
   margin: 40px;
   padding: 20px 0px 0px 0px !important;
   margin-top: 60px; }
-body.bookViewer .parentMetadata::before, body.bookViewer .metadataContainer:not(.parentMetadata)::before {
+body.bookViewer .parentMetadata::before, body.bookViewer .metadataContainer:not(.parentMetadata)::before, body.bookViewer .collectionPage .collection-description-text::before, .collectionPage body.bookViewer .collection-description-text::before {
   position: absolute;
   left: 0px;
   top: -20px;
@@ -5659,7 +5665,7 @@ body.pdf #window-title {
   padding-bottom: 80px;
   color: white; }
 
-.parentMetadata::before, body.bookViewer .metadataContainer:not(.parentMetadata)::before, .metadataContainer:not(.parentMetadata)::before {
+.parentMetadata::before, body.bookViewer .metadataContainer:not(.parentMetadata)::before, .metadataContainer:not(.parentMetadata)::before, .collectionPage .collection-description-text::before {
   position: absolute;
   left: 0px;
   top: -20px;
@@ -5675,6 +5681,9 @@ body.pdf #window-title {
 
 .metadataContainer:not(.parentMetadata)::before {
   content: 'item information'; }
+
+.collectionPage .collection-description-text::before {
+  content: 'collection information'; }
 
 body.newspaperSet {
   background-color: white; }

@@ -1486,6 +1486,19 @@ opacity: 1;
 
 .collectionPage {
 
+
+  .collectionSidebar{
+    .collection-description-text {
+    background: #1a1a1a;
+    position: relative;
+    }
+  }
+
+  .headerBreadcrumb{
+    margin-top: 14px;
+    margin-bottom: 10px;
+  }
+
   .parallax-mirror {
       filter: brightness(0.7);
   }
@@ -7885,6 +7898,12 @@ body.pdf{
 .metadataContainer:not(.parentMetadata)::before{
 @extend .parentMetadata::before;
 content:'item information';
+}
+
+
+.collectionPage .collection-description-text::before{
+@extend .parentMetadata::before;
+content:'collection information';
 }
 
 
