@@ -37,7 +37,7 @@
         }
         //case for large images
         case ((($('body').hasClass('largeImage'))) && (!$('body').hasClass('audioPDF'))) :{
-          itemTitle = $(".modsTitle").html(); // finds full title without truncation
+          itemTitle = $('meta[name="twitter:title"]').attr("content"); // finds full title without truncation
           thumbnailURL = $(".image-thumbnail img").prop('src');
           if ($('.block-islandora-compound-object').length){
             compoundChild_start();
@@ -342,8 +342,8 @@
               widestWidth = $(this).width();
             }
           });   //done finding widest image
-          var commentedURL = $('div.widest').find('noscript').addClass('widestIMG').text().split(" ");
-          var srcclean = commentedURL[2].match(/"(.*?)"/);
+          var commentedURL = $('div.widest').find('noscript').addClass('widestIMG').text().match(/src\s*=\s*"(.+?)"/);
+          var srcclean = commentedURL[1];
           $('.compoundSelect noscript').each(function() {    //begin embargo detection
             str = $(this).html();
             if (str.indexOf("embargo") >= 0){
@@ -377,7 +377,7 @@
 
           }
           else{
-            var thumbnailURL =  srcclean[1];
+            var thumbnailURL =  srcclean;
           }
           $("div#region-content > div.region-content-inner > div.tabs > ul.tabs").wrapAll('<div class="manageMenu"/>'); //moves the view/ip embargo/manage menu
           $(".compoundCount").appendTo(".itemContainer");
@@ -394,9 +394,8 @@
           $(".islandora-audio-object").remove();
           }
          if ($('body').hasClass('compoundChild')){
-          var commentedURL = $('div.currentImage').find('noscript').addClass('widestIMG').text().split(" ");
-          var srcclean = commentedURL[2].match(/"(.*?)"/);
-          thumbnailURL = srcclean[1];
+          var commentedURL = $('div.currentImage').find('noscript').addClass('widestIMG').text().match(/src\s*=\s*"(.+?)"/);
+          thumbnailURL = commentedURL[1];
           $("<div class='item_headerMenu'/>").appendTo(".item_header"); //creates header for book items
           $("<div class='backgroundDiv'/>").insertBefore(".item_headerMenu"); //creates header for book items
           $('.backgroundDiv').css('background-image', 'url(' + thumbnailURL + ')');
@@ -404,7 +403,7 @@
          // $("#region-content div.tabs.clearfix").prependTo("#block-system-main");
         }
         if ((!$('body').hasClass('compoundParent')) && (!$('body').hasClass('compoundChild'))) {
-          itemTitle = $(".modsTitle").html(); // finds full title without truncation
+          itemTitle = $('meta[name="twitter:title"]').attr("content"); // finds full title without truncation
           if ($('body').hasClass('newspaperSet')){
             var baseUrl = document.location.origin;
             var thumbnailURL = baseUrl + ($(".issue-container:first > a").attr('href')) + '/datastream/TN/view';
@@ -435,13 +434,16 @@
           $(collectionText).addClass("institutionSmall").insertAfter(".breadcrumbDivider"); //creates collection breadcrumb
           console.log('hi its not a compound');
           }
+
         $("<div class='userMenu'/>").appendTo(".item_headerMenu"); //temporarily moves count
         $("<div class='infoToggle userSelect'><div class='iconSelect'></div><div class='textSelect'>details</div></div>").appendTo(".userMenu"); //adds toggle for parent metadata
 
         $("ul.tabs").appendTo(".userMenu:first").wrapAll('<div class="manageMenu"/>').insertBefore('#shareToggle'); //moves the view/ip embargo/manage menu
         $("div#block-system-main > div.tabs").remove(); // removes top div which once contained the tabs
-        if((itemTitle).length > 20) {
-          $(".itemTitle").css('font-size','34px');
+        if (!itemTitle === 'undefined'){
+          if (((itemTitle).length > 20) && ($(".modsTitle").length)) {
+            $(".itemTitle").css('font-size','34px');
+          }
         }
      }
 
@@ -475,9 +477,8 @@
         $("<div class='chooseImage chooseViewer'><div class='chooseIcon'><i class='fa fa-image'></i></div><div class='chooseText'>Open Image Viewer</div></div>").appendTo(".chooseMenu"); //adds label break
         $(".downloadList").insertAfter(".image_headerMenu");
         if ($('body').hasClass('compoundChild')){
-          var commentedURL = $('div.currentImage').find('noscript').addClass('widestIMG').text().split(" ");
-          var srcclean = commentedURL[2].match(/"(.*?)"/);
-          thumbnailURL = srcclean[1];
+          var commentedURL = $('div.currentImage').find('noscript').addClass('widestIMG').text().match(/src\s*=\s*"(.+?)"/);
+          thumbnailURL = commentedURL[1];
           $('.imagePreview img').prop('src', thumbnailURL);
         }
         if (($('body').hasClass('compoundChild')) && ($('body').hasClass('oralHistory'))){
@@ -498,7 +499,22 @@
         $(".metadataSidebar").clone().prop({ class: "metadataVertical"}).appendTo('.content .descContainer .descriptionText');
         $(".downloadSelect").insertAfter(".infoToggle");
         $("<i class='fa fa-image' aria-hidden='true'></i>").appendTo(".imageLabel");
+      }
 
+      function embargoStyles(){
+        if ((($('.ip-embargo-details').text()).length) > 5){
+            //thumbnail present but JP2 is not
+            if (($('body').hasClass('largeImage')) && (!$('#islandora-openseadragon').length)){
+              $('.imageMenu').remove();
+              $('.image-thumbnail').css('cursor','not-allowed');
+            }
+            //thumbnail is hidden
+            if (($('.image-thumbnail img').width() < 17)){
+              $('.image-thumbnail').remove();
+              $('.image-thumbnailData').css('border-left','0px');
+            }            
+          }
+          $('.ip-embargo-details').appendTo('.image-thumbnailData');
       }
 
       function bookContainer(){
@@ -865,6 +881,8 @@
             id: "firstYear",
             });
           }
+                  embargoStyles();
+
       });
       // end functions
 

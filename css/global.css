@@ -364,7 +364,7 @@ a.institution-about-edit {
 .mcneeseTheme .institution-header, .mcneeseTheme .collectionHeader, .mcneeseTheme .institution-search::before, .mcneeseTheme .child-institution-collections::before {
   background: #00529b; }
 .mcneeseTheme .collectionLogo {
-  background-image: url("../images/logo.png");
+  background-image: url("../images/mcneese_long.png");
   cursor: pointer; }
 .mcneeseTheme form#islandora-collection-search-form {
   border: 2px solid #00529b; }
@@ -4320,7 +4320,7 @@ div#BRpage {
   display: none; }
 
 .BRicon {
-  background-image: url(../images/IhxEDq2.png) !important; }
+  background-image: url(../images/ihxEDq2.png) !important; }
 
 .twopg {
   position: relative !important;
@@ -4410,7 +4410,7 @@ body.bookViewer .headerBreadcrumb {
   justify-content: center;
   align-items: flex-start; }
 body.bookViewer .bookLabel {
-  background-image: url(../images/Dm9Wu42.png);
+  background-image: url(../images/dm9Wu42.png);
   background-size: 25px;
   background-position: 0px 0px; }
 body.bookViewer #BRnav {
