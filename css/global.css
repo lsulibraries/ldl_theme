@@ -87,6 +87,9 @@ li a.active {
 form#admin-form {
   margin: 3vw; }
 
+body:not(.collectionPage) #block-system-main {
+  background: white; }
+
 div#breadcrumb {
   display: -webkit-box;
   display: -moz-box;
@@ -1044,12 +1047,26 @@ li.child-institution-collection-list-item {
     border-radius: 10px;
     overflow: hidden; }
 .collectionPage .islandora-basic-collection-list-item {
-  border-radius: 20px;
+  border-radius: 10px;
   overflow: hidden;
   background: rgba(255, 255, 255, 0.07);
-  margin-bottom: 20px;
   border: 1px solid rgba(255, 255, 255, 0.058);
-  padding-bottom: 0px; }
+  padding-bottom: 0px;
+  width: calc(100% - 20px);
+  margin: 0 10px;
+  margin-bottom: 20px; }
+  .collectionPage .islandora-basic-collection-list-item .list-subjects {
+    display: flex;
+    flex-wrap: wrap; }
+  .collectionPage .islandora-basic-collection-list-item .modsSubject {
+    margin-bottom: 10px; }
+  .collectionPage .islandora-basic-collection-list-item .modsSubject a {
+    background: rgba(255, 255, 255, 0.07);
+    color: white;
+    padding: 5px 9px;
+    border-radius: 4px;
+    margin-right: 4px;
+    font-size: 11px; }
   .collectionPage .islandora-basic-collection-list-item .dc-description {
     color: white; }
   .collectionPage .islandora-basic-collection-list-item .list-thumbnail {
@@ -4014,8 +4031,6 @@ body.headerversiontwo {
     margin: 0 auto;
     margin-top: 30px;
     padding: 0px 20px; }
-  body.headerversiontwo #block-system-main:not(body.collectionPage) {
-    background: white; }
   body.headerversiontwo .manageMenu .tabs {
     margin: 0px;
     padding: 0px;

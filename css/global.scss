@@ -284,6 +284,11 @@ form#admin-form {
 }
 
 
+body:not(.collectionPage){
+#block-system-main{
+  background: white;
+}
+}
 
 div#breadcrumb {
   @include flexbox;
@@ -1627,13 +1632,34 @@ opacity: 1;
 
 //collectionList styles
 
+
+
 .islandora-basic-collection-list-item{
-    border-radius: 20px;
+    border-radius: 10px;
     overflow: hidden;
     background: rgba(255, 255, 255, 0.070);
-    margin-bottom: 20px;
     border: 1px solid rgba(255, 255, 255, 0.058);
     padding-bottom: 0px;
+    width: calc(100% - 20px);
+    margin: 0 10px;
+    margin-bottom: 20px;
+
+    .list-subjects{
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .modsSubject {
+        margin-bottom: 10px;
+    }
+
+    .modsSubject a {
+        background: rgba(255, 255, 255, 0.070);
+        color: white;
+        padding: 5px 9px;
+        border-radius: 4px;
+        margin-right: 4px;
+        font-size: 11px;
+    }
 
   .dc-description{
     color: white;
@@ -5324,9 +5350,7 @@ width: 100%;
     padding: 0px 20px;
 }
 
-#block-system-main:not(body.collectionPage){
-  background: white;
-}
+
 
 //begin logged-in actionBar
 .manageMenu {
