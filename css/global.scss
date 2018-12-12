@@ -1492,6 +1492,11 @@ opacity: 1;
 .collectionPage {
 
 
+&.metaOpened #region-content{
+  margin-left: 480px;
+
+}
+
 .islandora-basic-collection-wrapper {
     padding-top: 120px;
 }
@@ -1643,6 +1648,11 @@ opacity: 1;
     width: calc(100% - 20px);
     margin: 0 10px;
     margin-bottom: 20px;
+
+.list-metadata {
+    max-height: 140px;
+    margin-right: 20px;
+}
 
     .list-subjects{
       display: flex;
@@ -10177,9 +10187,13 @@ div#islandora-pdfjs {
   padding: 0px 30px;
 }
 
-
+    .collectionPage .islandora-basic-collection-list-item .list-subjects{
+      display: none;
+    }
 }
   @media screen and (max-width: 740px) {
+
+
 
 //begin compoundChild mobile
 
