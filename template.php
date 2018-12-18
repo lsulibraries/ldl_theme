@@ -177,16 +177,6 @@ function alpha_preprocess_islandora_basic_collection_wrapper(&$variables) {
   $pid = $pidParts[0];
 
 
-  $result = db_query("select u.alias, n.title "
-      . "from field_revision_field_lp_pid f "
-      . "join node n on f.revision_id = n.vid "
-      . "join url_alias u "
-      . "where field_lp_pid_value = :pid "
-      . "and u.source = CONCAT('node/',n.nid)", array(':pid' => $pid));
-  $record = $result->fetchAssoc();
-  $variables['about_link'] = l($record['title'], $record['alias']);
-  $variables['landing_page_title'] = $record['title'];
-
   // Hack ! to patch the display weirdness that happens with multiple 'dc:description' fields.
   // This is not ideal- arbitrarily prefers the first dc:description field.
   try {
