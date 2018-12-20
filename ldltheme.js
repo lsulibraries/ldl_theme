@@ -906,7 +906,7 @@
         itemSelector: '.masonryItem',
         initLayout: false,
         isFitWidth: false,
-        percentPosition: true,      
+        percentPosition: false,      
         columnWidth: 80,
         transitionDuration: '0.2s'        
       });
@@ -928,8 +928,10 @@
         sr.reveal('.solr-thumb img', { duration: 200, delay: 850,  easing: 'linear', scale: 1, viewFactor: 0.01, }, 20);
         sr.reveal('.alertBox_container', { duration: 100, delay: 0,  easing: 'ease-in', opacity: 1 }, 20);
         sr.reveal('.bookmarkWelcome', { duration: 800, delay: 100,  easing: 'linear', scale: 1, viewFactor: 0.01, }, 50);
+        $('.collectionPage .loadingMessage').css('display', 'none');
         gridDetents();               
         grid.masonry();
+        sr.reveal('.islandora-basic-collection-object', { duration: 200, delay: 350,  easing: 'linear', scale: 1, viewFactor: 1, }, 20);
 
         $("a > .institutionLink_meta").each(function() {
           $(this).colourBrightness();//
