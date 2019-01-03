@@ -1025,7 +1025,9 @@ html body.collectionPage .headerBreadcrumb {
   html body.collectionPage .headerBreadcrumb a:first-child {
     margin-right: 6px; }
 html body.collectionPage .parallax-mirror {
-  filter: brightness(0.7); }
+  filter: brightness(0.35); }
+html body.collectionPage .parralax-mirror {
+  display: none; }
 html body.collectionPage .collectionLogo {
   display: none !important; }
 html body.collectionPage #page-title {

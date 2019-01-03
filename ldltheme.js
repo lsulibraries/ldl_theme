@@ -27,6 +27,13 @@
           break;
         }        
 
+        case ((($('body').hasClass('context-content'))) && (!$('body').hasClass('audioPDF'))) :{
+          $("body").addClass("basicPage");
+          $('#block-system-main').parallax({imageSrc: 'https://i.imgur.com/yUbfVN7.jpg'});          
+          actionToggles();
+          break;
+        }            
+
         case (($('#edit-dsid-fieldset').length) > 0) :{
           $("body").addClass('datastreamPage');
           break;
@@ -323,7 +330,22 @@
       }
 
       function collectionHeader(){
-          $('#page').parallax({imageSrc: '/sites/all/themes/ldl/images/rotate1.jpg'});
+          if ($('img.parralax-slider').length){
+          var nomURL = $('img.parralax-slider').prop('src');
+          $('#page').parallax({imageSrc: nomURL });
+          }
+          else {
+            if ($('.islandora-basic-collection-grid').length){
+            var firstItem = $('.islandora-basic-collection-object > .islandora-basic-collection-thumb > a > img').prop('src');
+            console.log(firstItem);
+            $('#page').parallax({imageSrc: firstItem });    
+            }
+            else {
+            var firstItem = $('.islandora-basic-collection-object1 > .list-item-container > .list-thumbnail > a > img').prop('src');
+            console.log(firstItem);
+            $('#page').parallax({imageSrc: firstItem });                  
+            }        
+          }
           $('.islandora-basic-collection-item-count').appendTo('#block-islandora-collection-search-islandora-collection-search');
           $('h1#page-title').contents().appendTo('.collectionHeader #page-title');
       }
@@ -1307,7 +1329,7 @@ function monthClick(){
       }
       // end newspaper 2.0
 
-      if ( ($('body').hasClass('compoundObject')) || ($('body').hasClass('collectionPage')) || ($('body').hasClass('oralHistory')) || ($('body').hasClass('audio')) || ($('body').hasClass('video')) || ($('body').hasClass('pdf')) || ($('body').hasClass('bookViewer')) || ($('body').hasClass('context-data')) || ($('body').hasClass('largeImage')) || ($('body').hasClass('newspaperSet'))){
+      if ( ($('body').hasClass('compoundObject')) || ($('body').hasClass('basicPage')) || ($('body').hasClass('collectionPage')) || ($('body').hasClass('oralHistory')) || ($('body').hasClass('audio')) || ($('body').hasClass('video')) || ($('body').hasClass('pdf')) || ($('body').hasClass('bookViewer')) || ($('body').hasClass('context-data')) || ($('body').hasClass('largeImage')) || ($('body').hasClass('newspaperSet'))){
       $('body').addClass('headerversiontwo');
       }
       if (navigator.appName == 'Microsoft Internet Explorer' ||  !!(navigator.userAgent.match(/Trident/) || navigator.userAgent.match(/rv:11/)) || (typeof $.browser !== "undefined" && $.browser.msie == 1))

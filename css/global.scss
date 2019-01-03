@@ -1601,7 +1601,11 @@ html body.collectionPage {
   }
 
   .parallax-mirror {
-      filter: brightness(0.7);
+      filter: brightness(0.35);
+  }
+
+  .parralax-mirror {
+    display: none;
   }
 
   .collectionLogo {
