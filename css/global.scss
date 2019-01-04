@@ -1493,6 +1493,17 @@ opacity: 1;
 html body.collectionPage {
 
 
+.nano{
+  overflow: visible;
+  height: calc(100vh - 60px) !important;  
+}
+
+.nano-pane {
+    right: -35px;
+    z-index: 99;
+    overflow: hidden;
+}
+
 .loadingMessage{
     display: flex;
     flex-direction: column;
@@ -1557,7 +1568,7 @@ html body.collectionPage {
 }
 
 .islandora-basic-collection-wrapper {
-    padding-top: 120px;
+    padding-top: 60px;
     margin-left: 40px;
     margin-right: 40px;    
 }

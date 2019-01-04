@@ -946,6 +946,13 @@ li.child-institution-collection-list-item {
     background-image: url("../images/wqpOeRQ.png");
     background-size: 120px auto; }
 
+html body.collectionPage .nano {
+  overflow: visible;
+  height: calc(100vh - 60px) !important; }
+html body.collectionPage .nano-pane {
+  right: -35px;
+  z-index: 99;
+  overflow: hidden; }
 html body.collectionPage .loadingMessage {
   display: flex;
   flex-direction: column;
@@ -992,7 +999,7 @@ html body.collectionPage.metaOpened div#zone-header {
 html body.collectionPage.metaOpened #region-content {
   margin-left: 480px; }
 html body.collectionPage .islandora-basic-collection-wrapper {
-  padding-top: 120px;
+  padding-top: 60px;
   margin-left: 40px;
   margin-right: 40px; }
 html body.collectionPage .collectionSidebar {
