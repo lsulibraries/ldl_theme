@@ -946,12 +946,7 @@ li.child-institution-collection-list-item {
     background-image: url("../images/wqpOeRQ.png");
     background-size: 120px auto; }
 
-html body.collectionPage .nano {
-  overflow: visible;
-  height: calc(100vh - 60px) !important; }
 html body.collectionPage .nano-pane {
-  right: -35px;
-  z-index: 99;
   overflow: hidden; }
 html body.collectionPage .loadingMessage {
   display: flex;

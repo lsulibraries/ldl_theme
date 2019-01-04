@@ -355,16 +355,18 @@
           var collTitle = $(".collectionHeader #page-title").html(); // finds full title without truncation
           var count = $("span.islandora-basic-collection-item-count").html();
           var total = count.split(" ").pop();
-          $('#block-block-10 .content').addClass('nano').css('height','100vh');
+          $('#region-sidebar-first').addClass('nano');
+          $('#region-sidebar-first .region-sidebar-first-inner').addClass('nano-content');          
           $('<div class="collectionSidebar nano-content"/>').appendTo('#block-block-10 .content');
           $('.collection-description-text').appendTo('.collectionSidebar').wrapAll('<div class="collectionSidebarDesc"/>');
           $('<div class="collectionTitle"/>').insertBefore('.collection-description-text');
           $('.collectionTitle').html(collTitle);
           $('<div class="collectionTotal"/>').insertAfter('.collectionTitle');
           $('.collectionTotal').html(total + ' items');
+           $( "#region-sidebar-first" ).delay(0).promise().done(function() {
 
             $(".nano").nanoScroller({ alwaysVisible: false });
-
+          });
       }
 
       function itemHeader(){

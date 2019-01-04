@@ -1494,14 +1494,11 @@ html body.collectionPage {
 
 
 .nano{
-  overflow: visible;
-  height: calc(100vh - 60px) !important;  
+
 }
 
 .nano-pane {
-    right: -35px;
-    z-index: 99;
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .loadingMessage{
