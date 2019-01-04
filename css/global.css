@@ -1007,6 +1007,7 @@ html body.collectionPage .collectionSidebar {
     display: flex;
     border: 1px solid grey;
     width: fit-content;
+    width: -moz-fit-content;
     padding: 5px 8px;
     margin-top: 10px;
     border-radius: 4px;
