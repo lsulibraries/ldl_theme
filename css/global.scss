@@ -4673,6 +4673,7 @@ form#islandora-ip-embargo-object-embargo-form {
 
       #region-sidebar-first.infoOpened{
 transform: translate3d(0,0,0);
+transition-property: transform;
       transition-duration: 1s;
       position: fixed;
     left: 0px;
@@ -5873,6 +5874,7 @@ padding-top: 10px;
 
 #region-sidebar-first.infoOpened {
     transform: translate3d(0, 0, 0);
+    transition-property: transform;
     transition-duration: 1s;
     position: fixed;
     left: 0px;

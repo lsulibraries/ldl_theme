@@ -3557,6 +3557,7 @@ div.islandora-pdf-object, div.islandora-large-image-object {
     padding: 40px; }
 .compoundObject #region-sidebar-first.infoOpened {
   transform: translate3d(0, 0, 0);
+  transition-property: transform;
   transition-duration: 1s;
   position: fixed;
   left: 0px;
@@ -4380,6 +4381,7 @@ body.headerversiontwo {
     padding: 40px; }
   body.headerversiontwo #region-sidebar-first.infoOpened {
     transform: translate3d(0, 0, 0);
+    transition-property: transform;
     transition-duration: 1s;
     position: fixed;
     left: 0px;
