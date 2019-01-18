@@ -1072,7 +1072,7 @@ html body.collectionPage #block-islandora-collection-search-islandora-collection
   display: block; }
 html body.collectionPage #region-sidebar-first {
   display: block;
-  min-width: 480px;
+  width: 480px;
   background-color: rgba(0, 0, 0, 0.67); }
 html body.collectionPage .islandora-basic-collection-display-switch {
   position: absolute; }
