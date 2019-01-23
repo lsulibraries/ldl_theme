@@ -948,7 +948,7 @@ li.child-institution-collection-list-item {
 
 html body.collectionPage .itemHover {
   position: absolute;
-  bottom: -20px;
+  bottom: -40px;
   height: 20px;
   width: 100%;
   background: #1c1c1bd9;
@@ -956,11 +956,12 @@ html body.collectionPage .itemHover {
   text-transform: uppercase;
   font-size: 11px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  transition-duration: 0.2s; }
+  transition-duration: 0.2s;
+  padding: 20px 10px; }
 html body.collectionPage .islandora-basic-collection-object:hover .itemHover {
-  transform: translateY(-20px);
+  transform: translateY(-40px);
   transition-duration: 0.2s; }
 html body.collectionPage .islandora-basic-collection-thumb {
   border-radius: 0px 0px 10px 10px;

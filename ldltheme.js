@@ -355,20 +355,18 @@
 
         $(".islandora-basic-collection-object").each(function() {
           var itemDate =  $(this).find('.islandora-basic-object-date_created .metadataValue').html();
-          console.log(itemDate);
-          $('<div class="itemHover"><div class="typeHover"/></div>').appendTo(this);
+          $('<div class="itemHover"><div class="dateHover"/><div class="typeHover"/></div>').appendTo(this);
+          $(this).find('.dateHover').html(itemDate);
+
           var itemType;
           switch (true) { //detect page type or content type
-
             case ($(this).hasClass('islandora:sp_large_image_cmodel')):{
                 itemType = 'Image';
                 break;
             }
-
           }
           $(this).find('.typeHover').html(itemType);
 
-          // $(this).find('.dateHover').html(itemDate);
           // if ($(this).find('.dateHover').is(':empty')){
           //     $(this).find('.dateHover').html('Unknown Date');
           // }

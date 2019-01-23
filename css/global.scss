@@ -1494,7 +1494,7 @@ html body.collectionPage {
 
   .itemHover {
     position: absolute;
-    bottom: -20px;
+    bottom: -40px;
     height: 20px;
     width: 100%;
     background: #1c1c1bd9;
@@ -1502,14 +1502,15 @@ html body.collectionPage {
     text-transform: uppercase;
     font-size: 11px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     transition-duration: 0.2s;
+    padding: 20px 10px;
 }
 
 .islandora-basic-collection-object:hover{
   .itemHover{
-    transform: translateY(-20px);
+    transform: translateY(-40px);
     transition-duration: 0.2s;
   }
 }
