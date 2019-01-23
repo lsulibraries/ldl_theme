@@ -302,11 +302,36 @@ a.institution-about-edit {
 .lsuhscTheme .institution-about, .lsusTheme .institution-about, .lsuhscsTheme .institution-about {
   border-left: 1px solid rgba(0, 0, 0, 0.2); }
 .lsuhscTheme form#islandora-collection-search-form, .lsusTheme form#islandora-collection-search-form, .lsuhscsTheme form#islandora-collection-search-form {
-  border: 2px solid #white; }
+  border: 2px solid #8c8c8c; }
 .lsuhscTheme .institution-search input[type="text"], .lsusTheme .institution-search input[type="text"], .lsuhscsTheme .institution-search input[type="text"] {
-  border: 2px solid #white; }
+  border: 2px solid white; }
 .lsuhscTheme .institutionLabel::before, .lsusTheme .institutionLabel::before, .lsuhscsTheme .institutionLabel::before {
-  background: #white; }
+  background: white; }
+
+.websterTheme {
+  background: white;
+  color: #474747; }
+  .websterTheme #page-title {
+    color: #474747; }
+  .websterTheme .collection-description-text {
+    color: #434343; }
+  .websterTheme .institution-header, .websterTheme .collectionHeader, .websterTheme .institution-search::before, .websterTheme .child-institution-collections::before {
+    background: #ffffff; }
+  .websterTheme .institution-about {
+    border-left: 1px solid rgba(0, 0, 0, 0.2); }
+  .websterTheme form#islandora-collection-search-form {
+    border: 2px solid white; }
+  .websterTheme .institution-search input[type="text"] {
+    border: 2px solid white; }
+  .websterTheme .institutionLabel::before {
+    background: white; }
+  .websterTheme .collectionSearch form#islandora-collection-search-form {
+    border: 2px solid #8c8c8c; }
+  .websterTheme .collectionLogo {
+    background-image: url("../images/webster.png");
+    cursor: pointer; }
+  .websterTheme .institutionLabel {
+    background-image: url("../images/webster.png"); }
 
 .lsusTheme .collectionLogo {
   background-image: url("../images/LSUS%20Logo%2011102015.png");
@@ -746,7 +771,6 @@ li.institution-collection-list-item a.institution-collection-list-item-manage-pr
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  border-right: 1px solid #2f2f2f;
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 6px;
@@ -978,6 +1002,10 @@ li.child-institution-collection-list-item {
     background-color: #ede7c0;
     background-image: url("../images/wqpOeRQ.png");
     background-size: 120px auto; }
+  #block-block-11 a.institutionLink.websterLink {
+    background-color: #ffffff;
+    background-image: url("../images/webster.png");
+    background-size: 140px auto; }
 
 .collectionPage .collectionLogo {
   width: 200px;
