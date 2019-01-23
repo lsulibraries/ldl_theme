@@ -294,25 +294,40 @@ a.institution-about-edit {
 .lsuTheme .institutionLabel {
   background-image: url("../images/LSU_Gold_CMYK.png"); }
 
-.lsuhscTheme .institution-header, .lsuhscTheme .collectionHeader, .lsuhscTheme .institution-search::before, .lsuhscTheme .child-institution-collections::before, .lsusTheme .institution-header, .lsusTheme .collectionHeader, .lsusTheme .institution-search::before, .lsusTheme .child-institution-collections::before, .lsuhscsTheme .institution-header, .lsuhscsTheme .collectionHeader, .lsuhscsTheme .institution-search::before, .lsuhscsTheme .child-institution-collections::before, .websterTheme .institution-header, .websterTheme .collectionHeader, .websterTheme .institution-search::before, .websterTheme .child-institution-collections::before {
+.lsuhscTheme .institution-header, .lsuhscTheme .collectionHeader, .lsuhscTheme .institution-search::before, .lsuhscTheme .child-institution-collections::before, .lsusTheme .institution-header, .lsusTheme .collectionHeader, .lsusTheme .institution-search::before, .lsusTheme .child-institution-collections::before, .lsuhscsTheme .institution-header, .lsuhscsTheme .collectionHeader, .lsuhscsTheme .institution-search::before, .lsuhscsTheme .child-institution-collections::before {
   background: white;
   color: #474747; }
-.lsuhscTheme #page-title, .lsusTheme #page-title, .lsuhscsTheme #page-title, .websterTheme #page-title {
+.lsuhscTheme #page-title, .lsusTheme #page-title, .lsuhscsTheme #page-title {
   color: #474747; }
-.lsuhscTheme .institution-about, .lsusTheme .institution-about, .lsuhscsTheme .institution-about, .websterTheme .institution-about {
+.lsuhscTheme .institution-about, .lsusTheme .institution-about, .lsuhscsTheme .institution-about {
   border-left: 1px solid rgba(0, 0, 0, 0.2); }
-.lsuhscTheme form#islandora-collection-search-form, .lsusTheme form#islandora-collection-search-form, .lsuhscsTheme form#islandora-collection-search-form, .websterTheme form#islandora-collection-search-form {
+.lsuhscTheme form#islandora-collection-search-form, .lsusTheme form#islandora-collection-search-form, .lsuhscsTheme form#islandora-collection-search-form {
+  border: 2px solid #8c8c8c; }
+.lsuhscTheme .institution-search input[type="text"], .lsusTheme .institution-search input[type="text"], .lsuhscsTheme .institution-search input[type="text"] {
   border: 2px solid white; }
-.lsuhscTheme .institution-search input[type="text"], .lsusTheme .institution-search input[type="text"], .lsuhscsTheme .institution-search input[type="text"], .websterTheme .institution-search input[type="text"] {
-  border: 2px solid white; }
-.lsuhscTheme .institutionLabel::before, .lsusTheme .institutionLabel::before, .lsuhscsTheme .institutionLabel::before, .websterTheme .institutionLabel::before {
+.lsuhscTheme .institutionLabel::before, .lsusTheme .institutionLabel::before, .lsuhscsTheme .institutionLabel::before {
   background: white; }
 
-.websterTheme .collectionLogo {
-  background-image: url("../images/webster.png");
-  cursor: pointer; }
-.websterTheme .institutionLabel {
-  background-image: url("../images/webster.png"); }
+.websterTheme {
+  background: white;
+  color: #474747; }
+  .websterTheme #page-title {
+    color: #474747; }
+  .websterTheme .institution-about {
+    border-left: 1px solid rgba(0, 0, 0, 0.2); }
+  .websterTheme form#islandora-collection-search-form {
+    border: 2px solid white; }
+  .websterTheme .institution-search input[type="text"] {
+    border: 2px solid white; }
+  .websterTheme .institutionLabel::before {
+    background: white; }
+  .websterTheme .collectionSearch form#islandora-collection-search-form {
+    border: 2px solid #8c8c8c; }
+  .websterTheme .collectionLogo {
+    background-image: url("../images/webster.png");
+    cursor: pointer; }
+  .websterTheme .institutionLabel {
+    background-image: url("../images/webster.png"); }
 
 .lsusTheme .collectionLogo {
   background-image: url("../images/LSUS%20Logo%2011102015.png");
@@ -986,7 +1001,7 @@ li.child-institution-collection-list-item {
   #block-block-11 a.institutionLink.websterLink {
     background-color: #ffffff;
     background-image: url("../images/webster.png");
-    background-size: 120px auto; }
+    background-size: 140px auto; }
 
 .collectionPage .collectionLogo {
   width: 200px;
