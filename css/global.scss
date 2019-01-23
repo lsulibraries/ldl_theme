@@ -599,6 +599,14 @@ a.institution-about-edit {
   #page-title {
     color: #474747;
   }
+
+  .collection-description-text{
+    color: #434343;
+  }
+  .institution-header, .collectionHeader, .institution-search::before, .child-institution-collections::before {
+    background: $websterColor;
+  }
+
   .institution-about {
     border-left: 1px solid rgba(0, 0, 0, 0.20);
   }

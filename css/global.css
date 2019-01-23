@@ -313,6 +313,10 @@ a.institution-about-edit {
   color: #474747; }
   .websterTheme #page-title {
     color: #474747; }
+  .websterTheme .collection-description-text {
+    color: #434343; }
+  .websterTheme .institution-header, .websterTheme .collectionHeader, .websterTheme .institution-search::before, .websterTheme .child-institution-collections::before {
+    background: #ffffff; }
   .websterTheme .institution-about {
     border-left: 1px solid rgba(0, 0, 0, 0.2); }
   .websterTheme form#islandora-collection-search-form {
