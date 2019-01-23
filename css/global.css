@@ -946,6 +946,25 @@ li.child-institution-collection-list-item {
     background-image: url("../images/wqpOeRQ.png");
     background-size: 120px auto; }
 
+html body.collectionPage .itemHover {
+  position: absolute;
+  bottom: -20px;
+  height: 20px;
+  width: 100%;
+  background: #1c1c1bd9;
+  color: white;
+  text-transform: uppercase;
+  font-size: 11px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-duration: 0.2s; }
+html body.collectionPage .islandora-basic-collection-object:hover .itemHover {
+  transform: translateY(-20px);
+  transition-duration: 0.2s; }
+html body.collectionPage .islandora-basic-collection-thumb {
+  border-radius: 0px 0px 10px 10px;
+  overflow: hidden; }
 html body.collectionPage .nano-pane {
   overflow: hidden; }
 html body.collectionPage .loadingMessage {

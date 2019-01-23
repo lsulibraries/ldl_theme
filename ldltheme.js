@@ -22,6 +22,7 @@
           $(".collectionPage #block-islandora-collection-search-islandora-collection-search").appendTo(".collectionSearch");
           $(".collectionSearch input.form-submit").val(' ');
           collectionHeader();
+          collectionHover();
           collectionSidebar();
           actionToggles();
           break;
@@ -342,13 +343,37 @@
             }
             else {
             var firstItem = $('.islandora-basic-collection-object1 > .list-item-container > .list-thumbnail > a > img').prop('src');
-            console.log(firstItem);
             $('#page').parallax({imageSrc: firstItem });                  
             }        
           }
           $('.islandora-basic-collection-item-count').appendTo('#block-islandora-collection-search-islandora-collection-search');
           $('h1#page-title').contents().appendTo('.collectionHeader #page-title');
-          $('.depth-2 a').clone().appendTo('.headerBreadcrumb');
+          $('.depth-2 a').clone().appendTo('.headerBreadcrumb');          
+      }
+
+      function collectionHover(){
+
+        $(".islandora-basic-collection-object").each(function() {
+          var itemDate =  $(this).find('.islandora-basic-object-date_created .metadataValue').html();
+          console.log(itemDate);
+          $('<div class="itemHover"><div class="typeHover"/></div>').appendTo(this);
+          var itemType;
+          switch (true) { //detect page type or content type
+
+            case ($(this).hasClass('islandora:sp_large_image_cmodel')):{
+                itemType = 'Image';
+                break;
+            }
+
+          }
+          $(this).find('.typeHover').html(itemType);
+
+          // $(this).find('.dateHover').html(itemDate);
+          // if ($(this).find('.dateHover').is(':empty')){
+          //     $(this).find('.dateHover').html('Unknown Date');
+          // }
+
+        })
       }
 
       function collectionSidebar(){
