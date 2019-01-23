@@ -567,12 +567,35 @@ a.institution-about-edit {
   }
 }
 
-.lsuhscTheme, .lsusTheme, .lsuhscsTheme, .websterTheme {
+
+
+.lsuhscTheme, .lsusTheme, .lsuhscsTheme{
   .institution-header, .collectionHeader, .institution-search::before, .child-institution-collections::before {
 
     background: white;
     color: #474747;
   }
+  #page-title {
+    color: #474747;
+  }
+  .institution-about {
+    border-left: 1px solid rgba(0, 0, 0, 0.20);
+  }
+  form#islandora-collection-search-form {
+    border: 2px solid #8c8c8c;
+  }
+  .institution-search input[type="text"] {
+    border: 2px solid white;
+  }
+  .institutionLabel::before{
+    background: white;
+  }
+}
+
+
+.websterTheme {
+  background: white;
+  color: #474747;  
   #page-title {
     color: #474747;
   }
@@ -588,9 +611,9 @@ a.institution-about-edit {
   .institutionLabel::before{
     background: white;
   }
-}
-
-.websterTheme {
+  .collectionSearch form#islandora-collection-search-form {
+    border: 2px solid #8c8c8c;
+  }
   .collectionLogo {
     background-image: url($websterLogo);
     cursor: pointer;
