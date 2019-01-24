@@ -960,6 +960,8 @@ html body.collectionPage .itemHover {
   align-items: center;
   transition-duration: 0.2s;
   padding: 20px 10px; }
+  html body.collectionPage .itemHover .typeHover .svg-inline--fa {
+    margin-right: 3px; }
 html body.collectionPage .islandora-basic-collection-object:hover .itemHover {
   transform: translateY(-40px);
   transition-duration: 0.2s; }

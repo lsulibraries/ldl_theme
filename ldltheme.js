@@ -361,7 +361,7 @@
           var itemType;
           switch (true) { //detect page type or content type
             case ($(this).hasClass('islandora:sp_large_image_cmodel')):{
-                itemType = 'Image';
+                itemType = '<i class="fa fa-image"></i> Image';
                 break;
             }
           }
@@ -855,7 +855,7 @@
           function(){$('.image_header').css({"padding-bottom": "inherit"});}
         );
         if ($('body').hasClass('collectionPage')){
-          $(infoToggle).click();
+          //$(infoToggle).click();
           $('.islandora-view-list, .islandora-view-grid').not('.active').addClass('listGrid userSelect');
           $('.listGrid').contents().wrapAll('<div class="textSelect"/>');
           $('.listGrid').insertAfter('.infoToggle');
@@ -1105,9 +1105,9 @@
       }
 
 
-  if ($("body").attr('class').indexOf('regenerate') > -1) {
-    $("body").addClass('regeneratePage');
-  }
+      if ($("body").attr('class').indexOf('regenerate') > -1) {
+        $("body").addClass('regeneratePage');
+      }
 
       $('#secondary-display-profiles').insertAfter('.islandora-solr-facet-wrapper:last');
       $('<div class="downloadSearch">Download Results as CSV</div>').appendTo('#secondary-display-profiles a');

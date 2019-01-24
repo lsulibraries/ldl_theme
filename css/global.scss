@@ -1506,6 +1506,10 @@ html body.collectionPage {
     align-items: center;
     transition-duration: 0.2s;
     padding: 20px 10px;
+
+    .typeHover .svg-inline--fa {
+        margin-right: 3px;
+    }    
 }
 
 .islandora-basic-collection-object:hover{
