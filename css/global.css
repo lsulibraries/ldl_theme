@@ -148,47 +148,6 @@ span.bold {
   padding: 12px; }
 
 /*Institutional Page*/
-.institution-collection-description {
-  height: 420px;
-  display: flex;
-  padding-left: 50px;
-  padding-right: 50px;
-  justify-content: flex-start;
-  align-items: flex-start;
-  align-self: baseline;
-  font-size: 14px;
-  overflow: hidden;
-  flex-direction: column;
-  -moz-transition-duration: 1s;
-  -o-transition-duration: 1s;
-  -webkit-transition-duration: 1s;
-  transition-duration: 1s;
-  transition-delay: 0s;
-  width: 100%;
-  color: rgba(255, 255, 255, 0.66);
-  margin-top: 60px;
-  position: relative;
-  word-break: break-word; }
-
-.institution-collection-description::after {
-  display: block;
-  position: absolute;
-  background-image: linear-gradient(to bottom, transparent 0%, #1a1a1a 90%);
-  height: 110px;
-  width: 100%;
-  content: '';
-  bottom: 60px; }
-
-.title-description {
-  font-weight: 900;
-  width: 100%;
-  margin-bottom: 11px;
-  font-size: 17px;
-  color: white; }
-
-.institution-collection-list-header {
-  display: none; }
-
 a.institution-about-edit {
   position: absolute;
   top: 20px;
@@ -199,35 +158,7 @@ a.institution-about-edit {
   text-transform: uppercase;
   font-size: 11px; }
 
-.institution-header {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative; }
-
-.institution-logo {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 25%;
-  padding: 0px 80px;
-  box-sizing: border-box; }
-
-.institution-header, .collectionHeader {
-  color: rgba(255, 255, 255, 0.74); }
-
-#page-title {
-  color: white; }
-
-.dccTheme .institution-header, .dccTheme .collectionHeader, .dccTheme .institution-search::before, .dccTheme .child-institution-collections::before {
+.dccTheme .collectionHeader, .dccTheme .institution-search::before, .dccTheme .child-institution-collections::before {
   background: #083a07; }
 .dccTheme .collectionLogo {
   background-image: url("../images/delgado-logo-white.png");
@@ -239,7 +170,7 @@ a.institution-about-edit {
 .dccTheme .institutionLabel {
   background-image: url("../images/logo-white.png"); }
 
-.lascTheme .institution-header, .lascTheme .collectionHeader, .lascTheme .institution-search::before, .lascTheme .child-institution-collections::before {
+.lascTheme .collectionHeader, .lascTheme .institution-search::before, .lascTheme .child-institution-collections::before {
   background: #16325a; }
 .lascTheme .collectionLogo {
   background-image: url("../images/lasc.jpg");
@@ -251,7 +182,7 @@ a.institution-about-edit {
 .lascTheme .institutionLabel {
   background-image: url("../images/lasc.jpg"); }
 
-.lsmTheme .institution-header, .lsmTheme .collectionHeader, .lsmTheme .institution-search::before, .lsmTheme .child-institution-collections::before {
+.lsmTheme .collectionHeader, .lsmTheme .institution-search::before, .lsmTheme .child-institution-collections::before {
   background: #5d0e8b; }
 .lsmTheme .collectionLogo {
   background-image: url("../images/uimSOt2.png");
@@ -263,7 +194,7 @@ a.institution-about-edit {
 .lsmTheme .institutionLabel {
   background-image: url("../images/uimSOt2.png"); }
 
-.ebrplTheme .institution-header, .ebrplTheme .collectionHeader, .ebrplTheme .institution-search::before, .ebrplTheme .child-institution-collections::before {
+.ebrplTheme .collectionHeader, .ebrplTheme .institution-search::before, .ebrplTheme .child-institution-collections::before {
   background: #181B42; }
 .ebrplTheme .collectionLogo {
   background-image: url("../images/verticalebrpl.jpg");
@@ -275,7 +206,7 @@ a.institution-about-edit {
 .ebrplTheme .institutionLabel {
   background-image: url("../images/verticalebrpl.jpg"); }
 
-.lsuTheme .institution-header, .lsuTheme .collectionHeader, .lsuTheme .institution-search::before, .lsuTheme .child-institution-collections::before {
+.lsuTheme .collectionHeader, .lsuTheme .institution-search::before, .lsuTheme .child-institution-collections::before {
   background: #3C1053; }
 .lsuTheme .collectionLogo {
   background-image: url("../images/LSU_Gold_CMYK.png");
@@ -287,7 +218,7 @@ a.institution-about-edit {
 .lsuTheme .institutionLabel {
   background-image: url("../images/LSU_Gold_CMYK.png"); }
 
-.lsuhscTheme .institution-header, .lsuhscTheme .collectionHeader, .lsuhscTheme .institution-search::before, .lsuhscTheme .child-institution-collections::before, .lsusTheme .institution-header, .lsusTheme .collectionHeader, .lsusTheme .institution-search::before, .lsusTheme .child-institution-collections::before, .lsuhscsTheme .institution-header, .lsuhscsTheme .collectionHeader, .lsuhscsTheme .institution-search::before, .lsuhscsTheme .child-institution-collections::before {
+.lsuhscTheme .collectionHeader, .lsuhscTheme .institution-search::before, .lsuhscTheme .child-institution-collections::before, .lsusTheme .collectionHeader, .lsusTheme .institution-search::before, .lsusTheme .child-institution-collections::before, .lsuhscsTheme .collectionHeader, .lsuhscsTheme .institution-search::before, .lsuhscsTheme .child-institution-collections::before {
   background: white;
   color: #474747; }
 .lsuhscTheme #page-title, .lsusTheme #page-title, .lsuhscsTheme #page-title {
@@ -319,7 +250,7 @@ a.institution-about-edit {
 .lsuhscTheme .institutionLabel {
   background-image: url("../images/FQdHpzz.png"); }
 
-.latechTheme .institution-header, .latechTheme .collectionHeader, .latechTheme .institution-search::before, .latechTheme .child-institution-collections::before {
+.latechTheme .collectionHeader, .latechTheme .institution-search::before, .latechTheme .child-institution-collections::before {
   background: #003087; }
 .latechTheme #page-title {
   color: white; }
@@ -333,9 +264,9 @@ a.institution-about-edit {
 .latechTheme .institutionLabel {
   background-image: url("../images/latc-state-t.gif"); }
 
-.loynoTheme .institution-header, .loynoTheme .collectionHeader, .loynoTheme .institution-search::before, .loynoTheme .child-institution-collections::before {
+.loynoTheme .collectionHeader, .loynoTheme .institution-search::before, .loynoTheme .child-institution-collections::before {
   background: #660000; }
-  .loynoTheme .institution-header a:link, .loynoTheme .institution-header a:visited, .loynoTheme .collectionHeader a:link, .loynoTheme .collectionHeader a:visited, .loynoTheme .institution-search::before a:link, .loynoTheme .institution-search::before a:visited, .loynoTheme .child-institution-collections::before a:link, .loynoTheme .child-institution-collections::before a:visited {
+  .loynoTheme .collectionHeader a:link, .loynoTheme .collectionHeader a:visited, .loynoTheme .institution-search::before a:link, .loynoTheme .institution-search::before a:visited, .loynoTheme .child-institution-collections::before a:link, .loynoTheme .child-institution-collections::before a:visited {
     color: white;
     text-decoration: underline; }
 .loynoTheme #page-title {
@@ -350,7 +281,7 @@ a.institution-about-edit {
 .loynoTheme .institutionLabel {
   background-image: url("../images/wsbykd6.png"); }
 
-.mcneeseTheme .institution-header, .mcneeseTheme .collectionHeader, .mcneeseTheme .institution-search::before, .mcneeseTheme .child-institution-collections::before {
+.mcneeseTheme .collectionHeader, .mcneeseTheme .institution-search::before, .mcneeseTheme .child-institution-collections::before {
   background: #00529b; }
 .mcneeseTheme .collectionLogo {
   background-image: url("../images/logo.png");
@@ -362,7 +293,7 @@ a.institution-about-edit {
 .mcneeseTheme .institutionLabel {
   background-image: url("../images/header_logo.png"); }
 
-.nichollsTheme .institution-header, .nichollsTheme .collectionHeader, .nichollsTheme .institution-search::before, .nichollsTheme .child-institution-collections::before {
+.nichollsTheme .collectionHeader, .nichollsTheme .institution-search::before, .nichollsTheme .child-institution-collections::before {
   background: #ae132a; }
 .nichollsTheme .collectionLogo {
   background-image: url("../images/Nicholls-N-Sword-w-text.png");
@@ -374,7 +305,7 @@ a.institution-about-edit {
 .nichollsTheme .institutionLabel {
   background-image: url("../images/rGvlEDN.png"); }
 
-.nsuTheme .institution-header, .nsuTheme .collectionHeader, .nsuTheme .institution-search::before, .nsuTheme .child-institution-collections::before {
+.nsuTheme .collectionHeader, .nsuTheme .institution-search::before, .nsuTheme .child-institution-collections::before {
   background: #663399; }
 .nsuTheme .collectionLogo {
   background-image: url("../images/wordmarksmall2.png");
@@ -386,7 +317,7 @@ a.institution-about-edit {
 .nsuTheme .institutionLabel {
   background-image: url("../images/Seal.png"); }
 
-.subrTheme .institution-header, .subrTheme .collectionHeader, .subrTheme .institution-search::before, .subrTheme .child-institution-collections::before {
+.subrTheme .collectionHeader, .subrTheme .institution-search::before, .subrTheme .child-institution-collections::before {
   background: #75B2DD;
   color: #474747; }
 .subrTheme #page-title {
@@ -403,7 +334,7 @@ a.institution-about-edit {
 .subrTheme .institutionLabel {
   background-image: url("../images/pNgJAG2.png"); }
 
-.stateTheme .institution-header, .stateTheme .collectionHeader, .stateTheme .institution-search::before, .stateTheme .child-institution-collections::before {
+.stateTheme .collectionHeader, .stateTheme .institution-search::before, .stateTheme .child-institution-collections::before {
   background: #304da0; }
 .stateTheme .collectionLogo {
   background-image: url("../images/y1H8EGr.png");
@@ -415,7 +346,7 @@ a.institution-about-edit {
 .stateTheme .institutionLabel {
   background-image: url("../images/y1H8EGr.png"); }
 
-.hnocTheme .institution-header, .hnocTheme .collectionHeader, .hnocTheme .institution-search::before, .hnocTheme .child-institution-collections::before {
+.hnocTheme .collectionHeader, .hnocTheme .institution-search::before, .hnocTheme .child-institution-collections::before {
   background: #254550; }
 .hnocTheme .collectionLogo {
   background-image: url("../images/lRaktDw.png");
@@ -427,7 +358,7 @@ a.institution-about-edit {
 .hnocTheme .institutionLabel {
   background-image: url("../images/lRaktDw.png"); }
 
-.tulaneTheme .institution-header, .tulaneTheme .collectionHeader, .tulaneTheme .institution-search::before, .tulaneTheme .child-institution-collections::before {
+.tulaneTheme .collectionHeader, .tulaneTheme .institution-search::before, .tulaneTheme .child-institution-collections::before {
   background: #032a17; }
 .tulaneTheme .collectionLogo {
   background-image: url("../images/geTKaHp.png");
@@ -441,7 +372,7 @@ a.institution-about-edit {
 .tulaneTheme .institutionLabel {
   background-image: url("../images/geTKaHp.png"); }
 
-.ullTheme .institution-header, .ullTheme .collectionHeader, .ullTheme .institution-search::before, .ullTheme .child-institution-collections::before {
+.ullTheme .collectionHeader, .ullTheme .institution-search::before, .ullTheme .child-institution-collections::before {
   background: #a00b0b; }
 .ullTheme .institution-about {
   border-left: 1px solid rgba(0, 0, 0, 0.2); }
@@ -455,7 +386,7 @@ a.institution-about-edit {
 .ullTheme .institutionLabel {
   background-image: url("../images/ull-logo_0.png"); }
 
-.ulmTheme .institution-header, .ulmTheme .collectionHeader, .ulmTheme .institution-search::before, .ulmTheme .child-institution-collections::before {
+.ulmTheme .collectionHeader, .ulmTheme .institution-search::before, .ulmTheme .child-institution-collections::before {
   background: #800029; }
 .ulmTheme .collectionLogo {
   background-image: url("../images/ulm-academic-logo-circle.png");
@@ -467,7 +398,7 @@ a.institution-about-edit {
 .ulmTheme .institutionLabel {
   background-image: url("../images/ulm-academic-logo-circle.png"); }
 
-.unoTheme .institution-header, .unoTheme .collectionHeader, .unoTheme .institution-search::before, .unoTheme .child-institution-collections::before {
+.unoTheme .collectionHeader, .unoTheme .institution-search::before, .unoTheme .child-institution-collections::before {
   background: #003056; }
 .unoTheme .collectionLogo {
   background-image: url("../images/RBtG5qz.png");
@@ -479,7 +410,7 @@ a.institution-about-edit {
 .unoTheme .institutionLabel {
   background-image: url("../images/RWmzrPG.png"); }
 
-.vvilleTheme .institution-header, .vvilleTheme .collectionHeader, .vvilleTheme .institution-search::before, .vvilleTheme .child-institution-collections::before {
+.vvilleTheme .collectionHeader, .vvilleTheme .institution-search::before, .vvilleTheme .child-institution-collections::before {
   background: #ede7c0;
   color: #474747; }
 .vvilleTheme #page-title {
@@ -494,7 +425,7 @@ a.institution-about-edit {
 .vvilleTheme .institutionLabel {
   background-image: url("../images/wqpOeRQ.png"); }
 
-.tahillTheme .institution-header, .tahillTheme .collectionHeader, .tahillTheme .institution-search::before, .tahillTheme .child-institution-collections::before, .fpocTheme .institution-header, .fpocTheme .collectionHeader, .fpocTheme .institution-search::before, .fpocTheme .child-institution-collections::before, .page-islandora-object-islandoraroot .institution-header, .page-islandora-object-islandoraroot .collectionHeader, .page-islandora-object-islandoraroot .institution-search::before, .page-islandora-object-islandoraroot .child-institution-collections::before {
+.tahillTheme .collectionHeader, .tahillTheme .institution-search::before, .tahillTheme .child-institution-collections::before, .fpocTheme .collectionHeader, .fpocTheme .institution-search::before, .fpocTheme .child-institution-collections::before, .page-islandora-object-islandoraroot .collectionHeader, .page-islandora-object-islandoraroot .institution-search::before, .page-islandora-object-islandoraroot .child-institution-collections::before {
   background: #272727; }
 .tahillTheme form#islandora-collection-search-form, .fpocTheme form#islandora-collection-search-form, .page-islandora-object-islandoraroot form#islandora-collection-search-form {
   border: 2px solid #272727; }
@@ -510,298 +441,102 @@ a.institution-about-edit {
   height: auto;
   width: 100%; }
 
-.institution-collection-list-item-count {
-  border: 1px solid #2f2f2f;
-  padding: 5px 10px;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  border-top: 0px;
-  border-left: 0px; }
-
-ul.institution-collection-list {
-  list-style: none;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  background: #1a1a1a;
-  margin-bottom: 0px; }
-
-.institution-collection-list-li {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center; }
-
-.institution-collection-list-a {
-  width: 25%;
-  background: #1a1a1a;
-  border-right: 1px solid #2f2f2f;
-  box-sizing: border-box;
-  border-bottom: 1px solid #2F2F31;
-  color: white !important;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: column;
-  position: relative;
-  overflow: hidden;
-  height: 420px;
-  cursor: pointer;
-  -moz-transition-duration: 0.2s;
-  -o-transition-duration: 0.2s;
-  -webkit-transition-duration: 0.2s;
-  transition-duration: 0.2s; }
-  .institution-collection-list-a a {
-    -moz-transition-duration: 0.2s;
-    -o-transition-duration: 0.2s;
-    -webkit-transition-duration: 0.2s;
-    transition-duration: 0.2s; }
-
-.institution-collection-list-a:hover .institution-collection-list-item-label {
-  -moz-transition-duration: 1.5s;
-  -o-transition-duration: 1.5s;
-  -webkit-transition-duration: 1.5s;
-  transition-duration: 1.5s;
-  transform: translateY(-100%);
-  transition-delay: 1s; }
-.institution-collection-list-a:hover .institution-collection-description {
-  -moz-transition-duration: 1.5s;
-  -o-transition-duration: 1.5s;
-  -webkit-transition-duration: 1.5s;
-  transition-duration: 1.5s;
-  transform: translateY(-100%);
-  transition-delay: 1s; }
-
-.institution-collection-list-item-manage-proxy {
-  text-align: center;
-  padding: 5px;
-  position: absolute;
-  top: 29px;
-  background: #1a1a1a;
-  width: 100px;
-  border: 1px solid #2f2f2f;
-  left: 0px; }
-
-li.institution-collection-list-item a.institution-collection-list-item-manage-proxy-link {
-  padding: 0px;
-  font-size: 10px !important;
-  border: 1px solid rgba(128, 128, 128, 0.49);
-  border-radius: 20px;
-  text-align: center;
-  width: 80px;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  bottom: 5px; }
-
-.institution-collection-list-header {
-  position: absolute; }
-
-.institution-collection-list-item-label {
-  height: 420px;
-  justify-content: center;
-  width: 200px;
-  display: flex;
-  align-items: center;
-  font-size: 28px;
-  line-height: 1;
-  position: relative;
-  font-weight: 900;
-  -moz-transition-duration: 1.5s;
-  -o-transition-duration: 1.5s;
-  -webkit-transition-duration: 1.5s;
-  transition-duration: 1.5s;
-  transition-delay: 0s; }
-
-.institution-about {
-  font-size: 14px;
-  box-sizing: border-box;
-  width: 75%;
-  background: white;
-  color: #676767;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 8vw 100px;
-  line-height: 30px; }
-  .institution-about h2 {
-    font-size: 18px;
-    margin: 0px; }
-  .institution-about p {
-    max-width: 1000px; }
-
-.institution-search {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  justify-content: flex-start;
-  position: relative;
-  background: #ffffff; }
-  .institution-search form#myform {
-    padding: 30px 0px;
-    width: 75%;
-    display: flex;
-    border-top: 1px solid #dedede;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 1px solid #dedede; }
-  .institution-search label {
+.institutionPage .institution-search {
+  width: 100%;
+  position: relative; }
+  .institutionPage .institution-search .form-item > label {
     display: none; }
-  .institution-search input[type="text"] {
-    -webkit-appearance: none;
-    -moz-border-radius: 0;
-    -webkit-border-radius: 0;
-    border-radius: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    -moz-background-clip: padding;
-    -webkit-background-clip: padding;
-    background-clip: padding-box;
-    background-color: #f3f3f3;
-    border: 1px solid #dedede !important;
-    outline: 0;
-    border-radius: 70px;
-    padding: 2px 3px;
-    font-size: 18px;
-    font-family: Arial, sans-serif;
-    height: 40px;
-    width: 50vw;
-    padding-left: 10px;
-    margin-left: 55px; }
-  .institution-search .latechTheme input[type="text"] {
-    border: 2px solid #003087;
-    color: #003087; }
-  .institution-search .institution-search input[type="text"]::placeholder {
-    font-style: italic;
-    font-family: Roboto;
-    color: #474747; }
-  .institution-search input[type="submit"] {
-    position: relative;
-    left: -61px;
+  .institutionPage .institution-search form#myform > div {
+    position: relative; }
+  .institutionPage .institution-search form#myform {
+    border-radius: 5px 0px 0px 5px;
+    overflow: hidden;
+    margin-top: 20px;
+    width: 100%; }
+  .institutionPage .institution-search input[type="submit"] {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    height: 32px;
+    border-radius: 0px 3px 3px 0px;
     width: 55px;
-    height: 34px;
     background: none;
     border: none;
-    border-radius: 0px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 25px 25px;
-    background-image: url(../images/zBCP7zk.png); }
-  .institution-search .form-item, .institution-search .form-actions {
-    display: inline-block;
-    margin: 0px; }
-  .institution-search .institution-about {
-    border-left: 1px solid rgba(255, 255, 255, 0.27);
-    padding-left: 20px;
-    padding-right: 20px; }
-
-.institution-search::before {
-  content: 'Institution Search';
-  width: 25%;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
-  border-right: 1px solid #2f2f2f;
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 6px;
-  border-top: 1px solid rgba(255, 255, 255, 0.21); }
-
-.childCollections {
-  display: flex;
-  flex-wrap: wrap;
-  width: 75%; }
-
-.child-institution-description {
-  display: none; }
-
-.child-institution-collections a {
-  width: 25%; }
-
-.child-institution-collections::before {
-  width: 25%;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 6px;
-  content: 'Affiliated with';
-  border-top: 1px solid rgba(255, 255, 255, 0.21); }
-
-.childCounts {
-  margin-top: 10px; }
-
-.child-institution-container {
-  position: relative;
-  width: 400px; }
-
-.child-institution-count-collections, .child-institution-count-items {
-  color: #676767;
-  border: 1px solid #dedede;
-  padding: 2px 10px;
-  display: inline-block;
-  font-size: 12px;
-  margin-right: 5px;
-  margin-bottom: 5px; }
-
-.child-institution-count-items {
-  margin-right: 0px;
-  margin-bottom: 0px; }
-
-.child-institution-collections {
+    background-color: white;
+    background-image: url(../images/NpfYQT0.png); }
+  .institutionPage .institution-search input#edit-term {
+    font-size: 15px;
+    border: 0px;
+    width: calc(100% - 50px);
+    padding: 0px;
+    padding-right: 0px;
+    padding-left: 10px;
+    height: 32px;
+    border-radius: 5px 0px 0px 0px; }
+.institutionPage .institution-content {
+  margin: 0px auto;
+  max-width: 1200px;
+  padding-bottom: 200px; }
+.institutionPage .institution-header {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  flex-direction: row;
-  width: auto;
-  overflow: hidden;
-  background: white;
-  border-bottom: 1px solid #2f2f2f;
-  min-height: 100px; }
-  .child-institution-collections ul.child-institution-collection-list {
-    list-style: none;
-    display: none; }
-  .child-institution-collections .institution-collection-description {
-    display: none; }
-
-.child-institution-title {
-  margin: 30px 50px;
-  display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: flex-start;
-  box-sizing: border-box;
-  font-size: 18px;
-  line-height: 18px;
-  color: #676767;
-  position: relative;
-  font-weight: 900;
-  border-left: 5px solid #e6e6e6;
-  padding-left: 6px; }
-
-ul.child-institution-collection-list {
-  list-style: none;
-  margin-bottom: 0px; }
-
-li.child-institution-collection-list-item {
-  padding: 10px; }
+  margin: 10px;
+  justify-content: flex-end;
+  background: transparent !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.48);
+  padding-bottom: 20px;
+  margin-bottom: 10px;
+  width: calc(100% - 20px) !important;
+  height: 200px !important; }
+.institutionPage .collection {
+  background: #232323; }
+  .institutionPage .collection .category {
+    background: #1c1c1c; }
+.institutionPage .sub-group {
+  background: #353535; }
+  .institutionPage .sub-group .category {
+    background: #2d2d2d; }
+.institutionPage .institution-tile {
+  width: 220px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 10px; }
+  .institutionPage .institution-tile .category {
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #BABABA;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 50px;
+    padding-left: 20px; }
+    .institutionPage .institution-tile .category .fa-th, .institutionPage .institution-tile .category .fa-folder-open {
+      margin-right: 8px;
+      font-size: 16px; }
+  .institutionPage .institution-tile .label {
+    padding: 40px 20px; }
+    .institutionPage .institution-tile .label .title {
+      color: white;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 20px; }
+    .institutionPage .institution-tile .label .items {
+      padding-top: 5px;
+      color: #ccc;
+      width: fit-content;
+      text-transform: uppercase;
+      font-size: 11px; }
+  .institutionPage .institution-tile .description, .institutionPage .institution-tile .institution-count-collections {
+    display: none; }
 
 /*institution list*/
 #block-block-11 {
@@ -6520,10 +6255,7 @@ body.multipleDaily .issueLevel .issue-container {
     padding-top: 50px;
     margin: 20px; }
 
-  .institution-about, .institution-search form#myform {
-    width: 66.67%; }
-
-  .institution-collection-list-a, .institution-logo, .institution-search::before, .child-institution-collections::before, .child-institution-collections a, .childCollections::before {
+  .institution-collection-list-a, .institution-logo, .child-institution-collections::before, .child-institution-collections a, .childCollections::before {
     width: 33.33%; }
 
   .childCollections {
@@ -6989,10 +6721,7 @@ body.multipleDaily .issueLevel .issue-container {
   .institution-collection-list-item-count {
     font-size: 10px; }
 
-  .institution-search form#myform {
-    width: 100%; }
-
-  .institution #breadcrumb, .institution-search::before, .child-institution-collections::before {
+  .institution #breadcrumb, .child-institution-collections::before {
     display: none; }
 
   iframe.pdf {
@@ -7113,27 +6842,12 @@ body.multipleDaily .issueLevel .issue-container {
       ul.institution-collection-list li.institution-collection-list-item a::before {
         display: none; }
 
-  .institution-header {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    align-items: center;
-    padding: 0px;
-    flex-direction: column;
-    justify-content: center; }
-
   .institution-about {
     border-left: 0px;
     width: 100%;
     padding: 30px; }
     .institution-about p {
       margin-bottom: 40px; }
-
-  .institution-search input[type="text"] {
-    width: 75vw;
-    font-size: 12px; }
 
   .institution-logo {
     height: 50px;
@@ -7237,8 +6951,7 @@ body.multipleDaily .issueLevel .issue-container {
     padding: 0px;
     flex-direction: column;
     justify-content: center; }
-    .collectionPage .collectionHeader width
-    .collection-description-text {
+    .collectionPage .collectionHeader .collection-description-text {
       padding-bottom: 30px;
       border: 0px; }
   .collectionPage .collectionSearch input#edit-islandora-simple-search-query {
