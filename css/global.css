@@ -436,16 +436,64 @@ a.institution-about-edit {
   cursor: pointer; }
 
 .institution-logo img {
-  max-width: 200px !important;
+  max-width: 150px !important;
   box-sizing: border-box;
   height: auto;
-  width: 100%; }
+  width: 100%;
+  margin-top: 30px; }
 
+html body.institutionPage #region-sidebar-first {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.67);
+  width: 480px; }
+
+.institutionPage.metaOpened div#zone-header {
+  margin-left: 480px !important;
+  width: calc(100vw - 500px) !important;
+  transition-duration: 1s !important;
+  transition-delay: 0s !important; }
+.institutionPage.metaOpened #region-content {
+  margin-left: 480px; }
+.institutionPage .region-sidebar-first-inner .block-inner {
+  background-color: transparent;
+  padding: 0px;
+  box-sizing: border-box; }
+.institutionPage .institution-about {
+  margin-top: 30px; }
+.institutionPage .institutionSidebar {
+  padding-top: 20px; }
+  .institutionPage .institutionSidebar .institutionTitle {
+    font-size: 30px;
+    line-height: 30px;
+    padding-top: 40px; }
+  .institutionPage .institutionSidebar .institutionTotal {
+    display: flex;
+    border: 1px solid grey;
+    width: fit-content;
+    width: -moz-fit-content;
+    padding: 5px 8px;
+    margin-top: 10px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    margin-bottom: 40px; }
+  .institutionPage .institutionSidebar .institutionSidebarDesc {
+    position: relative;
+    border-top: 1px solid rgba(255, 255, 255, 0.16);
+    padding-top: 10px; }
+.institutionPage h1#institution-title {
+  width: 100%;
+  display: block !important;
+  max-width: 1200px;
+  margin: 0 auto; }
+.institutionPage .institution-grid {
+  margin: 0 auto; }
 .institutionPage .parallax-mirror {
   filter: brightness(0.35); }
 .institutionPage .institution-search {
   width: 100%;
   position: relative; }
+  .institutionPage .institution-search .form-item {
+    margin-top: 0px; }
   .institutionPage .institution-search .form-item > label {
     display: none; }
   .institutionPage .institution-search form#myform > div {
@@ -525,7 +573,7 @@ a.institution-about-edit {
       margin-right: 8px;
       font-size: 16px; }
   .institutionPage .institution-tile .label {
-    padding: 40px 20px; }
+    padding: 40px 20px 50px 20px; }
     .institutionPage .institution-tile .label .title {
       color: white;
       font-weight: 700;
@@ -794,7 +842,7 @@ html body.collectionPage .collectionLogo {
   display: none !important; }
 html body.collectionPage #page-title {
   width: 100%;
-  display: block;
+  display: block !important;
   max-width: 1200px;
   margin: 0 auto; }
 html body.collectionPage span.islandora-basic-collection-item-count {
@@ -4236,7 +4284,7 @@ body.bookViewer .bookMetaContainer > .metadataContainer {
   margin: 40px;
   padding: 20px 0px 0px 0px !important;
   margin-top: 60px; }
-body.bookViewer .parentMetadata::before, body.bookViewer .metadataContainer:not(.parentMetadata)::before, body.bookViewer .collectionPage .collectionSidebarDesc::before, .collectionPage body.bookViewer .collectionSidebarDesc::before {
+body.bookViewer .parentMetadata::before, body.bookViewer .metadataContainer:not(.parentMetadata)::before, body.bookViewer .institutionPage .institutionSidebarDesc::before, .institutionPage body.bookViewer .institutionSidebarDesc::before, body.bookViewer .collectionPage .collectionSidebarDesc::before, .collectionPage body.bookViewer .collectionSidebarDesc::before {
   position: absolute;
   left: 0px;
   top: -20px;
@@ -5523,7 +5571,7 @@ body.pdf #window-title {
   padding-bottom: 80px;
   color: white; }
 
-.parentMetadata::before, body.bookViewer .metadataContainer:not(.parentMetadata)::before, .metadataContainer:not(.parentMetadata)::before, .collectionPage .collectionSidebarDesc::before {
+.parentMetadata::before, body.bookViewer .metadataContainer:not(.parentMetadata)::before, .metadataContainer:not(.parentMetadata)::before, .institutionPage .institutionSidebarDesc::before, .collectionPage .collectionSidebarDesc::before {
   position: absolute;
   left: 0px;
   top: -20px;
@@ -5539,6 +5587,9 @@ body.pdf #window-title {
 
 .metadataContainer:not(.parentMetadata)::before {
   content: 'item information'; }
+
+.institutionPage .institutionSidebarDesc::before {
+  content: 'institution information'; }
 
 .collectionPage .collectionSidebarDesc::before {
   content: 'collection information'; }

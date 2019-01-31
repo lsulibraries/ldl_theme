@@ -851,101 +851,85 @@ a.institution-about-edit {
 }
 
 .institution-logo img {
-  max-width: 200px !important;
+    max-width: 150px !important;
     box-sizing: border-box;
     height: auto;
     width: 100%;
+    margin-top: 30px;
 }
 
 
-
-// .institution-search {
-//   @include flexbox;
-//     justify-content: flex-start;
-//     position: relative;
-//     background: #ffffff;
-
-// form#myform {
-//     padding: 30px 0px;
-//     width: 75%;
-//     display: flex;
-//     border-top: 1px solid #dedede;
-//     justify-content: center;
-//     align-items: center;
-//     border-bottom: 1px solid #dedede;
-// }
-
-
-//   label {
-//     display: none;
-//   }
-
-//   input[type="text"] {
-//     -webkit-appearance: none;
-//     -moz-border-radius: 0;
-//     -webkit-border-radius: 0;
-//     border-radius: 0;
-//     -webkit-box-sizing: border-box;
-//     -moz-box-sizing: border-box;
-//     box-sizing: border-box;
-//     -moz-background-clip: padding;
-//     -webkit-background-clip: padding;
-//     background-clip: padding-box;
-//     background-color: #f3f3f3;
-//     border: 1px solid #dedede !important;
-//     outline: 0;
-//     border-radius: 70px;
-//     padding: 2px 3px;
-//     font-size: 18px;
-//     font-family: Arial, sans-serif;
-//     height: 40px;
-//     width: 50vw;
-//     padding-left: 10px;
-//     margin-left: 55px;
-//   }
-
-//   .latechTheme input[type="text"] {
-//     border: 2px solid #003087;
-//     color: #003087;
-//   }
-
-//   .institution-search input[type="text"]::placeholder {
-//     font-style: italic;
-//     font-family: Roboto;
-//     color: #474747;
-//   }
-
-//   input[type="submit"] {
-//     position: relative;
-//     left: -61px;
-//     width: 55px;
-//     height: 34px;
-//     background: none;
-//     border: none;
-//     border-radius: 0px;
-//     background-repeat: no-repeat;
-//     background-position: center;
-//     background-size: 25px 25px;
-//     background-image: url(../images/zBCP7zk.png);
-//   }
-
-//   .form-item, .form-actions {
-//     display: inline-block;
-//       margin: 0px;
-//   }
-
-//   .institution-about {
-//     border-left: 1px solid rgba(255, 255, 255, 0.27);
-//     padding-left: 20px;
-//     padding-right: 20px;
-//   }
-// }
-
-
 //Institution 
-
+html body.institutionPage #region-sidebar-first {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.67);
+    width: 480px;
+}
 
 .institutionPage{
+
+  &.metaOpened div#zone-header {
+      margin-left: 480px !important;
+      width: calc(100vw - 500px) !important;
+      transition-duration: 1s !important;
+      transition-delay: 0s !important;
+  }
+
+  &.metaOpened #region-content{
+    margin-left: 480px;
+  }
+
+  .region-sidebar-first-inner .block-inner {
+    background-color: transparent;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+
+  .institution-about {
+    margin-top: 30px;
+  }
+
+
+  .institutionSidebar{
+
+    .institution-about{
+
+    }
+    .institutionTitle {
+    font-size: 30px;
+    line-height: 30px;
+    padding-top: 40px;
+    }
+    .institutionTotal{
+    display: flex;
+    border: 1px solid grey;
+    width: fit-content;
+    width: -moz-fit-content;
+    padding: 5px 8px;
+    margin-top: 10px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    }
+    .institutionSidebarDesc {
+    position: relative;
+    border-top: 1px solid rgba(255, 255, 255, 0.16);
+    padding-top: 10px;    
+    }
+    padding-top: 20px;
+  }
+
+
+  h1#institution-title {
+    width: 100%;
+    display: block !important;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .institution-grid{
+    margin: 0 auto;
+  }
 
 
     .parallax-mirror {
@@ -956,6 +940,9 @@ a.institution-about-edit {
     .institution-search{
         width: 100%;      
         position: relative;
+        .form-item {
+          margin-top: 0px;
+        }        
         .form-item > label{
           display: none;
         }
@@ -1046,7 +1033,7 @@ a.institution-about-edit {
         }    
     }
     .label {
-        padding: 40px 20px;
+        padding: 40px 20px 50px 20px;
         .title {
           color: white;
           font-weight: 700;
@@ -1250,6 +1237,8 @@ opacity: 1;
 
 html body.collectionPage {
 
+
+
   .itemHover {
     position: absolute;
     bottom: -40px;
@@ -1412,7 +1401,7 @@ html body.collectionPage {
 
   #page-title {
     width: 100%;
-    display: block;
+    display: block !important;
     max-width: 1200px;
     margin: 0 auto;
   }
@@ -7829,6 +7818,12 @@ body.pdf{
 .metadataContainer:not(.parentMetadata)::before{
 @extend .parentMetadata::before;
 content:'item information';
+}
+
+
+.institutionPage .institutionSidebarDesc::before{
+@extend .parentMetadata::before;
+content:'institution information';
 }
 
 

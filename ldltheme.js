@@ -23,7 +23,7 @@
           // $(this).children('.institution-collection-list-item-label').clone().prop({class: "title-description"}).prependTo($(this).children('.institution-collection-description'));
           // }); //end colleciton page numbers and description
            $('#page').parallax({imageSrc: 'https://i.imgur.com/yUbfVN7.jpg'});
-
+          institutionSidebar();
           actionToggles();
           break;
         }
@@ -403,6 +403,26 @@
             $(".nano").nanoScroller({ alwaysVisible: false });
           });
       }
+
+      function institutionSidebar(){
+          var collTitle = $(".institution-header .itemTitle").html(); // finds full title without truncation
+          // var count = $("span.islandora-basic-collection-item-count").html();
+          // var total = count.split(" ").pop();
+          $('#region-sidebar-first').addClass('nano');
+          $('#region-sidebar-first .region-sidebar-first-inner').addClass('nano-content');          
+          $('<div class="institutionSidebar nano-content"/>').appendTo('#block-block-10 .content');
+          $('.institution-about').appendTo('.institutionSidebar').wrapAll('<div class="institutionSidebarDesc"/>');
+          $('<div class="institutionTitle"/>').insertBefore('.institution-about');
+          $('.institution-logo').insertBefore('.institutionTitle');
+          $('.institutionTitle').html(collTitle);
+          // $('<div class="collectionTotal"/>').insertAfter('.collectionTitle');
+          // $('.collectionTotal').html(total + ' items');
+           $( "#region-sidebar-first" ).delay(0).promise().done(function() {
+
+            $(".nano").nanoScroller({ alwaysVisible: false });
+          });
+      }
+
 
       function itemHeader(){
         if (!$('body').hasClass('compoundParent')){
@@ -866,6 +886,13 @@
           function(){$('.image_header').css({"padding-bottom": "70px"});},
           function(){$('.image_header').css({"padding-bottom": "inherit"});}
         );
+        if ($('body').hasClass('institutionPage')){
+          $(infoToggle).click(function(){
+            $( "#region-sidebar-first" ).delay(500).promise().done(function() {
+            window.dispatchEvent(new Event('resize'));
+            });          
+          });
+        }
         if ($('body').hasClass('collectionPage')){
           //$(infoToggle).click();
           $('.islandora-view-list, .islandora-view-grid').not('.active').addClass('listGrid userSelect');
@@ -873,13 +900,13 @@
           $('.listGrid').insertAfter('.infoToggle');
           $('.islandora-view-list.active, .islandora-view-grid.active').remove();
           $("ul.tabs").appendTo(".userMenu").wrapAll('<div class="manageMenu"/>'); //moves the view/ip embargo/manage menu
-        $(infoToggle).click(function(){
- 
-           $( "#region-sidebar-first" ).delay(500).promise().done(function() {
-            window.dispatchEvent(new Event('resize'));
+          $(infoToggle).click(function(){
+   
+             $( "#region-sidebar-first" ).delay(500).promise().done(function() {
+              window.dispatchEvent(new Event('resize'));
 
-            });          
-        });
+              });          
+          });
         }        
         $('li:empty').remove();
       $('.manageMenu').insertBefore('#shareToggle');
