@@ -87,7 +87,7 @@ li a.active {
 form#admin-form {
   margin: 3vw; }
 
-body:not(.collectionPage) #block-system-main {
+body:not(.collectionPage, .institutionPage) #block-system-main {
   background: white; }
 
 div#breadcrumb {
@@ -441,6 +441,8 @@ a.institution-about-edit {
   height: auto;
   width: 100%; }
 
+.institutionPage .parallax-mirror {
+  filter: brightness(0.35); }
 .institutionPage .institution-search {
   width: 100%;
   position: relative; }

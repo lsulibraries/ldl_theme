@@ -285,7 +285,7 @@ form#admin-form {
 }
 
 
-body:not(.collectionPage){
+body:not(.collectionPage, .institutionPage){
 #block-system-main{
   background: white;
 }
@@ -946,6 +946,13 @@ a.institution-about-edit {
 
 
 .institutionPage{
+
+
+    .parallax-mirror {
+        filter: brightness(0.35);
+    }
+
+
     .institution-search{
         width: 100%;      
         position: relative;
