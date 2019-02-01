@@ -861,6 +861,10 @@ html body.institutionPage #region-sidebar-first {
 
 .institutionPage{
 
+  .itemTitle{
+        margin-bottom: 7px;
+  }
+
   &.logged-in{  
     .institutionSidebar {
         padding-top: 80px;
@@ -1234,6 +1238,13 @@ opacity: 1;
     background-color: $vvilleColor;
     background-image: url($vvilleLogo);
     background-size: 120px auto;
+  }
+}
+
+
+html body.page-islandora-object:not(.collectionPage, .institutionPage){
+  #block-system-main {
+    background: white;
   }
 }
 
@@ -1692,6 +1703,7 @@ div.item-list:nth-child(2n - 1) {
 .islandora-basic-collection-grid.clearfix {
   @include flexbox;
   flex-wrap: wrap;
+  color: white;
 }
 
 
@@ -4810,6 +4822,11 @@ body:not(.compoundChildImage) {
 }
 //new floating header
 body.logged-in.headerversiontwo{
+
+#zone-header{
+  padding-top: 10px;
+}
+
 div#shareToggle.activeMenu{
       margin-left: 0px;
 }
@@ -8788,6 +8805,25 @@ body.multipleDaily{
     display: block;
   }
 }
+
+@media screen and (max-width: 1366px) {
+
+  html body.collectionPage, html body.institutionPage{
+    #region-sidebar-first{
+      width: 100%;
+      opacity: 0; 
+   }
+
+    &.metaOpened {
+      #region-content {
+      margin-left: 0px;
+      }
+    }
+  }
+
+
+}
+
 
 @media screen and (max-width: 1260px) {
 

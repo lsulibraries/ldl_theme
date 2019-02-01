@@ -440,6 +440,8 @@ html body.institutionPage #region-sidebar-first {
   background-color: rgba(0, 0, 0, 0.67);
   width: 480px; }
 
+.institutionPage.logged-in .institutionSidebar {
+  padding-top: 80px; }
 .institutionPage #block-system-main > div > .content {
   margin-left: 40px;
   margin-right: 40px; }
@@ -726,6 +728,9 @@ html body.institutionPage #region-sidebar-first {
     background-color: #ede7c0;
     background-image: url("../images/wqpOeRQ.png");
     background-size: 120px auto; }
+
+html body.page-islandora-object:not(.collectionPage, .institutionPage) #block-system-main {
+  background: white; }
 
 html body.collectionPage .itemHover {
   position: absolute;
@@ -1057,7 +1062,8 @@ h1.about-link {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  color: white; }
 
 /*Top Search Bar*/
 #zone-header input#edit-islandora-simple-search-query.form-text, #zone-header input#edit-islandora-simple-search-query--2, #region-header-first input#edit-islandora-simple-search-query.form-text, #region-header-first input#edit-islandora-simple-search-query--2 {
@@ -3611,6 +3617,8 @@ body:not(.compoundChildImage) #shareToggle {
     background-size: 15px;
     width: 35px; }
 
+body.logged-in.headerversiontwo #zone-header {
+  padding-top: 10px; }
 body.logged-in.headerversiontwo div#shareToggle.activeMenu {
   margin-left: 0px; }
 body.logged-in.headerversiontwo #shareToggle {
@@ -6228,6 +6236,11 @@ body.multipleDaily .issueLevel .issue-container {
     width: 100%;
     padding: 20px;
     display: block; } }
+@media screen and (max-width: 1366px) {
+  html body.collectionPage #region-sidebar-first, html body.institutionPage #region-sidebar-first {
+    width: 100%; }
+  html body.collectionPage.metaOpened #region-content, html body.institutionPage.metaOpened #region-content {
+    margin-left: 0px; } }
 @media screen and (max-width: 1260px) {
   body.bookViewer .bookPreviewContainer {
     flex-direction: column; }
