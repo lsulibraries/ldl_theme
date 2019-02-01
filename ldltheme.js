@@ -855,7 +855,7 @@
           $("<div id='shareToggle' class='userSelect'><div class='iconSelect'></div><div class='textSelect'>share</div></div>").insertAfter(".infoToggle");
         }
         else if (!$('body').hasClass('collectionPage')){
-          $("<div id='shareToggle' class='userSelect'><div class='iconSelect'></div><div class='textSelect'>share</div></div>").insertAfter("#block-system-main .infoToggle");
+          $("<div id='shareToggle' class='userSelect'><div class='iconSelect'></div><div class='textSelect'>share</div></div>").appendTo(".userMenu");
         }
         var testlength = ($('.manageMenu > ul > li').length)
         console.log(testlength);
@@ -887,6 +887,7 @@
           function(){$('.image_header').css({"padding-bottom": "inherit"});}
         );
         if ($('body').hasClass('institutionPage')){
+          // $(infoToggle).click();          
           $(infoToggle).click(function(){
             $( "#region-sidebar-first" ).delay(500).promise().done(function() {
             window.dispatchEvent(new Event('resize'));
@@ -894,12 +895,13 @@
           });
         }
         if ($('body').hasClass('collectionPage')){
-          //$(infoToggle).click();
+          // $(infoToggle).click();
           $('.islandora-view-list, .islandora-view-grid').not('.active').addClass('listGrid userSelect');
           $('.listGrid').contents().wrapAll('<div class="textSelect"/>');
           $('.listGrid').insertAfter('.infoToggle');
           $('.islandora-view-list.active, .islandora-view-grid.active').remove();
           $("ul.tabs").appendTo(".userMenu").wrapAll('<div class="manageMenu"/>'); //moves the view/ip embargo/manage menu
+
           $(infoToggle).click(function(){
    
              $( "#region-sidebar-first" ).delay(500).promise().done(function() {
