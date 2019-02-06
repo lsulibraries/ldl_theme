@@ -333,6 +333,12 @@ a.institution-about-edit {
   .websterTheme .institutionLabel {
     background-image: url("../images/webster.png"); }
 
+.lsuaTheme .collectionLogo {
+  background-image: url("../images/lsualogo.png");
+  cursor: pointer; }
+.lsuaTheme .institutionLabel {
+  background-image: url("../images/lsualogo.png"); }
+
 .lsusTheme .collectionLogo {
   background-image: url("../images/LSUS%20Logo%2011102015.png");
   cursor: pointer; }
@@ -946,6 +952,9 @@ li.child-institution-collection-list-item {
   #block-block-11 a.institutionLink.ebrplLink {
     background-color: #181B42;
     background-image: url("../images/verticalebrpl.jpg"); }
+  #block-block-11 a.institutionLink.lsuaLink {
+    background-color: #ffffff;
+    background-image: url("../images/lsualogo.png"); }
   #block-block-11 a.institutionLink.lsusLink {
     background-color: #ffffff;
     background-image: url("../images/LSUS%20Logo%2011102015.png"); }

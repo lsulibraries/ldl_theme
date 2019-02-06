@@ -107,6 +107,7 @@ $ebrplLogo: '../images/verticalebrpl.jpg';
 $dccLogo: '../images/logo-white.png';
 $lsmLogo: '../images/uimSOt2.png';
 $lsuLogo: '../images/LSU_Gold_CMYK.png';
+$lsuaLogo: '../images/lsualogo.png';
 $lsusLogo: '../images/LSUS%20Logo%2011102015.png';
 $lsuhscLogo: '../images/FQdHpzz.png';
 $lsuhscsLogo: '../images/1lqbxiy.png';
@@ -569,7 +570,7 @@ a.institution-about-edit {
 
 
 
-.lsuhscTheme, .lsusTheme, .lsuhscsTheme{
+.lsuhscTheme, .lsuaTheme, .lsuhscsTheme{
   .institution-header, .collectionHeader, .institution-search::before, .child-institution-collections::before {
 
     background: white;
@@ -630,6 +631,17 @@ a.institution-about-edit {
     background-image: url($websterLogo);
   }
 }
+
+.lsuaTheme {
+  .collectionLogo {
+    background-image: url($lsuaLogo);
+    cursor: pointer;
+  }
+  .institutionLabel{
+    background-image: url($lsuaLogo);
+  }
+}
+
 
 .lsusTheme {
   .collectionLogo {
@@ -1487,6 +1499,11 @@ opacity: 1;
   a.institutionLink.ebrplLink {
     background-color: $ebrplColor;
     background-image: url($ebrplLogo);
+  }
+
+  a.institutionLink.lsuaLink {
+    background-color: $lsusColor;
+    background-image: url($lsuaLogo);
   }
 
   a.institutionLink.lsusLink {

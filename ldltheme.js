@@ -907,6 +907,7 @@
         "lsuhsc",
         "lsuhscs",
         "lsus",
+        "lsua",        
         "lsm",
         "dcc",
         "vville",
