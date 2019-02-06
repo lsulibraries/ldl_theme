@@ -852,6 +852,10 @@ a.institution-about-edit {
 }
 
 
+.transition{
+  transition-duration: 1.5s;
+}
+
 //Institution 
 html body.institutionPage #region-sidebar-first {
     display: block;
@@ -894,7 +898,7 @@ html body.institutionPage #region-sidebar-first {
   }
 
   .institution-about {
-    margin-top: 30px;
+    margin-top: 5px;
   }
 
 
@@ -904,7 +908,7 @@ html body.institutionPage #region-sidebar-first {
 
     }
     .institutionTitle {
-    font-size: 30px;
+    font-size: 20px;
     line-height: 30px;
     padding-top: 40px;
     }
@@ -4452,7 +4456,6 @@ form#islandora-ip-embargo-object-embargo-form {
       #region-sidebar-first{
         transform: translate3d(-800px, 0vw, 0vw);
         width: 25vw;
-        transition-duration: 1.5s;
         background: #1a1a1a;
         color: white;
         position: fixed;
@@ -5656,7 +5659,6 @@ padding-top: 10px;
  #region-sidebar-first {
     transform: translate3d(-800px, 0vw, 0vw);
     width: 25vw;
-    transition-duration: 1.5s;
     background: #1a1a1a;
     color: white;
     position: fixed;
@@ -8810,8 +8812,7 @@ body.multipleDaily{
 
   html body.collectionPage, html body.institutionPage{
     #region-sidebar-first{
-      width: 100%;
-      opacity: 0; 
+      display: none;
    }
 
     &.metaOpened {
@@ -9125,6 +9126,21 @@ margin-bottom: 20px;
 }
 
   @media screen and (max-width: 900px) {
+
+
+.institutionPage .institution-header {
+    margin: 0px !important;
+    width: calc(100% - 0px) !important;
+}
+
+body.institutionPage #block-system-main > div > .content {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.institution-tile {
+    margin: 2px !important;
+}
 
 body.context-data{
 
