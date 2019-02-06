@@ -976,7 +976,7 @@
             if (outerGrid.width() <= 789) { grid.css("width","480px"); }
             if (outerGrid.width() <= 519) {
               grid.css("width","100%"); 
-              $('.institution-tile').css("width","calc(50vw - 25px)");
+              $('.masonryItem').css("width","calc(50vw - 25px)");
             }
       }
 

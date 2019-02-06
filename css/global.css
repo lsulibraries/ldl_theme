@@ -6496,15 +6496,25 @@ body.multipleDaily .issueLevel .issue-container {
   .islandora-pdf-metadata, .islandora-large-image-metadata {
     display: block; } }
 @media screen and (max-width: 1260px) and (max-width: 900px) {
-  .institutionPage .institution-header {
-    margin: 0px !important;
+  .collectionPage::before, .institutionPage::before {
+    content: "";
+    position: fixed;
+    top: -100%;
+    left: -100%;
+    height: 200%;
+    width: 200%;
+    z-index: 0;
+    background: #000000b3; }
+
+  .institutionPage .institution-header, .collectionPage .collectionHeader {
+    margin: 0px 0px 20px 0px !important;
     width: calc(100% - 0px) !important; }
 
-  body.institutionPage #block-system-main > div > .content {
+  body.institutionPage #block-system-main > div > .content, body.collectionPage #block-system-main > div > .content {
     margin-left: 20px;
     margin-right: 20px; }
 
-  .institution-tile {
+  .institution-tile, .collectionPage .masonryItem {
     margin: 2px !important; }
 
   body.context-data .instGroup .cmodel_wrapper_inst:first-child .inst {
