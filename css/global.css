@@ -477,6 +477,8 @@ html body.institutionPage #region-sidebar-first {
   background-color: rgba(0, 0, 0, 0.67);
   width: 480px; }
 
+.institutionPage .mobileSummary {
+  display: none; }
 .institutionPage .itemTitle {
   margin-bottom: 7px; }
 .institutionPage.logged-in .institutionSidebar {
@@ -775,6 +777,8 @@ html body.institutionPage #region-sidebar-first {
     background-image: url("../images/webster.png");
     background-size: 140px auto; }
 
+html body.collectionPage .islandora-basic-collection-content_stats {
+  display: none; }
 html body.collectionPage .itemHover {
   position: absolute;
   bottom: -40px;
@@ -1033,11 +1037,13 @@ html body.collectionPage .islandora-basic-collection-list-item {
       align-items: center;
       display: none; }
 
-html body.collectionPage.rootCollection .islandora\:collectionCModel {
+html body.collectionPage.rootCollection .infoToggle {
+  display: none; }
+html body.collectionPage.rootCollection.gridMode .islandora\:collectionCModel {
   background: #232323; }
-  html body.collectionPage.rootCollection .islandora\:collectionCModel .itemHover {
+  html body.collectionPage.rootCollection.gridMode .islandora\:collectionCModel .itemHover {
     display: none; }
-  html body.collectionPage.rootCollection .islandora\:collectionCModel .category {
+  html body.collectionPage.rootCollection.gridMode .islandora\:collectionCModel .category {
     font-size: 11px;
     text-transform: uppercase;
     color: #BABABA;
@@ -1048,19 +1054,19 @@ html body.collectionPage.rootCollection .islandora\:collectionCModel {
     height: 50px;
     padding-left: 20px;
     background: #1c1c1c; }
-    html body.collectionPage.rootCollection .islandora\:collectionCModel .category .fa-th, html body.collectionPage.rootCollection .islandora\:collectionCModel .category .fa-folder-open {
+    html body.collectionPage.rootCollection.gridMode .islandora\:collectionCModel .category .fa-th, html body.collectionPage.rootCollection.gridMode .islandora\:collectionCModel .category .fa-folder-open {
       margin-right: 8px;
       font-size: 16px; }
-  html body.collectionPage.rootCollection .islandora\:collectionCModel .islandora-basic-collection-caption {
+  html body.collectionPage.rootCollection.gridMode .islandora\:collectionCModel .islandora-basic-collection-caption {
     padding: 40px 20px 50px 20px;
     background: transparent;
     color: white;
     font-weight: 700;
     font-size: 20px;
     line-height: 20px; }
-    html body.collectionPage.rootCollection .islandora\:collectionCModel .islandora-basic-collection-caption a {
+    html body.collectionPage.rootCollection.gridMode .islandora\:collectionCModel .islandora-basic-collection-caption a {
       color: white; }
-  html body.collectionPage.rootCollection .islandora\:collectionCModel .islandora-basic-collection-thumb {
+  html body.collectionPage.rootCollection.gridMode .islandora\:collectionCModel .islandora-basic-collection-thumb {
     display: none; }
 
 .collectionSearch {
@@ -6314,7 +6320,15 @@ body.multipleDaily .issueLevel .issue-container {
     padding: 20px;
     display: block; } }
 @media screen and (max-width: 1366px) {
-  html body.collectionPage #region-sidebar-first, html body.institutionPage #region-sidebar-first {
+  html body.collectionPage .institution-header, html body.institutionPage .institution-header {
+    height: auto !important;
+    margin: 30px 0px 20px 0px !important; }
+    html body.collectionPage .institution-header .mobileSummary, html body.institutionPage .institution-header .mobileSummary {
+      color: white;
+      font-size: 12px;
+      line-height: 16px;
+      display: block; }
+  html body.collectionPage #region-sidebar-first, html body.collectionPage .infoToggle, html body.institutionPage #region-sidebar-first, html body.institutionPage .infoToggle {
     display: none; }
   html body.collectionPage.metaOpened #region-content, html body.institutionPage.metaOpened #region-content {
     margin-left: 0px; } }
@@ -6581,7 +6595,7 @@ body.multipleDaily .issueLevel .issue-container {
     background: #000000b3; }
 
   .institutionPage .institution-header, .collectionPage .collectionHeader {
-    margin: 0px 0px 20px 0px !important;
+    margin: 30px 0px 20px 0px !important;
     width: calc(100% - 0px) !important; }
 
   body.institutionPage #block-system-main > div > .content, body.collectionPage #block-system-main > div > .content {
@@ -7210,6 +7224,9 @@ body.multipleDaily .issueLevel .issue-container {
   html body.collectionPage .islandora-basic-collection-list-item .list-subjects {
     display: none; } }
 @media screen and (max-width: 1260px) and (max-width: 740px) {
+  .userMenu {
+    margin-left: 5px; }
+
   .currentPart {
     margin-left: 0px !important;
     display: table-cell; }

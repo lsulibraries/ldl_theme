@@ -9,6 +9,11 @@
       // if ( ($('.block-islandora-compound-object').length) && ($('#block-system-main .block-inner .content > div').length) && (!($("body").attr('class').indexOf('-pages') > -1)) && ( !$('body').is('.audioPDF, .regeneratePage, .datastreamPage, .book, .pagesView'))){
       // }'
 
+       if ($(".islandora-basic-collection-object").length > 0){
+                    $("body").addClass('gridMode');
+
+       }
+
 
       switch (true) { //detect page type or content type
 
@@ -27,6 +32,8 @@
            $('#page').parallax({imageSrc: 'https://i.imgur.com/yUbfVN7.jpg'});
           institutionSidebar();
           actionToggles();
+          $("<div class='mobileSummary'/>").insertAfter("#institution-title");
+          $(".institution-about p").clone().appendTo(".mobileSummary");
           break;
         }
 
