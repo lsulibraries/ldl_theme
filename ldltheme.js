@@ -376,6 +376,12 @@
                 itemType = '<i class="fa fa-image"></i> Image';
                 break;
             }
+
+            case ($(this).hasClass('islandora:newspaperCModel')):{
+                itemType = '<i class="fa fa-newspaper"></i> Newspaper';
+                break;
+            }
+
           }
           $(this).find('.typeHover').html(itemType);
 
@@ -425,6 +431,7 @@
 
 
       function itemHeader(){
+        $('body').addClass('itemPage');
         if (!$('body').hasClass('compoundParent')){
           $(".region-inner > div.tabs.clearfix").prependTo("#block-system-main");
           $("<div class='item_header'/>").insertBefore(".itemContainer, .islandora-video-object, .islandora-audio-object, .islandora-pdf-object, .islandora-large-image-object, .bookContainer, .islandora-newspaper-object"); //creates header for image items
@@ -557,6 +564,9 @@
             $(".itemTitle").css('font-size','34px');
           }
         }
+        $("<a href='/' class='institutionSmall'>LDL</a><span class='breadcrumbDivider'>/</span></div>").prependTo(".headerBreadcrumb");
+
+
      }
 
       function imageContainer(){

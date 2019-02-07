@@ -210,6 +210,12 @@ html, body {
   margin: 0;
 }
 
+html body.itemPage{
+  #block-system-main {
+    background: white;
+  }
+}
+
 body.logged-in{
   padding-top: 59px !important;
   .grid-3 .metadataSidebar.nano-content {
@@ -1311,11 +1317,6 @@ opacity: 1;
 }
 
 
-html body.page-islandora-object:not(.collectionPage, .institutionPage){
-  #block-system-main {
-    background: white;
-  }
-}
 
 //Begin collection page styles
 

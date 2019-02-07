@@ -29,6 +29,9 @@ html, body {
   padding: 0;
   margin: 0; }
 
+html body.itemPage #block-system-main {
+  background: white; }
+
 body.logged-in {
   padding-top: 59px !important; }
   body.logged-in .grid-3 .metadataSidebar.nano-content {
@@ -771,9 +774,6 @@ html body.institutionPage #region-sidebar-first {
     background-color: #ffffff;
     background-image: url("../images/webster.png");
     background-size: 140px auto; }
-
-html body.page-islandora-object:not(.collectionPage, .institutionPage) #block-system-main {
-  background: white; }
 
 html body.collectionPage .itemHover {
   position: absolute;
