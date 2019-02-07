@@ -869,8 +869,9 @@ html body.collectionPage .collectionSidebar {
     border-top: 1px solid rgba(255, 255, 255, 0.16);
     padding-top: 10px; }
 html body.collectionPage .headerBreadcrumb {
-  margin-top: 14px;
-  margin-bottom: 10px;
+  margin-left: 3px;
+  margin-top: 4px;
+  margin-bottom: 5px;
   align-items: center !important;
   justify-content: center;
   font-size: 16px; }
@@ -911,7 +912,8 @@ html body.collectionPage .collectionHeader {
   padding-bottom: 20px;
   margin-bottom: 10px;
   width: calc(100% - 20px) !important;
-  height: 200px !important; }
+  height: 200px !important;
+  color: white; }
   html body.collectionPage .collectionHeader .collection-description-text {
     margin: 0px;
     border-left: 1px solid rgba(255, 255, 255, 0.21);
@@ -3869,9 +3871,9 @@ body.headerversiontwo {
     background-repeat: no-repeat;
     padding-bottom: 5px; }
   body.headerversiontwo .book-thumbnailData, body.headerversiontwo .image-thumbnailData {
-    margin-left: 20px;
-    border-left: 1px solid #dedede;
-    padding-left: 20px;
+    margin-left: 0px;
+    margin-top: 10px;
+    padding-left: 0px;
     max-width: 680px;
     color: #676767;
     font-style: italic; }
@@ -3939,7 +3941,8 @@ body.headerversiontwo {
     align-items: center;
     margin: 0 auto;
     margin-top: 30px;
-    padding: 0px 20px; }
+    padding: 0px 20px;
+    flex-direction: column; }
   body.headerversiontwo .manageMenu .tabs {
     margin: 0px;
     padding: 0px;

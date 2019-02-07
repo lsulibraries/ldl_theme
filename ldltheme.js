@@ -7,13 +7,17 @@
       $("<div class='mobileMenu'/>").insertBefore("div#page");
 
       // if ( ($('.block-islandora-compound-object').length) && ($('#block-system-main .block-inner .content > div').length) && (!($("body").attr('class').indexOf('-pages') > -1)) && ( !$('body').is('.audioPDF, .regeneratePage, .datastreamPage, .book, .pagesView'))){
-      // }
+      // }'
+        if ($('body').hasClass('page-islandora-object-islandoraroot')) {
+          $("body").addClass("rootCollection");          
+        }
 
       switch (true) { //detect page type or content type
 
         case ($('body').hasClass('front')) :{
           break;
         }
+
 
         case ($('body').hasClass('institutionPage')) :{
           console.log('hi inst');         
@@ -379,6 +383,12 @@
 
             case ($(this).hasClass('islandora:newspaperCModel')):{
                 itemType = '<i class="fa fa-newspaper"></i> Newspaper';
+                break;
+            }
+
+
+            case ($(this).hasClass('islandora:collectionCModel')):{
+                itemType = '<i class="fa fa-th"></i> Collection';
                 break;
             }
 
