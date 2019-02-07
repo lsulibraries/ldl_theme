@@ -69,7 +69,7 @@
         }
         //case for large images
         case ((($('body').hasClass('largeImage'))) && (!$('body').hasClass('audioPDF'))) :{
-          itemTitle = $(".modsTitle").html(); // finds full title without truncation
+          itemTitle = $('meta[name="twitter:title"]').attr("content"); // finds full title without truncation
           thumbnailURL = $(".image-thumbnail img").prop('src');
           if ($('.block-islandora-compound-object').length){
             compoundChild_start();
@@ -454,8 +454,8 @@
               widestWidth = $(this).width();
             }
           });   //done finding widest image
-          var commentedURL = $('div.widest').find('noscript').addClass('widestIMG').text().split(" ");
-          var srcclean = commentedURL[2].match(/"(.*?)"/);
+          var commentedURL = $('div.widest').find('noscript').addClass('widestIMG').text().match(/src\s*=\s*"(.+?)"/);
+          var srcclean = commentedURL[1];
           $('.compoundSelect noscript').each(function() {    //begin embargo detection
             str = $(this).html();
             if (str.indexOf("embargo") >= 0){
@@ -489,7 +489,7 @@
 
           }
           else{
-            var thumbnailURL =  srcclean[1];
+            var thumbnailURL =  srcclean;
           }
           $("div#region-content > div.region-content-inner > div.tabs > ul.tabs").wrapAll('<div class="manageMenu"/>'); //moves the view/ip embargo/manage menu
           $(".compoundCount").appendTo(".itemContainer");
@@ -506,9 +506,8 @@
           $(".islandora-audio-object").remove();
           }
          if ($('body').hasClass('compoundChild')){
-          var commentedURL = $('div.currentImage').find('noscript').addClass('widestIMG').text().split(" ");
-          var srcclean = commentedURL[2].match(/"(.*?)"/);
-          thumbnailURL = srcclean[1];
+          var commentedURL = $('div.currentImage').find('noscript').addClass('widestIMG').text().match(/src\s*=\s*"(.+?)"/);
+          thumbnailURL = commentedURL[1];
           $("<div class='item_headerMenu'/>").appendTo(".item_header"); //creates header for book items
           $("<div class='backgroundDiv'/>").insertBefore(".item_headerMenu"); //creates header for book items
           $('.backgroundDiv').css('background-image', 'url(' + thumbnailURL + ')');
@@ -516,7 +515,7 @@
          // $("#region-content div.tabs.clearfix").prependTo("#block-system-main");
         }
         if ((!$('body').hasClass('compoundParent')) && (!$('body').hasClass('compoundChild'))) {
-          itemTitle = $(".modsTitle").html(); // finds full title without truncation
+          itemTitle = $('meta[name="twitter:title"]').attr("content"); // finds full title without truncation
           if ($('body').hasClass('newspaperSet')){
             var baseUrl = document.location.origin;
             var thumbnailURL = baseUrl + ($(".issue-container:first > a").attr('href')) + '/datastream/TN/view';
@@ -547,13 +546,16 @@
           $(collectionText).addClass("institutionSmall").insertAfter(".breadcrumbDivider"); //creates collection breadcrumb
           console.log('hi its not a compound');
           }
+
         $("<div class='userMenu'/>").appendTo(".item_headerMenu"); //temporarily moves count
         $("<div class='infoToggle userSelect'><div class='iconSelect'></div><div class='textSelect'>details</div></div>").appendTo(".userMenu"); //adds toggle for parent metadata
 
         $("ul.tabs").appendTo(".userMenu:first").wrapAll('<div class="manageMenu"/>').insertBefore('#shareToggle'); //moves the view/ip embargo/manage menu
         $("div#block-system-main > div.tabs").remove(); // removes top div which once contained the tabs
-        if((itemTitle).length > 20) {
-          $(".itemTitle").css('font-size','34px');
+        if (!itemTitle === 'undefined'){
+          if (((itemTitle).length > 20) && ($(".modsTitle").length)) {
+            $(".itemTitle").css('font-size','34px');
+          }
         }
      }
 
@@ -587,9 +589,8 @@
         $("<div class='chooseImage chooseViewer'><div class='chooseIcon'><i class='fa fa-image'></i></div><div class='chooseText'>Open Image Viewer</div></div>").appendTo(".chooseMenu"); //adds label break
         $(".downloadList").insertAfter(".image_headerMenu");
         if ($('body').hasClass('compoundChild')){
-          var commentedURL = $('div.currentImage').find('noscript').addClass('widestIMG').text().split(" ");
-          var srcclean = commentedURL[2].match(/"(.*?)"/);
-          thumbnailURL = srcclean[1];
+          var commentedURL = $('div.currentImage').find('noscript').addClass('widestIMG').text().match(/src\s*=\s*"(.+?)"/);
+          thumbnailURL = commentedURL[1];
           $('.imagePreview img').prop('src', thumbnailURL);
         }
         if (($('body').hasClass('compoundChild')) && ($('body').hasClass('oralHistory'))){
@@ -610,7 +611,22 @@
         $(".metadataSidebar").clone().prop({ class: "metadataVertical"}).appendTo('.content .descContainer .descriptionText');
         $(".downloadSelect").insertAfter(".infoToggle");
         $("<i class='fa fa-image' aria-hidden='true'></i>").appendTo(".imageLabel");
+      }
 
+      function embargoStyles(){
+        if ((($('.ip-embargo-details').text()).length) > 5){
+            //thumbnail present but JP2 is not
+            if (($('body').hasClass('largeImage')) && (!$('#islandora-openseadragon').length)){
+              $('.imageMenu').remove();
+              $('.image-thumbnail').css('cursor','not-allowed');
+            }
+            //thumbnail is hidden
+            if (($('.image-thumbnail img').width() < 17)){
+              $('.image-thumbnail').remove();
+              $('.image-thumbnailData').css('border-left','0px');
+            }            
+          }
+          $('.ip-embargo-details').appendTo('.image-thumbnailData');
       }
 
       function bookContainer(){
@@ -1065,13 +1081,15 @@
         "lsuhsc",
         "lsuhscs",
         "lsus",
+        "lsua",        
         "lsm",
         "dcc",
         "vville",
         "tahil",
         "fpoc",
         "lasc",
-        "ebrpl"
+        "ebrpl",
+        "webster"
       ];
       for (namespace in namespaces) {
         ns = namespaces[namespace];
@@ -1713,16 +1731,16 @@ if ($('body').hasClass('pdf')){
       if ($('.featuredLink').length){
       }else{
       //rotate 1
-      $("<a href='http://louisianadigitallibrary.org/islandora/object/lsu-clt%3A10'><div class='featuredLink'><span class='featuredLabel'>Featured</span><div class='featuredText'><span class='featuredName'>Cargo ship at dock., from Charles L. Thompson Photographs</span><span class='featuredDescription'>Manuscript note on verso: Giant steamships and busy workmen at the wharves.</span></div></div></a>").insertAfter(".rotate1 #block-block-12 .homepageText");
+      $("<a href='http://louisianadigitallibrary.org/islandora/object/lsu-sc-clt%3A2'><div class='featuredLink'><span class='featuredLabel'>Featured</span><div class='featuredText'><span class='featuredName'>Cargo ship at dock., from Charles L. Thompson Photographs</span><span class='featuredDescription'>Manuscript note on verso: Giant steamships and busy workmen at the wharves.</span></div></div></a>").insertAfter(".rotate1 #block-block-12 .homepageText");
       $('body.rotate1.front #block-block-12').parallax({imageSrc: '/sites/all/themes/ldl/images/rotate1.jpg'});
       //rotate 2
-      $("<a href='http://louisianadigitallibrary.org/islandora/object/lsu-p16313coll56:196'><div class='featuredLink'><span class='featuredLabel'>Featured</span><div class='featuredText'><span class='featuredName'>Alligator juvenile, Col. Joseph S. Tate Photograph Album</span><span class='featuredDescription'>The photograph album (unbound) contains 103 black and white prints mounted on paper. The images show scenes from several locations in Louisiana during the 1920s. Photographer unknown.</span></div></div></a>").insertAfter(".rotate2 #block-block-12 .homepageText");
+      $("<a href='http://louisianadigitallibrary.org/islandora/object/lsu-sc-p16313coll56%3A4'><div class='featuredLink'><span class='featuredLabel'>Featured</span><div class='featuredText'><span class='featuredName'>Alligator juvenile, Col. Joseph S. Tate Photograph Album</span><span class='featuredDescription'>The photograph album (unbound) contains 103 black and white prints mounted on paper. The images show scenes from several locations in Louisiana during the 1920s. Photographer unknown.</span></div></div></a>").insertAfter(".rotate2 #block-block-12 .homepageText");
       $('body.rotate2.front #block-block-12').parallax({imageSrc: '/sites/all/themes/ldl/images/rotate2.jpg'});
       //rotate 3
       $("<a href='http://louisianadigitallibrary.org/islandora/object/hnoc-clf:10656'><div class='featuredLink'><span class='featuredLabel'>Featured</span><div class='featuredText'><span class='featuredName'>Mardi Gras truck float, Charles L. Franck and Franck-Bertacci</span><span class='featuredDescription'>View of a truck float sponsored by Hayes Dairy Products. The riders are costumed in dairy costumes.</span></div></div></a>").insertAfter(".rotate3 #block-block-12 .homepageText");
       $('body.rotate3.front #block-block-12').parallax({imageSrc: '/sites/all/themes/ldl/images/rotate3.jpg'});
       //rotate 4
-      $("<a href='http://louisianadigitallibrary.org/islandora/object/lsu-p16313coll56:169'><div class='featuredLink'><span class='featuredLabel'>Featured</span><div class='featuredText'><span class='featuredName'>Boiling schrimp [sic], Col. Joseph S. Tate Photograph Album</span><span class='featuredDescription'>The photograph album (unbound) contains 103 black and white prints mounted on paper. The images show scenes from several locations in Louisiana during the 1920s. Photographer unknown.</span></div></div></a>").insertAfter(".rotate4 #block-block-12 .homepageText");
+      $("<a href='http://louisianadigitallibrary.org/islandora/object/lsu-sc-p16313coll56%3A12'><div class='featuredLink'><span class='featuredLabel'>Featured</span><div class='featuredText'><span class='featuredName'>Boiling schrimp [sic], Col. Joseph S. Tate Photograph Album</span><span class='featuredDescription'>The photograph album (unbound) contains 103 black and white prints mounted on paper. The images show scenes from several locations in Louisiana during the 1920s. Photographer unknown.</span></div></div></a>").insertAfter(".rotate4 #block-block-12 .homepageText");
       $('body.rotate4.front #block-block-12').parallax({imageSrc: '/sites/all/themes/ldl/images/rotate4.jpg'});
       //rotate 5
       $("<a href='http://louisianadigitallibrary.org/islandora/object/uno-omsa:283'><div class='featuredLink'><span class='featuredLabel'>Featured</span><div class='featuredText'><span class='featuredName'>Mamou Mardi Gras, Ogden Museum of Southern Art</span><span class='featuredDescription'>Under dark clouds, a horseman wearing a cape makes his Mardi Gras ride along side a field. B/W photograph.</span></div></div></a>").insertAfter(".rotate6 #block-block-12 .homepageText");

@@ -101,11 +101,14 @@ $unoColor: #003056;
 $vvilleColor: #ede7c0;
 $lascColor: #16325a;
 $ebrplColor: #181B42;
+$websterColor: #ffffff;
 
+$websterLogo: '../images/webster.png';
 $ebrplLogo: '../images/verticalebrpl.jpg';
 $dccLogo: '../images/logo-white.png';
 $lsmLogo: '../images/uimSOt2.png';
 $lsuLogo: '../images/LSU_Gold_CMYK.png';
+$lsuaLogo: '../images/lsualogo.png';
 $lsusLogo: '../images/LSUS%20Logo%2011102015.png';
 $lsuhscLogo: '../images/FQdHpzz.png';
 $lsuhscsLogo: '../images/1lqbxiy.png';
@@ -127,7 +130,7 @@ $ldlLogo: '../images/MuY1yyN.png';
 $dccLogo_long: '../images/delgado-logo-white.png';
 $latechLogo_long: '../images/72REb5M.png';
 $loynoLogo_long: '../images/23i7KxR.png';
-$mcneeseLogo_long: "../images/logo.png";
+$mcneeseLogo_long: "../images/mcneese_long.png";
 $nichollsLogo_long: "../images/Nicholls-N-Sword-w-text.png";
 $nsuLogo_long: "../images/wordmarksmall2.png";
 $subrLogo_long: "../images/subr_logo.gif";
@@ -478,7 +481,8 @@ a.institution-about-edit {
   }
 }
 
-.lsuhscTheme, .lsusTheme, .lsuhscsTheme {
+
+.lsuhscTheme, .lsuaTheme, .lsusTheme, .lsuhscsTheme {
    .collectionHeader, .institution-search::before, .child-institution-collections::before {
 
     background: white;
@@ -491,15 +495,65 @@ a.institution-about-edit {
     border-left: 1px solid rgba(0, 0, 0, 0.20);
   }
   form#islandora-collection-search-form {
-    border: 2px solid #white;
+    border: 2px solid #8c8c8c;
   }
   .institution-search input[type="text"] {
-    border: 2px solid #white;
+    border: 2px solid white;
   }
   .institutionLabel::before{
-    background: #white;
+    background: white;
   }
 }
+
+
+.websterTheme {
+  background: white;
+  color: #474747;  
+  #page-title {
+    color: #474747;
+  }
+
+  .collection-description-text{
+    color: #434343;
+  }
+  .institution-header, .collectionHeader, .institution-search::before, .child-institution-collections::before {
+    background: $websterColor;
+  }
+
+  .institution-about {
+    border-left: 1px solid rgba(0, 0, 0, 0.20);
+  }
+  form#islandora-collection-search-form {
+    border: 2px solid white;
+  }
+  .institution-search input[type="text"] {
+    border: 2px solid white;
+  }
+  .institutionLabel::before{
+    background: white;
+  }
+  .collectionSearch form#islandora-collection-search-form {
+    border: 2px solid #8c8c8c;
+  }
+  .collectionLogo {
+    background-image: url($websterLogo);
+    cursor: pointer;
+  }
+  .institutionLabel{
+    background-image: url($websterLogo);
+  }
+}
+
+.lsuaTheme {
+  .collectionLogo {
+    background-image: url($lsuaLogo);
+    cursor: pointer;
+  }
+  .institutionLabel{
+    background-image: url($lsuaLogo);
+  }
+}
+
 
 .lsusTheme {
   .collectionLogo {
@@ -1024,11 +1078,12 @@ html body.institutionPage #region-sidebar-first {
       background: #2d2d2d;
     }
   }
+
   .institution-tile {
     width: 220px;
     border-radius: 10px;
     overflow: hidden;
-  margin: 10px;    
+    margin: 10px;    
     .category {
     font-size: 11px;      
     text-transform: uppercase;
@@ -1156,6 +1211,11 @@ opacity: 1;
     background-image: url($ebrplLogo);
   }
 
+  a.institutionLink.lsuaLink {
+    background-color: $lsusColor;
+    background-image: url($lsuaLogo);
+  }
+
   a.institutionLink.lsusLink {
     background-color: $lsusColor;
     background-image: url($lsusLogo);
@@ -1243,6 +1303,11 @@ opacity: 1;
     background-image: url($vvilleLogo);
     background-size: 120px auto;
   }
+  a.institutionLink.websterLink {
+    background-color: $websterColor;
+    background-image: url($websterLogo);
+    background-size: 140px auto;
+  }  
 }
 
 
@@ -5776,7 +5841,7 @@ div#BRpage {
 }
 
 .BRicon{
-  background-image: url(../images/IhxEDq2.png) !important;
+  background-image: url(../images/ihxEDq2.png) !important;
 
 }
 
@@ -5785,7 +5850,6 @@ div#BRpage {
     right: 3px !important;
 }
 //Begin bookViewer
-
 
 body.compoundBook{
 
@@ -5935,7 +5999,7 @@ div#BRnavpos {
 }
 
 .bookLabel {
-    background-image: url(../images/Dm9Wu42.png);
+    background-image: url(../images/dm9Wu42.png);
     background-size: 25px;
     background-position: 0px 0px;
 }
