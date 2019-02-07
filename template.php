@@ -10,7 +10,7 @@
  *   - object: An AbstractObject for which to generate the display.
  */
 function alpha_preprocess_islandora_newspaper_issue(array &$variables) {
-  $variables['thumbnail_path'] = newspaper_issue_first_page_tn_path($variables['object']->id, 'TN');
+  $variables['thumbnail_path'] = newspaper_issue_first_page_tn_path($variables['object']->id, 'JPG');
 }
 
 /**

@@ -3879,6 +3879,8 @@ body.headerversiontwo {
     font-style: italic; }
   body.headerversiontwo #sideMods {
     padding: 0px; }
+  body.headerversiontwo .bookPreview {
+    margin-bottom: 20px; }
   body.headerversiontwo .bookPreview, body.headerversiontwo .imagePreview {
     max-width: 1200px;
     display: flex;
@@ -3927,7 +3929,7 @@ body.headerversiontwo {
       justify-content: center;
       align-items: center; }
     body.headerversiontwo .bookPreview .book-thumbnail img, body.headerversiontwo .imagePreview .book-thumbnail img {
-      height: 200px; }
+      height: 600px; }
   body.headerversiontwo .bookPreview:hover .bookMenu, body.headerversiontwo .bookPreview:hover .imageMenu, body.headerversiontwo .imagePreview:hover .bookMenu, body.headerversiontwo .imagePreview:hover .imageMenu {
     transition-duration: 1s;
     flex-grow: 1;
@@ -4370,7 +4372,8 @@ body.bookViewer .bookPreviewContainer {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  margin-top: 30px; }
+  margin-top: 30px;
+  flex-direction: column; }
 body.bookViewer div#BRnavpos {
   position: relative;
   margin-right: 320px;
