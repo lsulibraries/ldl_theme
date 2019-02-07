@@ -8,9 +8,7 @@
 
       // if ( ($('.block-islandora-compound-object').length) && ($('#block-system-main .block-inner .content > div').length) && (!($("body").attr('class').indexOf('-pages') > -1)) && ( !$('body').is('.audioPDF, .regeneratePage, .datastreamPage, .book, .pagesView'))){
       // }'
-        if ($('body').hasClass('page-islandora-object-islandoraroot')) {
-          $("body").addClass("rootCollection");          
-        }
+
 
       switch (true) { //detect page type or content type
 
@@ -37,10 +35,20 @@
           $(".collectionPage <div class='collectionSearch'/>").appendTo(".collectionHeader");
           $(".collectionPage #block-islandora-collection-search-islandora-collection-search").appendTo(".collectionSearch");
           $(".collectionSearch input.form-submit").val(' ');
+
+          if ($('body').hasClass('page-islandora-object-islandoraroot')) {
+            $("body").addClass("rootCollection");  
+            $("<div class='category'><i class='fa fa-th'></i> Collection</div>").prependTo(".masonryItem");
+          $('#page').parallax({imageSrc: 'https://i.imgur.com/yUbfVN7.jpg'});                      
+          }
+
           collectionHeader();
           collectionHover();
           collectionSidebar();
           actionToggles();
+
+
+
           break;
         }        
 
@@ -351,6 +359,11 @@
           var nomURL = $('img.parralax-slider').prop('src');
           $('#page').parallax({imageSrc: nomURL });
           }
+
+          else if ($('body').hasClass('rootCollection')){
+
+          }
+
           else {
             if ($('.islandora-basic-collection-grid').length){
             var firstItem = $('.islandora-basic-collection-object > .islandora-basic-collection-thumb > a > img').prop('src');
