@@ -1066,7 +1066,7 @@
             if (outerGrid.width() <= 789) { grid.css("width","480px"); }
             if (outerGrid.width() <= 519) {
               grid.css("width","100%"); 
-              $('.masonryItem').css("width","calc(50vw - 25px)");
+              $('.masonryItem').css("width","calc(50vw - 50px)");
             }
       }
 
@@ -1098,7 +1098,8 @@
         initLayout: false,
         isFitWidth: false,
         percentPosition: false,      
-        columnWidth: 1,
+        columnWidth: 230,
+        gutter: 10,
         transitionDuration: '0.2s'        
       });
 

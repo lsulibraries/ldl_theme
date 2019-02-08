@@ -484,8 +484,8 @@ html body.institutionPage #region-sidebar-first {
 .institutionPage.logged-in .institutionSidebar {
   padding-top: 80px; }
 .institutionPage #block-system-main > div > .content {
-  margin-left: 40px;
-  margin-right: 40px; }
+  margin-left: 20px;
+  margin-right: 20px; }
 .institutionPage.metaOpened div#zone-header {
   margin-left: 480px !important;
   width: calc(100vw - 500px) !important;
@@ -538,7 +538,7 @@ html body.institutionPage #region-sidebar-first {
   .institutionPage .institution-search form#myform > div {
     position: relative; }
   .institutionPage .institution-search form#myform {
-    border-radius: 5px 0px 0px 5px;
+    border-radius: 4px 0px 0px 4px;
     overflow: hidden;
     margin-top: 20px;
     width: 100%; }
@@ -547,7 +547,7 @@ html body.institutionPage #region-sidebar-first {
     right: 0px;
     top: 0px;
     height: 32px;
-    border-radius: 0px 3px 3px 0px;
+    border-radius: 0px 4px 4px 0px;
     width: 55px;
     background: none;
     border: none;
@@ -564,7 +564,7 @@ html body.institutionPage #region-sidebar-first {
     padding-right: 0px;
     padding-left: 10px;
     height: 32px;
-    border-radius: 5px 0px 0px 0px; }
+    border-radius: 4px 0px 0px 0px; }
 .institutionPage .institution-content {
   margin: 0px auto;
   max-width: 1200px;
@@ -577,7 +577,7 @@ html body.institutionPage #region-sidebar-first {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin: 10px;
+  margin-bottom: 10px;
   justify-content: flex-end;
   background: transparent !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.48);
@@ -595,9 +595,9 @@ html body.institutionPage #region-sidebar-first {
     background: #2d2d2d; }
 .institutionPage .institution-tile {
   width: 220px;
-  border-radius: 10px;
+  border-radius: 4px;
   overflow: hidden;
-  margin: 10px; }
+  margin-bottom: 8px; }
   .institutionPage .institution-tile .category {
     font-size: 11px;
     text-transform: uppercase;
@@ -799,7 +799,7 @@ html body.collectionPage .islandora-basic-collection-object:hover .itemHover {
   transform: translateY(-40px);
   transition-duration: 0.2s; }
 html body.collectionPage .islandora-basic-collection-thumb {
-  border-radius: 0px 0px 10px 10px;
+  border-radius: 0px 0px 4px 4px;
   overflow: hidden; }
 html body.collectionPage .nano-pane {
   overflow: hidden; }
@@ -909,12 +909,11 @@ html body.collectionPage .collectionHeader {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin: 10px;
   justify-content: flex-end;
   background: transparent !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.48);
   padding-bottom: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   width: calc(100% - 20px) !important;
   height: 200px !important;
   color: white; }
@@ -950,12 +949,12 @@ html body.collectionPage .islandora-basic-collection-grid {
   html body.collectionPage .islandora-basic-collection-grid .islandora-basic-collection-thumb img {
     width: 100%; }
   html body.collectionPage .islandora-basic-collection-grid .islandora-basic-collection-object {
-    margin: 10px;
+    margin: 0px 0px 20px 0px;
     width: 220px;
-    border-radius: 10px;
+    border-radius: 4px;
     overflow: hidden; }
 html body.collectionPage .islandora-basic-collection-list-item {
-  border-radius: 10px;
+  border-radius: 4px;
   overflow: hidden;
   background: rgba(255, 255, 255, 0.07);
   border: 1px solid rgba(255, 255, 255, 0.09);
@@ -988,7 +987,7 @@ html body.collectionPage .islandora-basic-collection-list-item {
   html body.collectionPage .islandora-basic-collection-list-item .list-thumbnail img {
     height: 140px;
     overflow: hidden;
-    border-radius: 10px 0px 0px 10px;
+    border-radius: 4px 0px 0px 4px;
     top: 0px;
     max-width: none; }
   html body.collectionPage .islandora-basic-collection-list-item .list-item-container {
@@ -1087,7 +1086,7 @@ html body.collectionPage.rootCollection.gridMode .islandora\:collectionCModel {
   .collectionSearch .form-item.form-type-select.form-item-collection-select {
     display: none; }
   .collectionSearch form#islandora-collection-search-form {
-    border-radius: 5px 0px 0px 5px;
+    border-radius: 4px 0px 0px 4px;
     overflow: hidden;
     margin-top: 20px;
     width: 100%; }
@@ -1104,7 +1103,7 @@ html body.collectionPage.rootCollection.gridMode .islandora\:collectionCModel {
     right: 0px;
     top: 0px;
     height: 32px;
-    border-radius: 0px 3px 3px 0px;
+    border-radius: 0px 4px 4px 0px;
     width: 55px;
     background: none;
     border: none;
@@ -1758,7 +1757,7 @@ div#zone-user-wrapper {
   width: 300px;
   background: #242021;
   height: 33px;
-  border-radius: 5px;
+  border-radius: 4px;
   overflow: hidden;
   margin-right: 10px; }
 
@@ -6594,16 +6593,17 @@ body.multipleDaily .issueLevel .issue-container {
     z-index: 0;
     background: #000000b3; }
 
-  .institutionPage .institution-header, .collectionPage .collectionHeader {
+  html body.collectionPage .islandora-basic-collection-wrapper {
+    padding: 0px;
+    margin: 0px; }
+
+  .institutionPage .institution-header, html body.collectionPage .collectionHeader {
     margin: 30px 0px 20px 0px !important;
     width: calc(100% - 0px) !important; }
 
   body.institutionPage #block-system-main > div > .content, body.collectionPage #block-system-main > div > .content {
     margin-left: 20px;
     margin-right: 20px; }
-
-  .institution-tile, .collectionPage .masonryItem {
-    margin: 2px !important; }
 
   body.context-data .instGroup .cmodel_wrapper_inst:first-child .inst {
     width: calc(100% - 40px); }

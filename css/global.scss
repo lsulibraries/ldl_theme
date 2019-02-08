@@ -940,8 +940,8 @@ html body.institutionPage #region-sidebar-first {
   }
 
   #block-system-main > div > .content{
-    margin-left: 40px;
-    margin-right: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
   }
 
   &.metaOpened div#zone-header {
@@ -1026,7 +1026,7 @@ html body.institutionPage #region-sidebar-first {
           position: relative;
         }
         form#myform {
-          border-radius: 5px 0px 0px 5px;
+          border-radius: 4px 0px 0px 4px;
           overflow: hidden;
           margin-top: 20px;
           width: 100%;
@@ -1036,7 +1036,7 @@ html body.institutionPage #region-sidebar-first {
           right: 0px;
           top: 0px;
           height: 32px;
-          border-radius: 0px 3px 3px 0px;
+          border-radius: 0px 4px 4px 0px;
           width: 55px;
           background: none;
           border: none;
@@ -1054,7 +1054,7 @@ html body.institutionPage #region-sidebar-first {
           padding-right: 0px;
           padding-left: 10px;
           height: 32px;
-          border-radius: 5px 0px 0px 0px;          
+          border-radius: 4px 0px 0px 0px;          
         }        
       }  
     .institution-content{
@@ -1066,7 +1066,7 @@ html body.institutionPage #region-sidebar-first {
     @include flexbox;
     flex-direction: column;
     align-items: flex-start;
-    margin: 10px;
+    margin-bottom: 10px;
     justify-content: flex-end;
     background: transparent !important;
     border-bottom: 1px solid $lightTransparent2;
@@ -1091,9 +1091,9 @@ html body.institutionPage #region-sidebar-first {
 
   .institution-tile {
     width: 220px;
-    border-radius: 10px;
+    border-radius: 4px;
     overflow: hidden;
-    margin: 10px;    
+    margin-bottom: 8px;
     .category {
     font-size: 11px;      
     text-transform: uppercase;
@@ -1358,7 +1358,7 @@ html body.collectionPage {
 }
 
 .islandora-basic-collection-thumb {
-    border-radius: 0px 0px 10px 10px;
+    border-radius: 0px 0px 4px 4px;
     overflow: hidden;
 }
 
@@ -1511,12 +1511,11 @@ html body.collectionPage {
     @include flexbox;
     flex-direction: column;
     align-items: flex-start;
-    margin: 10px;
     justify-content: flex-end;
     background: transparent !important;
     border-bottom: 1px solid $lightTransparent2;
     padding-bottom: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
       width: calc(100% - 20px) !important;
       height: 200px !important;     
       color: white;
@@ -1572,9 +1571,9 @@ html body.collectionPage {
       width: 100%;
     }
     .islandora-basic-collection-object{
-      margin: 10px;
+      margin: 0px 0px 20px 0px;
       width: 220px;
-      border-radius: 10px;
+      border-radius: 4px;
       overflow: hidden;    
     }
 }
@@ -1584,7 +1583,7 @@ html body.collectionPage {
 
 
 .islandora-basic-collection-list-item{
-    border-radius: 10px;
+    border-radius: 4px;
     overflow: hidden;
     background: rgba(255, 255, 255, 0.070);
     border: 1px solid rgba(255, 255, 255, 0.09);
@@ -1630,7 +1629,7 @@ html body.collectionPage {
   .list-thumbnail img{
     height: 140px;
     overflow: hidden;
-    border-radius: 10px 0px 0px 10px;
+    border-radius: 4px 0px 0px 4px;
     top: 0px;
     max-width: none;
   }
@@ -1759,7 +1758,7 @@ html body.collectionPage.rootCollection{
   }
 
   form#islandora-collection-search-form {
-    border-radius: 5px 0px 0px 5px;
+    border-radius: 4px 0px 0px 4px;
     overflow: hidden;
     margin-top: 20px;
     width: 100%;
@@ -1780,7 +1779,7 @@ html body.collectionPage.rootCollection{
     right: 0px;
     top: 0px;
     height: 32px;
-    border-radius: 0px 3px 3px 0px;
+    border-radius: 0px 4px 4px 0px;
     width: 55px;
     background: none;
     border: none;
@@ -2538,7 +2537,7 @@ div#zone-user-wrapper {
   width: 300px;
   background: $topsearch;
   height: 33px;
-  border-radius: 5px;
+  border-radius: 4px;
   overflow: hidden;
   margin-right: 10px;
 }
@@ -9282,7 +9281,12 @@ margin-bottom: 20px;
     background: #000000b3;
 }
 
-.institutionPage .institution-header, .collectionPage .collectionHeader {
+html body.collectionPage .islandora-basic-collection-wrapper{
+  padding: 0px;
+  margin: 0px;
+}
+
+.institutionPage .institution-header, html body.collectionPage .collectionHeader {
     margin: 30px 0px 20px 0px !important;
     width: calc(100% - 0px) !important;
 }
@@ -9293,7 +9297,6 @@ body.institutionPage #block-system-main > div > .content, body.collectionPage #b
 }
 
 .institution-tile, .collectionPage .masonryItem {
-    margin: 2px !important;
 }
 
 body.context-data{
