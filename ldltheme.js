@@ -1066,7 +1066,7 @@
             if (outerGrid.width() <= 789) { grid.css("width","480px"); }
             if (outerGrid.width() <= 519) {
               grid.css("width","100%"); 
-              $('.masonryItem').css("width","calc(50vw - 50px)");
+              $('.masonryItem').css("width","calc(50vw - 23px)");
             }
       }
 
@@ -1098,8 +1098,8 @@
         initLayout: false,
         isFitWidth: false,
         percentPosition: false,      
-        columnWidth: 230,
-        gutter: 10,
+        columnWidth: 223,
+        gutter: 16,
         transitionDuration: '0.2s'        
       });
 
@@ -1122,8 +1122,27 @@
         sr.reveal('.alertBox_container', { duration: 100, delay: 0,  easing: 'ease-in', opacity: 1 }, 20);
         sr.reveal('.bookmarkWelcome', { duration: 800, delay: 100,  easing: 'linear', scale: 1, viewFactor: 0.01, }, 50);
         $('.collectionPage .loadingMessage').css('display', 'none');
-        gridDetents();               
-        grid.masonry();  
+        gridDetents();     
+        if (!$('body').hasClass('responsive-layout-mobile')){
+
+          grid.masonry();  
+        }
+        if ($('body').hasClass('mobileUser')){
+          var windowSize = $( window ).width();
+          var columnSize = windowSize/2 - 23
+          var grid2 = $('.islandora-basic-collection-grid, .institution-grid').masonry({
+            itemSelector: '.masonryItem',
+            initLayout: false,
+            isFitWidth: false,
+            percentPosition: false,      
+            columnWidth: columnSize,
+            gutter: 6,
+            transitionDuration: '0.s'        
+          });
+          grid2.masonry();  
+          console.log(columnSize)
+        };
+
         sr.reveal('.islandora-basic-collection-object, .institution-tile', { duration: 200, delay: 350,  easing: 'linear', scale: 1, viewFactor: 1, }, 20);
 
         $("a > .institutionLink_meta").each(function() {
@@ -1132,6 +1151,8 @@
         if ($('body').hasClass('newspaperSet')){
           newspaperLoad();
         };
+
+
       });
       // end functions
 
@@ -1493,6 +1514,12 @@ function monthClick(){
       if ( ($('body').hasClass('compoundObject')) || ($('body').hasClass('basicPage')) || ($('body').hasClass('institutionPage')) || ($('body').hasClass('collectionPage')) || ($('body').hasClass('oralHistory')) || ($('body').hasClass('audio')) || ($('body').hasClass('video')) || ($('body').hasClass('pdf')) || ($('body').hasClass('bookViewer')) || ($('body').hasClass('context-data')) || ($('body').hasClass('largeImage')) || ($('body').hasClass('newspaperSet'))){
       $('body').addClass('headerversiontwo');
       }
+
+            if ($(window).width() < 900) {
+
+        $('body').addClass('mobileUser');
+      }
+
       if (navigator.appName == 'Microsoft Internet Explorer' ||  !!(navigator.userAgent.match(/Trident/) || navigator.userAgent.match(/rv:11/)) || (typeof $.browser !== "undefined" && $.browser.msie == 1))
       {
         //alert("Please use Google Chrome, Mozilla Firefox or Safari.");

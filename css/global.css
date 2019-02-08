@@ -577,12 +577,11 @@ html body.institutionPage #region-sidebar-first {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-bottom: 10px;
   justify-content: flex-end;
   background: transparent !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.48);
   padding-bottom: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   width: calc(100% - 20px) !important;
   height: 200px !important; }
 .institutionPage .collection {
@@ -594,10 +593,10 @@ html body.institutionPage #region-sidebar-first {
   .institutionPage .sub-group .category {
     background: #2d2d2d; }
 .institutionPage .institution-tile {
-  width: 220px;
+  width: 223px;
   border-radius: 4px;
   overflow: hidden;
-  margin-bottom: 8px; }
+  margin-bottom: 16px; }
   .institutionPage .institution-tile .category {
     font-size: 11px;
     text-transform: uppercase;
@@ -949,8 +948,8 @@ html body.collectionPage .islandora-basic-collection-grid {
   html body.collectionPage .islandora-basic-collection-grid .islandora-basic-collection-thumb img {
     width: 100%; }
   html body.collectionPage .islandora-basic-collection-grid .islandora-basic-collection-object {
-    margin: 0px 0px 20px 0px;
-    width: 220px;
+    margin: 0px 0px 16px 0px;
+    width: 223px;
     border-radius: 4px;
     overflow: hidden; }
 html body.collectionPage .islandora-basic-collection-list-item {
@@ -6583,6 +6582,9 @@ body.multipleDaily .issueLevel .issue-container {
   .islandora-pdf-metadata, .islandora-large-image-metadata {
     display: block; } }
 @media screen and (max-width: 1260px) and (max-width: 900px) {
+  .collectionPage .institution-tile, .collectionPage .islandora-basic-collection-object, .institutionPage .institution-tile, .institutionPage .islandora-basic-collection-object {
+    margin-bottom: 6px !important; }
+
   .collectionPage::before, .institutionPage::before {
     content: "";
     position: fixed;

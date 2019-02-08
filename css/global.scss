@@ -1066,12 +1066,11 @@ html body.institutionPage #region-sidebar-first {
     @include flexbox;
     flex-direction: column;
     align-items: flex-start;
-    margin-bottom: 10px;
     justify-content: flex-end;
     background: transparent !important;
     border-bottom: 1px solid $lightTransparent2;
     padding-bottom: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
       width: calc(100% - 20px) !important;
       height: 200px !important;     
     }
@@ -1090,10 +1089,10 @@ html body.institutionPage #region-sidebar-first {
   }
 
   .institution-tile {
-    width: 220px;
+    width: 223px;
     border-radius: 4px;
     overflow: hidden;
-    margin-bottom: 8px;
+    margin-bottom: 16px;
     .category {
     font-size: 11px;      
     text-transform: uppercase;
@@ -1571,8 +1570,8 @@ html body.collectionPage {
       width: 100%;
     }
     .islandora-basic-collection-object{
-      margin: 0px 0px 20px 0px;
-      width: 220px;
+      margin: 0px 0px 16px 0px;
+      width: 223px;
       border-radius: 4px;
       overflow: hidden;    
     }
@@ -9269,6 +9268,11 @@ margin-bottom: 20px;
 
   @media screen and (max-width: 900px) {
 
+.collectionPage, .institutionPage{
+  .institution-tile, .islandora-basic-collection-object{
+    margin-bottom: 6px !important;
+  }
+}
 
 .collectionPage::before, .institutionPage::before{
     content: "";
