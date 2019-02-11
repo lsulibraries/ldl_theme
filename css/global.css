@@ -495,7 +495,7 @@ html body.institutionPage #region-sidebar-first {
 .institutionPage.metaOpened div#zone-header {
   margin-left: 480px !important;
   width: calc(100vw - 500px) !important;
-  transition-duration: 1s !important;
+  transition-duration: 0.5s !important;
   transition-delay: 0s !important; }
 .institutionPage.metaOpened #region-content {
   margin-left: 480px; }
@@ -830,7 +830,7 @@ html body.collectionPage .region-sidebar-first-inner .block-inner {
 html body.collectionPage.metaOpened div#zone-header {
   margin-left: 480px;
   width: calc(100vw - 500px);
-  transition-duration: 1s;
+  transition-duration: 0.5s;
   transition-delay: 0s; }
 html body.collectionPage.metaOpened #region-content {
   margin-left: 480px; }
@@ -1119,8 +1119,8 @@ html body.collectionPage.rootCollection.gridMode .islandora\:collectionCModel {
 h1.about-link {
   display: none; }
 
-.islandora-basic-collection div.item-list:nth-child(2n - 1) {
-  display: none; }
+.islandora-basic-collection div.item-list {
+  width: calc(100% - 20px); }
 .islandora-basic-collection .page-islandora-search div.item-list:nth-child(2n - 1) {
   display: block; }
 
@@ -4290,7 +4290,7 @@ body.headerversiontwo {
 body.headerversiontwo.metaOpened div#zone-header {
   margin-left: 25vw;
   width: calc(75vw - 20px);
-  transition-duration: 1s;
+  transition-duration: 0.5s;
   transition-delay: 0s; }
 
 #BRpager .ui-slider-handle {

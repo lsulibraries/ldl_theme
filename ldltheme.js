@@ -13,6 +13,7 @@
                     $("body").addClass('gridMode');
 
        }
+          $('.islandora-basic-collection-wrapper').find('div.item-list').first().remove();
 
 
       switch (true) { //detect page type or content type
