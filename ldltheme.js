@@ -32,8 +32,11 @@
            $('#page').parallax({imageSrc: 'https://i.imgur.com/yUbfVN7.jpg'});
           institutionSidebar();
           actionToggles();
+          var a = $('.institution-about').html();
+          
           $("<div class='mobileSummary'/>").insertAfter("#institution-title");
-          $(".institution-about p").clone().appendTo(".mobileSummary");
+          $('.mobileSummary').html(a);
+
           break;
         }
 
@@ -51,8 +54,8 @@
           collectionHover();
           collectionSidebar();
           actionToggles();
-
-
+          var a = $('.collection-description-text').html();
+          $('.mobileSummary').html(a);
 
           break;
         }        
@@ -383,6 +386,9 @@
           $('.islandora-basic-collection-item-count').appendTo('#block-islandora-collection-search-islandora-collection-search');
           $('h1#page-title').contents().appendTo('.collectionHeader #page-title');
           $('.depth-2 a').clone().appendTo('.headerBreadcrumb');          
+          $("<div class='mobileSummary'/>").insertAfter(".headerBreadcrumb");
+
+
       }
 
       function collectionHover(){
@@ -1066,7 +1072,7 @@
             if (outerGrid.width() <= 789) { grid.css("width","480px"); }
             if (outerGrid.width() <= 519) {
               grid.css("width","100%"); 
-              $('.masonryItem').css("width","calc(50vw - 23px)");
+              $('.masonryItem').css("width","calc(50vw - 26px)");
             }
       }
 
@@ -1129,14 +1135,14 @@
         }
         if ($('body').hasClass('mobileUser')){
           var windowSize = $( window ).width();
-          var columnSize = windowSize/2 - 23
+          var columnSize = windowSize/2 - 26
           var grid2 = $('.islandora-basic-collection-grid, .institution-grid').masonry({
             itemSelector: '.masonryItem',
             initLayout: false,
             isFitWidth: false,
             percentPosition: false,      
             columnWidth: columnSize,
-            gutter: 6,
+            gutter: 11,
             transitionDuration: '0.s'        
           });
           grid2.masonry();  
