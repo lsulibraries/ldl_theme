@@ -37,6 +37,7 @@
 
           $("<div class='mobileSummary'/>").insertAfter("#institution-title");
           $('.mobileSummary').html(a);
+          $("<a href='/#block-block-11' class='retunHome'><span><i class='fas fa-arrow-left'></i>Return to institution listing</span></a>").insertBefore(".mobileSummary");
 
           break;
         }
@@ -413,6 +414,35 @@
                 itemType = '<i class="fa fa-th"></i> Collection';
                 break;
             }
+
+            case ($(this).hasClass('islandora:compoundCModel')):{
+                itemType = '<img class="tileIcon" src="/sites/all/themes/ldl/images/azpOWoN.png"></img> Compound Object';
+                break;
+            }
+
+            case ($(this).hasClass('islandora:audioCModel')):{
+                itemType = '<i class="fa fa-volume-up" aria-hidden="true"></i> Audio';
+                break;
+            }
+
+
+            case ($(this).hasClass('islandora:pdfCModel')):{
+                itemType = '<i class="fa fa-file-pdf-o" aria-hidden="true"></i> PDF';
+                break;
+            }
+
+
+            case ($(this).hasClass('islandora:bookCModel')):{
+                itemType = '<i class="fas fa-book"></i> Book';
+                break;
+            }
+
+
+            case ($(this).hasClass('islandora:videoCModel')):{
+                itemType = '<i class="fas fa-video"></i> Video';
+                break;
+            }
+
 
           }
           $(this).find('.typeHover').html(itemType);
@@ -1148,6 +1178,7 @@
         };
 
         sr.reveal('.islandora-basic-collection-object, .institution-tile', { duration: 200, delay: 350,  easing: 'linear', scale: 1, viewFactor: 1, }, 20);
+        sr.reveal('.item-list', { duration: 200, delay: 350,  easing: 'linear', scale: 1, viewFactor: 1, }, 20);
 
         $("a > .institutionLink_meta").each(function() {
           $(this).colourBrightness();//

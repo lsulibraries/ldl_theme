@@ -229,6 +229,12 @@ body.logged-in{
 }
 
 
+img.tileIcon {
+    width: auto;
+    height: 15px;
+    margin-right: 5px;
+}
+
 .fixed{
   position: fixed !important;
 }
@@ -1117,11 +1123,12 @@ html body.institutionPage #region-sidebar-first {
           font-size: 16px;
         }    
     }
-    .institution-description{
-      display: none;
-    }
+
     .label {
         padding: 40px 20px 50px 20px;
+        .institution-description{
+          display: none;
+        }        
         .title {
           color: white;
           font-weight: 700;
@@ -1331,7 +1338,18 @@ opacity: 1;
   }  
 }
 
+.institution-tile, .item-list{
+  visibility: hidden;
+}
 
+a.retunHome {
+  font-size: 11px;
+    color: white;
+    margin-left: 3px;
+    .fa-w-14{
+      margin-right: 5px;
+    }
+}
 
 //Begin collection page styles
 

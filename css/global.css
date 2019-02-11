@@ -39,6 +39,11 @@ body.logged-in {
   body.logged-in .manageMenu .tabs > li:last-child {
     margin-right: 5px !important; }
 
+img.tileIcon {
+  width: auto;
+  height: 15px;
+  margin-right: 5px; }
+
 .fixed {
   position: fixed !important; }
 
@@ -618,6 +623,8 @@ html body.institutionPage #region-sidebar-first {
       font-size: 16px; }
   .institutionPage .institution-tile .label {
     padding: 40px 20px 50px 20px; }
+    .institutionPage .institution-tile .label .institution-description {
+      display: none; }
     .institutionPage .institution-tile .label .title {
       color: white;
       font-weight: 700;
@@ -781,6 +788,16 @@ html body.institutionPage #region-sidebar-first {
     background-color: #ffffff;
     background-image: url("../images/webster.png");
     background-size: 140px auto; }
+
+.institution-tile, .item-list {
+  visibility: hidden; }
+
+a.retunHome {
+  font-size: 11px;
+  color: white;
+  margin-left: 3px; }
+  a.retunHome .fa-w-14 {
+    margin-right: 5px; }
 
 html body.collectionPage #page::before {
   filter: blur(10px); }
