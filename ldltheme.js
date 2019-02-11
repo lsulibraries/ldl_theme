@@ -37,7 +37,7 @@
 
           $("<div class='mobileSummary'/>").insertAfter("#institution-title");
           $('.mobileSummary').html(a);
-          $("<a href='/#block-block-11' class='retunHome'><span><i class='fas fa-arrow-left'></i>Return to institution listing</span></a>").insertBefore(".mobileSummary");
+          // $("<a href='/#block-block-11' class='retunHome'><span><i class='fas fa-arrow-left'></i>Return to institution listing</span></a>").insertBefore(".mobileSummary");
 
           break;
         }
@@ -1958,10 +1958,11 @@ if ($('body').hasClass('pdf')){
           $('.metadataVertical #block-user-login').remove();
           //begin show more script
           var showChar = 300;  // How many characters are shown by default
+          var smallChar = 300;  // How many characters are shown by default
           var ellipsestext = "...";
           var moretext = "Show more";
           var lesstext = "Show less";
-          $('.short_desc p, .mods-abstract-mt, .list-abstract').each(function() {
+          $('.short_desc p, .mods-abstract-mt').each(function() {
               var content = $(this).html();
               if(content.length > showChar) {
                   var c = content.substr(0, showChar);
@@ -1970,6 +1971,15 @@ if ($('body').hasClass('pdf')){
                   $(this).html(html1);
               }
           });
+          $('.list-abstract').each(function() {
+              var content = $(this).html();
+              if(content.length > smallChar) {
+                  var c = content.substr(0, smallChar);
+                  var h = content.substr(smallChar, content.length - smallChar);
+                  var html1 = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span>'
+                  $(this).html(html1);
+              }
+          });          
           $(".morelink").click(function(){
               if($(this).hasClass("less")) {
                   $(this).removeClass("less");
