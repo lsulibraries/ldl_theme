@@ -320,6 +320,7 @@ div#breadcrumb {
 }
 
 .mobileSummary{
+  display: none;
   margin-bottom: 20px;
   p{
     margin: 0px;
@@ -1360,7 +1361,7 @@ html body.collectionPage {
     }    
 }
 
-.islandora-basic-collection-object:hover{
+.islandora-basic-collection-object:hover, .list-thumbnail:hover{
   .itemHover{
     transform: translateY(-40px);
     transition-duration: 0.2s;
@@ -1400,30 +1401,6 @@ html body.collectionPage {
 .islandora-basic-collection-list-item, .islandora-basic-collection-object{
       visibility: hidden;
     }
-
-
-.islandora-basic-collection-list-item div[class*="sp_large_image_cmodel"]::before{
-    content: 'large image';
-    position: absolute;
-    right: 0px;
-    color: white;
-    text-transform: uppercase;
-    width: 80px;
-    padding-top: 5px;
-    line-height: 13px;
-    text-align: center;
-    padding-left: 50px;
-    padding-right: 10px;
-    border-left: 1px solid rgba(255, 255, 255, 0.09);
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url($imageLegend);
-    background-repeat: no-repeat;
-    background-position: 34px 63px;
-    background-size: 23px;
-}
 
 
 
@@ -1598,13 +1575,15 @@ html body.collectionPage {
     background: rgba(255, 255, 255, 0.070);
     border: 1px solid rgba(255, 255, 255, 0.09);
     padding-bottom: 0px;
-    width: calc(100% - 20px);
-    margin: 0 10px;
     margin-top: 20px;
+    width: calc(100% - 20px);
 
 .list-metadata {
     max-height: 140px;
     margin-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;    
+    margin-left: 20px;
 }
 
     .list-subjects{
@@ -1645,8 +1624,8 @@ html body.collectionPage {
   }
 .list-item-container {
     @include flexbox;
+    height: 140px;
     align-items: center;    
-    padding-right: 140px;    
     .islandora-basic-object-abstract {
       color: white;
       padding: 6px 0px 10px 0px;
@@ -4606,7 +4585,7 @@ form#islandora-ip-embargo-object-embargo-form {
       #region-sidebar-first.infoOpened{
 transform: translate3d(0,0,0);
 transition-property: transform;
-      transition-duration: 1s;
+      transition-duration: 0.5s;
       position: fixed;
     left: 0px;
     bottom: 0px;
@@ -5816,7 +5795,7 @@ padding-top: 10px;
 #region-sidebar-first.infoOpened {
     transform: translate3d(0, 0, 0);
     transition-property: transform;
-    transition-duration: 1s;
+    transition-duration: 0.5s;
     position: fixed;
     left: 0px;
     bottom: 0px;
@@ -8950,6 +8929,8 @@ body.multipleDaily{
 
 @media screen and (max-width: 1366px) {
 
+
+
   html body.collectionPage, html body.institutionPage{
 
 
@@ -10270,6 +10251,42 @@ div#islandora-pdfjs {
     }
 }
   @media screen and (max-width: 740px) {
+
+html body.institutionPage .institution-header{
+    border: 0px;
+}
+
+.collectionHeader{
+  border: 0px;
+}
+
+html body.collectionPage{
+
+.collectionHeader{
+  border: 0px;
+}
+
+  .islandora-basic-collection-list-item{
+    width: 100%;
+      .list-metadata{
+      max-height: none;
+      margin:10px;
+      }
+      .list-thumbnail img {
+      width: calc(100vw - 62px);
+      height: auto;
+      }
+      .list-item-container {
+      height: auto;
+      align-items: flex-start;
+      flex-direction: column-reverse;
+          .islandora-basic-object-abstract{
+            padding: 0px;
+          }
+      }
+
+  }
+}
 
 .userMenu{
       margin-left: 5px;

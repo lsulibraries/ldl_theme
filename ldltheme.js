@@ -33,7 +33,7 @@
           institutionSidebar();
           actionToggles();
           var a = $('.institution-about').html();
-          
+
           $("<div class='mobileSummary'/>").insertAfter("#institution-title");
           $('.mobileSummary').html(a);
 
@@ -393,10 +393,7 @@
 
       function collectionHover(){
 
-        $(".islandora-basic-collection-object").each(function() {
-          var itemDate =  $(this).find('.islandora-basic-object-date_created .metadataValue').html();
-          $('<div class="itemHover"><div class="dateHover"/><div class="typeHover"/></div>').appendTo(this);
-          $(this).find('.dateHover').html(itemDate);
+        $(".islandora-basic-collection-object, .list-item-container").each(function() {
 
           var itemType;
           switch (true) { //detect page type or content type

@@ -112,6 +112,7 @@ div#breadcrumb {
   right: 0px; }
 
 .mobileSummary {
+  display: none;
   margin-bottom: 20px; }
   .mobileSummary p {
     margin: 0px; }
@@ -801,7 +802,7 @@ html body.collectionPage .itemHover {
   padding: 20px 10px; }
   html body.collectionPage .itemHover .typeHover .svg-inline--fa {
     margin-right: 3px; }
-html body.collectionPage .islandora-basic-collection-object:hover .itemHover {
+html body.collectionPage .islandora-basic-collection-object:hover .itemHover, html body.collectionPage .list-thumbnail:hover .itemHover {
   transform: translateY(-40px);
   transition-duration: 0.2s; }
 html body.collectionPage .islandora-basic-collection-thumb {
@@ -824,27 +825,6 @@ html body.collectionPage .islandora-basic-collection-grid .loadingMessage {
   width: 100%; }
 html body.collectionPage .islandora-basic-collection-list-item, html body.collectionPage .islandora-basic-collection-object {
   visibility: hidden; }
-html body.collectionPage .islandora-basic-collection-list-item div[class*="sp_large_image_cmodel"]::before {
-  content: 'large image';
-  position: absolute;
-  right: 0px;
-  color: white;
-  text-transform: uppercase;
-  width: 80px;
-  padding-top: 5px;
-  line-height: 13px;
-  text-align: center;
-  padding-left: 50px;
-  padding-right: 10px;
-  border-left: 1px solid rgba(255, 255, 255, 0.09);
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: url("../images/4LmxSra.png");
-  background-repeat: no-repeat;
-  background-position: 34px 63px;
-  background-size: 23px; }
 html body.collectionPage .region-sidebar-first-inner .block-inner {
   background: none; }
 html body.collectionPage.metaOpened div#zone-header {
@@ -965,12 +945,14 @@ html body.collectionPage .islandora-basic-collection-list-item {
   background: rgba(255, 255, 255, 0.07);
   border: 1px solid rgba(255, 255, 255, 0.09);
   padding-bottom: 0px;
-  width: calc(100% - 20px);
-  margin: 0 10px;
-  margin-top: 20px; }
+  margin-top: 20px;
+  width: calc(100% - 20px); }
   html body.collectionPage .islandora-basic-collection-list-item .list-metadata {
     max-height: 140px;
-    margin-right: 20px; }
+    margin-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px; }
   html body.collectionPage .islandora-basic-collection-list-item .list-subjects {
     display: flex;
     flex-wrap: wrap; }
@@ -1002,8 +984,8 @@ html body.collectionPage .islandora-basic-collection-list-item {
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
-    align-items: center;
-    padding-right: 140px; }
+    height: 140px;
+    align-items: center; }
     html body.collectionPage .islandora-basic-collection-list-item .list-item-container .islandora-basic-object-abstract {
       color: white;
       padding: 6px 0px 10px 0px;
@@ -3452,7 +3434,7 @@ div.islandora-pdf-object, div.islandora-large-image-object {
 .compoundObject #region-sidebar-first.infoOpened {
   transform: translate3d(0, 0, 0);
   transition-property: transform;
-  transition-duration: 1s;
+  transition-duration: 0.5s;
   position: fixed;
   left: 0px;
   bottom: 0px; }
@@ -4280,7 +4262,7 @@ body.headerversiontwo {
   body.headerversiontwo #region-sidebar-first.infoOpened {
     transform: translate3d(0, 0, 0);
     transition-property: transform;
-    transition-duration: 1s;
+    transition-duration: 0.5s;
     position: fixed;
     left: 0px;
     bottom: 0px; }
@@ -7237,6 +7219,29 @@ body.multipleDaily .issueLevel .issue-container {
   html body.collectionPage .islandora-basic-collection-list-item .list-subjects {
     display: none; } }
 @media screen and (max-width: 1260px) and (max-width: 740px) {
+  html body.institutionPage .institution-header {
+    border: 0px; }
+
+  .collectionHeader {
+    border: 0px; }
+
+  html body.collectionPage .collectionHeader {
+    border: 0px; }
+  html body.collectionPage .islandora-basic-collection-list-item {
+    width: 100%; }
+    html body.collectionPage .islandora-basic-collection-list-item .list-metadata {
+      max-height: none;
+      margin: 10px; }
+    html body.collectionPage .islandora-basic-collection-list-item .list-thumbnail img {
+      width: calc(100vw - 62px);
+      height: auto; }
+    html body.collectionPage .islandora-basic-collection-list-item .list-item-container {
+      height: auto;
+      align-items: flex-start;
+      flex-direction: column-reverse; }
+      html body.collectionPage .islandora-basic-collection-list-item .list-item-container .islandora-basic-object-abstract {
+        padding: 0px; }
+
   .userMenu {
     margin-left: 5px; }
 
