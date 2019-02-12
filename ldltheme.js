@@ -1190,7 +1190,6 @@
         $(".islandora-basic-collection-object").each(function() {
           var height = $(this).find("img").prop('naturalHeight');
           var jpg = ($(this).find("img").attr('src')).replace('TN', 'JPG');
-          console.log(height);
           if (height > 0){
            $(this).attr('src', jpg);
           }
@@ -1241,7 +1240,41 @@
 
       if (($('body').hasClass('collectionPage')) || ($('body').hasClass('institutionPage'))){
 
-        $(".islandora-basic-collection-object").each(function() {
+
+        $(".islandora-basic-collection-object:not(.islandora\\:compoundCModel)").each(function() {
+          var height = $(this).find("img").prop('naturalHeight');
+          var jpg = ($(this).find("img").attr('src')).replace('TN', 'JPG');
+          if (height > 150){
+           $(this).find("img").attr('src', jpg);
+          }
+
+        });
+
+
+
+          $(".islandora\\:compoundCModel").each(function() {
+
+          var str = ($(this).find("img").attr('src'));
+          var address = str.substr(0, str.indexOf('/datastream')); 
+          var addressEnding =  str.substr(str.indexOf('/datastream'), str.length-4); 
+          var lastSingle = address.charAt(address.length-1);
+
+          if (lastSingle == 0){
+            var lastDouble = address.substr(-2,2);
+            var correctDouble = (lastDouble - 2);
+            var jpgAddress = address.replace(/..$/,correctDouble)
+            var fullAddress = jpgAddress + addressEnding;             
+            $(this).find("img").attr('src', fullAddress);
+
+          }
+
+          else{
+            var correctSingle = (lastSingle - 2);
+            var jpgAddress = address.replace(/.$/,correctSingle)
+            var fullAddress = jpgAddress + addressEnding;         
+            $(this).find("img").attr('src', fullAddress);
+          }
+
           var height = $(this).find("img").prop('naturalHeight');
           var jpg = ($(this).find("img").attr('src')).replace('TN', 'JPG');
           console.log(height);
@@ -1251,7 +1284,7 @@
 
         });
 
-   
+
       }
 
         $("a > .institutionLink_meta").each(function() {
