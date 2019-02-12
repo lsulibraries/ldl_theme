@@ -41,7 +41,7 @@ body.logged-in {
 
 img.tileIcon {
   width: auto;
-  height: 13px;
+  height: 13px !important;
   margin-right: 5px;
   margin-bottom: 2px; }
 
