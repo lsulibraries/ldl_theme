@@ -400,6 +400,7 @@
               var lsuSubs = [
                 "LSU Agricultural Center",
                 "LSU Libraries Special Collections",
+                "LSU Sugar Resources",                
                 "LSU Museum of Art",
                 "LSU University Archives",
                 "LSU Libraries Government Documents",
@@ -455,7 +456,7 @@
                 break;
             }
 
-            case ($(this).hasClass('islandora:islandora:sp_remote_resource ')):{
+            case ($(this).hasClass('islandora:sp_remote_resource')):{
                 itemType = '<i class="fa fa-retweet" aria-hidden="true"></i> Remote Resource';
                 break;
             }
