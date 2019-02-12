@@ -743,7 +743,7 @@
         $(".downloadList").insertAfter(".image_headerMenu");
         if ($('body').hasClass('compoundChild')){
           var commentedURL = $('div.currentImage').find('noscript').addClass('widestIMG').text().match(/src\s*=\s*"(.+?)"/);
-          thumbnailURL = commentedURL[1].replace('TN', 'JPG');
+          thumbnailURL = commentedURL[1].replace('/TN', '/JPG');
           $('.imagePreview img').prop('src', thumbnailURL);
         }
         if (($('body').hasClass('compoundChild')) && ($('body').hasClass('oralHistory'))){
@@ -1186,6 +1186,17 @@
       });
 
       if (($('body').hasClass('collectionPage')) || ($('body').hasClass('institutionPage'))){
+
+        $(".islandora-basic-collection-object").each(function() {
+          var height = $(this).find("img").prop('naturalHeight');
+          var jpg = ($(this).find("img").attr('src')).replace('TN', 'JPG');
+          console.log(height);
+          if (height > 0){
+           $(this).attr('src', jpg);
+          }
+
+        });
+
       $(window).on('resize', function(){
         gridDetents();
 
@@ -1227,6 +1238,21 @@
 
         sr.reveal('.islandora-basic-collection-object, .institution-tile', { duration: 200, delay: 350,  easing: 'linear', scale: 1, viewFactor: 1, }, 20);
         sr.reveal('.item-list', { duration: 200, delay: 350,  easing: 'linear', scale: 1, viewFactor: 1, }, 20);
+
+      if (($('body').hasClass('collectionPage')) || ($('body').hasClass('institutionPage'))){
+
+        $(".islandora-basic-collection-object").each(function() {
+          var height = $(this).find("img").prop('naturalHeight');
+          var jpg = ($(this).find("img").attr('src')).replace('TN', 'JPG');
+          console.log(height);
+          if (height > 150){
+           $(this).find("img").attr('src', jpg);
+          }
+
+        });
+
+   
+      }
 
         $("a > .institutionLink_meta").each(function() {
           $(this).colourBrightness();//
