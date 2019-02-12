@@ -1187,15 +1187,6 @@
 
       if (($('body').hasClass('collectionPage')) || ($('body').hasClass('institutionPage'))){
 
-        $(".islandora-basic-collection-object").each(function() {
-          var height = $(this).find("img").prop('naturalHeight');
-          var jpg = ($(this).find("img").attr('src')).replace('TN', 'JPG');
-          if (height > 0){
-           $(this).attr('src', jpg);
-          }
-
-        });
-
       $(window).on('resize', function(){
         gridDetents();
 
