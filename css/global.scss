@@ -231,8 +231,9 @@ body.logged-in{
 
 img.tileIcon {
     width: auto;
-    height: 15px;
+    height: 13px;
     margin-right: 5px;
+    margin-bottom: 2px;
 }
 
 .fixed{
@@ -940,6 +941,21 @@ html body.institutionPage #region-sidebar-first {
 
 .institutionPage{
 
+.headerBreadcrumb{
+  margin-left: 3px;
+    margin-top: 4px;
+    margin-bottom: 5px;
+    align-items: center !important;
+    justify-content: center;
+    font-size: 16px;
+    color: white;
+}
+
+.headerBreadcrumb a {
+    color: white;
+}
+
+
 .mobileSummary{
   display: none;
 }
@@ -1024,7 +1040,7 @@ html body.institutionPage #region-sidebar-first {
 
 
     .parallax-mirror {
-        filter: brightness(0.35);
+        filter: brightness(0.35) blur(10px);
     }
 
 
@@ -1355,9 +1371,10 @@ a.retunHome {
 
 html body.collectionPage {
 
-#page::before{
-  filter: blur(10px);
+.item-list {
+  margin: 0px;
 }
+
 
 .islandora-basic-collection-content_stats{
   display: none;
@@ -1489,7 +1506,7 @@ html body.collectionPage {
   }
 
   .parallax-mirror {
-      filter: brightness(0.35);
+      filter: brightness(0.35) blur(10px);
   }
 
   .parralax-mirror {
@@ -1541,6 +1558,8 @@ html body.collectionPage {
 
   #block-islandora-collection-search-islandora-collection-search {
     display: block;
+    border-radius: 4px;
+    overflow: hidden;   
   }
 
   #region-sidebar-first{
@@ -1571,6 +1590,7 @@ html body.collectionPage {
     .islandora-basic-collection-caption {
       padding: 10px;
       background: white;
+      line-height: 13px;      
       a {
       color: #676767;
       font-weight: 700;
@@ -1580,7 +1600,7 @@ html body.collectionPage {
       width: 100%;
     }
     .islandora-basic-collection-object{
-      margin: 0px 0px 16px 0px;
+      margin: 0px 0px 15px 0px;
       width: 223px;
       border-radius: 4px;
       overflow: hidden;    
@@ -1769,7 +1789,7 @@ html body.collectionPage.rootCollection{
   }
 
   form#islandora-collection-search-form {
-    border-radius: 4px 0px 0px 4px;
+    border-radius: 4px;
     overflow: hidden;
     margin-top: 20px;
     width: 100%;

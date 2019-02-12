@@ -38,7 +38,7 @@
           $("<div class='mobileSummary'/>").insertAfter("#institution-title");
           $('.mobileSummary').html(a);
           // $("<a href='/#block-block-11' class='retunHome'><span><i class='fas fa-arrow-left'></i>Return to institution listing</span></a>").insertBefore(".mobileSummary");
-
+          subGroup();
           break;
         }
 
@@ -393,6 +393,42 @@
 
       }
 
+      function subGroup(){
+              var subGroup = $("#institution-title").html();
+              var breadcrumb = $(".headerBreadcrumb a:nth-child(2)").html();
+              var hardAfter = " test ";
+              var lsuSubs = [
+                "LSU Agricultural Center",
+                "LSU Libraries Special Collections",
+                "LSU Museum of Art",
+                "LSU University Archives",
+                "LSU Libraries Government Documents",
+                "Carter Music Resources Center",
+                "T. Harry Williams Center for Oral History",
+                "Louisiana Sea Grant",
+              ];
+
+              console.log(breadcrumb);
+
+            switch (true) { 
+
+              case ((jQuery.inArray(subGroup, lsuSubs) !== -1)):{
+              $('<div class="headerBreadcrumb"><a href="/">LDL</a>&nbsp; / &nbsp;<a href="/lsu">Louisiana State University</a></div>').insertAfter(".itemTitle")
+              break;
+              }
+
+              case ((jQuery.inArray(breadcrumb, lsuSubs) !== -1)):{
+              $('<span class="breadcrumbDivider">/ &nbsp;</span><a class="hardCrumb" href="/lsu">Louisiana State University</a> <span class="breadcrumbDivider">&nbsp;</span>').insertAfter(".headerBreadcrumb a:nth-child(1)")
+              break;
+              }
+
+
+            }
+
+          }
+      
+
+
       function collectionHover(){
 
         $(".islandora-basic-collection-object, .list-item-container").each(function() {
@@ -409,7 +445,6 @@
                 break;
             }
 
-
             case ($(this).hasClass('islandora:collectionCModel')):{
                 itemType = '<i class="fa fa-th"></i> Collection';
                 break;
@@ -420,11 +455,20 @@
                 break;
             }
 
+            case ($(this).hasClass('islandora:islandora:sp_remote_resource ')):{
+                itemType = '<i class="fa fa-retweet" aria-hidden="true"></i> Remote Resource';
+                break;
+            }
+
             case ($(this).hasClass('islandora:audioCModel')):{
                 itemType = '<i class="fa fa-volume-up" aria-hidden="true"></i> Audio';
                 break;
             }
 
+            case ($(this).hasClass('islandora:sp_pdf')):{
+                itemType = '<i class="fa fa-file-pdf-o" aria-hidden="true"></i> PDF';
+                break;
+            }
 
             case ($(this).hasClass('islandora:pdfCModel')):{
                 itemType = '<i class="fa fa-file-pdf-o" aria-hidden="true"></i> PDF';
@@ -1034,6 +1078,9 @@
 
               });          
           });
+
+                    subGroup();
+
         }        
         $('li:empty').remove();
       $('.manageMenu').insertBefore('#shareToggle');
