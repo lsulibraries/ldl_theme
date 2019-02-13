@@ -1192,9 +1192,9 @@
         });
 
         $(".islandora-basic-collection-object, .islandora-basic-collection-object1").each(function() {
-          if (!$(this).find('islandora_ip_embargo_embargoed')){
+          var embargo = $(this).find(".islandora_ip_embargo_embargoed").length;  
+          if (embargo == 0){
           var str = ($(this).find("a > img").attr('src'));
-          console.log(str);
           var addressEnding =  str.substr(str.indexOf('/images'), str.length-4); 
           if (addressEnding == "/images/folder.png"){
             $(this).addClass("noThumbnail");
