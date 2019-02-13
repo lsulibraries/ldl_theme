@@ -454,6 +454,11 @@
             case ($(this).hasClass('islandora:compoundCModel')):{
                 itemType = '<img class="tileIcon" src="/sites/all/themes/ldl/images/azpOWoN.png"></img> Compound Object';
                 break;
+            }        
+
+            case ($(this).hasClass('islandora:sp-ohCModel')):{
+                itemType = '<i class="fa fa-volume-up" aria-hidden="true"></i> Oral History';
+                break;
             }
 
             case ($(this).hasClass('islandora:sp_remote_resource')):{
@@ -1169,6 +1174,9 @@
         });
       }
 
+            $("<span class='noThumb'>Thumbnail Not Available</span>").prependTo(".islandora\\:sp-ohCModel .islandora-basic-collection-thumb a")
+
+
       function longThumbnails(){
 
 
@@ -1178,41 +1186,48 @@
           if (height > 150){
            $(this).find("img").attr('src', jpg);
           }
-
         });
 
-
-
-          $(".islandora\\:compoundCModel").each(function() {
-
+        $(".islandora-basic-collection-object, .islandora-basic-collection-object1").each(function() {
           var str = ($(this).find("a > img").attr('src'));
-          var address = str.substr(0, str.indexOf('/datastream')); 
-          var addressEnding =  str.substr(str.indexOf('/datastream'), str.length-4); 
-          var lastSingle = address.charAt(address.length-1);
-          var lastDouble = address.substr(-2,2);
-          var correctDouble = (lastDouble - 2);
-
-          if ($(lastDouble).isNumeric){
-            var jpgAddress = address.replace(/..$/,correctDouble)
-            var fullAddress = jpgAddress + addressEnding;             
-            $(this).find("a > img").attr('src', fullAddress);
+          var addressEnding =  str.substr(str.indexOf('/images'), str.length-4); 
+          if (addressEnding == "/images/folder.png"){
+            $(this).addClass("noThumbnail");
+            $("<span class='noThumb'>Thumbnail Not Available</span>").prependTo(".islandora\\:sp-ohCModel .islandora-basic-collection-thumb a, .noThumbnail .islandora-basic-collection-thumb a, .noThumbnail .list-thumbnail a")
           }
-
-          else if (lastSingle >= 2){
-            var correctSingle = (lastSingle - 2);
-            var jpgAddress = address.replace(/.$/,correctSingle)
-            var fullAddress = jpgAddress + addressEnding;         
-            $(this).find("a > img").attr('src', fullAddress);
-          } 
-
-          var height = $(this).find("a > img").prop('naturalHeight');
-          var jpg = ($(this).find("a > img").attr('src')).replace('TN', 'JPG');
-          console.log(height);
-          if (height > 150){
-           $(this).find("a > img").attr('src', jpg);
-          }
-
         });
+
+
+        //   $(".islandora\\:compoundCModel").each(function() {
+
+        //   var str = ($(this).find("a > img").attr('src'));
+        //   var address = str.substr(0, str.indexOf('/datastream')); 
+        //   var addressEnding =  str.substr(str.indexOf('/datastream'), str.length-4); 
+        //   var lastSingle = address.charAt(address.length-1);
+        //   var lastDouble = address.substr(-2,2);
+        //   var correctDouble = (lastDouble - 2);
+
+        //   if ($(lastDouble).isNumeric){
+        //     var jpgAddress = address.replace(/..$/,correctDouble)
+        //     var fullAddress = jpgAddress + addressEnding;             
+        //     $(this).find("a > img").attr('src', fullAddress);
+        //   }
+
+        //   else if (lastSingle >= 2){
+        //     var correctSingle = (lastSingle - 2);
+        //     var jpgAddress = address.replace(/.$/,correctSingle)
+        //     var fullAddress = jpgAddress + addressEnding;         
+        //     $(this).find("a > img").attr('src', fullAddress);
+        //   } 
+
+        //   var height = $(this).find("a > img").prop('naturalHeight');
+        //   var jpg = ($(this).find("a > img").attr('src')).replace('TN', 'JPG');
+        //   console.log(height);
+        //   if (height > 150){
+        //    $(this).find("a > img").attr('src', jpg);
+        //   }
+
+        // });
       }
 
       $('.instStats').masonry({

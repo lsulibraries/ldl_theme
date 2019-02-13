@@ -1367,9 +1367,54 @@ a.retunHome {
     }
 }
 
+
 //Begin collection page styles
 
 html body.collectionPage {
+
+.noThumbnail, .islandora\:sp-ohCModel{
+  img{
+    display: none;
+  }
+  .islandora-basic-collection-thumb, .list-thumbnail
+  {
+    height: 223px;
+    background: #232323;  
+    @include flexbox;
+    align-items: center;
+    justify-content: center;
+    a{
+      color: white;
+    }
+  }  
+  .list-thumbnail{
+    width: 200px;
+    height: inherit;
+  }
+span.noThumb {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #5c5c5c;
+    border-radius: 50%;
+    padding: 20px;
+    text-align: center;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+  &.islandora-basic-collection-object1{
+    span.noThumb {
+      border: 0px;
+    }
+  }
+}
+
+
+
 
 .item-list {
   margin: 0px;

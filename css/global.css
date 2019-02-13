@@ -810,6 +810,38 @@ a.retunHome {
   a.retunHome .fa-w-14 {
     margin-right: 5px; }
 
+html body.collectionPage .noThumbnail img, html body.collectionPage .islandora\:sp-ohCModel img {
+  display: none; }
+html body.collectionPage .noThumbnail .islandora-basic-collection-thumb, html body.collectionPage .noThumbnail .list-thumbnail, html body.collectionPage .islandora\:sp-ohCModel .islandora-basic-collection-thumb, html body.collectionPage .islandora\:sp-ohCModel .list-thumbnail {
+  height: 223px;
+  background: #232323;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  html body.collectionPage .noThumbnail .islandora-basic-collection-thumb a, html body.collectionPage .noThumbnail .list-thumbnail a, html body.collectionPage .islandora\:sp-ohCModel .islandora-basic-collection-thumb a, html body.collectionPage .islandora\:sp-ohCModel .list-thumbnail a {
+    color: white; }
+html body.collectionPage .noThumbnail .list-thumbnail, html body.collectionPage .islandora\:sp-ohCModel .list-thumbnail {
+  width: 200px;
+  height: inherit; }
+html body.collectionPage .noThumbnail span.noThumb, html body.collectionPage .islandora\:sp-ohCModel span.noThumb {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #5c5c5c;
+  border-radius: 50%;
+  padding: 20px;
+  text-align: center;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2px; }
+html body.collectionPage .noThumbnail.islandora-basic-collection-object1 span.noThumb, html body.collectionPage .islandora\:sp-ohCModel.islandora-basic-collection-object1 span.noThumb {
+  border: 0px; }
 html body.collectionPage .item-list {
   margin: 0px; }
 html body.collectionPage .islandora-basic-collection-content_stats {
