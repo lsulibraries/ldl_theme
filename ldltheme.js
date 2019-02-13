@@ -47,7 +47,6 @@
           $(".collectionPage <div class='collectionSearch'/>").appendTo(".collectionHeader");
           $(".collectionPage #block-islandora-collection-search-islandora-collection-search").appendTo(".collectionSearch");
           $(".collectionSearch input.form-submit").val(' ');
-
           if ($('body').hasClass('page-islandora-object-islandoraroot')) {
             rootCollections();                
           }
@@ -1174,7 +1173,6 @@
         });
       }
 
-            $("<span class='noThumb'>Thumbnail Not Available</span>").prependTo(".islandora\\:sp-ohCModel .islandora-basic-collection-thumb a")
 
 
       function longThumbnails(){
@@ -1188,12 +1186,17 @@
           }
         });
 
+        $(".islandora\\:sp-ohCModel").each(function() {
+          //insert conditional to find out if thumbnail is actually photo or just mic icon
+          $("<span class='noThumb'>Thumbnail Not Available</span>").prependTo($(this).find(".islandora-basic-collection-thumb a"));
+        });
+
         $(".islandora-basic-collection-object, .islandora-basic-collection-object1").each(function() {
           var str = ($(this).find("a > img").attr('src'));
           var addressEnding =  str.substr(str.indexOf('/images'), str.length-4); 
           if (addressEnding == "/images/folder.png"){
             $(this).addClass("noThumbnail");
-            $("<span class='noThumb'>Thumbnail Not Available</span>").prependTo(".islandora\\:sp-ohCModel .islandora-basic-collection-thumb a, .noThumbnail .islandora-basic-collection-thumb a, .noThumbnail .list-thumbnail a")
+            $("<span class='noThumb'>Thumbnail Not Available</span>").prependTo($(this).find(".islandora-basic-collection-thumb a"));
           }
         });
 
