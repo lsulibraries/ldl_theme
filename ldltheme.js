@@ -1056,7 +1056,7 @@
         }
         var testlength = ($('.manageMenu > ul > li').length)
         console.log(testlength);
-        if (($('.manageMenu > ul > li').length) < 3){
+        if ((($('.manageMenu > ul > li').length) < 3) && (!$('body').hasClass('compoundChild'))){
           $(".manageMenu").css("display", "none"); //kills extra space if manageMenu is not being used
         }
         $("<div id='share'/>").insertAfter("#shareToggle");
