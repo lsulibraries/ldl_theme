@@ -21,7 +21,7 @@
           break;
         }
 
-        case ( (($('#page-title').text())) == 'Access denied') :{
+        case (( (($('#page-title').text())) == 'Access denied') || ( (($('#page-title').text())) == 'Page not found') ):{
           $("body").addClass("accessDenied");
           $('<div class="filler"></div>').prependTo('.region-header-second-inner');
           $('#page').parallax({imageSrc: 'https://i.imgur.com/yUbfVN7.jpg'});        
@@ -30,6 +30,7 @@
           $('<i class="fa fa-exclamation-triangle" aria-hidden="true"></i>').prependTo('#block-system-main .content');
           break;
         }
+
 
         case ($('body').hasClass('institutionPage')) :{
           console.log('hi inst');         

@@ -191,7 +191,8 @@ span.bold {
   filter: brightness(0.35); }
 .context-content .mainText, .accessDenied .mainText {
   color: white;
-  font-size: 14px; }
+  font-size: 14px;
+  width: 200px; }
 .context-content .fa-w-18, .accessDenied .fa-w-18 {
   font-size: 30px;
   position: relative;
