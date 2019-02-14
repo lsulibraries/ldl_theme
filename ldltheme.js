@@ -372,7 +372,18 @@
         childBreadcrumb();
         //$('.compoundMetadata > .modsTitle').appendTo('.itemTitle'); adds compound title to item title
         $('.manageMenu').insertBefore('#block-system-main #shareToggle');
-       $('.block-compound-jail-display').remove();
+        $('.block-compound-jail-display').remove();
+        $("<div id='share'/>").insertAfter("#shareToggle");
+        $("#share").jsSocials({
+          url: urlhref,
+          text: title,
+          showLabel: false,
+          showCount: "inside",
+          shares: ["twitter", "facebook"]
+        });
+        $('#block-system-main #shareToggle').click(function(){
+          $('#block-system-main #share').toggleClass('shareActive');
+        });
       }
 
       function collectionHeader(){
@@ -1048,7 +1059,7 @@
         if (($('.manageMenu > ul > li').length) < 3){
           $(".manageMenu").css("display", "none"); //kills extra space if manageMenu is not being used
         }
-        $("<div id='share'/>").insertAfter("#block-system-main #shareToggle");
+        $("<div id='share'/>").insertAfter("#shareToggle");
         $("#share").jsSocials({
           url: urlhref,
           text: title,
