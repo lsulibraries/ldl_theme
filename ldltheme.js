@@ -28,6 +28,7 @@
           $('#block-system-main .content').wrapInner('<div class="mainText"></div>');
           $('h1#page-title').prependTo('#block-system-main .content');
           $('<i class="fa fa-exclamation-triangle" aria-hidden="true"></i>').prependTo('#block-system-main .content');
+          $('form#islandora-solr-simple-search-form').attr('action','/');
           break;
         }
 

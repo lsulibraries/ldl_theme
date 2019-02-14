@@ -2616,7 +2616,8 @@ body.logged-in.front div#zone-header {
       background-repeat: no-repeat;
       background-position: center;
       background-size: 30px 30px;
-      background-image: url(../images/SH5syLP.png); }
+      background-image: url(../images/SH5syLP.png);
+      z-index: 9; }
 .front > #region-content .content.clearfix {
   display: -webkit-box;
   display: -moz-box;
