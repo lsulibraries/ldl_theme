@@ -5,6 +5,7 @@
     } else{
       console.log('jquery fired once');
       $("<div class='mobileMenu'/>").insertBefore("div#page");
+      // $(".manageParent, ul.tabs").appendTo(".itemMenu").wrapAll('<div class="manageMenu"/>'); //moves the view/ip embargo/manage menu
 
       // if ( ($('.block-islandora-compound-object').length) && ($('#block-system-main .block-inner .content > div').length) && (!($("body").attr('class').indexOf('-pages') > -1)) && ( !$('body').is('.audioPDF, .regeneratePage, .datastreamPage, .book, .pagesView'))){
       // }'
@@ -223,6 +224,7 @@
               oralHistory_end();
               $('div.backgroundDiv').css('background-image', 'url(/sites/all/themes/ldl/images/audiobanner.jpeg")');
           }    
+          $(".manageParent, ul.tabs").appendTo(".itemMenu").wrapAll('<div class="manageMenu"/>'); //moves the view/ip embargo/manage menu
 
           break;
         }
@@ -359,7 +361,7 @@
         $(".content > .backContainer").remove();
         $(".depth-4 > a").clone().prop({class:"backContainer"}).insertAfter(".descContainer").html("<div class='backCollection backParent'>Back</div>");
 
-        $("<div class='headerBreadcrumb'/>").insertBefore(".userMenu");
+        $("<div class='headerBreadcrumb'/>").insertBefore("#block-system-main .userMenu");
         //$('.parentMetadata').insertAfter('.itemMetadata, .metadataVertical > div');
         var institutionText = $(".depth-2 > a").clone(); //creates href path from breadcrumb depth-2
         var collectionText = $(".depth-3 > a").clone(); //creates href path from breadcrumb depth-3
@@ -369,7 +371,7 @@
         $(collectionText).addClass("institutionSmall").insertAfter(".breadcrumbDivider"); //creates collection breadcrumb
         childBreadcrumb();
         //$('.compoundMetadata > .modsTitle').appendTo('.itemTitle'); adds compound title to item title
-        $('.manageMenu').insertBefore('#shareToggle');
+        $('.manageMenu').insertBefore('#block-system-main #shareToggle');
        $('.block-compound-jail-display').remove();
       }
 
@@ -418,7 +420,6 @@
                 "Louisiana Sea Grant",
               ];
 
-              console.log(breadcrumb);
 
             switch (true) { 
 
@@ -714,7 +715,8 @@
         $("<div class='userMenu'/>").appendTo(".item_headerMenu"); //temporarily moves count
         $("<div class='infoToggle userSelect'><div class='iconSelect'></div><div class='textSelect'>details</div></div>").appendTo(".userMenu"); //adds toggle for parent metadata
 
-        $("ul.tabs").appendTo(".userMenu:first").wrapAll('<div class="manageMenu"/>').insertBefore('#shareToggle'); //moves the view/ip embargo/manage menu
+        $("ul.tabs").appendTo(".userMenu:first").wrapAll('<div class="manageMenu"/>');
+        $(".manageMenu").insertBefore('#block-system-main #shareToggle'); //moves the view/ip embargo/manage menu
         $("div#block-system-main > div.tabs").remove(); // removes top div which once contained the tabs
         if (!itemTitle === 'undefined'){
           if (((itemTitle).length > 20) && ($(".modsTitle").length)) {
@@ -1046,7 +1048,7 @@
         if (($('.manageMenu > ul > li').length) < 3){
           $(".manageMenu").css("display", "none"); //kills extra space if manageMenu is not being used
         }
-        $("<div id='share'/>").insertAfter("#shareToggle");
+        $("<div id='share'/>").insertAfter("#block-system-main #shareToggle");
         $("#share").jsSocials({
           url: urlhref,
           text: title,
