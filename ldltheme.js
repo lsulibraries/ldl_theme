@@ -15,13 +15,21 @@
        }
           $('.islandora-basic-collection-wrapper').find('div.item-list').first().remove();
 
-
       switch (true) { //detect page type or content type
 
         case ($('body').hasClass('front')) :{
           break;
         }
 
+        case ( (($('#page-title').text())) == 'Access denied') :{
+          $("body").addClass("accessDenied");
+          $('<div class="filler"></div>').prependTo('.region-header-second-inner');
+          $('#page').parallax({imageSrc: 'https://i.imgur.com/yUbfVN7.jpg'});        
+          $('#block-system-main .content').wrapInner('<div class="mainText"></div>');
+          $('h1#page-title').prependTo('#block-system-main .content');
+          $('<i class="fa fa-exclamation-triangle" aria-hidden="true"></i>').prependTo('#block-system-main .content');
+          break;
+        }
 
         case ($('body').hasClass('institutionPage')) :{
           console.log('hi inst');         
@@ -487,7 +495,7 @@
             }
 
 
-            case ($(this).hasClass('islandora:videoCModel')):{
+            case ($(this).hasClass('islandora:sp_videoCModel')):{
                 itemType = '<i class="fas fa-video"></i> Video';
                 break;
             }
@@ -1298,7 +1306,7 @@
         };
 
         sr.reveal('.islandora-basic-collection-object, .institution-tile', { duration: 200, delay: 350,  easing: 'linear', scale: 1, viewFactor: 1, }, 20);
-        sr.reveal('.item-list', { duration: 200, delay: 350,  easing: 'linear', scale: 1, viewFactor: 1, }, 20);
+        sr.reveal('.item-list', { duration: 200, delay: 350,  easing: 'linear', scale: 1, viewFactor: 0.01, }, 20);
 
 
 
@@ -1668,7 +1676,7 @@ function monthClick(){
       }
       // end newspaper 2.0
 
-      if ( ($('body').hasClass('compoundObject')) || ($('body').hasClass('basicPage')) || ($('body').hasClass('institutionPage')) || ($('body').hasClass('collectionPage')) || ($('body').hasClass('oralHistory')) || ($('body').hasClass('audio')) || ($('body').hasClass('video')) || ($('body').hasClass('pdf')) || ($('body').hasClass('bookViewer')) || ($('body').hasClass('context-data')) || ($('body').hasClass('largeImage')) || ($('body').hasClass('newspaperSet'))){
+      if ( ($('body').hasClass('compoundObject')) || ($('body').hasClass('accessDenied')) || ($('body').hasClass('basicPage')) || ($('body').hasClass('institutionPage')) || ($('body').hasClass('collectionPage')) || ($('body').hasClass('oralHistory')) || ($('body').hasClass('audio')) || ($('body').hasClass('video')) || ($('body').hasClass('pdf')) || ($('body').hasClass('bookViewer')) || ($('body').hasClass('context-data')) || ($('body').hasClass('largeImage')) || ($('body').hasClass('newspaperSet'))){
       $('body').addClass('headerversiontwo');
       }
 

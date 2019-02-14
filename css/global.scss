@@ -393,6 +393,55 @@ span.bold {
   padding: 12px;
 }
 
+/*Basic Pages and Access Denied*/
+
+.context-content, .accessDenied{
+
+
+    #block-system-main .content{
+      border: 1px solid #727272;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      width: 300px;
+      height: 300px;
+      margin: 0 auto;
+      padding: 20px;
+      overflow: hidden;
+    }
+    div#block-system-main {
+      margin: 0px auto;
+      max-width: 1200px;
+      padding-bottom: 200px;
+      margin-top: 80px;
+    }  
+    #page-title{
+      display: block;
+      font-size: 30px;
+      color: white;
+      line-height: 37px;
+      margin: 0px;
+      font-weight: 400;  
+    }
+    .parallax-mirror {
+      filter: brightness(0.35);
+    }    
+    .mainText {
+      color: white;
+      font-size: 14px;
+    }   
+
+    .fa-w-18 {
+        font-size: 30px;
+        position: relative;
+        bottom: 10px;
+        color: $lightTransparent2;
+    }    
+}
+
+
 /*Institutional Page*/
 
 
@@ -510,9 +559,6 @@ a.institution-about-edit {
     background: white;
     color: #474747;
   }
-  #page-title {
-    color: #474747;
-  }
   .institution-about {
     border-left: 1px solid rgba(0, 0, 0, 0.20);
   }
@@ -531,9 +577,6 @@ a.institution-about-edit {
 .websterTheme {
   background: white;
   color: #474747;  
-  #page-title {
-    color: #474747;
-  }
 
   .collection-description-text{
     color: #434343;
@@ -724,10 +767,6 @@ a.institution-about-edit {
     background: $subrColor;
     color: #474747;
   }
-  #page-title {
-    color: #474747;
-  }
-
   .institution-about {
     border-left: 1px solid rgba(0, 0, 0, 0.20);
   }
@@ -882,9 +921,6 @@ a.institution-about-edit {
    .collectionHeader, .institution-search::before, .child-institution-collections::before {
 
     background: $vvilleColor;
-    color: #474747;
-  }
-  #page-title {
     color: #474747;
   }
   .collectionLogo {
@@ -5420,7 +5456,7 @@ i{
 }
 
 .book-thumbnail img{
-    height: 600px;
+    height: 200px;
 }
 
 }
