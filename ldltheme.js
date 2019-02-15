@@ -14,8 +14,9 @@
                     $("body").addClass('gridMode');
 
        }
-          $('.islandora-basic-collection-wrapper').find('div.item-list').first().remove();
-
+      $('.islandora-basic-collection-wrapper').find('div.item-list').first().remove();
+      $('#skip-link, select#edit-collections').remove();
+      $('.form-item-namespaces label').removeAttr('for');
       switch (true) { //detect page type or content type
 
         case ($('body').hasClass('front')) :{
