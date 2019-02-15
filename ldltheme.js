@@ -403,13 +403,26 @@
           else {
             if ($('.islandora-basic-collection-grid').length){
             var firstItem = $('.islandora-basic-collection-object > .islandora-basic-collection-thumb > a > img').prop('src');
-            console.log(firstItem);
-            $('#page').parallax({imageSrc: firstItem });    
+                var addressEnding =  firstItem.substr(firstItem.indexOf('/images'), firstItem.length-4); 
+                if (addressEnding == "/images/folder.png"){
+                  $('#page').parallax({imageSrc: 'https://i.imgur.com/yUbfVN7.jpg' });                 
+                }      
+                else{
+                  $('#page').parallax({imageSrc: firstItem });   
+                }         
             }
             else {
             var firstItem = $('.islandora-basic-collection-object1 > .list-item-container > .list-thumbnail > a > img').prop('src');
-            $('#page').parallax({imageSrc: firstItem });                  
+            $('#page').parallax({imageSrc: firstItem });      
+                var addressEnding =  firstItem.substr(firstItem.indexOf('/images'), firstItem.length-4); 
+                if (addressEnding == "/images/folder.png"){
+                  $('#page').parallax({imageSrc: 'https://i.imgur.com/yUbfVN7.jpg' });                  
+                }
+                else{
+                  $('#page').parallax({imageSrc: firstItem });   
+                }                      
             }        
+
           }
           $('.islandora-basic-collection-item-count').appendTo('#block-islandora-collection-search-islandora-collection-search');
           $('h1#page-title').contents().appendTo('.collectionHeader #page-title');
