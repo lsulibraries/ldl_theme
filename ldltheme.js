@@ -382,6 +382,9 @@
           showCount: "inside",
           shares: ["twitter", "facebook"]
         });
+        $(".jssocials-share-twitter a").attr('title','Share on Twitter');
+        $(".jssocials-share-facebook a").attr('title','Share on Facebook');
+
         $('#block-system-main #shareToggle').click(function(){
           $('#block-system-main #share').toggleClass('shareActive');
         });
@@ -1071,6 +1074,8 @@
         $('#shareToggle').click(function(){
           $('#share').toggleClass('shareActive');
         });
+        $(".jssocials-share-twitter a").attr('title','Share on Twitter');
+        $(".jssocials-share-facebook a").attr('title','Share on Facebook');        
         downloadHeight = $('.downloadList_container').height();
         $('.downloadSelect').click(function(){
           $('.downloadList').toggleClass('extendList');
