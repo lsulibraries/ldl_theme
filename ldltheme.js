@@ -1404,7 +1404,10 @@
       }//this length check avoids this from firing multiple times from using the + button on the advanced search
       //$("#block-block-1").clone().prop({ id: "landingAdvanced"}).appendTo("#largeSearch");
       $("#largeSearch #edit-simple--2").prop({ id: "largeSearch_form"});
-                $("#largeSearch #edit-simple--2 > .form-item > input").prop({ id: "largeSearch_form_input"});
+      $("#largeSearch_form > .form-item > input").prop({ id: "largeSearch_form_input"});
+      $("#largeSearch_form > input").prop({ id: "largeSearch_form_input_outer"});
+      $("#largeSearch #islandora-solr-simple-search-form").prop({ id: "largeSearch-simple-search-form"});
+
       $(".footerImg").clone().prop({ id: "logoMobile"}).prependTo("#zone-header");
       $(".landingMessage").clone().prop({id: "landingMobile", class: "landingMessageMobile"}).appendTo("#zone-header");
       $(".parent-collections").appendTo(".islandora-large-image-content, .islandora-pdf-content");

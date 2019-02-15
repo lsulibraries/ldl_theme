@@ -96,6 +96,9 @@ li a.active {
 form#admin-form {
   margin: 3vw; }
 
+#largeSearch_form > .form-item > label {
+  display: none; }
+
 body:not(.collectionPage, .institutionPage) #block-system-main {
   background: white; }
 
