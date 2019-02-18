@@ -132,7 +132,7 @@ span.bold {
 .front .region-header-second-inner {
   justify-content: flex-end !important; }
 
-.page-issues div#block-system-main {
+.page-issues:not(.accessDenied) div#block-system-main {
   margin: 50px;
   width: auto;
   padding: 30px;

@@ -348,7 +348,7 @@ span.bold {
   }
 }
 
-.page-issues {
+.page-issues:not(.accessDenied) {
   div#block-system-main {
     margin: 50px;
     width: auto;
