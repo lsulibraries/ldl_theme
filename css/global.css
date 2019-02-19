@@ -165,8 +165,37 @@ span.bold {
 .islandora-solr-range-slider {
   padding: 12px; }
 
-/*Basic Pages and Access Denied*/
-.context-content #block-system-main .content, .accessDenied #block-system-main .content {
+/*Basic Pages*/
+.node-type-page {
+  color: white; }
+  .node-type-page #block-system-main .content {
+    color: white !important; }
+    .node-type-page #block-system-main .content h1, .node-type-page #block-system-main .content h2, .node-type-page #block-system-main .content h3, .node-type-page #block-system-main .content h4, .node-type-page #block-system-main .content h5, .node-type-page #block-system-main .content h6 {
+      color: white; }
+  .node-type-page .userMenu {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.48); }
+  .node-type-page #page-title {
+    display: block !important;
+    color: white;
+    font-size: 40px;
+    line-height: 37px;
+    margin: 0px; }
+  .node-type-page .parallax-mirror {
+    filter: brightness(0.35); }
+  .node-type-page div#block-system-main {
+    margin: 0px auto;
+    max-width: 1200px;
+    padding-bottom: 200px;
+    margin-top: 80px;
+    justify-content: flex-start; }
+
+/*Access Denied*/
+.accessDenied #block-system-main .content {
   border: 1px solid #727272;
   display: flex;
   flex-direction: column;
@@ -178,25 +207,25 @@ span.bold {
   margin: 0 auto;
   padding: 20px;
   overflow: hidden; }
-.context-content div#block-system-main, .accessDenied div#block-system-main {
+.accessDenied div#block-system-main {
   margin: 0px auto;
   max-width: 1200px;
   padding-bottom: 200px;
   margin-top: 80px; }
-.context-content #page-title, .accessDenied #page-title {
+.accessDenied #page-title {
   display: block;
   font-size: 30px;
   color: white;
   line-height: 37px;
   margin: 0px;
   font-weight: 400; }
-.context-content .parallax-mirror, .accessDenied .parallax-mirror {
+.accessDenied .parallax-mirror {
   filter: brightness(0.35); }
-.context-content .mainText, .accessDenied .mainText {
+.accessDenied .mainText {
   color: white;
   font-size: 14px;
   width: 200px; }
-.context-content .fa-w-18, .accessDenied .fa-w-18 {
+.accessDenied .fa-w-18 {
   font-size: 30px;
   position: relative;
   bottom: 10px;
@@ -7315,6 +7344,11 @@ body.multipleDaily .issueLevel .issue-container {
   html body.collectionPage .islandora-basic-collection-list-item .list-subjects {
     display: none; } }
 @media screen and (max-width: 1260px) and (max-width: 740px) {
+  body.node-type-page #block-system-main {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: auto; }
+
   html body.institutionPage .institution-header {
     border: 0px; }
 

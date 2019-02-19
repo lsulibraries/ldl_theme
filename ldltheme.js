@@ -34,6 +34,15 @@
           break;
         }
 
+        case (($('body').hasClass('node-type-page')) && ($('body').hasClass('not-front'))) :{
+          $('#page').parallax({imageSrc: 'https://i.imgur.com/yUbfVN7.jpg'});
+          $('<div class="basicHeader"/>').prependTo('#block-system-main');
+          $('#page-title').prependTo('.basicHeader');
+
+          actionToggles();
+          break;
+        }
+
 
         case ($('body').hasClass('institutionPage')) :{
           console.log('hi inst');         
@@ -51,6 +60,7 @@
           $('.mobileSummary').html(a);
           // $("<a href='/#block-block-11' class='retunHome'><span><i class='fas fa-arrow-left'></i>Return to institution listing</span></a>").insertBefore(".mobileSummary");
           subGroup();
+          namespaceURL();
           break;
         }
 
@@ -1065,6 +1075,14 @@
           $(".nano").nanoScroller({ alwaysVisible: false });           
                     $('#region-sidebar-first').addClass('transition');
         });
+        if ($('body').hasClass('node-type-page')){
+        $("<div class='userMenu'/>").insertAfter(".basicHeader"); //temporarily moves count
+
+        $("ul.tabs").appendTo(".userMenu:first").wrapAll('<div class="manageMenu"/>');
+        $(".manageMenu").insertBefore('#block-system-main #shareToggle'); //moves the view/ip embargo/manage menu
+        $("div#block-system-main > div.tabs").remove(); // removes top div which once contained the tabs          
+          $("<div id='shareToggle' class='userSelect'><div class='iconSelect'></div><div class='textSelect'>share</div></div>").insertAfter(".infoToggle");
+        }        
         if ($('body').hasClass('compoundParent')){
           $("<div id='shareToggle' class='userSelect'><div class='iconSelect'></div><div class='textSelect'>share</div></div>").insertAfter(".infoToggle");
         }
@@ -1354,11 +1372,12 @@
 
       });
       // end functions
-
-      // begin namespace
-      var title = document.getElementsByTagName("title")[0].innerHTML;
       var urlhref = window.location.href;
+      var title = document.getElementsByTagName("title")[0].innerHTML;
       var url = window.location.pathname;
+      // begin namespace
+    function namespaceURL(){
+
       var namespaces = [
         "uno",
         "loyno",
@@ -1393,6 +1412,7 @@
           $("body").addClass(ns + "Theme institution");
         }
       }
+    }
       //end namespace
       if ($(".video-js").length && $("#islandora-pdfjs").length) {
         $("body").addClass("audioPDF");
@@ -1713,7 +1733,7 @@ function monthClick(){
       }
       // end newspaper 2.0
 
-      if ( ($('body').hasClass('compoundObject')) || ($('body').hasClass('accessDenied')) || ($('body').hasClass('basicPage')) || ($('body').hasClass('institutionPage')) || ($('body').hasClass('collectionPage')) || ($('body').hasClass('oralHistory')) || ($('body').hasClass('audio')) || ($('body').hasClass('video')) || ($('body').hasClass('pdf')) || ($('body').hasClass('bookViewer')) || ($('body').hasClass('context-data')) || ($('body').hasClass('largeImage')) || ($('body').hasClass('newspaperSet'))){
+      if ( ($('body').hasClass('compoundObject')) || ($('body').hasClass('page-node')) || ($('body').hasClass('accessDenied')) || ($('body').hasClass('basicPage')) || ($('body').hasClass('institutionPage')) || ($('body').hasClass('collectionPage')) || ($('body').hasClass('oralHistory')) || ($('body').hasClass('audio')) || ($('body').hasClass('video')) || ($('body').hasClass('pdf')) || ($('body').hasClass('bookViewer')) || ($('body').hasClass('context-data')) || ($('body').hasClass('largeImage')) || ($('body').hasClass('newspaperSet'))){
       $('body').addClass('headerversiontwo');
       }
 

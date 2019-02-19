@@ -396,9 +396,49 @@ span.bold {
   padding: 12px;
 }
 
-/*Basic Pages and Access Denied*/
+/*Basic Pages*/
 
-.context-content, .accessDenied{
+.node-type-page{
+
+    #block-system-main .content{
+      color: white !important;
+      h1, h2, h3, h4, h5, h6{
+        color: white;
+      }
+    }
+
+    .userMenu {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 20px;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.48);
+    }  
+    #page-title{
+      display: block !important;
+      color: white;
+      font-size: 40px;
+      line-height: 37px;      
+      margin: 0px;    
+    }
+    .parallax-mirror {
+      filter: brightness(0.35);
+    }  
+    color: white;
+    div#block-system-main {
+    margin: 0px auto;
+    max-width: 1200px;
+    padding-bottom: 200px;
+    margin-top: 80px;
+    justify-content: flex-start;
+    }      
+}
+
+/*Access Denied*/
+
+
+.accessDenied{
 
 
     #block-system-main .content{
@@ -10383,6 +10423,14 @@ div#islandora-pdfjs {
     }
 }
   @media screen and (max-width: 740px) {
+
+body.node-type-page{
+  #block-system-main{
+        padding-left: 20px;
+    padding-right: 20px;
+    width: auto;
+  }
+}
 
 html body.institutionPage .institution-header{
     border: 0px;
