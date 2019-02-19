@@ -4817,7 +4817,7 @@ body.newspaperSet {
 body.newspaperSet #page {
   display: none; }
 
-body.largeImage, body.pdf, body.video, body.audio, body.oralHistory {
+body.largeImage, body.pdf, html body.video, html body.audio, html body.oralHistory {
   background: #000000; }
 
 body.largeImage .firstMonthCover:not(.firstYearCover), body.pdf .firstMonthCover:not(.firstYearCover), body.video .firstMonthCover:not(.firstYearCover), body.newspaperSet .firstMonthCover:not(.firstYearCover), body.audio .firstMonthCover:not(.firstYearCover), body.oralHistory .firstMonthCover:not(.firstYearCover) {

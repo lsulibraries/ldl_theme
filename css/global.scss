@@ -6628,7 +6628,7 @@ body.newspaperSet #page{
 }
 
 //begin largeImage 2.0
-body.largeImage, body.pdf, body.video, body.audio, body.oralHistory{
+body.largeImage, body.pdf, html body.video, html body.audio, html body.oralHistory{
   background: #000000;
 }
 

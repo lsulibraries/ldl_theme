@@ -504,6 +504,11 @@
                 break;
             }        
 
+            case ($(this).hasClass('islandora:sp-audioCModel')):{
+                itemType = '<i class="fa fa-volume-up" aria-hidden="true"></i> Audio';
+                break;
+            }
+
             case ($(this).hasClass('islandora:sp-ohCModel')):{
                 itemType = '<i class="fa fa-volume-up" aria-hidden="true"></i> Oral History';
                 break;
