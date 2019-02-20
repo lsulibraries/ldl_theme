@@ -336,6 +336,35 @@ a.institution-about-edit {
 .lsuaTheme .institutionLabel {
   background-image: url("../images/lsualogo.png"); }
 
+.websterTheme {
+  background: white;
+  color: #474747; }
+  .websterTheme .collection-description-text {
+    color: #434343; }
+  .websterTheme .institution-header, .websterTheme .collectionHeader, .websterTheme .institution-search::before, .websterTheme .child-institution-collections::before {
+    background: #ffffff; }
+  .websterTheme .institution-about {
+    border-left: 1px solid rgba(0, 0, 0, 0.2); }
+  .websterTheme form#islandora-collection-search-form {
+    border: 2px solid white; }
+  .websterTheme .institution-search input[type="text"] {
+    border: 2px solid white; }
+  .websterTheme .institutionLabel::before {
+    background: white; }
+  .websterTheme .collectionSearch form#islandora-collection-search-form {
+    border: 2px solid #8c8c8c; }
+  .websterTheme .collectionLogo {
+    background-image: url("../images/webster.png");
+    cursor: pointer; }
+  .websterTheme .institutionLabel {
+    background-image: url("../images/webster.png"); }
+
+.lsuaTheme .collectionLogo {
+  background-image: url("../images/lsualogo.png");
+  cursor: pointer; }
+.lsuaTheme .institutionLabel {
+  background-image: url("../images/lsualogo.png"); }
+
 .lsusTheme .collectionLogo {
   background-image: url("../images/LSUS%20Logo%2011102015.png");
   cursor: pointer; }
@@ -710,6 +739,104 @@ html body.institutionPage #region-sidebar-first {
       font-size: 11px; }
   .institutionPage .institution-tile .description, .institutionPage .institution-tile .institution-count-collections {
     display: none; }
+
+/*institution list*/
+#block-block-11 {
+  display: block;
+  align-items: center;
+  margin: 0 auto;
+  background: none; }
+  #block-block-11 .content.clearfix {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex; }
+  #block-block-11 .homepageInstitutions {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex; }
+  #block-block-11 .content p {
+    width: 1000px;
+    height: 120px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px; }
+  #block-block-11 .institutionLink_meta {
+    padding: 10px;
+    opacity: 0;
+    letter-spacing: 1px;
+    width: 100%;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    line-height: 15px; }
+  #block-block-11 a.institutionLink:hover {
+    opacity: 1;
+    -moz-transition-duration: 0s;
+    -o-transition-duration: 0s;
+    -webkit-transition-duration: 0s;
+    transition-duration: 0s; }
+    #block-block-11 a.institutionLink:hover .institutionLink_meta {
+      opacity: 1;
+      -moz-transition-duration: 0.5s;
+      -o-transition-duration: 0.5s;
+      -webkit-transition-duration: 0.5s;
+      transition-duration: 0.5s; }
+  #block-block-11 a.institutionLink {
+    width: calc(16.666vw - 3px);
+    height: 180px;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 80px auto;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-end; }
+  #block-block-11 a.institutionLink.lascLink {
+    background-color: #16325a;
+    background-image: url("../images/lasc.jpg");
+    background-size: 130px auto; }
+  #block-block-11 a.institutionLink.dccLink {
+    background-color: #083a07;
+    background-image: url("../images/logo-white.png");
+    background-size: 90px auto; }
+
+a.institutionLink.lsmLink {
+  background-color: #5d0e8b;
+  background-image: url("../images/uimSOt2.png");
+  background-size: 110px auto; }
+
+a.institutionLink.lsuLink {
+  background-color: #3C1053;
+  background-image: url("../images/LSU_Gold_CMYK.png");
+  background-size: 70px auto; }
+
+a.institutionLink.ebrplLink {
+  background-color: #181B42;
+  background-image: url("../images/verticalebrpl.jpg"); }
+
+a.institutionLink.lsuaLink {
+  background-color: #ffffff;
+  background-image: url("../images/lsualogo.png"); }
+
+a.institutionLink.lsusLink {
+  background-color: #ffffff;
+  background-image: url("../images/LSUS%20Logo%2011102015.png"); }
 
 /*institution list*/
 #block-block-11 {

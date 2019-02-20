@@ -633,6 +633,53 @@ a.institution-about-edit {
     border-left: 1px solid rgba(0, 0, 0, 0.20);
   }
   form#islandora-collection-search-form {
+
+    border: 2px solid white;
+  }
+  .institution-search input[type="text"] {
+    border: 2px solid white;
+  }
+  .institutionLabel::before{
+    background: white;
+  }
+  .collectionSearch form#islandora-collection-search-form {
+    border: 2px solid #8c8c8c;
+  }
+  .collectionLogo {
+    background-image: url($websterLogo);
+    cursor: pointer;
+  }
+  .institutionLabel{
+    background-image: url($websterLogo);
+  }
+}
+
+.lsuaTheme {
+  .collectionLogo {
+    background-image: url($lsuaLogo);
+    cursor: pointer;
+  }
+  .institutionLabel{
+    background-image: url($lsuaLogo);
+  }
+}
+
+
+.websterTheme {
+  background: white;
+  color: #474747;  
+
+  .collection-description-text{
+    color: #434343;
+  }
+  .institution-header, .collectionHeader, .institution-search::before, .child-institution-collections::before {
+    background: $websterColor;
+  }
+
+  .institution-about {
+    border-left: 1px solid rgba(0, 0, 0, 0.20);
+  }
+  form#islandora-collection-search-form {
     border: 2px solid white;
   }
   .institution-search input[type="text"] {
@@ -1244,6 +1291,113 @@ html body.institutionPage #region-sidebar-first {
     }
   }
 }
+
+/*institution list*/
+
+// .institutionLabel {
+  // padding: 0px 20px;
+  // text-align: center;
+  // line-height: 17px;
+// }
+
+#block-block-11 {
+display:block;
+  align-items: center;
+  margin: 0 auto;
+background: none;
+  .content.clearfix {
+    @include flexbox;
+  }
+
+  .homepageInstitutions {
+    @include flexbox;
+  }
+
+  .content p {
+    width: 1000px;
+    height: 120px;
+    @include flexbox;
+    flex-wrap: wrap;
+    margin: 0px;
+  }
+
+  .institutionLink_meta {
+      padding: 10px;
+      opacity: 0;
+     letter-spacing: 1px;
+             width: 100%;
+         @include transition-duration(.5s);
+             line-height: 15px;
+  }
+
+  a.institutionLink:hover {
+
+    opacity: 1;
+    @include transition-duration(0s);
+  .institutionLink_meta {
+opacity: 1;
+    @include transition-duration(.5s);
+
+  }
+  }
+
+  a.institutionLink {
+    width: calc(16.666vw - 3px);
+    height: 180px;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 80px auto;
+    @include transition-duration(.5s);
+    @include flexbox;
+    align-items: flex-end;
+  }
+
+  a.institutionLink.lascLink {
+    background-color: $lascColor;
+    background-image: url($lascLogo);
+    background-size: 130px auto;
+  }
+
+  a.institutionLink.dccLink {
+    background-color: $dccColor;
+    background-image: url($dccLogo);
+    background-size: 90px auto;
+  }
+}
+
+  a.institutionLink.lsmLink {
+    background-color: $lsmColor;
+    background-image: url($lsmLogo);
+    background-size: 110px auto;
+  }
+
+  a.institutionLink.lsuLink {
+    background-color: $lsuColor;
+    background-image: url($lsuLogo);
+    background-size: 70px auto;
+  }
+
+  a.institutionLink.ebrplLink {
+    background-color: $ebrplColor;
+    background-image: url($ebrplLogo);
+  }
+
+  a.institutionLink.lsuaLink {
+    background-color: $lsusColor;
+    background-image: url($lsuaLogo);
+  }
+
+  a.institutionLink.lsusLink {
+    background-color: $lsusColor;
+    background-image: url($lsusLogo);
+  }
+
+
+//Institution List
+
+
+
 
 /*institution list*/
 

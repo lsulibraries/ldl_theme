@@ -186,6 +186,7 @@ function alpha_preprocess_islandora_basic_collection_wrapper(&$variables) {
   $variables['about_link'] = l($record['title'], $record['alias']);
   $variables['landing_page_title'] = $record['title'];
 
+
   // Hack ! to patch the display weirdness that happens with multiple 'dc:description' fields.
   // This is not ideal- arbitrarily prefers the first dc:description field.
   try {

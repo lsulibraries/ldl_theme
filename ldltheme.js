@@ -802,7 +802,9 @@
         $(".downloadList").insertAfter(".image_headerMenu");
         if ($('body').hasClass('compoundChild')){
           var commentedURL = $('div.currentImage').find('noscript').addClass('widestIMG').text().match(/src\s*=\s*"(.+?)"/);
+
           thumbnailURL = commentedURL[1].replace('/TN', '/JPG');
+
           $('.imagePreview img').prop('src', thumbnailURL);
         }
         if (($('body').hasClass('compoundChild')) && ($('body').hasClass('oralHistory'))){
