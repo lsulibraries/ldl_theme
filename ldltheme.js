@@ -822,7 +822,17 @@
 
           thumbnailURL = commentedURL[1].replace('/TN', '/JPG');
 
+          $.ajax(thumbnailURL, {
+            statusCode: {
+              404: function() {
+          $('.imagePreview img').prop('src', commentedURL[1]);
+              },
+              200: function() {
           $('.imagePreview img').prop('src', thumbnailURL);
+              }
+            }
+          });
+
         }
         if (($('body').hasClass('compoundChild')) && ($('body').hasClass('oralHistory'))){
           thumbnailURL = $("div.oralhistory-banner img").prop('src');
