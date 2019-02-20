@@ -35,6 +35,7 @@ $Purple2: #7C4DFF;
 $Violet2: #945EB8;
 $LDLBlue: #327BB3;
 
+$loadingGif: '../images/loading.gif';
 $compoundLegend: '../images/azpOWoN.png';
 $compoundLegendDark: '../images/IUHIf6A.png';
 $childLegend: '../images/jaWlCjM.png';
@@ -209,6 +210,12 @@ html, body {
   margin: 0;
 }
 
+html body.itemPage{
+  #block-system-main {
+    background: white;
+  }
+}
+
 body.logged-in{
   padding-top: 59px !important;
   .grid-3 .metadataSidebar.nano-content {
@@ -219,6 +226,14 @@ body.logged-in{
     margin-right: 5px !important;
   }
 
+}
+
+
+img.tileIcon {
+    width: auto;
+    height: 13px !important;
+    margin-right: 5px;
+    margin-bottom: 2px;
 }
 
 .fixed{
@@ -286,7 +301,15 @@ form#admin-form {
   margin: 3vw;
 }
 
+#largeSearch_form > .form-item > label{
+  display: none;
+}
 
+body:not(.collectionPage, .institutionPage){
+#block-system-main{
+  background: white;
+}
+}
 
 div#breadcrumb {
   @include flexbox;
@@ -307,6 +330,14 @@ div#breadcrumb {
   right: 0px;
 }
 
+.mobileSummary{
+  display: none;
+  margin-bottom: 20px;
+  p{
+    margin: 0px;
+  }
+}
+
 span.bold {
   font-weight: 700;
 }
@@ -317,7 +348,7 @@ span.bold {
   }
 }
 
-.page-issues {
+.page-issues:not(.accessDenied) {
   div#block-system-main {
     margin: 50px;
     width: auto;
@@ -365,102 +396,111 @@ span.bold {
   padding: 12px;
 }
 
+/*Basic Pages*/
+
+.node-type-page{
+
+    #block-system-main .content{
+      color: white !important;
+      h1, h2, h3, h4, h5, h6{
+        color: white;
+      }
+    }
+
+    .userMenu {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 20px;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.48);
+    }  
+    #page-title{
+      display: block !important;
+      color: white;
+      font-size: 40px;
+      line-height: 37px;      
+      margin: 0px;    
+    }
+    .parallax-mirror {
+      filter: brightness(0.35);
+    }  
+    color: white;
+    div#block-system-main {
+    margin: 0px auto;
+    max-width: 1200px;
+    padding-bottom: 200px;
+    margin-top: 80px;
+    justify-content: flex-start;
+    }      
+}
+
+/*Access Denied*/
+
+
+.accessDenied{
+
+
+    #block-system-main .content{
+      border: 1px solid #727272;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      width: 300px;
+      height: 300px;
+      margin: 0 auto;
+      padding: 20px;
+      overflow: hidden;
+    }
+    div#block-system-main {
+      margin: 0px auto;
+      max-width: 1200px;
+      padding-bottom: 200px;
+      margin-top: 80px;
+    }  
+    #page-title{
+      display: block;
+      font-size: 30px;
+      color: white;
+      line-height: 37px;
+      margin: 0px;
+      font-weight: 400;  
+    }
+    .parallax-mirror {
+      filter: brightness(0.35);
+    }    
+    .mainText {
+      color: white;
+      font-size: 14px;
+      width: 200px;
+    }   
+
+    .fa-w-18 {
+        font-size: 30px;
+        position: relative;
+        bottom: 10px;
+        color: $lightTransparent2;
+    }    
+}
+
+
 /*Institutional Page*/
 
 
-.institution-collection-description {
-    height: 420px;
-    display: flex;
-    padding-left: 50px;
-    padding-right: 50px;
-    justify-content: flex-start;
-    align-items: flex-start;
-    align-self: baseline;
-    font-size: 14px;
-    overflow: hidden;
-    flex-direction: column;
-    @include transition-duration(1s);
-    transition-delay: 0s;
-    width: 100%;
-    color: rgba(255, 255, 255, 0.66);
-    margin-top: 60px;
-    position: relative;
-    word-break: break-word;
-}
-
-
-
-
-.institution-collection-description::after {
-    display: block;
-    position: absolute;
-    background-image: linear-gradient(to bottom, transparent 00%, #1a1a1a 90%);
-    height: 110px;
-    width: 100%;
-    content: '';
-    bottom: 60px;
-}
-
-.title-description {
-    font-weight: 900;
-    width: 100%;
-    margin-bottom: 11px;
-    font-size: 17px;
-    color: white;
-}
-
-.institution-collection-list-header,
-{
-  display: none;
-} //temporary
-
-
 a.institution-about-edit {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    background: #ff6a6a;
-    color: #1a1a1a;
-    padding: 2px 10px;
-    text-transform: uppercase;
-    font-size: 11px;
+  margin-right: 5px !important;
 }
 
-.institution-header {
-  @include flexbox;
-  justify-content: center;
-  align-items: center;
-    position: relative;
-}
-
-.institution-logo {
-@include flexbox;
-    justify-content: center;
-    align-items: center;
-    width: 25%;
-    padding: 0px 80px;
-    box-sizing: border-box;
-}
-
-.institution-header, .collectionHeader {
-  color: rgba(255, 255, 255, 0.74);
-}
-
-#page-title {
-  color: white;
-}
 
 .dccTheme {
-  .institution-header, .collectionHeader, .institution-search::before, .child-institution-collections::before {
-
+   .collectionHeader, .institution-search::before, .child-institution-collections::before {
     background: $dccColor;
   }
   .collectionLogo {
     background-image: url($dccLogo_long);
     cursor: pointer;
-  }
-  form#islandora-collection-search-form {
-    border: 2px solid $dccColor;
   }
   .institution-search input[type="text"] {
     border: 2px solid $dccColor;
@@ -475,16 +515,13 @@ a.institution-about-edit {
 
 
 .lascTheme{
-  .institution-header, .collectionHeader, .institution-search::before, .child-institution-collections::before {
+   .collectionHeader, .institution-search::before, .child-institution-collections::before {
 
     background: $lascColor;
   }
   .collectionLogo {
     background-image: url($lascLogo);
     cursor: pointer;
-  }
-  form#islandora-collection-search-form {
-    border: 2px solid $lascColor;
   }
   .institution-search input[type="text"] {
     border: 2px solid $lascColor;
@@ -498,15 +535,12 @@ a.institution-about-edit {
 }
 
 .lsmTheme {
-  .institution-header, .collectionHeader, .institution-search::before, .child-institution-collections::before {
+   .collectionHeader, .institution-search::before, .child-institution-collections::before {
 
     background: $lsmColor;
   }
   .collectionLogo {
     background-image: url($lsmLogo);
-    cursor: pointer;
-  }
-  form#islandora-collection-search-form {
     border: 2px solid $lsmColor;
   }
   .institution-search input[type="text"] {
@@ -521,15 +555,12 @@ a.institution-about-edit {
 }
 
 .ebrplTheme {
-  .institution-header, .collectionHeader, .institution-search::before, .child-institution-collections::before {
+   .collectionHeader, .institution-search::before, .child-institution-collections::before {
 
     background: $ebrplColor;
   }
   .collectionLogo {
     background-image: url($ebrplLogo);
-    cursor: pointer;
-  }
-  form#islandora-collection-search-form {
     border: 2px solid $ebrplColor;
   }
   .institution-search input[type="text"] {
@@ -546,15 +577,12 @@ a.institution-about-edit {
 
 
 .lsuTheme {
-  .institution-header, .collectionHeader, .institution-search::before, .child-institution-collections::before {
+   .collectionHeader, .institution-search::before, .child-institution-collections::before {
 
     background: $lsuColor;
   }
   .collectionLogo {
     background-image: url($lsuLogo);
-    cursor: pointer;
-  }
-  form#islandora-collection-search-form {
     border: 2px solid $lsuColor;
   }
   .institution-search input[type="text"] {
@@ -569,14 +597,10 @@ a.institution-about-edit {
 }
 
 
-
-.lsuhscTheme, .lsuaTheme, .lsuhscsTheme{
-  .institution-header, .collectionHeader, .institution-search::before, .child-institution-collections::before {
+.lsuhscTheme, .lsuaTheme, .lsusTheme, .lsuhscsTheme {
+   .collectionHeader, .institution-search::before, .child-institution-collections::before {
 
     background: white;
-    color: #474747;
-  }
-  #page-title {
     color: #474747;
   }
   .institution-about {
@@ -597,9 +621,53 @@ a.institution-about-edit {
 .websterTheme {
   background: white;
   color: #474747;  
-  #page-title {
-    color: #474747;
+
+  .collection-description-text{
+    color: #434343;
   }
+  .institution-header, .collectionHeader, .institution-search::before, .child-institution-collections::before {
+    background: $websterColor;
+  }
+
+  .institution-about {
+    border-left: 1px solid rgba(0, 0, 0, 0.20);
+  }
+  form#islandora-collection-search-form {
+
+    border: 2px solid white;
+  }
+  .institution-search input[type="text"] {
+    border: 2px solid white;
+  }
+  .institutionLabel::before{
+    background: white;
+  }
+  .collectionSearch form#islandora-collection-search-form {
+    border: 2px solid #8c8c8c;
+  }
+  .collectionLogo {
+    background-image: url($websterLogo);
+    cursor: pointer;
+  }
+  .institutionLabel{
+    background-image: url($websterLogo);
+  }
+}
+
+.lsuaTheme {
+  .collectionLogo {
+    background-image: url($lsuaLogo);
+    cursor: pointer;
+  }
+  .institutionLabel{
+    background-image: url($lsuaLogo);
+  }
+}
+
+
+.websterTheme {
+  background: white;
+  color: #474747;  
 
   .collection-description-text{
     color: #434343;
@@ -673,7 +741,7 @@ a.institution-about-edit {
   }
 }
 .latechTheme {
-  .institution-header, .collectionHeader, .institution-search::before, .child-institution-collections::before {
+   .collectionHeader, .institution-search::before, .child-institution-collections::before {
 
     background: $latechColor;
   }
@@ -682,9 +750,6 @@ a.institution-about-edit {
   }
   .collectionLogo {
     background-image: url($latechLogo_long);
-    cursor: pointer;
-  }
-  form#islandora-collection-search-form {
     border: 2px solid $latechColor;
   }
   .institution-search input[type="text"] {
@@ -700,7 +765,7 @@ a.institution-about-edit {
 
 .loynoTheme {
 
-  .institution-header, .collectionHeader, .institution-search::before, .child-institution-collections::before {
+   .collectionHeader, .institution-search::before, .child-institution-collections::before {
 
     background: $loynoColor;
     a:link, a:visited {
@@ -714,9 +779,6 @@ a.institution-about-edit {
   }
   .collectionLogo {
     background-image: url($loynoLogo_long);
-    cursor: pointer;
-  }
-  form#islandora-collection-search-form {
     border: 2px solid $loynoColor;
   }
   .institution-search input[type="text"] {
@@ -731,15 +793,12 @@ a.institution-about-edit {
 }
 
 .mcneeseTheme {
-  .institution-header, .collectionHeader, .institution-search::before, .child-institution-collections::before {
+   .collectionHeader, .institution-search::before, .child-institution-collections::before {
 
     background: $mcneeseColor;
   }
   .collectionLogo {
     background-image: url($mcneeseLogo_long);
-    cursor: pointer;
-  }
-  form#islandora-collection-search-form {
     border: 2px solid $mcneeseColor;
   }
   .institution-search input[type="text"] {
@@ -754,15 +813,12 @@ a.institution-about-edit {
 }
 
 .nichollsTheme {
-  .institution-header, .collectionHeader, .institution-search::before, .child-institution-collections::before {
+   .collectionHeader, .institution-search::before, .child-institution-collections::before {
 
     background: $nichollsColor;
   }
   .collectionLogo {
     background-image: url($nichollsLogo_long);
-    cursor: pointer;
-  }
-  form#islandora-collection-search-form {
     border: 2px solid $nichollsColor;
   }
   .institution-search input[type="text"] {
@@ -777,15 +833,12 @@ a.institution-about-edit {
 }
 
 .nsuTheme {
-  .institution-header, .collectionHeader, .institution-search::before, .child-institution-collections::before {
+   .collectionHeader, .institution-search::before, .child-institution-collections::before {
 
     background: $nsuColor;
   }
   .collectionLogo {
     background-image: url($nsuLogo_long);
-    cursor: pointer;
-  }
-  form#islandora-collection-search-form {
     border: 2px solid $nsuColor;
   }
   .institution-search input[type="text"] {
@@ -800,23 +853,16 @@ a.institution-about-edit {
 }
 
 .subrTheme {
-  .institution-header, .collectionHeader, .institution-search::before, .child-institution-collections::before {
+   .collectionHeader, .institution-search::before, .child-institution-collections::before {
 
     background: $subrColor;
     color: #474747;
   }
-  #page-title {
-    color: #474747;
-  }
-
   .institution-about {
     border-left: 1px solid rgba(0, 0, 0, 0.20);
   }
   .collectionLogo {
     background-image: url($subrLogo_long);
-    cursor: pointer;
-  }
-  form#islandora-collection-search-form {
     border: 2px solid $subrColor;
   }
   .institution-search input[type="text"] {
@@ -831,16 +877,13 @@ a.institution-about-edit {
 }
 
 .stateTheme {
-  .institution-header, .collectionHeader, .institution-search::before, .child-institution-collections::before {
+   .collectionHeader, .institution-search::before, .child-institution-collections::before {
 
     background: $stateColor;
   }
 
   .collectionLogo {
     background-image: url($stateLogo);
-    cursor: pointer;
-  }
-  form#islandora-collection-search-form {
     border: 2px solid $stateColor;
   }
   .institution-search input[type="text"] {
@@ -855,15 +898,12 @@ a.institution-about-edit {
 }
 
 .hnocTheme {
-  .institution-header, .collectionHeader, .institution-search::before, .child-institution-collections::before {
+   .collectionHeader, .institution-search::before, .child-institution-collections::before {
 
     background: $hnocColor;
   }
   .collectionLogo {
     background-image: url($hnocLogo);
-    cursor: pointer;
-  }
-  form#islandora-collection-search-form {
     border: 2px solid $hnocColor;
   }
   .institution-search input[type="text"] {
@@ -878,15 +918,12 @@ a.institution-about-edit {
 }
 
 .tulaneTheme {
-  .institution-header, .collectionHeader, .institution-search::before, .child-institution-collections::before {
+   .collectionHeader, .institution-search::before, .child-institution-collections::before {
 
     background: $tulaneColor;
   }
   .collectionLogo {
     background-image: url($tulaneLogo);
-    cursor: pointer;
-  }
-  form#islandora-collection-search-form {
     border: 2px solid $tulaneColor;
   }
   .institution-search input[type="text"] {
@@ -908,7 +945,7 @@ a.institution-about-edit {
 }
 
 .ullTheme {
-  .institution-header, .collectionHeader, .institution-search::before, .child-institution-collections::before {
+   .collectionHeader, .institution-search::before, .child-institution-collections::before {
 
     background: $ullColor;
   }
@@ -918,9 +955,6 @@ a.institution-about-edit {
   }
   .collectionLogo {
     background-image: url($ullLogo);
-    cursor: pointer;
-  }
-  form#islandora-collection-search-form {
     border: 2px solid $ullColor;
   }
   .institution-search input[type="text"] {
@@ -935,15 +969,12 @@ a.institution-about-edit {
 }
 
 .ulmTheme {
-  .institution-header, .collectionHeader, .institution-search::before, .child-institution-collections::before {
+   .collectionHeader, .institution-search::before, .child-institution-collections::before {
 
     background: $ulmColor;
   }
   .collectionLogo {
     background-image: url($ulmLogo);
-    cursor: pointer;
-  }
-  form#islandora-collection-search-form {
     border: 2px solid $ulmColor;
   }
   .institution-search input[type="text"] {
@@ -958,15 +989,12 @@ a.institution-about-edit {
 }
 
 .unoTheme {
-  .institution-header, .collectionHeader, .institution-search::before, .child-institution-collections::before {
+   .collectionHeader, .institution-search::before, .child-institution-collections::before {
 
     background: $unoColor;
   }
   .collectionLogo {
     background-image: url($unoLogo_long);
-    cursor: pointer;
-  }
-  form#islandora-collection-search-form {
     border: 2px solid $unoColor;
   }
   .institution-search input[type="text"] {
@@ -981,19 +1009,13 @@ a.institution-about-edit {
 }
 
 .vvilleTheme {
-  .institution-header, .collectionHeader, .institution-search::before, .child-institution-collections::before {
+   .collectionHeader, .institution-search::before, .child-institution-collections::before {
 
     background: $vvilleColor;
     color: #474747;
   }
-  #page-title {
-    color: #474747;
-  }
   .collectionLogo {
     background-image: url($vvilleLogo);
-    cursor: pointer;
-  }
-  form#islandora-collection-search-form {
     border: 2px solid $vvilleColor;
   }
   .institution-search input[type="text"] {
@@ -1007,8 +1029,8 @@ a.institution-about-edit {
   }
 }
 
-.tahillTheme, .fpocTheme, .page-islandora-object-islandoraroot {
-  .institution-header, .collectionHeader, .institution-search::before, .child-institution-collections::before {
+.tahillTheme, .fpocTheme, {
+   .collectionHeader, .institution-search::before, .child-institution-collections::before {
 
     background: #272727;
   }
@@ -1025,385 +1047,351 @@ a.institution-about-edit {
 }
 
 .institution-logo img {
-  max-width: 200px !important;
+    max-width: 150px !important;
     box-sizing: border-box;
     height: auto;
     width: 100%;
+    margin-top: 30px;
 }
 
 
-.institution-collection-list-item-count {
-    border: 1px solid #2f2f2f;
-    padding: 5px 10px;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    border-top: 0px;
-    border-left: 0px;
+.transition{
+  transition-duration: 1.5s;
 }
 
-ul.institution-collection-list {
-  list-style: none;
-  @include flexbox;
-  flex-direction: row;
-  flex-wrap: wrap;
-      background: #1a1a1a;
-      margin-bottom: 0px;
+//Institution 
+html body.institutionPage #region-sidebar-first {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.67);
+    width: 480px;
 }
 
-.institution-collection-list-li {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+.institutionPage{
+
+.headerBreadcrumb{
+  margin-left: 3px;
+    margin-top: 4px;
+    margin-bottom: 5px;
+    align-items: center !important;
     justify-content: center;
-    align-items: center;
+    font-size: 16px;
+    color: white;
 }
 
-.institution-collection-list-a {
-    width: 25%;
-    background: #1a1a1a;
-    border-right: 1px solid #2f2f2f;
-    box-sizing: border-box;
-    border-bottom: 1px solid #2F2F31;
-    color: white !important;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
-    position: relative;
-    overflow: hidden;
-    height: 420px;
-    cursor: pointer;
-    @include transition-duration(.2s);
-a{
-      @include transition-duration(.2s);
+.headerBreadcrumb a {
+    color: white;
 }
 
 
+.mobileSummary{
+  display: none;
 }
 
-
-.institution-collection-list-a:hover{
-
-
-.institution-collection-list-item-label{
-    @include transition-duration(1.5s);
-    transform: translateY(-100%);
-  transition-delay: 1s;
-}
-  .institution-collection-description{
-    @include transition-duration(1.5s);
-    transform: translateY(-100%);
-      transition-delay: 1s;
-
+  .itemTitle{
+        margin-bottom: 7px;
   }
 
-}
+  &.logged-in{  
+    .institutionSidebar {
+        padding-top: 80px;
+    }
+  }
 
-.institution-collection-list-item-manage-proxy {
-    text-align: center;
-    padding: 5px;
-    position: absolute;
-    top: 29px;
-    background: #1a1a1a;
-    width: 100px;
-    border: 1px solid #2f2f2f;
-    left: 0px;
+  #block-system-main > div > .content{
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 
-}
+  &.metaOpened div#zone-header {
+      margin-left: 480px !important;
+      width: calc(100vw - 500px) !important;
+      transition-duration: 0.5s !important;
+      transition-delay: 0s !important;
+  }
 
-li.institution-collection-list-item a.institution-collection-list-item-manage-proxy-link {
+  &.metaOpened #region-content{
+    margin-left: 480px;
+  }
+
+  .region-sidebar-first-inner .block-inner {
+    background-color: transparent;
     padding: 0px;
-    font-size: 10px !important;
-    border: 1px solid rgba(128, 128, 128, 0.49);
-    border-radius: 20px;
-    text-align: center;
-    width: 80px;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    bottom: 5px;
-}
-
-.institution-collection-list-header {
-  position: absolute;
-}
-
-.institution-collection-list-item-label {
-    height: 420px;
-    justify-content: center;
-    width: 200px;
-    display: flex;
-    align-items: center;
-    font-size: 28px;
-    line-height: 1;
-    position: relative;
-    font-weight: 900;
-    @include transition-duration(1.5s);
-
-      transition-delay: 0s;
-}
-
-//li.institution-collection-list-item > a::before {
-  //content: "";
-  //background-image: url(../images/QwO6pT6.png);
-  //width: 128px;
-  //height: 60px;
-  //display: block;
-  //background-size: 90px auto;
-  //background-repeat: no-repeat;
-  //background-position: center;
-  //position: absolute;
-  //left: -110px;
-//}
-
-.institution-about {
-    font-size: 14px;
     box-sizing: border-box;
-    width: 75%;
-    background: white;
-    color: #676767;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 8vw 100px;
-    line-height: 30px;
-    //position: absolute;
-    //top: 20px;
-    //z-index: 99;
-    //top: 20px;
-    //opacity: 0.1;
-
-
-  h2{
-    font-size:18px;
-    margin: 0px;
-  }
-  p {
-    max-width: 1000px;
-  }
-}
-
-.institution-collections {
-
-}
-
-
-
-.institution-search {
-  @include flexbox;
-    justify-content: flex-start;
-    position: relative;
-    background: #ffffff;
-
-form#myform {
-    padding: 30px 0px;
-    width: 75%;
-    display: flex;
-    border-top: 1px solid #dedede;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 1px solid #dedede;
-}
-
-
-  label {
-    display: none;
-  }
-
-  input[type="text"] {
-    -webkit-appearance: none;
-    -moz-border-radius: 0;
-    -webkit-border-radius: 0;
-    border-radius: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    -moz-background-clip: padding;
-    -webkit-background-clip: padding;
-    background-clip: padding-box;
-    background-color: #f3f3f3;
-    border: 1px solid #dedede !important;
-    outline: 0;
-    border-radius: 70px;
-    padding: 2px 3px;
-    font-size: 18px;
-    font-family: Arial, sans-serif;
-    height: 40px;
-    width: 50vw;
-    padding-left: 10px;
-    margin-left: 55px;
-  }
-
-  .latechTheme input[type="text"] {
-    border: 2px solid #003087;
-    color: #003087;
-  }
-
-  .institution-search input[type="text"]::placeholder {
-    font-style: italic;
-    font-family: Roboto;
-    color: #474747;
-  }
-
-  input[type="submit"] {
-    position: relative;
-    left: -61px;
-    width: 55px;
-    height: 34px;
-    background: none;
-    border: none;
-    border-radius: 0px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 25px 25px;
-    background-image: url(../images/NpfYQT0.png);
-  }
-
-  .form-item, .form-actions {
-    display: inline-block;
-      margin: 0px;
   }
 
   .institution-about {
-    border-left: 1px solid rgba(255, 255, 255, 0.27);
-    padding-left: 20px;
-    padding-right: 20px;
+    margin-top: 5px;
   }
-}
 
 
-.institution-search::before{
-    content: 'Institution Search';
-    width: 25%;
-    color: white;
+  .institutionSidebar{
+
+    .institution-about{
+
+    }
+    .institutionTitle {
+    font-size: 20px;
+    line-height: 30px;
+    padding-top: 40px;
+    }
+    .institutionTotal{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-    font-size: 11px;
+    border: 1px solid grey;
+    width: fit-content;
+    width: -moz-fit-content;
+    padding: 5px 8px;
+    margin-top: 10px;
+    border-radius: 4px;
     text-transform: uppercase;
-    letter-spacing: 6px;
-    border-top: 1px solid rgba(255, 255, 255, 0.21);
-}
-
-
-
-
-///.institution {
-///
-  ///.region-header-second{
-    ///background: transparent !important;
-        ///position: absolute !important;
-    ///top: 50px !important;
-    ///z-index: 99 !important;
-  ///}
-///}
-
-
-//Sub institution styles
-
-.childCollections {
-    display: flex;
-    flex-wrap: wrap;
-    width: 75%;
-}
-
-.child-institution-description{
-  display: none;
-}
-
-.child-institution-collections a {
-    width: 25%;
-}
-
-.child-institution-collections::before {
-    width: 25%;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 6px;
-content: 'Affiliated with';
-    border-top: 1px solid rgba(255, 255, 255, 0.21);
-
-}
-
-.childCounts{
-      margin-top: 10px;
-
-}
-
-.child-institution-container {
+    margin-bottom: 40px;
+    }
+    .institutionSidebarDesc {
     position: relative;
-    width: 400px;
-}
-
-.child-institution-count-collections {
-    color: #676767;
-    border: 1px solid #dedede;
-    padding: 2px 10px;
-    display: inline-block;
-    font-size: 12px;
-margin-right: 5px;
-margin-bottom: 5px;
-
+    border-top: 1px solid rgba(255, 255, 255, 0.16);
+    padding-top: 10px;    
+    }
+    padding-top: 20px;
   }
 
-.child-institution-count-items {
-@extend .child-institution-count-collections;
-margin-right: 0px;
-margin-bottom: 0px;
-}
 
-.child-institution-collections {
-  @include flexbox;
-    flex-direction: row;
-    width: auto;
-    overflow: hidden;
-    background: white;
-    border-bottom: 1px solid #2f2f2f;
-min-height: 100px;
-ul.child-institution-collection-list {
-  list-style: none;
-  display: none;
-}
-
-  .institution-collection-description{
-    display: none;
+  h1#institution-title {
+    width: 100%;
+    display: block !important;
+    max-width: 1200px;
+    margin: 0 auto;
   }
-}
 
-.child-institution-title {
-    margin: 30px 50px;
-    display: flex;
+  .institution-grid{
+    margin: 0 auto;
+  }
+
+
+    .parallax-mirror {
+        filter: brightness(0.35) blur(10px);
+    }
+
+
+    .institution-search{
+        width: 100%;      
+        position: relative;
+        .form-item {
+          margin-top: 0px;
+        }        
+        .form-item > label{
+          display: none;
+        }
+        form#myform > div{
+          position: relative;
+        }
+        form#myform {
+          border-radius: 4px 0px 0px 4px;
+          overflow: hidden;
+          margin-top: 20px;
+          width: 100%;
+        }
+        input[type="submit"] {
+          position: absolute;
+          right: 0px;
+          top: 0px;
+          height: 32px;
+          border-radius: 0px 4px 4px 0px;
+          width: 55px;
+          background: none;
+          border: none;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: 25px 25px;
+          background-color: white;
+          background-image: url(../images/NpfYQT0.png);
+        }
+        input#edit-term {
+          font-size: 15px;
+          border: 0px;
+          width: calc(100% - 50px);
+          padding: 0px;
+          padding-right: 0px;
+          padding-left: 10px;
+          height: 32px;
+          border-radius: 4px 0px 0px 0px;          
+        }        
+      }  
+    .institution-content{
+    margin: 0px auto;
+    max-width: 1200px;
+    padding-bottom: 200px;
+    }
+    .institution-header {
+    @include flexbox;
     flex-direction: column;
-    justify-content: center;
     align-items: flex-start;
-    box-sizing: border-box;
-    font-size: 18px;
-    line-height: 18px;
-    color: #676767;
+    justify-content: flex-end;
+    background: transparent !important;
+    border-bottom: 1px solid $lightTransparent2;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+      width: calc(100% - 20px) !important;
+      height: 200px !important;     
+    }
+
+  .collection{
+    background: #232323;
+    .category{
+      background: #1c1c1c;
+    }    
+  }
+  .sub-group{
+    background: #353535;
+    .category{
+      background: #2d2d2d;
+    }
+  }
+
+  .institution-tile {
+    width: 223px;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 16px;
+    .category {
+    font-size: 11px;      
+    text-transform: uppercase;
+    color: #BABABA;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 50px;
+    padding-left: 20px;
+        .fa-th, .fa-folder-open{
+          margin-right: 8px;
+          font-size: 16px;
+        }    
+    }
+
+    .label {
+        padding: 40px 20px 50px 20px;
+        .institution-description{
+          display: none;
+        }        
+        .title {
+          color: white;
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 20px;
+        }       
+        .items {
+          padding-top: 5px;
+          color: #ccc;
+          width: fit-content;
+          text-transform: uppercase;
+          font-size: 11px;
+        }
+    }    
+    .description, .institution-count-collections{
+      display: none;
+    }
+  }
+}
+
+/*institution list*/
+
+// .institutionLabel {
+  // padding: 0px 20px;
+  // text-align: center;
+  // line-height: 17px;
+// }
+
+#block-block-11 {
+display:block;
+  align-items: center;
+  margin: 0 auto;
+background: none;
+  .content.clearfix {
+    @include flexbox;
+  }
+
+  .homepageInstitutions {
+    @include flexbox;
+  }
+
+  .content p {
+    width: 1000px;
+    height: 120px;
+    @include flexbox;
+    flex-wrap: wrap;
+    margin: 0px;
+  }
+
+  .institutionLink_meta {
+      padding: 10px;
+      opacity: 0;
+     letter-spacing: 1px;
+             width: 100%;
+         @include transition-duration(.5s);
+             line-height: 15px;
+  }
+
+  a.institutionLink:hover {
+
+    opacity: 1;
+    @include transition-duration(0s);
+  .institutionLink_meta {
+opacity: 1;
+    @include transition-duration(.5s);
+
+  }
+  }
+
+  a.institutionLink {
+    width: calc(16.666vw - 3px);
+    height: 180px;
     position: relative;
-    font-weight: 900;
-    border-left: 5px solid #e6e6e6;
-    padding-left: 6px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 80px auto;
+    @include transition-duration(.5s);
+    @include flexbox;
+    align-items: flex-end;
+  }
+
+  a.institutionLink.lascLink {
+    background-color: $lascColor;
+    background-image: url($lascLogo);
+    background-size: 130px auto;
+  }
+
+  a.institutionLink.dccLink {
+    background-color: $dccColor;
+    background-image: url($dccLogo);
+    background-size: 90px auto;
+  }
 }
 
-ul.child-institution-collection-list {
-  list-style: none;
-  margin-bottom: 0px;
-}
+  a.institutionLink.lsmLink {
+    background-color: $lsmColor;
+    background-image: url($lsmLogo);
+    background-size: 110px auto;
+  }
 
-li.child-institution-collection-list-item {
-  padding: 10px;
-}
+  a.institutionLink.lsuLink {
+    background-color: $lsuColor;
+    background-image: url($lsuLogo);
+    background-size: 70px auto;
+  }
 
+  a.institutionLink.ebrplLink {
+    background-color: $ebrplColor;
+    background-image: url($ebrplLogo);
+  }
 
+  a.institutionLink.lsuaLink {
+    background-color: $lsusColor;
+    background-image: url($lsuaLogo);
+  }
+
+  a.institutionLink.lsusLink {
+    background-color: $lsusColor;
+    background-image: url($lsusLogo);
+  }
 
 
 //Institution List
@@ -1600,48 +1588,242 @@ opacity: 1;
   }  
 }
 
+.institution-tile, .item-list{
+  visibility: hidden;
+}
+
+a.retunHome {
+  font-size: 11px;
+    color: white;
+    margin-left: 3px;
+    .fa-w-14{
+      margin-right: 5px;
+    }
+}
+
+
 //Begin collection page styles
 
-.collectionPage {
-  .collectionLogo {
+html body.collectionPage {
+
+.noThumbnail, .islandora\:sp-ohCModel{
+  img{
+    display: none;
+  }
+  .islandora-basic-collection-thumb, .list-thumbnail
+  {
+    height: 223px;
+    background: #232323;  
+    @include flexbox;
+    align-items: center;
+    justify-content: center;
+    a{
+      color: white;
+    }
+  }  
+  .list-thumbnail{
     width: 200px;
-    height: 200px;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    margin: 20px;
+    height: inherit;
+  }
+span.noThumb {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #5c5c5c;
+    border-radius: 50%;
+    padding: 20px;
+    text-align: center;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+  &.islandora-basic-collection-object1{
+    span.noThumb {
+      border: 0px;
+    }
+  }
+}
+
+
+
+
+.item-list {
+  margin: 0px;
+}
+
+
+.islandora-basic-collection-content_stats{
+  display: none;
+}
+
+  .itemHover {
+    position: absolute;
+    bottom: -40px;
+    height: 20px;
+    width: 100%;
+    background: #1c1c1bd9;
+    color: white;
+    text-transform: uppercase;
+    font-size: 11px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition-duration: 0.2s;
+    padding: 20px 10px;
+
+    .typeHover .svg-inline--fa {
+        margin-right: 3px;
+    }    
+}
+
+.islandora-basic-collection-object:hover, .list-thumbnail:hover{
+  .itemHover{
+    transform: translateY(-40px);
+    transition-duration: 0.2s;
+  }
+}
+
+.islandora-basic-collection-thumb {
+    border-radius: 0px 0px 4px 4px;
+    overflow: hidden;
+}
+
+.nano{
+
+}
+
+.nano-pane {
+  overflow: hidden;
+}
+
+.loadingMessage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    height: 300px;
+}
+
+.islandora-basic-collection-grid .loadingMessage {
+    position: relative;
+    top: 180px;
+    width: 100%;
+}
+
+.islandora-basic-collection-list-item, .islandora-basic-collection-object{
+      visibility: hidden;
+    }
+
+
+
+.region-sidebar-first-inner .block-inner{
+  background: none;
+}
+
+&.metaOpened div#zone-header {
+    margin-left: 480px;
+    width: calc(100vw - 500px);
+    transition-duration: 0.5s;
+    transition-delay: 0s;
+}
+
+&.metaOpened #region-content{
+  margin-left: 480px;
+
+}
+
+.islandora-basic-collection-wrapper {
+    padding-top: 60px;
+    margin-left: 40px;
+    margin-right: 40px;    
+}
+
+  .collectionSidebar{
+    .collectionTitle {
+    font-size: 30px;
+    line-height: 30px;
+    padding-top: 40px;
+    }
+    .collectionTotal{
+    display: flex;
+    border: 1px solid grey;
+    width: fit-content;
+    width: -moz-fit-content;
+    padding: 5px 8px;
+    margin-top: 10px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    }
+    .collectionSidebarDesc {
+    position: relative;
+    border-top: 1px solid rgba(255, 255, 255, 0.16);
+    padding-top: 10px;    
+    }
+    padding-top: 20px;
+  }
+
+  .headerBreadcrumb{
+    margin-left: 3px;    
+    margin-top: 4px;
+    margin-bottom: 5px;
+    align-items: center !important;
+    justify-content: center;
+    font-size: 16px;
+    a {
+    color: white;
+    }
+    a:first-child{
+    margin-right: 6px;
+    }
+  }
+
+  .parallax-mirror {
+      filter: brightness(0.35) blur(10px);
+  }
+
+  .parralax-mirror {
+    display: none;
+  }
+
+  .collectionLogo {
+    display: none !important;
   }
 
   #page-title {
-    padding: 20px;
     width: 100%;
-    align-items: center;
-    margin: 0px;
-    padding-left: 0px;
-    padding-bottom: 0px;
-    display: block;
+    display: block !important;
+    max-width: 1200px;
+    margin: 0 auto;
   }
 
   span.islandora-basic-collection-item-count {
-    font-size: 12px;
-    display: inline-flex;
-    padding: 1px 8px;
-    margin-left: 7px;
-    border: 1px solid grey;
-    border-radius: 5px;
-    position: relative;
-    top: -2px;
-  }
-
-  .islandora-view-grid, .islandora-view-list {
-    display: none;
+    font-size: 11px;
+    position: absolute;
+    top: -13px;
+    right: 0px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
   }
 
   .collectionHeader {
     @include flexbox;
-    align-items: center;
-    padding: 20px;
-    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    background: transparent !important;
+    border-bottom: 1px solid $lightTransparent2;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+      width: calc(100% - 20px) !important;
+      height: 200px !important;     
+      color: white;
 
     .collection-description-text {
       margin: 0px;
@@ -1655,16 +1837,225 @@ opacity: 1;
 
   #block-islandora-collection-search-islandora-collection-search {
     display: block;
-    background: gainsboro;
+    border-radius: 4px;
+    overflow: hidden;   
   }
+
+  #region-sidebar-first{
+    display: block;
+    width: 480px;    
+    background-color: rgba(0, 0, 0, 0.67);    
+  }
+
+.islandora-basic-collection-display-switch{
+  position: absolute;
+}
+
+
+
+.islandora-basic-collection{
+    margin: 0px auto;
+    max-width: 1200px;
+    padding-bottom: 200px;    
+}
+//collection grid styles
+
+.islandora-basic-collection-grid{
+    margin: 0 auto;  
+    .islandora-basic-collection-meta {
+      display: none;
+    }
+
+    .islandora-basic-collection-caption {
+      padding: 10px;
+      background: white;
+      line-height: 13px;      
+      a {
+      color: #676767;
+      font-weight: 700;
+      }
+    }
+    .islandora-basic-collection-thumb img {
+      width: 100%;
+    }
+    .islandora-basic-collection-object{
+      margin: 0px 0px 15px 0px;
+      width: 223px;
+      border-radius: 4px;
+      overflow: hidden;    
+    }
+}
+
+//collectionList styles
+
+
+
+.islandora-basic-collection-list-item{
+    border-radius: 4px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.070);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    padding-bottom: 0px;
+    margin-top: 20px;
+    width: calc(100% - 20px);
+
+.list-metadata {
+    max-height: 140px;
+    margin-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;    
+    margin-left: 20px;
+}
+
+    .list-subjects{
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .modsSubject {
+        margin-bottom: 10px;
+    }
+
+    .modsSubject a {
+        background: rgba(255, 255, 255, 0.070);
+        color: white;
+        padding: 5px 9px;
+        border-radius: 4px;
+        margin-right: 4px;
+        font-size: 11px;
+    }
+
+  .dc-description{
+    color: white;
+  }
+  .list-thumbnail{
+    align-self: flex-start;
+    position: relative;
+  }
+  .list-thumbnail:hover{
+    .list-hover{
+      display: flex;
+    }
+  }
+  .list-thumbnail img{
+    height: 140px;
+    overflow: hidden;
+    border-radius: 4px 0px 0px 4px;
+    top: 0px;
+    max-width: none;
+  }
+.list-item-container {
+    @include flexbox;
+    height: 140px;
+    align-items: center;    
+    .islandora-basic-object-abstract {
+      color: white;
+      padding: 6px 0px 10px 0px;
+      font-size: 14px;
+    }    
+    .dc-title a{
+      color: white;
+      font-weight: 700;      
+    }
+    .list-text{
+      @include flexbox;
+      flex-direction: column;   
+      margin: 20px;
+      .list-subjects{
+        display: flex;
+        flex-wrap: wrap;
+        .list-subject {
+            background: rgba(255, 255, 255, 0.12);
+            padding: 4px 8px;
+            border-radius: 3px;
+            margin-right: 3px;
+            margin-bottom: 3px;
+            a{
+              color: white;
+            }
+        }        
+      }
+    }
+    .list-hover{
+      position: absolute;
+      top: 0px;
+      width: 100%;
+      background: #313131db;
+      height: 100%;
+      display: flex;
+      color: white;
+      justify-content: center;
+      align-items: center;
+      display: none;
+    }
+}
+}
+
+}
+
+
+//root styles
+
+html body.collectionPage.rootCollection{
+
+.infoToggle{
+  display: none;
+}
+
+&.gridMode{  
+  .islandora\:collectionCModel{
+    background: #232323;
+    .itemHover{
+      display: none;
+    }
+    .category {
+        font-size: 11px;
+        text-transform: uppercase;
+        color: #BABABA;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: 50px;
+        padding-left: 20px;
+      background: #1c1c1c;      
+
+        .fa-th,.fa-folder-open {
+        margin-right: 8px;
+        font-size: 16px;
+        }    
+    }
+
+    .islandora-basic-collection-caption {
+        padding: 40px 20px 50px 20px;
+        background: transparent;
+        color: white;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 20px;
+        a{
+          color: white;
+        }
+    }  
+    .islandora-basic-collection-thumb{
+      display: none;
+    }
+  }
+}
+
 }
 
 //collectionSearch styles
 
 .collectionSearch {
+  width: 100%;
+    position: relative;  
   h2.block-title {
     display: none;
   }
+
+#edit-simple{
+  position: relative;
+}
 
   .content.clearfix {
     @include flexbox;
@@ -1677,30 +2068,35 @@ opacity: 1;
   }
 
   form#islandora-collection-search-form {
-    position: relative;
-    top: -20px;
-    background: white;
-    border-radius: 5px;
+    border-radius: 4px;
     overflow: hidden;
-    padding: 5px;
+    margin-top: 20px;
+    width: 100%;
   }
 
   input#edit-islandora-simple-search-query {
-    font-size: 18px;
+    font-size: 15px;
     border: 0px;
-    width: 50vw;
-  }
+    width: calc(100% - 50px);
+    padding: 0px;
+    padding-right: 0px;
+    padding-left: 10px;
+    height: 32px;    
+}
 
   input[type="submit"] {
-    position: relative;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    height: 32px;
+    border-radius: 0px 4px 4px 0px;
     width: 55px;
-    height: 34px;
     background: none;
     border: none;
-    border-radius: 0px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 25px 25px;
+    background-color: white;
     background-image: url(../images/NpfYQT0.png);
   }
 }
@@ -1729,19 +2125,19 @@ opacity: 1;
   }
 }
 
-.islandora-basic-collection-display-switch {
-  display: none;
-}
-
 h1.about-link {
   display: none;
 } //not sure what this is used for
 
 .islandora-basic-collection{
 
-div.item-list:nth-child(2n - 1) {
-  display: none;
-} //kills repeated pagination, first instance -- not sure why first-child does not work here
+  div.item-list{
+        width: calc(100% - 20px);
+  }
+
+// div.item-list:nth-child(2n) {
+//   display: none;
+// } //kills repeated pagination, first instance -- not sure why first-child does not work here
 
 .page-islandora-search  div.item-list:nth-child(2n - 1) {
   display: block;
@@ -1750,44 +2146,9 @@ div.item-list:nth-child(2n - 1) {
 .islandora-basic-collection-grid.clearfix {
   @include flexbox;
   flex-wrap: wrap;
-}
-
-.islandora-basic-collection-grid dl {
-  width: calc(25% - 4px);
-  min-width: 100px;
-  min-height: 180px;
-  display: -moz-inline-stack;
-  display: inline-block;
-  vertical-align: top;
-  margin: 2px;
-  zoom: 1;
-  @include flexbox;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-end;
-  background: rgb(220, 220, 220);
-  visibility: hidden;
-}
-
-dt.islandora-basic-collection-thumb {
-  margin-top: 10px;
-}
-
-.islandora-basic-collection-object dd {
-  padding-top: 2px;
-  padding-bottom: 2px;
-  background: #474747;
-  width: 100%;
-  align-self: flex-end;
-  padding: 10px;
-  margin-top: 10px;
-  line-height: 18px;
-  font-size: 13px;
-}
-
-dd.islandora-basic-collection-caption a {
   color: white;
 }
+
 
 /*Top Search Bar*/
 #zone-header, #region-header-first {
@@ -2490,7 +2851,7 @@ div#zone-user-wrapper {
   width: 300px;
   background: $topsearch;
   height: 33px;
-  border-radius: 5px;
+  border-radius: 4px;
   overflow: hidden;
   margin-right: 10px;
 }
@@ -3419,6 +3780,7 @@ input[type="text"]::placeholder {
         background-position: center;
         background-size: 30px 30px;
         background-image: url(../images/SH5syLP.png);
+        z-index: 9;
       }
     }
   }
@@ -4317,8 +4679,8 @@ color: #676767;
 
 .metaOpened #region-content{
   margin-left: 25%;
-  transition-duration: 1s;
-  transition-delay:0.4s;
+  transition-duration: 0.5s;
+  transition-delay:0s;
 }
 
 
@@ -4534,7 +4896,6 @@ form#islandora-ip-embargo-object-embargo-form {
       #region-sidebar-first{
         transform: translate3d(-800px, 0vw, 0vw);
         width: 25vw;
-        transition-duration: 1.5s;
         background: #1a1a1a;
         color: white;
         position: fixed;
@@ -4549,7 +4910,8 @@ form#islandora-ip-embargo-object-embargo-form {
 
       #region-sidebar-first.infoOpened{
 transform: translate3d(0,0,0);
-      transition-duration: 1s;
+transition-property: transform;
+      transition-duration: 0.5s;
       position: fixed;
     left: 0px;
     bottom: 0px;
@@ -4903,6 +5265,11 @@ body:not(.compoundChildImage) {
 }
 //new floating header
 body.logged-in.headerversiontwo{
+
+#zone-header{
+  padding-top: 10px;
+}
+
 div#shareToggle.activeMenu{
       margin-left: 0px;
 }
@@ -5207,9 +5574,9 @@ background-color: transparent !important;
 }
 
 .book-thumbnailData, .image-thumbnailData {
-    margin-left: 20px;
-    border-left: 1px solid #dedede;
-    padding-left: 20px;
+    margin-left: 0px;
+    margin-top: 10px;
+    padding-left: 0px;
     max-width: 680px;
     color: #676767;
     font-style: italic;
@@ -5217,6 +5584,10 @@ background-color: transparent !important;
 
 #sideMods{
   padding: 0px;
+}
+
+.bookPreview{
+  margin-bottom: 20px;
 }
 
 .bookPreview, .imagePreview {
@@ -5308,11 +5679,10 @@ width: 100%;
     margin: 0 auto;
     margin-top: 30px;
     padding: 0px 20px;
+    flex-direction: column;
 }
 
-#block-system-main{
-  background: white;
-}
+
 
 //begin logged-in actionBar
 .manageMenu {
@@ -5734,7 +6104,6 @@ padding-top: 10px;
  #region-sidebar-first {
     transform: translate3d(-800px, 0vw, 0vw);
     width: 25vw;
-    transition-duration: 1.5s;
     background: #1a1a1a;
     color: white;
     position: fixed;
@@ -5751,7 +6120,8 @@ padding-top: 10px;
 
 #region-sidebar-first.infoOpened {
     transform: translate3d(0, 0, 0);
-    transition-duration: 1s;
+    transition-property: transform;
+    transition-duration: 0.5s;
     position: fixed;
     left: 0px;
     bottom: 0px;
@@ -5804,7 +6174,7 @@ body.headerversiontwo.metaOpened{
   div#zone-header {
     margin-left: 25vw;
     width: calc(75vw - 20px);
-  transition-duration: 1s;
+  transition-duration: 0.5s;
   transition-delay:0s;
   }
 }
@@ -5973,6 +6343,7 @@ a#bookTitle2 {
     align-items: center;
     margin: 0 auto;
     margin-top: 30px;
+    flex-direction: column;
 }
 
 
@@ -6411,7 +6782,7 @@ body.newspaperSet #page{
 }
 
 //begin largeImage 2.0
-body.largeImage, body.pdf, body.video, body.audio, body.oralHistory{
+body.largeImage, body.pdf, html body.video, html body.audio, html body.oralHistory{
   background: #000000;
 }
 
@@ -7918,6 +8289,18 @@ content:'item information';
 }
 
 
+.institutionPage .institutionSidebarDesc::before{
+@extend .parentMetadata::before;
+content:'institution information';
+}
+
+
+.collectionPage .collectionSidebarDesc::before{
+@extend .parentMetadata::before;
+content:'collection information';
+}
+
+
 body.newspaperSet{
   background-color: white;
 
@@ -8870,6 +9253,44 @@ body.multipleDaily{
   }
 }
 
+@media screen and (max-width: 1366px) {
+
+
+
+  html body.collectionPage, html body.institutionPage{
+
+
+
+.institution-header, .collectionHeader {
+  height: auto !important;
+    margin: 50px 0px 20px 0px !important;  
+    padding: 0px !important;
+  .mobileSummary{
+    color: white;
+    font-size: 12px;
+    line-height: 16px;
+    display: block;
+  }
+  .userMenu{
+    margin-left: 0px;
+  }
+}
+
+    #region-sidebar-first, .infoToggle, span.islandora-basic-collection-item-count{
+      display: none;
+   }
+
+    &.metaOpened {
+      #region-content {
+      margin-left: 0px;
+      }
+    }
+  }
+
+
+}
+
+
 @media screen and (max-width: 1260px) {
 
 
@@ -8977,12 +9398,8 @@ margin-bottom: 20px;
 
 }
 
-  .institution-about, .institution-search form#myform{
-            width: 66.67%;
 
-  }
-
-.institution-collection-list-a, .institution-logo, .institution-search::before, .child-institution-collections::before, .child-institution-collections a, .childCollections::before  {
+.institution-collection-list-a, .institution-logo,.child-institution-collections::before, .child-institution-collections a, .childCollections::before  {
         width: 33.33%;
       }
 
@@ -9174,6 +9591,40 @@ margin-bottom: 20px;
 }
 
   @media screen and (max-width: 900px) {
+
+.collectionPage, .institutionPage{
+  .institution-tile, .islandora-basic-collection-object{
+    margin-bottom: 11px !important;
+  }
+}
+
+.collectionPage::before, .institutionPage::before{
+    content: "";
+    position: fixed;
+    top: -100%;
+    left: -100%;
+    height: 200%;
+    width: 200%;
+    z-index: 0;
+    background: #000000b3;
+}
+
+html body.collectionPage .islandora-basic-collection-wrapper{
+  padding: 0px;
+  margin: 0px;
+}
+
+.institutionPage .institution-header, html body.collectionPage .collectionHeader {
+    width: calc(100% - 0px) !important;
+}
+
+body.institutionPage #block-system-main > div > .content, body.collectionPage #block-system-main > div > .content {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.institution-tile, .collectionPage .masonryItem {
+}
 
 body.context-data{
 
@@ -9604,6 +10055,10 @@ body.bookViewer .bookDesc, body.bookViewer .infoToggle,  body.bookViewer #pagenu
   margin-left:0px !important;
 }
 
+body.collectionPage #shareToggle{
+  margin-left: 5px !important;
+}
+
 
 .contentLabel.itemDesc, .tagsGlance {
     display: none;
@@ -9642,11 +10097,8 @@ margin-top: 40px;
   font-size: 10px;
 }
 
-.institution-search form#myform {
-    width: 100%;
-}
 
-.institution #breadcrumb, .institution-search::before, .child-institution-collections::before{
+.institution #breadcrumb, .child-institution-collections::before{
   display: none;
 }
 
@@ -9815,13 +10267,7 @@ html.mobileMenuActive, body.mobileMenuActive{
       }
     }
 
-    .institution-header {
-      @include flexbox;
-      align-items: center;
-      padding: 0px;
-      flex-direction: column;
-      justify-content: center;
-    }
+
 
     .institution-about {
     border-left: 0px;
@@ -9830,11 +10276,6 @@ html.mobileMenuActive, body.mobileMenuActive{
       p {
         margin-bottom: 40px;
       }
-    }
-
-    .institution-search input[type="text"] {
-      width: 75vw;
-      font-size: 12px;
     }
 
     .institution-logo {
@@ -9977,7 +10418,6 @@ border: 1px solid rgba(255, 255, 255, 0.33);
         padding: 0px;
         flex-direction: column;
         justify-content: center;
-
         .collection-description-text {
           padding-bottom: 30px;
           border: 0px;
@@ -9987,7 +10427,7 @@ border: 1px solid rgba(255, 255, 255, 0.33);
       .collectionSearch input#edit-islandora-simple-search-query {
         font-size: 18px;
         border: 0px;
-        width: 75vw;
+        // width: 75vw;
       }
     }
 
@@ -10132,9 +10572,59 @@ div#islandora-pdfjs {
   padding: 0px 30px;
 }
 
-
+   html body.collectionPage .islandora-basic-collection-list-item .list-subjects{
+      display: none;
+    }
 }
   @media screen and (max-width: 740px) {
+
+body.node-type-page{
+  #block-system-main{
+        padding-left: 20px;
+    padding-right: 20px;
+    width: auto;
+  }
+}
+
+html body.institutionPage .institution-header{
+    border: 0px;
+}
+
+.collectionHeader{
+  border: 0px;
+}
+
+html body.collectionPage{
+
+.collectionHeader{
+  border: 0px;
+}
+
+  .islandora-basic-collection-list-item{
+    width: 100%;
+      .list-metadata{
+      max-height: none;
+      margin:10px;
+      }
+      .list-thumbnail img {
+      width: calc(100vw - 62px);
+      height: auto;
+      }
+      .list-item-container {
+      height: auto;
+      align-items: flex-start;
+      flex-direction: column-reverse;
+          .islandora-basic-object-abstract{
+            padding: 0px;
+          }
+      }
+
+  }
+}
+
+.userMenu{
+      margin-left: 5px;
+}
 
 //begin compoundChild mobile
 
@@ -10144,8 +10634,8 @@ div#islandora-pdfjs {
 }
 
 .itemTitle{
-      font-size: 20px !important;
-    line-height: 23px !important;
+      font-size: 30px !important;
+    line-height: 35px !important;
 }
 
 
@@ -10310,7 +10800,6 @@ body.compoundParent .compoundGallery_header .compoundParent {
 }
 
 .headerversiontwo .headerBreadcrumb{
-  font-size: 6px !important;
     line-height: 16px;
     padding: 10px 0px;
     display: block !important;
@@ -10557,7 +11046,7 @@ font-size: 12px;
     }
     input {
       &#edit-islandora-simple-search-query.form-text {
-        width: calc(100% - 54px);
+        // width: calc(100% - 54px);
       }
       &#edit-submit.form-submit,
       &#edit-submit--2.form-submit,
@@ -10954,4 +11443,41 @@ img.jssocials-share-logo {
 .nano:hover > .nano-pane, .nano-pane.active, .nano-pane.flashed {
   visibility : visible\9; /* Target only IE7 and IE8 with this hack */
   opacity    : 0.99;
+}
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 64px;
+  height: 64px;
+  margin-bottom: 10px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 51px;
+  height: 51px;
+  margin: 6px;
+  border: 6px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
