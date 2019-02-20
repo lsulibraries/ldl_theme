@@ -27,7 +27,7 @@
         case ($('body').hasClass('page-islandora-search')) :{
         $( ".islandora-solr-search-result" ).each(function() {
           var itemLink = $(this).find('.solr-thumb a').attr('href');
-          $(this).find('.mods-titleinfo-title-ms').wrapInner('<a class="searchLink></a>');
+          $(this).find('.mods-titleinfo-title-ms').wrapInner('<a class="searchLink"></a>');
           $(this).find('a.searchLink').attr('href', itemLink);
         })          
           break;
