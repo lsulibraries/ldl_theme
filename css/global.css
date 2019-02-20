@@ -129,6 +129,9 @@ div#breadcrumb {
 span.bold {
   font-weight: 700; }
 
+.mods-titleinfo-title-ms {
+  font-size: 20px; }
+
 .page-data.logged-in div#zone-header-wrapper {
   padding-top: 60px; }
 
