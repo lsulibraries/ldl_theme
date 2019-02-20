@@ -1308,7 +1308,8 @@ html body.institutionPage #region-sidebar-first {
     padding-bottom: 20px;
     margin-bottom: 20px;
       width: calc(100% - 20px) !important;
-      height: 200px !important;     
+      min-height: 200px !important;
+      height: auto !important;     
     }
 
   .collection{
