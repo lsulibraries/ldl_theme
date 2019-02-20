@@ -129,6 +129,9 @@ div#breadcrumb {
 span.bold {
   font-weight: 700; }
 
+.page-data.logged-in div#zone-header-wrapper {
+  padding-top: 60px; }
+
 .not-front.logged-in #block-block-1 {
   padding-right: 10px !important; }
 
