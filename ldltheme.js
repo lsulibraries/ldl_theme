@@ -26,7 +26,7 @@
         case (( (($('#page-title').text())) == 'Access denied') || ( (($('#page-title').text())) == 'Page not found') ):{
           $("body").addClass("accessDenied");
           $('<div class="filler"></div>').prependTo('.region-header-second-inner');
-          $('#page').parallax({imageSrc: 'https://i.imgur.com/yUbfVN7.jpg'});        
+          $('#page').parallax({imageSrc: '/sites/all/themes/ldl/images/pelican.jpg'});        
           $('#block-system-main .content').wrapInner('<div class="mainText"></div>');
           $('h1#page-title').prependTo('#block-system-main .content');
           $('<i class="fa fa-exclamation-triangle" aria-hidden="true"></i>').prependTo('#block-system-main .content');
@@ -35,7 +35,7 @@
         }
 
         case (($('body').hasClass('node-type-page')) && ($('body').hasClass('not-front'))) :{
-          $('#page').parallax({imageSrc: 'https://i.imgur.com/yUbfVN7.jpg'});
+          $('#page').parallax({imageSrc: '/sites/all/themes/ldl/images/pelican.jpg'});
           $('<div class="basicHeader"/>').prependTo('#block-system-main');
           $('#page-title').prependTo('.basicHeader');
           actionToggles();
@@ -43,7 +43,7 @@
         }
 
         case (($('body').hasClass('node-type-webform')) && ($('body').hasClass('not-front'))) :{
-          $('#page').parallax({imageSrc: 'https://i.imgur.com/yUbfVN7.jpg'});
+          $('#page').parallax({imageSrc: '/sites/all/themes/ldl/images/pelican.jpg'});
           $('<div class="basicHeader"/>').prependTo('#block-system-main');
           $('#page-title').prependTo('.basicHeader');
           actionToggles();
@@ -58,7 +58,7 @@
           // $('.institution-collection-list-li').each(function() {
           // $(this).children('.institution-collection-list-item-label').clone().prop({class: "title-description"}).prependTo($(this).children('.institution-collection-description'));
           // }); //end colleciton page numbers and description
-           $('#page').parallax({imageSrc: 'https://i.imgur.com/yUbfVN7.jpg'});
+           $('#page').parallax({imageSrc: '/sites/all/themes/ldl/images/pelican.jpg'});
           institutionSidebar();
           actionToggles();
           var a = $('.institution-about').html();
@@ -92,7 +92,7 @@
 
         case ((($('body').hasClass('context-content'))) && (!$('body').hasClass('audioPDF'))) :{
           $("body").addClass("basicPage");
-          $('#block-system-main').parallax({imageSrc: 'https://i.imgur.com/yUbfVN7.jpg'});          
+          $('#block-system-main').parallax({imageSrc: '/sites/all/themes/ldl/images/pelican.jpg'});          
           actionToggles();
           break;
         }            
@@ -256,7 +256,7 @@
           dataStarter();
            $('.table').insertBefore('.dl_txt');
            $('#edit-filter').parent().addClass('dataContainer');
-           $('#block-system-main').parallax({imageSrc: 'https://i.imgur.com/yUbfVN7.jpg'});
+           $('#block-system-main').parallax({imageSrc: '/sites/all/themes/ldl/images/pelican.jpg'});
           scrollFollow();
           break;
         }
@@ -422,7 +422,7 @@
             var firstItem = $('.islandora-basic-collection-object > .islandora-basic-collection-thumb > a > img').prop('src');
                 var addressEnding =  firstItem.substr(firstItem.indexOf('/images'), firstItem.length-4); 
                 if (addressEnding == "/images/folder.png"){
-                  $('#page').parallax({imageSrc: 'https://i.imgur.com/yUbfVN7.jpg' });                 
+                  $('#page').parallax({imageSrc: '/sites/all/themes/ldl/images/pelican.jpg' });                 
                 }      
                 else{
                   $('#page').parallax({imageSrc: firstItem });   
@@ -433,7 +433,7 @@
             $('#page').parallax({imageSrc: firstItem });      
                 var addressEnding =  firstItem.substr(firstItem.indexOf('/images'), firstItem.length-4); 
                 if (addressEnding == "/images/folder.png"){
-                  $('#page').parallax({imageSrc: 'https://i.imgur.com/yUbfVN7.jpg' });                  
+                  $('#page').parallax({imageSrc: '/sites/all/themes/ldl/images/pelican.jpg' });                  
                 }
                 else{
                   $('#page').parallax({imageSrc: firstItem });   
@@ -568,7 +568,7 @@
       function rootCollections(){
 
         $("body").addClass("rootCollection");  
-        $('#page').parallax({imageSrc: 'https://i.imgur.com/yUbfVN7.jpg'}); 
+        $('#page').parallax({imageSrc: '/sites/all/themes/ldl/images/pelican.jpg'}); 
         $(".islandora-basic-collection-object").each(function() {
 
           switch (true) { //detect page type or content type

@@ -129,8 +129,23 @@ div#breadcrumb {
 span.bold {
   font-weight: 700; }
 
+.not-front.logged-in #block-block-1 {
+  padding-right: 10px !important; }
+
+.front.not-logged-in #block-block-1 {
+  right: -11px;
+  top: 11px;
+  position: absolute; }
 .front .region-header-second-inner {
   justify-content: flex-end !important; }
+.front.logged-in #block-block-1 {
+  min-height: 40px !important;
+  position: absolute;
+  top: 12px; }
+.front.logged-in div#zone-header-wrapper {
+  top: -30px; }
+.front.logged-in #block-block-1 {
+  right: -13px; }
 
 .page-issues:not(.accessDenied) div#block-system-main {
   margin: 50px;
@@ -193,6 +208,33 @@ span.bold {
     padding-bottom: 200px;
     margin-top: 80px;
     justify-content: flex-start; }
+
+.node-type-webform .description {
+  display: none; }
+.node-type-webform article#node-webform-89 {
+  background: rgba(255, 255, 255, 0.13);
+  padding: 20px;
+  border-radius: 5px; }
+.node-type-webform input.webform-submit.button-primary.form-submit {
+  color: white;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  background: #327BB3;
+  height: 60px;
+  width: calc(100% - 20px);
+  max-width: 1200px !important;
+  border-top: 0px;
+  box-sizing: content-box;
+  margin-top: 0px;
+  border: 0px;
+  border-radius: 8px;
+  text-shadow: none;
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px; }
 
 /*Access Denied*/
 .accessDenied #block-system-main .content {
@@ -2537,7 +2579,8 @@ body.logged-in.front div#zone-header {
   /* Safari 4.0 - 8.0 */
   animation: bounceArrow 3s infinite; }
 .front div#zone-header-wrapper {
-  margin: 20px; }
+  margin: 20px;
+  position: relative; }
 .front #block-block-12 #largeSearch .homepageText {
   font-size: 14px;
   line-height: 17px;
@@ -3944,8 +3987,6 @@ body.logged-in.headerversiontwo #shareToggle {
   margin-left: 0px; }
 body.logged-in.headerversiontwo #toolbar {
   z-index: 9999 !important; }
-body.logged-in.headerversiontwo #section-header {
-  top: 60px !important; }
 
 body.headerversiontwo {
   background: black;

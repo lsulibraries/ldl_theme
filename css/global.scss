@@ -342,9 +342,40 @@ span.bold {
   font-weight: 700;
 }
 
+.not-front{
+  &.logged-in{
+    #block-block-1{
+      padding-right: 10px !important;
+    }
+  }
+}
+
 .front {
+    &.not-logged-in{
+      #block-block-1 {
+      right: -11px;
+      top: 11px;
+      position: absolute;
+      }
+    }
   .region-header-second-inner {
     justify-content: flex-end !important;
+    }
+
+  &.logged-in{
+      #block-block-1 {    
+    min-height: 40px !important;    
+    position: absolute;
+    top: 12px;    
+    }
+
+    div#zone-header-wrapper {
+        top: -30px;    
+    }
+
+    #block-block-1{
+    right: -13px;
+    }
   }
 }
 
@@ -433,6 +464,41 @@ span.bold {
     margin-top: 80px;
     justify-content: flex-start;
     }      
+}
+
+
+.node-type-webform{
+  .description{
+  display: none;
+  }
+  article#node-webform-89 {
+      background: rgba(255, 255, 255, 0.13);;
+      padding: 20px;
+      border-radius: 5px;
+  }
+
+input.webform-submit.button-primary.form-submit{
+    color: white;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    background: #327BB3;
+    height: 60px;
+    width: calc(100% - 20px);
+    max-width: 1200px !important;
+    border-top: 0px;
+    box-sizing: content-box;
+    margin-top: 0px;
+    border: 0px;
+    border-radius: 8px;
+    text-shadow: none;
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;  
+  }
+
 }
 
 /*Access Denied*/
@@ -3510,6 +3576,7 @@ div.scrollPrompt::before{
 
 div#zone-header-wrapper {
     margin: 20px;
+    position: relative;
 }
 
 #block-block-12 #largeSearch .homepageText {
@@ -5281,9 +5348,6 @@ div#shareToggle.activeMenu{
       z-index: 9999 !important;
 }
 
-  #section-header{
-    top: 60px!important;
-  }
 
 }
 
