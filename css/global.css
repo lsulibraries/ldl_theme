@@ -166,28 +166,28 @@ span.bold {
   padding: 12px; }
 
 /*Basic Pages*/
-.node-type-page {
+.node-type-page, .node-type-webform {
   color: white; }
-  .node-type-page #block-system-main .content {
+  .node-type-page #block-system-main .content, .node-type-webform #block-system-main .content {
     color: white !important; }
-    .node-type-page #block-system-main .content h1, .node-type-page #block-system-main .content h2, .node-type-page #block-system-main .content h3, .node-type-page #block-system-main .content h4, .node-type-page #block-system-main .content h5, .node-type-page #block-system-main .content h6 {
+    .node-type-page #block-system-main .content h1, .node-type-page #block-system-main .content h2, .node-type-page #block-system-main .content h3, .node-type-page #block-system-main .content h4, .node-type-page #block-system-main .content h5, .node-type-page #block-system-main .content h6, .node-type-webform #block-system-main .content h1, .node-type-webform #block-system-main .content h2, .node-type-webform #block-system-main .content h3, .node-type-webform #block-system-main .content h4, .node-type-webform #block-system-main .content h5, .node-type-webform #block-system-main .content h6 {
       color: white; }
-  .node-type-page .userMenu {
+  .node-type-page .userMenu, .node-type-webform .userMenu {
     display: flex;
     flex-wrap: wrap;
     margin-top: 20px;
     padding-bottom: 20px;
     margin-bottom: 20px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.48); }
-  .node-type-page #page-title {
+  .node-type-page #page-title, .node-type-webform #page-title {
     display: block !important;
     color: white;
     font-size: 40px;
     line-height: 37px;
     margin: 0px; }
-  .node-type-page .parallax-mirror {
+  .node-type-page .parallax-mirror, .node-type-webform .parallax-mirror {
     filter: brightness(0.35); }
-  .node-type-page div#block-system-main {
+  .node-type-page div#block-system-main, .node-type-webform div#block-system-main {
     margin: 0px auto;
     max-width: 1200px;
     padding-bottom: 200px;
@@ -5821,34 +5821,34 @@ body.video .islandora_videojs-dimensions:not(body.audio, body.oralHistory), body
 body.video .islandora-audio-content-wrapper.clearfix, body.video .islandora-video-content-wrapper.clearfix, body.audio:not(.compoundParent) .islandora-audio-content-wrapper.clearfix, body.audio:not(.compoundParent) .islandora-video-content-wrapper.clearfix {
   width: 100%; }
 
-body.audio .footerContainer, body.oralHistory:not(.compoundParent) .footerContainer {
+html body.audio .footerContainer, html body.oralHistory:not(.compoundParent) .footerContainer {
   border-top: 1px solid #343435; }
-body.audio .metadataVertical div.metadataValue, body.audio div.metadataLabel, body.oralHistory:not(.compoundParent) .metadataVertical div.metadataValue, body.oralHistory:not(.compoundParent) div.metadataLabel {
+html body.audio .metadataVertical div.metadataValue, html body.audio div.metadataLabel, html body.oralHistory:not(.compoundParent) .metadataVertical div.metadataValue, html body.oralHistory:not(.compoundParent) div.metadataLabel {
   color: #ABABAB !important; }
-body.audio .descriptionText, body.oralHistory:not(.compoundParent) .descriptionText {
+html body.audio .descriptionText, html body.oralHistory:not(.compoundParent) .descriptionText {
   color: #ABABAB;
   background-color: transparent; }
-body.audio .tagsGlance .modsSubject, body.oralHistory:not(.compoundParent) .tagsGlance .modsSubject {
+html body.audio .tagsGlance .modsSubject, html body.oralHistory:not(.compoundParent) .tagsGlance .modsSubject {
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.16); }
-body.audio .tagsGlance a.modsSubject, body.oralHistory:not(.compoundParent) .tagsGlance a.modsSubject {
+html body.audio .tagsGlance a.modsSubject, html body.oralHistory:not(.compoundParent) .tagsGlance a.modsSubject {
   color: #ABABAB; }
-body.audio .image-thumbnailData, body.oralHistory:not(.compoundParent) .image-thumbnailData {
+html body.audio .image-thumbnailData, html body.oralHistory:not(.compoundParent) .image-thumbnailData {
   color: #ABABAB; }
-body.audio .backgroundDiv, body.oralHistory:not(.compoundParent) .backgroundDiv {
+html body.audio .backgroundDiv, html body.oralHistory:not(.compoundParent) .backgroundDiv {
   filter: blur(0px) brightness(0.7) contrast(1); }
-body.audio .islandora_videojs-dimensions:not(body.oralHistory), body.oralHistory:not(.compoundParent) .islandora_videojs-dimensions:not(body.oralHistory) {
+html body.audio .islandora_videojs-dimensions:not(body.oralHistory), html body.oralHistory:not(.compoundParent) .islandora_videojs-dimensions:not(body.oralHistory) {
   width: 100%;
   height: 30px; }
-body.audio #window-title, body.oralHistory:not(.compoundParent) #window-title {
+html body.audio #window-title, html body.oralHistory:not(.compoundParent) #window-title {
   display: none; }
-body.audio #block-system-main, body.oralHistory:not(.compoundParent) #block-system-main {
-  background: #242021; }
-body.audio .contentLabel, body.oralHistory:not(.compoundParent) .contentLabel {
+html body.audio #block-system-main, html body.oralHistory:not(.compoundParent) #block-system-main {
+  background: #242021 !important; }
+html body.audio .contentLabel, html body.oralHistory:not(.compoundParent) .contentLabel {
   background: #242021;
   color: white;
   border-bottom: 1px solid rgba(255, 255, 255, 0.16); }
-body.audio .itemDesc::before, body.oralHistory:not(.compoundParent) .itemDesc::before {
+html body.audio .itemDesc::before, html body.oralHistory:not(.compoundParent) .itemDesc::before {
   background-image: url(../images/tags_light.png); }
 
 body.pdf #window-title {
@@ -7471,7 +7471,7 @@ body.multipleDaily .issueLevel .issue-container {
   html body.collectionPage .islandora-basic-collection-list-item .list-subjects {
     display: none; } }
 @media screen and (max-width: 1260px) and (max-width: 740px) {
-  body.node-type-page #block-system-main {
+  body.node-type-page #block-system-main, body.node-type-webform #block-system-main {
     padding-left: 20px;
     padding-right: 20px;
     width: auto; }

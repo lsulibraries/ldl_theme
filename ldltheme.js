@@ -38,10 +38,17 @@
           $('#page').parallax({imageSrc: 'https://i.imgur.com/yUbfVN7.jpg'});
           $('<div class="basicHeader"/>').prependTo('#block-system-main');
           $('#page-title').prependTo('.basicHeader');
-
           actionToggles();
           break;
         }
+
+        case (($('body').hasClass('node-type-webform')) && ($('body').hasClass('not-front'))) :{
+          $('#page').parallax({imageSrc: 'https://i.imgur.com/yUbfVN7.jpg'});
+          $('<div class="basicHeader"/>').prependTo('#block-system-main');
+          $('#page-title').prependTo('.basicHeader');
+          actionToggles();
+          break;
+        }        
 
 
         case ($('body').hasClass('institutionPage')) :{
@@ -1082,7 +1089,7 @@
           $(".nano").nanoScroller({ alwaysVisible: false });           
                     $('#region-sidebar-first').addClass('transition');
         });
-        if ($('body').hasClass('node-type-page')){
+        if (($('body').hasClass('node-type-page')) || ($('body').hasClass('node-type-webform'))){
         $("<div class='userMenu'/>").insertAfter(".basicHeader"); //temporarily moves count
 
         $("ul.tabs").appendTo(".userMenu:first").wrapAll('<div class="manageMenu"/>');

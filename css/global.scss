@@ -398,7 +398,7 @@ span.bold {
 
 /*Basic Pages*/
 
-.node-type-page{
+.node-type-page, .node-type-webform{
 
     #block-system-main .content{
       color: white !important;
@@ -8154,7 +8154,7 @@ body.video, body.audio:not(.compoundParent){
 }
 }
 
-body.audio, body.oralHistory:not(.compoundParent) {
+html body.audio, html body.oralHistory:not(.compoundParent) {
 
 .footerContainer{
       border-top: 1px solid #343435;
@@ -8195,7 +8195,7 @@ body.audio, body.oralHistory:not(.compoundParent) {
   }
 
 #block-system-main {
-    background: #242021;
+    background: #242021 !important;
 }
 
 
@@ -10578,7 +10578,7 @@ div#islandora-pdfjs {
 }
   @media screen and (max-width: 740px) {
 
-body.node-type-page{
+body.node-type-page, body.node-type-webform{
   #block-system-main{
         padding-left: 20px;
     padding-right: 20px;
