@@ -77,6 +77,8 @@ document.body.className += ' ' + 'newspaperSet';
                       <?php print $data['count']; ?> issues
                     </span>
                     <div class='month-issues-container'>
+
+                      <?php uasort($data['issues'], function($a, $b) {return strtotime($a['issued']->date) - strtotime($b['issued']->date);}); ?>
                       <?php foreach ($data['issues'] as $issue): ?>
                         <div class='issue-container'>
 
