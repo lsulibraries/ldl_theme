@@ -9369,12 +9369,17 @@ body.multipleDaily{
 }
 
 
+
+@media screen and (min-width: 1260px) {
+
+
+  div#block-islandora-solr-basic-facets {
+      display: block !important;
+  }
+}
+
 @media screen and (max-width: 1260px) {
 
-
-div#block-islandora-solr-basic-facets {
-    display: block !important;
-}
 
 body.bookViewer {
   .bookPreviewContainer{

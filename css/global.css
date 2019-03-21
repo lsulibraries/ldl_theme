@@ -6623,10 +6623,10 @@ body.multipleDaily .issueLevel .issue-container {
     display: none; }
   html body.collectionPage.metaOpened #region-content, html body.institutionPage.metaOpened #region-content {
     margin-left: 0px; } }
-@media screen and (max-width: 1260px) {
+@media screen and (min-width: 1260px) {
   div#block-islandora-solr-basic-facets {
-    display: block !important; }
-
+    display: block !important; } }
+@media screen and (max-width: 1260px) {
   body.bookViewer .bookPreviewContainer {
     flex-direction: column; }
     body.bookViewer .bookPreviewContainer .book-thumbnailData {
