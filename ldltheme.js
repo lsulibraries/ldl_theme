@@ -291,11 +291,6 @@
           break;
         }       
 
-        case (window.location.href.indexOf('lsus-yearbooks:collection') > 0) :{
-           $('#block-system-main').parallax({imageSrc: '/islandora/object/lsus-yearbooks%3A16/datastream/TN/view'});
-            break;
-        }
-
         case ($('body').hasClass('context-data')):{
           dataStarter();
            $('.table').insertBefore('.dl_txt');
@@ -446,7 +441,10 @@
                 var addressEnding =  firstItem.substr(firstItem.indexOf('/images'), firstItem.length-4); 
                 if (addressEnding == "/images/folder.png"){
                   $('#page').parallax({imageSrc: '/sites/all/themes/ldl/images/pelican.jpg' });                 
-                }      
+                }    
+                 else if (window.location.href.indexOf('lsus-yearbooks:collection') > 0){
+                  $('#page').parallax({imageSrc: '/islandora/object/lsus-yearbooks%3A16/datastream/TN/view'});
+                }  
                 else{
                   $('#page').parallax({imageSrc: firstItem });   
                 }         
