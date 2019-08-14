@@ -442,7 +442,7 @@
                 if (addressEnding == "/images/folder.png"){
                   $('#page').parallax({imageSrc: '/sites/all/themes/ldl/images/pelican.jpg' });                 
                 }    
-                 else if (window.location.href.indexOf('lsus-yearbooks%3Acollection') > 0){
+                 else if ((window.location.href.indexOf('lsus-yearbooks%3Acollection') > 0) || (window.location.href.indexOf('lsus-yearbooks:collection') > 0)){
                   $('#page').parallax({imageSrc: '/islandora/object/lsus-yearbooks%3A16/datastream/TN/view'});
                 }  
                 else{
