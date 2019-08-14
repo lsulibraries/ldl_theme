@@ -289,8 +289,21 @@
           }
             oralHistory_end();
           break;
-        }        
+        }       
 
+        case (window.location.href.indexOf('lsus-yearbooks:collection') > 0) :{
+           $('#block-system-main').parallax({imageSrc: '/islandora/object/lsus-yearbooks%3A16/datastream/TN/view'});
+            break;
+        }
+
+        case ($('body').hasClass('context-data')):{
+          dataStarter();
+           $('.table').insertBefore('.dl_txt');
+           $('#edit-filter').parent().addClass('dataContainer');
+           $('#block-system-main').parallax({imageSrc: '/sites/all/themes/ldl/images/pelican.jpg'});
+          scrollFollow();
+          break;
+        }
 
 
 
