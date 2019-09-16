@@ -441,7 +441,7 @@ font-size: 20px;
 
 /*Basic Pages*/
 
-.node-type-page, .node-type-webform{
+.node-type-page, .node-type-webform, .node-type-blog{
 
     #block-system-main .content{
       color: white !important;
@@ -10663,7 +10663,7 @@ div#islandora-pdfjs {
 }
   @media screen and (max-width: 740px) {
 
-body.node-type-page, body.node-type-webform{
+body.node-type-page, body.node-type-webform, body.node-type-blog{
   #block-system-main{
         padding-left: 20px;
     padding-right: 20px;
