@@ -1,4 +1,4 @@
-1af13ef1b43fd6886eaea2903e528c81f0e4d6a1(function ($) {
+(function ($) {
   Drupal.behaviors.ldltheme = {
     attach: function (context, settings) {
       if ($('.mobileMenu').length){
