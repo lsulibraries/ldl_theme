@@ -466,7 +466,7 @@ font-size: 20px;
       margin: 0px;    
     }
     .parallax-mirror {
-      filter: brightness(0.35);
+      filter: brightness(0.20);
     }  
     color: white;
     div#block-system-main {
@@ -479,6 +479,11 @@ font-size: 20px;
 }
 
 
+.node-type-blog{
+  .field-item p{
+    font-size: 1.3em
+  }
+}
 .node-type-webform{
   .description{
   display: none;
