@@ -1,4 +1,4 @@
-(function ($) {
+1af13ef1b43fd6886eaea2903e528c81f0e4d6a1(function ($) {
   Drupal.behaviors.ldltheme = {
     attach: function (context, settings) {
       if ($('.mobileMenu').length){
@@ -1120,7 +1120,7 @@
           $(".nano").nanoScroller({ alwaysVisible: false });           
                     $('#region-sidebar-first').addClass('transition');
         });
-        if (($('body').hasClass('node-type-page')) || ($('body').hasClass('node-type-webform'))){
+        if (($('body').hasClass('node-type-page')) || ($('body').hasClass('node-type-webform')) || ($('body').hasClass('node-type-blog'))){
         $("<div class='userMenu'/>").insertAfter(".basicHeader"); //temporarily moves count
 
         $("ul.tabs").appendTo(".userMenu:first").wrapAll('<div class="manageMenu"/>');
