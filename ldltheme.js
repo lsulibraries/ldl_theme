@@ -51,6 +51,14 @@
           actionToggles();
           break;
         }
+          
+        case (($('body').hasClass('node-type-blog')) && ($('body').hasClass('not-front'))) :{
+          $('#page').parallax({imageSrc: '/sites/all/themes/ldl/images/pelican.jpg'});
+          $('<div class="basicHeader"/>').prependTo('#block-system-main');
+          $('#page-title').prependTo('.basicHeader');
+          actionToggles();
+          break;
+        }                    
 
         case (($('body').hasClass('node-type-webform')) && ($('body').hasClass('not-front'))) :{
           $('#page').parallax({imageSrc: '/sites/all/themes/ldl/images/pelican.jpg'});
