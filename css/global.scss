@@ -196,6 +196,13 @@ $vvilleLogo_long: '../images/wqpOeRQ.png';
 
 /* global styles */
 
+
+//disables meeting minutes
+.meeting-list{
+  display: none;
+}
+
+
   .collectionHeader {
     background: #232323;
   }
