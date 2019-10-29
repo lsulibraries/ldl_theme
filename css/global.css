@@ -140,7 +140,7 @@ div#breadcrumb span.islandora-solr-breadcrumb-super {
   display: none;
 }
 
-#region-sidebar-second {
+#region-sidebar-second, .meeting-list {
   display: none;
 }
 
