@@ -2091,7 +2091,7 @@ if ($('body').hasClass('pdf')){
           $(".parallax-slider").addClass('darkFilter');
           $("#zone-content-wrapper").addClass('noClick');
         }
-        if (hash == "#about-ldc") {
+        if (hash == "#about") {
           modal3.style.display = "flex";
           $(".page").addClass('blurFilter');
           $(".parallax-slider").addClass('darkFilter');
