@@ -4,7 +4,7 @@
 
 /* web fonts */
 
-@import "https://fonts.googleapis.com/css?family=Open+Sans|Roboto:100, 300, 400, 500, 600, 700";
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:100, 300, 400, 500, 600, 700");
 
 $topsearch: #242021;
 $topheader: #313133;
@@ -91,6 +91,7 @@ $loynoColor: #660000;
 $mcneeseColor: #00529b;
 $nichollsColor: #ae132a;
 $nsuColor: #663399;
+$oplibColor: #FFFFFF;
 $subrColor: #75B2DD;
 $stateColor: #304da0;
 $hnocColor: #254550;
@@ -102,8 +103,11 @@ $vvilleColor: #ede7c0;
 $lascColor: #16325a;
 $ebrplColor: #181B42;
 $websterColor: #ffffff;
+$laarchivesColor: #00427c;
+$cpplColor: #304d83;
 
 $websterLogo: '../images/webster.png';
+
 $ebrplLogo: '../images/verticalebrpl.jpg';
 $dccLogo: '../images/logo-white.png';
 $lsmLogo: '../images/uimSOt2.png';
@@ -139,7 +143,10 @@ $tulaneLogo_long: "../images/1024px-Tulane_logo.svg.png";
 $ullLogo_long: "../images/ull-logo_0.png";
 $unoLogo_long: "../images/RBtG5qz.png";
 $vvilleLogo_long: '../images/wqpOeRQ.png';
-
+$oplib_white: '../images/oplib_white.png';
+$oplib_color: '../images/oplib_color.png';
+$laarchives: '../images/laarchives.png';
+$cpplLogo: '../images/cpplLogo.png';
 /* mixins */
 
 @mixin flexbox() {
@@ -312,11 +319,11 @@ form#admin-form {
   display: none;
 }
 
-body:not(.collectionPage, .institutionPage){
-#block-system-main{
-  background: white;
-}
-}
+// body:not(.collectionPage, .institutionPage){
+// #block-system-main{
+//   background: white;
+// }
+// }
 
 div#breadcrumb {
   @include flexbox;
@@ -797,6 +804,36 @@ a.institution-about-edit {
   }
   .institutionLabel{
     background-image: url($lsuaLogo);
+  }
+}
+
+.oplibTheme {
+  .collectionLogo {
+    background-image: url($oplib_white);
+    cursor: pointer;
+  }
+  .institutionLabel{
+    background-image: url($oplib_white);
+  }
+}
+
+.laarchivesTheme {
+  .collectionLogo {
+    background-image: url($laarchives);
+    cursor: pointer;
+  }
+  .institutionLabel{
+    background-image: url($laarchives);
+  }
+}
+
+.cpplTheme {
+  .collectionLogo {
+    background-image: url($cpplLogo);
+    cursor: pointer;
+  }
+  .institutionLabel{
+    background-image: url($cpplLogo);
   }
 }
 
@@ -1484,6 +1521,24 @@ opacity: 1;
     background-image: url($lsusLogo);
   }
 
+  a.institutionLink.oplibLink {
+    background-color: $oplibColor;
+    background-image: url($oplib_color);
+    background-size: 110px auto !important;
+  }
+
+  a.institutionLink.laarchivesLink {
+    background-color: $laarchivesColor;
+    background-image: url($laarchives);
+    background-size: 110px auto !important;
+  }
+
+  a.institutionLink.cpplLink {
+    background-color: $cpplColor;
+    background-image: url($cpplLogo);
+    background-size: 110px auto !important;
+
+  }
 
 //Institution List
 
