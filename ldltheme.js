@@ -2024,7 +2024,7 @@ function monthClick(){
       // Get the modal
       var modal2 = document.getElementById('block-block-14');
       // Get the button that opens the modal
-      // var btn2 = document.getElementsByClassName("contactLink")[0];
+      var btn2 = document.getElementsByClassName("contactLink")[0];
       // Get the <span> element that closes the modal
       var span2 = document.getElementsByClassName("modalExit2")[0];
       var page = document.getElementById('page');
@@ -2032,11 +2032,11 @@ function monthClick(){
 
 
 
-      // btn2.onclick = function() {
-      //     modal2.style.display = "flex";
-      //     pageBlur();
-      //     $("html").removeClass('mobileMenuActive');
-      // }
+      btn2.onclick = function() {
+          modal2.style.display = "flex";
+          pageBlur();
+          $("html").removeClass('mobileMenuActive');
+      }
       // When the user clicks on <span> (x), close the modal
       span2.onclick = function() {
           modal2.style.display = "none";
@@ -2057,19 +2057,19 @@ function monthClick(){
       // Get the modal
       var modal3 = document.getElementById('block-views-meeting-minutes-block-1');
       // Get the button that opens the modal
-      // var btn3 = document.getElementsByClassName("ldcLink")[0];
+      var btn3 = document.getElementsByClassName("ldcLink")[0];
       // $('.about-ldc a');
       // Get the <span> element that closes the modal
       var span3 = document.getElementsByClassName("modalExit3")[0];
       var page = document.getElementById('page');
       // When the user clicks on the button, open the modal
-      // btn3.onclick = function() {
-      //     modal3.style.display = "flex";
-      //     $(".page").addClass('blurFilter');
-      //     $(".parallax-slider").addClass('darkFilter');
-      //     $("html").removeClass('mobileMenuActive');
-      //     $("#zone-content-wrapper").addClass('noClick');
-      // }
+      btn3.onclick = function() {
+          modal3.style.display = "flex";
+          $(".page").addClass('blurFilter');
+          $(".parallax-slider").addClass('darkFilter');
+          $("html").removeClass('mobileMenuActive');
+          $("#zone-content-wrapper").addClass('noClick');
+      }
       // When the user clicks on <span> (x), close the modal
       span3.onclick = function() {
           modal3.style.display = "none";
