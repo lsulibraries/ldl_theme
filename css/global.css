@@ -249,19 +249,22 @@ span.bold {
 }
 
 /*Basic Pages*/
-.node-type-page, .node-type-webform, .node-type-blog {
+.node-type-page, .node-type-webform, .node-type-blog, .page-blog, .page-taxonomy {
   color: white;
 }
 
-.node-type-page #block-system-main .content, .node-type-webform #block-system-main .content, .node-type-blog #block-system-main .content {
-  color: white !important;
-}
-
-.node-type-page #block-system-main .content h1, .node-type-page #block-system-main .content h2, .node-type-page #block-system-main .content h3, .node-type-page #block-system-main .content h4, .node-type-page #block-system-main .content h5, .node-type-page #block-system-main .content h6, .node-type-webform #block-system-main .content h1, .node-type-webform #block-system-main .content h2, .node-type-webform #block-system-main .content h3, .node-type-webform #block-system-main .content h4, .node-type-webform #block-system-main .content h5, .node-type-webform #block-system-main .content h6, .node-type-blog #block-system-main .content h1, .node-type-blog #block-system-main .content h2, .node-type-blog #block-system-main .content h3, .node-type-blog #block-system-main .content h4, .node-type-blog #block-system-main .content h5, .node-type-blog #block-system-main .content h6 {
+.node-type-page #block-system-main .content h1, .node-type-page #block-system-main .content h2, .node-type-page #block-system-main .content h3, .node-type-page #block-system-main .content h4, .node-type-page #block-system-main .content h5, .node-type-page #block-system-main .content h6, .node-type-webform #block-system-main .content h1, .node-type-webform #block-system-main .content h2, .node-type-webform #block-system-main .content h3, .node-type-webform #block-system-main .content h4, .node-type-webform #block-system-main .content h5, .node-type-webform #block-system-main .content h6, .node-type-blog #block-system-main .content h1, .node-type-blog #block-system-main .content h2, .node-type-blog #block-system-main .content h3, .node-type-blog #block-system-main .content h4, .node-type-blog #block-system-main .content h5, .node-type-blog #block-system-main .content h6, .page-blog #block-system-main .content h1, .page-blog #block-system-main .content h2, .page-blog #block-system-main .content h3, .page-blog #block-system-main .content h4, .page-blog #block-system-main .content h5, .page-blog #block-system-main .content h6, .page-taxonomy #block-system-main .content h1, .page-taxonomy #block-system-main .content h2, .page-taxonomy #block-system-main .content h3, .page-taxonomy #block-system-main .content h4, .page-taxonomy #block-system-main .content h5, .page-taxonomy #block-system-main .content h6 {
   color: white;
 }
 
-.node-type-page .userMenu, .node-type-webform .userMenu, .node-type-blog .userMenu {
+.node-type-page #block-system-main .block-inner .blog-content, .node-type-webform #block-system-main .block-inner .blog-content, .node-type-blog #block-system-main .block-inner .blog-content, .page-blog #block-system-main .block-inner .blog-content, .page-taxonomy #block-system-main .block-inner .blog-content {
+  background: white;
+  color: #474747;
+  padding: 40px;
+  border-radius: 5px;
+}
+
+.node-type-page .userMenu, .node-type-webform .userMenu, .node-type-blog .userMenu, .page-blog .userMenu, .page-taxonomy .userMenu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -273,7 +276,7 @@ span.bold {
   border-bottom: 1px solid rgba(255, 255, 255, 0.48);
 }
 
-.node-type-page #page-title, .node-type-webform #page-title, .node-type-blog #page-title {
+.node-type-page #page-title, .node-type-webform #page-title, .node-type-blog #page-title, .page-blog #page-title, .page-taxonomy #page-title {
   display: block !important;
   color: white;
   font-size: 40px;
@@ -281,12 +284,12 @@ span.bold {
   margin: 0px;
 }
 
-.node-type-page .parallax-mirror, .node-type-webform .parallax-mirror, .node-type-blog .parallax-mirror {
-  -webkit-filter: brightness(0.2);
-          filter: brightness(0.2);
+.node-type-page .parallax-mirror, .node-type-webform .parallax-mirror, .node-type-blog .parallax-mirror, .page-blog .parallax-mirror, .page-taxonomy .parallax-mirror {
+  -webkit-filter: brightness(0.35);
+          filter: brightness(0.35);
 }
 
-.node-type-page div#block-system-main, .node-type-webform div#block-system-main, .node-type-blog div#block-system-main {
+.node-type-page div#block-system-main, .node-type-webform div#block-system-main, .node-type-blog div#block-system-main, .page-blog div#block-system-main, .page-taxonomy div#block-system-main {
   margin: 0px auto;
   max-width: 1200px;
   padding-bottom: 200px;
@@ -298,6 +301,18 @@ span.bold {
 
 .node-type-blog .field-item p {
   font-size: 1.3em;
+  line-height: 2em;
+}
+
+.node-type-blog .backContainer {
+  width: 100%;
+  margin-top: 20px !important;
+  height: 60px;
+}
+
+.node-type-blog .backContainer .backCollection {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
 }
 
 .node-type-webform .description {
@@ -395,6 +410,108 @@ span.bold {
   position: relative;
   bottom: 10px;
   color: rgba(255, 255, 255, 0.48);
+}
+
+/* Blog page */
+.node-blog .field-type-image img {
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  width: 400px;
+  height: auto;
+}
+
+.node-blog .blog-content {
+  line-height: 2em;
+}
+
+.page-blog .blogHeader, .page-taxonomy .blogHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  background: transparent !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.48);
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  width: 100% !important;
+  height: auto !important;
+  padding: 0px !important;
+  border-radius: 0px !important;
+}
+
+.page-blog .blogHeader #page-title, .page-taxonomy .blogHeader #page-title {
+  padding-bottom: 10px;
+}
+
+.page-blog #block-system-main > .block-inner > .content, .page-taxonomy #block-system-main > .block-inner > .content {
+  margin: 0 auto;
+}
+
+.page-blog .blog-outer, .page-taxonomy .blog-outer {
+  max-width: 1200px;
+}
+
+.page-blog .node-teaser, .page-taxonomy .node-teaser {
+  width: 223px;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  background: #232323;
+  padding: 70px 20px 50px 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.page-blog .node-teaser .node-title a, .page-taxonomy .node-teaser .node-title a {
+  color: white;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.page-blog .node-teaser .fa-pen, .page-taxonomy .node-teaser .fa-pen {
+  margin-right: 8px;
+  font-size: 16px;
+}
+
+.page-blog .node-teaser .submitted, .page-taxonomy .node-teaser .submitted {
+  position: absolute;
+  bottom: 20px;
+  letter-spacing: 1px;
+  opacity: 0.5;
+  padding-top: 10px;
+}
+
+.page-blog .node-teaser .category, .page-taxonomy .node-teaser .category {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #BABABA;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 50px;
+  padding-left: 20px;
+  background: #1c1c1c;
+  position: absolute;
+  top: 0px;
+  left: 0px;
 }
 
 /*Institutional Page*/
@@ -639,13 +756,13 @@ a.institution-about-edit {
   background-image: url("../images/oplib_white.png");
 }
 
-.laarchivesTheme .collectionLogo {
-  background-image: url("../images/laarchives.png");
+.lsaTheme .collectionLogo {
+  background-image: url("../images/lsa.png");
   cursor: pointer;
 }
 
-.laarchivesTheme .institutionLabel {
-  background-image: url("../images/laarchives.png");
+.lsaTheme .institutionLabel {
+  background-image: url("../images/lsa.png");
 }
 
 .cpplTheme .collectionLogo {
@@ -1399,9 +1516,9 @@ a.institutionLink.oplibLink {
   background-size: 110px auto !important;
 }
 
-a.institutionLink.laarchivesLink {
+a.institutionLink.lsaLink {
   background-color: #00427c;
-  background-image: url("../images/laarchives.png");
+  background-image: url("../images/lsa.png");
   background-size: 110px auto !important;
 }
 
@@ -10222,6 +10339,13 @@ body.multipleDaily .issueLevel .issue-container img {
 }
 
 @media screen and (max-width: 1260px) and (max-width: 900px) {
+  body.context-blog #page, body.institutionPage #page, body.collectionPage #page {
+    background-color: #424242 !important;
+    background-image: none !important;
+  }
+  body.page-blog #block-system-main {
+    width: calc(100% - 40px);
+  }
   .collectionPage .institution-tile, .collectionPage .islandora-basic-collection-object, .institutionPage .institution-tile, .institutionPage .islandora-basic-collection-object {
     margin-bottom: 11px !important;
   }
@@ -10242,7 +10366,7 @@ body.multipleDaily .issueLevel .issue-container img {
   .institutionPage .institution-header, html body.collectionPage .collectionHeader {
     width: calc(100% - 0px) !important;
   }
-  body.institutionPage #block-system-main > div > .content, body.collectionPage #block-system-main > div > .content {
+  body.institutionPage #block-system-main > div > .content, body.collectionPage #block-system-main > div > .content, body.page-blog #block-system-main > div > .content {
     margin-left: 20px;
     margin-right: 20px;
   }
@@ -11049,6 +11173,13 @@ body.multipleDaily .issueLevel .issue-container img {
 }
 
 @media screen and (max-width: 1260px) and (max-width: 740px) {
+  .node-blog .field-type-image img {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    height: auto;
+  }
   body.node-type-page #block-system-main, body.node-type-webform #block-system-main, body.node-type-blog #block-system-main {
     padding-left: 20px;
     padding-right: 20px;
