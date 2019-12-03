@@ -373,6 +373,8 @@
         $("<div class='blogHeader node-teaser'/>").prependTo('.blog-grid');
         $("#page-title").appendTo('.blogHeader');
         $(".action-links").appendTo('.blogHeader');
+        $(".term-listing-heading").appendTo('.blogHeader');
+
       }
 
       function blogCategory(){
