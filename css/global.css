@@ -6257,6 +6257,9 @@ body.largeImage .issuePreview, body.largeImage .grid-loading-notice, body.largeI
 body.largeImage .dayContainer > .dayIssue, body.largeImage .highlight > .dayIssue, body.pdf .dayContainer > .dayIssue, body.pdf .highlight > .dayIssue, body.video .dayContainer > .dayIssue, body.video .highlight > .dayIssue, body.newspaperSet .dayContainer > .dayIssue, body.newspaperSet .highlight > .dayIssue, body.audio .dayContainer > .dayIssue, body.audio .highlight > .dayIssue, body.oralHistory .dayContainer > .dayIssue, body.oralHistory .highlight > .dayIssue {
   display: none !important;
 }
+body.largeImage .monthLevel .issue-container > a, body.pdf .monthLevel .issue-container > a, body.video .monthLevel .issue-container > a, body.newspaperSet .monthLevel .issue-container > a, body.audio .monthLevel .issue-container > a, body.oralHistory .monthLevel .issue-container > a {
+  pointer-events: none;
+}
 body.largeImage .monthLevel .month-container-label, body.pdf .monthLevel .month-container-label, body.video .monthLevel .month-container-label, body.newspaperSet .monthLevel .month-container-label, body.audio .monthLevel .month-container-label, body.oralHistory .monthLevel .month-container-label {
   z-index: 2;
 }
@@ -6547,6 +6550,10 @@ body.largeImage .islandora-newspaper-grid .publication-year-container.activeYear
   color: white;
   box-sizing: content-box;
   border-radius: 0px 0px 3px 3px;
+}
+body.largeImage .issueLevel .ui-datepicker-calendar img, body.pdf .issueLevel .ui-datepicker-calendar img, body.video .issueLevel .ui-datepicker-calendar img, body.newspaperSet .issueLevel .ui-datepicker-calendar img, body.audio .issueLevel .ui-datepicker-calendar img, body.oralHistory .issueLevel .ui-datepicker-calendar img {
+  opacity: 0;
+  position: absolute;
 }
 body.largeImage .issueLevel .firstMonthCover:not(.firstYearCover), body.pdf .issueLevel .firstMonthCover:not(.firstYearCover), body.video .issueLevel .firstMonthCover:not(.firstYearCover), body.newspaperSet .issueLevel .firstMonthCover:not(.firstYearCover), body.audio .issueLevel .firstMonthCover:not(.firstYearCover), body.oralHistory .issueLevel .firstMonthCover:not(.firstYearCover) {
   display: block !important;

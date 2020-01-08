@@ -2227,14 +2227,11 @@ h1.about-link {
         width: calc(100% - 20px);
   }
 
-// div.item-list:nth-child(2n) {
-//   display: none;
-// } //kills repeated pagination, first instance -- not sure why first-child does not work here
-
-.page-islandora-search  div.item-list:nth-child(2n - 1) {
+  .page-islandora-search  div.item-list:nth-child(2n - 1) {
   display: block;
-} //kills repeated pagination, first instance -- not sure why first-child does not work here
+  } //kills repeated pagination, first instance -- not sure why first-child does not work here
 }
+
 .islandora-basic-collection-grid.clearfix {
   @include flexbox;
   flex-wrap: wrap;
@@ -7195,6 +7192,10 @@ display: none;
 
 .monthLevel{
 
+.issue-container > a{
+  pointer-events: none; 
+}
+
 .month-container-label {
     z-index: 2;
 }
@@ -7567,6 +7568,11 @@ span.month-container-label-count {
 //begin issueLevel styleSheets
 
 .issueLevel{
+
+  .ui-datepicker-calendar img {
+    opacity: 0;
+    position: absolute;
+}  
 
 .firstMonthCover:not(.firstYearCover){
   display: block !important;
