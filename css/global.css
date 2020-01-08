@@ -22,6 +22,10 @@ i {
 /*Institutional Colors*/
 /* mixins */
 /* global styles */
+.meeting-list {
+  display: none;
+}
+
 .collectionHeader {
   background: #232323;
 }
@@ -140,7 +144,7 @@ div#breadcrumb span.islandora-solr-breadcrumb-super {
   display: none;
 }
 
-#region-sidebar-second, .meeting-list {
+#region-sidebar-second {
   display: none;
 }
 
@@ -1390,7 +1394,7 @@ html body.collectionPage .itemHover {
   bottom: -40px;
   height: 20px;
   width: 100%;
-  background: #1c1c1bd9;
+  background: rgba(28, 28, 27, 0.85);
   color: white;
   text-transform: uppercase;
   font-size: 11px;
@@ -1671,7 +1675,7 @@ html body.collectionPage .islandora-basic-collection-list-item .list-item-contai
   position: absolute;
   top: 0px;
   width: 100%;
-  background: #313131db;
+  background: rgba(49, 49, 49, 0.858);
   height: 100%;
   display: flex;
   color: white;
@@ -6252,6 +6256,12 @@ body.largeImage .issuePreview, body.largeImage .grid-loading-notice, body.largeI
 }
 body.largeImage .dayContainer > .dayIssue, body.largeImage .highlight > .dayIssue, body.pdf .dayContainer > .dayIssue, body.pdf .highlight > .dayIssue, body.video .dayContainer > .dayIssue, body.video .highlight > .dayIssue, body.newspaperSet .dayContainer > .dayIssue, body.newspaperSet .highlight > .dayIssue, body.audio .dayContainer > .dayIssue, body.audio .highlight > .dayIssue, body.oralHistory .dayContainer > .dayIssue, body.oralHistory .highlight > .dayIssue {
   display: none !important;
+}
+body.largeImage .monthLevel .month-container-label, body.pdf .monthLevel .month-container-label, body.video .monthLevel .month-container-label, body.newspaperSet .monthLevel .month-container-label, body.audio .monthLevel .month-container-label, body.oralHistory .monthLevel .month-container-label {
+  z-index: 2;
+}
+body.largeImage .monthLevel .ui-datepicker-group, body.pdf .monthLevel .ui-datepicker-group, body.video .monthLevel .ui-datepicker-group, body.newspaperSet .monthLevel .ui-datepicker-group, body.audio .monthLevel .ui-datepicker-group, body.oralHistory .monthLevel .ui-datepicker-group {
+  z-index: -1;
 }
 body.largeImage .monthLevel .activeYear .month-container, body.pdf .monthLevel .activeYear .month-container, body.video .monthLevel .activeYear .month-container, body.newspaperSet .monthLevel .activeYear .month-container, body.audio .monthLevel .activeYear .month-container, body.oralHistory .monthLevel .activeYear .month-container {
   overflow: hidden;

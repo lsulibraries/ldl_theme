@@ -1755,7 +1755,7 @@ span.noThumb {
     bottom: -40px;
     height: 20px;
     width: 100%;
-    background: #1c1c1bd9;
+    background: rgba(28,28,27,0.85);
     color: white;
     text-transform: uppercase;
     font-size: 11px;
@@ -2071,7 +2071,7 @@ span.noThumb {
       position: absolute;
       top: 0px;
       width: 100%;
-      background: #313131db;
+      background: rgba(49,49,49,0.858);
       height: 100%;
       display: flex;
       color: white;
@@ -7194,6 +7194,14 @@ display: none;
 
 
 .monthLevel{
+
+.month-container-label {
+    z-index: 2;
+}
+
+.ui-datepicker-group {
+    z-index: -1;
+}
 
 .activeYear .month-container{
       overflow: hidden;
