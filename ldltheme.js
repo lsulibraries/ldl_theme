@@ -57,6 +57,9 @@
           $('<div class="basicHeader"/>').prependTo('#block-system-main');
           $('#page-title').prependTo('.basicHeader');
           actionToggles();
+          $("#block-system-main > .block-inner > .content").addClass("blog-content");
+          $('<a href="/blog" class="backContainer"><div class="backCollection">View All Blog Posts</div></a>').insertAfter('.node-blog');
+          bylineBlog();
           break;
         }                    
 
@@ -88,6 +91,36 @@
           namespaceURL();
           break;
         }
+
+        case ($('body').hasClass('page-blog')) :{
+          $(".page-blog #block-system-main > .block-inner > .content").addClass("blog-grid");
+
+          collectionHeader();
+          blogHeader();
+          actionToggles();
+          // var a = $('.collection-description-text').html();
+          // $('.mobileSummary').html(a);
+          blogCategory();
+          $(".page-blog #block-system-main .block-inner").addClass("blog-outer");
+          usernameBlog();
+          break;
+        } 
+
+        case ($('body').hasClass('page-taxonomy')) :{
+          $(".page-taxonomy #block-system-main > .block-inner > .content").addClass("blog-grid");
+          collectionHeader();
+          blogHeader();
+
+          actionToggles();
+          // var a = $('.collection-description-text').html();
+          // $('.mobileSummary').html(a);
+          blogCategory();
+          $(".page-taxonomy #block-system-main .block-inner").addClass("blog-outer");
+          usernameBlog();
+          break;
+        } 
+
+
 
         case (($(".islandora-basic-collection-item-count").length) > 0) :{
           $("body").addClass("collectionPage");
@@ -321,6 +354,7 @@
         $('.itemLabel').addClass( type + 'Label');
       }
 
+      
       function oralHistory_end(){
         $('.oralhistory-banner, .imagePreview').remove();
 
@@ -334,6 +368,40 @@
         $( " <span class='breadcrumbDivider'>/</span>" ).insertAfter( ".institutionSmall:last" ); //needs to be separated from the a href
         $(newspaperText).addClass("institutionSmall").appendTo(".headerBreadcrumb"); //creates institution breadcrumb
       }
+
+      function blogHeader(){
+        $("<div class='blogHeader node-teaser'/>").prependTo('.blog-grid');
+        $("#page-title").appendTo('.blogHeader');
+        $(".action-links").appendTo('.blogHeader');
+        $(".term-listing-heading").appendTo('.blogHeader');
+
+      }
+
+      function blogCategory(){
+        $(".node-teaser").each(function() {        
+        switch (true) { //detect page type or content type
+          case ($(this).hasClass('node-blog')):{
+            $("<div class='category'><i class='fa fa-pen'></i> Blog Entry</div>").prependTo(this);
+            break;
+          }
+
+        }
+      })
+    }
+
+      function usernameBlog(){
+        $( ".node-teaser" ).each(function() { // get links for each day
+          var blogURL = $(this).find('li.blog_usernames_blog > a').attr('href');
+          $(this).find('.submitted > a').attr("href", blogURL);
+        });
+        $('.node-links').remove();
+      }
+
+      function bylineBlog(){
+          var blogURL = $('li.blog_usernames_blog > a').attr('href');
+          $('a.username').attr("href", blogURL);
+      }
+
 
       function fadeList(){
         $(".islandora-newspaper-grid").fadeOut("normal", function() {
@@ -457,6 +525,12 @@
                   $('#page').parallax({imageSrc: firstItem });   
                 }         
             }
+            else if ($('body').hasClass('page-blog')){
+              $('#page').parallax({imageSrc: '/sites/all/themes/ldl/images/pelican.jpg' });                  
+            }
+            else if ($('body').hasClass('page-taxonomy')){
+              $('#page').parallax({imageSrc: '/sites/all/themes/ldl/images/pelican.jpg' });                  
+            }            
             else {
             var firstItem = $('.islandora-basic-collection-object1 > .list-item-container > .list-thumbnail > a > img').prop('src');
             $('#page').parallax({imageSrc: firstItem });      
@@ -1128,7 +1202,7 @@
           $(".nano").nanoScroller({ alwaysVisible: false });           
                     $('#region-sidebar-first').addClass('transition');
         });
-        if (($('body').hasClass('node-type-page')) || ($('body').hasClass('node-type-webform')) || ($('body').hasClass('node-type-blog'))){
+        if (($('body').hasClass('node-type-page')) ||  ($('body').hasClass('page-taxonomy')) || ($('body').hasClass('page-blog')) || ($('body').hasClass('node-type-webform')) || ($('body').hasClass('node-type-blog'))){
         $("<div class='userMenu'/>").insertAfter(".basicHeader"); //temporarily moves count
 
         $("ul.tabs").appendTo(".userMenu:first").wrapAll('<div class="manageMenu"/>');
@@ -1257,15 +1331,16 @@
       }
 
       function gridDetents(){
-            var outerGrid = $('.islandora-basic-collection, .institution-content '); //this = window
-            var grid = $('.islandora-basic-collection-grid, .institution-grid'); //this = window
+            var outerGrid = $('.islandora-basic-collection, .institution-content, .blog-outer'); //this = window
+            var grid = $('.islandora-basic-collection-grid, .institution-grid, .blog-grid'); //this = window
             if (outerGrid.width() > 1199) { grid.css("width","auto"); }
             if (outerGrid.width() <= 1199) { grid.css("width","960px"); }
             if (outerGrid.width() <= 985) { grid.css("width","720px"); }
             if (outerGrid.width() <= 789) { grid.css("width","480px"); }
             if (outerGrid.width() <= 519) {
               grid.css("width","100%"); 
-              $('.masonryItem').css("width","calc(50vw - 26px)");
+              $('.masonryItem, .node-teaser').css("width","calc(50vw - 26px)");
+              
             }
       }
 
@@ -1364,7 +1439,29 @@
         transitionDuration: '0.2s'        
       });
 
-      if (($('body').hasClass('collectionPage')) || ($('body').hasClass('institutionPage'))){
+      var blog = $('.page-blog #block-system-main > .block-inner > .content').masonry({
+        itemSelector: '.node-teaser',
+        initLayout: false,
+        isFitWidth: false,
+        percentPosition: false,      
+        columnWidth: 223,
+        gutter: 16,
+        transitionDuration: '0.2s',
+        horizontalOrder: true     
+      });
+
+      var taxonomy = $('.page-taxonomy #block-system-main > .block-inner > .content').masonry({
+        itemSelector: '.node-teaser',
+        initLayout: false,
+        isFitWidth: false,
+        percentPosition: false,      
+        columnWidth: 223,
+        gutter: 16,
+        transitionDuration: '0.2s',
+        horizontalOrder: true     
+      });
+
+      if (($('body').hasClass('collectionPage')) || ($('body').hasClass('page-taxonomy')) || ($('body').hasClass('page-blog')) || ($('body').hasClass('institutionPage'))){
 
       $(window).on('resize', function(){
         gridDetents();
@@ -1394,6 +1491,12 @@
 
           grid.masonry();  
         }
+        if ($('body').hasClass('page-blog')){
+          blog.masonry();  
+        }
+        if ($('body').hasClass('page-taxonomy')){
+          taxonomy.masonry();  
+        }        
         if ($('body').hasClass('mobileUser')){
           var windowSize = $( window ).width();
           var columnSize = windowSize/2 - 26
@@ -1407,8 +1510,22 @@
             transitionDuration: '0.s'        
           });
           grid2.masonry();  
-          console.log(columnSize)
         };
+        if (($('body').hasClass('mobileUser')) && ($('body').hasClass('context-blog'))){
+          var windowSize = $( window ).width();
+          var columnSize = windowSize/2 - 26
+          var blogMobile = $('.blog-grid').masonry({
+            itemSelector: '.blog-teaser',
+            initLayout: false,
+            isFitWidth: false,
+            percentPosition: false,      
+            columnWidth: columnSize,
+            gutter: 11,
+            transitionDuration: '0.s'        
+          });
+          blogMobile.masonry();  
+        };
+
 
         sr.reveal('.islandora-basic-collection-object, .institution-tile', { duration: 200, delay: 350,  easing: 'linear', scale: 1, viewFactor: 0.01, }, 20);
         sr.reveal('.collectionPage .item-list, .islandora-solr-content .item-list', { duration: 200, delay: 350,  easing: 'linear', scale: 1, viewFactor: 0.01, }, 20);
@@ -1786,7 +1903,7 @@ function monthClick(){
       }
       // end newspaper 2.0
 
-      if ( ($('body').hasClass('compoundObject')) || ($('body').hasClass('page-node')) || ($('body').hasClass('accessDenied')) || ($('body').hasClass('basicPage')) || ($('body').hasClass('institutionPage')) || ($('body').hasClass('collectionPage')) || ($('body').hasClass('oralHistory')) || ($('body').hasClass('audio')) || ($('body').hasClass('video')) || ($('body').hasClass('pdf')) || ($('body').hasClass('bookViewer')) || ($('body').hasClass('context-data')) || ($('body').hasClass('largeImage')) || ($('body').hasClass('newspaperSet'))){
+      if ( ($('body').hasClass('compoundObject')) || ($('body').hasClass('page-blog')) || ($('body').hasClass('page-node')) || ($('body').hasClass('accessDenied')) || ($('body').hasClass('basicPage')) || ($('body').hasClass('institutionPage')) || ($('body').hasClass('collectionPage')) || ($('body').hasClass('oralHistory')) || ($('body').hasClass('audio')) || ($('body').hasClass('video')) || ($('body').hasClass('pdf')) || ($('body').hasClass('bookViewer')) || ($('body').hasClass('context-data')) || ($('body').hasClass('largeImage')) || ($('body').hasClass('newspaperSet'))){
       $('body').addClass('headerversiontwo');
       }
 
@@ -1909,7 +2026,7 @@ function monthClick(){
       // Get the modal
       var modal2 = document.getElementById('block-block-14');
       // Get the button that opens the modal
-      var btn2 = document.getElementsByClassName("contactLink")[0];
+      // var btn2 = document.getElementsByClassName("contactLink")[0];
       // Get the <span> element that closes the modal
       var span2 = document.getElementsByClassName("modalExit2")[0];
       var page = document.getElementById('page');
@@ -1917,11 +2034,11 @@ function monthClick(){
 
 
 
-      btn2.onclick = function() {
-          modal2.style.display = "flex";
-          pageBlur();
-          $("html").removeClass('mobileMenuActive');
-      }
+      // btn2.onclick = function() {
+      //     modal2.style.display = "flex";
+      //     pageBlur();
+      //     $("html").removeClass('mobileMenuActive');
+      // }
       // When the user clicks on <span> (x), close the modal
       span2.onclick = function() {
           modal2.style.display = "none";
@@ -1942,19 +2059,19 @@ function monthClick(){
       // Get the modal
       var modal3 = document.getElementById('block-views-meeting-minutes-block-1');
       // Get the button that opens the modal
-      var btn3 = document.getElementsByClassName("ldcLink")[0];
-      $('.about-ldc a');
+      // var btn3 = document.getElementsByClassName("ldcLink")[0];
+      // $('.about-ldc a');
       // Get the <span> element that closes the modal
       var span3 = document.getElementsByClassName("modalExit3")[0];
       var page = document.getElementById('page');
       // When the user clicks on the button, open the modal
-      btn3.onclick = function() {
-          modal3.style.display = "flex";
-          $(".page").addClass('blurFilter');
-          $(".parallax-slider").addClass('darkFilter');
-          $("html").removeClass('mobileMenuActive');
-          $("#zone-content-wrapper").addClass('noClick');
-      }
+      // btn3.onclick = function() {
+      //     modal3.style.display = "flex";
+      //     $(".page").addClass('blurFilter');
+      //     $(".parallax-slider").addClass('darkFilter');
+      //     $("html").removeClass('mobileMenuActive');
+      //     $("#zone-content-wrapper").addClass('noClick');
+      // }
       // When the user clicks on <span> (x), close the modal
       span3.onclick = function() {
           modal3.style.display = "none";
