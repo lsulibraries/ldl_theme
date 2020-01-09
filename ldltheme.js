@@ -1810,6 +1810,11 @@ function monthClick(){
             $('<div class="multipleNotice">This month contains days with multiple issues</div>').insertBefore('.activeMonth span.month-container-label-month');
             console.log('multiple issues on one day');
         }
+
+        $('.monthLevel .ui-datepicker-calendar td').each(function (){
+            this.style.pointerEvents = 'none'; 
+        }); 
+        
       }
     });
 

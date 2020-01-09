@@ -1725,7 +1725,7 @@ a.institutionLink.cpplLink {
 #block-block-11 a.institutionLink.websterLink {
   background-color: #ffffff;
   background-image: url("../images/webster.png");
-  background-size: 140px auto;
+  background-size: 180px auto;
 }
 
 .institution-tile, .item-list {
@@ -1807,7 +1807,7 @@ html body.collectionPage .itemHover {
   bottom: -40px;
   height: 20px;
   width: 100%;
-  background: #1c1c1bd9;
+  background: rgba(28, 28, 27, 0.85);
   color: white;
   text-transform: uppercase;
   font-size: 11px;
@@ -2183,7 +2183,7 @@ html body.collectionPage .islandora-basic-collection-list-item .list-item-contai
   position: absolute;
   top: 0px;
   width: 100%;
-  background: #313131db;
+  background: rgba(49, 49, 49, 0.858);
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7754,6 +7754,16 @@ body.largeImage .dayContainer > .dayIssue, body.largeImage .highlight > .dayIssu
   display: none !important;
 }
 
+body.largeImage .monthLevel .issue-container > a, body.pdf .monthLevel .issue-container > a, body.video .monthLevel .issue-container > a, body.newspaperSet .monthLevel .issue-container > a, body.audio .monthLevel .issue-container > a, body.oralHistory .monthLevel .issue-container > a {
+  pointer-events: none;
+}
+body.largeImage .monthLevel .month-container-label, body.pdf .monthLevel .month-container-label, body.video .monthLevel .month-container-label, body.newspaperSet .monthLevel .month-container-label, body.audio .monthLevel .month-container-label, body.oralHistory .monthLevel .month-container-label {
+  z-index: 2;
+}
+body.largeImage .monthLevel .ui-datepicker-group, body.pdf .monthLevel .ui-datepicker-group, body.video .monthLevel .ui-datepicker-group, body.newspaperSet .monthLevel .ui-datepicker-group, body.audio .monthLevel .ui-datepicker-group, body.oralHistory .monthLevel .ui-datepicker-group {
+  z-index: -1;
+}
+
 body.largeImage .monthLevel .activeYear .month-container, body.pdf .monthLevel .activeYear .month-container, body.video .monthLevel .activeYear .month-container, body.newspaperSet .monthLevel .activeYear .month-container, body.audio .monthLevel .activeYear .month-container, body.oralHistory .monthLevel .activeYear .month-container {
   overflow: hidden;
   height: 190px;
@@ -8159,6 +8169,10 @@ body.largeImage .islandora-newspaper-grid .publication-year-container.activeYear
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
   border-radius: 0px 0px 3px 3px;
+}
+body.largeImage .issueLevel .ui-datepicker-calendar img, body.pdf .issueLevel .ui-datepicker-calendar img, body.video .issueLevel .ui-datepicker-calendar img, body.newspaperSet .issueLevel .ui-datepicker-calendar img, body.audio .issueLevel .ui-datepicker-calendar img, body.oralHistory .issueLevel .ui-datepicker-calendar img {
+  opacity: 0;
+  position: absolute;
 }
 
 body.largeImage .issueLevel .firstMonthCover:not(.firstYearCover), body.pdf .issueLevel .firstMonthCover:not(.firstYearCover), body.video .issueLevel .firstMonthCover:not(.firstYearCover), body.newspaperSet .issueLevel .firstMonthCover:not(.firstYearCover), body.audio .issueLevel .firstMonthCover:not(.firstYearCover), body.oralHistory .issueLevel .firstMonthCover:not(.firstYearCover) {

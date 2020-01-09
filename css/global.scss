@@ -1852,7 +1852,7 @@ opacity: 1;
   a.institutionLink.websterLink {
     background-color: $websterColor;
     background-image: url($websterLogo);
-    background-size: 140px auto;
+    background-size: 180px auto;
   }  
 }
 
@@ -1932,7 +1932,7 @@ span.noThumb {
     bottom: -40px;
     height: 20px;
     width: 100%;
-    background: #1c1c1bd9;
+    background: rgba(28,28,27,0.85);
     color: white;
     text-transform: uppercase;
     font-size: 11px;
@@ -2248,7 +2248,7 @@ span.noThumb {
       position: absolute;
       top: 0px;
       width: 100%;
-      background: #313131db;
+      background: rgba(49,49,49,0.858);
       height: 100%;
       display: flex;
       color: white;
@@ -2404,14 +2404,11 @@ h1.about-link {
         width: calc(100% - 20px);
   }
 
-// div.item-list:nth-child(2n) {
-//   display: none;
-// } //kills repeated pagination, first instance -- not sure why first-child does not work here
-
-.page-islandora-search  div.item-list:nth-child(2n - 1) {
+  .page-islandora-search  div.item-list:nth-child(2n - 1) {
   display: block;
-} //kills repeated pagination, first instance -- not sure why first-child does not work here
+  } //kills repeated pagination, first instance -- not sure why first-child does not work here
 }
+
 .islandora-basic-collection-grid.clearfix {
   @include flexbox;
   flex-wrap: wrap;
@@ -7372,6 +7369,18 @@ display: none;
 
 .monthLevel{
 
+.issue-container > a{
+  pointer-events: none; 
+}
+
+.month-container-label {
+    z-index: 2;
+}
+
+.ui-datepicker-group {
+    z-index: -1;
+}
+
 .activeYear .month-container{
       overflow: hidden;
     height: 190px;
@@ -7736,6 +7745,11 @@ span.month-container-label-count {
 //begin issueLevel styleSheets
 
 .issueLevel{
+
+  .ui-datepicker-calendar img {
+    opacity: 0;
+    position: absolute;
+}  
 
 .firstMonthCover:not(.firstYearCover){
   display: block !important;
