@@ -4,7 +4,7 @@
 
 /* web fonts */
 
-@import "https://fonts.googleapis.com/css?family=Open+Sans|Roboto:100, 300, 400, 500, 600, 700";
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:100, 300, 400, 500, 600, 700");
 
 $topsearch: #242021;
 $topheader: #313133;
@@ -91,6 +91,7 @@ $loynoColor: #660000;
 $mcneeseColor: #00529b;
 $nichollsColor: #ae132a;
 $nsuColor: #663399;
+$oplibColor: #FFFFFF;
 $subrColor: #75B2DD;
 $stateColor: #304da0;
 $hnocColor: #254550;
@@ -102,8 +103,11 @@ $vvilleColor: #ede7c0;
 $lascColor: #16325a;
 $ebrplColor: #181B42;
 $websterColor: #ffffff;
+$lsaColor: #00427c;
+$cpplColor: #304d83;
 
 $websterLogo: '../images/webster.png';
+
 $ebrplLogo: '../images/verticalebrpl.jpg';
 $dccLogo: '../images/logo-white.png';
 $lsmLogo: '../images/uimSOt2.png';
@@ -139,7 +143,10 @@ $tulaneLogo_long: "../images/1024px-Tulane_logo.svg.png";
 $ullLogo_long: "../images/ull-logo_0.png";
 $unoLogo_long: "../images/RBtG5qz.png";
 $vvilleLogo_long: '../images/wqpOeRQ.png';
-
+$oplib_white: '../images/oplib_white.png';
+$oplib_color: '../images/oplib_color.png';
+$lsa: '../images/lsa.png';
+$cpplLogo: '../images/cpplLogo.png';
 /* mixins */
 
 @mixin flexbox() {
@@ -312,11 +319,11 @@ form#admin-form {
   display: none;
 }
 
-body:not(.collectionPage, .institutionPage){
-#block-system-main{
-  background: white;
-}
-}
+// body:not(.collectionPage, .institutionPage){
+// #block-system-main{
+//   background: white;
+// }
+// }
 
 div#breadcrumb {
   @include flexbox;
@@ -448,14 +455,21 @@ font-size: 20px;
 
 /*Basic Pages*/
 
-.node-type-page, .node-type-webform, .node-type-blog{
+.node-type-page, .node-type-webform, .node-type-blog, .page-blog, .page-taxonomy{
 
     #block-system-main .content{
-      color: white !important;
+    
       h1, h2, h3, h4, h5, h6{
         color: white;
       }
     }
+
+    #block-system-main .block-inner .blog-content {
+      background:white;
+      color:#474747;
+      padding: 40px;
+      border-radius: 5px;
+      }
 
     .userMenu {
       display: flex;
@@ -473,7 +487,7 @@ font-size: 20px;
       margin: 0px;    
     }
     .parallax-mirror {
-      filter: brightness(0.20);
+      filter: brightness(0.35);
     }  
     color: white;
     div#block-system-main {
@@ -488,7 +502,18 @@ font-size: 20px;
 
 .node-type-blog{
   .field-item p{
-    font-size: 1.3em
+    font-size: 1.3em;
+    line-height: 2em;
+  }
+  .backContainer{
+    width: 100%;
+    margin-top: 20px !important;
+    height: 60px;
+    
+    .backCollection{
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    }
   }
 }
 .node-type-webform{
@@ -573,6 +598,110 @@ input.webform-submit.button-primary.form-submit{
         bottom: 10px;
         color: $lightTransparent2;
     }    
+}
+
+/* Blog page */
+
+.node-blog{
+  .field-type-image img {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    width: 400px;
+    height: auto;
+  }
+  .blog-content{
+    line-height: 2em;
+  }
+}
+
+.page-blog, .page-taxonomy{
+
+  .blogHeader {
+    @include flexbox;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    background: transparent !important;
+    border-bottom: 1px solid $lightTransparent2;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    width: 100% !important;
+    height: auto !important;     
+    padding: 0px !important;
+    border-radius: 0px !important;
+    #page-title {
+    padding-bottom: 10px;
+    }
+  }
+
+  #block-system-main > .block-inner > .content{
+    margin: 0 auto;
+  }
+
+  .blog-outer{
+    max-width: 1200px;
+  }
+
+  .node-teaser{
+    width: 223px;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 16px;
+    background: #232323;
+    padding: 70px 20px 50px 20px;
+    box-sizing: border-box;
+
+    .node-title a{
+      color:white;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 20px;
+      }
+
+    // .node-links {
+    //   display: none;  
+    // }
+
+    .fa-pen{
+      margin-right: 8px;
+      font-size: 16px;
+    }
+
+    .submitted {
+      position: absolute;
+      bottom: 20px;
+      letter-spacing: 1px;
+      opacity: 0.5;
+      padding-top: 10px;
+    }
+
+    .category {
+      font-size: 11px;
+      text-transform: uppercase;
+      color: #BABABA;
+      width: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      height: 50px;
+      padding-left: 20px;
+      background: #1c1c1c;   
+      position: absolute;
+      top: 0px;
+      left: 0px;         
+    }
+
+  }
+
+
+
 }
 
 
@@ -797,6 +926,36 @@ a.institution-about-edit {
   }
   .institutionLabel{
     background-image: url($lsuaLogo);
+  }
+}
+
+.oplibTheme {
+  .collectionLogo {
+    background-image: url($oplib_white);
+    cursor: pointer;
+  }
+  .institutionLabel{
+    background-image: url($oplib_white);
+  }
+}
+
+.lsaTheme {
+  .collectionLogo {
+    background-image: url($lsa);
+    cursor: pointer;
+  }
+  .institutionLabel{
+    background-image: url($lsa);
+  }
+}
+
+.cpplTheme {
+  .collectionLogo {
+    background-image: url($cpplLogo);
+    cursor: pointer;
+  }
+  .institutionLabel{
+    background-image: url($cpplLogo);
   }
 }
 
@@ -1484,6 +1643,24 @@ opacity: 1;
     background-image: url($lsusLogo);
   }
 
+  a.institutionLink.oplibLink {
+    background-color: $oplibColor;
+    background-image: url($oplib_color);
+    background-size: 110px auto !important;
+  }
+
+  a.institutionLink.lsaLink {
+    background-color: $lsaColor;
+    background-image: url($lsa);
+    background-size: 110px auto !important;
+  }
+
+  a.institutionLink.cpplLink {
+    background-color: $cpplColor;
+    background-image: url($cpplLogo);
+    background-size: 110px auto !important;
+
+  }
 
 //Institution List
 
@@ -9703,6 +9880,21 @@ margin-bottom: 20px;
 
   @media screen and (max-width: 900px) {
 
+    body.context-blog, body.institutionPage, body.collectionPage{
+      #page{
+      background-color: #424242 !important;
+      background-image: none !important;
+      }
+    }
+
+body.page-blog{
+  #block-system-main {
+
+    width: calc(100% - 40px);
+
+}
+}
+
 .collectionPage, .institutionPage{
   .institution-tile, .islandora-basic-collection-object{
     margin-bottom: 11px !important;
@@ -9729,7 +9921,7 @@ html body.collectionPage .islandora-basic-collection-wrapper{
     width: calc(100% - 0px) !important;
 }
 
-body.institutionPage #block-system-main > div > .content, body.collectionPage #block-system-main > div > .content {
+body.institutionPage #block-system-main > div > .content, body.collectionPage #block-system-main > div > .content, body.page-blog #block-system-main > div > .content {
     margin-left: 20px;
     margin-right: 20px;
 }
@@ -10688,6 +10880,16 @@ div#islandora-pdfjs {
     }
 }
   @media screen and (max-width: 740px) {
+
+    .node-blog .field-type-image img {
+      float: left;
+      margin-right: 20px;
+      margin-bottom: 20px;
+      width: 100%;
+      height: auto;
+  }
+
+
 
 body.node-type-page, body.node-type-webform, body.node-type-blog{
   #block-system-main{
