@@ -51,6 +51,7 @@ $infoLegend: '../images/zK6anrR.png';
 $downloadLegend: '../images/rthA4J4.png';
 $infoLegend2:'../images/info_light.png';
 $descriptionLegend:'../images/info_dark.png';
+$embargoIcon: '../images/embargo.png';
 
 $darkTransparent: rgba(0, 0, 0, .06);
 $darkTransparent2: rgba(0, 0, 0, .19);
@@ -1541,6 +1542,40 @@ html body.institutionPage #region-sidebar-first {
     }
   }
 }
+
+
+//Start Embargo Styles
+
+span.islandora_ip_embargo_embargoed {
+  background:rgba(225, 53, 53, 0.65);
+  width: 100%;
+  text-align: center;
+  height: 100%;
+  color:  white !important;
+  font-weight: bold;
+  letter-spacing: 2px;  
+  font-size: 1em !important;
+  display: flex;
+  top: 0px;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  padding-bottom: 50px !important;
+  
+}
+
+span.islandora_ip_embargo_embargoed::before {
+  content: '';
+  height: 100px;
+  display: block;
+  background-size: 70px;
+  background-position: center;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-image: url($embargoIcon);
+}
+
+//End Embargo Styles
 
 /*institution list*/
 
@@ -5061,6 +5096,7 @@ header#section-header {
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
 
 form#islandora-ip-embargo-object-embargo-form {
     background: #efefef;
