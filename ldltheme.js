@@ -1369,10 +1369,12 @@
 
 
         $(".islandora\\:sp_large_image_cmodel:not(.islandora\\:compoundCModel)").each(function() {
+
           var height = $(this).find("img").prop('naturalHeight');
           var jpg = ($(this).find("img").attr('src')).replace('TN', 'JPG');
+          
           if (height > 150){
-           $(this).find("img").attr('src', jpg);
+           $(this).find("img").not('.islandora_ip_embargo_embargoed').attr('src', jpg);
           }
         });
 
