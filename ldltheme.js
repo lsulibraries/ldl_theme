@@ -185,6 +185,7 @@
           if ($('.block-islandora-compound-object').length){
             compoundChild_end();
           }
+          embargoStyles();
           break;
         }
 
@@ -204,6 +205,7 @@
           if ($('.block-islandora-compound-object').length){
             compoundChild_end();
           }
+          embargoStyles();
           break;
         }
 
@@ -223,6 +225,7 @@
           if ($('.block-islandora-compound-object').length){
             compoundChild_end();
           }
+          embargoStyles();
           break;
         }
 
@@ -242,6 +245,7 @@
           if ($('.block-islandora-compound-object').length){
             compoundChild_end();
           }
+          embargoStyles();
           break;
         }
 
@@ -267,6 +271,8 @@
           if (($('.book-thumbnail').length) && ($('span#islandora-compound-sequence-position').length)) {
             compoundChild_end();
           }
+          // embargoStyles();
+
           break;
         }
 
@@ -744,12 +750,6 @@
       function itemHeader(){
         $('body').addClass('itemPage');
 
-        //begin Embargo Detection
-        if (($('.ip-embargo-details').text().length) > 10){
-          $('body').addClass('activeEmbargo');
-        }
-        //end Embargo Detection
-
         if (!$('body').hasClass('compoundParent')){
           $(".region-inner > div.tabs.clearfix").prependTo("#block-system-main");
           $("<div class='item_header'/>").insertBefore(".itemContainer, .islandora-video-object, .islandora-audio-object, .islandora-pdf-object, .islandora-large-image-object, .bookContainer, .islandora-newspaper-object"); //creates header for image items
@@ -884,6 +884,13 @@
         }
         $("<a href='/' class='institutionSmall'>LDL</a><span class='breadcrumbDivider'>/</span></div>").prependTo(".headerBreadcrumb");
 
+        
+        //begin Embargo Detection
+        if (($('.ip-embargo-details').text().length) > 10){
+          $('body').addClass('activeEmbargo');
+          $('.ip-embargo-details').prependTo('.itemContainer');
+        }
+        //end Embargo Detection
 
      }
 
