@@ -271,7 +271,6 @@
           if (($('.book-thumbnail').length) && ($('span#islandora-compound-sequence-position').length)) {
             compoundChild_end();
           }
-          // embargoStyles();
 
           break;
         }
@@ -961,6 +960,10 @@
 
       function embargoStyles(){
         if ((($('.ip-embargo-details').text()).length) > 5){
+
+            //remove video player
+            $('.islandora-video-content').remove();
+
             //thumbnail present but JP2 is not
             if (($('body').hasClass('largeImage')) && (!$('#islandora-openseadragon').length)){
               $('.imageMenu').remove();

@@ -1561,7 +1561,7 @@ span.islandora_ip_embargo_embargoed {
   justify-content: center;
   align-content: center;
   padding-bottom: 50px !important;
-  
+
 }
 
 span.islandora_ip_embargo_embargoed::before {
@@ -4874,7 +4874,7 @@ margin-top: 10px;
 
 .compoundSelect.embargoed::after{
 
-      content: 'restricted';
+      content: 'embargoed';
     position: absolute;
     background: #FF5370;
     color: white;
@@ -8448,6 +8448,7 @@ body.video, body.audio:not(.compoundParent){
     border-left: 0px;
     margin-left: 0px;
     padding-left: 0px;
+    max-width: 680px;    
 }
 
   .imagePreview{

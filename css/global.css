@@ -1172,6 +1172,7 @@ span.islandora_ip_embargo_embargoed {
   flex-direction: column;
   justify-content: center;
   align-content: center;
+  padding-bottom: 50px !important;
 }
 
 span.islandora_ip_embargo_embargoed::before {
@@ -4380,7 +4381,7 @@ div.islandora-pdf-object, div.islandora-large-image-object {
 }
 
 .compoundSelect.embargoed::after {
-  content: 'restricted';
+  content: 'embargoed';
   position: absolute;
   background: #FF5370;
   color: white;
@@ -7231,6 +7232,7 @@ body.video .image-thumbnailData, body.audio:not(.compoundParent) .image-thumbnai
   border-left: 0px;
   margin-left: 0px;
   padding-left: 0px;
+  max-width: 680px;
 }
 body.video .imagePreview, body.audio:not(.compoundParent) .imagePreview {
   display: none;
