@@ -968,7 +968,7 @@
         $(".downloadSelect").insertAfter(".infoToggle");
         $("<i class='fa fa-image' aria-hidden='true'></i>").appendTo(".imageLabel");
 
-        if ($('body').hasClass('activeEmbargo')){
+        if (($('body').hasClass('activeEmbargo')) && (!$('body').hasClass('audio'))){
           var currentTN =  $('meta[name="twitter:image"]').attr("content");          
           var embargoTN = currentTN.replace('/JPG', '/TN');        
           $('.backgroundDiv').css('background-image', 'url(' + embargoTN + ')');
