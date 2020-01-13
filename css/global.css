@@ -5281,9 +5281,6 @@ body.headerversiontwo .bookPreview .book-thumbnail, body.headerversiontwo .bookP
   justify-content: center;
   align-items: center;
 }
-body.headerversiontwo .bookPreview .book-thumbnail img, body.headerversiontwo .imagePreview .book-thumbnail img {
-  height: 200px;
-}
 body.headerversiontwo .bookPreview:hover .bookMenu, body.headerversiontwo .bookPreview:hover .imageMenu, body.headerversiontwo .imagePreview:hover .bookMenu, body.headerversiontwo .imagePreview:hover .imageMenu {
   transition-duration: 1s;
   flex-grow: 1;
