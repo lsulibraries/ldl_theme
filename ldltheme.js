@@ -593,6 +593,15 @@
       
 
 
+      function checkTitle(){
+        var twitterTitle = $('meta[name="twitter:title"]').attr("content");          
+        if ($(".itemTitle").is(':empty')){
+          $(".itemTitle").html(twitterTitle);
+          console.log("title backup");
+
+      }
+    }
+
       function collectionHover(){
 
         $(".islandora-basic-collection-object, .list-item-container").each(function() {
@@ -890,6 +899,8 @@
           $('.ip-embargo-details').prependTo('.itemContainer');
         }
         //end Embargo Detection
+
+        checkTitle();
 
      }
 

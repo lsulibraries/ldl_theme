@@ -52,6 +52,8 @@ $downloadLegend: '../images/rthA4J4.png';
 $infoLegend2:'../images/info_light.png';
 $descriptionLegend:'../images/info_dark.png';
 $embargoIcon: '../images/embargo.png';
+$embargoIcon2: '../images/embargored.png';
+
 
 $darkTransparent: rgba(0, 0, 0, .06);
 $darkTransparent2: rgba(0, 0, 0, .19);
@@ -1546,6 +1548,19 @@ html body.institutionPage #region-sidebar-first {
 
 //Start Embargo Styles
 
+.activeEmbargo{
+  .ip-embargo-details::before {
+    content: '';
+    height: 100px;
+    display: block;
+    background-size: 70px;
+    background-position: top center;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-image: url($embargoIcon2);
+  }
+}
+
 span.islandora_ip_embargo_embargoed {
   background:rgba(225, 53, 53, 0.65);
   width: 100%;
@@ -1560,7 +1575,7 @@ span.islandora_ip_embargo_embargoed {
   flex-direction: column;
   justify-content: center;
   align-content: center;
-  padding-bottom: 50px !important;
+  padding-bottom: 20px !important;
 
 }
 
