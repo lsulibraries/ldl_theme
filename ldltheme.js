@@ -170,7 +170,7 @@
         }
         //case for large images
         case ((($('body').hasClass('largeImage'))) && (!$('body').hasClass('audioPDF'))) :{
-          itemTitle = $('meta[name="twitter:title"]').attr("content"); // finds full title without truncation
+          itemTitle = $('.modsTitle').html(); // finds full title without truncation
           thumbnailURL = $(".image-thumbnail img").prop('src');
           if ($('.block-islandora-compound-object').length){
             compoundChild_start();
@@ -839,7 +839,7 @@
          // $("#region-content div.tabs.clearfix").prependTo("#block-system-main");
         }
         if ((!$('body').hasClass('compoundParent')) && (!$('body').hasClass('compoundChild'))) {
-          itemTitle = $('meta[name="twitter:title"]').attr("content"); // finds full title without truncation
+          itemTitle = $(".modsTitle").html(); // finds full title without truncation
           if ($('body').hasClass('newspaperSet')){
             var baseUrl = document.location.origin;
             var thumbnailURL = baseUrl + ($(".issue-container:first > a").attr('href')) + '/datastream/TN/view';
