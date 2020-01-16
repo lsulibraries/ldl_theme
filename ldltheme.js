@@ -977,7 +977,7 @@
       }
 
       function embargoStyles(){
-        if (((($('.ip-embargo-details').text()).length) > 5) && (!$('.ip-embargo-details').hasClass('passEmbargo'))){
+        if (((($('.ip-embargo-details').text()).length) > 10) && (!$('.ip-embargo-details').hasClass('passEmbargo'))){
 
             //remove video player
             $('.islandora-video-content').remove();
