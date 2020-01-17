@@ -798,7 +798,7 @@
               $("<span class='alertIcon'/>").insertBefore(".ip-embargo-details");
             }
           });
-          if ($('.ip-embargo-details > div').length){
+          if (($('.ip-embargo-details > div').length)  && (!$('.ip-embargo-details').hasClass('passEmbargo'))){
             $('body').addClass('activeEmbargo');
           }
           if (($('.ip-embargo-details').length) && (!$('.object-title').length)){
@@ -893,10 +893,11 @@
         $("<a href='/' class='institutionSmall'>LDL</a><span class='breadcrumbDivider'>/</span></div>").prependTo(".headerBreadcrumb");
 
         
+        $('.ip-embargo-details').prependTo('.itemContainer'); //move details div
+        
         //begin Embargo Detection
-        if (($('.ip-embargo-details').text().length) > 10){
+        if ((($('.ip-embargo-details').text().length) > 10) && (!$('.ip-embargo-details').hasClass('passEmbargo'))){
           $('body').addClass('activeEmbargo');
-          $('.ip-embargo-details').prependTo('.itemContainer');
         }
         //end Embargo Detection
 
@@ -976,7 +977,7 @@
       }
 
       function embargoStyles(){
-        if ((($('.ip-embargo-details').text()).length) > 5){
+        if (((($('.ip-embargo-details').text()).length) > 10) && (!$('.ip-embargo-details').hasClass('passEmbargo'))){
 
             //remove video player
             $('.islandora-video-content').remove();
