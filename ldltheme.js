@@ -898,6 +898,8 @@
         //begin Embargo Detection
         if ((($('.ip-embargo-details').text().length) > 10) && (!$('.ip-embargo-details').hasClass('passEmbargo'))){
           $('body').addClass('activeEmbargo');
+          $('.downloadSelect').remove();
+
         }
         //end Embargo Detection
 
