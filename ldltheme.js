@@ -1008,7 +1008,7 @@
         else{
           $("<div class='contentLabel itemLabel bookLabel'>Book Object</div>").appendTo(".labelContainer");
         }
-        $("<div class='contentLabel bookDesc itemDesc'>tags</div>").appendTo(".descConainer"); //adds label break
+        $("<div class='contentLabel bookDesc itemDesc'>tags</div>").appendTo(".descContainer"); //adds label break
         $("<div class='descriptionText'/>").insertAfter(".itemDesc"); //adds label break
         $("#book-viewer div div ul li a").clone().prop({class:"backContainer"}).insertAfter(".descContainer").html("<div class='backCollection'>Back to Collection</div>");
         $("<div class='bookPreviewContainer'/>").insertAfter(".itemLabel"); //adds label break
