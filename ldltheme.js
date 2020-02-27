@@ -504,6 +504,7 @@
         $('#block-system-main #shareToggle').click(function(){
           $('#block-system-main #share').toggleClass('shareActive');
         });
+        $(".parentExists").remove(); //removes double thumbnail found in manually created compounds
       }
 
       function collectionHeader(){
