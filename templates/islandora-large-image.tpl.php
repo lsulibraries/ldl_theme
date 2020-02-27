@@ -31,7 +31,7 @@ document.body.className += ' ' + 'largeImage';
   <div class="islandora-large-image-content-wrapper clearfix">
 
 <?php if ($parent_collections): ?>
-  <div class="image-thumbnail"> 
+  <div class="image-thumbnail parentExists"> 
     <img src="<?php print "/islandora/object/{$islandora_object}/datastream/JPG/view" ?>"></img> 
   </div> 
 <?php endif; ?>
