@@ -11,7 +11,7 @@
 document.body.className += ' ' + 'pdf';
 </script>
 
-<div class="image-thumbnail">
+<div class="image-thumbnail parentExists">
   <img src="<?php print "/islandora/object/{$islandora_object->id}/datastream/TN/view" ?>"></img>
 </div>
 
