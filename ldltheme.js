@@ -505,6 +505,7 @@
           $('#block-system-main #share').toggleClass('shareActive');
         });
         $(".parentExists").remove(); //removes double thumbnail found in manually created compounds
+        $("div.image-thumbnailData > div.modsDesc:not(:first)").remove(); //remove double thumbnail description  found in manually created compounds
       }
 
       function collectionHeader(){
