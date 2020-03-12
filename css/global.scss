@@ -9932,14 +9932,17 @@ margin-bottom: 20px;
 
   @media screen and (max-width: 900px) {
 
-    body.context-blog, body.institutionPage, body.collectionPage{
+    body.context-blog, body.institutionPage, body.collectionPage, body.node-type-page{
       #page{
       background-color: #424242 !important;
       background-image: none !important;
       }
     }
 
-body.page-blog{
+body.page-blog, body.node-type-page{
+  a{
+    word-break: break-all;
+  }
   #block-system-main {
 
     width: calc(100% - 40px);
