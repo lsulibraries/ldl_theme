@@ -504,6 +504,10 @@ font-size: 20px;
 
 
 .node-type-blog, .node-type-page{
+
+  li {
+    list-style: disc  
+  }
   .field-item p{
     font-size: 1.3em;
     line-height: 2em;

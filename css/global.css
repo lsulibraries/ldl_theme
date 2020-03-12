@@ -273,6 +273,9 @@ span.bold {
   justify-content: flex-start;
 }
 
+.node-type-blog li, .node-type-page li {
+  list-style: disc;
+}
 .node-type-blog .field-item p, .node-type-page .field-item p {
   font-size: 1.3em;
   line-height: 2em;
