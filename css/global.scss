@@ -467,7 +467,7 @@ font-size: 20px;
       }
     }
 
-    #block-system-main .block-inner .blog-content {
+    #block-system-main .block-inner .blog-content, #block-system-main .block-inner .node-page {
       background:white;
       color:#474747;
       padding: 40px;
@@ -503,7 +503,7 @@ font-size: 20px;
 }
 
 
-.node-type-blog{
+.node-type-blog, .node-type-page{
   .field-item p{
     font-size: 1.3em;
     line-height: 2em;

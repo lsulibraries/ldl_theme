@@ -241,7 +241,7 @@ span.bold {
 .node-type-page #block-system-main .content h1, .node-type-page #block-system-main .content h2, .node-type-page #block-system-main .content h3, .node-type-page #block-system-main .content h4, .node-type-page #block-system-main .content h5, .node-type-page #block-system-main .content h6, .node-type-webform #block-system-main .content h1, .node-type-webform #block-system-main .content h2, .node-type-webform #block-system-main .content h3, .node-type-webform #block-system-main .content h4, .node-type-webform #block-system-main .content h5, .node-type-webform #block-system-main .content h6, .node-type-blog #block-system-main .content h1, .node-type-blog #block-system-main .content h2, .node-type-blog #block-system-main .content h3, .node-type-blog #block-system-main .content h4, .node-type-blog #block-system-main .content h5, .node-type-blog #block-system-main .content h6, .page-blog #block-system-main .content h1, .page-blog #block-system-main .content h2, .page-blog #block-system-main .content h3, .page-blog #block-system-main .content h4, .page-blog #block-system-main .content h5, .page-blog #block-system-main .content h6, .page-taxonomy #block-system-main .content h1, .page-taxonomy #block-system-main .content h2, .page-taxonomy #block-system-main .content h3, .page-taxonomy #block-system-main .content h4, .page-taxonomy #block-system-main .content h5, .page-taxonomy #block-system-main .content h6 {
   color: white;
 }
-.node-type-page #block-system-main .block-inner .blog-content, .node-type-webform #block-system-main .block-inner .blog-content, .node-type-blog #block-system-main .block-inner .blog-content, .page-blog #block-system-main .block-inner .blog-content, .page-taxonomy #block-system-main .block-inner .blog-content {
+.node-type-page #block-system-main .block-inner .blog-content, .node-type-page #block-system-main .block-inner .node-page, .node-type-webform #block-system-main .block-inner .blog-content, .node-type-webform #block-system-main .block-inner .node-page, .node-type-blog #block-system-main .block-inner .blog-content, .node-type-blog #block-system-main .block-inner .node-page, .page-blog #block-system-main .block-inner .blog-content, .page-blog #block-system-main .block-inner .node-page, .page-taxonomy #block-system-main .block-inner .blog-content, .page-taxonomy #block-system-main .block-inner .node-page {
   background: white;
   color: #474747;
   padding: 40px;
@@ -273,16 +273,16 @@ span.bold {
   justify-content: flex-start;
 }
 
-.node-type-blog .field-item p {
+.node-type-blog .field-item p, .node-type-page .field-item p {
   font-size: 1.3em;
   line-height: 2em;
 }
-.node-type-blog .backContainer {
+.node-type-blog .backContainer, .node-type-page .backContainer {
   width: 100%;
   margin-top: 20px !important;
   height: 60px;
 }
-.node-type-blog .backContainer .backCollection {
+.node-type-blog .backContainer .backCollection, .node-type-page .backContainer .backCollection {
   margin-left: 0px !important;
   margin-right: 0px !important;
 }
