@@ -276,6 +276,9 @@ span.bold {
 .node-type-blog #block-system-main .content h1, .node-type-blog #block-system-main .content h2, .node-type-blog #block-system-main .content h3, .node-type-blog #block-system-main .content h4, .node-type-blog #block-system-main .content h5, .node-type-blog #block-system-main .content h6, .node-type-page #block-system-main .content h1, .node-type-page #block-system-main .content h2, .node-type-page #block-system-main .content h3, .node-type-page #block-system-main .content h4, .node-type-page #block-system-main .content h5, .node-type-page #block-system-main .content h6 {
   color: #434343;
 }
+.node-type-blog #block-system-main .content h2, .node-type-page #block-system-main .content h2 {
+  font-size: 135%;
+}
 .node-type-blog li, .node-type-page li {
   list-style: disc;
 }
