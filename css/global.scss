@@ -504,11 +504,13 @@ font-size: 20px;
 
 
 .node-type-blog, .node-type-page{
-
+  
+    address {
+      font-style: italic;
+    }
     #block-system-main .content{
     
-      font-size: 1.3em;
-      line-height: 2em;
+      font-size: 1.1em;
 
       h1, h2, h3, h4, h5, h6{
         color:#434343;

@@ -273,9 +273,11 @@ span.bold {
   justify-content: flex-start;
 }
 
+.node-type-blog address, .node-type-page address {
+  font-style: italic;
+}
 .node-type-blog #block-system-main .content, .node-type-page #block-system-main .content {
-  font-size: 1.3em;
-  line-height: 2em;
+  font-size: 1.1em;
 }
 .node-type-blog #block-system-main .content h1, .node-type-blog #block-system-main .content h2, .node-type-blog #block-system-main .content h3, .node-type-blog #block-system-main .content h4, .node-type-blog #block-system-main .content h5, .node-type-blog #block-system-main .content h6, .node-type-page #block-system-main .content h1, .node-type-page #block-system-main .content h2, .node-type-page #block-system-main .content h3, .node-type-page #block-system-main .content h4, .node-type-page #block-system-main .content h5, .node-type-page #block-system-main .content h6 {
   color: #434343;
