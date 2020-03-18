@@ -505,6 +505,14 @@ font-size: 20px;
 
 .node-type-blog, .node-type-page{
 
+    #block-system-main .content{
+    
+      h1, h2, h3, h4, h5, h6{
+        color:#434343;
+      }
+    }
+
+
   li {
     list-style: disc  
   }
