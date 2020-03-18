@@ -507,6 +507,9 @@ font-size: 20px;
 
     #block-system-main .content{
     
+      font-size: 1.3em;
+      line-height: 2em;
+
       h1, h2, h3, h4, h5, h6{
         color:#434343;
       }
@@ -520,10 +523,7 @@ font-size: 20px;
   ul li {
     list-style: disc;
   }
-  .field-item p{
-    font-size: 1.3em;
-    line-height: 2em;
-  }
+
   .backContainer{
     width: 100%;
     margin-top: 20px !important;
