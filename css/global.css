@@ -8949,9 +8949,9 @@ body.multipleDaily .issueLevel .issue-container img {
     width: 100%;
   }
 
-  .mobileMenu {
+/*   .mobileMenu {
     opacity: 100%;
-  }
+  } */
 
   .logo-img {
     display: none;
