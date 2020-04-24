@@ -241,7 +241,7 @@ span.bold {
 .node-type-page #block-system-main .content h1, .node-type-page #block-system-main .content h2, .node-type-page #block-system-main .content h3, .node-type-page #block-system-main .content h4, .node-type-page #block-system-main .content h5, .node-type-page #block-system-main .content h6, .node-type-webform #block-system-main .content h1, .node-type-webform #block-system-main .content h2, .node-type-webform #block-system-main .content h3, .node-type-webform #block-system-main .content h4, .node-type-webform #block-system-main .content h5, .node-type-webform #block-system-main .content h6, .node-type-blog #block-system-main .content h1, .node-type-blog #block-system-main .content h2, .node-type-blog #block-system-main .content h3, .node-type-blog #block-system-main .content h4, .node-type-blog #block-system-main .content h5, .node-type-blog #block-system-main .content h6, .page-blog #block-system-main .content h1, .page-blog #block-system-main .content h2, .page-blog #block-system-main .content h3, .page-blog #block-system-main .content h4, .page-blog #block-system-main .content h5, .page-blog #block-system-main .content h6, .page-taxonomy #block-system-main .content h1, .page-taxonomy #block-system-main .content h2, .page-taxonomy #block-system-main .content h3, .page-taxonomy #block-system-main .content h4, .page-taxonomy #block-system-main .content h5, .page-taxonomy #block-system-main .content h6 {
   color: white;
 }
-.node-type-page #block-system-main .block-inner .blog-content, .node-type-webform #block-system-main .block-inner .blog-content, .node-type-blog #block-system-main .block-inner .blog-content, .page-blog #block-system-main .block-inner .blog-content, .page-taxonomy #block-system-main .block-inner .blog-content {
+.node-type-page #block-system-main .block-inner .blog-content, .node-type-page #block-system-main .block-inner .node-page, .node-type-webform #block-system-main .block-inner .blog-content, .node-type-webform #block-system-main .block-inner .node-page, .node-type-blog #block-system-main .block-inner .blog-content, .node-type-blog #block-system-main .block-inner .node-page, .page-blog #block-system-main .block-inner .blog-content, .page-blog #block-system-main .block-inner .node-page, .page-taxonomy #block-system-main .block-inner .blog-content, .page-taxonomy #block-system-main .block-inner .node-page {
   background: white;
   color: #474747;
   padding: 40px;
@@ -273,16 +273,27 @@ span.bold {
   justify-content: flex-start;
 }
 
-.node-type-blog .field-item p {
-  font-size: 1.3em;
-  line-height: 2em;
+.node-type-blog address, .node-type-page address {
+  font-style: italic;
 }
-.node-type-blog .backContainer {
+.node-type-blog #block-system-main .content, .node-type-page #block-system-main .content {
+  font-size: 1.1em;
+}
+.node-type-blog #block-system-main .content h1, .node-type-blog #block-system-main .content h2, .node-type-blog #block-system-main .content h3, .node-type-blog #block-system-main .content h4, .node-type-blog #block-system-main .content h5, .node-type-blog #block-system-main .content h6, .node-type-page #block-system-main .content h1, .node-type-page #block-system-main .content h2, .node-type-page #block-system-main .content h3, .node-type-page #block-system-main .content h4, .node-type-page #block-system-main .content h5, .node-type-page #block-system-main .content h6 {
+  color: #434343;
+}
+.node-type-blog #block-system-main .content h2, .node-type-page #block-system-main .content h2 {
+  font-size: 135%;
+}
+.node-type-blog ul li, .node-type-page ul li {
+  list-style: disc;
+}
+.node-type-blog .backContainer, .node-type-page .backContainer {
   width: 100%;
   margin-top: 20px !important;
   height: 60px;
 }
-.node-type-blog .backContainer .backCollection {
+.node-type-blog .backContainer .backCollection, .node-type-page .backContainer .backCollection {
   margin-left: 0px !important;
   margin-right: 0px !important;
 }
@@ -8491,12 +8502,15 @@ body.multipleDaily .issueLevel .issue-container img {
   }
 }
 @media screen and (max-width: 1260px) and (max-width: 900px) {
-  body.context-blog #page, body.institutionPage #page, body.collectionPage #page {
+  body.context-blog #page, body.institutionPage #page, body.collectionPage #page, body.node-type-page #page {
     background-color: #424242 !important;
     background-image: none !important;
   }
 
-  body.page-blog #block-system-main {
+  body.page-blog a, body.node-type-page a {
+    word-break: break-all;
+  }
+  body.page-blog #block-system-main, body.node-type-page #block-system-main {
     width: calc(100% - 40px);
   }
 

@@ -467,7 +467,7 @@ font-size: 20px;
       }
     }
 
-    #block-system-main .block-inner .blog-content {
+    #block-system-main .block-inner .blog-content, #block-system-main .block-inner .node-page {
       background:white;
       color:#474747;
       padding: 40px;
@@ -503,11 +503,29 @@ font-size: 20px;
 }
 
 
-.node-type-blog{
-  .field-item p{
-    font-size: 1.3em;
-    line-height: 2em;
+.node-type-blog, .node-type-page{
+  
+    address {
+      font-style: italic;
+    }
+    #block-system-main .content{
+    
+      font-size: 1.1em;
+
+      h1, h2, h3, h4, h5, h6{
+        color:#434343;
+      }
+      h2{
+        font-size: 135%;
+      }
+    }
+
+  
+
+  ul li {
+    list-style: disc;
   }
+
   .backContainer{
     width: 100%;
     margin-top: 20px !important;
@@ -9928,14 +9946,17 @@ margin-bottom: 20px;
 
   @media screen and (max-width: 900px) {
 
-    body.context-blog, body.institutionPage, body.collectionPage{
+    body.context-blog, body.institutionPage, body.collectionPage, body.node-type-page{
       #page{
       background-color: #424242 !important;
       background-image: none !important;
       }
     }
 
-body.page-blog{
+body.page-blog, body.node-type-page{
+  a{
+    word-break: break-all;
+  }
   #block-system-main {
 
     width: calc(100% - 40px);
