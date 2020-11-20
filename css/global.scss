@@ -1632,7 +1632,7 @@ background: none;
     @include flexbox;
   }
 
-  .content p {
+  .content:not(.collabSection) p {
     width: 1000px;
     height: 120px;
     @include flexbox;
