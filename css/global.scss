@@ -1625,6 +1625,7 @@ display:block;
 background: none;
   .content.clearfix {
     @include flexbox;
+    flex-direction: column;
   }
 
   .homepageInstitutions {
@@ -3936,6 +3937,12 @@ div#zone-header-wrapper {
     justify-content: center;
     align-items: center;
     background: #1a1a1a;
+  }
+  .collabSection{
+  padding: 40px;
+    .collabTile{
+    
+    }
   }
 
   .homepageText {

@@ -1221,6 +1221,7 @@ span.islandora_ip_embargo_embargoed::before {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
+  flex-direction: column;
 }
 #block-block-11 .homepageInstitutions {
   display: -webkit-box;
@@ -3431,6 +3432,9 @@ body.logged-in.front div#zone-header {
   justify-content: center;
   align-items: center;
   background: #1a1a1a;
+}
+.front .collabSection {
+  padding: 40px;
 }
 .front .homepageText {
   display: -webkit-box;
@@ -8962,10 +8966,6 @@ body.multipleDaily .issueLevel .issue-container img {
     overflow: hidden;
     width: 100%;
   }
-
-/*   .mobileMenu {
-    opacity: 100%;
-  } */
 
   .logo-img {
     display: none;
