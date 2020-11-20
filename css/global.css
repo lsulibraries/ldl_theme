@@ -1230,7 +1230,7 @@ span.islandora_ip_embargo_embargoed::before {
   display: -webkit-flex;
   display: flex;
 }
-#block-block-11 .content:not(.collabSection) p {
+#block-block-11 .content p:not(.collabSection) {
   width: 1000px;
   height: 120px;
   display: -webkit-box;
