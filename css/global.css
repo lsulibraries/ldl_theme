@@ -3491,10 +3491,12 @@ body.logged-in.front div#zone-header {
 }
 .front .collabSection .card-description > h2 {
   margin: 0 0 0.5em;
+  color: #ccc;
 }
 .front .collabSection .card-description > p {
   margin: 0;
   font-size: smaller;
+  color: #ccc;
 }
 .front .homepageText {
   display: -webkit-box;
