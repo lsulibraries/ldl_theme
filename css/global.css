@@ -1361,7 +1361,7 @@ a.institutionLink.cpplLink {
   display: -webkit-flex;
   display: flex;
 }
-#block-block-11 .content p {
+#block-block-11 .content div:not(.collabSection) p {
   width: 1000px;
   height: 120px;
   display: -webkit-box;
