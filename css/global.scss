@@ -3939,8 +3939,18 @@ div#zone-header-wrapper {
     align-items: center;
     background: #1a1a1a;
   }
+
+  .homepageSection > .contentLabel{
+    background: top;
+    border-bottom: 1px solid #676767;
+    color: white;
+    width: calc(100% - 80px);
+    padding-left: 0px;
+    margin-bottom: 30px;
+  }
+
   .collabSection{
-  padding: 40px;
+
 
     .card-image {
       display: block;

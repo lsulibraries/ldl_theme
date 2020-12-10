@@ -3433,8 +3433,13 @@ body.logged-in.front div#zone-header {
   align-items: center;
   background: #1a1a1a;
 }
-.front .collabSection {
-  padding: 40px;
+.front .homepageSection > .contentLabel {
+  background: top;
+  border-bottom: 1px solid #676767;
+  color: white;
+  width: calc(100% - 80px);
+  padding-left: 0px;
+  margin-bottom: 30px;
 }
 .front .collabSection .card-image {
   display: block;
