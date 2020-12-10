@@ -3432,6 +3432,7 @@ body.logged-in.front div#zone-header {
   justify-content: center;
   align-items: center;
   background: #1a1a1a;
+  flex-direction: column;
 }
 .front .homepageSection > .contentLabel {
   background: top;
