@@ -150,6 +150,7 @@ $oplib_white: '../images/oplib_white.png';
 $oplib_color: '../images/oplib_color.png';
 $lsa: '../images/lsa.png';
 $cpplLogo: '../images/cpplLogo.png';
+$ascLogo: '../images/ascLogo.png';
 /* mixins */
 
 @mixin flexbox() {
@@ -837,7 +838,7 @@ a.institution-about-edit {
 }
 
 
-.lsuhscTheme, .lsuaTheme, .lsusTheme, .lsuhscsTheme {
+.lsuhscTheme, .lsuaTheme, .lsusTheme, .lsuhscsTheme, .ascTheme {
    .collectionHeader, .institution-search::before, .child-institution-collections::before {
 
     background: white;
@@ -2474,7 +2475,7 @@ h1.about-link {
         width: calc(100% - 20px);
   }
 
-  .page-islandora-search  div.item-list:nth-child(2n - 1) {
+  .page-islandora-search div.item-list:nth-child(2n - 1) {
   display: block;
   } //kills repeated pagination, first instance -- not sure why first-child does not work here
 }
