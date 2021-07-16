@@ -839,7 +839,7 @@ a.institution-about-edit {
 }
 
 
-.lsuhscTheme, .lsuaTheme, .lsusTheme, .lsuhscsTheme, .ascTheme, .amiTheme {
+.lsuhscTheme, .lsuaTheme, .lsusTheme, .lsuhscsTheme, .aplTheme, .amiTheme {
    .collectionHeader, .institution-search::before, .child-institution-collections::before {
 
     background: white;
@@ -906,7 +906,7 @@ a.institution-about-edit {
   }
 }
 
-.ascTheme {
+.aplTheme {
   .collectionLogo {
     background-image: url($ascLogo);
     cursor: pointer;
@@ -1753,7 +1753,7 @@ opacity: 1;
 
   }
 
-  a.institutionLink.ascLink {
+  a.institutionLink.aplLink {
     background-color: $lsusColor;
     background-image: url($ascLogo);
   }
@@ -4066,7 +4066,7 @@ div#zone-header-wrapper {
     @include flexbox;
     flex-wrap: wrap;
     flex-grow: 1;
-    width: 150%;
+    // width: 150%;
     p, h1 {
       margin: 0px;
     }
