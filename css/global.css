@@ -6442,6 +6442,11 @@ body.largeImage .islandora-newspaper-grid .viewYears .issue-container:first-chil
 body.largeImage .islandora-newspaper-grid .firstYearCover, body.largeImage .islandora-newspaper-grid .publication-year-container-label span, body.pdf .islandora-newspaper-grid .firstYearCover, body.pdf .islandora-newspaper-grid .publication-year-container-label span, body.video .islandora-newspaper-grid .firstYearCover, body.video .islandora-newspaper-grid .publication-year-container-label span, body.newspaperSet .islandora-newspaper-grid .firstYearCover, body.newspaperSet .islandora-newspaper-grid .publication-year-container-label span, body.audio .islandora-newspaper-grid .firstYearCover, body.audio .islandora-newspaper-grid .publication-year-container-label span, body.oralHistory .islandora-newspaper-grid .firstYearCover, body.oralHistory .islandora-newspaper-grid .publication-year-container-label span {
   transition-duration: 0.2s;
 }
+body.largeImage .islandora-newspaper-grid img.firstYearCover, body.pdf .islandora-newspaper-grid img.firstYearCover, body.video .islandora-newspaper-grid img.firstYearCover, body.newspaperSet .islandora-newspaper-grid img.firstYearCover, body.audio .islandora-newspaper-grid img.firstYearCover, body.oralHistory .islandora-newspaper-grid img.firstYearCover {
+  max-height: 369px;
+  object-fit: cover;
+  object-position: top;
+}
 body.largeImage .islandora-newspaper-grid .publication-year-container:hover .firstYearCover, body.pdf .islandora-newspaper-grid .publication-year-container:hover .firstYearCover, body.video .islandora-newspaper-grid .publication-year-container:hover .firstYearCover, body.newspaperSet .islandora-newspaper-grid .publication-year-container:hover .firstYearCover, body.audio .islandora-newspaper-grid .publication-year-container:hover .firstYearCover, body.oralHistory .islandora-newspaper-grid .publication-year-container:hover .firstYearCover {
   transform: scale3d(1.1, 1.1, 1.1);
   transition-duration: 0.2s;

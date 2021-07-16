@@ -7412,7 +7412,11 @@ td.highlight {
     transition-duration: 0.2s;
   }
 
-
+  img.firstYearCover{
+    max-height: 369px;
+    object-fit: cover;
+    object-position: top;
+  }
 
 .publication-year-container:hover{
 
