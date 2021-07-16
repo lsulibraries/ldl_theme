@@ -470,7 +470,7 @@ a.institution-about-edit {
   background-image: url("../images/delgado-logo-white.png");
   cursor: pointer;
 }
-.dccTheme .institution-search input[type="text"] {
+.dccTheme .institution-search input[type=text] {
   border: 2px solid #083a07;
 }
 .dccTheme .institutionLabel::before {
@@ -487,7 +487,7 @@ a.institution-about-edit {
   background-image: url("../images/lasc.jpg");
   cursor: pointer;
 }
-.lascTheme .institution-search input[type="text"] {
+.lascTheme .institution-search input[type=text] {
   border: 2px solid #16325a;
 }
 .lascTheme .institutionLabel::before {
@@ -504,7 +504,7 @@ a.institution-about-edit {
   background-image: url("../images/uimSOt2.png");
   border: 2px solid #5d0e8b;
 }
-.lsmTheme .institution-search input[type="text"] {
+.lsmTheme .institution-search input[type=text] {
   border: 2px solid #5d0e8b;
 }
 .lsmTheme .institutionLabel::before {
@@ -521,7 +521,7 @@ a.institution-about-edit {
   background-image: url("../images/verticalebrpl.jpg");
   border: 2px solid #181B42;
 }
-.ebrplTheme .institution-search input[type="text"] {
+.ebrplTheme .institution-search input[type=text] {
   border: 2px solid #181B42;
 }
 .ebrplTheme .institutionLabel::before {
@@ -538,7 +538,7 @@ a.institution-about-edit {
   background-image: url("../images/LSU_Gold_CMYK.png");
   border: 2px solid #3C1053;
 }
-.lsuTheme .institution-search input[type="text"] {
+.lsuTheme .institution-search input[type=text] {
   border: 2px solid #3C1053;
 }
 .lsuTheme .institutionLabel::before {
@@ -548,20 +548,20 @@ a.institution-about-edit {
   background-image: url("../images/LSU_Gold_CMYK.png");
 }
 
-.lsuhscTheme .collectionHeader, .lsuhscTheme .institution-search::before, .lsuhscTheme .child-institution-collections::before, .lsuaTheme .collectionHeader, .lsuaTheme .institution-search::before, .lsuaTheme .child-institution-collections::before, .lsusTheme .collectionHeader, .lsusTheme .institution-search::before, .lsusTheme .child-institution-collections::before, .lsuhscsTheme .collectionHeader, .lsuhscsTheme .institution-search::before, .lsuhscsTheme .child-institution-collections::before {
+.lsuhscTheme .collectionHeader, .lsuhscTheme .institution-search::before, .lsuhscTheme .child-institution-collections::before, .lsuaTheme .collectionHeader, .lsuaTheme .institution-search::before, .lsuaTheme .child-institution-collections::before, .lsusTheme .collectionHeader, .lsusTheme .institution-search::before, .lsusTheme .child-institution-collections::before, .lsuhscsTheme .collectionHeader, .lsuhscsTheme .institution-search::before, .lsuhscsTheme .child-institution-collections::before, .ascTheme .collectionHeader, .ascTheme .institution-search::before, .ascTheme .child-institution-collections::before {
   background: white;
   color: #474747;
 }
-.lsuhscTheme .institution-about, .lsuaTheme .institution-about, .lsusTheme .institution-about, .lsuhscsTheme .institution-about {
+.lsuhscTheme .institution-about, .lsuaTheme .institution-about, .lsusTheme .institution-about, .lsuhscsTheme .institution-about, .ascTheme .institution-about {
   border-left: 1px solid rgba(0, 0, 0, 0.2);
 }
-.lsuhscTheme form#islandora-collection-search-form, .lsuaTheme form#islandora-collection-search-form, .lsusTheme form#islandora-collection-search-form, .lsuhscsTheme form#islandora-collection-search-form {
+.lsuhscTheme form#islandora-collection-search-form, .lsuaTheme form#islandora-collection-search-form, .lsusTheme form#islandora-collection-search-form, .lsuhscsTheme form#islandora-collection-search-form, .ascTheme form#islandora-collection-search-form {
   border: 2px solid #8c8c8c;
 }
-.lsuhscTheme .institution-search input[type="text"], .lsuaTheme .institution-search input[type="text"], .lsusTheme .institution-search input[type="text"], .lsuhscsTheme .institution-search input[type="text"] {
+.lsuhscTheme .institution-search input[type=text], .lsuaTheme .institution-search input[type=text], .lsusTheme .institution-search input[type=text], .lsuhscsTheme .institution-search input[type=text], .ascTheme .institution-search input[type=text] {
   border: 2px solid white;
 }
-.lsuhscTheme .institutionLabel::before, .lsuaTheme .institutionLabel::before, .lsusTheme .institutionLabel::before, .lsuhscsTheme .institutionLabel::before {
+.lsuhscTheme .institutionLabel::before, .lsuaTheme .institutionLabel::before, .lsusTheme .institutionLabel::before, .lsuhscsTheme .institutionLabel::before, .ascTheme .institutionLabel::before {
   background: white;
 }
 
@@ -581,7 +581,7 @@ a.institution-about-edit {
 .websterTheme form#islandora-collection-search-form {
   border: 2px solid white;
 }
-.websterTheme .institution-search input[type="text"] {
+.websterTheme .institution-search input[type=text] {
   border: 2px solid white;
 }
 .websterTheme .institutionLabel::before {
@@ -622,7 +622,7 @@ a.institution-about-edit {
 .websterTheme form#islandora-collection-search-form {
   border: 2px solid white;
 }
-.websterTheme .institution-search input[type="text"] {
+.websterTheme .institution-search input[type=text] {
   border: 2px solid white;
 }
 .websterTheme .institutionLabel::before {
@@ -705,7 +705,7 @@ a.institution-about-edit {
   background-image: url("../images/72REb5M.png");
   border: 2px solid #003087;
 }
-.latechTheme .institution-search input[type="text"] {
+.latechTheme .institution-search input[type=text] {
   border: 2px solid #003087;
 }
 .latechTheme .institutionLabel::before {
@@ -729,7 +729,7 @@ a.institution-about-edit {
   background-image: url("../images/23i7KxR.png");
   border: 2px solid #660000;
 }
-.loynoTheme .institution-search input[type="text"] {
+.loynoTheme .institution-search input[type=text] {
   border: 2px solid #660000;
 }
 .loynoTheme .institutionLabel::before {
@@ -746,7 +746,7 @@ a.institution-about-edit {
   background-image: url("../images/mcneese_long.png");
   border: 2px solid #00529b;
 }
-.mcneeseTheme .institution-search input[type="text"] {
+.mcneeseTheme .institution-search input[type=text] {
   border: 2px solid #00529b;
 }
 .mcneeseTheme .institutionLabel::before {
@@ -763,7 +763,7 @@ a.institution-about-edit {
   background-image: url("../images/Nicholls-N-Sword-w-text.png");
   border: 2px solid #ae132a;
 }
-.nichollsTheme .institution-search input[type="text"] {
+.nichollsTheme .institution-search input[type=text] {
   border: 2px solid #ae132a;
 }
 .nichollsTheme .institutionLabel::before {
@@ -780,7 +780,7 @@ a.institution-about-edit {
   background-image: url("../images/wordmarksmall2.png");
   border: 2px solid #663399;
 }
-.nsuTheme .institution-search input[type="text"] {
+.nsuTheme .institution-search input[type=text] {
   border: 2px solid #663399;
 }
 .nsuTheme .institutionLabel::before {
@@ -801,7 +801,7 @@ a.institution-about-edit {
   background-image: url("../images/subr_logo.gif");
   border: 2px solid #75B2DD;
 }
-.subrTheme .institution-search input[type="text"] {
+.subrTheme .institution-search input[type=text] {
   border: 2px solid #75B2DD;
 }
 .subrTheme .institutionLabel::before {
@@ -818,7 +818,7 @@ a.institution-about-edit {
   background-image: url("../images/y1H8EGr.png");
   border: 2px solid #304da0;
 }
-.stateTheme .institution-search input[type="text"] {
+.stateTheme .institution-search input[type=text] {
   border: 2px solid #304da0;
 }
 .stateTheme .institutionLabel::before {
@@ -835,7 +835,7 @@ a.institution-about-edit {
   background-image: url("../images/lRaktDw.png");
   border: 2px solid #254550;
 }
-.hnocTheme .institution-search input[type="text"] {
+.hnocTheme .institution-search input[type=text] {
   border: 2px solid #254550;
 }
 .hnocTheme .institutionLabel::before {
@@ -852,7 +852,7 @@ a.institution-about-edit {
   background-image: url("../images/geTKaHp.png");
   border: 2px solid #032a17;
 }
-.tulaneTheme .institution-search input[type="text"] {
+.tulaneTheme .institution-search input[type=text] {
   border: 2px solid #032a17;
 }
 .tulaneTheme .institution-collection-list-item-count {
@@ -875,7 +875,7 @@ a.institution-about-edit {
   background-image: url("../images/ull-logo_0.png");
   border: 2px solid #a00b0b;
 }
-.ullTheme .institution-search input[type="text"] {
+.ullTheme .institution-search input[type=text] {
   border: 2px solid #a00b0b;
 }
 .ullTheme .institutionLabel::before {
@@ -892,7 +892,7 @@ a.institution-about-edit {
   background-image: url("../images/ulm-academic-logo-circle.png");
   border: 2px solid #800029;
 }
-.ulmTheme .institution-search input[type="text"] {
+.ulmTheme .institution-search input[type=text] {
   border: 2px solid #800029;
 }
 .ulmTheme .institutionLabel::before {
@@ -909,7 +909,7 @@ a.institution-about-edit {
   background-image: url("../images/RBtG5qz.png");
   border: 2px solid #003056;
 }
-.unoTheme .institution-search input[type="text"] {
+.unoTheme .institution-search input[type=text] {
   border: 2px solid #003056;
 }
 .unoTheme .institutionLabel::before {
@@ -927,7 +927,7 @@ a.institution-about-edit {
   background-image: url("../images/wqpOeRQ.png");
   border: 2px solid #ede7c0;
 }
-.vvilleTheme .institution-search input[type="text"] {
+.vvilleTheme .institution-search input[type=text] {
   border: 2px solid #ede7c0;
 }
 .vvilleTheme .institutionLabel::before {
@@ -943,7 +943,7 @@ a.institution-about-edit {
 .tahillTheme form#islandora-collection-search-form, .fpocTheme form#islandora-collection-search-form {
   border: 2px solid #272727;
 }
-.tahillTheme .institution-search input[type="text"], .fpocTheme .institution-search input[type="text"] {
+.tahillTheme .institution-search input[type=text], .fpocTheme .institution-search input[type=text] {
   border: 2px solid #272727;
 }
 .tahillTheme .collectionLogo, .fpocTheme .collectionLogo {
@@ -1066,7 +1066,7 @@ html body.institutionPage #region-sidebar-first {
   margin-top: 20px;
   width: 100%;
 }
-.institutionPage .institution-search input[type="submit"] {
+.institutionPage .institution-search input[type=submit] {
   position: absolute;
   right: 0px;
   top: 0px;
@@ -1170,7 +1170,7 @@ html body.institutionPage #region-sidebar-first {
 }
 
 .activeEmbargo .ip-embargo-details::before {
-  content: '';
+  content: "";
   height: 100px;
   display: block;
   background-size: 70px;
@@ -1198,7 +1198,7 @@ span.islandora_ip_embargo_embargoed {
 }
 
 span.islandora_ip_embargo_embargoed::before {
-  content: '';
+  content: "";
   height: 100px;
   display: block;
   background-size: 70px;
@@ -1950,7 +1950,7 @@ html body.collectionPage.rootCollection.gridMode .islandora\:collectionCModel .i
   padding-left: 10px;
   height: 32px;
 }
-.collectionSearch input[type="submit"] {
+.collectionSearch input[type=submit] {
   position: absolute;
   right: 0px;
   top: 0px;
@@ -1993,7 +1993,7 @@ h1.about-link {
 .islandora-basic-collection div.item-list {
   width: calc(100% - 20px);
 }
-.islandora-basic-collection .page-islandora-search div.item-list:nth-child(2n - 1) {
+.islandora-basic-collection .page-islandora-search div.item-list:nth-child(2n-1) {
   display: block;
 }
 
@@ -2079,10 +2079,10 @@ h1.about-link {
   background: #FFF;
   color: #438fca;
   border: 1px solid #438fca;
-  -webkit-transition: .25s ease-in-out;
-  -moz-transition: .25s ease-in-out;
-  -o-transition: .25s ease-in-out;
-  transition: .25s ease-in-out;
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
 }
 .page-user #block-system-main {
   margin: 10px;
@@ -2655,7 +2655,7 @@ div#zone-user-wrapper {
 
 .zone-menu {
   background-color: #F2F1F6;
-  padding: .75em 0;
+  padding: 0.75em 0;
 }
 
 .zone-menu-wrapper {
@@ -2685,7 +2685,7 @@ div#zone-user-wrapper {
   opacity: 0.8;
 }
 .logo-img hover {
-  opacity: 1.0;
+  opacity: 1;
 }
 
 /* footer */
@@ -2866,10 +2866,10 @@ a.plus {
   opacity: 0.5;
   margin-left: 10px;
   text-align: center;
-  -webkit-transition: .25s ease-in-out;
-  -moz-transition: .25s ease-in-out;
-  -o-transition: .25s ease-in-out;
-  transition: .25s ease-in-out;
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
 }
 
 #region-sidebar-first .islandora-solr-facet li a.plus:hover {
@@ -2880,7 +2880,7 @@ a.plus {
   border-radius: 2px;
   color: white;
   margin-left: 10px;
-  opacity: 1.0;
+  opacity: 1;
 }
 
 a.minus {
@@ -2890,10 +2890,10 @@ a.minus {
   border-radius: 2px;
   margin-left: 0px;
   text-align: center;
-  -webkit-transition: .25s ease-in-out;
-  -moz-transition: .25s ease-in-out;
-  -o-transition: .25s ease-in-out;
-  transition: .25s ease-in-out;
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
 }
 
 #region-sidebar-first .islandora-solr-facet li a.minus:hover {
@@ -2910,10 +2910,10 @@ a.minus {
   list-style: none;
   margin-bottom: 1px;
   padding: 0px;
-  -webkit-transition: .25s ease-in-out;
-  -moz-transition: .25s ease-in-out;
-  -o-transition: .25s ease-in-out;
-  transition: .25s ease-in-out;
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
 }
 
 .islandora-solr-facet li:hover,
@@ -2932,7 +2932,7 @@ a.minus {
 }
 
 #block-islandora-solr-search-navigation div {
-  margin: .5em 0;
+  margin: 0.5em 0;
 }
 
 /* content area */
@@ -3033,7 +3033,7 @@ dl.solr-fields {
 }
 
 .islandora-inline-metadata dt:first-of-type, .islandora-inline-metadata dd:first-of-type {
-  margin-top: -.3em;
+  margin-top: -0.3em;
   padding-bottom: 0px;
   padding-top: 20px;
 }
@@ -3179,10 +3179,10 @@ div.islandora-solr-content {
   background-image: none;
   color: #438fca;
   border: 1px solid #438fca;
-  -webkit-transition: .25s ease-in-out;
-  -moz-transition: .25s ease-in-out;
-  -o-transition: .25s ease-in-out;
-  transition: .25s ease-in-out;
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
 }
 #block-user-login input#edit-submit.form-submit:hover {
   background-image: none;
@@ -3331,7 +3331,7 @@ body.logged-in.front div#zone-header {
   color: white;
 }
 .front div.scrollPrompt::before {
-  content: '';
+  content: "";
   width: 20px;
   height: 20px;
   background-image: url(../images/0kRges9.png);
@@ -3658,7 +3658,7 @@ body.logged-in.front div#zone-header {
   width: 60vw;
 }
 .front div#block-block-12 #largeSearch .form-item-islandora-simple-search-query::after {
-  content: '';
+  content: "";
   background-image: url(../images/9ytB8Dg.png);
   position: absolute;
   left: 1px;
@@ -3668,11 +3668,11 @@ body.logged-in.front div#zone-header {
   background-size: contain;
   background-repeat: no-repeat;
 }
-.front div#block-block-12 #largeSearch input[type="text"]::placeholder {
+.front div#block-block-12 #largeSearch input[type=text]::placeholder {
   color: white !important;
   opacity: 1 !important;
 }
-.front div#block-block-12 #largeSearch input[type="text"] {
+.front div#block-block-12 #largeSearch input[type=text] {
   width: 100%;
   font-size: 30px;
   padding: 0px 30px;
@@ -3685,14 +3685,14 @@ body.logged-in.front div#zone-header {
   position: relative;
   bottom: 20px;
 }
-.front div#block-block-12 #largeSearch input[type="text"]::after {
-  content: '';
+.front div#block-block-12 #largeSearch input[type=text]::after {
+  content: "";
   width: 5px;
   height: 1px;
   position: relative;
   left: 10px;
 }
-.front div#block-block-12 #largeSearch input[type="submit"] {
+.front div#block-block-12 #largeSearch input[type=submit] {
   position: absolute;
   right: 0px;
   top: -10px;
@@ -4485,7 +4485,7 @@ div.islandora-pdf-object, div.islandora-large-image-object {
 }
 
 .compoundSelect.embargoed::after {
-  content: 'embargoed';
+  content: "embargoed";
   position: absolute;
   background: #FF5370;
   color: white;
@@ -4804,7 +4804,7 @@ div.islandora-pdf-object, div.islandora-large-image-object {
   padding-right: 10px;
   border: 1px solid rgba(255, 255, 255, 0.16);
 }
-.compoundObject a#islandora-compound-next-link, .compoundObject a#islandora-compound-previous-link, .compoundObject a#islandora-compound-previous-link {
+.compoundObject a#islandora-compound-next-link, .compoundObject a#islandora-compound-previous-link {
   margin: 0px;
   max-width: none !important;
 }
@@ -4940,7 +4940,7 @@ div.islandora-pdf-object, div.islandora-large-image-object {
   background: rgba(255, 255, 255, 0.07) !important;
 }
 .compoundObject .compoundGlance::before {
-  content: 'description + tags';
+  content: "description + tags";
   position: absolute;
   left: 0px;
   top: -20px;
@@ -5562,7 +5562,7 @@ body.headerversiontwo .extendList {
   opacity: 1;
 }
 body.headerversiontwo .userSelect::after {
-  content: ' ';
+  content: " ";
   width: 30%;
   height: 1px;
   background: white;
@@ -5619,7 +5619,7 @@ body.headerversiontwo .downloadLink .iconSelect {
   height: 23px !important;
 }
 body.headerversiontwo .userSelect:hover:after {
-  content: ' ';
+  content: " ";
   width: 96%;
   background: white;
   opacity: 0.9;
@@ -5833,7 +5833,7 @@ div#BRpage {
   right: 3px !important;
 }
 
-body.compoundBook .tabs > li:nth-child(0n + 2) {
+body.compoundBook .tabs > li:nth-child(0n+2) {
   margin-left: 0px !important;
 }
 body.compoundBook .tabs > li:last-child {
@@ -5868,7 +5868,7 @@ body.bookViewer .bookMetaContainer > .metadataContainer {
   padding: 20px 0px 0px 0px !important;
   margin-top: 60px;
 }
-body.bookViewer .parentMetadata::before, body.bookViewer .metadataContainer:not(.parentMetadata)::before, body.bookViewer .institutionPage .institutionSidebarDesc::before, .institutionPage body.bookViewer .institutionSidebarDesc::before, body.bookViewer .collectionPage .collectionSidebarDesc::before, .collectionPage body.bookViewer .collectionSidebarDesc::before {
+body.bookViewer .parentMetadata::before {
   position: absolute;
   left: 0px;
   top: -20px;
@@ -5879,12 +5879,25 @@ body.bookViewer .parentMetadata::before, body.bookViewer .metadataContainer:not(
   background-position: 0px -2px;
   background-size: 20px;
   background-repeat: no-repeat;
-  content: 'compound information';
+  content: "compound information";
   position: absolute;
   color: white;
 }
 body.bookViewer .metadataContainer:not(.parentMetadata)::before {
-  content: 'item information' !important;
+  position: absolute;
+  left: 0px;
+  top: -20px;
+  text-transform: uppercase;
+  font-size: 11px;
+  background-image: url("../images/info_light.png");
+  padding-left: 25px;
+  background-position: 0px -2px;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  content: "compound information";
+  position: absolute;
+  color: white;
+  content: "item information" !important;
 }
 body.bookViewer a.pageImages {
   display: inline;
@@ -6659,7 +6672,7 @@ body.largeImage .monthLevel #calendar, body.pdf .monthLevel #calendar, body.vide
 }
 body.largeImage .monthLevel #calendar .ui-datepicker-multi .ui-datepicker-group table, body.pdf .monthLevel #calendar .ui-datepicker-multi .ui-datepicker-group table, body.video .monthLevel #calendar .ui-datepicker-multi .ui-datepicker-group table, body.newspaperSet .monthLevel #calendar .ui-datepicker-multi .ui-datepicker-group table, body.audio .monthLevel #calendar .ui-datepicker-multi .ui-datepicker-group table, body.oralHistory .monthLevel #calendar .ui-datepicker-multi .ui-datepicker-group table {
   width: 95%;
-  margin: 0 auto .4em;
+  margin: 0 auto 0.4em;
   border: 0px;
 }
 body.largeImage .monthLevel #calendar .ui-datepicker td, body.pdf .monthLevel #calendar .ui-datepicker td, body.video .monthLevel #calendar .ui-datepicker td, body.newspaperSet .monthLevel #calendar .ui-datepicker td, body.audio .monthLevel #calendar .ui-datepicker td, body.oralHistory .monthLevel #calendar .ui-datepicker td {
@@ -7282,7 +7295,7 @@ body.oralHistory .image-thumbnailData {
 .pdfLabel::before {
   background-image: url(../images/document_dark.png);
   background-repeat: no-repeat;
-  content: '';
+  content: "";
   background-size: 15px;
   background-position: center;
   width: 20px;
@@ -7296,7 +7309,7 @@ body.oralHistory .image-thumbnailData {
 .videoLabel::before {
   background-image: url("../images/video_dark.png");
   background-repeat: no-repeat;
-  content: '';
+  content: "";
   background-size: 15px;
   background-position: center;
   width: 20px;
@@ -7310,7 +7323,7 @@ body.oralHistory .image-thumbnailData {
 .audioLabel::before {
   background-image: url("../images/volume_light.png");
   background-repeat: no-repeat;
-  content: '';
+  content: "";
   background-size: 15px;
   background-position: center;
   width: 20px;
@@ -7408,7 +7421,7 @@ body.pdf #window-title {
   background-position: 0px -2px;
   background-size: 15px;
   background-repeat: no-repeat;
-  content: ' ';
+  content: " ";
   height: 20px;
   position: absolute;
   width: 10px;
@@ -7445,7 +7458,7 @@ body.pdf #window-title {
   color: white;
 }
 
-.parentMetadata::before, body.bookViewer .metadataContainer:not(.parentMetadata)::before, .metadataContainer:not(.parentMetadata)::before, .institutionPage .institutionSidebarDesc::before, .collectionPage .collectionSidebarDesc::before {
+.parentMetadata::before {
   position: absolute;
   left: 0px;
   top: -20px;
@@ -7456,20 +7469,56 @@ body.pdf #window-title {
   background-position: 0px -2px;
   background-size: 20px;
   background-repeat: no-repeat;
-  content: 'compound information';
+  content: "compound information";
   position: absolute;
 }
 
 .metadataContainer:not(.parentMetadata)::before {
-  content: 'item information';
+  position: absolute;
+  left: 0px;
+  top: -20px;
+  text-transform: uppercase;
+  font-size: 11px;
+  background-image: url("../images/info_light.png");
+  padding-left: 25px;
+  background-position: 0px -2px;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  content: "compound information";
+  position: absolute;
+  content: "item information";
 }
 
 .institutionPage .institutionSidebarDesc::before {
-  content: 'institution information';
+  position: absolute;
+  left: 0px;
+  top: -20px;
+  text-transform: uppercase;
+  font-size: 11px;
+  background-image: url("../images/info_light.png");
+  padding-left: 25px;
+  background-position: 0px -2px;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  content: "compound information";
+  position: absolute;
+  content: "institution information";
 }
 
 .collectionPage .collectionSidebarDesc::before {
-  content: 'collection information';
+  position: absolute;
+  left: 0px;
+  top: -20px;
+  text-transform: uppercase;
+  font-size: 11px;
+  background-image: url("../images/info_light.png");
+  padding-left: 25px;
+  background-position: 0px -2px;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  content: "compound information";
+  position: absolute;
+  content: "collection information";
 }
 
 body.newspaperSet {
@@ -7885,7 +7934,7 @@ span.modalExit4 {
   border-radius: 0px 20px 0px 0px;
 }
 
-section#block-islandora-solr-advanced, #block-block-14, #block-views-meeting-minutes-block-1, .bookContainer {
+section#block-islandora-solr-advanced {
   position: absolute;
   box-sizing: content-box;
   display: flex;
@@ -8011,6 +8060,15 @@ section#block-islandora-solr-advanced, #block-block-14, #block-views-meeting-min
 }
 
 #block-block-14, #block-views-meeting-minutes-block-1, .bookContainer {
+  position: absolute;
+  box-sizing: content-box;
+  display: flex;
+  justify-content: center;
+  z-index: 999999;
+  width: 100%;
+  height: 100vh;
+  align-items: flex-start;
+  display: none;
   align-items: flex-start;
   padding-top: 50px;
 }
@@ -8408,7 +8466,7 @@ body.multipleDaily .issueLevel .issue-container img {
   }
 
   .sidebarLabel::after {
-    content: 'open';
+    content: "open";
     background-color: #438fca;
     margin-left: 10px;
     padding: 1px 10px 1px 10px;
@@ -8416,7 +8474,7 @@ body.multipleDaily .issueLevel .issue-container img {
     color: white;
   }
   .sidebarLabel.close::after {
-    content: 'close';
+    content: "close";
     background-color: #ff7777;
     margin-left: 10px;
     padding: 1px 10px 1px 10px;
@@ -8492,8 +8550,8 @@ body.multipleDaily .issueLevel .issue-container img {
   }
 
   .page-browse-collections .bookmark,
-  .page-islandora-object .region-header-second-inner::after,
-  .context-collections .region-header-second-inner::after {
+.page-islandora-object .region-header-second-inner::after,
+.context-collections .region-header-second-inner::after {
     display: none;
   }
 
@@ -8523,8 +8581,8 @@ body.multipleDaily .issueLevel .issue-container img {
   }
 
   #region-content .region-content-inner,
-  .user-page .region-content-inner,
-  .page-browse-collections .region-content-inner {
+.user-page .region-content-inner,
+.page-browse-collections .region-content-inner {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -8560,9 +8618,9 @@ body.multipleDaily .issueLevel .issue-container img {
   }
 
   .page-islandora-object #region-sidebar-first,
-  .page-browse-collections #region-sidebar-first,
-  .page-user #region-sidebar-first,
-  .context-collections #region-sidebar-first {
+.page-browse-collections #region-sidebar-first,
+.page-user #region-sidebar-first,
+.context-collections #region-sidebar-first {
     display: none;
   }
 
@@ -9179,7 +9237,7 @@ body.multipleDaily .issueLevel .issue-container img {
     background: #1a1a1a !important;
     width: 100% !important;
   }
-  #block-user-login input[type="submit"] {
+  #block-user-login input[type=submit] {
     padding: 4px 0px;
   }
 
@@ -9239,7 +9297,7 @@ body.multipleDaily .issueLevel .issue-container img {
   .front div#block-block-12 #largeSearch .form-item-islandora-simple-search-query::after {
     display: none;
   }
-  .front div#block-block-12 #largeSearch input[type="text"] {
+  .front div#block-block-12 #largeSearch input[type=text] {
     width: 90vw;
     font-size: 3vw;
     padding: 0px 10px;
@@ -9527,7 +9585,7 @@ body.multipleDaily .issueLevel .issue-container img {
     align-items: center;
     left: -20px;
   }
-  body.compoundChild #islandora-compound-sequence-position, body.compoundChild a#islandora-compound-previous-link, body.compoundChild a#islandora-compound-next-link, body.compoundChild .compoundObject a#islandora-compound-previous-link, .compoundObject body.compoundChild a#islandora-compound-previous-link {
+  body.compoundChild #islandora-compound-sequence-position, body.compoundChild a#islandora-compound-previous-link, body.compoundChild a#islandora-compound-next-link {
     color: white !important;
   }
   body.compoundChild .compoundArrows:hover {
@@ -9871,7 +9929,7 @@ body.multipleDaily .issueLevel .issue-container img {
   }
 
   .page-islandora-search #block-islandora-solr-simple,
-  .page-islandora-object #block-islandora-solr-simple {
+.page-islandora-object #block-islandora-solr-simple {
     margin-left: 20px;
   }
 
@@ -10086,12 +10144,12 @@ img.jssocials-share-logo {
 
 .jssocials-share-link.jssocials-share-link-count .jssocials-share-count {
   display: block;
-  font-size: .6em;
-  margin: 0 -.5em -.8em -.5em;
+  font-size: 0.6em;
+  margin: 0 -0.5em -0.8em -0.5em;
 }
 
 .jssocials-share-link.jssocials-share-no-count {
-  padding-top: .5em;
+  padding-top: 0.5em;
 }
 
 .jssocials-share-link.jssocials-share-no-count .jssocials-share-count {
@@ -10234,7 +10292,7 @@ img.jssocials-share-logo {
 }
 
 .jssocials-share-link {
-  padding: .5em .6em;
+  padding: 0.5em 0.6em;
   color: #fff;
   -webkit-transition: background 200ms ease-in-out, border-color 200ms ease-in-out;
   transition: background 200ms ease-in-out, border-color 200ms ease-in-out;
@@ -10247,7 +10305,7 @@ img.jssocials-share-logo {
 .jssocials-share-count-box {
   position: relative;
   height: 2.5em;
-  padding: 0 .3em;
+  padding: 0 0.3em;
   margin-left: 0.3em;
   background: #f5f5f5;
   -webkit-transition: background 200ms ease-in-out, border-color 200ms ease-in-out;
@@ -10322,13 +10380,13 @@ img.jssocials-share-logo {
   right: 0;
   top: 0;
   bottom: 0;
-  visibility: hidden\9;
+  visibility: hidden\9 ;
   /* Target only IE7 and IE8 with this hsack */
-  opacity: .01;
-  -webkit-transition: .2s;
-  -moz-transition: .2s;
-  -o-transition: .2s;
-  transition: .2s;
+  opacity: 0.01;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
@@ -10345,7 +10403,7 @@ img.jssocials-share-logo {
 }
 
 .nano:hover > .nano-pane, .nano-pane.active, .nano-pane.flashed {
-  visibility: visible\9;
+  visibility: visible\9 ;
   /* Target only IE7 and IE8 with this hack */
   opacity: 0.99;
 }
@@ -10391,3 +10449,5 @@ img.jssocials-share-logo {
     transform: rotate(360deg);
   }
 }
+
+/*# sourceMappingURL=test.css.map */

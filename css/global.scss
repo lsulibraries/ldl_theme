@@ -5158,7 +5158,7 @@ a#islandora-compound-next-link {
 }
 
 a#islandora-compound-previous-link {
-@extend a#islandora-compound-next-link;
+@extend #islandora-compound-next-link;
     flex-direction: row-reverse;
 }
 
@@ -6727,7 +6727,19 @@ body.bookViewer{
 }
 
 .metadataContainer:not(.parentMetadata)::before{
-@extend .parentMetadata::before;
+  position: absolute;
+  left:0px;
+  top:-20px;
+  text-transform: uppercase;
+  font-size: 11px;
+  background-image: url($infoLegend2);
+  padding-left: 25px;
+  background-position: 0px -2px;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  content:'compound information';
+  position: absolute;
+  color:white;
 content:'item information' !important;
 }
 
@@ -8725,20 +8737,53 @@ body.pdf{
 }
 
 .metadataContainer:not(.parentMetadata)::before{
-@extend .parentMetadata::before;
-content:'item information';
+  position: absolute;
+  left:0px;
+  top:-20px;
+  text-transform: uppercase;
+  font-size: 11px;
+  background-image: url($infoLegend2);
+  padding-left: 25px;
+  background-position: 0px -2px;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  content:'compound information';
+  position: absolute;
+  content:'item information';
 }
 
 
 .institutionPage .institutionSidebarDesc::before{
-@extend .parentMetadata::before;
-content:'institution information';
+  position: absolute;
+  left:0px;
+  top:-20px;
+  text-transform: uppercase;
+  font-size: 11px;
+  background-image: url($infoLegend2);
+  padding-left: 25px;
+  background-position: 0px -2px;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  content:'compound information';
+  position: absolute;
+  content:'institution information';
 }
 
 
 .collectionPage .collectionSidebarDesc::before{
-@extend .parentMetadata::before;
-content:'collection information';
+  position: absolute;
+  left:0px;
+  top:-20px;
+  text-transform: uppercase;
+  font-size: 11px;
+  background-image: url($infoLegend2);
+  padding-left: 25px;
+  background-position: 0px -2px;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  content:'compound information';
+  position: absolute;
+  content:'collection information';
 }
 
 
@@ -9384,8 +9429,16 @@ input.ajax-processed {
 //contact us
 
 #block-block-14{
-  @extend section#block-islandora-solr-advanced;
-align-items: flex-start;
+  position: absolute;
+  box-sizing: content-box;
+  display: flex;
+  justify-content: center;
+  z-index: 999999;
+  width: 100%;
+  height: 100vh;
+  align-items: flex-start;
+  display: none;
+  align-items: flex-start;
     padding-top: 50px;
 
 
