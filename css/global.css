@@ -548,20 +548,20 @@ a.institution-about-edit {
   background-image: url("../images/LSU_Gold_CMYK.png");
 }
 
-.lsuhscTheme .collectionHeader, .lsuhscTheme .institution-search::before, .lsuhscTheme .child-institution-collections::before, .lsuaTheme .collectionHeader, .lsuaTheme .institution-search::before, .lsuaTheme .child-institution-collections::before, .lsusTheme .collectionHeader, .lsusTheme .institution-search::before, .lsusTheme .child-institution-collections::before, .lsuhscsTheme .collectionHeader, .lsuhscsTheme .institution-search::before, .lsuhscsTheme .child-institution-collections::before, .ascTheme .collectionHeader, .ascTheme .institution-search::before, .ascTheme .child-institution-collections::before {
+.lsuhscTheme .collectionHeader, .lsuhscTheme .institution-search::before, .lsuhscTheme .child-institution-collections::before, .lsuaTheme .collectionHeader, .lsuaTheme .institution-search::before, .lsuaTheme .child-institution-collections::before, .lsusTheme .collectionHeader, .lsusTheme .institution-search::before, .lsusTheme .child-institution-collections::before, .lsuhscsTheme .collectionHeader, .lsuhscsTheme .institution-search::before, .lsuhscsTheme .child-institution-collections::before, .ascTheme .collectionHeader, .ascTheme .institution-search::before, .ascTheme .child-institution-collections::before, .amiTheme .collectionHeader, .amiTheme .institution-search::before, .amiTheme .child-institution-collections::before {
   background: white;
   color: #474747;
 }
-.lsuhscTheme .institution-about, .lsuaTheme .institution-about, .lsusTheme .institution-about, .lsuhscsTheme .institution-about, .ascTheme .institution-about {
+.lsuhscTheme .institution-about, .lsuaTheme .institution-about, .lsusTheme .institution-about, .lsuhscsTheme .institution-about, .ascTheme .institution-about, .amiTheme .institution-about {
   border-left: 1px solid rgba(0, 0, 0, 0.2);
 }
-.lsuhscTheme form#islandora-collection-search-form, .lsuaTheme form#islandora-collection-search-form, .lsusTheme form#islandora-collection-search-form, .lsuhscsTheme form#islandora-collection-search-form, .ascTheme form#islandora-collection-search-form {
+.lsuhscTheme form#islandora-collection-search-form, .lsuaTheme form#islandora-collection-search-form, .lsusTheme form#islandora-collection-search-form, .lsuhscsTheme form#islandora-collection-search-form, .ascTheme form#islandora-collection-search-form, .amiTheme form#islandora-collection-search-form {
   border: 2px solid #8c8c8c;
 }
-.lsuhscTheme .institution-search input[type=text], .lsuaTheme .institution-search input[type=text], .lsusTheme .institution-search input[type=text], .lsuhscsTheme .institution-search input[type=text], .ascTheme .institution-search input[type=text] {
+.lsuhscTheme .institution-search input[type=text], .lsuaTheme .institution-search input[type=text], .lsusTheme .institution-search input[type=text], .lsuhscsTheme .institution-search input[type=text], .ascTheme .institution-search input[type=text], .amiTheme .institution-search input[type=text] {
   border: 2px solid white;
 }
-.lsuhscTheme .institutionLabel::before, .lsuaTheme .institutionLabel::before, .lsusTheme .institutionLabel::before, .lsuhscsTheme .institutionLabel::before, .ascTheme .institutionLabel::before {
+.lsuhscTheme .institutionLabel::before, .lsuaTheme .institutionLabel::before, .lsusTheme .institutionLabel::before, .lsuhscsTheme .institutionLabel::before, .ascTheme .institutionLabel::before, .amiTheme .institutionLabel::before {
   background: white;
 }
 
@@ -604,6 +604,22 @@ a.institution-about-edit {
 }
 .lsuaTheme .institutionLabel {
   background-image: url("../images/lsualogo.png");
+}
+
+.ascTheme .collectionLogo {
+  background-image: url("../images/ascLogo.png");
+  cursor: pointer;
+}
+.ascTheme .institutionLabel {
+  background-image: url("../images/ascLogo.png");
+}
+
+.amiTheme .collectionLogo {
+  background-image: url("../images/amiLogo.png");
+  cursor: pointer;
+}
+.amiTheme .institutionLabel {
+  background-image: url("../images/amiLogo.png");
 }
 
 .websterTheme {
@@ -1338,6 +1354,16 @@ a.institutionLink.cpplLink {
   background-color: #304d83;
   background-image: url("../images/cpplLogo.png");
   background-size: 110px auto !important;
+}
+
+a.institutionLink.ascLink {
+  background-color: #ffffff;
+  background-image: url("../images/ascLogo.png");
+}
+
+a.institutionLink.amiLink {
+  background-color: #ffffff;
+  background-image: url("../images/amiLogo.png");
 }
 
 /*institution list*/

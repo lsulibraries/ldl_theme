@@ -151,6 +151,7 @@ $oplib_color: '../images/oplib_color.png';
 $lsa: '../images/lsa.png';
 $cpplLogo: '../images/cpplLogo.png';
 $ascLogo: '../images/ascLogo.png';
+$amiLogo: '../images/amiLogo.png';
 /* mixins */
 
 @mixin flexbox() {
@@ -838,7 +839,7 @@ a.institution-about-edit {
 }
 
 
-.lsuhscTheme, .lsuaTheme, .lsusTheme, .lsuhscsTheme, .ascTheme {
+.lsuhscTheme, .lsuaTheme, .lsusTheme, .lsuhscsTheme, .ascTheme, .amiTheme {
    .collectionHeader, .institution-search::before, .child-institution-collections::before {
 
     background: white;
@@ -905,6 +906,25 @@ a.institution-about-edit {
   }
 }
 
+.ascTheme {
+  .collectionLogo {
+    background-image: url($ascLogo);
+    cursor: pointer;
+  }
+  .institutionLabel{
+    background-image: url($ascLogo);
+  }
+}
+
+.amiTheme {
+  .collectionLogo {
+    background-image: url($amiLogo);
+    cursor: pointer;
+  }
+  .institutionLabel{
+    background-image: url($amiLogo);
+  }
+}
 
 .websterTheme {
   background: white;
@@ -1731,6 +1751,16 @@ opacity: 1;
     background-image: url($cpplLogo);
     background-size: 110px auto !important;
 
+  }
+
+  a.institutionLink.ascLink {
+    background-color: $lsusColor;
+    background-image: url($ascLogo);
+  }
+
+  a.institutionLink.amiLink {
+    background-color: $lsusColor;
+    background-image: url($amiLogo);
   }
 
 //Institution List
