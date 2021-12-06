@@ -19,6 +19,10 @@ i {
   color: #fff !important;
 }
 
+.page-hicks .institution-logo img {
+  max-width: none !important;
+}
+
 /*Institutional Colors*/
 /* mixins */
 /* global styles */
@@ -9252,10 +9256,6 @@ body.multipleDaily .issueLevel .issue-container img {
   }
   .institution-about p {
     margin-bottom: 40px;
-  }
-
-  .page-hicks .institution-logo img {
-    max-width: none !important;
   }
 
   .institution-logo {
