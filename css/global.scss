@@ -81,6 +81,11 @@ i{
   color: #fff !important;
 }
 
+//logo override
+.page-hicks .institution-logo img {
+  max-width: none !important;
+}
+
 /*Institutional Colors*/
 
 $dccColor: #083a07;
@@ -10847,9 +10852,7 @@ html.mobileMenuActive, body.mobileMenuActive{
         margin-bottom: 40px;
       }
     }
-    .page-hicks .institution-logo img {
-        max-width: none !important;
-    }
+
     .institution-logo {
       height: 50px;
       @include flexbox;
