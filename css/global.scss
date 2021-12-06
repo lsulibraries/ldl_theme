@@ -152,6 +152,8 @@ $lsa: '../images/lsa.png';
 $cpplLogo: '../images/cpplLogo.png';
 $ascLogo: '../images/ascLogo.png';
 $amiLogo: '../images/amiLogo.png';
+$hicksLogo: '../images/hicksLogo.png';
+
 /* mixins */
 
 @mixin flexbox() {
@@ -839,7 +841,7 @@ a.institution-about-edit {
 }
 
 
-.lsuhscTheme, .lsuaTheme, .lsusTheme, .lsuhscsTheme, .aplTheme, .amiTheme {
+.lsuhscTheme, .lsuaTheme, .lsusTheme, .lsuhscsTheme, .aplTheme, .amiTheme, .hicksTheme {
    .collectionHeader, .institution-search::before, .child-institution-collections::before {
 
     background: white;
@@ -924,6 +926,16 @@ a.institution-about-edit {
   .institutionLabel{
     background-image: url($amiLogo);
   }
+}
+
+.hicksTheme{
+    .collectionLogo {
+        background-image: url($hicksLogo);
+        cursor: pointer;
+      }
+    .institutionLabel{
+    background-image: url($hicksLogo);
+    }
 }
 
 .websterTheme {
@@ -1761,6 +1773,11 @@ opacity: 1;
   a.institutionLink.amiLink {
     background-color: $lsusColor;
     background-image: url($amiLogo);
+  }
+
+  a.institutionLink.hicksLink {
+    background-color: $lsusColor;
+    background-image: url($hicksLogo);
   }
 
 //Institution List
@@ -10830,7 +10847,9 @@ html.mobileMenuActive, body.mobileMenuActive{
         margin-bottom: 40px;
       }
     }
-
+    .page-hicks .institution-logo img {
+        max-width: none !important;
+    }
     .institution-logo {
       height: 50px;
       @include flexbox;
