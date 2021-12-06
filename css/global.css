@@ -1381,6 +1381,7 @@ a.institutionLink.amiLink {
 a.institutionLink.hicksLink {
   background-color: #ffffff;
   background-image: url("../images/hicksLogo.png");
+  background-size: 170px !important;
 }
 
 /*institution list*/
