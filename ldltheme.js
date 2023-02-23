@@ -124,7 +124,8 @@
 
         case (($(".islandora-basic-collection-item-count").length) > 0) :{
           $("body").addClass("collectionPage");
-          $(".collectionPage <div class='collectionSearch'/>").appendTo(".collectionHeader");
+          //$(".collectionPage <div class='collectionSearch'/>").appendTo(".collectionHeader");
+          $("<div class='collectionSearch'></div>").appendTo(".collectionHeader");
           $(".collectionPage #block-islandora-collection-search-islandora-collection-search").appendTo(".collectionSearch");
           $(".collectionSearch input.form-submit").val(' ');
           if ($('body').hasClass('page-islandora-object-islandoraroot')) {
@@ -444,7 +445,7 @@
       function fadeList(){
         $(".islandora-newspaper-grid").fadeOut("normal", function() {
           yearBack();
-          $("body").toggleClass('mobileNewspaper newspaperList');
+          //$("body").toggleClass('mobileNewspaper newspaperList');
           $(".islandora-newspaper-grid").fadeIn("normal");
         });
       }
