@@ -1567,7 +1567,7 @@ a.institutionLink.hicksLink {
 #block-block-11 a.institutionLink.nojhfLink {
   background-color: #ffffff;
   background-image: url("../images/nojhf.png");
-  background-size: 180px auto;
+  background-size: 100px auto;
 }
 
 .institution-tile, .item-list {
