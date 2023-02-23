@@ -124,7 +124,6 @@
 
         case (($(".islandora-basic-collection-item-count").length) > 0) :{
           $("body").addClass("collectionPage");
-          $(".collectionPage <div class='collectionSearch'/>").appendTo(".collectionHeader");
           //$(".collectionPage <div class='collectionSearch'/>").appendTo(".collectionHeader");
           $("<div class='collectionSearch'></div>").appendTo(".collectionHeader");
           $(".collectionPage #block-islandora-collection-search-islandora-collection-search").appendTo(".collectionSearch");
