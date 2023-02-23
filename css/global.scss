@@ -114,8 +114,8 @@ $websterColor: #ffffff;
 $lsaColor: #00427c;
 $cpplColor: #304d83;
 
+$nojhfLogo: '../images/nojhf.png';
 $websterLogo: '../images/webster.png';
-
 $ebrplLogo: '../images/verticalebrpl.jpg';
 $dccLogo: '../images/logo-white.png';
 $lsmLogo: '../images/uimSOt2.png';
@@ -867,7 +867,7 @@ a.institution-about-edit {
 }
 
 
-.websterTheme {
+.websterTheme, .nojhfTheme {
   background: white;
   color: #474747;  
 
@@ -943,7 +943,7 @@ a.institution-about-edit {
     }
 }
 
-.websterTheme {
+.websterTheme, .nojhfTheme {
   background: white;
   color: #474747;  
 
@@ -1977,7 +1977,13 @@ opacity: 1;
     background-color: $websterColor;
     background-image: url($websterLogo);
     background-size: 180px auto;
+  } 
+  a.institutionLink.nojhfLink {
+    background-color: $websterColor;
+    background-image: url($nojhfLogo);
+    background-size: 180px auto;
   }  
+  
 }
 
 .institution-tile, .item-list{
