@@ -569,36 +569,36 @@ a.institution-about-edit {
   background: white;
 }
 
-.websterTheme {
+.websterTheme, .nojhfTheme {
   background: white;
   color: #474747;
 }
-.websterTheme .collection-description-text {
+.websterTheme .collection-description-text, .nojhfTheme .collection-description-text {
   color: #434343;
 }
-.websterTheme .institution-header, .websterTheme .collectionHeader, .websterTheme .institution-search::before, .websterTheme .child-institution-collections::before {
+.websterTheme .institution-header, .websterTheme .collectionHeader, .websterTheme .institution-search::before, .websterTheme .child-institution-collections::before, .nojhfTheme .institution-header, .nojhfTheme .collectionHeader, .nojhfTheme .institution-search::before, .nojhfTheme .child-institution-collections::before {
   background: #ffffff;
 }
-.websterTheme .institution-about {
+.websterTheme .institution-about, .nojhfTheme .institution-about {
   border-left: 1px solid rgba(0, 0, 0, 0.2);
 }
-.websterTheme form#islandora-collection-search-form {
+.websterTheme form#islandora-collection-search-form, .nojhfTheme form#islandora-collection-search-form {
   border: 2px solid white;
 }
-.websterTheme .institution-search input[type=text] {
+.websterTheme .institution-search input[type=text], .nojhfTheme .institution-search input[type=text] {
   border: 2px solid white;
 }
-.websterTheme .institutionLabel::before {
+.websterTheme .institutionLabel::before, .nojhfTheme .institutionLabel::before {
   background: white;
 }
-.websterTheme .collectionSearch form#islandora-collection-search-form {
+.websterTheme .collectionSearch form#islandora-collection-search-form, .nojhfTheme .collectionSearch form#islandora-collection-search-form {
   border: 2px solid #8c8c8c;
 }
-.websterTheme .collectionLogo {
+.websterTheme .collectionLogo, .nojhfTheme .collectionLogo {
   background-image: url("../images/webster.png");
   cursor: pointer;
 }
-.websterTheme .institutionLabel {
+.websterTheme .institutionLabel, .nojhfTheme .institutionLabel {
   background-image: url("../images/webster.png");
 }
 
@@ -634,36 +634,36 @@ a.institution-about-edit {
   background-image: url("../images/hicksLogo.png");
 }
 
-.websterTheme {
+.websterTheme, .nojhfTheme {
   background: white;
   color: #474747;
 }
-.websterTheme .collection-description-text {
+.websterTheme .collection-description-text, .nojhfTheme .collection-description-text {
   color: #434343;
 }
-.websterTheme .institution-header, .websterTheme .collectionHeader, .websterTheme .institution-search::before, .websterTheme .child-institution-collections::before {
+.websterTheme .institution-header, .websterTheme .collectionHeader, .websterTheme .institution-search::before, .websterTheme .child-institution-collections::before, .nojhfTheme .institution-header, .nojhfTheme .collectionHeader, .nojhfTheme .institution-search::before, .nojhfTheme .child-institution-collections::before {
   background: #ffffff;
 }
-.websterTheme .institution-about {
+.websterTheme .institution-about, .nojhfTheme .institution-about {
   border-left: 1px solid rgba(0, 0, 0, 0.2);
 }
-.websterTheme form#islandora-collection-search-form {
+.websterTheme form#islandora-collection-search-form, .nojhfTheme form#islandora-collection-search-form {
   border: 2px solid white;
 }
-.websterTheme .institution-search input[type=text] {
+.websterTheme .institution-search input[type=text], .nojhfTheme .institution-search input[type=text] {
   border: 2px solid white;
 }
-.websterTheme .institutionLabel::before {
+.websterTheme .institutionLabel::before, .nojhfTheme .institutionLabel::before {
   background: white;
 }
-.websterTheme .collectionSearch form#islandora-collection-search-form {
+.websterTheme .collectionSearch form#islandora-collection-search-form, .nojhfTheme .collectionSearch form#islandora-collection-search-form {
   border: 2px solid #8c8c8c;
 }
-.websterTheme .collectionLogo {
+.websterTheme .collectionLogo, .nojhfTheme .collectionLogo {
   background-image: url("../images/webster.png");
   cursor: pointer;
 }
-.websterTheme .institutionLabel {
+.websterTheme .institutionLabel, .nojhfTheme .institutionLabel {
   background-image: url("../images/webster.png");
 }
 
@@ -1562,6 +1562,11 @@ a.institutionLink.hicksLink {
 #block-block-11 a.institutionLink.websterLink {
   background-color: #ffffff;
   background-image: url("../images/webster.png");
+  background-size: 180px auto;
+}
+#block-block-11 a.institutionLink.nojhfLink {
+  background-color: #ffffff;
+  background-image: url("../images/nojhf.png");
   background-size: 180px auto;
 }
 
