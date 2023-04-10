@@ -7442,7 +7442,6 @@ html body.audio .backgroundDiv, html body.oralHistory:not(.compoundParent) .back
 }
 html body.audio .islandora_videojs-dimensions:not(body.oralHistory), html body.oralHistory:not(.compoundParent) .islandora_videojs-dimensions:not(body.oralHistory) {
   width: 100%;
-  height: 30px;
 }
 html body.audio #window-title, html body.oralHistory:not(.compoundParent) #window-title {
   display: none;
